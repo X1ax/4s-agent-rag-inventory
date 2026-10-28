@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "collection": "general_diagnostics",
+  "version": "1.0-draft.1",
+  "language": "zh-CN",
+  "drafted_on": "2026-10-23",
+  "source_type": "project_authored_reference_draft",
+  "review_status": "pending_technical_review",
+  "effective_from": null,
+  "index_status": "not_indexed",
+  "default_retrieval_enabled": false,
+  "preview_rule": "仅显式草稿预览；正式服务须技术复核、发布并完成索引验证。",
+  "canonical_source_rule": "仅documents[].path正文入库；README、清单、映射、评测与验收记录不得作为故障证据混入。",
+  "shared_context_document_id": "DX-GEN-001",
+  "citation_locator": "document_version_and_section_id",
+  "sources_path": "sources.json",
+  "part_type_map_path": "part-type-map.json",
+  "documents": [
+    {
+      "document_id": "DX-AIR-006",
+      "title": "空调不冷与送风异常通用排查",
+      "version": "1.0-draft.1",
+      "path": "manuals/DX-AIR-006.md",
+      "sha256": "38eb346acf50295c43476dd3d476af20b6d1ff5bcfc7769f6f0dc959e0023391",
+      "section_ids": [
+        "DX-AIR-01",
+        "DX-AIR-02"
+      ],
+      "case_ids": [
+        "DX-AIR-01",
+        "DX-AIR-02"
+      ],
+      "source_ids": [
+        "SRC-DX-10",
+        "SRC-DX-11",
+        "SRC-DX-15"
+      ],
+      "native_format": "md",
+      "review_status": "pending_technical_review",
+      "index_status": "not_indexed",
+      "default_retrieval_enabled": false,
+      "requires_shared_context": true
+    },
+    {
+      "document_id": "DX-BRK-005",
+      "title": "制动症状与ABS警告通用排查",
+      "version": "1.0-draft.1",
+      "path": "manuals/DX-BRK-005.md",
+      "sha256": "df20ccf96ad0b11f286c3e63838ae6199c3391ff84ef2f4c8342755ca7d600e2",
+      "section_ids": [
+        "DX-BRK-01",
+        "DX-BRK-02",
+        "DX-BRK-03"
+      ],
+      "case_ids": [
+        "DX-BRK-01",
+        "DX-BRK-02",
+        "DX-BRK-03"
+      ],
+      "source_ids": [
+        "SRC-DX-07",
+        "SRC-DX-08",
+        "SRC-DX-09"
+      ],
+      "native_format": "md",
+      "review_status": "pending_technical_review",
+      "index_status": "not_indexed",
+      "default_retrieval_enabled": false,
+      "requires_shared_context": true
+    },
+    {
+      "document_id": "DX-COO-004",
+      "title": "发动机冷却系统通用排查",
+      "version": "1.0-draft.1",
+      "path": "manuals/DX-COO-004.md",
+      "sha256": "095c9da498ae6b652415ed9609aba17fd701fd841c0d9d1a159223de738544e2",
+      "section_ids": [
+        "DX-COO-01",
+        "DX-COO-02",
+        "DX-COO-03"
+      ],
+      "case_ids": [
+        "DX-COO-01",
+        "DX-COO-02",
+        "DX-COO-03"
+      ],
+      "source_ids": [
+        "SRC-DX-06"
+      ],
+      "native_format": "md",
+      "review_status": "pending_technical_review",
+      "index_status": "not_indexed",
+      "default_retrieval_enabled": false,
+      "requires_shared_context": true
+    },
+    {
+      "document_id": "DX-ENG-003",
+      "title": "发动机无法着车与运转不稳通用排查",
+      "version": "1.0-draft.1",
+      "path": "manuals/DX-ENG-003.md",
+      "sha256": "aa93c4cfcad6610e646dd8636551f1bafdab85345303af11d159a458a1b0f0f6",
+      "section_ids": [
+        "DX-ENG-01",
+        "DX-ENG-02"
+      ],
+      "case_ids": [
+        "DX-ENG-01",
+        "DX-ENG-02"
+      ],
+      "source_ids": [
+        "SRC-DX-04",
+        "SRC-DX-05"
+      ],
+      "native_format": "md",
+      "review_status": "pending_technical_review",
+      "index_status": "not_indexed",
+      "default_retrieval_enabled": false,
+      "requires_shared_context": true
+    },
+    {
+      "document_id": "DX-GEN-001",
+      "title": "通用故障辅助排查与换件判断规则",
+      "version": "1.0-draft.1",
+      "path": "manuals/DX-GEN-001.md",
+      "sha256": "4907500324209ee92fa29e1b1e7c510770a3e6139587340971598995b397a12d",
+      "section_ids": [
+        "DX-RULE-01",
+        "DX-RULE-02",
+        "DX-RULE-03",
+        "DX-RULE-04",
+        "DX-RULE-05",
+        "DX-RULE-06",
+        "DX-RULE-07",
+        "DX-RULE-08"
+      ],
+      "case_ids": [],
+      "source_ids": [
+        "SRC-DX-04",
+        "SRC-DX-09"
+      ],
+      "native_format": "md",
+      "review_status": "pending_technical_review",
+      "index_status": "not_indexed",
+      "default_retrieval_enabled": false,
+      "requires_shared_context": false
+    },
+    {
+      "document_id": "DX-STR-002",
+      "title": "启动与充电系统通用排查",
+      "version": "1.0-draft.1",
+      "path": "manuals/DX-STR-002.md",
+      "sha256": "f7860db1cd6bd3a3930c296b032df25cd4dff6ba02730041cd71d25141dc4d47",
+      "section_ids": [
+        "DX-STR-01",
+        "DX-STR-02",
+        "DX-STR-03"
+      ],
+      "case_ids": [
+        "DX-STR-01",
+        "DX-STR-02",
+        "DX-STR-03"
+      ],
+      "source_ids": [
+        "SRC-DX-01",
+        "SRC-DX-02",
+        "SRC-DX-03",
+        "SRC-DX-16"
+      ],
+      "native_format": "md",
+      "review_status": "pending_technical_review",
+      "index_status": "not_indexed",
+      "default_retrieval_enabled": false,
+      "requires_shared_context": true
+    },
+    {
+      "document_id": "DX-VIS-007",
+      "title": "雨刮与灯光通用排查",
+      "version": "1.0-draft.1",
+      "path": "manuals/DX-VIS-007.md",
+      "sha256": "d0ae8735f3d1431f28c0ac73e385468f5893c2071476e06f8df89f1360d3a981",
+      "section_ids": [
+        "DX-VIS-01",
+        "DX-VIS-02"
+      ],
+      "case_ids": [
+        "DX-VIS-01",
+        "DX-VIS-02"
+      ],
+      "source_ids": [
+        "SRC-DX-12",
+        "SRC-DX-13",
+        "SRC-DX-14"
+      ],
+      "native_format": "md",
+      "review_status": "pending_technical_review",
+      "index_status": "not_indexed",
+      "default_retrieval_enabled": false,
+      "requires_shared_context": true
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+.venv/
+.idea/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+*.log
+*.sqlite
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.sqlite3-journal
+*.db
+data/chroma/
+
+data/local-backups/
+data/uploads/
+data/knowledge/uploads/
+
+# Local work products, private handoff and temporary tooling
+/tmp/
+/output/
+/AGENTS.md

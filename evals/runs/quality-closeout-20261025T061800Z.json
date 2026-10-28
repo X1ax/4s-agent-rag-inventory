@@ -1,0 +1,1240 @@
+{
+  "scope": "exposed_issue_development_regression_not_independent_acceptance",
+  "created_at": "2026-10-25T06:17:37.984758+00:00",
+  "model": "deepseek-flash",
+  "embedding_model": "BAAI/bge-m3",
+  "generation_id": "130fe697609a466a93c4044c6fb2220f",
+  "cases": [
+    {
+      "id": "Q-UNIT",
+      "question": "本系统整桶、整套和整瓶的库存，分别应该用什么单位？是否要换算数量？",
+      "answer": {
+        "generation_id": "130fe697609a466a93c4044c6fb2220f",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "dense",
+        "timings": {
+          "qualification_seconds": 0.222,
+          "embedding_seconds": 0.227,
+          "retrieval_seconds": 0.359,
+          "chat_seconds": 1.531,
+          "validation_seconds": 0.151
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "本系统库存、收发及统计统一按件管理，一件表示一个SKU完整库存包装。",
+            "citation_ids": [
+              "ab9f04cdb560f671291e766f1dd94dc8edd3297a476874f5d57dd2dd6722a93f"
+            ]
+          },
+          {
+            "text": "整瓶、整桶、整套等差异写入名称或规格，不换算为升数、包装内个数或其他单位，不拆零收发。",
+            "citation_ids": [
+              "ab9f04cdb560f671291e766f1dd94dc8edd3297a476874f5d57dd2dd6722a93f"
+            ]
+          },
+          {
+            "text": "数量与单价均按同一库存包装计算。",
+            "citation_ids": [
+              "ab9f04cdb560f671291e766f1dd94dc8edd3297a476874f5d57dd2dd6722a93f"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "依据为项目编制稿（INV-GLO-011，版本1.0-draft.2，状态pending_approval），属本地参考资料，不代表已正式生效的企业制度。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "citations": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-GLO-011",
+            "document_version": "1.0-draft.2",
+            "title": "备件库存术语与检索同义词",
+            "native_format": "txt",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "ab9f04cdb560f671291e766f1dd94dc8edd3297a476874f5d57dd2dd6722a93f",
+            "generation_id": "130fe697609a466a93c4044c6fb2220f",
+            "chunk_id": "950f56b7a20420f725e22e1817bbf2294d778f9c49635a9fc922077a9864d252",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-GLO-011-C001",
+              "INV-GLO-011-C002",
+              "INV-GLO-011-C003",
+              "INV-GLO-011-C004",
+              "INV-GLO-011-C005",
+              "INV-GLO-011-C006"
+            ],
+            "section_path": [
+              "备件库存术语与检索同义词",
+              "1 库存与单位"
+            ],
+            "excerpt": "备件库存术语与检索同义词\n\n本文统一检索和业务表达。状态为待核准，不表示企业已经批准相应制度；同义词只用于理解问题，不能改变单据类型、单位或权限。\n\n1 库存与单位\n\nINV-GLO-011-C001 SKU为内部唯一库存识别编码。厂家件号、OE号、品牌型号是其他识别信息，不能在没有核验对应关系时等同于SKU；相似编码也不构成替代关系。\n\nINV-GLO-011-C002 现有库存也称账面现存量、当前库存，表示指定仓库指定SKU已入账数量，不包括采购待收和目标方向调拨在途。\n\nINV-GLO-011-C003 可用库存也称可用量、可领数量，其基本公式为现有量减有效预留。当前无预留流程，系统可用量等于现有量；人工隔离等限制仍须核验，不能只依据系统数值断言可交付。\n\nINV-GLO-011-C004 采购待收又称采购未到、订单未收余量，限定为已确认或部分收货采购单的有效未收部分。采购草稿与已取消余量不属于有效待收。\n\nINV-GLO-011-C005 调拨在途又称内部在途、已发未收，指调拨已发出但目标仓未确认接收的数量。它与供应商发货或采购预计到货不是同一数量口径。\n\nINV-GLO-011-C006 本系统库存、收发及统计统一按件管理。一件表示一个SKU完整库存包装；整瓶、整桶、整套等差异写入名称或规格，不换算为升数、包装内个数或其他单位，不拆零收发。数量与单价均按同一库存包装计算。",
+            "line_start": 17,
+            "line_end": 28,
+            "tables": []
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 27,
+            "completion_tokens": 0,
+            "total_tokens": 27
+          },
+          "chat": {
+            "prompt_tokens": 2256,
+            "completion_tokens": 278,
+            "total_tokens": 2534
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      },
+      "elapsed_seconds": 2.491
+    },
+    {
+      "id": "Q-CONCEPT",
+      "question": "新增一种备件资料后，是否就自动产生库存？这是制度和流程问题，不查询实时库存。",
+      "answer": {
+        "generation_id": "130fe697609a466a93c4044c6fb2220f",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "dense",
+        "timings": {
+          "qualification_seconds": 0.147,
+          "embedding_seconds": 0.244,
+          "retrieval_seconds": 0.454,
+          "chat_seconds": 2.296,
+          "validation_seconds": 0.15
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "新增备件只有建立资料并不增加库存；首次实际采购收货可以形成库存记录，是否可在维修中使用仍须通过质量和适配核验。",
+            "citation_ids": [
+              "c2ee985ea784b0421c1bc5e0fe7d0d1c7e8786836b4fd4689dab1b0f68fc7c98",
+              "4ced862ab1c48ee75ad3f2c5337cf1bb64e9d15a50e0f414b3992083e5895923"
+            ]
+          },
+          {
+            "text": "草稿不产生实物库存变化；采购只有实际合格收货后增加现有量，禁止把预计到货、口头承诺或未执行草稿当作现有库存。",
+            "citation_ids": [
+              "7af976afdaea538b268ea0923c1346515d512a6cb9a90fa2e843275d8e740172",
+              "7a855877ddda9891765c5a1ab1f05d6d1d640bc9ad03bfee474d42bdeff395fb"
+            ]
+          },
+          {
+            "text": "库存数量以交易系统和对应实物核验为依据，制度知识库不保存可直接用于办理业务的实时库存。",
+            "citation_ids": [
+              "757b22d957fd54a0e1c2bf5b77186933c9ae9a4db24838721ce48efd84a84faf",
+              "96c31dbddc22dbef225ee11d7b59f76a8270893c492325544362c38a81dc6b8d"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "本轮证据均为draft_preview范围内的项目编制稿（source_state=draft，source_status=pending_approval），不是已生效的企业制度或厂家结论；批准人和生效日期均未登记。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "citations": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-MDM-002",
+            "document_version": "1.0-draft.2",
+            "title": "备件主数据与期初建账管理办法",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "c2ee985ea784b0421c1bc5e0fe7d0d1c7e8786836b4fd4689dab1b0f68fc7c98",
+            "generation_id": "130fe697609a466a93c4044c6fb2220f",
+            "chunk_id": "cd1bdeada1164118400f33a8f1ecc7fcd8396a388e1c0227970b224e022124e1",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-MDM-002-C017",
+              "INV-MDM-002-C018",
+              "INV-MDM-002-C019"
+            ],
+            "section_path": [
+              "备件主数据与期初建账管理办法",
+              "5 迁移与历史资料"
+            ],
+            "excerpt": "备件主数据与期初建账管理办法\n\n本办法规范备件、仓库、供应商及期初库存的建立与变更，防止重复编码、单位混用和历史关联丢失。当前为企业制度待核准稿，发布条件按INV-POL-001执行。\n\n5 迁移与历史资料\n\nINV-MDM-002-C017 历史导入应明确来源系统、覆盖区间、计量单位、生成或提取方法、导入批次及责任人，并核对单据、流水与余额。重跑导入不得重复增加数量，不得在普通应用启动时自动重置数据。\n\nINV-MDM-002-C018 业务日期反映业务归属，记录创建时间反映实际登记时间，二者不得为了美化历史而相互替换。补录应保留依据与补录说明；不能因日期连续就认定历史完整或将项目构造数据认定为真实经营资料。\n\nINV-MDM-002-C019 新增备件只有建立资料并不增加库存。首次实际采购收货可以形成库存记录；是否可在维修中使用仍须通过质量和适配核验。",
+            "line_start": 57,
+            "line_end": 61,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-MDM-002",
+            "document_version": "1.0-draft.2",
+            "title": "备件主数据与期初建账管理办法",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "4ced862ab1c48ee75ad3f2c5337cf1bb64e9d15a50e0f414b3992083e5895923",
+            "generation_id": "130fe697609a466a93c4044c6fb2220f",
+            "chunk_id": "856e8b2ad3154556c2170187d26b0f7f833eee6f60bafb6c1da8e917108908c3",
+            "unit_id": "INV-MDM-002-C019",
+            "unit_ids": [
+              "INV-MDM-002-C019"
+            ],
+            "section_path": [
+              "备件主数据与期初建账管理办法",
+              "5 迁移与历史资料"
+            ],
+            "excerpt": "INV-MDM-002-C019 新增备件只有建立资料并不增加库存。首次实际采购收货可以形成库存记录；是否可在维修中使用仍须通过质量和适配核验。",
+            "line_start": 61,
+            "line_end": 61,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-POL-001",
+            "document_version": "1.0-draft.2",
+            "title": "备件库存管理总则与职责",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "7af976afdaea538b268ea0923c1346515d512a6cb9a90fa2e843275d8e740172",
+            "generation_id": "130fe697609a466a93c4044c6fb2220f",
+            "chunk_id": "27063b106c8bdf16f983a3f4b3a083f9af396727424243e8ee975f75af186a0c",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-POL-001-C009",
+              "INV-POL-001-C010",
+              "INV-POL-001-C011",
+              "INV-POL-001-C012",
+              "INV-POL-001-C013"
+            ],
+            "section_path": [
+              "备件库存管理总则与职责",
+              "3 单据与数量控制"
+            ],
+            "excerpt": "备件库存管理总则与职责\n\n本制度建立门店备件从需求提出、采购、验收、保管、领用、调拨到差异处理的控制要求，适用于单门店下各仓库及参与业务、财务、质量和系统管理的岗位。文件按企业内部制度编制；实际经营主体、审批人、生效日期及授权参数须经企业核准。当前为待核准稿，不能作为已经生效的授权文件。\n\n3 单据与数量控制\n\nINV-POL-001-C009 单据至少应能追溯业务类型、业务日期、备件编码、仓库、数量、单位、实际操作人及关联事项。采购另需供应商和单价；调拨另需目标仓。维修领用应关联工单或其他有效领用依据。\n\nINV-POL-001-C010 草稿不产生实物库存变化。采购只有实际合格收货后增加现有量；领用只有过账后扣减；调拨发出后在途单列，目标仓收货后才计入其现有量。禁止把预计到货、口头承诺或未执行草稿当作现有库存。\n\nINV-POL-001-C011 库存按仓库与备件分别核对，计量单位必须一致，数量不得为负。不同SKU之间不得借账；同名、外观相似或包装相似不能作为合并编码、替代使用或认定车型适配的依据。\n\nINV-POL-001-C012 已生效的单据与流水不得直接删除、覆盖或改写数量。发现错误应按INV-ADJ-008建立来源关联、调查和批准记录，并通过获准的反向或调整业务处理。不得虚构采购、领用、调拨或再次期初登记来抵补差异。\n\nINV-POL-001-C013 网络超时或页面中断不代表业务失败。经办人应先核对原单据与流水，使用原请求重试或查询确认；不得在结果不明时连续创建参数相同的新业务。",
+            "line_start": 37,
+            "line_end": 46,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-POL-001",
+            "document_version": "1.0-draft.2",
+            "title": "备件库存管理总则与职责",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "7a855877ddda9891765c5a1ab1f05d6d1d640bc9ad03bfee474d42bdeff395fb",
+            "generation_id": "130fe697609a466a93c4044c6fb2220f",
+            "chunk_id": "107bf594aea4c0e062fe32554bb9cf86c8a55593e6a5fe7c6d433bad4447ac2c",
+            "unit_id": "INV-POL-001-C010",
+            "unit_ids": [
+              "INV-POL-001-C010"
+            ],
+            "section_path": [
+              "备件库存管理总则与职责",
+              "3 单据与数量控制"
+            ],
+            "excerpt": "INV-POL-001-C010 草稿不产生实物库存变化。采购只有实际合格收货后增加现有量；领用只有过账后扣减；调拨发出后在途单列，目标仓收货后才计入其现有量。禁止把预计到货、口头承诺或未执行草稿当作现有库存。",
+            "line_start": 39,
+            "line_end": 40,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-POL-001",
+            "document_version": "1.0-draft.2",
+            "title": "备件库存管理总则与职责",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "757b22d957fd54a0e1c2bf5b77186933c9ae9a4db24838721ce48efd84a84faf",
+            "generation_id": "130fe697609a466a93c4044c6fb2220f",
+            "chunk_id": "8d709f7706d24e63beee5f316082bffdc2cc72a82af2a83e3822d1db8c4dfca5",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-POL-001-C017",
+              "INV-POL-001-C018",
+              "INV-POL-001-C019"
+            ],
+            "section_path": [
+              "备件库存管理总则与职责",
+              "5 记录与管理复核"
+            ],
+            "excerpt": "备件库存管理总则与职责\n\n本制度建立门店备件从需求提出、采购、验收、保管、领用、调拨到差异处理的控制要求，适用于单门店下各仓库及参与业务、财务、质量和系统管理的岗位。文件按企业内部制度编制；实际经营主体、审批人、生效日期及授权参数须经企业核准。当前为待核准稿，不能作为已经生效的授权文件。\n\n5 记录与管理复核\n\nINV-POL-001-C017 库存数量以交易系统和对应实物核验为依据，制度知识库不保存可直接用于办理业务的实时库存。供应商交期、价格和授权等可变化参数应查询其有效台账及原始依据，不从旧对话推定。\n\nINV-POL-001-C018 业务负责人应组织定期账实核对、异常未结事项复核及权限检查。复核频率和记录保存要求由企业批准；在确定前，应形成专项安排并指定责任人，不能把未确定要求理解为无需保管或复核。\n\nINV-POL-001-C019 制度、合同和技术资料出现适用范围或版本冲突时，先停止依赖该冲突作出的自动建议，交由业务负责人会同相关岗位确认。不得由模型自行选择更有利的条款或把多个版本拼接为新规则。",
+            "line_start": 57,
+            "line_end": 62,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-POL-001",
+            "document_version": "1.0-draft.2",
+            "title": "备件库存管理总则与职责",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "96c31dbddc22dbef225ee11d7b59f76a8270893c492325544362c38a81dc6b8d",
+            "generation_id": "130fe697609a466a93c4044c6fb2220f",
+            "chunk_id": "db16c96130183d8478b9fd415e611c6ef7f4e9447ac1486b0b7e6269186a4e72",
+            "unit_id": "INV-POL-001-C017",
+            "unit_ids": [
+              "INV-POL-001-C017"
+            ],
+            "section_path": [
+              "备件库存管理总则与职责",
+              "5 记录与管理复核"
+            ],
+            "excerpt": "INV-POL-001-C017 库存数量以交易系统和对应实物核验为依据，制度知识库不保存可直接用于办理业务的实时库存。供应商交期、价格和授权等可变化参数应查询其有效台账及原始依据，不从旧对话推定。",
+            "line_start": 57,
+            "line_end": 58,
+            "tables": []
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 28,
+            "completion_tokens": 0,
+            "total_tokens": 28
+          },
+          "chat": {
+            "prompt_tokens": 16808,
+            "completion_tokens": 429,
+            "total_tokens": 17237
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      },
+      "elapsed_seconds": 3.293
+    },
+    {
+      "id": "Q-MATH",
+      "question": "假设A仓现有15件，B仓现有3件，A仓向B仓调拨6件，无其他库存流转。发出后和收货后各仓现有及在途是多少？",
+      "answer": {
+        "generation_id": "130fe697609a466a93c4044c6fb2220f",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "dense",
+        "timings": {
+          "qualification_seconds": 0.151,
+          "embedding_seconds": 0.195,
+          "retrieval_seconds": 0.452,
+          "chat_seconds": 1.395,
+          "validation_seconds": 0.153
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "按你提供的假设计算，结果如下；未读取实时库存。",
+            "citation_ids": [
+              "efc1c7b5ec83e1a6bbe236d7ab3c1a54a18599d397d94dfe27ef769119e62e96",
+              "dbd16b11d16047aad2f299d33f091b73716b3fc14b340433e2eca598092de4d7"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "依据为待核准稿（draft，pending_approval），非正式生效制度。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "calculation": {
+          "kind": "transfer_conservation",
+          "inputs": {
+            "source": 15,
+            "target": 3,
+            "quantity": 6
+          },
+          "input_evidence": {
+            "source": {
+              "value": 15,
+              "quote": "A仓现有15件"
+            },
+            "target": {
+              "value": 3,
+              "quote": "B仓现有3件"
+            },
+            "quantity": {
+              "value": 6,
+              "quote": "A仓向B仓调拨6件"
+            }
+          },
+          "steps": [
+            "发出时来源仓扣减，目标仓现有量不增加，调拨量计入在途",
+            "收货时在途转为目标仓现有量；现有量加在途始终为18件"
+          ],
+          "result": {
+            "after_ship": {
+              "source": 9,
+              "target": 3,
+              "in_transit": 6
+            },
+            "after_receive": {
+              "source": 9,
+              "target": 9,
+              "in_transit": 0
+            },
+            "total": 18
+          },
+          "citation_ids": [
+            "efc1c7b5ec83e1a6bbe236d7ab3c1a54a18599d397d94dfe27ef769119e62e96",
+            "dbd16b11d16047aad2f299d33f091b73716b3fc14b340433e2eca598092de4d7"
+          ],
+          "notice": "按你提供的假设计算；未核实业务事实，未查询实时库存或办理单据。"
+        },
+        "citations": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-TRF-006",
+            "document_version": "1.0-draft.1",
+            "title": "跨仓调拨与在途交接规程",
+            "native_format": "docx",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "efc1c7b5ec83e1a6bbe236d7ab3c1a54a18599d397d94dfe27ef769119e62e96",
+            "generation_id": "130fe697609a466a93c4044c6fb2220f",
+            "chunk_id": "41acaf83a075d67a8c3ddee88fd05e27b035c3e32151dfbf55a6bc49a565f73c",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-TRF-006-C004",
+              "INV-TRF-006-C005",
+              "INV-TRF-006-C006",
+              "INV-TRF-006-C007",
+              "INV-TRF-006-C008"
+            ],
+            "section_path": [
+              "跨仓调拨与在途交接规程",
+              "2 草稿与发出"
+            ],
+            "excerpt": "跨仓调拨与在途交接规程\n\n本规程控制同一门店下不同仓库之间的备件调拨、运输交接及在途核实。仅适用于内部库存位置变化，不以调拨表示采购、销售、维修消耗或所有权转移。当前为待核准稿。\n\n2 草稿与发出\n\nINV-TRF-006-C004 草稿记录来源仓、目标仓、SKU、整数数量、业务日期和用途。草稿不改变库存，可取消；填写错误时取消后重建，不直接改写已经发出的明细。\nINV-TRF-006-C005 当前调拨按整单发出和整单收货，不支持部分发出、部分收货或发出后撤回。若实物计划只能分批，应在发出前拆分为能独立交接的多张单据并复核。\nINV-TRF-006-C006 发出前复核整单明细及实物交接条件，提交时重新核对来源仓数量。任一行不足应整次失败，不能只发出可满足的行而保持原整单状态。\nINV-TRF-006-C007 发出成功后来源仓现有量减少，相同数量计入目标方向的调拨在途；目标仓现有量此时不增加。在途尚未可供目标仓领用，也不应在来源仓继续承诺为现货。\nINV-TRF-006-C008 发出业务日期不得早于调拨单日期或晚于办理日。系统登记与实物离库应同步核验，保留发出人、承运或交接人、交接时间和凭据；登记成功不自动证明实物运输已经完成。",
+            "block_start": 10,
+            "block_end": 14,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-TRF-006",
+            "document_version": "1.0-draft.1",
+            "title": "跨仓调拨与在途交接规程",
+            "native_format": "docx",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "dbd16b11d16047aad2f299d33f091b73716b3fc14b340433e2eca598092de4d7",
+            "generation_id": "130fe697609a466a93c4044c6fb2220f",
+            "chunk_id": "da7d62afcdfe6b27a54da48e319293317b54a87dcddcf34797e1d52e0867bb2e",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-TRF-006-C009",
+              "INV-TRF-006-C010",
+              "INV-TRF-006-C011"
+            ],
+            "section_path": [
+              "跨仓调拨与在途交接规程",
+              "3 目标仓接收"
+            ],
+            "excerpt": "跨仓调拨与在途交接规程\n\n本规程控制同一门店下不同仓库之间的备件调拨、运输交接及在途核实。仅适用于内部库存位置变化，不以调拨表示采购、销售、维修消耗或所有权转移。当前为待核准稿。\n\n3 目标仓接收\n\nINV-TRF-006-C009 目标仓按原调拨单核对包装、SKU、单位、数量和状态。只有整单实物一致且满足接收要求时才确认收货，收货日期不能早于实际发出日期或晚于办理日。\nINV-TRF-006-C010 收货成功后目标仓现有量增加，对应在途结束，形成收货流水。重复收货不得再次增加数量；请求结果不明时查询原单据并以原请求重试。\nINV-TRF-006-C011 单纯调拨期间，全仓现有量加调拨在途应保持守恒，按同一计量单位核验。采购待收属于外部未到货，不混入调拨守恒；调拨发出不计为维修领用消耗。\n| 业务时点 | 来源仓现有量 | 目标仓现有量 | 调拨在途 |\n| --- | --- | --- | --- |\n| 草稿 | 不变 | 不变 | 不增加 |\n| 整单发出 | 减少调拨数量 | 不变 | 增加调拨数量 |\n| 整单收货 | 不再扣减 | 增加调拨数量 | 结束对应在途 |",
+            "block_start": 16,
+            "block_end": 18,
+            "tables": [
+              {
+                "ordinal": 2,
+                "headers": [
+                  "业务时点",
+                  "来源仓现有量",
+                  "目标仓现有量",
+                  "调拨在途"
+                ],
+                "rows": [
+                  [
+                    "草稿",
+                    "不变",
+                    "不变",
+                    "不增加"
+                  ],
+                  [
+                    "整单发出",
+                    "减少调拨数量",
+                    "不变",
+                    "增加调拨数量"
+                  ],
+                  [
+                    "整单收货",
+                    "不再扣减",
+                    "增加调拨数量",
+                    "结束对应在途"
+                  ]
+                ],
+                "text": "| 业务时点 | 来源仓现有量 | 目标仓现有量 | 调拨在途 |\n| --- | --- | --- | --- |\n| 草稿 | 不变 | 不变 | 不增加 |\n| 整单发出 | 减少调拨数量 | 不变 | 增加调拨数量 |\n| 整单收货 | 不再扣减 | 增加调拨数量 | 结束对应在途 |",
+                "block_start": 19,
+                "block_end": 19
+              }
+            ]
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 47,
+            "completion_tokens": 0,
+            "total_tokens": 47
+          },
+          "chat": {
+            "prompt_tokens": 3069,
+            "completion_tokens": 236,
+            "total_tokens": 3305
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      },
+      "elapsed_seconds": 2.346
+    },
+    {
+      "id": "Q-MATH30",
+      "question": "假设，完整30日领用60件，交期4天，安全库存3件，可用1件，采购待收2件，调拨在途0件，请计算目标库存与补货缺口。",
+      "answer": {
+        "generation_id": "130fe697609a466a93c4044c6fb2220f",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "dense",
+        "timings": {
+          "qualification_seconds": 0.151,
+          "embedding_seconds": 0.183,
+          "retrieval_seconds": 0.454,
+          "chat_seconds": 2.358,
+          "validation_seconds": 0.119
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "按你提供的假设计算，结果如下；未读取实时库存。",
+            "citation_ids": [
+              "d0eefc54ad291f6a859ef0a30f66cfc5bf2e8012edaff515292cdd6cbec59604",
+              "80c1523002874bbf6a3e583c44303365a1ef94ca1a5490fb818e6ca0833a6c9c"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "INV-ANA-009 为待核准稿（draft，pending_approval），补货与调拨建议服务尚未因本文件编写而自动上线；本计算仅按假设口径解释公式，不构成采购指令或正式生效制度结论。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "calculation": {
+          "kind": "replenishment",
+          "inputs": {
+            "issue_30d": 60,
+            "days": 30,
+            "lead_days": 4,
+            "safety": 3,
+            "available": 1,
+            "purchase_pending": 2,
+            "transfer_inbound": 0
+          },
+          "input_evidence": {
+            "issue_30d": {
+              "value": 60,
+              "quote": "完整30日领用60件"
+            },
+            "days": {
+              "value": 30,
+              "quote": "完整30日领用60件"
+            },
+            "lead_days": {
+              "value": 4,
+              "quote": "交期4天"
+            },
+            "safety": {
+              "value": 3,
+              "quote": "安全库存3件"
+            },
+            "available": {
+              "value": 1,
+              "quote": "可用1件"
+            },
+            "purchase_pending": {
+              "value": 2,
+              "quote": "采购待收2件"
+            },
+            "transfer_inbound": {
+              "value": 0,
+              "quote": "调拨在途0件"
+            }
+          },
+          "steps": [
+            "本例假定所给完整30日领用量采用已过账口径；未核验业务记录，不用于实际补货执行。",
+            "平均日消耗=60/30=2件/天",
+            "目标库存=ceil(2×4+3)=11件",
+            "库存位置=1+2+0=3件",
+            "补货缺口=max(0,11−3)=8件"
+          ],
+          "result": {
+            "daily_consumption": "2",
+            "target": 11,
+            "position": 3,
+            "gap": 8
+          },
+          "citation_ids": [
+            "d0eefc54ad291f6a859ef0a30f66cfc5bf2e8012edaff515292cdd6cbec59604",
+            "80c1523002874bbf6a3e583c44303365a1ef94ca1a5490fb818e6ca0833a6c9c"
+          ],
+          "notice": "按你提供的假设计算；未核实业务事实，未查询实时库存或办理单据。"
+        },
+        "citations": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-ANA-009",
+            "document_version": "1.0-draft.3",
+            "title": "库存统计与补货调拨建议口径",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "d0eefc54ad291f6a859ef0a30f66cfc5bf2e8012edaff515292cdd6cbec59604",
+            "generation_id": "130fe697609a466a93c4044c6fb2220f",
+            "chunk_id": "cc9b5499a86faeeb0fba349003dea1ea2af94fda6cdbad3dc4adff67048dc6bb",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-ANA-009-C010",
+              "INV-ANA-009-C011",
+              "INV-ANA-009-C012",
+              "INV-ANA-009-C013"
+            ],
+            "section_path": [
+              "库存统计与补货调拨建议口径",
+              "3 补货计算"
+            ],
+            "excerpt": "库存统计与补货调拨建议口径\n\n本文件统一数量、历史消耗、补货与调拨建议的解释，避免将现有量、预计供给和模型建议混为一谈。规则用于形成可复核建议，不能取代采购批准或实物核验。当前为待核准稿；补货与调拨建议服务尚未因本文件编写而自动上线。\n\n3 补货计算\n\nINV-ANA-009-C010 在历史覆盖、供应商与采购交期均已核实时，目标库存为“平均日消耗乘采购交期天数，加安全库存”后向上取整；建议补货量为目标库存减库存位置与零之间的较大值。\n\nINV-ANA-009-C011 建议应展示基准日、统计区间、SKU、仓库、单位、消耗总量、平均日消耗、交期、安全库存、可用量、采购待收、调拨在途、目标库存和建议数量，使复核人能够按原输入复算。\n\nINV-ANA-009-C012 历史不足、交期缺失、单位冲突、库存结果不新鲜或人工冻结未核验时，停止给出可执行的确定性数量，明确缺失项并转人工评估。不能让大模型以常识估算代替这些输入。\n\nINV-ANA-009-C013 计算示例：30日领用60件、交期5天、安全库存10件，则平均日消耗2件、目标库存20件。若可用4件、采购待收8件、调拨在途3件，库存位置15件，建议缺口5件。这个示例仅解释计算，不对应某企业的实际采购指令。",
+            "line_start": 39,
+            "line_end": 46,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-ANA-009",
+            "document_version": "1.0-draft.3",
+            "title": "库存统计与补货调拨建议口径",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "80c1523002874bbf6a3e583c44303365a1ef94ca1a5490fb818e6ca0833a6c9c",
+            "generation_id": "130fe697609a466a93c4044c6fb2220f",
+            "chunk_id": "5d74fa213e94e8bf9a089514a671aa1e47b6edafd88d51a98d4c728307f12bdf",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-ANA-009-C001",
+              "INV-ANA-009-C002",
+              "INV-ANA-009-C003",
+              "INV-ANA-009-C004"
+            ],
+            "section_path": [
+              "库存统计与补货调拨建议口径",
+              "1 库存数量定义"
+            ],
+            "excerpt": "库存统计与补货调拨建议口径\n\n本文件统一数量、历史消耗、补货与调拨建议的解释，避免将现有量、预计供给和模型建议混为一谈。规则用于形成可复核建议，不能取代采购批准或实物核验。当前为待核准稿；补货与调拨建议服务尚未因本文件编写而自动上线。\n\n1 库存数量定义\n\nINV-ANA-009-C001 现有库存是指定仓库指定SKU已入账的当前数量。可用库存等于现有量减有效预留；当前没有预留流程，预留量为零，因此系统可用量等于现有量。不得展示虚构的预留能力。\n\nINV-ANA-009-C002 采购待收仅统计已确认或部分收货采购单仍有效的未收数量，排除草稿及取消余量。调拨在途仅统计本仓作为目标的已发出未收货数量。二者不计为现有库存。\n\nINV-ANA-009-C003 库存位置等于可用库存加采购待收加目标方向调拨在途，按相同SKU、仓库和单位计算。它表示计划供给位置，不等于现在可以领用的实物数量。\n\nINV-ANA-009-C004 低库存以当前现有量低于安全库存判断，零库存单列。低库存提示是核查入口，不直接构成采购需求；若需要不同低库存口径，应批准并同步界面、规则和评测，不静默改用库存位置。",
+            "line_start": 17,
+            "line_end": 24,
+            "tables": []
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 50,
+            "completion_tokens": 0,
+            "total_tokens": 50
+          },
+          "chat": {
+            "prompt_tokens": 3622,
+            "completion_tokens": 347,
+            "total_tokens": 3969
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      },
+      "elapsed_seconds": 3.265
+    },
+    {
+      "id": "Q-DIAG",
+      "question": "车辆空调出风量正常，但制冷不足，还没有检测记录。仅凭这些能否判断压缩机必须更换？",
+      "answer": {
+        "generation_id": "130fe697609a466a93c4044c6fb2220f",
+        "knowledge_base": "general_diagnostics",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "dense",
+        "timings": {
+          "qualification_seconds": 0.014,
+          "embedding_seconds": 0.186,
+          "retrieval_seconds": 0.063,
+          "chat_seconds": 4.618,
+          "validation_seconds": 0.021
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "制冷剂量和压力必须结合系统检查，不能用单一温度读数或“不冷”推定压缩机失效。",
+            "citation_ids": [
+              "830a086e3d8892df6cbcbe5c3ce7438c8ddd838363ad224a88ac7a6710d3d88b"
+            ]
+          },
+          {
+            "text": "故障码是排查线索，不是某零件损坏的充分证明；一次读数、声音或故障消失都不能自动证明根因。",
+            "citation_ids": [
+              "48b6ddbfe2305cbdfcbdb3520613c107c18ddb8254ac662762c1a13783578ac7"
+            ]
+          }
+        ],
+        "follow_up_questions": [
+          "制冷设置是否已开启，制冷不足是持续出现还是间歇出现？",
+          "近期是否做过空调维修或加注制冷剂？",
+          "是否已有维修人员对控制、制冷剂回路和散热条件做过检测记录？"
+        ],
+        "limitations": [
+          "本批资料为待技术复核的项目编制稿（draft，pending_technical_review），不是正式生效制度，也不是汽车厂家维修手册结论。",
+          "不提供制冷剂加注量、压力阈值等统一维修参数；制冷剂回路相关操作应由合格维修人员按适用资料进行。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [
+          {
+            "text": "制冷剂回路、散热、控制或压缩机问题；混风等也可能影响体感，当前资料不对所有结构给出结论。",
+            "citation_ids": [
+              "830a086e3d8892df6cbcbe5c3ce7438c8ddd838363ad224a88ac7a6710d3d88b"
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "用户可观察：确认风量是否正常、制冷设置是否开启、症状持续还是间歇、是否刚维修，以及已有检查记录。",
+            "citation_ids": [
+              "830a086e3d8892df6cbcbe5c3ce7438c8ddd838363ad224a88ac7a6710d3d88b"
+            ]
+          },
+          {
+            "text": "合格维修人员检查：核实实际系统和环境条件，再按适用资料检查控制、制冷剂回路和散热；制冷剂量/压力须结合系统判断。",
+            "citation_ids": [
+              "830a086e3d8892df6cbcbe5c3ce7438c8ddd838363ad224a88ac7a6710d3d88b"
+            ]
+          }
+        ],
+        "part_decisions": [
+          {
+            "text": "仅有“出风正常但制冷不足”的症状且无检测记录，属于只有症状、检查条件缺失，暂不能判断压缩机是否需更换。",
+            "citation_ids": [
+              "830a086e3d8892df6cbcbe5c3ce7438c8ddd838363ad224a88ac7a6710d3d88b",
+              "27f234fbecc48ef549e6403767e3aec39816029963290cdb20700b8b14ae49be"
+            ],
+            "part_type_key": "part-ac-compressor",
+            "status": "undetermined",
+            "condition": "需先区分外部控制与相关条件，并由有效检测支持压缩机本体失效，才可能转为支持更换。",
+            "check_record": null,
+            "basis_quote": null,
+            "catalog": {
+              "catalog_sku": "CAT-042",
+              "catalog_name": "空调压缩机",
+              "unit": "件",
+              "fitment_status": "not_assessed",
+              "required_quantity": null,
+              "image_url": "/images/part-ac-compressor.png"
+            }
+          }
+        ],
+        "citations": [
+          {
+            "knowledge_base": "general_diagnostics",
+            "document_id": "DX-AIR-006",
+            "document_version": "1.0-draft.1",
+            "title": "空调不冷与送风异常通用排查",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_technical_review",
+            "citation_id": "830a086e3d8892df6cbcbe5c3ce7438c8ddd838363ad224a88ac7a6710d3d88b",
+            "generation_id": "130fe697609a466a93c4044c6fb2220f",
+            "chunk_id": "0c6608dcf633f64a8510b184e01eff518efd99797681498b9b6da287db21bfae",
+            "unit_id": null,
+            "unit_ids": [
+              "DX-AIR-01"
+            ],
+            "section_path": [
+              "空调不冷与送风异常通用排查",
+              "DX-AIR-01 出风正常但不冷或制冷不足"
+            ],
+            "excerpt": "空调不冷与送风异常通用排查\n\n共同前提：同时遵守 DX-GEN-001。技术参考 SRC-DX-10、SRC-DX-11、SRC-DX-15。先分开“空气温度不对”和“风量不对”，不因统称空调故障而直接换压缩机。\n\nDX-AIR-01 出风正常但不冷或制冷不足\n\n**适用与追问：** 询问风量是否正常、制冷设置是否开启、持续还是间歇、是否刚维修，以及已有检查记录。没有风或风量明显小转 DX-AIR-02。\n\n**故障类型：** 制冷剂回路、散热、控制或压缩机问题；混风等也可能影响体感，当前资料不对所有结构给出结论。目录候选空调压缩机、空调冷凝器，涉及发动机冷却风扇共用散热的情况先确认结构，不能默认所有车辆共用。\n\n**检查路径：** 用户仅确认正常操作和可见现象。维修人员核实实际系统和环境条件，再按适用资料检查控制、回路和散热。制冷剂量/压力必须结合系统，不用一个温度或“不冷”推定压缩机失效；确认泄漏时应定位具体部位，不能只反复补充。\n\n**换件判断：** 仅不冷为 undetermined。外部控制与相关条件已区分、有效检测支持压缩机本体失效时，才给该件 recommended；有明确冷凝器本体泄漏/损坏记录且需更换时，才支持冷凝器 recommended。仅设置、清洁或其他维修处理后复核正常，不支持因此更换两件。\n\n**依据与限制：** SRC-DX-10“Air-conditioning circuit / Troubleshooting”。不教用户排放制冷剂、接压力表或拆卸回路，不提供通用加注量；电驱高压压缩机检修超出本手册。",
+            "line_start": 16,
+            "line_end": 26,
+            "tables": []
+          },
+          {
+            "knowledge_base": "general_diagnostics",
+            "document_id": "DX-GEN-001",
+            "document_version": "1.0-draft.1",
+            "title": "通用故障辅助排查与换件判断规则",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_technical_review",
+            "citation_id": "48b6ddbfe2305cbdfcbdb3520613c107c18ddb8254ac662762c1a13783578ac7",
+            "generation_id": "130fe697609a466a93c4044c6fb2220f",
+            "chunk_id": "d4e2f73c7b5a7c5bdac054eba589ba51d5301a327d6ece72930a9e0530b45790",
+            "unit_id": null,
+            "unit_ids": [
+              "DX-RULE-03"
+            ],
+            "section_path": [
+              "通用故障辅助排查与换件判断规则",
+              "DX-RULE-03 证据分级"
+            ],
+            "excerpt": "通用故障辅助排查与换件判断规则\n\n本文是本项目编写的通用排查规则，不是汽车厂家维修手册，也未经过维修技术负责人核准。技术参考见来源清单；以下问答流程、状态和证据要求是项目设计规则。本文必须与具体症状条目同时使用。\n\nDX-RULE-03 证据分级\n\n保留事实的来源：用户自述、既有工单/检测报告、实际工具结果或手册规则。用户说“肯定是电瓶坏了”是推测；“维修站报告记录了测试对象、条件、结论和检测日期”是待核实的检测证据。只能表述“根据你提供的报告”，不能声称 Agent 已经检测车辆。\n\n故障码是排查线索，不是某零件损坏的充分证明。一次读数、声音、故障消失或更换件名称都不能自动证明根因。报告缺少关键条件、相互矛盾或与当前故障不一致时，应补证，不把“未检查”写成“正常”。技术依据示例见 SRC-DX-04、SRC-DX-09。",
+            "line_start": 30,
+            "line_end": 34,
+            "tables": []
+          },
+          {
+            "knowledge_base": "general_diagnostics",
+            "document_id": "DX-GEN-001",
+            "document_version": "1.0-draft.1",
+            "title": "通用故障辅助排查与换件判断规则",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_technical_review",
+            "citation_id": "27f234fbecc48ef549e6403767e3aec39816029963290cdb20700b8b14ae49be",
+            "generation_id": "130fe697609a466a93c4044c6fb2220f",
+            "chunk_id": "90daf84d2bb28c364033712ef0b04fb6efa4fa0fd684c4c1cbc7061ff7b9598b",
+            "unit_id": null,
+            "unit_ids": [
+              "DX-RULE-04"
+            ],
+            "section_path": [
+              "通用故障辅助排查与换件判断规则",
+              "DX-RULE-04 换件状态"
+            ],
+            "excerpt": "通用故障辅助排查与换件判断规则\n\n本文是本项目编写的通用排查规则，不是汽车厂家维修手册，也未经过维修技术负责人核准。技术参考见来源清单；以下问答流程、状态和证据要求是项目设计规则。本文必须与具体症状条目同时使用。\n\nDX-RULE-04 换件状态\n\n对每一种候选部件分别输出一个状态，不能将整张候选表当作更换清单。\n\n| 状态 | 中文结论 | 使用条件 |\n| --- | --- | --- |\n| undetermined | 证据不足，暂不能判断 | 只有症状、故障码、猜测，或检查条件缺失/矛盾 |\n| not_indicated | 当前证据不支持更换 | 有检查支持非部件故障或问题经规范处理并复核消除；不表示永久不会损坏 |\n| conditional | 检查确认后再更换 | 已明确某候选部件及能区分其故障的检查条件，但尚无足够检查结果 |\n| recommended | 已有证据支持更换 | 提供了可定位的有效检测/损伤记录，满足相应条目的换件条件，并处理必要的外部原因；结论须注明证据来源与限制 |\n\n不要为了给出“是否”而强制二选一。只有症状时，主结论通常是 undetermined，可以同时说明哪些候选部件在何种条件下才会变为 conditional 或 recommended。对于 not_indicated，也要说明它针对哪个部件、哪次检查。",
+            "line_start": 36,
+            "line_end": 47,
+            "tables": [
+              {
+                "ordinal": 1,
+                "headers": [
+                  "状态",
+                  "中文结论",
+                  "使用条件"
+                ],
+                "rows": [
+                  [
+                    "undetermined",
+                    "证据不足，暂不能判断",
+                    "只有症状、故障码、猜测，或检查条件缺失/矛盾"
+                  ],
+                  [
+                    "not_indicated",
+                    "当前证据不支持更换",
+                    "有检查支持非部件故障或问题经规范处理并复核消除；不表示永久不会损坏"
+                  ],
+                  [
+                    "conditional",
+                    "检查确认后再更换",
+                    "已明确某候选部件及能区分其故障的检查条件，但尚无足够检查结果"
+                  ],
+                  [
+                    "recommended",
+                    "已有证据支持更换",
+                    "提供了可定位的有效检测/损伤记录，满足相应条目的换件条件，并处理必要的外部原因；结论须注明证据来源与限制"
+                  ]
+                ],
+                "line_start": 39,
+                "line_end": 44,
+                "text": "| 状态 | 中文结论 | 使用条件 |\n| --- | --- | --- |\n| undetermined | 证据不足，暂不能判断 | 只有症状、故障码、猜测，或检查条件缺失/矛盾 |\n| not_indicated | 当前证据不支持更换 | 有检查支持非部件故障或问题经规范处理并复核消除；不表示永久不会损坏 |\n| conditional | 检查确认后再更换 | 已明确某候选部件及能区分其故障的检查条件，但尚无足够检查结果 |\n| recommended | 已有证据支持更换 | 提供了可定位的有效检测/损伤记录，满足相应条目的换件条件，并处理必要的外部原因；结论须注明证据来源与限制 |"
+              }
+            ]
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 29,
+            "completion_tokens": 0,
+            "total_tokens": 29
+          },
+          "chat": {
+            "prompt_tokens": 10070,
+            "completion_tokens": 927,
+            "total_tokens": 10997
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      },
+      "elapsed_seconds": 4.903
+    },
+    {
+      "id": "Q-SHORTAGE",
+      "question": "先核对领用条件：拟从评测B仓领用评测蓄电池9件，仓库ID 505、备件ID 900。库存不足时说明缺口并提供可选处理方式，不办理其他业务，不创建提案。",
+      "answer": {
+        "answer_status": "needs_clarification",
+        "claims": [
+          {
+            "text": "备件ID 900为“评测蓄电池”（SKU EVB07246ECF3-BAT，单位：件），仓库ID 505为“评测B仓”，该备件与仓库均为启用状态。",
+            "citation_ids": [
+              "06f8af2cad9236db857b14bf3085c1eef60ebb6945144f6873056c2847b242cc",
+              "6fb6acd040d9bb5f303e6ef58eb535bf895b54af469525573246d4b7ab1dd733"
+            ]
+          },
+          {
+            "text": "截至2026-10-25快照，评测B仓该备件现有量2件、可用量2件，采购待收0件、调拨在途0件（在途与待收均不计为现货）。",
+            "citation_ids": [
+              "6fb6acd040d9bb5f303e6ef58eb535bf895b54af469525573246d4b7ab1dd733"
+            ]
+          },
+          {
+            "text": "领用条件核对结果：拟领用9件，可用仅2件，缺口7件，当前不满足领用条件，未创建任何单据或提案。",
+            "citation_ids": [
+              "3e63308847b41a6484b48ee0190d7d5f50d76f4e34dc9ab73b630ce2066d88c6"
+            ]
+          },
+          {
+            "text": "可选处理方式（需员工选择后再重新核对，均未获授权执行）：①核查其他仓库库存与可调条件，先出方案；②准备缺口7件的采购草稿提案，供应商与成交价需先确认；③调整本次领用数量后重新核对。",
+            "citation_ids": [
+              "3e63308847b41a6484b48ee0190d7d5f50d76f4e34dc9ab73b630ce2066d88c6"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "06f8af2cad9236db857b14bf3085c1eef60ebb6945144f6873056c2847b242cc",
+            "chunk_id": "06f8af2cad9236db857b14bf3085c1eef60ebb6945144f6873056c2847b242cc",
+            "document_id": "TOOL-catalog",
+            "document_version": "request_snapshot",
+            "title": "备件与供货目录",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"parts\": [{\"id\": 900, \"sku\": \"EVB07246ECF3-BAT\", \"name\": \"评测蓄电池\", \"aliases\": \"\", \"category\": \"评测电气\", \"unit\": \"件\", \"specification\": \"\", \"reference_price\": \"400.00\", \"safety_stock\": 3, \"suppliers\": [{\"id\": 244, \"name\": \"评测电气供应商\", \"lead_time_days\": 5}]}], \"warehouses\": [{\"id\": 504, \"code\": \"EVB07246ECF3-A\", \"name\": \"评测A仓\"}, {\"id\": 505, \"code\": \"EVB07246ECF3-B\", \"name\": \"评测B仓\"}], \"notice\": \"名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。\", \"limit\": 100}",
+            "accessed_at": "2026-10-25T06:17:56.037202+00:00"
+          },
+          {
+            "citation_id": "6fb6acd040d9bb5f303e6ef58eb535bf895b54af469525573246d4b7ab1dd733",
+            "chunk_id": "6fb6acd040d9bb5f303e6ef58eb535bf895b54af469525573246d4b7ab1dd733",
+            "document_id": "TOOL-stock",
+            "document_version": "request_snapshot",
+            "title": "实时库存查询",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"items\": [{\"warehouse_id\": 505, \"warehouse\": \"评测B仓\", \"part_id\": 900, \"sku\": \"EVB07246ECF3-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 2, \"available\": 2, \"purchase_pending\": 0, \"in_transit\": 0, \"initialized\": true}], \"limit\": 100, \"as_of\": \"2026-10-25T14:17:56.044248+08:00\", \"time_zone\": \"Asia/Shanghai\", \"reserved\": 0, \"notice\": \"当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。\"}",
+            "accessed_at": "2026-10-25T06:17:56.044826+00:00"
+          },
+          {
+            "citation_id": "3e63308847b41a6484b48ee0190d7d5f50d76f4e34dc9ab73b630ce2066d88c6",
+            "chunk_id": "3e63308847b41a6484b48ee0190d7d5f50d76f4e34dc9ab73b630ce2066d88c6",
+            "document_id": "TOOL-assess_request",
+            "document_version": "request_snapshot",
+            "title": "业务条件核对",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"eligible\": false, \"business_issue\": {\"code\": \"insufficient_stock\", \"summary\": \"评测蓄电池需求9件，可用2件，缺口7件\", \"facts\": {\"warehouse_id\": 505, \"items\": [{\"part_id\": 900, \"sku\": \"EVB07246ECF3-BAT\", \"name\": \"评测蓄电池\", \"requested\": 9, \"available\": 2, \"gap\": 7}], \"action\": \"create\"}, \"options\": [{\"label\": \"核查跨仓调拨\", \"prompt\": \"请为仓库ID 505核查评测蓄电池（EVB07246ECF3-BAT）7件的其他仓库存和可调条件，先给方案，不创建或发出单据。\"}, {\"label\": \"准备缺口采购\", \"prompt\": \"请为仓库ID 505准备评测蓄电池（EVB07246ECF3-BAT）7件的采购草稿提案；先查询合格供应商，供应商和成交价未确定时向我确认，不自动审核或入库。\"}, {\"label\": \"调整本次需求\", \"prompt\": \"我想调整刚才的业务需求，请先列出原备件、需求量与可用量，等我提供新数量后重新核对，不自动缩减或部分执行。\"}], \"notice\": \"选择处理方式后仍需补齐必要条件并提交审核；当前未执行业务。\"}}",
+            "accessed_at": "2026-10-25T06:17:57.195837+00:00"
+          }
+        ],
+        "follow_up_questions": [
+          "请选择后续处理方式：核查跨仓调拨、准备缺口采购、调整本次需求。需要我协助准备哪一项？",
+          "是否需要我核查其他仓库的库存与可调条件（仅出方案，不建单）？",
+          "是否改为准备缺口7件的采购草稿提案？如需，请指定供应商（目录中为评测电气供应商，交期5天）并确认成交价。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "limitations": [
+          "业务查询来自本轮工具快照，执行前仍须重新校验。"
+        ],
+        "message": "已按您的要求仅做领用条件核对，未办理其他业务、未创建提案。",
+        "business_issues": [
+          {
+            "code": "insufficient_stock",
+            "summary": "评测蓄电池需求9件，可用2件，缺口7件",
+            "facts": {
+              "warehouse_id": 505,
+              "items": [
+                {
+                  "part_id": 900,
+                  "sku": "EVB07246ECF3-BAT",
+                  "name": "评测蓄电池",
+                  "requested": 9,
+                  "available": 2,
+                  "gap": 7
+                }
+              ],
+              "action": "create"
+            },
+            "options": [
+              {
+                "label": "核查跨仓调拨",
+                "prompt": "请为仓库ID 505核查评测蓄电池（EVB07246ECF3-BAT）7件的其他仓库存和可调条件，先给方案，不创建或发出单据。"
+              },
+              {
+                "label": "准备缺口采购",
+                "prompt": "请为仓库ID 505准备评测蓄电池（EVB07246ECF3-BAT）7件的采购草稿提案；先查询合格供应商，供应商和成交价未确定时向我确认，不自动审核或入库。"
+              },
+              {
+                "label": "调整本次需求",
+                "prompt": "我想调整刚才的业务需求，请先列出原备件、需求量与可用量，等我提供新数量后重新核对，不自动缩减或部分执行。"
+              }
+            ],
+            "notice": "选择处理方式后仍需补齐必要条件并提交审核；当前未执行业务。"
+          }
+        ],
+        "usage": {
+          "agent_model_calls": [
+            {
+              "prompt_tokens": 2534,
+              "completion_tokens": 97,
+              "total_tokens": 2631
+            },
+            {
+              "prompt_tokens": 3126,
+              "completion_tokens": 96,
+              "total_tokens": 3222
+            },
+            {
+              "prompt_tokens": 3581,
+              "completion_tokens": 584,
+              "total_tokens": 4165
+            }
+          ],
+          "knowledge": [],
+          "coordinator": {
+            "prompt_tokens": 274,
+            "completion_tokens": 75,
+            "total_tokens": 349
+          }
+        },
+        "agent_mode": "multi",
+        "roles": [
+          "coordinator",
+          "business"
+        ],
+        "tool_trace": [
+          {
+            "role": "business",
+            "tool": "catalog",
+            "step": 0,
+            "call_id": "call_00_vcPinSZSuLoKampkvaoG7507",
+            "arguments": {
+              "part_id": 900
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "06f8af2cad9236db857b14bf3085c1eef60ebb6945144f6873056c2847b242cc",
+              "data": {
+                "parts": [
+                  {
+                    "id": 900,
+                    "sku": "EVB07246ECF3-BAT",
+                    "name": "评测蓄电池",
+                    "aliases": "",
+                    "category": "评测电气",
+                    "unit": "件",
+                    "specification": "",
+                    "reference_price": "400.00",
+                    "safety_stock": 3,
+                    "suppliers": [
+                      {
+                        "id": 244,
+                        "name": "评测电气供应商",
+                        "lead_time_days": 5
+                      }
+                    ]
+                  }
+                ],
+                "warehouses": [
+                  {
+                    "id": 504,
+                    "code": "EVB07246ECF3-A",
+                    "name": "评测A仓"
+                  },
+                  {
+                    "id": 505,
+                    "code": "EVB07246ECF3-B",
+                    "name": "评测B仓"
+                  }
+                ],
+                "notice": "名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。",
+                "limit": 100
+              }
+            },
+            "elapsed_seconds": 0.006
+          },
+          {
+            "role": "business",
+            "tool": "stock",
+            "step": 0,
+            "call_id": "call_01_ZTuEsrYdm0xJq7wOH2L61267",
+            "arguments": {
+              "part_id": 900,
+              "warehouse_id": 505
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "6fb6acd040d9bb5f303e6ef58eb535bf895b54af469525573246d4b7ab1dd733",
+              "data": {
+                "items": [
+                  {
+                    "warehouse_id": 505,
+                    "warehouse": "评测B仓",
+                    "part_id": 900,
+                    "sku": "EVB07246ECF3-BAT",
+                    "name": "评测蓄电池",
+                    "unit": "件",
+                    "image_key": "",
+                    "safety_stock": 3,
+                    "part_active": true,
+                    "warehouse_active": true,
+                    "quantity": 2,
+                    "available": 2,
+                    "purchase_pending": 0,
+                    "in_transit": 0,
+                    "initialized": true
+                  }
+                ],
+                "limit": 100,
+                "as_of": "2026-10-25T14:17:56.044248+08:00",
+                "time_zone": "Asia/Shanghai",
+                "reserved": 0,
+                "notice": "当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。"
+              }
+            },
+            "elapsed_seconds": 0.008
+          },
+          {
+            "role": "business",
+            "tool": "assess_request",
+            "step": 1,
+            "call_id": "call_00_z00xa1haPP7E7UN72hF40685",
+            "arguments": {
+              "action": "create",
+              "payload": {
+                "kind": "issue",
+                "warehouse_id": 505,
+                "business_date": "2026-10-25",
+                "lines": [
+                  {
+                    "part_id": 900,
+                    "quantity": 9
+                  }
+                ]
+              }
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "3e63308847b41a6484b48ee0190d7d5f50d76f4e34dc9ab73b630ce2066d88c6",
+              "data": {
+                "eligible": false,
+                "business_issue": {
+                  "code": "insufficient_stock",
+                  "summary": "评测蓄电池需求9件，可用2件，缺口7件",
+                  "facts": {
+                    "warehouse_id": 505,
+                    "items": [
+                      {
+                        "part_id": 900,
+                        "sku": "EVB07246ECF3-BAT",
+                        "name": "评测蓄电池",
+                        "requested": 9,
+                        "available": 2,
+                        "gap": 7
+                      }
+                    ],
+                    "action": "create"
+                  },
+                  "options": [
+                    {
+                      "label": "核查跨仓调拨",
+                      "prompt": "请为仓库ID 505核查评测蓄电池（EVB07246ECF3-BAT）7件的其他仓库存和可调条件，先给方案，不创建或发出单据。"
+                    },
+                    {
+                      "label": "准备缺口采购",
+                      "prompt": "请为仓库ID 505准备评测蓄电池（EVB07246ECF3-BAT）7件的采购草稿提案；先查询合格供应商，供应商和成交价未确定时向我确认，不自动审核或入库。"
+                    },
+                    {
+                      "label": "调整本次需求",
+                      "prompt": "我想调整刚才的业务需求，请先列出原备件、需求量与可用量，等我提供新数量后重新核对，不自动缩减或部分执行。"
+                    }
+                  ],
+                  "notice": "选择处理方式后仍需补齐必要条件并提交审核；当前未执行业务。"
+                }
+              }
+            },
+            "elapsed_seconds": 0.009
+          },
+          {
+            "role": "business",
+            "tool": "finish",
+            "step": 2,
+            "call_id": "call_00_zxBGZ0u7nvVIR3u0oXb96008",
+            "arguments": {
+              "claims": [
+                {
+                  "text": "备件ID 900为“评测蓄电池”（SKU EVB07246ECF3-BAT，单位：件），仓库ID 505为“评测B仓”，该备件与仓库均为启用状态。",
+                  "evidence_ids": [
+                    "06f8af2cad9236db857b14bf3085c1eef60ebb6945144f6873056c2847b242cc",
+                    "6fb6acd040d9bb5f303e6ef58eb535bf895b54af469525573246d4b7ab1dd733"
+                  ]
+                },
+                {
+                  "text": "截至2026-10-25快照，评测B仓该备件现有量2件、可用量2件，采购待收0件、调拨在途0件（在途与待收均不计为现货）。",
+                  "evidence_ids": [
+                    "6fb6acd040d9bb5f303e6ef58eb535bf895b54af469525573246d4b7ab1dd733"
+                  ]
+                },
+                {
+                  "text": "领用条件核对结果：拟领用9件，可用仅2件，缺口7件，当前不满足领用条件，未创建任何单据或提案。",
+                  "evidence_ids": [
+                    "3e63308847b41a6484b48ee0190d7d5f50d76f4e34dc9ab73b630ce2066d88c6"
+                  ]
+                },
+                {
+                  "text": "可选处理方式（需员工选择后再重新核对，均未获授权执行）：①核查其他仓库库存与可调条件，先出方案；②准备缺口7件的采购草稿提案，供应商与成交价需先确认；③调整本次领用数量后重新核对。",
+                  "evidence_ids": [
+                    "3e63308847b41a6484b48ee0190d7d5f50d76f4e34dc9ab73b630ce2066d88c6"
+                  ]
+                }
+              ],
+              "follow_up_questions": [
+                "是否需要我核查其他仓库的库存与可调条件（仅出方案，不建单）？",
+                "是否改为准备缺口7件的采购草稿提案？如需，请指定供应商（目录中为评测电气供应商，交期5天）并确认成交价。",
+                "是否调整本次领用数量？请提供新数量。"
+              ],
+              "message": "已按您的要求仅做领用条件核对，未办理其他业务、未创建提案。"
+            },
+            "status": "ok",
+            "result": {
+              "finished": true
+            },
+            "elapsed_seconds": 0.0
+          }
+        ],
+        "proposals": [],
+        "agent_elapsed_seconds": 6.459
+      },
+      "elapsed_seconds": 6.459,
+      "checks": {
+        "has_shortage": true,
+        "asks_employee_choice": true,
+        "no_proposals": true,
+        "multi_agent": true
+      }
+    }
+  ]
+}

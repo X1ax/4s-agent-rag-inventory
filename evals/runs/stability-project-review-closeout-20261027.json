@@ -1,0 +1,67 @@
+{
+  "created_at": "2026-10-27T05:25:14.592811+00:00",
+  "reviewer": "主执行模型对先前独立项目AI审查发现的定向复核；最后一次独立审查因工具额度中断，未声称新增独立审查或专家认证",
+  "scope": "exposed regressions and synthetic test database; no new model calls in this review",
+  "sha256": {
+    "evals/runs/stability-project-source-review-20261026.json": "da63e9c9b16ca2290ac615f11cc39e22dd3af309ea64c5b15341dcc446e1583e",
+    "evals/runs/m3-quality-retest-20261026T141203Z.json": "f876585f9a637ca5d217b5a5aeabb501b6d0a4bbca30ac84881e7422d56710ce",
+    "evals/runs/m4-agent-comparison-20261027T051639Z.json": "9f0f7b9254eacbfa2e84542b762f09270e64b357915d22a45d68798fd66cb6ee",
+    "evals/runs/stability-live-http-20261027.json": "aceb181834a1d2b86585017004a5a34bc9b26f7d4609ac0a48f82cafff2f47f8",
+    "backend/app/agent.py": "41b7818311dd2b0c4ce46f59e6131d6c6d7883a2de20704cc89824aa2502c647",
+    "backend/app/knowledge_answers.py": "b026e79652311ae135c0addad080172016c821da34d9349a9d4ffc5e257861fc",
+    "backend/app/knowledge_api.py": "6464adda52aa774018868e310f5c6311b52d003ab64efa402efbdf97a5fb1822",
+    "evals/compare_agents.py": "7efe372e9c73f31d0e5502be0a878a1a59632c8b44b7ebe0744e9853289bbd2a",
+    "tests/test_agent_advice.py": "d0987cfaade86d73c12c75116da22aa755a79b435b91319fddef6661b33a815a",
+    "tests/test_agent_evaluation.py": "0e3c280a531a8c5897338840bde27f614860886a0c8de6bcba39eb2b7c15b120",
+    "tests/test_knowledge_answers.py": "c3e7a3cdef3df2267caf63663279894e213ffe88201bc49d9dcedba1f9c1812f"
+  },
+  "closures": [
+    {
+      "issue": "M3-I12 adjacent-clause unsupported conditions",
+      "evidence": "m3-quality-retest-20261026T141203Z.json:M3-I12",
+      "result": "批准要求引用INV-PUR-003第3节完整上下文C007+C008；身份与审核边界分别引用SEC-C005/C018，逐项支持"
+    },
+    {
+      "issue": "ACC-INV-17 unnecessary clarification",
+      "evidence": "m3-quality-retest-20261026T141203Z.json:REG-ACC-INV-17",
+      "result": "31/30*5+8向上取整14，库存位置3+2+1=6，缺口8；用户假设与引用公式保留"
+    },
+    {
+      "issue": "ACC-DX-21 safe but missing fitment/quantity boundary",
+      "evidence": "tests/test_knowledge_answers.py:test_diagnostic_live_stock_boundary_also_explains_fitment_and_vehicle_quantity; stability-live-http-20261027.json",
+      "result": "共享live_data_answer明确目录适配与单车需求未知，实际库存需工具；HTTP返回requires_live_data且未生成换件结论"
+    },
+    {
+      "issue": "calculation branch / refusal rationale",
+      "evidence": "m3-quality-retest-20261026T141203Z.json:REG-ACC-INV-15,M3-D08",
+      "result": "30完整自然日09-23至10-22不含基准日；纯电READY范围外理由保留在limitations，不套用燃油车检修"
+    },
+    {
+      "issue": "uncited transfer quantities and another-SKU calculated evidence bypass",
+      "evidence": "tests/test_agent_advice.py; backend/app/agent.py",
+      "result": "正文与追问不得承载未引用的具体调拨量；引用建议必须对应calculated结果，其他SKU不能豁免未引用数字；8种组合回归"
+    },
+    {
+      "issue": "false negative from missing kind in create response",
+      "evidence": "tests/test_agent_evaluation.py; evals/compare_agents.py:draft_matches_request",
+      "result": "按真实接口id/status并复核数据库种类、明细、价格、日期、数量；假重复ID仍被拒绝，实际创建正例通过"
+    }
+  ],
+  "citation_checks": {
+    "targeted_rag_citations": 9,
+    "agent_document_citations": 7,
+    "snapshot_excerpt_mismatches": 0,
+    "note": "原文一致性机械检查与以下语义审查分别记录"
+  },
+  "agent_semantic_review": {
+    "report": "m4-agent-comparison-20261027T051639Z.json",
+    "case_records_read": 18,
+    "findings": "库存14/2、待收6、报价400/门店550/参考300、实际账面5100/700、采购10/4/6、提案2采购/3调拨和缺口986与工具及快照一致。AG07/08共4回答的症状/换件条件与DX-STR-01、DX-AIR-01、DX-RULE-04逐项对应，均为undetermined，未认定适配或办理领用。业务确认与审核明确分离。",
+    "limitations": [
+      "单Agent展示5100/14约364.29的解释性算术已复算正确，不是新成交价或成本写入",
+      "多Agent AG07有语义重复追问，AG08正文出现recommended英文状态；属于措辞质量边界，未影响换件状态或业务执行",
+      "仅审查这些已暴露样例，不代表所有回答有证据支持"
+    ]
+  },
+  "final_disposition": "本轮已识别的阻断性缺陷有修复与定向证据；保留检索未完全覆盖、模型随机性和有限样本限制；M5尚未完成"
+}

@@ -1,0 +1,2226 @@
+{
+  "run_type": "real_online_embedding_dense_development_baseline",
+  "created_at": "2026-10-23T03:24:56.718625+00:00",
+  "generation_id": "024e24f1df764bc49ef1a79c658d4dc6",
+  "fingerprint": "728f2493ea3763e43b2fe21697d9e86691256f513d85084033950d36a3b52e33",
+  "embedding": {
+    "endpoint": "https://api.siliconflow.cn/v1/embeddings",
+    "model": "BAAI/bge-m3",
+    "dimension": 1024,
+    "distance": "cosine"
+  },
+  "top_k": 5,
+  "acceptance_run": false,
+  "chat_model_called": false,
+  "answer_quality_evaluated": false,
+  "default_scope_check": {
+    "generation_id": "024e24f1df764bc49ef1a79c658d4dc6",
+    "retrieval_mode": "dense",
+    "knowledge_base": "inventory_policies",
+    "knowledge_scope": "released_only",
+    "top_k": 5,
+    "status": "no_eligible_documents",
+    "hits": [],
+    "contexts": [],
+    "embedding_requests": 0
+  },
+  "cases": [
+    {
+      "case_id": "DEV-INV-01",
+      "knowledge_base": "inventory_policies",
+      "question": "这套库存制度已经能作为生效制度执行了吗？",
+      "scope": "draft_preview",
+      "status": "retrieved",
+      "elapsed_seconds": 0.241,
+      "expected_groups": [
+        [
+          "INV-POL-001-C020"
+        ]
+      ],
+      "hits": [
+        {
+          "unit_id": "INV-SEC-010-C002",
+          "chunk_id": "74087d4240e3f235c2371ad5614829ad9a21de0592415e9ad6a2124fa64b1bb8",
+          "document_id": "INV-SEC-010",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "ba08da156af3a9f97db8ba4c61a9027036c95eeef69b710f7bf9e5f103bde568",
+          "section_path": [
+            "库存权限审计与业务连续性管理办法",
+            "1 账号与角色"
+          ],
+          "distance": 0.39789021015167236
+        },
+        {
+          "unit_id": "INV-SEC-010-C014",
+          "chunk_id": "eff7e4332ea16794affef5bea9402684c74b63808d7c61d85991c70ec7d00340",
+          "document_id": "INV-SEC-010",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "ba08da156af3a9f97db8ba4c61a9027036c95eeef69b710f7bf9e5f103bde568",
+          "section_path": [
+            "库存权限审计与业务连续性管理办法",
+            "5 中断与恢复"
+          ],
+          "distance": 0.404354453086853
+        },
+        {
+          "unit_id": "INV-ANA-009-C001",
+          "chunk_id": "727476dbc40b27249a0fc39db2f45bd32969c2eba032a59ee76479cc9ded0b02",
+          "document_id": "INV-ANA-009",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "c76cf3dae50d8afac5101567616fa72b91d8dbfe36b9167bfc3dee2aeeb86541",
+          "section_path": [
+            "库存统计与补货调拨建议口径",
+            "1 库存数量定义"
+          ],
+          "distance": 0.40690499544143677
+        },
+        {
+          "unit_id": "INV-GLO-011-C004",
+          "chunk_id": "96b69753d689d9631813249a5301ada42e849512a407bcb90681e7b749a56f21",
+          "document_id": "INV-GLO-011",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "f31e9c719f386e4ad4680d200d3b1829b72655b79ea0d3563e43605ed47e9705",
+          "section_path": [
+            "备件库存术语与检索同义词",
+            "1 库存与单位"
+          ],
+          "distance": 0.41432833671569824
+        },
+        {
+          "unit_id": "INV-GLO-011-C003",
+          "chunk_id": "f431f4852f53ef7d7c01dfbb2e36454b9aef404d1a4b2b552c7f3a037a21f0eb",
+          "document_id": "INV-GLO-011",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "f31e9c719f386e4ad4680d200d3b1829b72655b79ea0d3563e43605ed47e9705",
+          "section_path": [
+            "备件库存术语与检索同义词",
+            "1 库存与单位"
+          ],
+          "distance": 0.41483306884765625
+        }
+      ],
+      "expanded_contexts": [
+        {
+          "context_id": "0e0550ddcd3251d25c7834b55e2b5b8f91d62a8e0722c9e77ebaa038e3919e1f",
+          "document_id": "INV-ANA-009",
+          "unit_ids": [
+            "INV-ANA-009-C001",
+            "INV-ANA-009-C002",
+            "INV-ANA-009-C003",
+            "INV-ANA-009-C004"
+          ]
+        },
+        {
+          "context_id": "7c73cd26d65a8d35a211a6807532960830086baf7edf6408141b11a2798bc382",
+          "document_id": "INV-SEC-010",
+          "unit_ids": [
+            "INV-SEC-010-C001",
+            "INV-SEC-010-C002",
+            "INV-SEC-010-C003",
+            "INV-SEC-010-C004"
+          ]
+        },
+        {
+          "context_id": "e85ee647da402c30cf8bab32adf1418f3a36b9ad7177e77fac1c31006449b82d",
+          "document_id": "INV-GLO-011",
+          "unit_ids": [
+            "INV-GLO-011-C001",
+            "INV-GLO-011-C002",
+            "INV-GLO-011-C003",
+            "INV-GLO-011-C004",
+            "INV-GLO-011-C005",
+            "INV-GLO-011-C006"
+          ]
+        },
+        {
+          "context_id": "f688b05e8f363b867246c8929149df3040ce7fdbf518c74b6a936b444279a97a",
+          "document_id": "INV-SEC-010",
+          "unit_ids": [
+            "INV-SEC-010-C014",
+            "INV-SEC-010-C015",
+            "INV-SEC-010-C016"
+          ]
+        }
+      ],
+      "raw_groups_hit": 0,
+      "expanded_groups_hit": 0,
+      "expected_group_count": 1
+    },
+    {
+      "case_id": "DEV-INV-02",
+      "knowledge_base": "inventory_policies",
+      "question": "按草案，一桶机油能否登记领用0.5桶？",
+      "scope": "draft_preview",
+      "status": "retrieved",
+      "elapsed_seconds": 0.274,
+      "expected_groups": [
+        [
+          "INV-MDM-002-C005"
+        ]
+      ],
+      "hits": [
+        {
+          "unit_id": "INV-ISS-005-C003",
+          "chunk_id": "b4274216bd1636125bbf60a75b6053203b03a4cd1e12c4074345356da889d9c1",
+          "document_id": "INV-ISS-005",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "6af72164b2a1279a306dd27259b1044e827b1a146ff279433347cfce4e97714b",
+          "section_path": [
+            "维修领用与出库管理办法",
+            "1 领用依据"
+          ],
+          "distance": 0.39642059803009033
+        },
+        {
+          "unit_id": "INV-MDM-002-C005",
+          "chunk_id": "ba7ab9997eda7e206497fdbe2f8428a0eb218182bdf35a9a9eba2d09ad6c58c1",
+          "document_id": "INV-MDM-002",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "fc850dbced531ea94175a01aa820a348dacefcfdf372e9eb610014d645da8f17",
+          "section_path": [
+            "备件主数据与期初建账管理办法",
+            "2 单位与参数维护"
+          ],
+          "distance": 0.41905224323272705
+        },
+        {
+          "unit_id": "INV-ISS-005-C001",
+          "chunk_id": "74ded9c4c8f8cdfd8e206ee0091f3bde91b0d08688de7915d713d62c4082d23e",
+          "document_id": "INV-ISS-005",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "6af72164b2a1279a306dd27259b1044e827b1a146ff279433347cfce4e97714b",
+          "section_path": [
+            "维修领用与出库管理办法",
+            "1 领用依据"
+          ],
+          "distance": 0.41971355676651
+        },
+        {
+          "unit_id": "INV-ISS-005-C002",
+          "chunk_id": "b2d875f36eb93b97ae0233607c3a5127bdcf7b1da4d908adedef2c5a7b5f7e3a",
+          "document_id": "INV-ISS-005",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "6af72164b2a1279a306dd27259b1044e827b1a146ff279433347cfce4e97714b",
+          "section_path": [
+            "维修领用与出库管理办法",
+            "1 领用依据"
+          ],
+          "distance": 0.4323009252548218
+        },
+        {
+          "unit_id": "INV-ISS-005-C017",
+          "chunk_id": "d0c1562d15ef4f298fc17e96ef8ef69c6b619dc546865cfd58e96100b4ff7195",
+          "document_id": "INV-ISS-005",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "6af72164b2a1279a306dd27259b1044e827b1a146ff279433347cfce4e97714b",
+          "section_path": [
+            "维修领用与出库管理办法",
+            "5 复核与异常"
+          ],
+          "distance": 0.43512070178985596
+        }
+      ],
+      "expanded_contexts": [
+        {
+          "context_id": "54ed214ceae4a4bf92226058bb3eaa89e8ae90532f85556df8c88b5ea26521bc",
+          "document_id": "INV-ISS-005",
+          "unit_ids": [
+            "INV-ISS-005-C015",
+            "INV-ISS-005-C016",
+            "INV-ISS-005-C017"
+          ]
+        },
+        {
+          "context_id": "62d60045e199fae1f0e859c72f56dda6e734db04a6df7f4784e9decd8f309489",
+          "document_id": "INV-MDM-002",
+          "unit_ids": [
+            "INV-MDM-002-C005",
+            "INV-MDM-002-C006",
+            "INV-MDM-002-C007",
+            "INV-MDM-002-C008",
+            "INV-MDM-002-C009"
+          ]
+        },
+        {
+          "context_id": "8ea645b93a0c719ae6b4e0b2b320687ea44a2728b13d51f36bec73baa6718b28",
+          "document_id": "INV-ISS-005",
+          "unit_ids": [
+            "INV-ISS-005-C001",
+            "INV-ISS-005-C002",
+            "INV-ISS-005-C003"
+          ]
+        }
+      ],
+      "raw_groups_hit": 1,
+      "expanded_groups_hit": 1,
+      "expected_group_count": 1
+    },
+    {
+      "case_id": "DEV-INV-03",
+      "knowledge_base": "inventory_policies",
+      "question": "采购单已经确认，仓库现有库存会立即增加吗？也表示供应商已经收到订单了吗？",
+      "scope": "draft_preview",
+      "status": "not_run_format_not_supported",
+      "expected_groups": [
+        [
+          "INV-PUR-003-C010"
+        ]
+      ]
+    },
+    {
+      "case_id": "DEV-INV-04",
+      "knowledge_base": "inventory_policies",
+      "question": "假设采购20件，本次只收到并验收合格8件，现有量和待收怎么变？以后取消余量会退掉这8件吗？",
+      "scope": "draft_preview",
+      "status": "not_run_format_not_supported",
+      "expected_groups": [
+        [
+          "INV-RCV-004-C014"
+        ]
+      ]
+    },
+    {
+      "case_id": "DEV-INV-05",
+      "knowledge_base": "inventory_policies",
+      "question": "出库单有三行，其中一行库存不够，能先扣另外两行并把整单标成功吗？",
+      "scope": "draft_preview",
+      "status": "retrieved",
+      "elapsed_seconds": 0.223,
+      "expected_groups": [
+        [
+          "INV-ISS-005-C009"
+        ],
+        [
+          "INV-ISS-005-C010"
+        ]
+      ],
+      "hits": [
+        {
+          "unit_id": "INV-ISS-005-C010",
+          "chunk_id": "837e1c5c4b69b664da1cdf5b48f390195f9a02f2202a7c7f6dac3d9780bb86c4",
+          "document_id": "INV-ISS-005",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "6af72164b2a1279a306dd27259b1044e827b1a146ff279433347cfce4e97714b",
+          "section_path": [
+            "维修领用与出库管理办法",
+            "3 出库过账"
+          ],
+          "distance": 0.3209863305091858
+        },
+        {
+          "unit_id": "INV-ISS-005-C009",
+          "chunk_id": "d4c7a4d28efd50cee3568bb3d4685ce14b0fb54ef43459fdcd159c3e7f39bc77",
+          "document_id": "INV-ISS-005",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "6af72164b2a1279a306dd27259b1044e827b1a146ff279433347cfce4e97714b",
+          "section_path": [
+            "维修领用与出库管理办法",
+            "3 出库过账"
+          ],
+          "distance": 0.33622443675994873
+        },
+        {
+          "unit_id": "INV-ISS-005-C011",
+          "chunk_id": "31d21035ccf2ac5956ad6928db4b7231d516d897f701f37d4e23ccae781d72f7",
+          "document_id": "INV-ISS-005",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "6af72164b2a1279a306dd27259b1044e827b1a146ff279433347cfce4e97714b",
+          "section_path": [
+            "维修领用与出库管理办法",
+            "3 出库过账"
+          ],
+          "distance": 0.3667643666267395
+        },
+        {
+          "unit_id": "INV-ISS-005-C008",
+          "chunk_id": "5fe1386c49429a72efd630bc7560b0bf7d587cb128a5376b505c9594b6c43ea1",
+          "document_id": "INV-ISS-005",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "6af72164b2a1279a306dd27259b1044e827b1a146ff279433347cfce4e97714b",
+          "section_path": [
+            "维修领用与出库管理办法",
+            "3 出库过账"
+          ],
+          "distance": 0.3812881112098694
+        },
+        {
+          "unit_id": "INV-SEC-010-C008",
+          "chunk_id": "1b71edd94ec1e6cc01d78784015c84e05fb24743497228822aabbee2b3b9e4ac",
+          "document_id": "INV-SEC-010",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "ba08da156af3a9f97db8ba4c61a9027036c95eeef69b710f7bf9e5f103bde568",
+          "section_path": [
+            "库存权限审计与业务连续性管理办法",
+            "3 审计与记录"
+          ],
+          "distance": 0.38502615690231323
+        }
+      ],
+      "expanded_contexts": [
+        {
+          "context_id": "27c83a27942d4f0fabc6eb2795b83f63f146a8b9474050de668e680a7ca82cb5",
+          "document_id": "INV-ISS-005",
+          "unit_ids": [
+            "INV-ISS-005-C008",
+            "INV-ISS-005-C009",
+            "INV-ISS-005-C010",
+            "INV-ISS-005-C011"
+          ]
+        },
+        {
+          "context_id": "748c8204fbc96fcf2dc39789646d0cfb9d14d76480ab78102329a253a74adcfa",
+          "document_id": "INV-SEC-010",
+          "unit_ids": [
+            "INV-SEC-010-C008",
+            "INV-SEC-010-C009",
+            "INV-SEC-010-C010"
+          ]
+        }
+      ],
+      "raw_groups_hit": 2,
+      "expanded_groups_hit": 2,
+      "expected_group_count": 2
+    },
+    {
+      "case_id": "DEV-INV-06",
+      "knowledge_base": "inventory_policies",
+      "question": "主仓调拨已经发出，快修仓还没收货，快修仓现在能领这些件吗？",
+      "scope": "draft_preview",
+      "status": "not_run_format_not_supported",
+      "expected_groups": [
+        [
+          "INV-TRF-006-C007"
+        ]
+      ]
+    },
+    {
+      "case_id": "DEV-INV-07",
+      "knowledge_base": "inventory_policies",
+      "question": "已入库备件发现质量异常，搬到隔离区后是不是库存数量自动减少？",
+      "scope": "draft_preview",
+      "status": "not_run_format_not_supported",
+      "expected_groups": [
+        [
+          "INV-WHS-007-C009"
+        ],
+        [
+          "INV-WHS-007-C010"
+        ]
+      ]
+    },
+    {
+      "case_id": "DEV-INV-08",
+      "knowledge_base": "inventory_policies",
+      "question": "维修未使用的新件退回仓库，纸面批准已签，能直接把余额加回来吗？",
+      "scope": "draft_preview",
+      "status": "retrieved",
+      "elapsed_seconds": 0.233,
+      "expected_groups": [
+        [
+          "INV-ADJ-008-C008"
+        ],
+        [
+          "INV-ADJ-008-C009"
+        ],
+        [
+          "INV-ADJ-008-C013"
+        ]
+      ],
+      "hits": [
+        {
+          "unit_id": "INV-ISS-005-C013",
+          "chunk_id": "eb32fde4eaf23ac2569edc25820ccb7ccad457a1acc24b2aaed79e201c1d7e0e",
+          "document_id": "INV-ISS-005",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "6af72164b2a1279a306dd27259b1044e827b1a146ff279433347cfce4e97714b",
+          "section_path": [
+            "维修领用与出库管理办法",
+            "4 取消与退回"
+          ],
+          "distance": 0.3171275854110718
+        },
+        {
+          "unit_id": "INV-ISS-005-C012",
+          "chunk_id": "d91579605d87a6b343ed65eb64d8f6462837fd79cee8a864207d96d92174f80a",
+          "document_id": "INV-ISS-005",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "6af72164b2a1279a306dd27259b1044e827b1a146ff279433347cfce4e97714b",
+          "section_path": [
+            "维修领用与出库管理办法",
+            "4 取消与退回"
+          ],
+          "distance": 0.3259279727935791
+        },
+        {
+          "unit_id": "INV-ISS-005-C014",
+          "chunk_id": "fac39ee23fcf31fa338fd43df895ff3bc793162da01b038610dac1f06d2a4c15",
+          "document_id": "INV-ISS-005",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "6af72164b2a1279a306dd27259b1044e827b1a146ff279433347cfce4e97714b",
+          "section_path": [
+            "维修领用与出库管理办法",
+            "4 取消与退回"
+          ],
+          "distance": 0.3352513313293457
+        },
+        {
+          "unit_id": "INV-ISS-005-C016",
+          "chunk_id": "96311414438fdb89879af2daea0aa5cf0b3c4f4082a37e6539322a6effa4caec",
+          "document_id": "INV-ISS-005",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "6af72164b2a1279a306dd27259b1044e827b1a146ff279433347cfce4e97714b",
+          "section_path": [
+            "维修领用与出库管理办法",
+            "5 复核与异常"
+          ],
+          "distance": 0.336675763130188
+        },
+        {
+          "unit_id": "INV-ISS-005-C015",
+          "chunk_id": "40ad8705a88aa5029060602ed83bb9b8bf16ea2c0a5b2483b4d787139f9dd177",
+          "document_id": "INV-ISS-005",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "6af72164b2a1279a306dd27259b1044e827b1a146ff279433347cfce4e97714b",
+          "section_path": [
+            "维修领用与出库管理办法",
+            "5 复核与异常"
+          ],
+          "distance": 0.33790361881256104
+        }
+      ],
+      "expanded_contexts": [
+        {
+          "context_id": "54ed214ceae4a4bf92226058bb3eaa89e8ae90532f85556df8c88b5ea26521bc",
+          "document_id": "INV-ISS-005",
+          "unit_ids": [
+            "INV-ISS-005-C015",
+            "INV-ISS-005-C016",
+            "INV-ISS-005-C017"
+          ]
+        },
+        {
+          "context_id": "83a3581bd77d217aa91bf8621cb06c04b8ab6fe72c035879c4f41ff6d69d1b85",
+          "document_id": "INV-ISS-005",
+          "unit_ids": [
+            "INV-ISS-005-C012",
+            "INV-ISS-005-C013",
+            "INV-ISS-005-C014"
+          ]
+        }
+      ],
+      "raw_groups_hit": 0,
+      "expanded_groups_hit": 0,
+      "expected_group_count": 3
+    },
+    {
+      "case_id": "DEV-INV-09",
+      "knowledge_base": "inventory_policies",
+      "question": "假设历史30日完整且输入已核实：领用60件，交期5天，安全库存10件，可用4件、采购待收8件、目标调拨在途3件。补货缺口多少？",
+      "scope": "draft_preview",
+      "status": "retrieved",
+      "elapsed_seconds": 0.24,
+      "expected_groups": [
+        [
+          "INV-ANA-009-C010"
+        ],
+        [
+          "INV-ANA-009-C013"
+        ]
+      ],
+      "hits": [
+        {
+          "unit_id": "INV-ANA-009-C013",
+          "chunk_id": "9d1cbc24f0e4c7d15bd56bd0736209503dce63111755bb1acf4842627953cb44",
+          "document_id": "INV-ANA-009",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "c76cf3dae50d8afac5101567616fa72b91d8dbfe36b9167bfc3dee2aeeb86541",
+          "section_path": [
+            "库存统计与补货调拨建议口径",
+            "3 补货计算"
+          ],
+          "distance": 0.232666015625
+        },
+        {
+          "unit_id": "INV-ANA-009-C010",
+          "chunk_id": "4622375885ce64cb621662497a651234b90bd215772602c49fd4a174ec91d55a",
+          "document_id": "INV-ANA-009",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "c76cf3dae50d8afac5101567616fa72b91d8dbfe36b9167bfc3dee2aeeb86541",
+          "section_path": [
+            "库存统计与补货调拨建议口径",
+            "3 补货计算"
+          ],
+          "distance": 0.30256175994873047
+        },
+        {
+          "unit_id": "INV-ANA-009-C007",
+          "chunk_id": "8ae7b10bc103fb8d0d576ae8314dad5544e035d27fc75b146618bc22cffe57b5",
+          "document_id": "INV-ANA-009",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "c76cf3dae50d8afac5101567616fa72b91d8dbfe36b9167bfc3dee2aeeb86541",
+          "section_path": [
+            "库存统计与补货调拨建议口径",
+            "2 时间与历史完整性"
+          ],
+          "distance": 0.31828320026397705
+        },
+        {
+          "unit_id": "INV-ANA-009-C002",
+          "chunk_id": "dc83fef108f8e599d3c46c198ac5213cfd1a0e030b70d525173bd15811ec78a3",
+          "document_id": "INV-ANA-009",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "c76cf3dae50d8afac5101567616fa72b91d8dbfe36b9167bfc3dee2aeeb86541",
+          "section_path": [
+            "库存统计与补货调拨建议口径",
+            "1 库存数量定义"
+          ],
+          "distance": 0.32416653633117676
+        },
+        {
+          "unit_id": "INV-ANA-009-C005",
+          "chunk_id": "1dd78c805a556e9ccfe90caeb5e5b41ef2ac3d5dc45acd7c139055fb477a55c0",
+          "document_id": "INV-ANA-009",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "c76cf3dae50d8afac5101567616fa72b91d8dbfe36b9167bfc3dee2aeeb86541",
+          "section_path": [
+            "库存统计与补货调拨建议口径",
+            "2 时间与历史完整性"
+          ],
+          "distance": 0.3274379372596741
+        }
+      ],
+      "expanded_contexts": [
+        {
+          "context_id": "039572714ada67838574a866c594afb29b541b346ca9974e47f0ee1c270891fc",
+          "document_id": "INV-ANA-009",
+          "unit_ids": [
+            "INV-ANA-009-C010",
+            "INV-ANA-009-C011",
+            "INV-ANA-009-C012",
+            "INV-ANA-009-C013"
+          ]
+        },
+        {
+          "context_id": "0e0550ddcd3251d25c7834b55e2b5b8f91d62a8e0722c9e77ebaa038e3919e1f",
+          "document_id": "INV-ANA-009",
+          "unit_ids": [
+            "INV-ANA-009-C001",
+            "INV-ANA-009-C002",
+            "INV-ANA-009-C003",
+            "INV-ANA-009-C004"
+          ]
+        },
+        {
+          "context_id": "15282ad71f4ec10d7d1f0dd9d056d2206c1bd61fa9806d31e4d1334ad720e647",
+          "document_id": "INV-ANA-009",
+          "unit_ids": [
+            "INV-ANA-009-C005",
+            "INV-ANA-009-C006",
+            "INV-ANA-009-C007",
+            "INV-ANA-009-C008",
+            "INV-ANA-009-C009"
+          ]
+        }
+      ],
+      "raw_groups_hit": 2,
+      "expanded_groups_hit": 2,
+      "expected_group_count": 2
+    },
+    {
+      "case_id": "DEV-INV-10",
+      "knowledge_base": "inventory_policies",
+      "question": "经理账号可以修改库存资料和在线审批采购吗？",
+      "scope": "draft_preview",
+      "status": "retrieved",
+      "elapsed_seconds": 0.281,
+      "expected_groups": [
+        [
+          "INV-SEC-010-C002"
+        ],
+        [
+          "INV-POL-001-C016"
+        ]
+      ],
+      "hits": [
+        {
+          "unit_id": "INV-SEC-010-C002",
+          "chunk_id": "74087d4240e3f235c2371ad5614829ad9a21de0592415e9ad6a2124fa64b1bb8",
+          "document_id": "INV-SEC-010",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "ba08da156af3a9f97db8ba4c61a9027036c95eeef69b710f7bf9e5f103bde568",
+          "section_path": [
+            "库存权限审计与业务连续性管理办法",
+            "1 账号与角色"
+          ],
+          "distance": 0.3242011070251465
+        },
+        {
+          "unit_id": "INV-SEC-010-C003",
+          "chunk_id": "c377fb68f5e6cb02404c868d37dfa3d0f71ba42f9cf25f7395e0f3117ade055d",
+          "document_id": "INV-SEC-010",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "ba08da156af3a9f97db8ba4c61a9027036c95eeef69b710f7bf9e5f103bde568",
+          "section_path": [
+            "库存权限审计与业务连续性管理办法",
+            "1 账号与角色"
+          ],
+          "distance": 0.3447526693344116
+        },
+        {
+          "unit_id": "INV-POL-001-C021",
+          "chunk_id": "6f357239aeda22e9311066ce850afb809c914c55b792d2ccf8fa314da9b19616",
+          "document_id": "INV-POL-001",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "696db8aaa3bdaedf8e9f6b4a9270b2866ccce584308f6791e0acd9e39a7abbc8",
+          "section_path": [
+            "备件库存管理总则与职责",
+            "6 文件发布与修订"
+          ],
+          "distance": 0.3470016121864319
+        },
+        {
+          "unit_id": "INV-POL-001-C016",
+          "chunk_id": "252a2386a2e8755f72856609bdc4dd5eceb416732c87ea1074fbbe5ab81fba88",
+          "document_id": "INV-POL-001",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "696db8aaa3bdaedf8e9f6b4a9270b2866ccce584308f6791e0acd9e39a7abbc8",
+          "section_path": [
+            "备件库存管理总则与职责",
+            "4 授权与业务放行"
+          ],
+          "distance": 0.34816157817840576
+        },
+        {
+          "unit_id": "INV-POL-001-C010",
+          "chunk_id": "e215fc5ddfcfb718c3f28f131bf5752616f07c012577570de9d5326330001520",
+          "document_id": "INV-POL-001",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "696db8aaa3bdaedf8e9f6b4a9270b2866ccce584308f6791e0acd9e39a7abbc8",
+          "section_path": [
+            "备件库存管理总则与职责",
+            "3 单据与数量控制"
+          ],
+          "distance": 0.3547694683074951
+        }
+      ],
+      "expanded_contexts": [
+        {
+          "context_id": "4f407aa8efb4c2192267af68ee965aef061934d58146a6e478f52a80bf49d0ab",
+          "document_id": "INV-POL-001",
+          "unit_ids": [
+            "INV-POL-001-C020",
+            "INV-POL-001-C021",
+            "INV-POL-001-C022"
+          ]
+        },
+        {
+          "context_id": "72a88743cafe60b42fdfa877a520127b54b9e1b25555a3a69162dd2ed9c0e28a",
+          "document_id": "INV-POL-001",
+          "unit_ids": [
+            "INV-POL-001-C014",
+            "INV-POL-001-C015",
+            "INV-POL-001-C016"
+          ]
+        },
+        {
+          "context_id": "7c73cd26d65a8d35a211a6807532960830086baf7edf6408141b11a2798bc382",
+          "document_id": "INV-SEC-010",
+          "unit_ids": [
+            "INV-SEC-010-C001",
+            "INV-SEC-010-C002",
+            "INV-SEC-010-C003",
+            "INV-SEC-010-C004"
+          ]
+        },
+        {
+          "context_id": "99ebd671fa2e03ebf3413fa617b719d9d8ee170e9cf1a88f065ce7bb5d6f68ce",
+          "document_id": "INV-POL-001",
+          "unit_ids": [
+            "INV-POL-001-C009",
+            "INV-POL-001-C010",
+            "INV-POL-001-C011",
+            "INV-POL-001-C012",
+            "INV-POL-001-C013"
+          ]
+        }
+      ],
+      "raw_groups_hit": 2,
+      "expanded_groups_hit": 2,
+      "expected_group_count": 2
+    },
+    {
+      "case_id": "DEV-INV-11",
+      "knowledge_base": "inventory_policies",
+      "question": "大家说的采购未到和内部已发未收是不是同一类在途？",
+      "scope": "draft_preview",
+      "status": "retrieved",
+      "elapsed_seconds": 0.279,
+      "expected_groups": [
+        [
+          "INV-GLO-011-C004"
+        ],
+        [
+          "INV-GLO-011-C005"
+        ]
+      ],
+      "hits": [
+        {
+          "unit_id": "INV-GLO-011-C005",
+          "chunk_id": "b6c9c8b2bc59ffb9636adbd77c4c80aaeb1185cb433863706b1ea83be88c1b1d",
+          "document_id": "INV-GLO-011",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "f31e9c719f386e4ad4680d200d3b1829b72655b79ea0d3563e43605ed47e9705",
+          "section_path": [
+            "备件库存术语与检索同义词",
+            "1 库存与单位"
+          ],
+          "distance": 0.2775585651397705
+        },
+        {
+          "unit_id": "INV-GLO-011-C004",
+          "chunk_id": "96b69753d689d9631813249a5301ada42e849512a407bcb90681e7b749a56f21",
+          "document_id": "INV-GLO-011",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "f31e9c719f386e4ad4680d200d3b1829b72655b79ea0d3563e43605ed47e9705",
+          "section_path": [
+            "备件库存术语与检索同义词",
+            "1 库存与单位"
+          ],
+          "distance": 0.31404757499694824
+        },
+        {
+          "unit_id": "INV-GLO-011-C007",
+          "chunk_id": "34b7c53f55912e63d06ec7818d43ddf6f26826c85f2b31c5adb948e15f0814a0",
+          "document_id": "INV-GLO-011",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "f31e9c719f386e4ad4680d200d3b1829b72655b79ea0d3563e43605ed47e9705",
+          "section_path": [
+            "备件库存术语与检索同义词",
+            "2 业务动作"
+          ],
+          "distance": 0.37420451641082764
+        },
+        {
+          "unit_id": "INV-GLO-011-C009",
+          "chunk_id": "80ec56dad0e72f97b897cbabe5217cf24e57fa3bdabd848150e8c2b28559ceee",
+          "document_id": "INV-GLO-011",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "f31e9c719f386e4ad4680d200d3b1829b72655b79ea0d3563e43605ed47e9705",
+          "section_path": [
+            "备件库存术语与检索同义词",
+            "2 业务动作"
+          ],
+          "distance": 0.3889056444168091
+        },
+        {
+          "unit_id": "INV-GLO-011-C008",
+          "chunk_id": "ad5955c80dddd0e8c038382c64d2d8f2d127bcd556d339c7e2998e6bae25d2fd",
+          "document_id": "INV-GLO-011",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "f31e9c719f386e4ad4680d200d3b1829b72655b79ea0d3563e43605ed47e9705",
+          "section_path": [
+            "备件库存术语与检索同义词",
+            "2 业务动作"
+          ],
+          "distance": 0.3898136615753174
+        }
+      ],
+      "expanded_contexts": [
+        {
+          "context_id": "2fd3385cfbdae63099c84bfe03d7633b71d596af4286d96fce2679c90f1f508c",
+          "document_id": "INV-GLO-011",
+          "unit_ids": [
+            "INV-GLO-011-C007",
+            "INV-GLO-011-C008",
+            "INV-GLO-011-C009",
+            "INV-GLO-011-C010",
+            "INV-GLO-011-C011"
+          ]
+        },
+        {
+          "context_id": "e85ee647da402c30cf8bab32adf1418f3a36b9ad7177e77fac1c31006449b82d",
+          "document_id": "INV-GLO-011",
+          "unit_ids": [
+            "INV-GLO-011-C001",
+            "INV-GLO-011-C002",
+            "INV-GLO-011-C003",
+            "INV-GLO-011-C004",
+            "INV-GLO-011-C005",
+            "INV-GLO-011-C006"
+          ]
+        }
+      ],
+      "raw_groups_hit": 2,
+      "expanded_groups_hit": 2,
+      "expected_group_count": 2
+    },
+    {
+      "case_id": "DEV-INV-12",
+      "knowledge_base": "inventory_policies",
+      "question": "供应商资料写交期5天，能直接向客户承诺5个工作日到货吗？",
+      "scope": "draft_preview",
+      "status": "not_run_format_not_supported",
+      "expected_groups": [
+        [
+          "INV-SUP-012-C004"
+        ],
+        [
+          "INV-SUP-012-C005"
+        ],
+        [
+          "INV-SUP-012-C006"
+        ]
+      ]
+    },
+    {
+      "case_id": "DEV-DX-01",
+      "knowledge_base": "general_diagnostics",
+      "question": "车打不着，帮我看看是不是要换电瓶。",
+      "scope": "draft_preview",
+      "status": "retrieved",
+      "elapsed_seconds": 0.332,
+      "expected_groups": [
+        [
+          "DX-STR-01"
+        ],
+        [
+          "DX-ENG-01"
+        ]
+      ],
+      "hits": [
+        {
+          "unit_id": "DX-STR-02",
+          "chunk_id": "5831a72c6bc95e3401615b9c8825a7e1448b90f79888b30535fe51b8f3dc3a77",
+          "document_id": "DX-STR-002",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "f7860db1cd6bd3a3930c296b032df25cd4dff6ba02730041cd71d25141dc4d47",
+          "section_path": [
+            "启动与充电系统通用排查",
+            "DX-STR-02 启动拖沓、发动机转动缓慢"
+          ],
+          "distance": 0.3263355493545532
+        },
+        {
+          "unit_id": "DX-STR-01",
+          "chunk_id": "60afa5ecb4e126878e24c16e2aa84549d46f147085c09df9b879d7d0e74d93a3",
+          "document_id": "DX-STR-002",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "f7860db1cd6bd3a3930c296b032df25cd4dff6ba02730041cd71d25141dc4d47",
+          "section_path": [
+            "启动与充电系统通用排查",
+            "DX-STR-01 启动时发动机不转或仅有咔嗒声"
+          ],
+          "distance": 0.3337215781211853
+        },
+        {
+          "unit_id": "DX-ENG-01",
+          "chunk_id": "582c47e56ddc0073020e23651113c324bde7b26f566beaa7e943aacd211ee0a0",
+          "document_id": "DX-ENG-003",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "aa93c4cfcad6610e646dd8636551f1bafdab85345303af11d159a458a1b0f0f6",
+          "section_path": [
+            "发动机无法着车与运转不稳通用排查",
+            "DX-ENG-01 发动机能转动但无法着车"
+          ],
+          "distance": 0.34223073720932007
+        },
+        {
+          "unit_id": "DX-RULE-03",
+          "chunk_id": "c0b8357ec5592acc4f8e8838111a9e2af18898bf664619d32e6e7a983d50a5c2",
+          "document_id": "DX-GEN-001",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "4907500324209ee92fa29e1b1e7c510770a3e6139587340971598995b397a12d",
+          "section_path": [
+            "通用故障辅助排查与换件判断规则",
+            "DX-RULE-03 证据分级"
+          ],
+          "distance": 0.35153037309646606
+        },
+        {
+          "unit_id": "DX-ENG-02",
+          "chunk_id": "1ce33f7fc2ac1621f75dcc7263a0758fa3ebacf38b487f549c83cb75fa2eb04a",
+          "document_id": "DX-ENG-003",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "aa93c4cfcad6610e646dd8636551f1bafdab85345303af11d159a458a1b0f0f6",
+          "section_path": [
+            "发动机无法着车与运转不稳通用排查",
+            "DX-ENG-02 怠速抖动、失火或加速迟滞"
+          ],
+          "distance": 0.35442155599594116
+        }
+      ],
+      "expanded_contexts": [
+        {
+          "context_id": "1cc24582c435ff853109f8efd5207f8f3225383ea77b71671e4c85ef0fc88292",
+          "document_id": "DX-ENG-003",
+          "unit_ids": [
+            "DX-ENG-02"
+          ]
+        },
+        {
+          "context_id": "26bf8ce8824e169fa72b2eec32c90fec697f5034a4abf24986a638f4a36f4478",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-08"
+          ]
+        },
+        {
+          "context_id": "4cf54159a880c4dcda6613ed0a6206c65009cc4976f398dddde23fce480f4a4a",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-06"
+          ]
+        },
+        {
+          "context_id": "5c2514c772308f9c0dec333aae92bb3a016f3eea3b8314009f3fa4ac977d8587",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-07"
+          ]
+        },
+        {
+          "context_id": "5c2f9ad8f007febd32ee25454c194a44b6c02191ecea2d92cbf8f35576c2407b",
+          "document_id": "DX-ENG-003",
+          "unit_ids": [
+            "DX-ENG-01"
+          ]
+        },
+        {
+          "context_id": "64e5060e2bb7f35dc256ebcbebefd3a2ea29be521dbb7102a85ea22a32c59523",
+          "document_id": "DX-STR-002",
+          "unit_ids": [
+            "DX-STR-01"
+          ]
+        },
+        {
+          "context_id": "6d89a4c33dcc64efce5f4a9bca54009825ee6d88f4bca091a59174e46e33de7e",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-05"
+          ]
+        },
+        {
+          "context_id": "86a27e2b6ce238f820220c3e4f79b33e7abb23c21f4e9f016a034502cc5916a0",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-01"
+          ]
+        },
+        {
+          "context_id": "90daf84d2bb28c364033712ef0b04fb6efa4fa0fd684c4c1cbc7061ff7b9598b",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-04"
+          ]
+        },
+        {
+          "context_id": "9672c7da0ea7ddddb042701e269b1b68e82b1bbe655c80d4c0d84ec2e094845f",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-02"
+          ]
+        },
+        {
+          "context_id": "d4e2f73c7b5a7c5bdac054eba589ba51d5301a327d6ece72930a9e0530b45790",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-03"
+          ]
+        },
+        {
+          "context_id": "dd9e3ab744d6949f8368f82904ca9f07714e786b557da59d7d5dce230b21cdd7",
+          "document_id": "DX-STR-002",
+          "unit_ids": [
+            "DX-STR-02"
+          ]
+        }
+      ],
+      "raw_groups_hit": 2,
+      "expanded_groups_hit": 2,
+      "expected_group_count": 2
+    },
+    {
+      "case_id": "DEV-DX-02",
+      "knowledge_base": "general_diagnostics",
+      "question": "燃油车发动机不转，启动时只有咔嗒声，仪表是亮的，没做检测。",
+      "scope": "draft_preview",
+      "status": "retrieved",
+      "elapsed_seconds": 0.325,
+      "expected_groups": [
+        [
+          "DX-STR-01"
+        ]
+      ],
+      "hits": [
+        {
+          "unit_id": "DX-STR-01",
+          "chunk_id": "60afa5ecb4e126878e24c16e2aa84549d46f147085c09df9b879d7d0e74d93a3",
+          "document_id": "DX-STR-002",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "f7860db1cd6bd3a3930c296b032df25cd4dff6ba02730041cd71d25141dc4d47",
+          "section_path": [
+            "启动与充电系统通用排查",
+            "DX-STR-01 启动时发动机不转或仅有咔嗒声"
+          ],
+          "distance": 0.2826467752456665
+        },
+        {
+          "unit_id": "DX-ENG-01",
+          "chunk_id": "582c47e56ddc0073020e23651113c324bde7b26f566beaa7e943aacd211ee0a0",
+          "document_id": "DX-ENG-003",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "aa93c4cfcad6610e646dd8636551f1bafdab85345303af11d159a458a1b0f0f6",
+          "section_path": [
+            "发动机无法着车与运转不稳通用排查",
+            "DX-ENG-01 发动机能转动但无法着车"
+          ],
+          "distance": 0.342363178730011
+        },
+        {
+          "unit_id": "DX-ENG-02",
+          "chunk_id": "1ce33f7fc2ac1621f75dcc7263a0758fa3ebacf38b487f549c83cb75fa2eb04a",
+          "document_id": "DX-ENG-003",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "aa93c4cfcad6610e646dd8636551f1bafdab85345303af11d159a458a1b0f0f6",
+          "section_path": [
+            "发动机无法着车与运转不稳通用排查",
+            "DX-ENG-02 怠速抖动、失火或加速迟滞"
+          ],
+          "distance": 0.3856959939002991
+        },
+        {
+          "unit_id": "DX-STR-02",
+          "chunk_id": "5831a72c6bc95e3401615b9c8825a7e1448b90f79888b30535fe51b8f3dc3a77",
+          "document_id": "DX-STR-002",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "f7860db1cd6bd3a3930c296b032df25cd4dff6ba02730041cd71d25141dc4d47",
+          "section_path": [
+            "启动与充电系统通用排查",
+            "DX-STR-02 启动拖沓、发动机转动缓慢"
+          ],
+          "distance": 0.4028756618499756
+        },
+        {
+          "unit_id": "DX-STR-03",
+          "chunk_id": "a3a68f94b3690b662fc64933e9659a831458c84e7da35a578719a2c7b48fdde7",
+          "document_id": "DX-STR-002",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "f7860db1cd6bd3a3930c296b032df25cd4dff6ba02730041cd71d25141dc4d47",
+          "section_path": [
+            "启动与充电系统通用排查",
+            "DX-STR-03 发动机运行后充电警告仍亮或反复亏电"
+          ],
+          "distance": 0.412681519985199
+        }
+      ],
+      "expanded_contexts": [
+        {
+          "context_id": "1765f5f50ab7340eba6c80fb79764b323227199b97cca1428524e81495694b37",
+          "document_id": "DX-STR-002",
+          "unit_ids": [
+            "DX-STR-03"
+          ]
+        },
+        {
+          "context_id": "1cc24582c435ff853109f8efd5207f8f3225383ea77b71671e4c85ef0fc88292",
+          "document_id": "DX-ENG-003",
+          "unit_ids": [
+            "DX-ENG-02"
+          ]
+        },
+        {
+          "context_id": "26bf8ce8824e169fa72b2eec32c90fec697f5034a4abf24986a638f4a36f4478",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-08"
+          ]
+        },
+        {
+          "context_id": "4cf54159a880c4dcda6613ed0a6206c65009cc4976f398dddde23fce480f4a4a",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-06"
+          ]
+        },
+        {
+          "context_id": "5c2514c772308f9c0dec333aae92bb3a016f3eea3b8314009f3fa4ac977d8587",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-07"
+          ]
+        },
+        {
+          "context_id": "5c2f9ad8f007febd32ee25454c194a44b6c02191ecea2d92cbf8f35576c2407b",
+          "document_id": "DX-ENG-003",
+          "unit_ids": [
+            "DX-ENG-01"
+          ]
+        },
+        {
+          "context_id": "64e5060e2bb7f35dc256ebcbebefd3a2ea29be521dbb7102a85ea22a32c59523",
+          "document_id": "DX-STR-002",
+          "unit_ids": [
+            "DX-STR-01"
+          ]
+        },
+        {
+          "context_id": "6d89a4c33dcc64efce5f4a9bca54009825ee6d88f4bca091a59174e46e33de7e",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-05"
+          ]
+        },
+        {
+          "context_id": "86a27e2b6ce238f820220c3e4f79b33e7abb23c21f4e9f016a034502cc5916a0",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-01"
+          ]
+        },
+        {
+          "context_id": "90daf84d2bb28c364033712ef0b04fb6efa4fa0fd684c4c1cbc7061ff7b9598b",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-04"
+          ]
+        },
+        {
+          "context_id": "9672c7da0ea7ddddb042701e269b1b68e82b1bbe655c80d4c0d84ec2e094845f",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-02"
+          ]
+        },
+        {
+          "context_id": "d4e2f73c7b5a7c5bdac054eba589ba51d5301a327d6ece72930a9e0530b45790",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-03"
+          ]
+        },
+        {
+          "context_id": "dd9e3ab744d6949f8368f82904ca9f07714e786b557da59d7d5dce230b21cdd7",
+          "document_id": "DX-STR-002",
+          "unit_ids": [
+            "DX-STR-02"
+          ]
+        }
+      ],
+      "raw_groups_hit": 1,
+      "expanded_groups_hit": 1,
+      "expected_group_count": 1
+    },
+    {
+      "case_id": "DEV-DX-03",
+      "knowledge_base": "general_diagnostics",
+      "question": "启动曾拖得慢。维修记录显示电池类型和测试设置正确、健康检查合格，查出接头接触异常，修复后多次按规范复核启动正常。还换电瓶和起动机吗？",
+      "scope": "draft_preview",
+      "status": "retrieved",
+      "elapsed_seconds": 0.275,
+      "expected_groups": [
+        [
+          "DX-STR-02"
+        ]
+      ],
+      "hits": [
+        {
+          "unit_id": "DX-STR-02",
+          "chunk_id": "5831a72c6bc95e3401615b9c8825a7e1448b90f79888b30535fe51b8f3dc3a77",
+          "document_id": "DX-STR-002",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "f7860db1cd6bd3a3930c296b032df25cd4dff6ba02730041cd71d25141dc4d47",
+          "section_path": [
+            "启动与充电系统通用排查",
+            "DX-STR-02 启动拖沓、发动机转动缓慢"
+          ],
+          "distance": 0.24006396532058716
+        },
+        {
+          "unit_id": "DX-STR-01",
+          "chunk_id": "60afa5ecb4e126878e24c16e2aa84549d46f147085c09df9b879d7d0e74d93a3",
+          "document_id": "DX-STR-002",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "f7860db1cd6bd3a3930c296b032df25cd4dff6ba02730041cd71d25141dc4d47",
+          "section_path": [
+            "启动与充电系统通用排查",
+            "DX-STR-01 启动时发动机不转或仅有咔嗒声"
+          ],
+          "distance": 0.3052336573600769
+        },
+        {
+          "unit_id": "DX-STR-03",
+          "chunk_id": "a3a68f94b3690b662fc64933e9659a831458c84e7da35a578719a2c7b48fdde7",
+          "document_id": "DX-STR-002",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "f7860db1cd6bd3a3930c296b032df25cd4dff6ba02730041cd71d25141dc4d47",
+          "section_path": [
+            "启动与充电系统通用排查",
+            "DX-STR-03 发动机运行后充电警告仍亮或反复亏电"
+          ],
+          "distance": 0.3328413963317871
+        },
+        {
+          "unit_id": "DX-ENG-01",
+          "chunk_id": "582c47e56ddc0073020e23651113c324bde7b26f566beaa7e943aacd211ee0a0",
+          "document_id": "DX-ENG-003",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "aa93c4cfcad6610e646dd8636551f1bafdab85345303af11d159a458a1b0f0f6",
+          "section_path": [
+            "发动机无法着车与运转不稳通用排查",
+            "DX-ENG-01 发动机能转动但无法着车"
+          ],
+          "distance": 0.35112035274505615
+        },
+        {
+          "unit_id": "DX-RULE-02",
+          "chunk_id": "075ffd5ce3869d162312717631eacf531c2a2f442d44057d6f3ddb85983892be",
+          "document_id": "DX-GEN-001",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "4907500324209ee92fa29e1b1e7c510770a3e6139587340971598995b397a12d",
+          "section_path": [
+            "通用故障辅助排查与换件判断规则",
+            "DX-RULE-02 接报与分流"
+          ],
+          "distance": 0.3534482717514038
+        }
+      ],
+      "expanded_contexts": [
+        {
+          "context_id": "1765f5f50ab7340eba6c80fb79764b323227199b97cca1428524e81495694b37",
+          "document_id": "DX-STR-002",
+          "unit_ids": [
+            "DX-STR-03"
+          ]
+        },
+        {
+          "context_id": "26bf8ce8824e169fa72b2eec32c90fec697f5034a4abf24986a638f4a36f4478",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-08"
+          ]
+        },
+        {
+          "context_id": "4cf54159a880c4dcda6613ed0a6206c65009cc4976f398dddde23fce480f4a4a",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-06"
+          ]
+        },
+        {
+          "context_id": "5c2514c772308f9c0dec333aae92bb3a016f3eea3b8314009f3fa4ac977d8587",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-07"
+          ]
+        },
+        {
+          "context_id": "5c2f9ad8f007febd32ee25454c194a44b6c02191ecea2d92cbf8f35576c2407b",
+          "document_id": "DX-ENG-003",
+          "unit_ids": [
+            "DX-ENG-01"
+          ]
+        },
+        {
+          "context_id": "64e5060e2bb7f35dc256ebcbebefd3a2ea29be521dbb7102a85ea22a32c59523",
+          "document_id": "DX-STR-002",
+          "unit_ids": [
+            "DX-STR-01"
+          ]
+        },
+        {
+          "context_id": "6d89a4c33dcc64efce5f4a9bca54009825ee6d88f4bca091a59174e46e33de7e",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-05"
+          ]
+        },
+        {
+          "context_id": "86a27e2b6ce238f820220c3e4f79b33e7abb23c21f4e9f016a034502cc5916a0",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-01"
+          ]
+        },
+        {
+          "context_id": "90daf84d2bb28c364033712ef0b04fb6efa4fa0fd684c4c1cbc7061ff7b9598b",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-04"
+          ]
+        },
+        {
+          "context_id": "9672c7da0ea7ddddb042701e269b1b68e82b1bbe655c80d4c0d84ec2e094845f",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-02"
+          ]
+        },
+        {
+          "context_id": "d4e2f73c7b5a7c5bdac054eba589ba51d5301a327d6ece72930a9e0530b45790",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-03"
+          ]
+        },
+        {
+          "context_id": "dd9e3ab744d6949f8368f82904ca9f07714e786b557da59d7d5dce230b21cdd7",
+          "document_id": "DX-STR-002",
+          "unit_ids": [
+            "DX-STR-02"
+          ]
+        }
+      ],
+      "raw_groups_hit": 1,
+      "expanded_groups_hit": 1,
+      "expected_group_count": 1
+    },
+    {
+      "case_id": "DEV-DX-04",
+      "knowledge_base": "general_diagnostics",
+      "question": "汽油发动机抖，读到P0351，是否把线圈全换？",
+      "scope": "draft_preview",
+      "status": "retrieved",
+      "elapsed_seconds": 0.64,
+      "expected_groups": [
+        [
+          "DX-ENG-02"
+        ]
+      ],
+      "hits": [
+        {
+          "unit_id": "DX-ENG-02",
+          "chunk_id": "1ce33f7fc2ac1621f75dcc7263a0758fa3ebacf38b487f549c83cb75fa2eb04a",
+          "document_id": "DX-ENG-003",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "aa93c4cfcad6610e646dd8636551f1bafdab85345303af11d159a458a1b0f0f6",
+          "section_path": [
+            "发动机无法着车与运转不稳通用排查",
+            "DX-ENG-02 怠速抖动、失火或加速迟滞"
+          ],
+          "distance": 0.300731897354126
+        },
+        {
+          "unit_id": "DX-ENG-01",
+          "chunk_id": "582c47e56ddc0073020e23651113c324bde7b26f566beaa7e943aacd211ee0a0",
+          "document_id": "DX-ENG-003",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "aa93c4cfcad6610e646dd8636551f1bafdab85345303af11d159a458a1b0f0f6",
+          "section_path": [
+            "发动机无法着车与运转不稳通用排查",
+            "DX-ENG-01 发动机能转动但无法着车"
+          ],
+          "distance": 0.36601048707962036
+        },
+        {
+          "unit_id": "DX-BRK-01",
+          "chunk_id": "874f5cde2f73819f0823cde0323e3962d93c6786b590e6da98cfeb35ceebcb17",
+          "document_id": "DX-BRK-005",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "df20ccf96ad0b11f286c3e63838ae6199c3391ff84ef2f4c8342755ca7d600e2",
+          "section_path": [
+            "制动症状与ABS警告通用排查",
+            "DX-BRK-01 制动尖叫、摩擦声或制动时抖动"
+          ],
+          "distance": 0.3915189504623413
+        },
+        {
+          "unit_id": "DX-RULE-01",
+          "chunk_id": "fbe4362c4146e8ab5dff85e71fb34c66e1e7f193b48d837800d699b6371dbbc7",
+          "document_id": "DX-GEN-001",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "4907500324209ee92fa29e1b1e7c510770a3e6139587340971598995b397a12d",
+          "section_path": [
+            "通用故障辅助排查与换件判断规则",
+            "DX-RULE-01 范围与入口"
+          ],
+          "distance": 0.39781689643859863
+        },
+        {
+          "unit_id": "DX-STR-01",
+          "chunk_id": "60afa5ecb4e126878e24c16e2aa84549d46f147085c09df9b879d7d0e74d93a3",
+          "document_id": "DX-STR-002",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "f7860db1cd6bd3a3930c296b032df25cd4dff6ba02730041cd71d25141dc4d47",
+          "section_path": [
+            "启动与充电系统通用排查",
+            "DX-STR-01 启动时发动机不转或仅有咔嗒声"
+          ],
+          "distance": 0.40808260440826416
+        }
+      ],
+      "expanded_contexts": [
+        {
+          "context_id": "1cc24582c435ff853109f8efd5207f8f3225383ea77b71671e4c85ef0fc88292",
+          "document_id": "DX-ENG-003",
+          "unit_ids": [
+            "DX-ENG-02"
+          ]
+        },
+        {
+          "context_id": "26bf8ce8824e169fa72b2eec32c90fec697f5034a4abf24986a638f4a36f4478",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-08"
+          ]
+        },
+        {
+          "context_id": "4cf54159a880c4dcda6613ed0a6206c65009cc4976f398dddde23fce480f4a4a",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-06"
+          ]
+        },
+        {
+          "context_id": "5c2514c772308f9c0dec333aae92bb3a016f3eea3b8314009f3fa4ac977d8587",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-07"
+          ]
+        },
+        {
+          "context_id": "5c2f9ad8f007febd32ee25454c194a44b6c02191ecea2d92cbf8f35576c2407b",
+          "document_id": "DX-ENG-003",
+          "unit_ids": [
+            "DX-ENG-01"
+          ]
+        },
+        {
+          "context_id": "64e5060e2bb7f35dc256ebcbebefd3a2ea29be521dbb7102a85ea22a32c59523",
+          "document_id": "DX-STR-002",
+          "unit_ids": [
+            "DX-STR-01"
+          ]
+        },
+        {
+          "context_id": "6d89a4c33dcc64efce5f4a9bca54009825ee6d88f4bca091a59174e46e33de7e",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-05"
+          ]
+        },
+        {
+          "context_id": "86a27e2b6ce238f820220c3e4f79b33e7abb23c21f4e9f016a034502cc5916a0",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-01"
+          ]
+        },
+        {
+          "context_id": "8b37cdc7268fd4aca56363fbf6b84b252aa076c07e5ffb37f45a842946169cd4",
+          "document_id": "DX-BRK-005",
+          "unit_ids": [
+            "DX-BRK-01"
+          ]
+        },
+        {
+          "context_id": "90daf84d2bb28c364033712ef0b04fb6efa4fa0fd684c4c1cbc7061ff7b9598b",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-04"
+          ]
+        },
+        {
+          "context_id": "9672c7da0ea7ddddb042701e269b1b68e82b1bbe655c80d4c0d84ec2e094845f",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-02"
+          ]
+        },
+        {
+          "context_id": "d4e2f73c7b5a7c5bdac054eba589ba51d5301a327d6ece72930a9e0530b45790",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-03"
+          ]
+        }
+      ],
+      "raw_groups_hit": 1,
+      "expanded_groups_hit": 1,
+      "expected_group_count": 1
+    },
+    {
+      "case_id": "DEV-DX-05",
+      "knowledge_base": "general_diagnostics",
+      "question": "水温报警而且冒蒸汽，我能打开水箱盖加水后继续开吗？",
+      "scope": "draft_preview",
+      "status": "retrieved",
+      "elapsed_seconds": 0.843,
+      "expected_groups": [
+        [
+          "DX-COO-01"
+        ]
+      ],
+      "hits": [
+        {
+          "unit_id": "DX-COO-01",
+          "chunk_id": "6193c528578854eab3ccc3cb9d18d8612809a02873c9eee217ba53872fa2b463",
+          "document_id": "DX-COO-004",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "095c9da498ae6b652415ed9609aba17fd701fd841c0d9d1a159223de738544e2",
+          "section_path": [
+            "发动机冷却系统通用排查",
+            "DX-COO-01 水温异常升高或过热报警"
+          ],
+          "distance": 0.3810572624206543
+        },
+        {
+          "unit_id": "DX-COO-03",
+          "chunk_id": "ff15a10a673ac120afa3e5629d112ec38795d39337504f05f8b774850be136c4",
+          "document_id": "DX-COO-004",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "095c9da498ae6b652415ed9609aba17fd701fd841c0d9d1a159223de738544e2",
+          "section_path": [
+            "发动机冷却系统通用排查",
+            "DX-COO-03 发动机长时间不升温或暖风不热"
+          ],
+          "distance": 0.45201414823532104
+        },
+        {
+          "unit_id": "DX-STR-03",
+          "chunk_id": "a3a68f94b3690b662fc64933e9659a831458c84e7da35a578719a2c7b48fdde7",
+          "document_id": "DX-STR-002",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "f7860db1cd6bd3a3930c296b032df25cd4dff6ba02730041cd71d25141dc4d47",
+          "section_path": [
+            "启动与充电系统通用排查",
+            "DX-STR-03 发动机运行后充电警告仍亮或反复亏电"
+          ],
+          "distance": 0.45942580699920654
+        },
+        {
+          "unit_id": "DX-COO-02",
+          "chunk_id": "9703b2bb445af66eefbc3cbed1cc833dc398f0ea5105d912c7b3fb040ffd3b40",
+          "document_id": "DX-COO-004",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "095c9da498ae6b652415ed9609aba17fd701fd841c0d9d1a159223de738544e2",
+          "section_path": [
+            "发动机冷却系统通用排查",
+            "DX-COO-02 冷却液反复减少或发现疑似漏液"
+          ],
+          "distance": 0.45969271659851074
+        },
+        {
+          "unit_id": "DX-ENG-01",
+          "chunk_id": "582c47e56ddc0073020e23651113c324bde7b26f566beaa7e943aacd211ee0a0",
+          "document_id": "DX-ENG-003",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "aa93c4cfcad6610e646dd8636551f1bafdab85345303af11d159a458a1b0f0f6",
+          "section_path": [
+            "发动机无法着车与运转不稳通用排查",
+            "DX-ENG-01 发动机能转动但无法着车"
+          ],
+          "distance": 0.4773208498954773
+        }
+      ],
+      "expanded_contexts": [
+        {
+          "context_id": "1765f5f50ab7340eba6c80fb79764b323227199b97cca1428524e81495694b37",
+          "document_id": "DX-STR-002",
+          "unit_ids": [
+            "DX-STR-03"
+          ]
+        },
+        {
+          "context_id": "26bf8ce8824e169fa72b2eec32c90fec697f5034a4abf24986a638f4a36f4478",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-08"
+          ]
+        },
+        {
+          "context_id": "35b0c47268ce60f28e859d7c2794eee8c052cee12ec94fa8fcdde84d8e83f6b1",
+          "document_id": "DX-COO-004",
+          "unit_ids": [
+            "DX-COO-01"
+          ]
+        },
+        {
+          "context_id": "4cf54159a880c4dcda6613ed0a6206c65009cc4976f398dddde23fce480f4a4a",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-06"
+          ]
+        },
+        {
+          "context_id": "5c2514c772308f9c0dec333aae92bb3a016f3eea3b8314009f3fa4ac977d8587",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-07"
+          ]
+        },
+        {
+          "context_id": "5c2f9ad8f007febd32ee25454c194a44b6c02191ecea2d92cbf8f35576c2407b",
+          "document_id": "DX-ENG-003",
+          "unit_ids": [
+            "DX-ENG-01"
+          ]
+        },
+        {
+          "context_id": "6d89a4c33dcc64efce5f4a9bca54009825ee6d88f4bca091a59174e46e33de7e",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-05"
+          ]
+        },
+        {
+          "context_id": "86a27e2b6ce238f820220c3e4f79b33e7abb23c21f4e9f016a034502cc5916a0",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-01"
+          ]
+        },
+        {
+          "context_id": "90daf84d2bb28c364033712ef0b04fb6efa4fa0fd684c4c1cbc7061ff7b9598b",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-04"
+          ]
+        },
+        {
+          "context_id": "9672c7da0ea7ddddb042701e269b1b68e82b1bbe655c80d4c0d84ec2e094845f",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-02"
+          ]
+        },
+        {
+          "context_id": "97729ab17f96413d7d85c426f68f9c3ed353cb73344d33e8d60f5cba2b3766f6",
+          "document_id": "DX-COO-004",
+          "unit_ids": [
+            "DX-COO-03"
+          ]
+        },
+        {
+          "context_id": "b8663759fb78b709cdcda3e1a40461a77670c515cd353a16e5da01366af6f215",
+          "document_id": "DX-COO-004",
+          "unit_ids": [
+            "DX-COO-02"
+          ]
+        },
+        {
+          "context_id": "d4e2f73c7b5a7c5bdac054eba589ba51d5301a327d6ece72930a9e0530b45790",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-03"
+          ]
+        }
+      ],
+      "raw_groups_hit": 1,
+      "expanded_groups_hit": 1,
+      "expected_group_count": 1
+    },
+    {
+      "case_id": "DEV-DX-06",
+      "knowledge_base": "general_diagnostics",
+      "question": "刹车踏板突然很软，快踩到底，车明显刹不住，是不是加点制动液？",
+      "scope": "draft_preview",
+      "status": "retrieved",
+      "elapsed_seconds": 0.446,
+      "expected_groups": [
+        [
+          "DX-BRK-02"
+        ]
+      ],
+      "hits": [
+        {
+          "unit_id": "DX-BRK-02",
+          "chunk_id": "06543c815fbca10e2b4c56fb3300333612e5cdd630a00f82ae216cfc934a5d7c",
+          "document_id": "DX-BRK-005",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "df20ccf96ad0b11f286c3e63838ae6199c3391ff84ef2f4c8342755ca7d600e2",
+          "section_path": [
+            "制动症状与ABS警告通用排查",
+            "DX-BRK-02 制动踏板变软、异常下沉或制动力下降"
+          ],
+          "distance": 0.25942695140838623
+        },
+        {
+          "unit_id": "DX-BRK-01",
+          "chunk_id": "874f5cde2f73819f0823cde0323e3962d93c6786b590e6da98cfeb35ceebcb17",
+          "document_id": "DX-BRK-005",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "df20ccf96ad0b11f286c3e63838ae6199c3391ff84ef2f4c8342755ca7d600e2",
+          "section_path": [
+            "制动症状与ABS警告通用排查",
+            "DX-BRK-01 制动尖叫、摩擦声或制动时抖动"
+          ],
+          "distance": 0.3740973472595215
+        },
+        {
+          "unit_id": "DX-BRK-03",
+          "chunk_id": "2c4cbdc7257922c13d3c251b739c09e8893731eeb0facfe68ed2fc1490c50f12",
+          "document_id": "DX-BRK-005",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "df20ccf96ad0b11f286c3e63838ae6199c3391ff84ef2f4c8342755ca7d600e2",
+          "section_path": [
+            "制动症状与ABS警告通用排查",
+            "DX-BRK-03 ABS或稳定控制警告、轮速信号异常"
+          ],
+          "distance": 0.41042959690093994
+        },
+        {
+          "unit_id": "DX-ENG-02",
+          "chunk_id": "1ce33f7fc2ac1621f75dcc7263a0758fa3ebacf38b487f549c83cb75fa2eb04a",
+          "document_id": "DX-ENG-003",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "aa93c4cfcad6610e646dd8636551f1bafdab85345303af11d159a458a1b0f0f6",
+          "section_path": [
+            "发动机无法着车与运转不稳通用排查",
+            "DX-ENG-02 怠速抖动、失火或加速迟滞"
+          ],
+          "distance": 0.43850743770599365
+        },
+        {
+          "unit_id": "DX-RULE-02",
+          "chunk_id": "075ffd5ce3869d162312717631eacf531c2a2f442d44057d6f3ddb85983892be",
+          "document_id": "DX-GEN-001",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "4907500324209ee92fa29e1b1e7c510770a3e6139587340971598995b397a12d",
+          "section_path": [
+            "通用故障辅助排查与换件判断规则",
+            "DX-RULE-02 接报与分流"
+          ],
+          "distance": 0.4423030614852905
+        }
+      ],
+      "expanded_contexts": [
+        {
+          "context_id": "1cc24582c435ff853109f8efd5207f8f3225383ea77b71671e4c85ef0fc88292",
+          "document_id": "DX-ENG-003",
+          "unit_ids": [
+            "DX-ENG-02"
+          ]
+        },
+        {
+          "context_id": "26bf8ce8824e169fa72b2eec32c90fec697f5034a4abf24986a638f4a36f4478",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-08"
+          ]
+        },
+        {
+          "context_id": "4cf54159a880c4dcda6613ed0a6206c65009cc4976f398dddde23fce480f4a4a",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-06"
+          ]
+        },
+        {
+          "context_id": "5c2514c772308f9c0dec333aae92bb3a016f3eea3b8314009f3fa4ac977d8587",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-07"
+          ]
+        },
+        {
+          "context_id": "6d89a4c33dcc64efce5f4a9bca54009825ee6d88f4bca091a59174e46e33de7e",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-05"
+          ]
+        },
+        {
+          "context_id": "7df6b065dfcac15af330e90948812cb5d0dcab6ea27d3866930ba1cc885a5f18",
+          "document_id": "DX-BRK-005",
+          "unit_ids": [
+            "DX-BRK-02"
+          ]
+        },
+        {
+          "context_id": "86a27e2b6ce238f820220c3e4f79b33e7abb23c21f4e9f016a034502cc5916a0",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-01"
+          ]
+        },
+        {
+          "context_id": "893d7643eb05226b4e5688354a9a2a7b0d76c9447c391a84d9777431fe161781",
+          "document_id": "DX-BRK-005",
+          "unit_ids": [
+            "DX-BRK-03"
+          ]
+        },
+        {
+          "context_id": "8b37cdc7268fd4aca56363fbf6b84b252aa076c07e5ffb37f45a842946169cd4",
+          "document_id": "DX-BRK-005",
+          "unit_ids": [
+            "DX-BRK-01"
+          ]
+        },
+        {
+          "context_id": "90daf84d2bb28c364033712ef0b04fb6efa4fa0fd684c4c1cbc7061ff7b9598b",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-04"
+          ]
+        },
+        {
+          "context_id": "9672c7da0ea7ddddb042701e269b1b68e82b1bbe655c80d4c0d84ec2e094845f",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-02"
+          ]
+        },
+        {
+          "context_id": "d4e2f73c7b5a7c5bdac054eba589ba51d5301a327d6ece72930a9e0530b45790",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-03"
+          ]
+        }
+      ],
+      "raw_groups_hit": 1,
+      "expanded_groups_hit": 1,
+      "expected_group_count": 1
+    },
+    {
+      "case_id": "DEV-DX-07",
+      "knowledge_base": "general_diagnostics",
+      "question": "空调风量变得很小，是换空气滤芯还是压缩机？",
+      "scope": "draft_preview",
+      "status": "retrieved",
+      "elapsed_seconds": 0.408,
+      "expected_groups": [
+        [
+          "DX-AIR-02"
+        ]
+      ],
+      "hits": [
+        {
+          "unit_id": "DX-AIR-02",
+          "chunk_id": "6c2df9c261b03a537bd8d6c63faa5e7ebaaf7b0fe77b5443bda96b5e6a962756",
+          "document_id": "DX-AIR-006",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "38eb346acf50295c43476dd3d476af20b6d1ff5bcfc7769f6f0dc959e0023391",
+          "section_path": [
+            "空调不冷与送风异常通用排查",
+            "DX-AIR-02 出风量小、无风或只有部分风速"
+          ],
+          "distance": 0.30171358585357666
+        },
+        {
+          "unit_id": "DX-AIR-01",
+          "chunk_id": "f78329d6d7c768f77a919170f3aa6f3b99c5dc1a2c10bff75b716a44017c8e0d",
+          "document_id": "DX-AIR-006",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "38eb346acf50295c43476dd3d476af20b6d1ff5bcfc7769f6f0dc959e0023391",
+          "section_path": [
+            "空调不冷与送风异常通用排查",
+            "DX-AIR-01 出风正常但不冷或制冷不足"
+          ],
+          "distance": 0.3411543369293213
+        },
+        {
+          "unit_id": "DX-COO-03",
+          "chunk_id": "ff15a10a673ac120afa3e5629d112ec38795d39337504f05f8b774850be136c4",
+          "document_id": "DX-COO-004",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "095c9da498ae6b652415ed9609aba17fd701fd841c0d9d1a159223de738544e2",
+          "section_path": [
+            "发动机冷却系统通用排查",
+            "DX-COO-03 发动机长时间不升温或暖风不热"
+          ],
+          "distance": 0.4398496150970459
+        },
+        {
+          "unit_id": "DX-COO-01",
+          "chunk_id": "6193c528578854eab3ccc3cb9d18d8612809a02873c9eee217ba53872fa2b463",
+          "document_id": "DX-COO-004",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "095c9da498ae6b652415ed9609aba17fd701fd841c0d9d1a159223de738544e2",
+          "section_path": [
+            "发动机冷却系统通用排查",
+            "DX-COO-01 水温异常升高或过热报警"
+          ],
+          "distance": 0.4751207232475281
+        },
+        {
+          "unit_id": "DX-COO-02",
+          "chunk_id": "9703b2bb445af66eefbc3cbed1cc833dc398f0ea5105d912c7b3fb040ffd3b40",
+          "document_id": "DX-COO-004",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "095c9da498ae6b652415ed9609aba17fd701fd841c0d9d1a159223de738544e2",
+          "section_path": [
+            "发动机冷却系统通用排查",
+            "DX-COO-02 冷却液反复减少或发现疑似漏液"
+          ],
+          "distance": 0.49514925479888916
+        }
+      ],
+      "expanded_contexts": [
+        {
+          "context_id": "0c6608dcf633f64a8510b184e01eff518efd99797681498b9b6da287db21bfae",
+          "document_id": "DX-AIR-006",
+          "unit_ids": [
+            "DX-AIR-01"
+          ]
+        },
+        {
+          "context_id": "26bf8ce8824e169fa72b2eec32c90fec697f5034a4abf24986a638f4a36f4478",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-08"
+          ]
+        },
+        {
+          "context_id": "35b0c47268ce60f28e859d7c2794eee8c052cee12ec94fa8fcdde84d8e83f6b1",
+          "document_id": "DX-COO-004",
+          "unit_ids": [
+            "DX-COO-01"
+          ]
+        },
+        {
+          "context_id": "4cf54159a880c4dcda6613ed0a6206c65009cc4976f398dddde23fce480f4a4a",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-06"
+          ]
+        },
+        {
+          "context_id": "5c2514c772308f9c0dec333aae92bb3a016f3eea3b8314009f3fa4ac977d8587",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-07"
+          ]
+        },
+        {
+          "context_id": "6d89a4c33dcc64efce5f4a9bca54009825ee6d88f4bca091a59174e46e33de7e",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-05"
+          ]
+        },
+        {
+          "context_id": "86a27e2b6ce238f820220c3e4f79b33e7abb23c21f4e9f016a034502cc5916a0",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-01"
+          ]
+        },
+        {
+          "context_id": "90daf84d2bb28c364033712ef0b04fb6efa4fa0fd684c4c1cbc7061ff7b9598b",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-04"
+          ]
+        },
+        {
+          "context_id": "960d0c5497744d87a78bd93f147c19116364d81a4de04f4ad24289488b359c3e",
+          "document_id": "DX-AIR-006",
+          "unit_ids": [
+            "DX-AIR-02"
+          ]
+        },
+        {
+          "context_id": "9672c7da0ea7ddddb042701e269b1b68e82b1bbe655c80d4c0d84ec2e094845f",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-02"
+          ]
+        },
+        {
+          "context_id": "97729ab17f96413d7d85c426f68f9c3ed353cb73344d33e8d60f5cba2b3766f6",
+          "document_id": "DX-COO-004",
+          "unit_ids": [
+            "DX-COO-03"
+          ]
+        },
+        {
+          "context_id": "b8663759fb78b709cdcda3e1a40461a77670c515cd353a16e5da01366af6f215",
+          "document_id": "DX-COO-004",
+          "unit_ids": [
+            "DX-COO-02"
+          ]
+        },
+        {
+          "context_id": "d4e2f73c7b5a7c5bdac054eba589ba51d5301a327d6ece72930a9e0530b45790",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-03"
+          ]
+        }
+      ],
+      "raw_groups_hit": 1,
+      "expanded_groups_hit": 1,
+      "expected_group_count": 1
+    },
+    {
+      "case_id": "DEV-DX-08",
+      "knowledge_base": "general_diagnostics",
+      "question": "雨刮之前有水痕，按维护要求清洁玻璃胶条后复核刮净，胶条也完整，需要换吗？",
+      "scope": "draft_preview",
+      "status": "retrieved",
+      "elapsed_seconds": 0.532,
+      "expected_groups": [
+        [
+          "DX-VIS-01"
+        ]
+      ],
+      "hits": [
+        {
+          "unit_id": "DX-VIS-01",
+          "chunk_id": "39a84d77c0eebdf12b96b2524322d52208b4a85843f4af1518b489c5ee9cd3fa",
+          "document_id": "DX-VIS-007",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "d0ae8735f3d1431f28c0ac73e385468f5893c2071476e06f8df89f1360d3a981",
+          "section_path": [
+            "雨刮与灯光通用排查",
+            "DX-VIS-01 雨刮刮不净、跳动或异响"
+          ],
+          "distance": 0.2782667875289917
+        },
+        {
+          "unit_id": "DX-VIS-02",
+          "chunk_id": "bea020596fcba1782b7338f64ec3e6f224f5cbe4a2c9bffe1daab23f8c45ece6",
+          "document_id": "DX-VIS-007",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "d0ae8735f3d1431f28c0ac73e385468f5893c2071476e06f8df89f1360d3a981",
+          "section_path": [
+            "雨刮与灯光通用排查",
+            "DX-VIS-02 一侧车灯不亮或灯光故障提示"
+          ],
+          "distance": 0.40840572118759155
+        },
+        {
+          "unit_id": "DX-RULE-03",
+          "chunk_id": "c0b8357ec5592acc4f8e8838111a9e2af18898bf664619d32e6e7a983d50a5c2",
+          "document_id": "DX-GEN-001",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "4907500324209ee92fa29e1b1e7c510770a3e6139587340971598995b397a12d",
+          "section_path": [
+            "通用故障辅助排查与换件判断规则",
+            "DX-RULE-03 证据分级"
+          ],
+          "distance": 0.4456413984298706
+        },
+        {
+          "unit_id": "DX-RULE-05",
+          "chunk_id": "30bac3146d4c6932c34864e4b501b072d109e5958e3bcf2f133d86206f9b6aa9",
+          "document_id": "DX-GEN-001",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "4907500324209ee92fa29e1b1e7c510770a3e6139587340971598995b397a12d",
+          "section_path": [
+            "通用故障辅助排查与换件判断规则",
+            "DX-RULE-05 部件与库存边界"
+          ],
+          "distance": 0.4552818536758423
+        },
+        {
+          "unit_id": "DX-RULE-01",
+          "chunk_id": "fbe4362c4146e8ab5dff85e71fb34c66e1e7f193b48d837800d699b6371dbbc7",
+          "document_id": "DX-GEN-001",
+          "document_version": "1.0-draft.1",
+          "source_sha256": "4907500324209ee92fa29e1b1e7c510770a3e6139587340971598995b397a12d",
+          "section_path": [
+            "通用故障辅助排查与换件判断规则",
+            "DX-RULE-01 范围与入口"
+          ],
+          "distance": 0.4799407720565796
+        }
+      ],
+      "expanded_contexts": [
+        {
+          "context_id": "26bf8ce8824e169fa72b2eec32c90fec697f5034a4abf24986a638f4a36f4478",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-08"
+          ]
+        },
+        {
+          "context_id": "4cf54159a880c4dcda6613ed0a6206c65009cc4976f398dddde23fce480f4a4a",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-06"
+          ]
+        },
+        {
+          "context_id": "5a873c3bf5e14bcf4a57234fa10782f898bf257028650a78a96fece853ea0f10",
+          "document_id": "DX-VIS-007",
+          "unit_ids": [
+            "DX-VIS-01"
+          ]
+        },
+        {
+          "context_id": "5c2514c772308f9c0dec333aae92bb3a016f3eea3b8314009f3fa4ac977d8587",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-07"
+          ]
+        },
+        {
+          "context_id": "6d89a4c33dcc64efce5f4a9bca54009825ee6d88f4bca091a59174e46e33de7e",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-05"
+          ]
+        },
+        {
+          "context_id": "86a27e2b6ce238f820220c3e4f79b33e7abb23c21f4e9f016a034502cc5916a0",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-01"
+          ]
+        },
+        {
+          "context_id": "90daf84d2bb28c364033712ef0b04fb6efa4fa0fd684c4c1cbc7061ff7b9598b",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-04"
+          ]
+        },
+        {
+          "context_id": "9672c7da0ea7ddddb042701e269b1b68e82b1bbe655c80d4c0d84ec2e094845f",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-02"
+          ]
+        },
+        {
+          "context_id": "9c141337ae35890867d093f640c8359fd00eb1d94f5687dda2de6003dfe68dab",
+          "document_id": "DX-VIS-007",
+          "unit_ids": [
+            "DX-VIS-02"
+          ]
+        },
+        {
+          "context_id": "d4e2f73c7b5a7c5bdac054eba589ba51d5301a327d6ece72930a9e0530b45790",
+          "document_id": "DX-GEN-001",
+          "unit_ids": [
+            "DX-RULE-03"
+          ]
+        }
+      ],
+      "raw_groups_hit": 1,
+      "expanded_groups_hit": 1,
+      "expected_group_count": 1
+    }
+  ],
+  "input_files": {
+    "evals/inventory/development.json": "dff67ebf6d665c7698524ab19b982ed722769bb1367e7c8348d7f3513434077c",
+    "evals/diagnostics/development.json": "8e1eac79cf21bccdf346e5facf7de9a8e050ea10721a775f1c2838382cb3fa68"
+  },
+  "usage": {
+    "embedding_requests": 15,
+    "embedded_texts": 15,
+    "embedding_retries": 0,
+    "total_tokens": 390
+  },
+  "summary": {
+    "inventory_policies": {
+      "queries_run": 7,
+      "not_run_unsupported_format": 5,
+      "raw_evidence_groups_hit": 9,
+      "expected_groups": 13,
+      "raw_complete_queries": 5,
+      "expanded_complete_queries": 5
+    },
+    "general_diagnostics": {
+      "queries_run": 8,
+      "not_run_unsupported_format": 0,
+      "raw_evidence_groups_hit": 9,
+      "expected_groups": 9,
+      "raw_complete_queries": 8,
+      "expanded_complete_queries": 8
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "scope": "exposed_quality_regression_not_independent",
+  "suite_sha256": "cf13c789a43924ad501e311ef131f163bfb839002115cb4b214a2c1fb50fec44",
+  "model": "deepseek-flash",
+  "embedding": "BAAI/bge-m3",
+  "code_hashes": {
+    "backend/app/knowledge_answers.py": "f00822c9857ced66c4579848173ace963a01d99327abb9da49bd6fc8e210f256",
+    "backend/app/knowledge_math.py": "d9bf1b6dbc86a19438e5465f4cff3ecc5256814232a312e92bbfa973811bd8dd",
+    "backend/app/knowledge_api.py": "071d93f729638fa8097124c5e6618a101974e7e38b371ef19bc35315daee103d"
+  },
+  "cases": [],
+  "summary": {
+    "attempted": 0,
+    "automated_pass": 0,
+    "semantic_review": "requires_project_ai_source_review_not_model_self_score"
+  }
+}

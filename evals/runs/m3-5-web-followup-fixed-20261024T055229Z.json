@@ -1,0 +1,194 @@
+{
+  "purpose": "Synthetic cited follow-up and explicit failed-turn retry, after public-web schema fix",
+  "http_status": 200,
+  "elapsed_seconds": 3.628,
+  "response": {
+    "turn_id": "54b6bcb6dcd84222bb061d7ce7e19aa8",
+    "answer": {
+      "answer_status": "answered",
+      "claims": [
+        {
+          "text": "这些公开网页资料适用于汽车蓄电池的充电状态与内阻测试，也适用于按电池类型（Starter、gel、EFB、AGM）和标称冷启动电流进行的专业测试仪检测；比重测试仅适用于比重均匀且不低于1.25 kg/dm³的情况。",
+          "citation_ids": [
+            "c6053b87fad59fdf2b6beab08dcf71e78d2efc04f02bb98dcfbbce7626e89571",
+            "67738423b33d640265704970a4d5e2bedf627560381523aedb2af557f4ee6797",
+            "48faa8544ec79021cd846ac9fd539f0abe82b317c3674f687da051a0e41b2fe8"
+          ]
+        },
+        {
+          "text": "需要由合格维修人员核查的事项包括：蓄电池的实际安装位置及应使用的端子、电池类型与冷启动电流参数是否正确、低电压或比重不均时是否需先充电，以及按建议每年至少检查一次蓄电池状态。",
+          "citation_ids": [
+            "67738423b33d640265704970a4d5e2bedf627560381523aedb2af557f4ee6797",
+            "c6053b87fad59fdf2b6beab08dcf71e78d2efc04f02bb98dcfbbce7626e89571",
+            "48faa8544ec79021cd846ac9fd539f0abe82b317c3674f687da051a0e41b2fe8"
+          ]
+        },
+        {
+          "text": "网页中提到的电压数值（如约12.8 V、低于12.4 V）是公开资料中的参考值，不能当作所有车辆通用的更换阈值，也不能据此远程认定某个部件必须更换。",
+          "citation_ids": [
+            "c6053b87fad59fdf2b6beab08dcf71e78d2efc04f02bb98dcfbbce7626e89571"
+          ]
+        }
+      ],
+      "follow_up_questions": [],
+      "limitations": [
+        "以上内容来自公开网页，并非企业内部制度或厂家维修结论；具体检测、接线和电解液检查应由合格维修人员按相应系统要求实施。",
+        "以上依据为公开网页资料，不代表企业内部制度、厂家适配确认或实时库存。",
+        "本轮沿用本会话先前取得的网页摘录与访问时间，未重新联网搜索。"
+      ],
+      "fault_types": [],
+      "checks": [],
+      "part_decisions": [],
+      "citations": [
+        {
+          "citation_id": "c6053b87fad59fdf2b6beab08dcf71e78d2efc04f02bb98dcfbbce7626e89571",
+          "chunk_id": "c6053b87fad59fdf2b6beab08dcf71e78d2efc04f02bb98dcfbbce7626e89571",
+          "source_type": "web_search",
+          "title": "Testing the battery - Step-by-step | VARTA Automotive Batteries",
+          "url": "https://www.varta-automotive.com/en/knowledge/articles/article-details/testing-the-battery---step-by-step",
+          "excerpt": "1. Charge Care: Regularly monitor and charge the battery, especially during long-term parking or winter storage. Charge every two months if used sporadically.\n  2. Check Charge: Regularly check battery charge, particularly in cold weather or after short trips. Dimming headlights indicate low charge.\n  3. Prioritize Safety: Conserve battery by minimizing non-essential electrical use and keeping safety systems active during long drives. [...] Connect the battery tester to the battery terminals to determine the state of charge and the internal resistance. In principle: Connect the red cable to the positive terminal and the black cable to the negative terminal. The sequence for connection and disconnection does not matter. [...] A measuring device which can only measure the state of charge of the battery is suitable to test a conventional car battery. In an ideal case, an open circuit voltage of about 12.8 V is measured with a Multimeter. If the voltage falls below 12.4 V, the battery should be recharged as soon as possible. A continuous low charge damages the battery due to sulfation.",
+          "accessed_at": "2026-10-24T05:25:28.711654+00:00",
+          "native_format": "web",
+          "source_state": "external",
+          "document_id": "WEB-1",
+          "document_version": "2026-10-24",
+          "unit_id": null,
+          "unit_ids": [],
+          "section_path": []
+        },
+        {
+          "citation_id": "67738423b33d640265704970a4d5e2bedf627560381523aedb2af557f4ee6797",
+          "chunk_id": "67738423b33d640265704970a4d5e2bedf627560381523aedb2af557f4ee6797",
+          "source_type": "web_search",
+          "title": "Find all Battery Knowledge FAQs | VARTA Automotive Batteries | VARTA Automotive Batteries",
+          "url": "https://www.varta-automotive.com/en/knowledge/faq",
+          "excerpt": "Battery tests can detect failures early. Drivers should have their batteries checked at a workshop at least once a year before summer.  \n  Hot weather accelerates chemical processes in car batteries, leading to increased self-discharge and corrosion. This helps ensure smooth working and protects unexpected breakdowns.  \n  For more information on testing and to find out how VARTA® Automotive supports workshops with the VARTA® Battery Test-Check program, visit our website. [...] 1. Connect it to the battery terminals, red to positive and black to negative.\n  2. For batteries in the trunk or passenger compartment, use those terminals, not the starting aid contacts in the engine compartment.\n  3. Set the tester to the correct battery type: Starter, gel, EFB, or AGM.\n  4. Enter the stated cold start current for the battery.\n  5. The device will automatically carry out the test and provide the result. [...] 1. Disconnect cables: Remove negative, then positive.\n  2. Check battery: For lead-acid, seek professional help. Maintenance-free? Just clean vents.\n  3. Start charging: Keep upright if removing. Turn off electricals, then connect charger to battery before plugging in. Red to positive, black to negative.\n  4. End charging: Disconnect charger, then cables. Reconnect positive, then negative when reinstalling.\n  5. Special for start-stop vehicles: Use suitable charger, follow manual.",
+          "accessed_at": "2026-10-24T05:25:28.711654+00:00",
+          "native_format": "web",
+          "source_state": "external",
+          "document_id": "WEB-2",
+          "document_version": "2026-10-24",
+          "unit_id": null,
+          "unit_ids": [],
+          "section_path": []
+        },
+        {
+          "citation_id": "48faa8544ec79021cd846ac9fd539f0abe82b317c3674f687da051a0e41b2fe8",
+          "chunk_id": "48faa8544ec79021cd846ac9fd539f0abe82b317c3674f687da051a0e41b2fe8",
+          "source_type": "web_search",
+          "title": "BATTERY TESTING GUIDE",
+          "url": "https://www.varta-automotive.com/docs/default-source/default-document-library/battery_testing_guide.pdf?sfvrsn=3a10ec9c_32",
+          "excerpt": "Only conduct this test if the specific gravity is even and at least 1.25 kg/dm3; otherwise charge the battery first. Refer to the battery tester's instruction",
+          "accessed_at": "2026-10-24T05:25:28.711654+00:00",
+          "native_format": "web",
+          "source_state": "external",
+          "document_id": "WEB-4",
+          "document_version": "2026-10-24",
+          "unit_id": null,
+          "unit_ids": [],
+          "section_path": []
+        }
+      ],
+      "usage": {
+        "chat": {
+          "prompt_tokens": 3885,
+          "completion_tokens": 509,
+          "total_tokens": 4394
+        },
+        "intent": {
+          "prompt_tokens": 994,
+          "completion_tokens": 29,
+          "total_tokens": 1023
+        }
+      },
+      "source_mode": "web",
+      "search_sources": [
+        {
+          "citation_id": "c6053b87fad59fdf2b6beab08dcf71e78d2efc04f02bb98dcfbbce7626e89571",
+          "chunk_id": "c6053b87fad59fdf2b6beab08dcf71e78d2efc04f02bb98dcfbbce7626e89571",
+          "source_type": "web_search",
+          "title": "Testing the battery - Step-by-step | VARTA Automotive Batteries",
+          "url": "https://www.varta-automotive.com/en/knowledge/articles/article-details/testing-the-battery---step-by-step",
+          "excerpt": "1. Charge Care: Regularly monitor and charge the battery, especially during long-term parking or winter storage. Charge every two months if used sporadically.\n  2. Check Charge: Regularly check battery charge, particularly in cold weather or after short trips. Dimming headlights indicate low charge.\n  3. Prioritize Safety: Conserve battery by minimizing non-essential electrical use and keeping safety systems active during long drives. [...] Connect the battery tester to the battery terminals to determine the state of charge and the internal resistance. In principle: Connect the red cable to the positive terminal and the black cable to the negative terminal. The sequence for connection and disconnection does not matter. [...] A measuring device which can only measure the state of charge of the battery is suitable to test a conventional car battery. In an ideal case, an open circuit voltage of about 12.8 V is measured with a Multimeter. If the voltage falls below 12.4 V, the battery should be recharged as soon as possible. A continuous low charge damages the battery due to sulfation.",
+          "accessed_at": "2026-10-24T05:25:28.711654+00:00",
+          "native_format": "web",
+          "source_state": "external",
+          "document_id": "WEB-1",
+          "document_version": "2026-10-24",
+          "unit_id": null,
+          "unit_ids": [],
+          "section_path": []
+        },
+        {
+          "citation_id": "67738423b33d640265704970a4d5e2bedf627560381523aedb2af557f4ee6797",
+          "chunk_id": "67738423b33d640265704970a4d5e2bedf627560381523aedb2af557f4ee6797",
+          "source_type": "web_search",
+          "title": "Find all Battery Knowledge FAQs | VARTA Automotive Batteries | VARTA Automotive Batteries",
+          "url": "https://www.varta-automotive.com/en/knowledge/faq",
+          "excerpt": "Battery tests can detect failures early. Drivers should have their batteries checked at a workshop at least once a year before summer.  \n  Hot weather accelerates chemical processes in car batteries, leading to increased self-discharge and corrosion. This helps ensure smooth working and protects unexpected breakdowns.  \n  For more information on testing and to find out how VARTA® Automotive supports workshops with the VARTA® Battery Test-Check program, visit our website. [...] 1. Connect it to the battery terminals, red to positive and black to negative.\n  2. For batteries in the trunk or passenger compartment, use those terminals, not the starting aid contacts in the engine compartment.\n  3. Set the tester to the correct battery type: Starter, gel, EFB, or AGM.\n  4. Enter the stated cold start current for the battery.\n  5. The device will automatically carry out the test and provide the result. [...] 1. Disconnect cables: Remove negative, then positive.\n  2. Check battery: For lead-acid, seek professional help. Maintenance-free? Just clean vents.\n  3. Start charging: Keep upright if removing. Turn off electricals, then connect charger to battery before plugging in. Red to positive, black to negative.\n  4. End charging: Disconnect charger, then cables. Reconnect positive, then negative when reinstalling.\n  5. Special for start-stop vehicles: Use suitable charger, follow manual.",
+          "accessed_at": "2026-10-24T05:25:28.711654+00:00",
+          "native_format": "web",
+          "source_state": "external",
+          "document_id": "WEB-2",
+          "document_version": "2026-10-24",
+          "unit_id": null,
+          "unit_ids": [],
+          "section_path": []
+        },
+        {
+          "citation_id": "05da913484870e6c6b412a227a72ec534a6035b49408373bbfce3592262881ba",
+          "chunk_id": "05da913484870e6c6b412a227a72ec534a6035b49408373bbfce3592262881ba",
+          "source_type": "web_search",
+          "title": "VARTA Batteries - Basic Terms and Testing Tips",
+          "url": "https://www.youtube.com/watch?v=XIy5YLTS-7o",
+          "excerpt": "[8:05] important to connect to the terminals of the battery well your battery tester comes with leads of a certain length and these leads will be calibrated to your tester\n[8:15] if we then test the battery off jump start points there is a chance that we will get an inaccurate reading i would also like to point out that the\n[8:23] voltage of the battery so the state of charge has nothing to do with the state of health of a battery so with what you know about state of [...] [7:12] because new technologies are constantly coming out it's also important that the battery tester can select between\n[7:19] sli efb and agm batteries another important consideration for the battery tester is that you can select the different\n[7:27] standards so we can select din en or jizz as required it's important that your battery tester\n[7:36] has a printer as well and one thing that you can do is once you print the results off make sure that they match the standard [...] [6:48] four hours for the charge to equalize and if the vehicle has just came in and it has been charged off the alternator we can switch the lights on to take the\n[6:56] surface charge off before we measure the open circuit voltage when determining the state of health of a battery it's important that we use a\n[7:05] special battery tester this tester should be as new as possible so that the algorithm is as up-to-date as possible",
+          "accessed_at": "2026-10-24T05:25:28.711654+00:00",
+          "native_format": "web",
+          "source_state": "external",
+          "document_id": "WEB-3",
+          "document_version": "2026-10-24",
+          "unit_id": null,
+          "unit_ids": [],
+          "section_path": []
+        },
+        {
+          "citation_id": "48faa8544ec79021cd846ac9fd539f0abe82b317c3674f687da051a0e41b2fe8",
+          "chunk_id": "48faa8544ec79021cd846ac9fd539f0abe82b317c3674f687da051a0e41b2fe8",
+          "source_type": "web_search",
+          "title": "BATTERY TESTING GUIDE",
+          "url": "https://www.varta-automotive.com/docs/default-source/default-document-library/battery_testing_guide.pdf?sfvrsn=3a10ec9c_32",
+          "excerpt": "Only conduct this test if the specific gravity is even and at least 1.25 kg/dm3; otherwise charge the battery first. Refer to the battery tester's instruction",
+          "accessed_at": "2026-10-24T05:25:28.711654+00:00",
+          "native_format": "web",
+          "source_state": "external",
+          "document_id": "WEB-4",
+          "document_version": "2026-10-24",
+          "unit_id": null,
+          "unit_ids": [],
+          "section_path": []
+        },
+        {
+          "citation_id": "e036b73dd119f7a3c51fcf1d8e48895e060f8abaa12b08e8a7219a58e72f6658",
+          "chunk_id": "e036b73dd119f7a3c51fcf1d8e48895e060f8abaa12b08e8a7219a58e72f6658",
+          "source_type": "web_search",
+          "title": "How to Test a Battery Like a Pro | Interstate Batteries",
+          "url": "https://www.interstatebatteries.com/how-to/test-a-car-battery",
+          "excerpt": "First, turn the headlights on and leave them on for about two minutes. [Activating headlights] This will get rid of any surface charge the battery may have. While you wait, set the multimeter to 0 to 20 volts. Has it been two minutes? Just about. Let’s kill the lights. [Turns off lights] Now, locate your battery and connect the multimeter to the positive and negative terminals. I’ll give  you a moment to locate and match the terminals. The positive terminal is usually red with a plus sign on [...] Nothing can beat peace of mind, especially when it comes to your battery. Learn how to test your car battery with a multimeter and identify the warning signs of a bad battery like the dashboard battery light, the smell of rotten eggs—and the click, click, click of a dead battery.\n\nHow-to guide for testing automotive and commercial battery performance \n\n## Video Transcript [...] with a plus sign on it. The negative terminal is usually black with a negative sign on it. Good to go? Great. Let's check that multimeter screen. You should have a resting voltage of around 12.5 volts. Now, just because your battery registers around 12.5 volts doesn't mean you have a good battery, but that's what we are about to find out.",
+          "accessed_at": "2026-10-24T05:25:28.711654+00:00",
+          "native_format": "web",
+          "source_state": "external",
+          "document_id": "WEB-5",
+          "document_version": "2026-10-24",
+          "unit_id": null,
+          "unit_ids": [],
+          "section_path": []
+        }
+      ],
+      "search_query": "VARTA battery testing guide",
+      "reused_source_snapshot": true,
+      "request_id": "e97887e1fc71401b8944b18885796eaa",
+      "elapsed_seconds": 3.594
+    },
+    "reused": false
+  }
+}

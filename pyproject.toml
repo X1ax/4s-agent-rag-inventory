@@ -1,0 +1,39 @@
+[project]
+name = "fours-agent-inventory"
+version = "0.1.0"
+description = "4S parts inventory management with Agent and RAG"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "alembic",
+    "chromadb",
+    "fastapi",
+    "httpx",
+    "langchain-core",
+    "langgraph",
+    "langgraph-checkpoint-sqlite",
+    "pillow>=13.0.0",
+    "pwdlib[argon2]",
+    "pydantic",
+    "pydantic-settings",
+    "pyjwt",
+    "pymysql[rsa]",
+    "pypdf>=6.21.2",
+    "python-docx>=1.2.0",
+    "sqlalchemy",
+    "uvicorn",
+]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.uv]
+package = false
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = ["mysql: requires the configured project test database"]

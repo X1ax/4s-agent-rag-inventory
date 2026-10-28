@@ -1,0 +1,21 @@
+{
+  "unchanged": true,
+  "changed_tables": [],
+  "baseline_digest": "f980d0338205e0e396abfeec969af3056faa6afb3563b79f4e0dfb8c8ea258a9",
+  "current_digest": "f980d0338205e0e396abfeec969af3056faa6afb3563b79f4e0dfb8c8ea258a9",
+  "counts": {
+    "warehouses": 2,
+    "suppliers": 3,
+    "parts": 48,
+    "opening_documents": 3,
+    "opening_lines": 19,
+    "documents": 824,
+    "document_lines": 1683,
+    "document_reviews": 1,
+    "stock_balances": 96,
+    "stock_ledger": 1359,
+    "supplier_prices": 57,
+    "agent_proposals": 1
+  },
+  "stock_value": "92738.32"
+}

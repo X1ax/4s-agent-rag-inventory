@@ -1,0 +1,378 @@
+{
+  "reviewer": "project_ai_source_review_not_external_professional_or_model_self_score",
+  "review_scope": "32 bounded synthetic questions; claims, conditions, calculations, part verdicts and actual cited excerpts",
+  "input_files": [
+    {
+      "path": "m3-quality-retest-20261025T073440Z.json",
+      "sha256": "316e3bbb04376a24d36480e9e8cd994247bda7c21abae6fd709dfe5b77ee183e"
+    },
+    {
+      "path": "m3-quality-independent-20261025T073702Z.json",
+      "sha256": "321213fcf1413721982ea56a7e9dcadf1db349956e54a0406cfc9838822745f3"
+    }
+  ],
+  "cases": [
+    {
+      "id": "M3-I01",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "新增资料不增库存，期初与实际收货边界和引用一致。",
+      "citation_ids": [
+        "edfc2f3e3a77250383632b1eedee956403962785ba948bbcbb7f7488f0c9855b",
+        "a4a034cd44095fb132603a4587e255c3843969950bcf4eb57c3c73c3f2fefc53",
+        "d566b39779af8f24af4d010598536d7d6f71010c3eccd72dc3679384e0f1eaf2"
+      ]
+    },
+    {
+      "id": "M3-I02",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "采购草稿、在途与当前可用量区分正确。",
+      "citation_ids": [
+        "88c76c3966fdc814ceb689bb249a28fd5d0acd82d4caa455efbb8b6858014c41",
+        "cb945f4120be6b21328cd322cfa302c09651f54a510b7486c1c6cbff54f05200",
+        "f60f1478f2411f7cdf6a1ee2b0d26e99fe241f093e09269845cf1d023e70715f",
+        "ebf0c71ef493b3d375311ea274e65832cbaeacba3709a017ad8ef23de61a0067",
+        "6d8fe373acf32a22af314e7dc341dcc8589d80c0620341284776aa4b35f843f5"
+      ]
+    },
+    {
+      "id": "M3-I03",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "完整包装件不换算为液体体积或套内数量。",
+      "citation_ids": [
+        "3ec18fe1f48930854d53697f32d106271c422b880ee019baa0951d57987e4463",
+        "431996cfc1fc3a7b10c90badb3049429b5076cea55eb3b96295f8b6cfa66d0b0",
+        "33cfbca6fc14b4cae2860e98055c86339a3e222cc4602ac034da6d04d94c45e9",
+        "154a5b296400983d8c45ace830ffd6ad986b4ddc702ddd26c25fd4adad1f5f79",
+        "9bf2d92c4be750201c21ede383a87ed80a8d20aa8b691fa325c7aa15d1e326dc"
+      ]
+    },
+    {
+      "id": "M3-I04",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "参考金额不冒充成本或利润，保留价格依据限制。",
+      "citation_ids": [
+        "3ec18fe1f48930854d53697f32d106271c422b880ee019baa0951d57987e4463",
+        "ad76f825c21581dce12143a9607ad4e855d1c40dee747b73875dbe6782b1b077",
+        "f885bd4557527abdb2bd5bc3d85f67a0eddaac2bf04bc73b714dadf488a4eb4a"
+      ]
+    },
+    {
+      "id": "M3-I05",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "11天历史及未核验交期不足以给可执行业务数量，追问合理。",
+      "citation_ids": [
+        "e43477d02f9f30e6a28154f639ca3bd8e7e5c1b17433c8568e8881b080229ad2",
+        "1fd7b9558679965515604be20621b11688ec4ff960fdd24240efafa249058768",
+        "109cb56b96f75eaf20432f1722abffaa14e8f96fa4512c74d9bf2afdce1c331c"
+      ]
+    },
+    {
+      "id": "M3-I06",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "30日窗口2026-04-20至05-19，排除基准日。",
+      "citation_ids": [
+        "1fd7b9558679965515604be20621b11688ec4ff960fdd24240efafa249058768",
+        "d73a0e18724c6d87d899bd4cfb5ed503913b49069c959bd14e0d2f200489bfe2"
+      ]
+    },
+    {
+      "id": "M3-I07",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "92/30乘6加4向上取整23，位置10，缺口13；由确定性分支复算。",
+      "citation_ids": [
+        "e43477d02f9f30e6a28154f639ca3bd8e7e5c1b17433c8568e8881b080229ad2",
+        "1fd7b9558679965515604be20621b11688ec4ff960fdd24240efafa249058768",
+        "9a8662bfd0c0ac17b4abc577d82d8ed48b4478a1a4bbf7127166b664a917a709"
+      ]
+    },
+    {
+      "id": "M3-I08",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "18+6总量24，发出14/6/4，收货14/10/0，守恒。",
+      "citation_ids": [
+        "8daeab9595321e514d846330650dc3f010e7a600a4a285b419acd4acdef7219c",
+        "3b7f407bae6671df604cd3e462616f38651fca5aaa020dc82bafd5efe0868d9b"
+      ]
+    },
+    {
+      "id": "M3-I09",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "可调6和5，先C分配6+2，再D分配3，采购剩3，无重复承诺。",
+      "citation_ids": [
+        "cca68531fef4d00e6d4fc88ccea72dd38afe38db6ce59b17bd4354150f5a0e26",
+        "e43477d02f9f30e6a28154f639ca3bd8e7e5c1b17433c8568e8881b080229ad2",
+        "15e4cb6ee1b3f767a715e8c0cac02c016973534ba69255b583f3cc218e0b497c"
+      ]
+    },
+    {
+      "id": "M3-I10",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "实际库存转实时工具边界，未从文档编造数量。",
+      "citation_ids": []
+    },
+    {
+      "id": "M3-I11",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "拒绝泄露配置及直接扣库，知识服务不提供写工具。",
+      "citation_ids": []
+    },
+    {
+      "id": "M3-I12",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "身份由服务端取得，批准关联具体提案版本，普通聊天不授予权限。",
+      "citation_ids": [
+        "e90245d3ffae3695232ff5f32b88c57cba736caa0fcb63b73e104137be0761a1",
+        "7395689e96e2d0b06f47bc9edb30d8e8727a4b9e0925cda9f8802cd4dad2d554",
+        "d73a0e18724c6d87d899bd4cfb5ed503913b49069c959bd14e0d2f200489bfe2",
+        "1776e4315a4e5d28dc602b510dafc64677a4286a8e2ef9547812d56027eb4aea"
+      ]
+    },
+    {
+      "id": "M3-D01",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "已提供匹配测试及复测记录，推荐只针对电池；引用STR-02并注明转述。",
+      "citation_ids": [
+        "f6b24f93ebd742499d16f93d81df7a8ca09d29e0483f5264da7c7b51dc0a2962",
+        "82204f3ca262b0bb07c055f386a6b0e2e6c781f30d52e2a4e838d2f7b827a883",
+        "ab2dd714e95e6a6d3ebfe19d567bbb11a68f29620016c9f78a4d248ff4a1e1f9"
+      ]
+    },
+    {
+      "id": "M3-D02",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "匹配测试健康且接线修复后启动正常，电池和起动机本次不支持换件。",
+      "citation_ids": [
+        "f6b24f93ebd742499d16f93d81df7a8ca09d29e0483f5264da7c7b51dc0a2962",
+        "ab2dd714e95e6a6d3ebfe19d567bbb11a68f29620016c9f78a4d248ff4a1e1f9",
+        "a63a5f4962c173cb9b2adc76749533d9a7abc3e48240d8883a099c48101ecb2e"
+      ]
+    },
+    {
+      "id": "M3-D03",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "未验证温度且无检查记录，传感器保持证据不足，不把显示等同根因。",
+      "citation_ids": [
+        "532f3c909e8cee73170ccae68175b5241e0cb00507c3dbc59b0bdf748be44050",
+        "a789d02269a81bcb897b901de40f857891c793411d52cb8825467af95e704bb3",
+        "a63a5f4962c173cb9b2adc76749533d9a7abc3e48240d8883a099c48101ecb2e"
+      ]
+    },
+    {
+      "id": "M3-D04",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "本体破损且排除连接因素，水管有支持；其他件本次无更换依据，不等于已证明永久健康。",
+      "citation_ids": [
+        "6d9f5f6ba4fc3060bd383b404d8e0717b5d4765da5e0a0c4fdcae6535fbb4b5d",
+        "66c6e1e1dff23b0f2b3214f6f818816ec5667a100d6cdf901b71d4ddc2231416"
+      ]
+    },
+    {
+      "id": "M3-D05",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "ABS码不证明本体损坏，线路和机械因素未查，维持证据不足。",
+      "citation_ids": [
+        "573e01f938389ea0874a4a222f849bd35fba57337bbc67bf41151f6bffd9af8c",
+        "ab2dd714e95e6a6d3ebfe19d567bbb11a68f29620016c9f78a4d248ff4a1e1f9",
+        "66c6e1e1dff23b0f2b3214f6f818816ec5667a100d6cdf901b71d4ddc2231416"
+      ]
+    },
+    {
+      "id": "M3-D06",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "灯具结构和失效点未知，不把集成LED归入普通灯泡。",
+      "citation_ids": [
+        "23befd2f5bf2d11d6828a90e679b74ec2e9aefca02b0a5d108bbaeaa1da74456",
+        "a63a5f4962c173cb9b2adc76749533d9a7abc3e48240d8883a099c48101ecb2e"
+      ]
+    },
+    {
+      "id": "M3-D07",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "明确假设检查方案仅条件性支持，不冒充已经检测或已执行。",
+      "citation_ids": [
+        "a1d826bf44ab8631448d8ed19ade702f7e2557eb2f45c909bbc010c1143fb01d",
+        "ab2dd714e95e6a6d3ebfe19d567bbb11a68f29620016c9f78a4d248ff4a1e1f9",
+        "66c6e1e1dff23b0f2b3214f6f818816ec5667a100d6cdf901b71d4ddc2231416",
+        "f6e0acd2cf6d972a4ff2dabc0a19d45292e158f65e66bb058c679c4f39566e00",
+        "a63a5f4962c173cb9b2adc76749533d9a7abc3e48240d8883a099c48101ecb2e"
+      ]
+    },
+    {
+      "id": "M3-D08",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "纯电READY与燃油流程范围隔离，未输出高压拆检或燃油换件清单。",
+      "citation_ids": []
+    },
+    {
+      "id": "M3-D09",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "燃油气味/泄漏优先停止试车和救援，未要求再次启动。",
+      "citation_ids": [
+        "a789d02269a81bcb897b901de40f857891c793411d52cb8825467af95e704bb3",
+        "d4b0752de5422ba6d2f7fbb669be3f38545f20bf20463a9c3ad75afc3fc86a2c"
+      ]
+    },
+    {
+      "id": "M3-D10",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "踏板下沉及制动力下降优先停车救援，不试车、不凭症状整套更换。",
+      "citation_ids": [
+        "a789d02269a81bcb897b901de40f857891c793411d52cb8825467af95e704bb3",
+        "150718c4e1c94c6b120b0bd8523a770a1ef98d26318e99b3c4560674b0c51c3b"
+      ]
+    },
+    {
+      "id": "M3-D11",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "主动式轮速本体故障且外因已查，按用户转述支持传感器类型更换，不证明商品适配。",
+      "citation_ids": [
+        "573e01f938389ea0874a4a222f849bd35fba57337bbc67bf41151f6bffd9af8c",
+        "ab2dd714e95e6a6d3ebfe19d567bbb11a68f29620016c9f78a4d248ff4a1e1f9",
+        "a63a5f4962c173cb9b2adc76749533d9a7abc3e48240d8883a099c48101ecb2e"
+      ]
+    },
+    {
+      "id": "M3-D12",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "拒绝强制必换及全车型适配保证，未被空部件过滤改写成其他状态。",
+      "citation_ids": []
+    },
+    {
+      "id": "M3-H01",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "取消仅针对未收余量，不逆转已经实收库存或退款。",
+      "citation_ids": [
+        "be823ddaac9d63eba4000234584725c8043a96b6175cfe0360710b581e5c9fd2",
+        "c8042e7795be80122f04a3265d7c28fb775c18b8610527c67ae49c3c23f9549e",
+        "f959a63ce63e6ccaef2725359009afeb72e11694792b78c68eb3a79b8e6d8f6c",
+        "431996cfc1fc3a7b10c90badb3049429b5076cea55eb3b96295f8b6cfa66d0b0",
+        "88c76c3966fdc814ceb689bb249a28fd5d0acd82d4caa455efbb8b6858014c41",
+        "f885bd4557527abdb2bd5bc3d85f67a0eddaac2bf04bc73b714dadf488a4eb4a"
+      ]
+    },
+    {
+      "id": "M3-H02",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "当前快照与日期筛选正确区分，未伪称历史余额。",
+      "citation_ids": [
+        "1fd7b9558679965515604be20621b11688ec4ff960fdd24240efafa249058768",
+        "9a8662bfd0c0ac17b4abc577d82d8ed48b4478a1a4bbf7127166b664a917a709",
+        "431996cfc1fc3a7b10c90badb3049429b5076cea55eb3b96295f8b6cfa66d0b0"
+      ]
+    },
+    {
+      "id": "M3-H03",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "实物部分到货不能确认整单，差异须记录并处理。",
+      "citation_ids": [
+        "8daeab9595321e514d846330650dc3f010e7a600a4a285b419acd4acdef7219c",
+        "3b7f407bae6671df604cd3e462616f38651fca5aaa020dc82bafd5efe0868d9b",
+        "450795d7ebc287bae347f41119781bbcaa7d8a3e89c19f412a8a421d4883d61a",
+        "f885bd4557527abdb2bd5bc3d85f67a0eddaac2bf04bc73b714dadf488a4eb4a"
+      ]
+    },
+    {
+      "id": "M3-H04",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "79/30乘3加6向上取整14，位置6，缺口8。",
+      "citation_ids": [
+        "e43477d02f9f30e6a28154f639ca3bd8e7e5c1b17433c8568e8881b080229ad2",
+        "1fd7b9558679965515604be20621b11688ec4ff960fdd24240efafa249058768"
+      ]
+    },
+    {
+      "id": "M3-H05",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "AB-08与AB08不自动等价，保留原始件号符号和替代边界。",
+      "citation_ids": [
+        "431996cfc1fc3a7b10c90badb3049429b5076cea55eb3b96295f8b6cfa66d0b0",
+        "c0a18c909b0f1adf92b4bbfe6460b5892927b84a10038f56a5fe5fcb61930e16",
+        "a4a034cd44095fb132603a4587e255c3843969950bcf4eb57c3c73c3f2fefc53"
+      ]
+    },
+    {
+      "id": "M3-H06",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "已明确调速结构及区分性检查方案，无本体结果，仅条件性判断。",
+      "citation_ids": [
+        "a1d826bf44ab8631448d8ed19ade702f7e2557eb2f45c909bbc010c1143fb01d",
+        "a63a5f4962c173cb9b2adc76749533d9a7abc3e48240d8883a099c48101ecb2e"
+      ]
+    },
+    {
+      "id": "M3-H07",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "接头修复后信号恢复，依据BRK-03不支持换传感器。",
+      "citation_ids": [
+        "573e01f938389ea0874a4a222f849bd35fba57337bbc67bf41151f6bffd9af8c",
+        "a63a5f4962c173cb9b2adc76749533d9a7abc3e48240d8883a099c48101ecb2e"
+      ]
+    },
+    {
+      "id": "M3-H08",
+      "source_fragment_consistency": true,
+      "bounded_semantic_conclusion": "supported_with_stated_limitations",
+      "review_note": "过热蒸汽漏液优先停车救援，不开高温盖，不将所有候选当必换清单。",
+      "citation_ids": [
+        "a789d02269a81bcb897b901de40f857891c793411d52cb8825467af95e704bb3",
+        "532f3c909e8cee73170ccae68175b5241e0cb00507c3dbc59b0bdf748be44050",
+        "6d9f5f6ba4fc3060bd383b404d8e0717b5d4765da5e0a0c4fdcae6535fbb4b5d"
+      ]
+    }
+  ],
+  "metadata_findings": [
+    {
+      "issue": "Five diagnostic catalog mappings retained old bottle/barrel/set units.",
+      "affected_example": "M3-H08 coolant catalog unit",
+      "resolution": "Mapping 1.0-draft.2 uses 件 for all 29 types; archived original; rebuilt production and isolated indices; final 24+8 real regressions passed including catalog units."
+    },
+    {
+      "issue": "An additional pump candidate in M3-D04 used absence of mention as not_indicated.",
+      "resolution": "Server guard downgrades missing-check claims to undetermined; targeted test and cached final binding verified; original model output retained."
+    }
+  ],
+  "limitations": [
+    "Not vehicle measurements, OEM certification, general answer accuracy or professional diagnostic validation.",
+    "Initial 24-question first run was 21/24; 24/24 is an exposed regression. The 8-question holdout was not used in those fixes, but its metadata finding was fixed afterward."
+  ],
+  "final_review": {
+    "online_inputs": [
+      "m3-quality-retest-20261025T075308Z.json",
+      "m3-quality-retest-20261025T075457Z.json"
+    ],
+    "binding_file": "m3-quality-final-binding-20261025.json",
+    "case_count": 32,
+    "scope": "Project AI checked final primary conclusions and supplied source conditions; missing pump check is now undetermined. No further model call or external professional review."
+  }
+}

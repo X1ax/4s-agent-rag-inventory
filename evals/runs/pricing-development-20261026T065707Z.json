@@ -1,0 +1,1258 @@
+{
+  "purpose": "synthetic development regression; not independent evaluation",
+  "created_at": "2026-10-26T06:56:45.200615+00:00",
+  "model": "deepseek-flash",
+  "cases": [
+    {
+      "case_id": "actual_profit",
+      "thread_id": "040e68faeeb842838cfac45a79be0f74",
+      "question": "仅查询模拟主仓机油滤清器在2026-09-01至2026-09-15的收费结算金额、实际出库成本、收费毛利和质保成本，说明统计口径，不办理任何单据。",
+      "http_status": 200,
+      "response": {
+        "turn_id": "fff0730456894f318cc082c4324fa276",
+        "answer": {
+          "answer_status": "answered",
+          "claims": [
+            {
+              "text": "查询对象：模拟主仓（仓库ID 1）机油滤清器（SKU DEMO-001，备件ID 1，单位件），统计区间 2026-09-01 至 2026-09-15。",
+              "citation_ids": [
+                "49b679dfd7dbbd2aafb3ca0601588086b02e661f6e5af25ac822fd1cdd82a8ab"
+              ]
+            },
+            {
+              "text": "区间合计：收费结算金额（收费维修收入）1912.21 元；实际出库成本（收费维修已过账成本）1505.00 元；收费毛利 407.21 元，毛利率约 21.30%；质保成本 245.00 元；扣质保后贡献 162.21 元。数量合计 50 件，其中收费 43 件、质保 7 件。",
+              "citation_ids": [
+                "2bdaf556c9346cfa91583063cf200c52817a174ede355e115c36107f642f1ccd"
+              ]
+            },
+            {
+              "text": "数据完整性：缺失行 0、缺失数量 0，未覆盖收入与未覆盖成本均为 0，即区间内收费明细的结算价与成本均完整，毛利为完整汇总。",
+              "citation_ids": [
+                "2bdaf556c9346cfa91583063cf200c52817a174ede355e115c36107f642f1ccd"
+              ]
+            },
+            {
+              "text": "统计口径：仅按已过账领用流水的业务日期统计备件金额，成本按实际执行顺序分摊（实际入库加权成本）；收费结算价取已过账结算快照（明细单价 44.47 元/件），非当前门店定价 45.85 元；质保领用只计成本、不计收入。不含人工、房租、税额拆分或厂家赔付，因此“收费毛利”与“扣质保后贡献”均不是净利润。",
+              "citation_ids": [
+                "2bdaf556c9346cfa91583063cf200c52817a174ede355e115c36107f642f1ccd",
+                "49b679dfd7dbbd2aafb3ca0601588086b02e661f6e5af25ac822fd1cdd82a8ab"
+              ]
+            },
+            {
+              "text": "数据来源说明：定价与历史成本来自模拟补录来源“模拟定价及历史成本补录20261026-v1”，属项目模拟数据，不是外部真实报价或真实成本。",
+              "citation_ids": [
+                "2bdaf556c9346cfa91583063cf200c52817a174ede355e115c36107f642f1ccd",
+                "49b679dfd7dbbd2aafb3ca0601588086b02e661f6e5af25ac822fd1cdd82a8ab"
+              ]
+            },
+            {
+              "text": "区间内质保成本集中在 2026-09-04（140.00 元，4 件）和 2026-09-05（105.00 元，3 件），其余日期均为收费维修。",
+              "citation_ids": [
+                "2bdaf556c9346cfa91583063cf200c52817a174ede355e115c36107f642f1ccd"
+              ]
+            }
+          ],
+          "citations": [
+            {
+              "citation_id": "49b679dfd7dbbd2aafb3ca0601588086b02e661f6e5af25ac822fd1cdd82a8ab",
+              "chunk_id": "49b679dfd7dbbd2aafb3ca0601588086b02e661f6e5af25ac822fd1cdd82a8ab",
+              "document_id": "TOOL-catalog",
+              "document_version": "request_snapshot",
+              "title": "备件与供货目录",
+              "native_format": "json",
+              "source_type": "tool_result",
+              "section_path": [],
+              "excerpt": "{\"parts\": [{\"id\": 1, \"sku\": \"DEMO-001\", \"name\": \"机油滤清器\", \"aliases\": \"\", \"category\": \"滤清器\", \"unit\": \"件\", \"specification\": \"\", \"reference_price\": \"35.00\", \"safety_stock\": 10, \"sale_price\": \"45.85\", \"sale_price_version\": 1, \"default_supplier_id\": 1, \"suppliers\": [{\"id\": 1, \"name\": \"模拟供应商·保养件\", \"supply_price\": \"35.00\", \"version\": 1, \"active\": true, \"source\": \"模拟定价及历史成本补录20261026-v1\", \"updated_at\": \"2026-10-26 06:14:06\", \"lead_time_days\": 3}, {\"id\": 3, \"name\": \"模拟供应商·综合件\", \"supply_price\": \"33.60\", \"version\": 1, \"active\": true, \"source\": \"模拟定价及历史成本补录20261026-v1\", \"updated_at\": \"2026-10-26 06:14:06\", \"lead_time_days\": 7}]}], \"warehouses\": [{\"id\": 1, \"code\": \"DEMO-W01\", \"name\": \"模拟主仓\"}, {\"id\": 2, \"code\": \"DEMO-W02\", \"name\": \"模拟快修仓\"}], \"notice\": \"供货价用于采购，门店定价用于收费维修；只有实际入库形成成本。reference_price仅为旧参考字段；数量均为件，项目模拟报价不是外部真实报价。\", \"limit\": 100}",
+              "accessed_at": "2026-10-26T06:56:48.980937+00:00"
+            },
+            {
+              "citation_id": "2bdaf556c9346cfa91583063cf200c52817a174ede355e115c36107f642f1ccd",
+              "chunk_id": "2bdaf556c9346cfa91583063cf200c52817a174ede355e115c36107f642f1ccd",
+              "document_id": "TOOL-profits",
+              "document_version": "request_snapshot",
+              "title": "实际成本毛利统计",
+              "native_format": "json",
+              "source_type": "tool_result",
+              "section_path": [],
+              "excerpt": "{\"date_from\": \"2026-09-01\", \"date_to\": \"2026-09-15\", \"warehouse_id\": 1, \"part_id\": 1, \"category\": null, \"totals\": {\"revenue\": \"1912.21\", \"paid_cost\": \"1505.00\", \"gross_profit\": \"407.21\", \"warranty_cost\": \"245.00\", \"contribution\": \"162.21\", \"uncovered_revenue\": \"0.00\", \"uncovered_cost\": \"0.00\", \"gross_margin_rate\": \"0.212953\", \"quantity\": 50, \"paid_quantity\": 43, \"warranty_quantity\": 7, \"missing_lines\": 0, \"missing_quantity\": 0}, \"ranking\": [{\"part_id\": 1, \"sku\": \"DEMO-001\", \"name\": \"机油滤清器\", \"unit\": \"件\", \"revenue\": \"1912.21\", \"paid_cost\": \"1505.00\", \"gross_profit\": \"407.21\", \"warranty_cost\": \"245.00\", \"contribution\": \"162.21\", \"uncovered_revenue\": \"0.00\", \"uncovered_cost\": \"0.00\", \"gross_margin_rate\": \"0.212953\", \"quantity\": 50, \"paid_quantity\": 43, \"warranty_quantity\": 7, \"missing_lines\": 0, \"missing_quantity\": 0}], \"ranking_total\": 1, \"trend\": [{\"business_date\": \"2026-09-01\", \"revenue\": \"177.88\", \"paid_cost\": \"140.00\", \"gross_profit\": \"37.88\", \"warranty_cost\": \"0.00\", \"contribution\": \"37.88\", \"uncovered_revenue\": \"0.00\", \"uncovered_cost\": \"0.00\", \"gross_margin_rate\": \"0.212953\", \"quantity\": 4, \"paid_quantity\": 4, \"warranty_quantity\": 0, \"missing_lines\": 0, \"missing_quantity\": 0}, {\"business_date\": \"2026-09-02\", \"revenue\": \"133.41\", \"paid_cost\": \"105.00\", \"gross_profit\": \"28.41\", \"warranty_cost\": \"0.00\", \"contribution\": \"28.41\", \"uncovered_revenue\": \"0.00\", \"uncovered_cost\": \"0.00\", \"gross_margin_rate\": \"0.212953\", \"quantity\": 3, \"paid_quantity\": 3, \"warranty_quantity\": 0, \"missing_lines\": 0, \"missing_quantity\": 0}, {\"business_date\": \"2026-09-03\", \"revenue\": \"133.41\", \"paid_cost\": \"105.00\", \"gross_profit\": \"28.41\", \"warranty_cost\": \"0.00\", \"contribution\": \"28.41\", \"uncovered_revenue\": \"0.00\", \"uncovered_cost\": \"0.00\", \"gross_margin_rate\": \"0.212953\", \"quantity\": 3, \"paid_quantity\": 3, \"warranty_quantity\": 0, \"missing_lines\": 0, \"missing_quantity\": 0}, {\"business_date\": \"2026-09-04\", \"revenue\": \"0.00\", \"paid_cost\": \"0.00\", \"gross_profit\": \"0.00\", \"warranty_cost\": \"140.00\", \"contribution\": \"-140.00\", \"uncovered_revenue\": \"0.00\", \"uncovered_cost\": \"0.00\", \"gross_margin_rate\": null, \"quantity\": 4, \"paid_quantity\": 0, \"warranty_quantity\": 4, \"missing_lines\": 0, \"missing_quantity\": 0}, {\"business_date\": \"2026-09-05\", \"revenue\": \"0.00\", \"paid_cost\": \"0.00\", \"gross_profit\": \"0.00\", \"warranty_cost\": \"105.00\", \"contribution\": \"-105.00\", \"uncovered_revenue\": \"0.00\", \"uncovered_cost\": \"0.00\", \"gross_margin_rate\": null, \"quantity\": 3, \"paid_quantity\": 0, \"warranty_quantity\": 3, \"missing_lines\": 0, \"missing_quantity\": 0}, {\"business_date\": \"2026-09-06\", \"revenue\": \"133.41\", \"paid_cost\": \"105.00\", \"gross_profit\": \"28.41\", \"warranty_cost\": \"0.00\", \"contribution\": \"28.41\", \"uncovered_revenue\": \"0.00\", \"uncovered_cost\": \"0.00\", \"gross_margin_rate\": \"0.212953\", \"quantity\": 3, \"paid_quantity\": 3, \"warranty_quantity\": 0, \"missing_lines\": 0, \"missing_quantity\": 0}, {\"business_date\": \"2026-09-07\", \"revenue\": \"177.88\", \"paid_cost\": \"140.00\", \"gross_profit\": \"37.88\", \"warranty_cost\": \"0.00\", \"contribution\": \"37.88\", \"uncovered_revenue\": \"0.00\", \"uncovered_cost\": \"0.00\", \"gross_margin_rate\": \"0.212953\", \"quantity\": 4, \"paid_quantity\": 4, \"warranty_quantity\": 0, \"missing_lines\": 0, \"missing_quantity\": 0}, {\"business_date\": \"2026-09-08\", \"revenue\": \"133.41\", \"paid_cost\": \"105.00\", \"gross_profit\": \"28.41\", \"warranty_cost\": \"0.00\", \"contribution\": \"28.41\", \"uncovered_revenue\": \"0.00\", \"uncovered_cost\": \"0.00\", \"gross_margin_rate\": \"0.212953\", \"quantity\": 3, \"paid_quantity\": 3, \"warranty_quantity\": 0, \"missing_lines\": 0, \"missing_quantity\": 0}, {\"business_date\": \"2026-09-09\", \"revenue\": \"133.41\", \"paid_cost\": \"105.00\", \"gross_profit\": \"28.41\", \"warranty_cost\": \"0.00\", \"contribution\": \"28.41\", \"uncovered_revenue\": \"0.00\", \"uncovered_cost\": \"0.00\", \"gross_margin_rate\": \"0.212953\", \"quantity\": 3, \"paid_quantity\": 3, \"warranty_quantity\": 0, \"missing_lines\": 0, \"missing_quantity\": 0}, {\"business_date\": \"2026-09-10\", \"revenue\": \"177.88\", \"paid_cost\": \"140.00\", \"gross_profit\": \"37.88\", \"warranty_cost\": \"0.00\", \"contribution\": \"37.88\", \"uncovered_revenue\": \"0.00\", \"uncovered_cost\": \"0.00\", \"gross_margin_rate\": \"0.212953\", \"quantity\": 4, \"paid_quantity\": 4, \"warranty_quantity\": 0, \"missing_lines\": 0, \"missing_quantity\": 0}, {\"business_date\": \"2026-09-11\", \"revenue\": \"133.41\", \"paid_cost\": \"105.00\", \"gross_profit\": \"28.41\", \"warranty_cost\": \"0.00\", \"contribution\": \"28.41\", \"uncovered_revenue\": \"0.00\", \"uncovered_cost\": \"0.00\", \"gross_margin_rate\": \"0.212953\", \"quantity\": 3, \"paid_quantity\": 3, \"warranty_quantity\": 0, \"missing_lines\": 0, \"missing_quantity\": 0}, {\"business_date\": \"2026-09-12\", \"revenue\": \"133.41\", \"paid_cost\": \"105.00\", \"gross_profit\": \"28.41\", \"warranty_cost\": \"0.00\", \"contribution\": \"28.41\", \"uncovered_revenue\": \"0.00\", \"uncovered_cost\": \"0.00\", \"gross_margin_rate\": \"0.212953\", \"quantity\": 3, \"paid_quantity\": 3, \"warranty_quantity\": 0, \"missing_lines\": 0, \"missing_quantity\": 0}, {\"business_date\": \"2026-09-13\", \"revenue\": \"177.88\", \"paid_cost\": \"140.00\", \"gross_profit\": \"37.88\", \"warranty_cost\": \"0.00\", \"contribution\": \"37.88\", \"uncovered_revenue\": \"0.00\", \"uncovered_cost\": \"0.00\", \"gross_margin_rate\": \"0.212953\", \"quantity\": 4, \"paid_quantity\": 4, \"warranty_quantity\": 0, \"missing_lines\": 0, \"missing_quantity\": 0}, {\"business_date\": \"2026-09-14\", \"revenue\": \"133.41\", \"paid_cost\": \"105.00\", \"gross_profit\": \"28.41\", \"warranty_cost\": \"0.00\", \"contribution\": \"28.41\", \"uncovered_revenue\": \"0.00\", \"uncovered_cost\": \"0.00\", \"gross_margin_rate\": \"0.212953\", \"quantity\": 3, \"paid_quantity\": 3, \"warranty_quantity\": 0, \"missing_lines\": 0, \"missing_quantity\": 0}, {\"business_date\": \"2026-09-15\", \"revenue\": \"133.41\", \"paid_cost\": \"105.00\", \"gross_profit\": \"28.41\", \"warranty_cost\": \"0.00\", \"contribution\": \"28.41\", \"uncovered_revenue\": \"0.00\", \"uncovered_cost\": \"0.00\", \"gross_margin_rate\": \"0.212953\", \"quantity\": 3, \"paid_quantity\": 3, \"warranty_quantity\": 0, \"missing_lines\": 0, \"missing_quantity\": 0}], \"details\": [{\"document_id\": 102, \"business_date\": \"2026-09-15\", \"warehouse\": \"模拟主仓\", \"warehouse_id\": 1, \"part_id\": 1, \"name\": \"机油滤清器\", \"sku\": \"DEMO-001\", \"issue_type\": \"paid_repair\", \"quantity\": 3, \"sale_unit_price\": \"44.47\", \"revenue\": \"133.41\", \"cost_amount\": \"105.00\", \"gross_profit\": \"28.41\", \"pricing_source\": \"模拟定价及历史成本补录20261026-v1\", \"complete\": true}, {\"document_id\": 101, \"business_date\": \"2026-09-14\", \"warehouse\": \"模拟主仓\", \"warehouse_id\": 1, \"part_id\": 1, \"name\": \"机油滤清器\", \"sku\": \"DEMO-001\", \"issue_type\": \"paid_repair\", \"quantity\": 3, \"sale_unit_price\": \"44.47\", \"revenue\": \"133.41\", \"cost_amount\": \"105.00\", \"gross_profit\": \"28.41\", \"pricing_source\": \"模拟定价及历史成本补录20261026-v1\", \"complete\": true}, {\"document_id\": 100, \"business_date\": \"2026-09-13\", \"warehouse\": \"模拟主仓\", \"warehouse_id\": 1, \"part_id\": 1, \"name\": \"机油滤清器\", \"sku\": \"DEMO-001\", \"issue_type\": \"paid_repair\", \"quantity\": 4, \"sale_unit_price\": \"44.47\", \"revenue\": \"177.88\", \"cost_amount\": \"140.00\", \"gross_profit\": \"37.88\", \"pricing_source\": \"模拟定价及历史成本补录20261026-v1\", \"complete\": true}, {\"document_id\": 80, \"business_date\": \"2026-09-12\", \"warehouse\": \"模拟主仓\", \"warehouse_id\": 1, \"part_id\": 1, \"name\": \"机油滤清器\", \"sku\": \"DEMO-001\", \"issue_type\": \"paid_repair\", \"quantity\": 3, \"sale_unit_price\": \"44.47\", \"revenue\": \"133.41\", \"cost_amount\": \"105.00\", \"gross_profit\": \"28.41\", \"pricing_source\": \"模拟定价及历史成本补录20261026-v1\", \"complete\": true}, {\"document_id\": 79, \"business_date\": \"2026-09-11\", \"warehouse\": \"模拟主仓\", \"warehouse_id\": 1, \"part_id\": 1, \"name\": \"机油滤清器\", \"sku\": \"DEMO-001\", \"issue_type\": \"paid_repair\", \"quantity\": 3, \"sale_unit_price\": \"44.47\", \"revenue\": \"133.41\", \"cost_amount\": \"105.00\", \"gross_profit\": \"28.41\", \"pricing_source\": \"模拟定价及历史成本补录20261026-v1\", \"complete\": true}, {\"document_id\": 78, \"business_date\": \"2026-09-10\", \"warehouse\": \"模拟主仓\", \"warehouse_id\": 1, \"part_id\": 1, \"name\": \"机油滤清器\", \"sku\": \"DEMO-001\", \"issue_type\": \"paid_repair\", \"quantity\": 4, \"sale_unit_price\": \"44.47\", \"revenue\": \"177.88\", \"cost_amount\": \"140.00\", \"gross_profit\": \"37.88\", \"pricing_source\": \"模拟定价及历史成本补录20261026-v1\", \"complete\": true}, {\"document_id\": 77, \"business_date\": \"2026-09-09\", \"warehouse\": \"模拟主仓\", \"warehouse_id\": 1, \"part_id\": 1, \"name\": \"机油滤清器\", \"sku\": \"DEMO-001\", \"issue_type\": \"paid_repair\", \"quantity\": 3, \"sale_unit_price\": \"44.47\", \"revenue\": \"133.41\", \"cost_amount\": \"105.00\", \"gross_profit\": \"28.41\", \"pricing_source\": \"模拟定价及历史成本补录20261026-v1\", \"complete\": true}], \"details_total\": 15, \"page\": 1, \"details_page\": 1, \"page_size\": 7, \"notice\": \"仅按已过账领用流水业务日期统计备件金额，成本按实际执行顺序分摊；不计人工、房租、税额拆分或厂家赔付，非净利润。缺失行保留已知金额，毛利仅汇总结算与成本完整的收费明细；缺失时毛利率暂无，贡献为已覆盖收费毛利减已知质保成本。明细保留模拟补录来源。\"}",
+              "accessed_at": "2026-10-26T06:56:50.145223+00:00"
+            }
+          ],
+          "follow_up_questions": [],
+          "fault_types": [],
+          "checks": [],
+          "part_decisions": [],
+          "limitations": [
+            "业务查询来自本轮工具快照，执行前仍须重新校验。"
+          ],
+          "message": "",
+          "usage": {
+            "agent_model_calls": [
+              {
+                "prompt_tokens": 3124,
+                "completion_tokens": 60,
+                "total_tokens": 3184
+              },
+              {
+                "prompt_tokens": 3611,
+                "completion_tokens": 99,
+                "total_tokens": 3710
+              },
+              {
+                "prompt_tokens": 7210,
+                "completion_tokens": 830,
+                "total_tokens": 8040
+              }
+            ],
+            "knowledge": [],
+            "coordinator": {
+              "prompt_tokens": 279,
+              "completion_tokens": 67,
+              "total_tokens": 346
+            }
+          },
+          "agent_mode": "multi",
+          "roles": [
+            "coordinator",
+            "business"
+          ],
+          "tool_trace": [
+            {
+              "role": "business",
+              "tool": "catalog",
+              "step": 0,
+              "call_id": "call_00_5HJpgnWIlfGtLjNzp7Jp4646",
+              "arguments": {
+                "query": "机油滤清器"
+              },
+              "status": "ok",
+              "result": {
+                "evidence_id": "49b679dfd7dbbd2aafb3ca0601588086b02e661f6e5af25ac822fd1cdd82a8ab",
+                "data": {
+                  "parts": [
+                    {
+                      "id": 1,
+                      "sku": "DEMO-001",
+                      "name": "机油滤清器",
+                      "aliases": "",
+                      "category": "滤清器",
+                      "unit": "件",
+                      "specification": "",
+                      "reference_price": "35.00",
+                      "safety_stock": 10,
+                      "sale_price": "45.85",
+                      "sale_price_version": 1,
+                      "default_supplier_id": 1,
+                      "suppliers": [
+                        {
+                          "id": 1,
+                          "name": "模拟供应商·保养件",
+                          "supply_price": "35.00",
+                          "version": 1,
+                          "active": true,
+                          "source": "模拟定价及历史成本补录20261026-v1",
+                          "updated_at": "2026-10-26 06:14:06",
+                          "lead_time_days": 3
+                        },
+                        {
+                          "id": 3,
+                          "name": "模拟供应商·综合件",
+                          "supply_price": "33.60",
+                          "version": 1,
+                          "active": true,
+                          "source": "模拟定价及历史成本补录20261026-v1",
+                          "updated_at": "2026-10-26 06:14:06",
+                          "lead_time_days": 7
+                        }
+                      ]
+                    }
+                  ],
+                  "warehouses": [
+                    {
+                      "id": 1,
+                      "code": "DEMO-W01",
+                      "name": "模拟主仓"
+                    },
+                    {
+                      "id": 2,
+                      "code": "DEMO-W02",
+                      "name": "模拟快修仓"
+                    }
+                  ],
+                  "notice": "供货价用于采购，门店定价用于收费维修；只有实际入库形成成本。reference_price仅为旧参考字段；数量均为件，项目模拟报价不是外部真实报价。",
+                  "limit": 100
+                }
+              },
+              "elapsed_seconds": 0.047
+            },
+            {
+              "role": "business",
+              "tool": "profits",
+              "step": 1,
+              "call_id": "call_00_EmmBFw248u1Usz4H9tNn6641",
+              "arguments": {
+                "part_id": 1,
+                "warehouse_id": 1,
+                "date_from": "2026-09-01",
+                "date_to": "2026-09-15"
+              },
+              "status": "ok",
+              "result": {
+                "evidence_id": "2bdaf556c9346cfa91583063cf200c52817a174ede355e115c36107f642f1ccd",
+                "data": {
+                  "date_from": "2026-09-01",
+                  "date_to": "2026-09-15",
+                  "warehouse_id": 1,
+                  "part_id": 1,
+                  "category": null,
+                  "totals": {
+                    "revenue": "1912.21",
+                    "paid_cost": "1505.00",
+                    "gross_profit": "407.21",
+                    "warranty_cost": "245.00",
+                    "contribution": "162.21",
+                    "uncovered_revenue": "0.00",
+                    "uncovered_cost": "0.00",
+                    "gross_margin_rate": "0.212953",
+                    "quantity": 50,
+                    "paid_quantity": 43,
+                    "warranty_quantity": 7,
+                    "missing_lines": 0,
+                    "missing_quantity": 0
+                  },
+                  "ranking": [
+                    {
+                      "part_id": 1,
+                      "sku": "DEMO-001",
+                      "name": "机油滤清器",
+                      "unit": "件",
+                      "revenue": "1912.21",
+                      "paid_cost": "1505.00",
+                      "gross_profit": "407.21",
+                      "warranty_cost": "245.00",
+                      "contribution": "162.21",
+                      "uncovered_revenue": "0.00",
+                      "uncovered_cost": "0.00",
+                      "gross_margin_rate": "0.212953",
+                      "quantity": 50,
+                      "paid_quantity": 43,
+                      "warranty_quantity": 7,
+                      "missing_lines": 0,
+                      "missing_quantity": 0
+                    }
+                  ],
+                  "ranking_total": 1,
+                  "trend": [
+                    {
+                      "business_date": "2026-09-01",
+                      "revenue": "177.88",
+                      "paid_cost": "140.00",
+                      "gross_profit": "37.88",
+                      "warranty_cost": "0.00",
+                      "contribution": "37.88",
+                      "uncovered_revenue": "0.00",
+                      "uncovered_cost": "0.00",
+                      "gross_margin_rate": "0.212953",
+                      "quantity": 4,
+                      "paid_quantity": 4,
+                      "warranty_quantity": 0,
+                      "missing_lines": 0,
+                      "missing_quantity": 0
+                    },
+                    {
+                      "business_date": "2026-09-02",
+                      "revenue": "133.41",
+                      "paid_cost": "105.00",
+                      "gross_profit": "28.41",
+                      "warranty_cost": "0.00",
+                      "contribution": "28.41",
+                      "uncovered_revenue": "0.00",
+                      "uncovered_cost": "0.00",
+                      "gross_margin_rate": "0.212953",
+                      "quantity": 3,
+                      "paid_quantity": 3,
+                      "warranty_quantity": 0,
+                      "missing_lines": 0,
+                      "missing_quantity": 0
+                    },
+                    {
+                      "business_date": "2026-09-03",
+                      "revenue": "133.41",
+                      "paid_cost": "105.00",
+                      "gross_profit": "28.41",
+                      "warranty_cost": "0.00",
+                      "contribution": "28.41",
+                      "uncovered_revenue": "0.00",
+                      "uncovered_cost": "0.00",
+                      "gross_margin_rate": "0.212953",
+                      "quantity": 3,
+                      "paid_quantity": 3,
+                      "warranty_quantity": 0,
+                      "missing_lines": 0,
+                      "missing_quantity": 0
+                    },
+                    {
+                      "business_date": "2026-09-04",
+                      "revenue": "0.00",
+                      "paid_cost": "0.00",
+                      "gross_profit": "0.00",
+                      "warranty_cost": "140.00",
+                      "contribution": "-140.00",
+                      "uncovered_revenue": "0.00",
+                      "uncovered_cost": "0.00",
+                      "gross_margin_rate": null,
+                      "quantity": 4,
+                      "paid_quantity": 0,
+                      "warranty_quantity": 4,
+                      "missing_lines": 0,
+                      "missing_quantity": 0
+                    },
+                    {
+                      "business_date": "2026-09-05",
+                      "revenue": "0.00",
+                      "paid_cost": "0.00",
+                      "gross_profit": "0.00",
+                      "warranty_cost": "105.00",
+                      "contribution": "-105.00",
+                      "uncovered_revenue": "0.00",
+                      "uncovered_cost": "0.00",
+                      "gross_margin_rate": null,
+                      "quantity": 3,
+                      "paid_quantity": 0,
+                      "warranty_quantity": 3,
+                      "missing_lines": 0,
+                      "missing_quantity": 0
+                    },
+                    {
+                      "business_date": "2026-09-06",
+                      "revenue": "133.41",
+                      "paid_cost": "105.00",
+                      "gross_profit": "28.41",
+                      "warranty_cost": "0.00",
+                      "contribution": "28.41",
+                      "uncovered_revenue": "0.00",
+                      "uncovered_cost": "0.00",
+                      "gross_margin_rate": "0.212953",
+                      "quantity": 3,
+                      "paid_quantity": 3,
+                      "warranty_quantity": 0,
+                      "missing_lines": 0,
+                      "missing_quantity": 0
+                    },
+                    {
+                      "business_date": "2026-09-07",
+                      "revenue": "177.88",
+                      "paid_cost": "140.00",
+                      "gross_profit": "37.88",
+                      "warranty_cost": "0.00",
+                      "contribution": "37.88",
+                      "uncovered_revenue": "0.00",
+                      "uncovered_cost": "0.00",
+                      "gross_margin_rate": "0.212953",
+                      "quantity": 4,
+                      "paid_quantity": 4,
+                      "warranty_quantity": 0,
+                      "missing_lines": 0,
+                      "missing_quantity": 0
+                    },
+                    {
+                      "business_date": "2026-09-08",
+                      "revenue": "133.41",
+                      "paid_cost": "105.00",
+                      "gross_profit": "28.41",
+                      "warranty_cost": "0.00",
+                      "contribution": "28.41",
+                      "uncovered_revenue": "0.00",
+                      "uncovered_cost": "0.00",
+                      "gross_margin_rate": "0.212953",
+                      "quantity": 3,
+                      "paid_quantity": 3,
+                      "warranty_quantity": 0,
+                      "missing_lines": 0,
+                      "missing_quantity": 0
+                    },
+                    {
+                      "business_date": "2026-09-09",
+                      "revenue": "133.41",
+                      "paid_cost": "105.00",
+                      "gross_profit": "28.41",
+                      "warranty_cost": "0.00",
+                      "contribution": "28.41",
+                      "uncovered_revenue": "0.00",
+                      "uncovered_cost": "0.00",
+                      "gross_margin_rate": "0.212953",
+                      "quantity": 3,
+                      "paid_quantity": 3,
+                      "warranty_quantity": 0,
+                      "missing_lines": 0,
+                      "missing_quantity": 0
+                    },
+                    {
+                      "business_date": "2026-09-10",
+                      "revenue": "177.88",
+                      "paid_cost": "140.00",
+                      "gross_profit": "37.88",
+                      "warranty_cost": "0.00",
+                      "contribution": "37.88",
+                      "uncovered_revenue": "0.00",
+                      "uncovered_cost": "0.00",
+                      "gross_margin_rate": "0.212953",
+                      "quantity": 4,
+                      "paid_quantity": 4,
+                      "warranty_quantity": 0,
+                      "missing_lines": 0,
+                      "missing_quantity": 0
+                    },
+                    {
+                      "business_date": "2026-09-11",
+                      "revenue": "133.41",
+                      "paid_cost": "105.00",
+                      "gross_profit": "28.41",
+                      "warranty_cost": "0.00",
+                      "contribution": "28.41",
+                      "uncovered_revenue": "0.00",
+                      "uncovered_cost": "0.00",
+                      "gross_margin_rate": "0.212953",
+                      "quantity": 3,
+                      "paid_quantity": 3,
+                      "warranty_quantity": 0,
+                      "missing_lines": 0,
+                      "missing_quantity": 0
+                    },
+                    {
+                      "business_date": "2026-09-12",
+                      "revenue": "133.41",
+                      "paid_cost": "105.00",
+                      "gross_profit": "28.41",
+                      "warranty_cost": "0.00",
+                      "contribution": "28.41",
+                      "uncovered_revenue": "0.00",
+                      "uncovered_cost": "0.00",
+                      "gross_margin_rate": "0.212953",
+                      "quantity": 3,
+                      "paid_quantity": 3,
+                      "warranty_quantity": 0,
+                      "missing_lines": 0,
+                      "missing_quantity": 0
+                    },
+                    {
+                      "business_date": "2026-09-13",
+                      "revenue": "177.88",
+                      "paid_cost": "140.00",
+                      "gross_profit": "37.88",
+                      "warranty_cost": "0.00",
+                      "contribution": "37.88",
+                      "uncovered_revenue": "0.00",
+                      "uncovered_cost": "0.00",
+                      "gross_margin_rate": "0.212953",
+                      "quantity": 4,
+                      "paid_quantity": 4,
+                      "warranty_quantity": 0,
+                      "missing_lines": 0,
+                      "missing_quantity": 0
+                    },
+                    {
+                      "business_date": "2026-09-14",
+                      "revenue": "133.41",
+                      "paid_cost": "105.00",
+                      "gross_profit": "28.41",
+                      "warranty_cost": "0.00",
+                      "contribution": "28.41",
+                      "uncovered_revenue": "0.00",
+                      "uncovered_cost": "0.00",
+                      "gross_margin_rate": "0.212953",
+                      "quantity": 3,
+                      "paid_quantity": 3,
+                      "warranty_quantity": 0,
+                      "missing_lines": 0,
+                      "missing_quantity": 0
+                    },
+                    {
+                      "business_date": "2026-09-15",
+                      "revenue": "133.41",
+                      "paid_cost": "105.00",
+                      "gross_profit": "28.41",
+                      "warranty_cost": "0.00",
+                      "contribution": "28.41",
+                      "uncovered_revenue": "0.00",
+                      "uncovered_cost": "0.00",
+                      "gross_margin_rate": "0.212953",
+                      "quantity": 3,
+                      "paid_quantity": 3,
+                      "warranty_quantity": 0,
+                      "missing_lines": 0,
+                      "missing_quantity": 0
+                    }
+                  ],
+                  "details": [
+                    {
+                      "document_id": 102,
+                      "business_date": "2026-09-15",
+                      "warehouse": "模拟主仓",
+                      "warehouse_id": 1,
+                      "part_id": 1,
+                      "name": "机油滤清器",
+                      "sku": "DEMO-001",
+                      "issue_type": "paid_repair",
+                      "quantity": 3,
+                      "sale_unit_price": "44.47",
+                      "revenue": "133.41",
+                      "cost_amount": "105.00",
+                      "gross_profit": "28.41",
+                      "pricing_source": "模拟定价及历史成本补录20261026-v1",
+                      "complete": true
+                    },
+                    {
+                      "document_id": 101,
+                      "business_date": "2026-09-14",
+                      "warehouse": "模拟主仓",
+                      "warehouse_id": 1,
+                      "part_id": 1,
+                      "name": "机油滤清器",
+                      "sku": "DEMO-001",
+                      "issue_type": "paid_repair",
+                      "quantity": 3,
+                      "sale_unit_price": "44.47",
+                      "revenue": "133.41",
+                      "cost_amount": "105.00",
+                      "gross_profit": "28.41",
+                      "pricing_source": "模拟定价及历史成本补录20261026-v1",
+                      "complete": true
+                    },
+                    {
+                      "document_id": 100,
+                      "business_date": "2026-09-13",
+                      "warehouse": "模拟主仓",
+                      "warehouse_id": 1,
+                      "part_id": 1,
+                      "name": "机油滤清器",
+                      "sku": "DEMO-001",
+                      "issue_type": "paid_repair",
+                      "quantity": 4,
+                      "sale_unit_price": "44.47",
+                      "revenue": "177.88",
+                      "cost_amount": "140.00",
+                      "gross_profit": "37.88",
+                      "pricing_source": "模拟定价及历史成本补录20261026-v1",
+                      "complete": true
+                    },
+                    {
+                      "document_id": 80,
+                      "business_date": "2026-09-12",
+                      "warehouse": "模拟主仓",
+                      "warehouse_id": 1,
+                      "part_id": 1,
+                      "name": "机油滤清器",
+                      "sku": "DEMO-001",
+                      "issue_type": "paid_repair",
+                      "quantity": 3,
+                      "sale_unit_price": "44.47",
+                      "revenue": "133.41",
+                      "cost_amount": "105.00",
+                      "gross_profit": "28.41",
+                      "pricing_source": "模拟定价及历史成本补录20261026-v1",
+                      "complete": true
+                    },
+                    {
+                      "document_id": 79,
+                      "business_date": "2026-09-11",
+                      "warehouse": "模拟主仓",
+                      "warehouse_id": 1,
+                      "part_id": 1,
+                      "name": "机油滤清器",
+                      "sku": "DEMO-001",
+                      "issue_type": "paid_repair",
+                      "quantity": 3,
+                      "sale_unit_price": "44.47",
+                      "revenue": "133.41",
+                      "cost_amount": "105.00",
+                      "gross_profit": "28.41",
+                      "pricing_source": "模拟定价及历史成本补录20261026-v1",
+                      "complete": true
+                    },
+                    {
+                      "document_id": 78,
+                      "business_date": "2026-09-10",
+                      "warehouse": "模拟主仓",
+                      "warehouse_id": 1,
+                      "part_id": 1,
+                      "name": "机油滤清器",
+                      "sku": "DEMO-001",
+                      "issue_type": "paid_repair",
+                      "quantity": 4,
+                      "sale_unit_price": "44.47",
+                      "revenue": "177.88",
+                      "cost_amount": "140.00",
+                      "gross_profit": "37.88",
+                      "pricing_source": "模拟定价及历史成本补录20261026-v1",
+                      "complete": true
+                    },
+                    {
+                      "document_id": 77,
+                      "business_date": "2026-09-09",
+                      "warehouse": "模拟主仓",
+                      "warehouse_id": 1,
+                      "part_id": 1,
+                      "name": "机油滤清器",
+                      "sku": "DEMO-001",
+                      "issue_type": "paid_repair",
+                      "quantity": 3,
+                      "sale_unit_price": "44.47",
+                      "revenue": "133.41",
+                      "cost_amount": "105.00",
+                      "gross_profit": "28.41",
+                      "pricing_source": "模拟定价及历史成本补录20261026-v1",
+                      "complete": true
+                    }
+                  ],
+                  "details_total": 15,
+                  "page": 1,
+                  "details_page": 1,
+                  "page_size": 7,
+                  "notice": "仅按已过账领用流水业务日期统计备件金额，成本按实际执行顺序分摊；不计人工、房租、税额拆分或厂家赔付，非净利润。缺失行保留已知金额，毛利仅汇总结算与成本完整的收费明细；缺失时毛利率暂无，贡献为已覆盖收费毛利减已知质保成本。明细保留模拟补录来源。"
+                }
+              },
+              "elapsed_seconds": 0.015
+            },
+            {
+              "role": "business",
+              "tool": "finish",
+              "step": 2,
+              "call_id": "call_00_3ntEmIBXgGx4i1IfcnDS2306",
+              "arguments": {
+                "claims": [
+                  {
+                    "text": "查询对象：模拟主仓（仓库ID 1）机油滤清器（SKU DEMO-001，备件ID 1，单位件），统计区间 2026-09-01 至 2026-09-15。",
+                    "evidence_ids": [
+                      "49b679dfd7dbbd2aafb3ca0601588086b02e661f6e5af25ac822fd1cdd82a8ab"
+                    ]
+                  },
+                  {
+                    "text": "区间合计：收费结算金额（收费维修收入）1912.21 元；实际出库成本（收费维修已过账成本）1505.00 元；收费毛利 407.21 元，毛利率约 21.30%；质保成本 245.00 元；扣质保后贡献 162.21 元。数量合计 50 件，其中收费 43 件、质保 7 件。",
+                    "evidence_ids": [
+                      "2bdaf556c9346cfa91583063cf200c52817a174ede355e115c36107f642f1ccd"
+                    ]
+                  },
+                  {
+                    "text": "数据完整性：缺失行 0、缺失数量 0，未覆盖收入与未覆盖成本均为 0，即区间内收费明细的结算价与成本均完整，毛利为完整汇总。",
+                    "evidence_ids": [
+                      "2bdaf556c9346cfa91583063cf200c52817a174ede355e115c36107f642f1ccd"
+                    ]
+                  },
+                  {
+                    "text": "统计口径：仅按已过账领用流水的业务日期统计备件金额，成本按实际执行顺序分摊（实际入库加权成本）；收费结算价取已过账结算快照（明细单价 44.47 元/件），非当前门店定价 45.85 元；质保领用只计成本、不计收入。不含人工、房租、税额拆分或厂家赔付，因此“收费毛利”与“扣质保后贡献”均不是净利润。",
+                    "evidence_ids": [
+                      "2bdaf556c9346cfa91583063cf200c52817a174ede355e115c36107f642f1ccd",
+                      "49b679dfd7dbbd2aafb3ca0601588086b02e661f6e5af25ac822fd1cdd82a8ab"
+                    ]
+                  },
+                  {
+                    "text": "数据来源说明：定价与历史成本来自模拟补录来源“模拟定价及历史成本补录20261026-v1”，属项目模拟数据，不是外部真实报价或真实成本。",
+                    "evidence_ids": [
+                      "2bdaf556c9346cfa91583063cf200c52817a174ede355e115c36107f642f1ccd",
+                      "49b679dfd7dbbd2aafb3ca0601588086b02e661f6e5af25ac822fd1cdd82a8ab"
+                    ]
+                  },
+                  {
+                    "text": "区间内质保成本集中在 2026-09-04（140.00 元，4 件）和 2026-09-05（105.00 元，3 件），其余日期均为收费维修。",
+                    "evidence_ids": [
+                      "2bdaf556c9346cfa91583063cf200c52817a174ede355e115c36107f642f1ccd"
+                    ]
+                  }
+                ],
+                "message": "以上为只读查询结果，未创建、修改或提交任何单据。如需按日明细或与其他仓库对比，可继续告知。"
+              },
+              "status": "ok",
+              "result": {
+                "finished": true
+              },
+              "elapsed_seconds": 0.0
+            }
+          ],
+          "proposals": [],
+          "agent_elapsed_seconds": 8.054,
+          "request_id": "43cef3fb0d7c4b78a27cdd5932e31051",
+          "elapsed_seconds": 8.058
+        },
+        "reused": false
+      },
+      "checks": {
+        "no_proposal": true,
+        "answered": true,
+        "has_evidence": true,
+        "actual_profit_tool": true,
+        "explicit_dates_used": true,
+        "no_tool_parameter_errors": true
+      }
+    },
+    {
+      "case_id": "missing_issue_purpose",
+      "thread_id": "aaaf27011e84426ca86b60a557867e47",
+      "question": "请帮我办理从模拟主仓领用1件机油滤清器，先核对必要条件；我尚未说明维修用途。",
+      "http_status": 200,
+      "response": {
+        "turn_id": "ed8ac5a9c1f64fa7888b55e953a7068d",
+        "answer": {
+          "answer_status": "needs_clarification",
+          "claims": [
+            {
+              "text": "备件核对：机油滤清器（SKU DEMO-001，编号1，单位件）在模拟主仓（编号1）为启用状态，仓库亦为启用状态。",
+              "citation_ids": [
+                "adc54998e04f987ea3ff191e26df494864bfa86505e5c34599a748fa9c675a33",
+                "696a8db0ce160f5edfbe19ec022735360690471ed86bcfb1fd2786f841cbaea4"
+              ]
+            },
+            {
+              "text": "库存核对（截至2026-10-26 14:56 快照）：模拟主仓现有27件、可用27件，采购待收0件、调拨在途0件，预留未实现；领用1件在数量上可行。",
+              "citation_ids": [
+                "696a8db0ce160f5edfbe19ec022735360690471ed86bcfb1fd2786f841cbaea4"
+              ]
+            },
+            {
+              "text": "必要条件核对结果：当前请求不完整，缺少维修用途（须选择收费维修或质保维修），因此暂不能整理领用提案；未提交任何单据或提案。",
+              "citation_ids": [
+                "54f11619b3d7bb6d669a28971563774ae08be0f2454ba3c93eb5436d2bb05d79"
+              ]
+            }
+          ],
+          "citations": [
+            {
+              "citation_id": "adc54998e04f987ea3ff191e26df494864bfa86505e5c34599a748fa9c675a33",
+              "chunk_id": "adc54998e04f987ea3ff191e26df494864bfa86505e5c34599a748fa9c675a33",
+              "document_id": "TOOL-catalog",
+              "document_version": "request_snapshot",
+              "title": "备件与供货目录",
+              "native_format": "json",
+              "source_type": "tool_result",
+              "section_path": [],
+              "excerpt": "{\"parts\": [{\"id\": 1, \"sku\": \"DEMO-001\", \"name\": \"机油滤清器\", \"aliases\": \"\", \"category\": \"滤清器\", \"unit\": \"件\", \"specification\": \"\", \"reference_price\": \"35.00\", \"safety_stock\": 10, \"sale_price\": \"45.85\", \"sale_price_version\": 1, \"default_supplier_id\": 1, \"suppliers\": [{\"id\": 1, \"name\": \"模拟供应商·保养件\", \"supply_price\": \"35.00\", \"version\": 1, \"active\": true, \"source\": \"模拟定价及历史成本补录20261026-v1\", \"updated_at\": \"2026-10-26 06:14:06\", \"lead_time_days\": 3}, {\"id\": 3, \"name\": \"模拟供应商·综合件\", \"supply_price\": \"33.60\", \"version\": 1, \"active\": true, \"source\": \"模拟定价及历史成本补录20261026-v1\", \"updated_at\": \"2026-10-26 06:14:06\", \"lead_time_days\": 7}]}], \"warehouses\": [{\"id\": 1, \"code\": \"DEMO-W01\", \"name\": \"模拟主仓\"}, {\"id\": 2, \"code\": \"DEMO-W02\", \"name\": \"模拟快修仓\"}], \"notice\": \"供货价用于采购，门店定价用于收费维修；只有实际入库形成成本。reference_price仅为旧参考字段；数量均为件，项目模拟报价不是外部真实报价。\", \"limit\": 100}",
+              "accessed_at": "2026-10-26T06:56:57.164913+00:00"
+            },
+            {
+              "citation_id": "696a8db0ce160f5edfbe19ec022735360690471ed86bcfb1fd2786f841cbaea4",
+              "chunk_id": "696a8db0ce160f5edfbe19ec022735360690471ed86bcfb1fd2786f841cbaea4",
+              "document_id": "TOOL-stock",
+              "document_version": "request_snapshot",
+              "title": "实时库存查询",
+              "native_format": "json",
+              "source_type": "tool_result",
+              "section_path": [],
+              "excerpt": "{\"items\": [{\"warehouse_id\": 1, \"warehouse\": \"模拟主仓\", \"part_id\": 1, \"sku\": \"DEMO-001\", \"name\": \"机油滤清器\", \"unit\": \"件\", \"image_key\": \"part-oil-filter\", \"safety_stock\": 10, \"part_active\": true, \"warehouse_active\": true, \"stock_value\": \"945.00\", \"quantity\": 27, \"available\": 27, \"purchase_pending\": 0, \"in_transit\": 0, \"initialized\": true}], \"limit\": 100, \"as_of\": \"2026-10-26T14:56:58.479168+08:00\", \"time_zone\": \"Asia/Shanghai\", \"reserved\": 0, \"notice\": \"当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。\"}",
+              "accessed_at": "2026-10-26T06:56:58.479676+00:00"
+            },
+            {
+              "citation_id": "54f11619b3d7bb6d669a28971563774ae08be0f2454ba3c93eb5436d2bb05d79",
+              "chunk_id": "54f11619b3d7bb6d669a28971563774ae08be0f2454ba3c93eb5436d2bb05d79",
+              "document_id": "TOOL-assess_request",
+              "document_version": "request_snapshot",
+              "title": "业务条件核对",
+              "native_format": "json",
+              "source_type": "tool_result",
+              "section_path": [],
+              "excerpt": "{\"eligible\": false, \"business_issue\": {\"code\": \"incomplete_request\", \"summary\": \"业务参数不完整，请补齐必要条件后重新核对\", \"facts\": {\"validation_errors\": [{\"field\": \"request\", \"message\": \"Value error, 请选择收费维修或质保维修\"}]}, \"options\": [{\"label\": \"补齐业务条件\", \"prompt\": \"请列出刚才请求缺少的必要字段，等我补充后重新核对，不默认选择维修用途或改写业务参数。\"}], \"notice\": \"选择处理方式后仍需补齐必要条件并提交审核；当前未执行业务。\"}}",
+              "accessed_at": "2026-10-26T06:56:58.481142+00:00"
+            }
+          ],
+          "follow_up_questions": [
+            "请选择后续处理方式：补齐业务条件。需要我协助准备哪一项？",
+            "本次领用属于收费维修还是质保维修？",
+            "若为质保维修，请提供质保原因（可选填工单号）。"
+          ],
+          "fault_types": [],
+          "checks": [],
+          "part_decisions": [],
+          "limitations": [
+            "业务查询来自本轮工具快照，执行前仍须重新校验。"
+          ],
+          "message": "已核对备件与库存，仅缺维修用途这一必要条件。请补充后我再重新核对并整理领用提案（提案需待人工审核确认，不会直接过账）。",
+          "business_issues": [
+            {
+              "code": "incomplete_request",
+              "summary": "业务参数不完整，请补齐必要条件后重新核对",
+              "facts": {
+                "validation_errors": [
+                  {
+                    "field": "request",
+                    "message": "Value error, 请选择收费维修或质保维修"
+                  }
+                ]
+              },
+              "options": [
+                {
+                  "label": "补齐业务条件",
+                  "prompt": "请列出刚才请求缺少的必要字段，等我补充后重新核对，不默认选择维修用途或改写业务参数。"
+                }
+              ],
+              "notice": "选择处理方式后仍需补齐必要条件并提交审核；当前未执行业务。"
+            }
+          ],
+          "usage": {
+            "agent_model_calls": [
+              {
+                "prompt_tokens": 3076,
+                "completion_tokens": 77,
+                "total_tokens": 3153
+              },
+              {
+                "prompt_tokens": 3733,
+                "completion_tokens": 142,
+                "total_tokens": 3875
+              },
+              {
+                "prompt_tokens": 4321,
+                "completion_tokens": 448,
+                "total_tokens": 4769
+              }
+            ],
+            "knowledge": [],
+            "coordinator": {
+              "prompt_tokens": 256,
+              "completion_tokens": 42,
+              "total_tokens": 298
+            }
+          },
+          "agent_mode": "multi",
+          "roles": [
+            "coordinator",
+            "business"
+          ],
+          "tool_trace": [
+            {
+              "role": "business",
+              "tool": "catalog",
+              "step": 0,
+              "call_id": "call_00_ElY40p47qvQrA3F5047r7858",
+              "arguments": {
+                "query": "机油滤清器"
+              },
+              "status": "ok",
+              "result": {
+                "evidence_id": "adc54998e04f987ea3ff191e26df494864bfa86505e5c34599a748fa9c675a33",
+                "data": {
+                  "parts": [
+                    {
+                      "id": 1,
+                      "sku": "DEMO-001",
+                      "name": "机油滤清器",
+                      "aliases": "",
+                      "category": "滤清器",
+                      "unit": "件",
+                      "specification": "",
+                      "reference_price": "35.00",
+                      "safety_stock": 10,
+                      "sale_price": "45.85",
+                      "sale_price_version": 1,
+                      "default_supplier_id": 1,
+                      "suppliers": [
+                        {
+                          "id": 1,
+                          "name": "模拟供应商·保养件",
+                          "supply_price": "35.00",
+                          "version": 1,
+                          "active": true,
+                          "source": "模拟定价及历史成本补录20261026-v1",
+                          "updated_at": "2026-10-26 06:14:06",
+                          "lead_time_days": 3
+                        },
+                        {
+                          "id": 3,
+                          "name": "模拟供应商·综合件",
+                          "supply_price": "33.60",
+                          "version": 1,
+                          "active": true,
+                          "source": "模拟定价及历史成本补录20261026-v1",
+                          "updated_at": "2026-10-26 06:14:06",
+                          "lead_time_days": 7
+                        }
+                      ]
+                    }
+                  ],
+                  "warehouses": [
+                    {
+                      "id": 1,
+                      "code": "DEMO-W01",
+                      "name": "模拟主仓"
+                    },
+                    {
+                      "id": 2,
+                      "code": "DEMO-W02",
+                      "name": "模拟快修仓"
+                    }
+                  ],
+                  "notice": "供货价用于采购，门店定价用于收费维修；只有实际入库形成成本。reference_price仅为旧参考字段；数量均为件，项目模拟报价不是外部真实报价。",
+                  "limit": 100
+                }
+              },
+              "elapsed_seconds": 0.009
+            },
+            {
+              "role": "business",
+              "tool": "catalog",
+              "step": 0,
+              "call_id": "call_01_vwMdSTcp9ujTIpAJn9762483",
+              "arguments": {
+                "query": "模拟主仓"
+              },
+              "status": "ok",
+              "result": {
+                "evidence_id": "15b64734e2faa292dc4b7e2fa0c562d75b5ab5a1dacde535caab02c739170bbb",
+                "data": {
+                  "parts": [],
+                  "warehouses": [
+                    {
+                      "id": 1,
+                      "code": "DEMO-W01",
+                      "name": "模拟主仓"
+                    },
+                    {
+                      "id": 2,
+                      "code": "DEMO-W02",
+                      "name": "模拟快修仓"
+                    }
+                  ],
+                  "notice": "供货价用于采购，门店定价用于收费维修；只有实际入库形成成本。reference_price仅为旧参考字段；数量均为件，项目模拟报价不是外部真实报价。",
+                  "limit": 100
+                }
+              },
+              "elapsed_seconds": 0.004
+            },
+            {
+              "role": "business",
+              "tool": "stock",
+              "step": 1,
+              "call_id": "call_00_lixU0bWxS7Ugx6Wx5jQX6149",
+              "arguments": {
+                "part_id": 1,
+                "warehouse_id": 1
+              },
+              "status": "ok",
+              "result": {
+                "evidence_id": "696a8db0ce160f5edfbe19ec022735360690471ed86bcfb1fd2786f841cbaea4",
+                "data": {
+                  "items": [
+                    {
+                      "warehouse_id": 1,
+                      "warehouse": "模拟主仓",
+                      "part_id": 1,
+                      "sku": "DEMO-001",
+                      "name": "机油滤清器",
+                      "unit": "件",
+                      "image_key": "part-oil-filter",
+                      "safety_stock": 10,
+                      "part_active": true,
+                      "warehouse_active": true,
+                      "stock_value": "945.00",
+                      "quantity": 27,
+                      "available": 27,
+                      "purchase_pending": 0,
+                      "in_transit": 0,
+                      "initialized": true
+                    }
+                  ],
+                  "limit": 100,
+                  "as_of": "2026-10-26T14:56:58.479168+08:00",
+                  "time_zone": "Asia/Shanghai",
+                  "reserved": 0,
+                  "notice": "当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。"
+                }
+              },
+              "elapsed_seconds": 0.011
+            },
+            {
+              "role": "business",
+              "tool": "assess_request",
+              "step": 1,
+              "call_id": "call_01_KyBbfraUhOaTejcBvc2L5679",
+              "arguments": {
+                "action": "create",
+                "payload": {
+                  "kind": "issue",
+                  "warehouse_id": 1,
+                  "business_date": "2026-10-26",
+                  "lines": [
+                    {
+                      "part_id": 1,
+                      "quantity": 1
+                    }
+                  ]
+                }
+              },
+              "status": "ok",
+              "result": {
+                "evidence_id": "54f11619b3d7bb6d669a28971563774ae08be0f2454ba3c93eb5436d2bb05d79",
+                "data": {
+                  "eligible": false,
+                  "business_issue": {
+                    "code": "incomplete_request",
+                    "summary": "业务参数不完整，请补齐必要条件后重新核对",
+                    "facts": {
+                      "validation_errors": [
+                        {
+                          "field": "request",
+                          "message": "Value error, 请选择收费维修或质保维修"
+                        }
+                      ]
+                    },
+                    "options": [
+                      {
+                        "label": "补齐业务条件",
+                        "prompt": "请列出刚才请求缺少的必要字段，等我补充后重新核对，不默认选择维修用途或改写业务参数。"
+                      }
+                    ],
+                    "notice": "选择处理方式后仍需补齐必要条件并提交审核；当前未执行业务。"
+                  }
+                }
+              },
+              "elapsed_seconds": 0.001
+            },
+            {
+              "role": "business",
+              "tool": "finish",
+              "step": 2,
+              "call_id": "call_00_GJbCQkQ6oviTB2nbadGc6287",
+              "arguments": {
+                "claims": [
+                  {
+                    "text": "备件核对：机油滤清器（SKU DEMO-001，编号1，单位件）在模拟主仓（编号1）为启用状态，仓库亦为启用状态。",
+                    "evidence_ids": [
+                      "adc54998e04f987ea3ff191e26df494864bfa86505e5c34599a748fa9c675a33",
+                      "696a8db0ce160f5edfbe19ec022735360690471ed86bcfb1fd2786f841cbaea4"
+                    ]
+                  },
+                  {
+                    "text": "库存核对（截至2026-10-26 14:56 快照）：模拟主仓现有27件、可用27件，采购待收0件、调拨在途0件，预留未实现；领用1件在数量上可行。",
+                    "evidence_ids": [
+                      "696a8db0ce160f5edfbe19ec022735360690471ed86bcfb1fd2786f841cbaea4"
+                    ]
+                  },
+                  {
+                    "text": "必要条件核对结果：当前请求不完整，缺少维修用途（须选择收费维修或质保维修），因此暂不能整理领用提案；未提交任何单据或提案。",
+                    "evidence_ids": [
+                      "54f11619b3d7bb6d669a28971563774ae08be0f2454ba3c93eb5436d2bb05d79"
+                    ]
+                  }
+                ],
+                "follow_up_questions": [
+                  "本次领用属于收费维修还是质保维修？",
+                  "若为质保维修，请提供质保原因（可选填工单号）。"
+                ],
+                "message": "已核对备件与库存，仅缺维修用途这一必要条件。请补充后我再重新核对并整理领用提案（提案需待人工审核确认，不会直接过账）。"
+              },
+              "status": "ok",
+              "result": {
+                "finished": true
+              },
+              "elapsed_seconds": 0.0
+            }
+          ],
+          "proposals": [],
+          "agent_elapsed_seconds": 6.297,
+          "request_id": "3f6377bff09a4a0e85409442da99fe8e",
+          "elapsed_seconds": 6.302
+        },
+        "reused": false
+      },
+      "checks": {
+        "no_proposal": true,
+        "answered": true,
+        "has_evidence": true,
+        "asks_issue_purpose": true
+      }
+    },
+    {
+      "case_id": "pricing_policy",
+      "thread_id": "d01e959d60814ff5be5a1ee57b764c65",
+      "question": "仅咨询本地制度：收费维修和质保维修怎样确定结算价和出库成本？供货价由谁维护？请引用资料，不查询实物库存，也不办理业务。",
+      "http_status": 200,
+      "response": {
+        "turn_id": "2f86c8590afa447e8c5db5df488a0150",
+        "answer": {
+          "generation_id": "772691116a894594a1c9bd3a9d35832c",
+          "knowledge_base": "inventory_policies",
+          "knowledge_scope": "draft_preview",
+          "retrieval_mode": "hybrid",
+          "timings": {
+            "qualification_seconds": 0.253,
+            "embedding_seconds": 0.255,
+            "retrieval_seconds": 0.391,
+            "chat_seconds": 3.776,
+            "validation_seconds": 0.121
+          },
+          "answer_status": "answered",
+          "claims": [
+            {
+              "text": "收费维修由服务端带出门店定价并冻结结算价，缺定价不可按0收费；质保客户结算为0，但仍计算实际消耗成本，不能假定已取得厂家赔付。",
+              "citation_ids": [
+                "a6b06cb4020093540944d99b6a796a33c90bb77f45fa2c9bbd29a8b780a34535"
+              ]
+            },
+            {
+              "text": "出库过账按当时仓库与备件的移动加权平均库存价值分摊成本，保存结算价、实际成本与来源快照；全数出库取完剩余价值，后续报价、门店定价或入库变化不改写已过账快照。",
+              "citation_ids": [
+                "a6b06cb4020093540944d99b6a796a33c90bb77f45fa2c9bbd29a8b780a34535"
+              ]
+            },
+            {
+              "text": "实际备件成本按每仓每SKU的移动加权平均总价值计算：实收入库金额等于冻结采购单价乘实收件数，加入原价值；出库按原价值乘出库量除原数量分摊到分，四舍五入，全数出库取全部剩余价值。",
+              "citation_ids": [
+                "4f0868c296d30a69fbeaf849ecd76e9a8f330c2f991987221ba87f8179e1a074"
+              ]
+            },
+            {
+              "text": "收费维修毛利等于已过账收费结算金额减对应实际出库成本；质保0收入，成本单列，扣除质保后的备件贡献等于收费毛利减质保成本。",
+              "citation_ids": [
+                "4f0868c296d30a69fbeaf849ecd76e9a8f330c2f991987221ba87f8179e1a074"
+              ]
+            },
+            {
+              "text": "供货价按供应商与备件登记来源、有效状态和版本，默认只展示默认供应商供货价；管理员依据报价维护供货价，管理员或经理可维护4S店定价，库管及Agent只读；采购按所选供应商有效报价由服务端带出并保存快照，普通员工和Agent不得随意改价。",
+              "citation_ids": [
+                "5b4785f5f403bd380dccd856b304482d8f5c4b3b6a1a3a97b8290eaf6196b68e"
+              ]
+            },
+            {
+              "text": "旧参考单价不代替供货报价、实际成本或门店定价，调价不改写历史成交价。",
+              "citation_ids": [
+                "5b4785f5f403bd380dccd856b304482d8f5c4b3b6a1a3a97b8290eaf6196b68e"
+              ]
+            }
+          ],
+          "follow_up_questions": [],
+          "limitations": [
+            "以上内容来自项目编制参考资料（draft，待核准稿），不是已生效的企业制度，也不代表厂家结论；实际经营主体、审批人、生效日期及授权参数须经企业核准。",
+            "本回答仅解释制度口径，未查询任何实物库存或实时数据，也未办理业务。",
+            "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+          ],
+          "fault_types": [],
+          "checks": [],
+          "part_decisions": [],
+          "citations": [
+            {
+              "knowledge_base": "inventory_policies",
+              "document_id": "INV-ISS-005",
+              "document_version": "1.0-draft.2",
+              "title": "维修领用与出库管理办法",
+              "native_format": "md",
+              "source_state": "draft",
+              "source_status": "pending_approval",
+              "citation_id": "a6b06cb4020093540944d99b6a796a33c90bb77f45fa2c9bbd29a8b780a34535",
+              "generation_id": "772691116a894594a1c9bd3a9d35832c",
+              "chunk_id": "b704759c8fb81f1b729cd26e9b27ccb9db2e09a27975b41f4c142b8488c8bd52",
+              "unit_id": null,
+              "unit_ids": [
+                "INV-ISS-005-C008",
+                "INV-ISS-005-C009",
+                "INV-ISS-005-C010",
+                "INV-ISS-005-C011"
+              ],
+              "section_path": [
+                "维修领用与出库管理办法",
+                "3 出库过账"
+              ],
+              "excerpt": "维修领用与出库管理办法\n\n本办法控制维修领料、数量核验、实际交接和出库过账，防止无依据领用、错件、重复扣减和以领用代替其他业务。当前为企业制度待核准稿。\n\n3 出库过账\n\nINV-ISS-005-C008 系统流程为草稿到已过账；草稿可取消。出库业务日期不得早于单据日期或晚于办理日，确认前核对仓库、备件、数量、收费或质保用途及交接依据。收费维修由服务端带出门店定价并冻结结算价，缺定价不可按0收费；质保客户结算为0，仍计算实际消耗成本，不能假定已取得厂家赔付。\n\nINV-ISS-005-C009 库存不足时整次出库不生效，经办人应检查其他仓调拨或采购途径。不得允许负库存、绕过数量校验、把预计到货当成现货，或用另一个SKU先扣账再线下补记。\n\nINV-ISS-005-C010 多行出库在同一事务中处理，任一行库存不足或成本缺失时整体失败，数量、成本、流水和状态一起回滚。确需分批领用时分别建立对应实际交接的单据；不得部分扣减而整单标成功。\n\nINV-ISS-005-C011 出库过账按当时仓库与备件的移动加权平均库存价值分摊成本，保存结算价、实际成本与来源快照；全数出库取完剩余价值，避免分摊尾差。后续报价、门店定价或入库变化不改写已过账快照。成功后核对单据、负向数量及价值流水，网络超时查询原请求或原请求重试，不重复出库。",
+              "line_start": 35,
+              "line_end": 42,
+              "tables": []
+            },
+            {
+              "knowledge_base": "inventory_policies",
+              "document_id": "INV-ANA-009",
+              "document_version": "1.0-draft.4",
+              "title": "库存统计与补货调拨建议口径",
+              "native_format": "md",
+              "source_state": "draft",
+              "source_status": "pending_approval",
+              "citation_id": "4f0868c296d30a69fbeaf849ecd76e9a8f330c2f991987221ba87f8179e1a074",
+              "generation_id": "772691116a894594a1c9bd3a9d35832c",
+              "chunk_id": "0b6a29ed0d4d4f0f5f9e69a65add6186fcca556cae63645a475bad5472b0c9d5",
+              "unit_id": null,
+              "unit_ids": [
+                "INV-ANA-009-C018",
+                "INV-ANA-009-C019",
+                "INV-ANA-009-C020"
+              ],
+              "section_path": [
+                "库存统计与补货调拨建议口径",
+                "5 单位金额与结果边界"
+              ],
+              "excerpt": "库存统计与补货调拨建议口径\n\n本文件统一数量、历史消耗、补货与调拨建议的解释，避免将现有量、预计供给和模型建议混为一谈。规则用于形成可复核建议，不能取代采购批准或实物核验。当前为待核准稿；补货与调拨建议服务尚未因本文件编写而自动上线。\n\n5 单位金额与结果边界\n\nINV-ANA-009-C018 库存统一按件计数，可汇总不同SKU的完整库存包装件数，但仍须保留SKU与仓库明细。这是库存包装数量，不是液体总体积、套内零件总数或维修用量；整桶、整瓶、整套含义见各备件规格，未登记容量和套内数量时不得猜测。外部资料未按该口径登记时，先核准包装与单位，不直接相加。不同包装和规格不得只因单位相同就互相替代。\n\nINV-ANA-009-C019 参考单价不能认定为库存成本或利润。实际备件成本按每仓每SKU的移动加权平均总价值计算：实收入库金额等于冻结采购单价乘实收件数，加入原价值；出库按原价值乘出库量除原数量分摊到分，四舍五入，全数出库取全部剩余价值。采购草稿、审核、确认不增加库存成本；调拨发送固定来源成本，收货携带同额，现有价值加在途价值守恒，不产生毛利。\n\nINV-ANA-009-C020 收费维修毛利等于已过账收费结算金额减对应实际出库成本，毛利率按汇总毛利除汇总结算金额，收入0时暂无；质保0收入，成本单列，扣除质保后的备件贡献等于收费毛利减质保成本。仅统计实际过账流水业务日期，成本依据实际执行顺序；缺失行保留已知金额并显示未覆盖数目，不能夸大完整性。不计人工、房租、税额拆分、厂家赔付等，不叫净利润；项目模拟历史须说明来源。模型解释依据，计算由确定性交易数据完成，检索分数不等于业务概率。",
+              "line_start": 59,
+              "line_end": 63,
+              "tables": []
+            },
+            {
+              "knowledge_base": "inventory_policies",
+              "document_id": "INV-MDM-002",
+              "document_version": "1.0-draft.3",
+              "title": "备件主数据与期初建账管理办法",
+              "native_format": "md",
+              "source_state": "draft",
+              "source_status": "pending_approval",
+              "citation_id": "5b4785f5f403bd380dccd856b304482d8f5c4b3b6a1a3a97b8290eaf6196b68e",
+              "generation_id": "772691116a894594a1c9bd3a9d35832c",
+              "chunk_id": "bad13944acd624185114db78d64aed2bc6de9a1ab17dd1ecbab5d8f597080016",
+              "unit_id": null,
+              "unit_ids": [
+                "INV-MDM-002-C005",
+                "INV-MDM-002-C006",
+                "INV-MDM-002-C007",
+                "INV-MDM-002-C008",
+                "INV-MDM-002-C009"
+              ],
+              "section_path": [
+                "备件主数据与期初建账管理办法",
+                "2 单位与参数维护"
+              ],
+              "excerpt": "备件主数据与期初建账管理办法\n\n本办法规范备件、仓库、供应商及期初库存的建立与变更，防止重复编码、单位混用和历史关联丢失。当前为企业制度待核准稿，发布条件按INV-POL-001执行。\n\n2 单位与参数维护\n\nINV-MDM-002-C005 库存单位统一为件，数量按整数管理。一件对应该SKU的完整库存包装，整瓶、整桶或整套均按一件计数，并在名称或规格说明中注明包装；不得据此认定不同容量相同、套内个数相同或不同SKU可替代。同一SKU的采购、收货、领用和库存单位一致，不以小数拆零；确需拆零时先建立经批准的换算和业务能力。\n\nINV-MDM-002-C006 已被库存或单据引用的备件，不直接修改SKU与计量单位。规格确需改变时，应评估是否另建SKU，保留新旧关联及剩余库存处置安排，不得将历史数量重新解释为新实物数量。将整桶、整瓶、整套的标签统一为件时，只能在保留一件对应原完整包装的前提下受控执行，保留原标识、包装说明和变更记录，数量、单价与阈值不换算。\n\nINV-MDM-002-C007 供货价按供应商与备件登记来源、有效状态和版本，默认只展示默认供应商供货价，其他合格供应商报价展开查看。管理员依据报价维护供货价；管理员或经理可维护4S店定价，库管及Agent只读。采购按所选供应商有效报价由服务端带出并保存快照，普通员工和Agent不得随意改价。旧参考单价不代替供货报价、实际成本或门店定价，调价不改写历史成交价。\n\nINV-MDM-002-C008 安全库存应有需求与供给依据、复核人及更新记录。当前安全库存存于备件资料，对各仓采用相同阈值；不得声称已有独立的仓库级阈值配置。需要各仓差异化设置时，应在系统支持前通过受控参数方案复核，不擅自修改统计含义。\n\nINV-MDM-002-C009 默认供应商是业务选择提示，不等于该供应商对所有规格均可供货，也不等于独家采购或有效合同。资格、交期和价格仍须按INV-SUP-012核验。",
+              "line_start": 27,
+              "line_end": 36,
+              "tables": []
+            }
+          ],
+          "usage": {
+            "embedding": {
+              "prompt_tokens": 25,
+              "completion_tokens": 0,
+              "total_tokens": 25
+            },
+            "chat": {
+              "prompt_tokens": 11445,
+              "completion_tokens": 691,
+              "total_tokens": 12136
+            },
+            "intent": {
+              "prompt_tokens": 516,
+              "completion_tokens": 48,
+              "total_tokens": 564
+            },
+            "coordinator": {
+              "prompt_tokens": 269,
+              "completion_tokens": 56,
+              "total_tokens": 325
+            }
+          },
+          "embedding_requests": 1,
+          "chat_requests": 1,
+          "source_notice": "项目编制参考资料",
+          "source_mode": "project",
+          "agent_mode": "multi",
+          "roles": [
+            "coordinator"
+          ],
+          "tool_trace": [],
+          "proposals": [],
+          "agent_elapsed_seconds": 6.98,
+          "request_id": "8cbe918f40594de09acb51f1c77a6f1f",
+          "elapsed_seconds": 6.985
+        },
+        "reused": false
+      },
+      "checks": {
+        "no_proposal": true,
+        "answered": true,
+        "has_evidence": true,
+        "updated_document_cited": true
+      }
+    }
+  ]
+}

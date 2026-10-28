@@ -1,0 +1,15 @@
+{
+  "cleanup_scope_prefix": "EV7C25C1E893",
+  "test_database_counts": {
+    "users": 0,
+    "parts": 0,
+    "documents": 0,
+    "stock_balances": 0,
+    "stock_ledger": 0,
+    "agent_proposals": 0
+  },
+  "development_before_digest": "f980d0338205e0e396abfeec969af3056faa6afb3563b79f4e0dfb8c8ea258a9",
+  "development_after_digest": "f980d0338205e0e396abfeec969af3056faa6afb3563b79f4e0dfb8c8ea258a9",
+  "development_unchanged": true,
+  "test_fixture_removed": true
+}

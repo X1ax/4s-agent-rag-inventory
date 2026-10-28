@@ -1,0 +1,329 @@
+{
+  "created_on": "2026-10-22",
+  "assets": [
+    {
+      "image_key": "part-ignition-coil",
+      "label": "点火线圈",
+      "path": "frontend/public/images/part-ignition-coil.png",
+      "source_file": "frontend/public/images/part-ignition-coil.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive pencil-on-plug ignition coil, black upper connector housing and long rubber spark plug boot.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-fuel-injector",
+      "label": "汽油喷油器",
+      "path": "frontend/public/images/part-fuel-injector.png",
+      "source_file": "frontend/public/images/part-fuel-injector.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One port gasoline fuel injector, slender metallic nozzle and dark molded body, electrical connector and small sealing O rings.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-fuel-pump",
+      "label": "燃油泵总成",
+      "path": "frontend/public/images/part-fuel-pump.png",
+      "source_file": "frontend/public/images/part-fuel-pump.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One in-tank automotive fuel pump module, white cylindrical reservoir, circular top flange with fuel ports and electrical connector, integrated float arm.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-starter",
+      "label": "起动机",
+      "path": "frontend/public/images/part-starter.png",
+      "source_file": "frontend/public/images/part-starter.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive starter motor, cast aluminum nose housing and pinion gear, silver cylindrical motor with smaller solenoid mounted alongside.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-alternator",
+      "label": "发电机",
+      "path": "frontend/public/images/part-alternator.png",
+      "source_file": "frontend/public/images/part-alternator.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive alternator, vented cast aluminum housing, copper windings visible inside, black multi-rib pulley.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-throttle-body",
+      "label": "电子节气门体",
+      "path": "frontend/public/images/part-throttle-body.png",
+      "source_file": "frontend/public/images/part-throttle-body.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One electronic automotive throttle body, cast aluminum round air passage with brass butterfly valve and black actuator housing.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-maf-sensor",
+      "label": "空气流量传感器",
+      "path": "frontend/public/images/part-maf-sensor.png",
+      "source_file": "frontend/public/images/part-maf-sensor.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive mass air flow sensor, black cylindrical air duct housing with compact electrical sensing module and connector.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-oxygen-sensor",
+      "label": "氧传感器",
+      "path": "frontend/public/images/part-oxygen-sensor.png",
+      "source_file": "frontend/public/images/part-oxygen-sensor.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive oxygen lambda sensor, threaded metal hex body and perforated tip, attached black insulated lead ending in a single electrical connector.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-crankshaft-sensor",
+      "label": "曲轴位置传感器",
+      "path": "frontend/public/images/part-crankshaft-sensor.png",
+      "source_file": "frontend/public/images/part-crankshaft-sensor.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive crankshaft position sensor, small black L-shaped molded body, cylindrical sensing probe, mounting ear and three-pin electrical socket, no cable.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-camshaft-sensor",
+      "label": "凸轮轴位置传感器",
+      "path": "frontend/public/images/part-camshaft-sensor.png",
+      "source_file": "frontend/public/images/part-camshaft-sensor.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive camshaft position sensor, compact black right-angle sensor, short round metal sensing end with green sealing ring, single mounting flange and connector.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-coolant-temperature-sensor",
+      "label": "冷却液温度传感器",
+      "path": "frontend/public/images/part-coolant-temperature-sensor.png",
+      "source_file": "frontend/public/images/part-coolant-temperature-sensor.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive coolant temperature sensor, threaded brass probe body with hex collar and black two-pin electrical connector.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-water-pump",
+      "label": "发动机水泵",
+      "path": "frontend/public/images/part-water-pump.png",
+      "source_file": "frontend/public/images/part-water-pump.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One mechanical automotive engine water pump, cast aluminum mounting body with visible metal impeller and shaft hub, no belt.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-thermostat",
+      "label": "节温器",
+      "path": "frontend/public/images/part-thermostat.png",
+      "source_file": "frontend/public/images/part-thermostat.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive engine coolant thermostat insert, circular brass and stainless steel poppet valve, visible compact coil spring underneath.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-radiator",
+      "label": "发动机散热器",
+      "path": "frontend/public/images/part-radiator.png",
+      "source_file": "frontend/public/images/part-radiator.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive engine cooling radiator, rectangular dense aluminum fin core and black side tanks, two hose necks, no fan and no condenser.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-cooling-fan",
+      "label": "发动机冷却风扇总成",
+      "path": "frontend/public/images/part-cooling-fan.png",
+      "source_file": "frontend/public/images/part-cooling-fan.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive electric radiator cooling fan assembly, large black plastic circular multi-blade fan in square support shroud, compact motor at center.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-radiator-hose",
+      "label": "散热器水管",
+      "path": "frontend/public/images/part-radiator-hose.png",
+      "source_file": "frontend/public/images/part-radiator-hose.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One molded black automotive rubber radiator hose, bent S-shaped tube with two open round ends, no clamps or other parts.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-drive-belt",
+      "label": "附件传动皮带",
+      "path": "frontend/public/images/part-drive-belt.png",
+      "source_file": "frontend/public/images/part-drive-belt.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive serpentine accessory drive belt, black continuous multi-rib rubber loop, gently arranged oval showing longitudinal ribs.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-belt-tensioner",
+      "label": "附件皮带张紧器",
+      "path": "frontend/public/images/part-belt-tensioner.png",
+      "source_file": "frontend/public/images/part-belt-tensioner.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive serpentine belt automatic tensioner assembly, cast aluminum spring-loaded pivot arm with smooth black pulley, no belt.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-brake-disc",
+      "label": "制动盘",
+      "path": "frontend/public/images/part-brake-disc.png",
+      "source_file": "frontend/public/images/part-brake-disc.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive ventilated brake rotor disc, machined gray cast iron friction ring with central wheel hub holes, internal ventilation channels visible on edge, no caliper.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-rear-brake-pads",
+      "label": "后制动片",
+      "path": "frontend/public/images/part-rear-brake-pads.png",
+      "source_file": "frontend/public/images/part-rear-brake-pads.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One matched set of four rear automotive disc brake pads only, dark friction blocks and steel backing plates, neatly arranged, no brake disc.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-brake-caliper",
+      "label": "制动卡钳",
+      "path": "frontend/public/images/part-brake-caliper.png",
+      "source_file": "frontend/public/images/part-brake-caliper.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One unpainted automotive brake caliper assembly, gray cast metal body with piston bore and rubber dust boot, mounting bracket, no rotor or pads.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-abs-sensor",
+      "label": "ABS轮速传感器",
+      "path": "frontend/public/images/part-abs-sensor.png",
+      "source_file": "frontend/public/images/part-abs-sensor.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive ABS wheel speed sensor, small black cylindrical sensing head with mounting ear, long flexible black cable and electrical connector.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-shock-absorber",
+      "label": "减振器",
+      "path": "frontend/public/images/part-shock-absorber.png",
+      "source_file": "frontend/public/images/part-shock-absorber.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive telescopic shock absorber only, long satin black cylindrical damper tube, polished piston rod and mounting eye, no coil spring or strut mount.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-control-arm",
+      "label": "下控制臂",
+      "path": "frontend/public/images/part-control-arm.png",
+      "source_file": "frontend/public/images/part-control-arm.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive lower suspension control arm, triangular dark steel arm with two rubber bushings and a ball joint at the outer tip.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-stabilizer-link",
+      "label": "稳定杆连杆",
+      "path": "frontend/public/images/part-stabilizer-link.png",
+      "source_file": "frontend/public/images/part-stabilizer-link.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive sway bar stabilizer link, slender silver straight link with small ball joint and threaded stud at each end, black rubber boots.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-wheel-hub-bearing",
+      "label": "轮毂轴承总成",
+      "path": "frontend/public/images/part-wheel-hub-bearing.png",
+      "source_file": "frontend/public/images/part-wheel-hub-bearing.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive wheel hub bearing assembly, machined steel circular flange with five wheel studs and cylindrical sealed bearing housing.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-tie-rod-end",
+      "label": "转向横拉杆外球头",
+      "path": "frontend/public/images/part-tie-rod-end.png",
+      "source_file": "frontend/public/images/part-tie-rod-end.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive outer steering tie rod end, dark forged metal angled body with threaded female shaft and single ball joint stud in black rubber boot.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-cv-axle",
+      "label": "半轴总成",
+      "path": "frontend/public/images/part-cv-axle.png",
+      "source_file": "frontend/public/images/part-cv-axle.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive constant-velocity drive axle shaft, long dark steel shaft with two black accordion CV boots and metallic splined ends.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-engine-mount",
+      "label": "发动机悬置",
+      "path": "frontend/public/images/part-engine-mount.png",
+      "source_file": "frontend/public/images/part-engine-mount.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive engine mount, cast aluminum bracket enclosing a thick black rubber isolator with metal mounting studs, no engine.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-ac-compressor",
+      "label": "空调压缩机",
+      "path": "frontend/public/images/part-ac-compressor.png",
+      "source_file": "frontend/public/images/part-ac-compressor.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive belt-driven air conditioning compressor, compact cast aluminum ribbed body, black clutch pulley at front and refrigerant ports on top.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-ac-condenser",
+      "label": "空调冷凝器",
+      "path": "frontend/public/images/part-ac-condenser.png",
+      "source_file": "frontend/public/images/part-ac-condenser.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive air conditioning condenser, thin wide rectangular aluminum fin core, small refrigerant pipe fittings and narrow cylindrical receiver drier integrated at one side, no radiator.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-cabin-blower",
+      "label": "空调鼓风机",
+      "path": "frontend/public/images/part-cabin-blower.png",
+      "source_file": "frontend/public/images/part-cabin-blower.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive cabin blower motor assembly, white plastic squirrel-cage centrifugal fan wheel with many narrow vertical fins above a compact black motor base.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-blower-resistor",
+      "label": "鼓风机调速模块",
+      "path": "frontend/public/images/part-blower-resistor.png",
+      "source_file": "frontend/public/images/part-blower-resistor.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive blower motor resistor control module, rectangular aluminum finned heatsink and black mounting flange with an electrical connector, no fan.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-wiper-motor",
+      "label": "雨刮电机",
+      "path": "frontend/public/images/part-wiper-motor.png",
+      "source_file": "frontend/public/images/part-wiper-motor.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive windshield wiper motor, cylindrical silver electric motor attached to flat cast-metal reduction gearbox with short output shaft, no wiper linkage.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-window-regulator",
+      "label": "车窗升降器总成",
+      "path": "frontend/public/images/part-window-regulator.png",
+      "source_file": "frontend/public/images/part-window-regulator.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One automotive powered window regulator assembly, metal vertical guide rail with cable drive, white plastic window carrier and compact electric motor, no glass or door.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    },
+    {
+      "image_key": "part-fuel-filter",
+      "label": "燃油滤清器",
+      "path": "frontend/public/images/part-fuel-filter.png",
+      "source_file": "frontend/public/images/part-fuel-filter.png",
+      "prompt": "Use case: product-mockup\nAsset type: single automotive spare-part catalog image.\nScene/backdrop: pure white seamless studio background, faint soft contact shadow.\nStyle/medium: realistic professional product photography, restrained clean premium online-store style, true material texture, natural proportions.\nComposition: square frame, entire single named component centered, three-quarter view, occupies about 70% of frame, no cropping.\nConstraints: no words, logos, labels, watermark, foliage, people, extra props, collage, exploded view, futuristic styling. Exactly the specified component. Generic illustrative form, do not imply a specific OEM or vehicle fitment.\nSubject: One inline automotive gasoline fuel filter, unbranded silver cylindrical metal canister, slim hose fitting centered at each end, no other filter.",
+      "source_type": "built_in_imagegen",
+      "usage": "AI 通用部件外观示意，不作为厂家件号、真实产品规格或车型适配依据"
+    }
+  ]
+}

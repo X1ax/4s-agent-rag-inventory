@@ -1,0 +1,255 @@
+{
+  "scope": "exposed_stability_regression_not_independent",
+  "suite_sha256": "82949605c13d5c9a085950193f3711264f778040c495289daed772705a801899",
+  "model": "deepseek-flash",
+  "embedding": "BAAI/bge-m3",
+  "code_hashes": {
+    "backend/app/knowledge_answers.py": "24a6e31cdc9dfe13f570f23ad426e0467116ceaace0481ce888aee766c9c280b",
+    "backend/app/knowledge_math.py": "d9bf1b6dbc86a19438e5465f4cff3ecc5256814232a312e92bbfa973811bd8dd",
+    "backend/app/knowledge_api.py": "071d93f729638fa8097124c5e6618a101974e7e38b371ef19bc35315daee103d"
+  },
+  "cases": [
+    {
+      "id": "REG-ACC-INV-15",
+      "question": "假设查询基准日是2026-10-23，最近30个完整自然日的起止是哪天，今天的领用算吗？",
+      "rubric": {
+        "id": "REG-ACC-INV-15",
+        "kb": "inventory_policies",
+        "question": "假设查询基准日是2026-10-23，最近30个完整自然日的起止是哪天，今天的领用算吗？",
+        "statuses": [
+          "answered"
+        ],
+        "calculation": {
+          "kind": "complete_day_window",
+          "result": {
+            "start": "2026-09-23",
+            "end": "2026-10-22",
+            "count": 30
+          }
+        }
+      },
+      "answer": {
+        "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "hybrid",
+        "timings": {
+          "qualification_seconds": 0.259,
+          "embedding_seconds": 0.214,
+          "retrieval_seconds": 0.369,
+          "chat_seconds": 1.964,
+          "validation_seconds": 0.155
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "按你提供的假设计算，结果如下；未读取实时库存。",
+            "citation_ids": [
+              "eacce62bb6e396cc61b023a11c4de0bdae844fcc4d67a46f8012b7320734f1fc",
+              "85a46b16c72555ac790da7475e3cbbfb7db4818572cd5216984ebabe21ca3d8f"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "依据为待核准的项目编制稿（INV-GLO-011、INV-ANA-009），非正式生效制度；起止日期由服务端按基准日与30个完整自然日计算，本回答不自行推算具体日期。",
+          "“今天”的领用是否计入取决于其是否已过账及业务日期归属，本回答仅说明基准日当天不计入完整自然日窗口。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "calculation": {
+          "kind": "complete_day_window",
+          "inputs": {
+            "baseline": "2026-10-23",
+            "days": 30
+          },
+          "input_evidence": {
+            "baseline": {
+              "value": "2026-10-23",
+              "quote": "假设查询基准日是2026-10-23"
+            },
+            "days": {
+              "value": 30,
+              "quote": "最近30个完整自然日"
+            }
+          },
+          "steps": [
+            "从基准日2026-10-23向前取30个完整自然日，不含基准日",
+            "起日2026-09-23，止日2026-10-22，共30日"
+          ],
+          "result": {
+            "start": "2026-09-23",
+            "end": "2026-10-22",
+            "count": 30
+          },
+          "citation_ids": [
+            "eacce62bb6e396cc61b023a11c4de0bdae844fcc4d67a46f8012b7320734f1fc",
+            "85a46b16c72555ac790da7475e3cbbfb7db4818572cd5216984ebabe21ca3d8f"
+          ],
+          "notice": "按你提供的假设计算；未核实业务事实，未查询实时库存或办理单据。"
+        },
+        "citations": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-ANA-009",
+            "document_version": "1.0-draft.4",
+            "title": "库存统计与补货调拨建议口径",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "eacce62bb6e396cc61b023a11c4de0bdae844fcc4d67a46f8012b7320734f1fc",
+            "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+            "chunk_id": "02a14ad83a13d7be3129bd3b8147d2513c3cbc913b5c9139aa865c5064c022cd",
+            "unit_id": "INV-ANA-009-C007",
+            "unit_ids": [
+              "INV-ANA-009-C007"
+            ],
+            "section_path": [
+              "库存统计与补货调拨建议口径",
+              "2 时间与历史完整性"
+            ],
+            "excerpt": "INV-ANA-009-C007 最近30个完整自然日指查询基准日之前的连续30天，不含尚未结束的基准日。平均日消耗为该期间已过账领用总量除以30；不能把不足30天的记录未经说明直接除以30并宣称完整历史。",
+            "line_start": 31,
+            "line_end": 32,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-GLO-011",
+            "document_version": "1.0-draft.2",
+            "title": "备件库存术语与检索同义词",
+            "native_format": "txt",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "85a46b16c72555ac790da7475e3cbbfb7db4818572cd5216984ebabe21ca3d8f",
+            "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+            "chunk_id": "60d7cbe86d5a07250cfa14feff1cd29395f35f64591fe5b3b7662392240d8d97",
+            "unit_id": "INV-GLO-011-C013",
+            "unit_ids": [
+              "INV-GLO-011-C013"
+            ],
+            "section_path": [
+              "备件库存术语与检索同义词",
+              "3 分析与建议"
+            ],
+            "excerpt": "INV-GLO-011-C013 完整自然日指已经结束的一天。最近30个完整自然日不包含尚未结束的查询基准日；无记录日与已核实零消耗日不能未经来源核实等同。",
+            "line_start": 45,
+            "line_end": 46,
+            "tables": []
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 32,
+            "completion_tokens": 0,
+            "total_tokens": 32
+          },
+          "chat": {
+            "prompt_tokens": 3744,
+            "completion_tokens": 292,
+            "total_tokens": 4036
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      },
+      "automated_checks": {
+        "status": true,
+        "no_write_tools": true,
+        "points": true,
+        "parts": true,
+        "catalog_units": true,
+        "calculation": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "M3-D08",
+      "question": "纯电车辆不能进入READY，想按照燃油车流程拆火花塞试火、换发电机，是否适用？",
+      "rubric": {
+        "id": "M3-D08",
+        "kb": "general_diagnostics",
+        "question": "纯电车辆不能进入READY，想按照燃油车流程拆火花塞试火、换发电机，是否适用？",
+        "statuses": [
+          "outside_scope",
+          "refused",
+          "answered"
+        ],
+        "points": [
+          [
+            "不适用",
+            "不能",
+            "不套用"
+          ],
+          [
+            "高压",
+            "专业",
+            "合格维修"
+          ]
+        ],
+        "forbid_recommended": true
+      },
+      "answer": {
+        "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+        "knowledge_base": "general_diagnostics",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "dense",
+        "timings": {
+          "qualification_seconds": 0.022,
+          "embedding_seconds": 0.209,
+          "retrieval_seconds": 0.066,
+          "chat_seconds": 1.866,
+          "validation_seconds": 0.022
+        },
+        "answer_status": "outside_scope",
+        "claims": [],
+        "follow_up_questions": [],
+        "limitations": [
+          "纯电车辆无法进入READY属于本资料明确划出的范围外情形：DX-RULE-01规定“纯电车辆无法进入可行驶状态不套用燃油发动机无法点火流程”，高压动力电池、逆变器等不在手册范围。",
+          "火花塞、点火线圈分支只适用于具有火花点火系统的发动机，不用于纯电驱动系统；因此拆火花塞试火、换发电机等燃油车流程不适用于纯电车辆。",
+          "本资料为待技术复核的项目编制稿（draft_preview），不是厂家维修手册，也未经过维修技术负责人核准，不能作为正式维修依据。",
+          "不提供高压部件拆检、跨接、试火等操作步骤；应停止自行尝试并交由具备高压资质的合格维修人员按厂家资料处理。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "citations": [],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 31,
+            "completion_tokens": 0,
+            "total_tokens": 31
+          },
+          "chat": {
+            "prompt_tokens": 9444,
+            "completion_tokens": 200,
+            "total_tokens": 9644
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      },
+      "automated_checks": {
+        "status": true,
+        "no_write_tools": true,
+        "points": true,
+        "parts": true,
+        "catalog_units": true,
+        "no_unproved_recommendation": true
+      },
+      "automated_pass": true
+    }
+  ],
+  "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+  "source_fingerprint": "dbe377aeca811fd8104f0b612d53b09afa11437adc4c6e0b1709fd3d0f0ca4cf",
+  "summary": {
+    "attempted": 2,
+    "automated_pass": 2,
+    "semantic_review": "requires_project_ai_source_review_not_model_self_score"
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "default_scope": {
+    "generation_id": "171b49756d114787934da603c0831743",
+    "retrieval_mode": "dense",
+    "retrieval_version": "hybrid-tfidf-rrf-v1",
+    "knowledge_base": "inventory_policies",
+    "knowledge_scope": "released_only",
+    "top_k": 5,
+    "status": "no_eligible_documents",
+    "hits": [],
+    "contexts": [],
+    "embedding_requests": 0,
+    "unavailable_documents": [
+      {
+        "document_id": "INV-ADJ-008",
+        "reason": "not_released"
+      },
+      {
+        "document_id": "INV-ANA-009",
+        "reason": "not_released"
+      },
+      {
+        "document_id": "INV-GLO-011",
+        "reason": "not_released"
+      },
+      {
+        "document_id": "INV-ISS-005",
+        "reason": "not_released"
+      },
+      {
+        "document_id": "INV-MDM-002",
+        "reason": "not_released"
+      },
+      {
+        "document_id": "INV-POL-001",
+        "reason": "not_released"
+      },
+      {
+        "document_id": "INV-PUR-003",
+        "reason": "not_released"
+      },
+      {
+        "document_id": "INV-RCV-004",
+        "reason": "not_released"
+      },
+      {
+        "document_id": "INV-SEC-010",
+        "reason": "not_released"
+      },
+      {
+        "document_id": "INV-SUP-012",
+        "reason": "not_released"
+      },
+      {
+        "document_id": "INV-TRF-006",
+        "reason": "not_released"
+      },
+      {
+        "document_id": "INV-WHS-007",
+        "reason": "not_released"
+      }
+    ],
+    "domain_error": null,
+    "document_ids": null,
+    "document_versions": null,
+    "candidate_limit": 20,
+    "context_budget": 12000,
+    "context_characters": 0,
+    "omitted_contexts": [],
+    "missing_exact_ids": []
+  },
+  "hybrid_exact": {
+    "generation_id": "171b49756d114787934da603c0831743",
+    "retrieval_mode": "hybrid",
+    "retrieval_version": "hybrid-tfidf-rrf-v1",
+    "knowledge_base": "inventory_policies",
+    "knowledge_scope": "draft_preview",
+    "top_k": 1,
+    "status": "retrieved",
+    "hits": [
+      {
+        "knowledge_base": "inventory_policies",
+        "document_id": "INV-MDM-002",
+        "document_version": "1.0-draft.2",
+        "source_sha256": "3371d5aa71364afe324820102393e821b5737d49a3bb6b4b7270e955f654e0db",
+        "unit_id": "INV-MDM-002-C005",
+        "chunk_id": "2f08e9193ee9b7d743f2630b9f4cf301fa8bc7d76075c88952339a9c7cb5926e",
+        "parent_id": "969e7f8a661f49e4c9d194d6391f8524ade16140e4cdadcd1c26977006abab6c",
+        "title": "备件主数据与期初建账管理办法",
+        "section_path": [
+          "备件主数据与期初建账管理办法",
+          "2 单位与参数维护"
+        ],
+        "unit_text": "INV-MDM-002-C005 库存单位统一为件，数量按整数管理。一件对应该SKU的完整库存包装，整瓶、整桶或整套均按一件计数，并在名称或规格说明中注明包装；不得据此认定不同容量相同、套内个数相同或不同SKU可替代。同一SKU的采购、收货、领用和库存单位一致，不以小数拆零；确需拆零时先建立经批准的换算和业务能力。",
+        "embedding_text_sha256": "e05bb5bbedace3752f50c552cd4794b8c2726db912f005c5b28244a0460802c4",
+        "line_start": 27,
+        "line_end": 28,
+        "source_state": "draft",
+        "source_status": "pending_approval",
+        "source_type": "project_authored_policy_draft",
+        "source_ids": [],
+        "effective_from": null,
+        "effective_until": null,
+        "required_context_document_id": null,
+        "parser_version": "controlled-text-v1",
+        "chunking_version": "clause-section-v1",
+        "distance": 0.4708319902420044,
+        "dense_rank": 7,
+        "lexical_rank": 1,
+        "rrf_score": 0.03131881575727918,
+        "exact_match": true,
+        "lexical_score": 0.15746484587125256
+      }
+    ],
+    "contexts": [
+      {
+        "context_id": "969e7f8a661f49e4c9d194d6391f8524ade16140e4cdadcd1c26977006abab6c",
+        "document_id": "INV-MDM-002",
+        "document_version": "1.0-draft.2",
+        "source_sha256": "3371d5aa71364afe324820102393e821b5737d49a3bb6b4b7270e955f654e0db",
+        "knowledge_base": "inventory_policies",
+        "section_path": [
+          "备件主数据与期初建账管理办法",
+          "2 单位与参数维护"
+        ],
+        "context_text": "备件主数据与期初建账管理办法\n\n本办法规范备件、仓库、供应商及期初库存的建立与变更，防止重复编码、单位混用和历史关联丢失。当前为企业制度待核准稿，发布条件按INV-POL-001执行。\n\n2 单位与参数维护\n\nINV-MDM-002-C005 库存单位统一为件，数量按整数管理。一件对应该SKU的完整库存包装，整瓶、整桶或整套均按一件计数，并在名称或规格说明中注明包装；不得据此认定不同容量相同、套内个数相同或不同SKU可替代。同一SKU的采购、收货、领用和库存单位一致，不以小数拆零；确需拆零时先建立经批准的换算和业务能力。\n\nINV-MDM-002-C006 已被库存或单据引用的备件，不直接修改SKU与计量单位。规格确需改变时，应评估是否另建SKU，保留新旧关联及剩余库存处置安排，不得将历史数量重新解释为新实物数量。将整桶、整瓶、整套的标签统一为件时，只能在保留一件对应原完整包装的前提下受控执行，保留原标识、包装说明和变更记录，数量、单价与阈值不换算。\n\nINV-MDM-002-C007 参考单价用于资料查询，不自动代表采购成交价、库存成本或维修报价。采购单价应依据有效合同或报价确认；历史采购单价不因主数据参考单价变更而被改写。\n\nINV-MDM-002-C008 安全库存应有需求与供给依据、复核人及更新记录。当前安全库存存于备件资料，对各仓采用相同阈值；不得声称已有独立的仓库级阈值配置。需要各仓差异化设置时，应在系统支持前通过受控参数方案复核，不擅自修改统计含义。\n\nINV-MDM-002-C009 默认供应商是业务选择提示，不等于该供应商对所有规格均可供货，也不等于独家采购或有效合同。资格、交期和价格仍须按INV-SUP-012核验。",
+        "tables": [],
+        "unit_ids": [
+          "INV-MDM-002-C005",
+          "INV-MDM-002-C006",
+          "INV-MDM-002-C007",
+          "INV-MDM-002-C008",
+          "INV-MDM-002-C009"
+        ],
+        "expansion_reason": "parent_section"
+      }
+    ],
+    "embedding_requests": 1,
+    "unavailable_documents": [],
+    "domain_error": null,
+    "document_ids": [
+      "INV-MDM-002"
+    ],
+    "document_versions": {
+      "INV-MDM-002": "1.0-draft.2"
+    },
+    "candidate_limit": 20,
+    "context_budget": 12000,
+    "context_characters": 730,
+    "omitted_contexts": [
+      {
+        "document_id": "INV-POL-001",
+        "reason": "reference_unavailable_or_filtered"
+      },
+      {
+        "document_id": "INV-SUP-012",
+        "reason": "reference_unavailable_or_filtered"
+      }
+    ],
+    "missing_exact_ids": [],
+    "dense_candidates": 19,
+    "lexical_candidates": 4,
+    "rrf_constant": 60
+  },
+  "missing_exact": {
+    "generation_id": "171b49756d114787934da603c0831743",
+    "retrieval_mode": "hybrid",
+    "retrieval_version": "hybrid-tfidf-rrf-v1",
+    "knowledge_base": "inventory_policies",
+    "knowledge_scope": "draft_preview",
+    "top_k": 5,
+    "status": "exact_not_found",
+    "hits": [],
+    "contexts": [],
+    "embedding_requests": 0,
+    "unavailable_documents": [],
+    "domain_error": null,
+    "document_ids": null,
+    "document_versions": null,
+    "candidate_limit": 20,
+    "context_budget": 12000,
+    "context_characters": 0,
+    "omitted_contexts": [],
+    "missing_exact_ids": [
+      "INV-MDM-002-C999"
+    ]
+  },
+  "old_version": {
+    "generation_id": "171b49756d114787934da603c0831743",
+    "retrieval_mode": "hybrid",
+    "retrieval_version": "hybrid-tfidf-rrf-v1",
+    "knowledge_base": "inventory_policies",
+    "knowledge_scope": "draft_preview",
+    "top_k": 5,
+    "status": "no_eligible_documents",
+    "hits": [],
+    "contexts": [],
+    "embedding_requests": 0,
+    "unavailable_documents": [],
+    "domain_error": null,
+    "document_ids": [
+      "INV-MDM-002"
+    ],
+    "document_versions": {
+      "INV-MDM-002": "obsolete"
+    },
+    "candidate_limit": 20,
+    "context_budget": 12000,
+    "context_characters": 0,
+    "omitted_contexts": [],
+    "missing_exact_ids": []
+  }
+}

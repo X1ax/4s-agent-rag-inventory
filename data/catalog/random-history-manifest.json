@@ -1,0 +1,3936 @@
+{
+  "source": "catalog_random_simulation_v1",
+  "seed": 20261024,
+  "consumption_from": "2026-08-25",
+  "consumption_to": "2026-10-23",
+  "declared_days": 60,
+  "coverage_note": "Calendar completeness applies only to newly generated pairs; unscheduled days are simulated zero, not measured history. Existing histories retain their original declared coverage.",
+  "new_pairs": 72,
+  "new_parts": 36,
+  "covered_parts": 48,
+  "existing_balances_preserved": true,
+  "catalog_prices_changed": false,
+  "plan": [
+    {
+      "part_id": 13,
+      "sku": "CAT-013",
+      "name": "点火线圈",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 6,
+      "issues": [
+        {
+          "day": "2026-08-28",
+          "quantity": 2
+        },
+        {
+          "day": "2026-09-17",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-27",
+          "quantity": 2
+        },
+        {
+          "day": "2026-09-28",
+          "quantity": 2
+        },
+        {
+          "day": "2026-10-03",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-12",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-18",
+          "quantity": 15,
+          "unit_price": "163.03",
+          "receipts": [
+            {
+              "day": "2026-08-25",
+              "quantity": 10
+            },
+            {
+              "day": "2026-08-26",
+              "quantity": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 13,
+      "sku": "CAT-013",
+      "name": "点火线圈",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 3,
+      "issues": [
+        {
+          "day": "2026-08-29",
+          "quantity": 3
+        },
+        {
+          "day": "2026-08-31",
+          "quantity": 3
+        },
+        {
+          "day": "2026-10-09",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-14",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-18",
+          "quantity": 2
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-19",
+          "quantity": 3,
+          "unit_price": "103.67",
+          "receipts": [
+            {
+              "day": "2026-08-26",
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-18",
+          "quantity": 10,
+          "unit_price": "113.94",
+          "receipts": [
+            {
+              "day": "2026-08-25",
+              "quantity": 6
+            },
+            {
+              "day": "2026-08-27",
+              "quantity": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 14,
+      "sku": "CAT-014",
+      "name": "汽油喷油器",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 1,
+      "issues": [
+        {
+          "day": "2026-08-31",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-01",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-06",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-29",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-20",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-18",
+          "quantity": 1,
+          "unit_price": "130.39",
+          "receipts": [
+            {
+              "day": "2026-08-25",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-23",
+          "quantity": 5,
+          "unit_price": "403.66",
+          "receipts": [
+            {
+              "day": "2026-08-30",
+              "quantity": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 14,
+      "sku": "CAT-014",
+      "name": "汽油喷油器",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 2,
+      "issues": [
+        {
+          "day": "2026-10-11",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-22",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-02",
+          "quantity": 4,
+          "unit_price": "351.15",
+          "receipts": [
+            {
+              "day": "2026-10-09",
+              "quantity": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 15,
+      "sku": "CAT-015",
+      "name": "燃油泵总成",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 2,
+      "issues": [
+        {
+          "day": "2026-09-06",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-09",
+          "quantity": 2
+        },
+        {
+          "day": "2026-10-11",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-25",
+          "quantity": 3,
+          "unit_price": "383.65",
+          "receipts": [
+            {
+              "day": "2026-09-01",
+              "quantity": 2
+            },
+            {
+              "day": "2026-09-02",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-02",
+          "quantity": 3,
+          "unit_price": "897.03",
+          "receipts": [
+            {
+              "day": "2026-10-09",
+              "quantity": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 15,
+      "sku": "CAT-015",
+      "name": "燃油泵总成",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 3,
+      "issues": [
+        {
+          "day": "2026-09-04",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-24",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-08",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-24",
+          "quantity": 6,
+          "unit_price": "512.90",
+          "receipts": [
+            {
+              "day": "2026-08-31",
+              "quantity": 2
+            },
+            {
+              "day": "2026-09-02",
+              "quantity": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 16,
+      "sku": "CAT-016",
+      "name": "起动机",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 3,
+      "issues": [
+        {
+          "day": "2026-09-25",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-12",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-15",
+          "quantity": 2
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-15",
+          "quantity": 1,
+          "unit_price": "1241.90",
+          "receipts": [
+            {
+              "day": "2026-09-22",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-02",
+          "quantity": 6,
+          "unit_price": "1338.39",
+          "receipts": [
+            {
+              "day": "2026-10-09",
+              "quantity": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 16,
+      "sku": "CAT-016",
+      "name": "起动机",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 2,
+      "issues": [
+        {
+          "day": "2026-09-06",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-29",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-23",
+          "quantity": 4,
+          "unit_price": "687.39",
+          "receipts": [
+            {
+              "day": "2026-08-30",
+              "quantity": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 17,
+      "sku": "CAT-017",
+      "name": "发电机",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 2,
+      "issues": [
+        {
+          "day": "2026-09-25",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-15",
+          "quantity": 3,
+          "unit_price": "1293.26",
+          "receipts": [
+            {
+              "day": "2026-09-22",
+              "quantity": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 17,
+      "sku": "CAT-017",
+      "name": "发电机",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 0,
+      "issues": [
+        {
+          "day": "2026-09-14",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-26",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-08",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-04",
+          "quantity": 1,
+          "unit_price": "1839.37",
+          "receipts": [
+            {
+              "day": "2026-09-11",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-14",
+          "quantity": 1,
+          "unit_price": "1159.60",
+          "receipts": [
+            {
+              "day": "2026-09-21",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-26",
+          "quantity": 1,
+          "unit_price": "959.10",
+          "receipts": [
+            {
+              "day": "2026-10-03",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 18,
+      "sku": "CAT-018",
+      "name": "电子节气门体",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 3,
+      "issues": [
+        {
+          "day": "2026-08-27",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-10",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-18",
+          "quantity": 5,
+          "unit_price": "406.97",
+          "receipts": [
+            {
+              "day": "2026-08-25",
+              "quantity": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 18,
+      "sku": "CAT-018",
+      "name": "电子节气门体",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 5,
+      "issues": [
+        {
+          "day": "2026-09-25",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-07",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-15",
+          "quantity": 7,
+          "unit_price": "154.62",
+          "receipts": [
+            {
+              "day": "2026-09-22",
+              "quantity": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 19,
+      "sku": "CAT-019",
+      "name": "空气流量传感器",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 2,
+      "issues": [
+        {
+          "day": "2026-09-15",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-27",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-28",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-05",
+          "quantity": 1,
+          "unit_price": "291.87",
+          "receipts": [
+            {
+              "day": "2026-09-12",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-13",
+          "quantity": 4,
+          "unit_price": "285.03",
+          "receipts": [
+            {
+              "day": "2026-09-20",
+              "quantity": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 19,
+      "sku": "CAT-019",
+      "name": "空气流量传感器",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 2,
+      "issues": [
+        {
+          "day": "2026-08-31",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-21",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-24",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-12",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-17",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-21",
+          "quantity": 3,
+          "unit_price": "313.04",
+          "receipts": [
+            {
+              "day": "2026-08-28",
+              "quantity": 1
+            },
+            {
+              "day": "2026-08-30",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-29",
+          "quantity": 1,
+          "unit_price": "395.35",
+          "receipts": [
+            {
+              "day": "2026-10-06",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-06",
+          "quantity": 3,
+          "unit_price": "353.44",
+          "receipts": [
+            {
+              "day": "2026-10-13",
+              "quantity": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 20,
+      "sku": "CAT-020",
+      "name": "氧传感器",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 2,
+      "issues": [
+        {
+          "day": "2026-09-11",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-02",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-03",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-19",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-22",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-31",
+          "quantity": 7,
+          "unit_price": "250.89",
+          "receipts": [
+            {
+              "day": "2026-09-07",
+              "quantity": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 20,
+      "sku": "CAT-020",
+      "name": "氧传感器",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 2,
+      "issues": [
+        {
+          "day": "2026-09-16",
+          "quantity": 2
+        },
+        {
+          "day": "2026-10-03",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-04",
+          "quantity": 2,
+          "unit_price": "86.57",
+          "receipts": [
+            {
+              "day": "2026-09-11",
+              "quantity": 1
+            },
+            {
+              "day": "2026-09-13",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-24",
+          "quantity": 3,
+          "unit_price": "171.25",
+          "receipts": [
+            {
+              "day": "2026-10-01",
+              "quantity": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 21,
+      "sku": "CAT-021",
+      "name": "曲轴位置传感器",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 0,
+      "issues": [
+        {
+          "day": "2026-10-01",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-07",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-14",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-16",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-17",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-22",
+          "quantity": 4,
+          "unit_price": "110.26",
+          "receipts": [
+            {
+              "day": "2026-09-29",
+              "quantity": 4
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-03",
+          "quantity": 1,
+          "unit_price": "205.15",
+          "receipts": [
+            {
+              "day": "2026-10-10",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 21,
+      "sku": "CAT-021",
+      "name": "曲轴位置传感器",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 1,
+      "issues": [
+        {
+          "day": "2026-09-30",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-01",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-07",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-19",
+          "quantity": 1,
+          "unit_price": "308.63",
+          "receipts": [
+            {
+              "day": "2026-09-26",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-18",
+          "quantity": 3,
+          "unit_price": "78.40",
+          "receipts": [
+            {
+              "day": "2026-09-25",
+              "quantity": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 22,
+      "sku": "CAT-022",
+      "name": "凸轮轴位置传感器",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 4,
+      "issues": [
+        {
+          "day": "2026-09-13",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-07",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-02",
+          "quantity": 1,
+          "unit_price": "249.94",
+          "receipts": [
+            {
+              "day": "2026-09-09",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-26",
+          "quantity": 5,
+          "unit_price": "152.29",
+          "receipts": [
+            {
+              "day": "2026-10-03",
+              "quantity": 3
+            },
+            {
+              "day": "2026-10-04",
+              "quantity": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 22,
+      "sku": "CAT-022",
+      "name": "凸轮轴位置传感器",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 1,
+      "issues": [
+        {
+          "day": "2026-09-15",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-20",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-24",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-09",
+          "quantity": 2
+        },
+        {
+          "day": "2026-10-19",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-01",
+          "quantity": 5,
+          "unit_price": "79.18",
+          "receipts": [
+            {
+              "day": "2026-09-08",
+              "quantity": 3
+            },
+            {
+              "day": "2026-09-10",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-07",
+          "quantity": 2,
+          "unit_price": "269.74",
+          "receipts": [
+            {
+              "day": "2026-10-14",
+              "quantity": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 23,
+      "sku": "CAT-023",
+      "name": "冷却液温度传感器",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 0,
+      "issues": [
+        {
+          "day": "2026-09-22",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-28",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-01",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-08",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-11",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-11",
+          "quantity": 1,
+          "unit_price": "162.43",
+          "receipts": [
+            {
+              "day": "2026-09-18",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-17",
+          "quantity": 3,
+          "unit_price": "233.60",
+          "receipts": [
+            {
+              "day": "2026-09-24",
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-30",
+          "quantity": 1,
+          "unit_price": "263.44",
+          "receipts": [
+            {
+              "day": "2026-10-07",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 23,
+      "sku": "CAT-023",
+      "name": "冷却液温度传感器",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 4,
+      "issues": [
+        {
+          "day": "2026-09-03",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-13",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-19",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-24",
+          "quantity": 2,
+          "unit_price": "301.80",
+          "receipts": [
+            {
+              "day": "2026-08-31",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-08",
+          "quantity": 5,
+          "unit_price": "224.61",
+          "receipts": [
+            {
+              "day": "2026-10-15",
+              "quantity": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 24,
+      "sku": "CAT-024",
+      "name": "发动机水泵",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 0,
+      "issues": [
+        {
+          "day": "2026-09-10",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-15",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-30",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-04",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-05",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-10",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-27",
+          "quantity": 1,
+          "unit_price": "863.13",
+          "receipts": [
+            {
+              "day": "2026-09-03",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-02",
+          "quantity": 1,
+          "unit_price": "789.38",
+          "receipts": [
+            {
+              "day": "2026-09-09",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-20",
+          "quantity": 4,
+          "unit_price": "715.51",
+          "receipts": [
+            {
+              "day": "2026-09-27",
+              "quantity": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 24,
+      "sku": "CAT-024",
+      "name": "发动机水泵",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 0,
+      "issues": [
+        {
+          "day": "2026-09-29",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-03",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-18",
+          "quantity": 2,
+          "unit_price": "873.97",
+          "receipts": [
+            {
+              "day": "2026-09-25",
+              "quantity": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 25,
+      "sku": "CAT-025",
+      "name": "节温器",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 5,
+      "issues": [
+        {
+          "day": "2026-09-01",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-21",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-03",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-19",
+          "quantity": 1,
+          "unit_price": "252.46",
+          "receipts": [
+            {
+              "day": "2026-08-26",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-08",
+          "quantity": 1,
+          "unit_price": "295.75",
+          "receipts": [
+            {
+              "day": "2026-09-15",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-21",
+          "quantity": 6,
+          "unit_price": "192.30",
+          "receipts": [
+            {
+              "day": "2026-09-28",
+              "quantity": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 25,
+      "sku": "CAT-025",
+      "name": "节温器",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 4,
+      "issues": [
+        {
+          "day": "2026-09-27",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-01",
+          "quantity": 2
+        },
+        {
+          "day": "2026-10-12",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-14",
+          "quantity": 3,
+          "unit_price": "366.90",
+          "receipts": [
+            {
+              "day": "2026-09-21",
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-03",
+          "quantity": 5,
+          "unit_price": "261.31",
+          "receipts": [
+            {
+              "day": "2026-10-10",
+              "quantity": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 26,
+      "sku": "CAT-026",
+      "name": "发动机散热器",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 0,
+      "issues": [
+        {
+          "day": "2026-09-15",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-25",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-27",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-05",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-04",
+          "quantity": 4,
+          "unit_price": "996.65",
+          "receipts": [
+            {
+              "day": "2026-09-11",
+              "quantity": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 26,
+      "sku": "CAT-026",
+      "name": "发动机散热器",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 0,
+      "issues": [
+        {
+          "day": "2026-09-01",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-05",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-28",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-21",
+          "quantity": 1,
+          "unit_price": "842.63",
+          "receipts": [
+            {
+              "day": "2026-08-28",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-22",
+          "quantity": 1,
+          "unit_price": "457.08",
+          "receipts": [
+            {
+              "day": "2026-08-29",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-17",
+          "quantity": 1,
+          "unit_price": "801.10",
+          "receipts": [
+            {
+              "day": "2026-09-24",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 27,
+      "sku": "CAT-027",
+      "name": "发动机冷却风扇总成",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 0,
+      "issues": [
+        {
+          "day": "2026-10-10",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-15",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-22",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-26",
+          "quantity": 1,
+          "unit_price": "301.15",
+          "receipts": [
+            {
+              "day": "2026-10-03",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-05",
+          "quantity": 2,
+          "unit_price": "347.65",
+          "receipts": [
+            {
+              "day": "2026-10-12",
+              "quantity": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 27,
+      "sku": "CAT-027",
+      "name": "发动机冷却风扇总成",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 0,
+      "issues": [
+        {
+          "day": "2026-10-15",
+          "quantity": 2
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-05",
+          "quantity": 2,
+          "unit_price": "292.31",
+          "receipts": [
+            {
+              "day": "2026-10-12",
+              "quantity": 1
+            },
+            {
+              "day": "2026-10-14",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 28,
+      "sku": "CAT-028",
+      "name": "散热器水管",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 1,
+      "issues": [
+        {
+          "day": "2026-09-27",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-01",
+          "quantity": 2
+        },
+        {
+          "day": "2026-10-23",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-16",
+          "quantity": 1,
+          "unit_price": "45.59",
+          "receipts": [
+            {
+              "day": "2026-09-23",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-19",
+          "quantity": 2,
+          "unit_price": "108.55",
+          "receipts": [
+            {
+              "day": "2026-09-26",
+              "quantity": 1
+            },
+            {
+              "day": "2026-09-27",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-13",
+          "quantity": 2,
+          "unit_price": "96.24",
+          "receipts": [
+            {
+              "day": "2026-10-20",
+              "quantity": 1
+            },
+            {
+              "day": "2026-10-22",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 28,
+      "sku": "CAT-028",
+      "name": "散热器水管",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 2,
+      "issues": [
+        {
+          "day": "2026-09-04",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-05",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-25",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-29",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-03",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-14",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-26",
+          "quantity": 3,
+          "unit_price": "116.11",
+          "receipts": [
+            {
+              "day": "2026-09-02",
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-16",
+          "quantity": 5,
+          "unit_price": "50.58",
+          "receipts": [
+            {
+              "day": "2026-09-23",
+              "quantity": 3
+            },
+            {
+              "day": "2026-09-24",
+              "quantity": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 29,
+      "sku": "CAT-029",
+      "name": "附件传动皮带",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 0,
+      "issues": [
+        {
+          "day": "2026-08-26",
+          "quantity": 3
+        },
+        {
+          "day": "2026-09-04",
+          "quantity": 2
+        },
+        {
+          "day": "2026-09-17",
+          "quantity": 2
+        },
+        {
+          "day": "2026-09-20",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-22",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-25",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-01",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-10",
+          "quantity": 3
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 1,
+          "supplier_code": "DEMO-S01",
+          "ordered_day": "2026-08-22",
+          "quantity": 3,
+          "unit_price": "80.05",
+          "receipts": [
+            {
+              "day": "2026-08-25",
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-23",
+          "quantity": 2,
+          "unit_price": "180.58",
+          "receipts": [
+            {
+              "day": "2026-08-30",
+              "quantity": 1
+            },
+            {
+              "day": "2026-09-01",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-05",
+          "quantity": 9,
+          "unit_price": "144.74",
+          "receipts": [
+            {
+              "day": "2026-09-12",
+              "quantity": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 29,
+      "sku": "CAT-029",
+      "name": "附件传动皮带",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 4,
+      "issues": [
+        {
+          "day": "2026-09-01",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-03",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-08",
+          "quantity": 2
+        },
+        {
+          "day": "2026-09-10",
+          "quantity": 2
+        },
+        {
+          "day": "2026-09-12",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-27",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-08",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-15",
+          "quantity": 2
+        },
+        {
+          "day": "2026-10-19",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-18",
+          "quantity": 16,
+          "unit_price": "127.89",
+          "receipts": [
+            {
+              "day": "2026-08-25",
+              "quantity": 16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 30,
+      "sku": "CAT-030",
+      "name": "附件皮带张紧器",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 2,
+      "issues": [
+        {
+          "day": "2026-09-06",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-07",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-12",
+          "quantity": 2
+        },
+        {
+          "day": "2026-09-15",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-16",
+          "quantity": 2
+        },
+        {
+          "day": "2026-09-19",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-03",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-06",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-26",
+          "quantity": 12,
+          "unit_price": "152.93",
+          "receipts": [
+            {
+              "day": "2026-09-02",
+              "quantity": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 30,
+      "sku": "CAT-030",
+      "name": "附件皮带张紧器",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 2,
+      "issues": [
+        {
+          "day": "2026-09-05",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-07",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-19",
+          "quantity": 2
+        },
+        {
+          "day": "2026-09-29",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-02",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 1,
+          "supplier_code": "DEMO-S01",
+          "ordered_day": "2026-08-30",
+          "quantity": 2,
+          "unit_price": "106.19",
+          "receipts": [
+            {
+              "day": "2026-09-02",
+              "quantity": 1
+            },
+            {
+              "day": "2026-09-04",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-06",
+          "quantity": 2,
+          "unit_price": "81.59",
+          "receipts": [
+            {
+              "day": "2026-09-13",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "supplier_id": 1,
+          "supplier_code": "DEMO-S01",
+          "ordered_day": "2026-09-23",
+          "quantity": 4,
+          "unit_price": "123.09",
+          "receipts": [
+            {
+              "day": "2026-09-26",
+              "quantity": 1
+            },
+            {
+              "day": "2026-09-27",
+              "quantity": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 31,
+      "sku": "CAT-031",
+      "name": "制动盘",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 1,
+      "issues": [
+        {
+          "day": "2026-09-15",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-02",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-04",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-08",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-09",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-19",
+          "quantity": 2
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-02",
+          "quantity": 3,
+          "unit_price": "498.15",
+          "receipts": [
+            {
+              "day": "2026-09-09",
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-28",
+          "quantity": 1,
+          "unit_price": "316.95",
+          "receipts": [
+            {
+              "day": "2026-10-05",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-30",
+          "quantity": 4,
+          "unit_price": "607.26",
+          "receipts": [
+            {
+              "day": "2026-10-07",
+              "quantity": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 31,
+      "sku": "CAT-031",
+      "name": "制动盘",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 1,
+      "issues": [
+        {
+          "day": "2026-08-31",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-09",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-17",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-25",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-07",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-18",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-19",
+          "quantity": 2,
+          "unit_price": "320.30",
+          "receipts": [
+            {
+              "day": "2026-08-26",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-04",
+          "quantity": 2,
+          "unit_price": "535.23",
+          "receipts": [
+            {
+              "day": "2026-09-11",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-26",
+          "quantity": 3,
+          "unit_price": "572.60",
+          "receipts": [
+            {
+              "day": "2026-10-03",
+              "quantity": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 32,
+      "sku": "CAT-032",
+      "name": "后制动片",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 9,
+      "issues": [
+        {
+          "day": "2026-08-27",
+          "quantity": 2
+        },
+        {
+          "day": "2026-08-29",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-08",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-12",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-13",
+          "quantity": 2
+        },
+        {
+          "day": "2026-09-24",
+          "quantity": 2
+        },
+        {
+          "day": "2026-09-26",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-12",
+          "quantity": 3
+        },
+        {
+          "day": "2026-10-13",
+          "quantity": 3
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-18",
+          "quantity": 7,
+          "unit_price": "241.43",
+          "receipts": [
+            {
+              "day": "2026-08-25",
+              "quantity": 7
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-12",
+          "quantity": 18,
+          "unit_price": "268.39",
+          "receipts": [
+            {
+              "day": "2026-09-19",
+              "quantity": 13
+            },
+            {
+              "day": "2026-09-20",
+              "quantity": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 32,
+      "sku": "CAT-032",
+      "name": "后制动片",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 9,
+      "issues": [
+        {
+          "day": "2026-09-01",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-10",
+          "quantity": 2
+        },
+        {
+          "day": "2026-09-14",
+          "quantity": 2
+        },
+        {
+          "day": "2026-09-19",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-23",
+          "quantity": 3
+        },
+        {
+          "day": "2026-10-08",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-10",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-15",
+          "quantity": 2
+        },
+        {
+          "day": "2026-10-20",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-20",
+          "quantity": 1,
+          "unit_price": "181.92",
+          "receipts": [
+            {
+              "day": "2026-08-27",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-31",
+          "quantity": 2,
+          "unit_price": "281.56",
+          "receipts": [
+            {
+              "day": "2026-09-07",
+              "quantity": 1
+            },
+            {
+              "day": "2026-09-09",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-01",
+          "quantity": 20,
+          "unit_price": "464.34",
+          "receipts": [
+            {
+              "day": "2026-09-08",
+              "quantity": 9
+            },
+            {
+              "day": "2026-09-09",
+              "quantity": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 33,
+      "sku": "CAT-033",
+      "name": "制动卡钳",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 0,
+      "issues": [
+        {
+          "day": "2026-09-18",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-06",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-07",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-10",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-19",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-21",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-06",
+          "quantity": 2,
+          "unit_price": "124.57",
+          "receipts": [
+            {
+              "day": "2026-09-13",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-24",
+          "quantity": 4,
+          "unit_price": "422.58",
+          "receipts": [
+            {
+              "day": "2026-10-01",
+              "quantity": 1
+            },
+            {
+              "day": "2026-10-03",
+              "quantity": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 33,
+      "sku": "CAT-033",
+      "name": "制动卡钳",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 5,
+      "issues": [
+        {
+          "day": "2026-08-29",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-14",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-22",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-23",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-19",
+          "quantity": 1,
+          "unit_price": "432.66",
+          "receipts": [
+            {
+              "day": "2026-08-26",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-04",
+          "quantity": 1,
+          "unit_price": "321.92",
+          "receipts": [
+            {
+              "day": "2026-10-11",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-08",
+          "quantity": 7,
+          "unit_price": "284.35",
+          "receipts": [
+            {
+              "day": "2026-10-15",
+              "quantity": 6
+            },
+            {
+              "day": "2026-10-16",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 34,
+      "sku": "CAT-034",
+      "name": "ABS轮速传感器",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 0,
+      "issues": [
+        {
+          "day": "2026-09-11",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-25",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-04",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-09",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-14",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-15",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-28",
+          "quantity": 2,
+          "unit_price": "64.72",
+          "receipts": [
+            {
+              "day": "2026-09-04",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-24",
+          "quantity": 2,
+          "unit_price": "215.77",
+          "receipts": [
+            {
+              "day": "2026-10-01",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-01",
+          "quantity": 2,
+          "unit_price": "272.41",
+          "receipts": [
+            {
+              "day": "2026-10-08",
+              "quantity": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 34,
+      "sku": "CAT-034",
+      "name": "ABS轮速传感器",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 1,
+      "issues": [
+        {
+          "day": "2026-10-02",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-03",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-19",
+          "quantity": 1,
+          "unit_price": "168.65",
+          "receipts": [
+            {
+              "day": "2026-09-26",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-23",
+          "quantity": 2,
+          "unit_price": "69.11",
+          "receipts": [
+            {
+              "day": "2026-09-30",
+              "quantity": 1
+            },
+            {
+              "day": "2026-10-01",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 35,
+      "sku": "CAT-035",
+      "name": "减振器",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 7,
+      "issues": [
+        {
+          "day": "2026-09-05",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-11",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-21",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-04",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-24",
+          "quantity": 11,
+          "unit_price": "899.09",
+          "receipts": [
+            {
+              "day": "2026-08-31",
+              "quantity": 2
+            },
+            {
+              "day": "2026-09-02",
+              "quantity": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 35,
+      "sku": "CAT-035",
+      "name": "减振器",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 3,
+      "issues": [
+        {
+          "day": "2026-10-06",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-08",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-14",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-21",
+          "quantity": 2
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-22",
+          "quantity": 3,
+          "unit_price": "358.16",
+          "receipts": [
+            {
+              "day": "2026-09-29",
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-12",
+          "quantity": 5,
+          "unit_price": "789.88",
+          "receipts": [
+            {
+              "day": "2026-10-19",
+              "quantity": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 36,
+      "sku": "CAT-036",
+      "name": "下控制臂",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 0,
+      "issues": [
+        {
+          "day": "2026-08-26",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-05",
+          "quantity": 2
+        },
+        {
+          "day": "2026-10-22",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-18",
+          "quantity": 1,
+          "unit_price": "685.67",
+          "receipts": [
+            {
+              "day": "2026-08-25",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-23",
+          "quantity": 2,
+          "unit_price": "377.88",
+          "receipts": [
+            {
+              "day": "2026-08-30",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-10",
+          "quantity": 1,
+          "unit_price": "307.46",
+          "receipts": [
+            {
+              "day": "2026-10-17",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 36,
+      "sku": "CAT-036",
+      "name": "下控制臂",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 0,
+      "issues": [
+        {
+          "day": "2026-10-01",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-22",
+          "quantity": 1,
+          "unit_price": "371.81",
+          "receipts": [
+            {
+              "day": "2026-09-29",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 37,
+      "sku": "CAT-037",
+      "name": "稳定杆连杆",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 1,
+      "issues": [
+        {
+          "day": "2026-09-04",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-05",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-17",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-28",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-11",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-14",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-25",
+          "quantity": 2,
+          "unit_price": "294.53",
+          "receipts": [
+            {
+              "day": "2026-09-01",
+              "quantity": 1
+            },
+            {
+              "day": "2026-09-02",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-05",
+          "quantity": 5,
+          "unit_price": "330.28",
+          "receipts": [
+            {
+              "day": "2026-09-12",
+              "quantity": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 37,
+      "sku": "CAT-037",
+      "name": "稳定杆连杆",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 7,
+      "issues": [
+        {
+          "day": "2026-10-10",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-12",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-29",
+          "quantity": 9,
+          "unit_price": "97.86",
+          "receipts": [
+            {
+              "day": "2026-10-06",
+              "quantity": 4
+            },
+            {
+              "day": "2026-10-08",
+              "quantity": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 38,
+      "sku": "CAT-038",
+      "name": "轮毂轴承总成",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 2,
+      "issues": [
+        {
+          "day": "2026-09-10",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-20",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-27",
+          "quantity": 2
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-31",
+          "quantity": 6,
+          "unit_price": "212.00",
+          "receipts": [
+            {
+              "day": "2026-09-07",
+              "quantity": 3
+            },
+            {
+              "day": "2026-09-08",
+              "quantity": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 38,
+      "sku": "CAT-038",
+      "name": "轮毂轴承总成",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 2,
+      "issues": [
+        {
+          "day": "2026-10-02",
+          "quantity": 2
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-18",
+          "quantity": 4,
+          "unit_price": "322.60",
+          "receipts": [
+            {
+              "day": "2026-09-25",
+              "quantity": 2
+            },
+            {
+              "day": "2026-09-26",
+              "quantity": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 39,
+      "sku": "CAT-039",
+      "name": "转向横拉杆外球头",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 7,
+      "issues": [
+        {
+          "day": "2026-09-11",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-23",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-11",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-15",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-30",
+          "quantity": 11,
+          "unit_price": "371.49",
+          "receipts": [
+            {
+              "day": "2026-09-06",
+              "quantity": 10
+            },
+            {
+              "day": "2026-09-08",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 39,
+      "sku": "CAT-039",
+      "name": "转向横拉杆外球头",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 1,
+      "issues": [
+        {
+          "day": "2026-08-27",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-01",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-18",
+          "quantity": 3,
+          "unit_price": "168.69",
+          "receipts": [
+            {
+              "day": "2026-08-25",
+              "quantity": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 40,
+      "sku": "CAT-040",
+      "name": "半轴总成",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 3,
+      "issues": [
+        {
+          "day": "2026-09-27",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-13",
+          "quantity": 4,
+          "unit_price": "709.82",
+          "receipts": [
+            {
+              "day": "2026-09-20",
+              "quantity": 3
+            },
+            {
+              "day": "2026-09-22",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 40,
+      "sku": "CAT-040",
+      "name": "半轴总成",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 4,
+      "issues": [
+        {
+          "day": "2026-09-30",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-21",
+          "quantity": 5,
+          "unit_price": "853.38",
+          "receipts": [
+            {
+              "day": "2026-09-28",
+              "quantity": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 41,
+      "sku": "CAT-041",
+      "name": "发动机悬置",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 5,
+      "issues": [
+        {
+          "day": "2026-09-05",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-11",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-26",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-29",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-04",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-05",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-23",
+          "quantity": 11,
+          "unit_price": "301.76",
+          "receipts": [
+            {
+              "day": "2026-08-30",
+              "quantity": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 41,
+      "sku": "CAT-041",
+      "name": "发动机悬置",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 1,
+      "issues": [
+        {
+          "day": "2026-09-04",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-24",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-01",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-13",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-19",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-24",
+          "quantity": 1,
+          "unit_price": "378.42",
+          "receipts": [
+            {
+              "day": "2026-08-31",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-15",
+          "quantity": 5,
+          "unit_price": "349.58",
+          "receipts": [
+            {
+              "day": "2026-09-22",
+              "quantity": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 42,
+      "sku": "CAT-042",
+      "name": "空调压缩机",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 0,
+      "issues": [
+        {
+          "day": "2026-10-05",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-24",
+          "quantity": 1,
+          "unit_price": "2803.13",
+          "receipts": [
+            {
+              "day": "2026-10-01",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 42,
+      "sku": "CAT-042",
+      "name": "空调压缩机",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 4,
+      "issues": [
+        {
+          "day": "2026-10-03",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-19",
+          "quantity": 5,
+          "unit_price": "1495.41",
+          "receipts": [
+            {
+              "day": "2026-09-26",
+              "quantity": 2
+            },
+            {
+              "day": "2026-09-27",
+              "quantity": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 43,
+      "sku": "CAT-043",
+      "name": "空调冷凝器",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 1,
+      "issues": [
+        {
+          "day": "2026-08-27",
+          "quantity": 1
+        },
+        {
+          "day": "2026-08-31",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-06",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-18",
+          "quantity": 1,
+          "unit_price": "509.81",
+          "receipts": [
+            {
+              "day": "2026-08-25",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-18",
+          "quantity": 1,
+          "unit_price": "858.87",
+          "receipts": [
+            {
+              "day": "2026-08-25",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-22",
+          "quantity": 2,
+          "unit_price": "973.14",
+          "receipts": [
+            {
+              "day": "2026-09-29",
+              "quantity": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 43,
+      "sku": "CAT-043",
+      "name": "空调冷凝器",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 1,
+      "issues": [
+        {
+          "day": "2026-09-09",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-22",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-30",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-07",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-18",
+          "quantity": 2
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-27",
+          "quantity": 7,
+          "unit_price": "976.82",
+          "receipts": [
+            {
+              "day": "2026-09-03",
+              "quantity": 4
+            },
+            {
+              "day": "2026-09-04",
+              "quantity": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 44,
+      "sku": "CAT-044",
+      "name": "空调鼓风机",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 2,
+      "issues": [
+        {
+          "day": "2026-09-07",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-22",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-05",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-16",
+          "quantity": 2
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-26",
+          "quantity": 3,
+          "unit_price": "370.60",
+          "receipts": [
+            {
+              "day": "2026-09-02",
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-02",
+          "quantity": 4,
+          "unit_price": "237.29",
+          "receipts": [
+            {
+              "day": "2026-10-09",
+              "quantity": 1
+            },
+            {
+              "day": "2026-10-11",
+              "quantity": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 44,
+      "sku": "CAT-044",
+      "name": "空调鼓风机",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 0,
+      "issues": [
+        {
+          "day": "2026-08-27",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-18",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-07",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-21",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-18",
+          "quantity": 4,
+          "unit_price": "176.91",
+          "receipts": [
+            {
+              "day": "2026-08-25",
+              "quantity": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 45,
+      "sku": "CAT-045",
+      "name": "鼓风机调速模块",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 3,
+      "issues": [
+        {
+          "day": "2026-10-12",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-21",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-02",
+          "quantity": 1,
+          "unit_price": "288.62",
+          "receipts": [
+            {
+              "day": "2026-10-09",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-10",
+          "quantity": 4,
+          "unit_price": "435.71",
+          "receipts": [
+            {
+              "day": "2026-10-17",
+              "quantity": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 45,
+      "sku": "CAT-045",
+      "name": "鼓风机调速模块",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 1,
+      "issues": [
+        {
+          "day": "2026-09-08",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-13",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-14",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-11",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-18",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-30",
+          "quantity": 6,
+          "unit_price": "245.03",
+          "receipts": [
+            {
+              "day": "2026-09-06",
+              "quantity": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 46,
+      "sku": "CAT-046",
+      "name": "雨刮电机",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 0,
+      "issues": [
+        {
+          "day": "2026-09-10",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-25",
+          "quantity": 2
+        },
+        {
+          "day": "2026-10-13",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-31",
+          "quantity": 1,
+          "unit_price": "637.55",
+          "receipts": [
+            {
+              "day": "2026-09-07",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-12",
+          "quantity": 2,
+          "unit_price": "191.19",
+          "receipts": [
+            {
+              "day": "2026-09-19",
+              "quantity": 1
+            },
+            {
+              "day": "2026-09-20",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-03",
+          "quantity": 1,
+          "unit_price": "440.84",
+          "receipts": [
+            {
+              "day": "2026-10-10",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 46,
+      "sku": "CAT-046",
+      "name": "雨刮电机",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 0,
+      "issues": [
+        {
+          "day": "2026-10-06",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-12",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-13",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-22",
+          "quantity": 1,
+          "unit_price": "238.00",
+          "receipts": [
+            {
+              "day": "2026-09-29",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-30",
+          "quantity": 1,
+          "unit_price": "307.59",
+          "receipts": [
+            {
+              "day": "2026-10-07",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-30",
+          "quantity": 1,
+          "unit_price": "583.73",
+          "receipts": [
+            {
+              "day": "2026-10-07",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 47,
+      "sku": "CAT-047",
+      "name": "车窗升降器总成",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 5,
+      "issues": [
+        {
+          "day": "2026-10-22",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-11",
+          "quantity": 6,
+          "unit_price": "392.07",
+          "receipts": [
+            {
+              "day": "2026-10-18",
+              "quantity": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 47,
+      "sku": "CAT-047",
+      "name": "车窗升降器总成",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 6,
+      "issues": [
+        {
+          "day": "2026-10-03",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-20",
+          "quantity": 7,
+          "unit_price": "411.86",
+          "receipts": [
+            {
+              "day": "2026-09-27",
+              "quantity": 1
+            },
+            {
+              "day": "2026-09-28",
+              "quantity": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 48,
+      "sku": "CAT-048",
+      "name": "燃油滤清器",
+      "warehouse_id": 1,
+      "warehouse_code": "DEMO-W01",
+      "initial_quantity": null,
+      "closing_quantity": 6,
+      "issues": [
+        {
+          "day": "2026-09-06",
+          "quantity": 2
+        },
+        {
+          "day": "2026-09-18",
+          "quantity": 2
+        },
+        {
+          "day": "2026-10-02",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-04",
+          "quantity": 1
+        },
+        {
+          "day": "2026-10-23",
+          "quantity": 2
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-27",
+          "quantity": 4,
+          "unit_price": "64.92",
+          "receipts": [
+            {
+              "day": "2026-09-03",
+              "quantity": 2
+            },
+            {
+              "day": "2026-09-05",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-18",
+          "quantity": 2,
+          "unit_price": "50.01",
+          "receipts": [
+            {
+              "day": "2026-09-25",
+              "quantity": 1
+            },
+            {
+              "day": "2026-09-26",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-10-14",
+          "quantity": 8,
+          "unit_price": "101.48",
+          "receipts": [
+            {
+              "day": "2026-10-21",
+              "quantity": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part_id": 48,
+      "sku": "CAT-048",
+      "name": "燃油滤清器",
+      "warehouse_id": 2,
+      "warehouse_code": "DEMO-W02",
+      "initial_quantity": null,
+      "closing_quantity": 7,
+      "issues": [
+        {
+          "day": "2026-08-31",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-11",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-18",
+          "quantity": 1
+        },
+        {
+          "day": "2026-09-30",
+          "quantity": 2
+        },
+        {
+          "day": "2026-10-02",
+          "quantity": 3
+        },
+        {
+          "day": "2026-10-04",
+          "quantity": 3
+        },
+        {
+          "day": "2026-10-07",
+          "quantity": 2
+        },
+        {
+          "day": "2026-10-14",
+          "quantity": 3
+        },
+        {
+          "day": "2026-10-20",
+          "quantity": 1
+        }
+      ],
+      "batches": [
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-08-18",
+          "quantity": 2,
+          "unit_price": "66.66",
+          "receipts": [
+            {
+              "day": "2026-08-25",
+              "quantity": 1
+            },
+            {
+              "day": "2026-08-26",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "supplier_id": 3,
+          "supplier_code": "DEMO-S03",
+          "ordered_day": "2026-09-07",
+          "quantity": 22,
+          "unit_price": "46.21",
+          "receipts": [
+            {
+              "day": "2026-09-14",
+              "quantity": 13
+            },
+            {
+              "day": "2026-09-16",
+              "quantity": 9
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

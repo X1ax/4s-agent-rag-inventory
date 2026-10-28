@@ -1,0 +1,377 @@
+{
+  "schema_version": 1,
+  "version": "1.0-draft.1",
+  "mapping_kind": "catalog_type_reference_only",
+  "warning": "此映射不判断故障，不证明车型适配，不给出需求数量，不代表有库存；必须读取对应条目的条件后才展示候选，不能将全列表作为换件清单。",
+  "parts": [
+    {
+      "part_type_key": "part-abs-sensor",
+      "catalog_sku": "CAT-034",
+      "catalog_name": "ABS轮速传感器",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-abs-sensor.png",
+      "case_ids": [
+        "DX-BRK-03"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-ac-compressor",
+      "catalog_sku": "CAT-042",
+      "catalog_name": "空调压缩机",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-ac-compressor.png",
+      "case_ids": [
+        "DX-AIR-01"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-ac-condenser",
+      "catalog_sku": "CAT-043",
+      "catalog_name": "空调冷凝器",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-ac-condenser.png",
+      "case_ids": [
+        "DX-AIR-01"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-alternator",
+      "catalog_sku": "CAT-017",
+      "catalog_name": "发电机",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-alternator.png",
+      "case_ids": [
+        "DX-STR-03"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-battery",
+      "catalog_sku": "DEMO-011",
+      "catalog_name": "蓄电池",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-battery.png",
+      "case_ids": [
+        "DX-STR-01",
+        "DX-STR-02",
+        "DX-STR-03"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-belt-tensioner",
+      "catalog_sku": "CAT-030",
+      "catalog_name": "附件皮带张紧器",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-belt-tensioner.png",
+      "case_ids": [
+        "DX-STR-03"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-blower-resistor",
+      "catalog_sku": "CAT-045",
+      "catalog_name": "鼓风机调速模块",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-blower-resistor.png",
+      "case_ids": [
+        "DX-AIR-02"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-brake-caliper",
+      "catalog_sku": "CAT-033",
+      "catalog_name": "制动卡钳",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-brake-caliper.png",
+      "case_ids": [
+        "DX-BRK-01",
+        "DX-BRK-02"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-brake-disc",
+      "catalog_sku": "CAT-031",
+      "catalog_name": "制动盘",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-brake-disc.png",
+      "case_ids": [
+        "DX-BRK-01"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-brake-fluid",
+      "catalog_sku": "DEMO-005",
+      "catalog_name": "制动液（整瓶）",
+      "unit": "瓶",
+      "image_path": "frontend/public/images/part-brake-fluid.png",
+      "case_ids": [
+        "DX-BRK-02"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-brake-pads",
+      "catalog_sku": "DEMO-007",
+      "catalog_name": "前制动片（整套）",
+      "unit": "套",
+      "image_path": "frontend/public/images/part-brake-pads.png",
+      "case_ids": [
+        "DX-BRK-01"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-bulb",
+      "catalog_sku": "DEMO-012",
+      "catalog_name": "灯泡",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-bulb.png",
+      "case_ids": [
+        "DX-VIS-02"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-cabin-blower",
+      "catalog_sku": "CAT-044",
+      "catalog_name": "空调鼓风机",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-cabin-blower.png",
+      "case_ids": [
+        "DX-AIR-02"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-cabin-filter",
+      "catalog_sku": "DEMO-003",
+      "catalog_name": "空调滤清器",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-cabin-filter.png",
+      "case_ids": [
+        "DX-AIR-02"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-coolant",
+      "catalog_sku": "DEMO-006",
+      "catalog_name": "冷却液（整桶）",
+      "unit": "桶",
+      "image_path": "frontend/public/images/part-coolant.png",
+      "case_ids": [
+        "DX-COO-02"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-coolant-temperature-sensor",
+      "catalog_sku": "CAT-023",
+      "catalog_name": "冷却液温度传感器",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-coolant-temperature-sensor.png",
+      "case_ids": [
+        "DX-COO-01",
+        "DX-COO-03"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-cooling-fan",
+      "catalog_sku": "CAT-027",
+      "catalog_name": "发动机冷却风扇总成",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-cooling-fan.png",
+      "case_ids": [
+        "DX-COO-01",
+        "DX-AIR-01"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-drive-belt",
+      "catalog_sku": "CAT-029",
+      "catalog_name": "附件传动皮带",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-drive-belt.png",
+      "case_ids": [
+        "DX-STR-03"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-fuel-pump",
+      "catalog_sku": "CAT-015",
+      "catalog_name": "燃油泵总成",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-fuel-pump.png",
+      "case_ids": [
+        "DX-ENG-01"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-ignition-coil",
+      "catalog_sku": "CAT-013",
+      "catalog_name": "点火线圈",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-ignition-coil.png",
+      "case_ids": [
+        "DX-ENG-01",
+        "DX-ENG-02"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-radiator",
+      "catalog_sku": "CAT-026",
+      "catalog_name": "发动机散热器",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-radiator.png",
+      "case_ids": [
+        "DX-COO-01",
+        "DX-COO-02"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-radiator-hose",
+      "catalog_sku": "CAT-028",
+      "catalog_name": "散热器水管",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-radiator-hose.png",
+      "case_ids": [
+        "DX-COO-02"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-rear-brake-pads",
+      "catalog_sku": "CAT-032",
+      "catalog_name": "后制动片",
+      "unit": "套",
+      "image_path": "frontend/public/images/part-rear-brake-pads.png",
+      "case_ids": [
+        "DX-BRK-01"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-spark-plug",
+      "catalog_sku": "DEMO-009",
+      "catalog_name": "火花塞",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-spark-plug.png",
+      "case_ids": [
+        "DX-ENG-01",
+        "DX-ENG-02"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-starter",
+      "catalog_sku": "CAT-016",
+      "catalog_name": "起动机",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-starter.png",
+      "case_ids": [
+        "DX-STR-01",
+        "DX-STR-02"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-thermostat",
+      "catalog_sku": "CAT-025",
+      "catalog_name": "节温器",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-thermostat.png",
+      "case_ids": [
+        "DX-COO-01",
+        "DX-COO-03"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-water-pump",
+      "catalog_sku": "CAT-024",
+      "catalog_name": "发动机水泵",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-water-pump.png",
+      "case_ids": [
+        "DX-COO-01",
+        "DX-COO-02"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-wheel-hub-bearing",
+      "catalog_sku": "CAT-038",
+      "catalog_name": "轮毂轴承总成",
+      "unit": "件",
+      "image_path": "frontend/public/images/part-wheel-hub-bearing.png",
+      "case_ids": [
+        "DX-BRK-03"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    },
+    {
+      "part_type_key": "part-wipers",
+      "catalog_sku": "DEMO-008",
+      "catalog_name": "雨刮片（整套）",
+      "unit": "套",
+      "image_path": "frontend/public/images/part-wipers.png",
+      "case_ids": [
+        "DX-VIS-01"
+      ],
+      "required_quantity": null,
+      "fitment_status": "not_assessed"
+    }
+  ],
+  "known_unmapped_types": [
+    "启动控制开关/继电器",
+    "线束/接头",
+    "飞轮齿圈",
+    "冷却系统盖/卡箍",
+    "制动主缸/制动软管",
+    "独立ABS编码环",
+    "集成LED灯具/驱动模块"
+  ],
+  "unmapped_rule": "名称与图片相近不是替代依据，未收录类型如实返回，不新增虚构SKU。"
+}

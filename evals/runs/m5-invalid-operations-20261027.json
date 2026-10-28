@@ -1,0 +1,29 @@
+{
+  "scope": "FastAPI HTTP adapter with real dedicated MySQL; no model calls",
+  "cases": [
+    {
+      "name": "over_receipt7_when6_pending",
+      "status": 409,
+      "response": {
+        "detail": "收货明细不属于本单，或累计收货超过采购数量"
+      },
+      "no_business_changes": true
+    },
+    {
+      "name": "insufficient_stock_issue_post",
+      "status": 409,
+      "response": {
+        "detail": "备件 #2916 库存不足，当前可用 14"
+      },
+      "no_business_changes": true
+    },
+    {
+      "name": "same_request_id_changed_quantity",
+      "status": 409,
+      "response": {
+        "detail": "请求标识已用于其他参数、动作或操作人"
+      },
+      "no_business_changes": true
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-25",
+  "source_manifest": "data/knowledge/inventory/manifest.json",
+  "source_manifest_sha256": "b1f1df88c260a7ba3d2834c4c38055369fb81f002e4c833d8f7f1f103b5f109d",
+  "documents": [
+    {
+      "document_id": "INV-ADJ-008",
+      "version": "1.0-draft.1",
+      "path": "data/knowledge/inventory/policies/INV-ADJ-008.md",
+      "native_format": "md",
+      "sha256": "cdb403566af8df0abc8184f42a10bb396670322b63632a653f9e9aca1a5fd6df",
+      "approval_status": "pending_approval",
+      "effective_from": null
+    },
+    {
+      "document_id": "INV-ANA-009",
+      "version": "1.0-draft.3",
+      "path": "data/knowledge/inventory/policies/INV-ANA-009.md",
+      "native_format": "md",
+      "sha256": "2ed3f24014aa2c7a86870400c6c2915813769be1b7d7042562984fce2eb29658",
+      "approval_status": "pending_approval",
+      "effective_from": null
+    },
+    {
+      "document_id": "INV-GLO-011",
+      "version": "1.0-draft.2",
+      "path": "data/knowledge/inventory/policies/INV-GLO-011.txt",
+      "native_format": "txt",
+      "sha256": "43b21a4ea63ae31fef758a60cd087cef06cbd323f9c36b9d06d142e4271e193f",
+      "approval_status": "pending_approval",
+      "effective_from": null
+    },
+    {
+      "document_id": "INV-ISS-005",
+      "version": "1.0-draft.1",
+      "path": "data/knowledge/inventory/policies/INV-ISS-005.md",
+      "native_format": "md",
+      "sha256": "6af72164b2a1279a306dd27259b1044e827b1a146ff279433347cfce4e97714b",
+      "approval_status": "pending_approval",
+      "effective_from": null
+    },
+    {
+      "document_id": "INV-MDM-002",
+      "version": "1.0-draft.2",
+      "path": "data/knowledge/inventory/policies/INV-MDM-002.md",
+      "native_format": "md",
+      "sha256": "3371d5aa71364afe324820102393e821b5737d49a3bb6b4b7270e955f654e0db",
+      "approval_status": "pending_approval",
+      "effective_from": null
+    },
+    {
+      "document_id": "INV-POL-001",
+      "version": "1.0-draft.2",
+      "path": "data/knowledge/inventory/policies/INV-POL-001.md",
+      "native_format": "md",
+      "sha256": "2d2cb9db61026201c0ab84b57475f5286f18bf093f95844d78f9c02dfdfa6516",
+      "approval_status": "pending_approval",
+      "effective_from": null
+    },
+    {
+      "document_id": "INV-PUR-003",
+      "version": "1.0-draft.1",
+      "path": "data/knowledge/inventory/policies/INV-PUR-003.docx",
+      "native_format": "docx",
+      "sha256": "d168a00997c52764dfe79f37acb09568422a5a58ca9987963865ff7678e06362",
+      "approval_status": "pending_approval",
+      "effective_from": null
+    },
+    {
+      "document_id": "INV-RCV-004",
+      "version": "1.0-draft.1",
+      "path": "data/knowledge/inventory/policies/INV-RCV-004.pdf",
+      "native_format": "pdf",
+      "sha256": "f497ad544d961c2b86895fedfc74ff6bf0c4d109fe810b53e45d298e7a1baac3",
+      "approval_status": "pending_approval",
+      "effective_from": null
+    },
+    {
+      "document_id": "INV-SEC-010",
+      "version": "1.0-draft.1",
+      "path": "data/knowledge/inventory/policies/INV-SEC-010.md",
+      "native_format": "md",
+      "sha256": "ba08da156af3a9f97db8ba4c61a9027036c95eeef69b710f7bf9e5f103bde568",
+      "approval_status": "pending_approval",
+      "effective_from": null
+    },
+    {
+      "document_id": "INV-SUP-012",
+      "version": "1.0-draft.1",
+      "path": "data/knowledge/inventory/policies/INV-SUP-012.docx",
+      "native_format": "docx",
+      "sha256": "72168404fb80e400bdab099bc49a4540a69ccdd3080baf462716668b5226d4ea",
+      "approval_status": "pending_approval",
+      "effective_from": null
+    },
+    {
+      "document_id": "INV-TRF-006",
+      "version": "1.0-draft.1",
+      "path": "data/knowledge/inventory/policies/INV-TRF-006.docx",
+      "native_format": "docx",
+      "sha256": "5b63d12c72f62db3c5ba038706e8f2b34f44420888d66e81736e070b1eb83632",
+      "approval_status": "pending_approval",
+      "effective_from": null
+    },
+    {
+      "document_id": "INV-WHS-007",
+      "version": "1.0-draft.1",
+      "path": "data/knowledge/inventory/policies/INV-WHS-007.pdf",
+      "native_format": "pdf",
+      "sha256": "68c9f7061f0a556a07d8a565f0bbf3832a4a2a6c6f94ee8eac04f796c6da48e1",
+      "approval_status": "pending_approval",
+      "effective_from": null
+    }
+  ]
+}

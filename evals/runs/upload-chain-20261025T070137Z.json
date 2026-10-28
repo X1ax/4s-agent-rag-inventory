@@ -1,0 +1,1240 @@
+{
+  "scope": "real_http_development_e2e_not_independent_accuracy_score",
+  "started_at": "2026-10-25T07:01:38.097939+00:00",
+  "root": "D:\\PyCharm_Projects\\4S\\data\\uploads\\chain-20261025T070137Z",
+  "model": "deepseek-flash",
+  "embedding_model": "BAAI/bge-m3",
+  "checks": [
+    {
+      "name": "actual_account_login",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "md_pending",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "md_nonadmin_review_denied",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "md_pending_not_searchable",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_pending",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_nonadmin_review_denied",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_pending_not_searchable",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "docx_pending",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "docx_nonadmin_review_denied",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "docx_pending_not_searchable",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pending_assistant_does_not_know_canary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "md_approved_indexed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "md_after_review_answer",
+      "passed": true,
+      "detail": {
+        "status": "answered",
+        "claims": "《青栎周转箱交接核查说明》要求交接时登记封签编号、交接时间和接收岗位三项信息。\n该说明中的交接标记为QL-479。"
+      }
+    },
+    {
+      "name": "md_after_review_original_locator",
+      "passed": true,
+      "detail": {
+        "line_start": 5
+      }
+    },
+    {
+      "name": "md_summary_title",
+      "passed": true,
+      "detail": "周转箱交接核查要点"
+    },
+    {
+      "name": "md_not_formal_policy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_approved_indexed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_after_review_answer",
+      "passed": true,
+      "detail": {
+        "status": "answered",
+        "claims": "霁蓝样件包发现外包装破损时，暂存点为苍岩待核架。\n异常登记代码为JL-582，并需通知资料管理员核对；未核对前不得办理入库。"
+      }
+    },
+    {
+      "name": "pdf_after_review_original_locator",
+      "passed": true,
+      "detail": {
+        "page_start": 2
+      }
+    },
+    {
+      "name": "pdf_summary_title",
+      "passed": true,
+      "detail": "霁蓝样件包破损暂存规范"
+    },
+    {
+      "name": "pdf_not_formal_policy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "docx_approved_indexed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "docx_after_review_answer",
+      "passed": true,
+      "detail": {
+        "status": "answered",
+        "claims": "《紫杉循环箱接收核对说明》中，接收核对标识为 ZS-763。\n附件缺项时使用的记录名称为“紫杉附件缺项记录”。"
+      }
+    },
+    {
+      "name": "docx_after_review_original_locator",
+      "passed": true,
+      "detail": {
+        "block_start": 4
+      }
+    },
+    {
+      "name": "docx_summary_title",
+      "passed": true,
+      "detail": "紫杉循环箱核对标识查询"
+    },
+    {
+      "name": "docx_not_formal_policy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "md_old_generation_rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "md_after_all_publications_answer",
+      "passed": true,
+      "detail": {
+        "status": "answered",
+        "claims": "青栎周转箱交接必须登记封签编号、交接时间和接收岗位三项信息。\n青栎周转箱的交接标记为QL-479。"
+      }
+    },
+    {
+      "name": "md_after_all_publications_original_locator",
+      "passed": true,
+      "detail": {
+        "line_start": 5
+      }
+    },
+    {
+      "name": "pdf_old_generation_rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_after_all_publications_answer",
+      "passed": true,
+      "detail": {
+        "status": "answered",
+        "claims": "霁蓝样件包发现外包装破损时，暂存点为苍岩待核架。\n异常登记代码为JL-582，并通知资料管理员核对；未核对前不得办理入库。"
+      }
+    },
+    {
+      "name": "pdf_after_all_publications_original_locator",
+      "passed": true,
+      "detail": {
+        "page_start": 2
+      }
+    },
+    {
+      "name": "rejected_not_searchable",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "process_restart_keeps_review_status",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "md_restart_history_title",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "md_restart_original_locator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_restart_history_title",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_restart_original_locator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "docx_restart_history_title",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "docx_restart_original_locator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pdf_after_process_restart_answer",
+      "passed": true,
+      "detail": {
+        "status": "answered",
+        "claims": "霁蓝样件包发现外包装破损时，暂存点为苍岩待核架。\n异常登记代码为JL-582，并通知资料管理员核对；未核对前不得办理入库。"
+      }
+    },
+    {
+      "name": "pdf_after_process_restart_original_locator",
+      "passed": true,
+      "detail": {
+        "page_start": 2
+      }
+    },
+    {
+      "name": "no_business_writes",
+      "passed": true,
+      "detail": {
+        "documents": 0,
+        "stock_balances": 0,
+        "stock_ledger": 0,
+        "agent_proposals": 0
+      }
+    }
+  ],
+  "cases": [
+    {
+      "format": "md",
+      "title": "青栎周转箱交接核查说明",
+      "expected": [
+        "封签编号",
+        "交接时间",
+        "接收岗位",
+        "QL-479"
+      ],
+      "question": "根据本地参考资料《青栎周转箱交接核查说明》，交接时登记哪三项信息，交接标记是什么？",
+      "locator": {
+        "line_start": 5
+      },
+      "submission_id": "5425918baa694c36bba6107759abc726",
+      "document_id": "UPL-5425918baa694c36bba6107759abc726",
+      "source_sha256": "ee7e31ebb0d3461b737db618f49a03a1b99463f0589921b9a726e67bcc167ce8",
+      "preview": [
+        {
+          "text": "# 青栎周转箱交接核查说明",
+          "location": {
+            "line_start": 1,
+            "line_end": 1
+          }
+        },
+        {
+          "text": "本资料仅用于隔离环境链路验收，不是正式企业制度，不代表实际库存。",
+          "location": {
+            "line_start": 3,
+            "line_end": 3
+          }
+        },
+        {
+          "text": "青栎周转箱交接必须登记封签编号、交接时间和接收岗位三项信息，交接标记为QL-479。",
+          "location": {
+            "line_start": 5,
+            "line_end": 5
+          }
+        }
+      ],
+      "thread_id": "4ace6ab01d8f408db545865c08064bd1",
+      "generated_title": "周转箱交接核查要点",
+      "citation": {
+        "knowledge_base": "inventory_policies",
+        "document_id": "UPL-5425918baa694c36bba6107759abc726",
+        "document_version": "1",
+        "title": "青栎周转箱交接核查说明",
+        "native_format": "md",
+        "source_state": "reference",
+        "source_status": "admin_reviewed_reference",
+        "citation_id": "59da08b8ed85da83323ebde43bd9840979c037d4ea6b12ecaa21d0892f0bb6aa",
+        "generation_id": "5cb5e34f6f3f42b0b406d884aa9940c7",
+        "chunk_id": "602d17065c0d34b397aaba041ad662cfbd9221497295df422ca8b171f3e32d7a",
+        "unit_id": null,
+        "unit_ids": [
+          "UPL-5425918baa694c36bba6107759abc726-C003"
+        ],
+        "section_path": [
+          "青栎周转箱交接核查说明",
+          "上传原文片段003"
+        ],
+        "excerpt": "青栎周转箱交接必须登记封签编号、交接时间和接收岗位三项信息，交接标记为QL-479。",
+        "line_start": 5,
+        "line_end": 5,
+        "tables": []
+      }
+    },
+    {
+      "format": "pdf",
+      "title": "霁蓝样件包异常暂存说明",
+      "expected": [
+        "苍岩待核架",
+        "JL-582"
+      ],
+      "question": "根据本地参考资料《霁蓝样件包异常暂存说明》，外包装破损时的暂存点和异常登记代码分别是什么？",
+      "locator": {
+        "page_start": 2
+      },
+      "submission_id": "bc836e66d43f4253b73d2b01b25770c5",
+      "document_id": "UPL-bc836e66d43f4253b73d2b01b25770c5",
+      "source_sha256": "1795a71187371c7325df2d1d4da9c8def6fc0a258c5bb14c2b493a7e8045f511",
+      "preview": [
+        {
+          "text": "霁蓝样件包异常暂存说明\n本资料仅用于隔离环境链路验收，不是正式企业制度，不代表实际库存。\n本说明的具体异常暂存要求见第二页。\n第1页  合成验收资料",
+          "location": {
+            "page_start": 1,
+            "page_end": 1
+          }
+        },
+        {
+          "text": "霁蓝样件包异常暂存说明\n霁蓝样件包发现外包装破损时，暂存点为苍岩待核架。\n异常登记代码为JL-582，并通知资料管理员核对。\n未核对前不得办理入库。\n第2页  合成验收资料",
+          "location": {
+            "page_start": 2,
+            "page_end": 2
+          }
+        }
+      ],
+      "thread_id": "4fbb1cffedce4823802feebd4d9dd418",
+      "generated_title": "霁蓝样件包破损暂存规范",
+      "citation": {
+        "knowledge_base": "inventory_policies",
+        "document_id": "UPL-bc836e66d43f4253b73d2b01b25770c5",
+        "document_version": "1",
+        "title": "霁蓝样件包异常暂存说明",
+        "native_format": "pdf",
+        "source_state": "reference",
+        "source_status": "admin_reviewed_reference",
+        "citation_id": "8a3b2c9cbeb9d1598ce8f4445dcfd7776830ebd6f82aa3c7d4701d99a2270782",
+        "generation_id": "5cb5e34f6f3f42b0b406d884aa9940c7",
+        "chunk_id": "c769f03e90ae945b546b809a704c9ad0c10372f9b1dbb521de30eb2d5d5549dd",
+        "unit_id": null,
+        "unit_ids": [
+          "UPL-bc836e66d43f4253b73d2b01b25770c5-C002"
+        ],
+        "section_path": [
+          "霁蓝样件包异常暂存说明",
+          "上传原文片段002"
+        ],
+        "excerpt": "霁蓝样件包异常暂存说明\n霁蓝样件包发现外包装破损时，暂存点为苍岩待核架。\n异常登记代码为JL-582，并通知资料管理员核对。\n未核对前不得办理入库。\n第2页  合成验收资料",
+        "page_start": 2,
+        "page_end": 2,
+        "tables": []
+      }
+    },
+    {
+      "format": "docx",
+      "title": "紫杉循环箱接收核对说明",
+      "expected": [
+        "ZS-763",
+        "紫杉附件缺项记录"
+      ],
+      "question": "根据本地参考资料《紫杉循环箱接收核对说明》，接收核对标识是什么，附件缺项时用什么记录名称？",
+      "locator": {
+        "block_start": 4
+      },
+      "submission_id": "0203c7fe4a004d35839940848f8c8daf",
+      "document_id": "UPL-0203c7fe4a004d35839940848f8c8daf",
+      "source_sha256": "63f7654fe0441c8debf6c5c89db4811fe8285b3c38e025e9269dd3a540b8661e",
+      "preview": [
+        {
+          "text": "紫杉循环箱接收核对说明",
+          "location": {
+            "block_start": 1,
+            "block_end": 1
+          }
+        },
+        {
+          "text": "本资料仅用于隔离环境链路验收，不是正式企业制度，不代表实际库存。",
+          "location": {
+            "block_start": 2,
+            "block_end": 2
+          }
+        },
+        {
+          "text": "紫杉循环箱接收前按下表核对，不据此生成任何库存数量。",
+          "location": {
+            "block_start": 3,
+            "block_end": 3
+          }
+        },
+        {
+          "text": "核对项目 | 登记要求\n接收核对标识 | ZS-763\n附件缺项时的记录名称 | 紫杉附件缺项记录",
+          "location": {
+            "block_start": 4,
+            "block_end": 4,
+            "table_ordinal": 1
+          }
+        }
+      ],
+      "thread_id": "2f6889368a5347c39ce59539affde35c",
+      "generated_title": "紫杉循环箱核对标识查询",
+      "citation": {
+        "knowledge_base": "inventory_policies",
+        "document_id": "UPL-0203c7fe4a004d35839940848f8c8daf",
+        "document_version": "1",
+        "title": "紫杉循环箱接收核对说明",
+        "native_format": "docx",
+        "source_state": "reference",
+        "source_status": "admin_reviewed_reference",
+        "citation_id": "13bb51e441e11dcb6e83efdfabb329ff073f60290715c6e4fb703c797022d674",
+        "generation_id": "5cb5e34f6f3f42b0b406d884aa9940c7",
+        "chunk_id": "d8f7cf2cfec4929699c63a8ed1de263809cfbadfe3c5193b788937e6996552a8",
+        "unit_id": null,
+        "unit_ids": [
+          "UPL-0203c7fe4a004d35839940848f8c8daf-C004"
+        ],
+        "section_path": [
+          "紫杉循环箱接收核对说明",
+          "上传原文片段004"
+        ],
+        "excerpt": "核对项目 | 登记要求\n接收核对标识 | ZS-763\n附件缺项时的记录名称 | 紫杉附件缺项记录",
+        "block_start": 4,
+        "block_end": 4,
+        "tables": []
+      }
+    }
+  ],
+  "answers": [
+    {
+      "format": "md",
+      "stage": "before_review",
+      "question": "根据本地参考资料《青栎周转箱交接核查说明》，交接时登记哪三项信息，交接标记是什么？",
+      "thread_id": "2f4e6138b92a4a559cfc986b11330c13",
+      "title": "周转箱交接核查要点",
+      "answer": {
+        "generation_id": "a5fb8c005afd4a4c8101c7ce17e9ebe0",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "dense",
+        "timings": {
+          "qualification_seconds": 0.122,
+          "embedding_seconds": 0.202,
+          "retrieval_seconds": 0.363,
+          "chat_seconds": 1.543,
+          "validation_seconds": 0.116
+        },
+        "answer_status": "insufficient_evidence",
+        "claims": [],
+        "follow_up_questions": [],
+        "limitations": [
+          "本轮证据中没有《青栎周转箱交接核查说明》，只有项目编制参考资料《跨仓调拨与在途交接规程》（1.0-draft.1，待核准稿），因此无法回答该说明规定的三项登记信息和交接标记。",
+          "《跨仓调拨与在途交接规程》只规定交接记录应包括调拨编号、两仓、SKU及单位、发出数、实到数、质量状态、双方交接人、发出及接收时间、运输凭据及异常索引，并未规定“三项信息”或“交接标记”。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "citations": [],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 30,
+            "completion_tokens": 0,
+            "total_tokens": 30
+          },
+          "chat": {
+            "prompt_tokens": 4260,
+            "completion_tokens": 164,
+            "total_tokens": 4424
+          },
+          "intent": {
+            "prompt_tokens": 501,
+            "completion_tokens": 49,
+            "total_tokens": 550
+          },
+          "coordinator": {
+            "prompt_tokens": 250,
+            "completion_tokens": 43,
+            "total_tokens": 293
+          },
+          "title_generation": {
+            "prompt_tokens": 147,
+            "completion_tokens": 9,
+            "total_tokens": 156
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1,
+        "source_notice": "项目编制参考资料",
+        "source_mode": "project",
+        "agent_mode": "multi",
+        "roles": [
+          "coordinator"
+        ],
+        "tool_trace": [],
+        "proposals": [],
+        "agent_elapsed_seconds": 3.801,
+        "request_id": "1d84533eda054394a41bf263142223a8",
+        "elapsed_seconds": 4.624
+      }
+    },
+    {
+      "format": "md",
+      "stage": "after_review",
+      "question": "根据本地参考资料《青栎周转箱交接核查说明》，交接时登记哪三项信息，交接标记是什么？",
+      "thread_id": "4ace6ab01d8f408db545865c08064bd1",
+      "title": "周转箱交接核查要点",
+      "answer": {
+        "generation_id": "ea84c7777fe74140a792aebd55c52fd5",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "dense",
+        "timings": {
+          "qualification_seconds": 0.135,
+          "embedding_seconds": 0.182,
+          "retrieval_seconds": 0.364,
+          "chat_seconds": 1.402,
+          "validation_seconds": 0.123
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "《青栎周转箱交接核查说明》要求交接时登记封签编号、交接时间和接收岗位三项信息。",
+            "citation_ids": [
+              "b6c66017e33c45f020e53860e296592b041f1aa3fb07abb6b6029f9f9db7cffe"
+            ]
+          },
+          {
+            "text": "该说明中的交接标记为QL-479。",
+            "citation_ids": [
+              "b6c66017e33c45f020e53860e296592b041f1aa3fb07abb6b6029f9f9db7cffe"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "所引《青栎周转箱交接核查说明》为管理员审核参考资料（source_state=reference），并非正式生效制度；该资料自述仅用于隔离环境链路验收，不代表实际库存。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "citations": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "UPL-5425918baa694c36bba6107759abc726",
+            "document_version": "1",
+            "title": "青栎周转箱交接核查说明",
+            "native_format": "md",
+            "source_state": "reference",
+            "source_status": "admin_reviewed_reference",
+            "citation_id": "b6c66017e33c45f020e53860e296592b041f1aa3fb07abb6b6029f9f9db7cffe",
+            "generation_id": "ea84c7777fe74140a792aebd55c52fd5",
+            "chunk_id": "602d17065c0d34b397aaba041ad662cfbd9221497295df422ca8b171f3e32d7a",
+            "unit_id": null,
+            "unit_ids": [
+              "UPL-5425918baa694c36bba6107759abc726-C003"
+            ],
+            "section_path": [
+              "青栎周转箱交接核查说明",
+              "上传原文片段003"
+            ],
+            "excerpt": "青栎周转箱交接必须登记封签编号、交接时间和接收岗位三项信息，交接标记为QL-479。",
+            "line_start": 5,
+            "line_end": 5,
+            "tables": []
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 30,
+            "completion_tokens": 0,
+            "total_tokens": 30
+          },
+          "chat": {
+            "prompt_tokens": 3828,
+            "completion_tokens": 213,
+            "total_tokens": 4041
+          },
+          "intent": {
+            "prompt_tokens": 501,
+            "completion_tokens": 49,
+            "total_tokens": 550
+          },
+          "coordinator": {
+            "prompt_tokens": 250,
+            "completion_tokens": 42,
+            "total_tokens": 292
+          },
+          "title_generation": {
+            "prompt_tokens": 184,
+            "completion_tokens": 9,
+            "total_tokens": 193
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1,
+        "source_notice": "项目编制参考资料",
+        "source_mode": "project",
+        "agent_mode": "multi",
+        "roles": [
+          "coordinator"
+        ],
+        "tool_trace": [],
+        "proposals": [],
+        "agent_elapsed_seconds": 3.806,
+        "request_id": "54d517d990dc400bb40c39b44571ea90",
+        "elapsed_seconds": 4.66
+      }
+    },
+    {
+      "format": "pdf",
+      "stage": "after_review",
+      "question": "根据本地参考资料《霁蓝样件包异常暂存说明》，外包装破损时的暂存点和异常登记代码分别是什么？",
+      "thread_id": "4fbb1cffedce4823802feebd4d9dd418",
+      "title": "霁蓝样件包破损暂存规范",
+      "answer": {
+        "generation_id": "2ffd711e3ba8432983c0455e4e47396b",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "dense",
+        "timings": {
+          "qualification_seconds": 0.173,
+          "embedding_seconds": 0.234,
+          "retrieval_seconds": 0.485,
+          "chat_seconds": 1.661,
+          "validation_seconds": 0.167
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "霁蓝样件包发现外包装破损时，暂存点为苍岩待核架。",
+            "citation_ids": [
+              "6f2300d6d75237ad3607c458aa3b50c17a228e50e855d4a5521d3af89b842ccb"
+            ]
+          },
+          {
+            "text": "异常登记代码为JL-582，并需通知资料管理员核对；未核对前不得办理入库。",
+            "citation_ids": [
+              "6f2300d6d75237ad3607c458aa3b50c17a228e50e855d4a5521d3af89b842ccb"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "《霁蓝样件包异常暂存说明》为管理员审核参考资料（reference），其第1页自述仅用于隔离环境链路验收，不是正式企业制度，不代表实际库存。",
+          "《仓储保管与质量隔离管理规范》为项目编制稿（draft，待核准），不能作为正式生效制度引用。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "citations": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "UPL-bc836e66d43f4253b73d2b01b25770c5",
+            "document_version": "1",
+            "title": "霁蓝样件包异常暂存说明",
+            "native_format": "pdf",
+            "source_state": "reference",
+            "source_status": "admin_reviewed_reference",
+            "citation_id": "6f2300d6d75237ad3607c458aa3b50c17a228e50e855d4a5521d3af89b842ccb",
+            "generation_id": "2ffd711e3ba8432983c0455e4e47396b",
+            "chunk_id": "c769f03e90ae945b546b809a704c9ad0c10372f9b1dbb521de30eb2d5d5549dd",
+            "unit_id": null,
+            "unit_ids": [
+              "UPL-bc836e66d43f4253b73d2b01b25770c5-C002"
+            ],
+            "section_path": [
+              "霁蓝样件包异常暂存说明",
+              "上传原文片段002"
+            ],
+            "excerpt": "霁蓝样件包异常暂存说明\n霁蓝样件包发现外包装破损时，暂存点为苍岩待核架。\n异常登记代码为JL-582，并通知资料管理员核对。\n未核对前不得办理入库。\n第2页  合成验收资料",
+            "page_start": 2,
+            "page_end": 2,
+            "tables": []
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 30,
+            "completion_tokens": 0,
+            "total_tokens": 30
+          },
+          "chat": {
+            "prompt_tokens": 3923,
+            "completion_tokens": 248,
+            "total_tokens": 4171
+          },
+          "intent": {
+            "prompt_tokens": 504,
+            "completion_tokens": 51,
+            "total_tokens": 555
+          },
+          "coordinator": {
+            "prompt_tokens": 253,
+            "completion_tokens": 45,
+            "total_tokens": 298
+          },
+          "title_generation": {
+            "prompt_tokens": 194,
+            "completion_tokens": 13,
+            "total_tokens": 207
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1,
+        "source_notice": "项目编制参考资料",
+        "source_mode": "project",
+        "agent_mode": "multi",
+        "roles": [
+          "coordinator"
+        ],
+        "tool_trace": [],
+        "proposals": [],
+        "agent_elapsed_seconds": 4.536,
+        "request_id": "926b9da1b835403894a6c47531f8a799",
+        "elapsed_seconds": 5.155
+      }
+    },
+    {
+      "format": "docx",
+      "stage": "after_review",
+      "question": "根据本地参考资料《紫杉循环箱接收核对说明》，接收核对标识是什么，附件缺项时用什么记录名称？",
+      "thread_id": "2f6889368a5347c39ce59539affde35c",
+      "title": "紫杉循环箱核对标识查询",
+      "answer": {
+        "generation_id": "5cb5e34f6f3f42b0b406d884aa9940c7",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "dense",
+        "timings": {
+          "qualification_seconds": 0.175,
+          "embedding_seconds": 0.184,
+          "retrieval_seconds": 0.486,
+          "chat_seconds": 1.634,
+          "validation_seconds": 0.168
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "《紫杉循环箱接收核对说明》中，接收核对标识为 ZS-763。",
+            "citation_ids": [
+              "13bb51e441e11dcb6e83efdfabb329ff073f60290715c6e4fb703c797022d674"
+            ]
+          },
+          {
+            "text": "附件缺项时使用的记录名称为“紫杉附件缺项记录”。",
+            "citation_ids": [
+              "13bb51e441e11dcb6e83efdfabb329ff073f60290715c6e4fb703c797022d674"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "该资料为管理员审核参考资料（reference），仅用于隔离环境链路验收，不是正式企业制度，也不代表实际库存。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "citations": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "UPL-0203c7fe4a004d35839940848f8c8daf",
+            "document_version": "1",
+            "title": "紫杉循环箱接收核对说明",
+            "native_format": "docx",
+            "source_state": "reference",
+            "source_status": "admin_reviewed_reference",
+            "citation_id": "13bb51e441e11dcb6e83efdfabb329ff073f60290715c6e4fb703c797022d674",
+            "generation_id": "5cb5e34f6f3f42b0b406d884aa9940c7",
+            "chunk_id": "d8f7cf2cfec4929699c63a8ed1de263809cfbadfe3c5193b788937e6996552a8",
+            "unit_id": null,
+            "unit_ids": [
+              "UPL-0203c7fe4a004d35839940848f8c8daf-C004"
+            ],
+            "section_path": [
+              "紫杉循环箱接收核对说明",
+              "上传原文片段004"
+            ],
+            "excerpt": "核对项目 | 登记要求\n接收核对标识 | ZS-763\n附件缺项时的记录名称 | 紫杉附件缺项记录",
+            "block_start": 4,
+            "block_end": 4,
+            "tables": []
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 29,
+            "completion_tokens": 0,
+            "total_tokens": 29
+          },
+          "chat": {
+            "prompt_tokens": 3369,
+            "completion_tokens": 188,
+            "total_tokens": 3557
+          },
+          "intent": {
+            "prompt_tokens": 502,
+            "completion_tokens": 50,
+            "total_tokens": 552
+          },
+          "coordinator": {
+            "prompt_tokens": 251,
+            "completion_tokens": 45,
+            "total_tokens": 296
+          },
+          "title_generation": {
+            "prompt_tokens": 187,
+            "completion_tokens": 11,
+            "total_tokens": 198
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1,
+        "source_notice": "项目编制参考资料",
+        "source_mode": "project",
+        "agent_mode": "multi",
+        "roles": [
+          "coordinator"
+        ],
+        "tool_trace": [],
+        "proposals": [],
+        "agent_elapsed_seconds": 4.519,
+        "request_id": "f5b28362a62d4982b764c3a7b3ff344d",
+        "elapsed_seconds": 5.501
+      }
+    },
+    {
+      "format": "md",
+      "stage": "after_all_publications",
+      "question": "根据本地参考资料《青栎周转箱交接核查说明》，交接时登记哪三项信息，交接标记是什么？",
+      "thread_id": "39d0c64cfd4645de875ab1c97e492846",
+      "title": "青栎周转箱交接核查",
+      "answer": {
+        "generation_id": "5cb5e34f6f3f42b0b406d884aa9940c7",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "dense",
+        "timings": {
+          "qualification_seconds": 0.167,
+          "embedding_seconds": 0.239,
+          "retrieval_seconds": 0.481,
+          "chat_seconds": 1.55,
+          "validation_seconds": 0.166
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "青栎周转箱交接必须登记封签编号、交接时间和接收岗位三项信息。",
+            "citation_ids": [
+              "59da08b8ed85da83323ebde43bd9840979c037d4ea6b12ecaa21d0892f0bb6aa"
+            ]
+          },
+          {
+            "text": "青栎周转箱的交接标记为QL-479。",
+            "citation_ids": [
+              "59da08b8ed85da83323ebde43bd9840979c037d4ea6b12ecaa21d0892f0bb6aa"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "依据为项目编制参考资料《青栎周转箱交接核查说明》（管理员审核参考资料），不是正式生效制度，也不代表实际库存。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "citations": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "UPL-5425918baa694c36bba6107759abc726",
+            "document_version": "1",
+            "title": "青栎周转箱交接核查说明",
+            "native_format": "md",
+            "source_state": "reference",
+            "source_status": "admin_reviewed_reference",
+            "citation_id": "59da08b8ed85da83323ebde43bd9840979c037d4ea6b12ecaa21d0892f0bb6aa",
+            "generation_id": "5cb5e34f6f3f42b0b406d884aa9940c7",
+            "chunk_id": "602d17065c0d34b397aaba041ad662cfbd9221497295df422ca8b171f3e32d7a",
+            "unit_id": null,
+            "unit_ids": [
+              "UPL-5425918baa694c36bba6107759abc726-C003"
+            ],
+            "section_path": [
+              "青栎周转箱交接核查说明",
+              "上传原文片段003"
+            ],
+            "excerpt": "青栎周转箱交接必须登记封签编号、交接时间和接收岗位三项信息，交接标记为QL-479。",
+            "line_start": 5,
+            "line_end": 5,
+            "tables": []
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 30,
+            "completion_tokens": 0,
+            "total_tokens": 30
+          },
+          "chat": {
+            "prompt_tokens": 3356,
+            "completion_tokens": 193,
+            "total_tokens": 3549
+          },
+          "intent": {
+            "prompt_tokens": 501,
+            "completion_tokens": 49,
+            "total_tokens": 550
+          },
+          "coordinator": {
+            "prompt_tokens": 250,
+            "completion_tokens": 43,
+            "total_tokens": 293
+          },
+          "title_generation": {
+            "prompt_tokens": 181,
+            "completion_tokens": 11,
+            "total_tokens": 192
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1,
+        "source_notice": "项目编制参考资料",
+        "source_mode": "project",
+        "agent_mode": "multi",
+        "roles": [
+          "coordinator"
+        ],
+        "tool_trace": [],
+        "proposals": [],
+        "agent_elapsed_seconds": 5.893,
+        "request_id": "b0d464f079a34dfa8d3f3f8ecf05f893",
+        "elapsed_seconds": 6.652
+      }
+    },
+    {
+      "format": "pdf",
+      "stage": "after_all_publications",
+      "question": "根据本地参考资料《霁蓝样件包异常暂存说明》，外包装破损时的暂存点和异常登记代码分别是什么？",
+      "thread_id": "5f7b2be801c64e49916e76f929e19abf",
+      "title": "霁蓝样件包破损暂存登记",
+      "answer": {
+        "generation_id": "5cb5e34f6f3f42b0b406d884aa9940c7",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "dense",
+        "timings": {
+          "qualification_seconds": 0.162,
+          "embedding_seconds": 0.204,
+          "retrieval_seconds": 0.563,
+          "chat_seconds": 1.528,
+          "validation_seconds": 0.165
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "霁蓝样件包发现外包装破损时，暂存点为苍岩待核架。",
+            "citation_ids": [
+              "8a3b2c9cbeb9d1598ce8f4445dcfd7776830ebd6f82aa3c7d4701d99a2270782"
+            ]
+          },
+          {
+            "text": "异常登记代码为JL-582，并通知资料管理员核对；未核对前不得办理入库。",
+            "citation_ids": [
+              "8a3b2c9cbeb9d1598ce8f4445dcfd7776830ebd6f82aa3c7d4701d99a2270782"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "《霁蓝样件包异常暂存说明》为管理员审核参考资料（source_state=reference），其第1页自述仅用于隔离环境链路验收，不是正式企业制度，不代表实际库存。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "citations": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "UPL-bc836e66d43f4253b73d2b01b25770c5",
+            "document_version": "1",
+            "title": "霁蓝样件包异常暂存说明",
+            "native_format": "pdf",
+            "source_state": "reference",
+            "source_status": "admin_reviewed_reference",
+            "citation_id": "8a3b2c9cbeb9d1598ce8f4445dcfd7776830ebd6f82aa3c7d4701d99a2270782",
+            "generation_id": "5cb5e34f6f3f42b0b406d884aa9940c7",
+            "chunk_id": "c769f03e90ae945b546b809a704c9ad0c10372f9b1dbb521de30eb2d5d5549dd",
+            "unit_id": null,
+            "unit_ids": [
+              "UPL-bc836e66d43f4253b73d2b01b25770c5-C002"
+            ],
+            "section_path": [
+              "霁蓝样件包异常暂存说明",
+              "上传原文片段002"
+            ],
+            "excerpt": "霁蓝样件包异常暂存说明\n霁蓝样件包发现外包装破损时，暂存点为苍岩待核架。\n异常登记代码为JL-582，并通知资料管理员核对。\n未核对前不得办理入库。\n第2页  合成验收资料",
+            "page_start": 2,
+            "page_end": 2,
+            "tables": []
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 30,
+            "completion_tokens": 0,
+            "total_tokens": 30
+          },
+          "chat": {
+            "prompt_tokens": 3933,
+            "completion_tokens": 226,
+            "total_tokens": 4159
+          },
+          "intent": {
+            "prompt_tokens": 504,
+            "completion_tokens": 51,
+            "total_tokens": 555
+          },
+          "coordinator": {
+            "prompt_tokens": 253,
+            "completion_tokens": 45,
+            "total_tokens": 298
+          },
+          "title_generation": {
+            "prompt_tokens": 193,
+            "completion_tokens": 13,
+            "total_tokens": 206
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1,
+        "source_notice": "项目编制参考资料",
+        "source_mode": "project",
+        "agent_mode": "multi",
+        "roles": [
+          "coordinator"
+        ],
+        "tool_trace": [],
+        "proposals": [],
+        "agent_elapsed_seconds": 4.351,
+        "request_id": "701499202ecc4cb48659ce51883b06a4",
+        "elapsed_seconds": 5.058
+      }
+    },
+    {
+      "format": "pdf",
+      "stage": "after_process_restart",
+      "question": "根据本地参考资料《霁蓝样件包异常暂存说明》，外包装破损时的暂存点和异常登记代码分别是什么？",
+      "thread_id": "f8c7631fff6f4bf9b1461442940c062f",
+      "title": "霁蓝样件包破损暂存登记",
+      "answer": {
+        "generation_id": "5cb5e34f6f3f42b0b406d884aa9940c7",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "dense",
+        "timings": {
+          "qualification_seconds": 0.169,
+          "embedding_seconds": 0.296,
+          "retrieval_seconds": 0.488,
+          "chat_seconds": 1.28,
+          "validation_seconds": 0.165
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "霁蓝样件包发现外包装破损时，暂存点为苍岩待核架。",
+            "citation_ids": [
+              "8a3b2c9cbeb9d1598ce8f4445dcfd7776830ebd6f82aa3c7d4701d99a2270782"
+            ]
+          },
+          {
+            "text": "异常登记代码为JL-582，并通知资料管理员核对；未核对前不得办理入库。",
+            "citation_ids": [
+              "8a3b2c9cbeb9d1598ce8f4445dcfd7776830ebd6f82aa3c7d4701d99a2270782"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "《霁蓝样件包异常暂存说明》为管理员审核参考资料（source_state=reference），其第1页自述仅用于隔离环境链路验收，不是正式企业制度，不代表实际库存。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "citations": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "UPL-bc836e66d43f4253b73d2b01b25770c5",
+            "document_version": "1",
+            "title": "霁蓝样件包异常暂存说明",
+            "native_format": "pdf",
+            "source_state": "reference",
+            "source_status": "admin_reviewed_reference",
+            "citation_id": "8a3b2c9cbeb9d1598ce8f4445dcfd7776830ebd6f82aa3c7d4701d99a2270782",
+            "generation_id": "5cb5e34f6f3f42b0b406d884aa9940c7",
+            "chunk_id": "c769f03e90ae945b546b809a704c9ad0c10372f9b1dbb521de30eb2d5d5549dd",
+            "unit_id": null,
+            "unit_ids": [
+              "UPL-bc836e66d43f4253b73d2b01b25770c5-C002"
+            ],
+            "section_path": [
+              "霁蓝样件包异常暂存说明",
+              "上传原文片段002"
+            ],
+            "excerpt": "霁蓝样件包异常暂存说明\n霁蓝样件包发现外包装破损时，暂存点为苍岩待核架。\n异常登记代码为JL-582，并通知资料管理员核对。\n未核对前不得办理入库。\n第2页  合成验收资料",
+            "page_start": 2,
+            "page_end": 2,
+            "tables": []
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 30,
+            "completion_tokens": 0,
+            "total_tokens": 30
+          },
+          "chat": {
+            "prompt_tokens": 3933,
+            "completion_tokens": 226,
+            "total_tokens": 4159
+          },
+          "intent": {
+            "prompt_tokens": 504,
+            "completion_tokens": 51,
+            "total_tokens": 555
+          },
+          "coordinator": {
+            "prompt_tokens": 253,
+            "completion_tokens": 46,
+            "total_tokens": 299
+          },
+          "title_generation": {
+            "prompt_tokens": 193,
+            "completion_tokens": 13,
+            "total_tokens": 206
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1,
+        "source_notice": "项目编制参考资料",
+        "source_mode": "project",
+        "agent_mode": "multi",
+        "roles": [
+          "coordinator"
+        ],
+        "tool_trace": [],
+        "proposals": [],
+        "agent_elapsed_seconds": 4.156,
+        "request_id": "b9a10374d4c34afd87481f374c0f4ccb",
+        "elapsed_seconds": 4.971
+      }
+    }
+  ],
+  "baseline_index": {
+    "generation_id": "a5fb8c005afd4a4c8101c7ce17e9ebe0",
+    "index_version": "dense-bge-m3-v1",
+    "fingerprint": "3f2558446f74cf41bdfe64a76c5c0806fdac11e20c33938ce4ae9530f34f3560",
+    "embedding": {
+      "endpoint": "https://api.siliconflow.cn/v1/embeddings",
+      "model": "BAAI/bge-m3",
+      "dimension": 1024,
+      "distance": "cosine"
+    },
+    "parser_version": "controlled-text-v1",
+    "native_parser_version": "controlled-office-v1",
+    "chunking_version": "clause-section-v1",
+    "index_status": "indexed",
+    "created_at": "2026-10-25T07:01:38.360042+00:00",
+    "chroma_version": "1.5.9",
+    "unit_count": 242,
+    "context_count": 86,
+    "files": {
+      "sources.json": "0f979598f6404f171c805f537d3a8a51a2c330d1f6662ffbfdf2213c41e1934b",
+      "units.jsonl": "77aec474e8f2e8ba7c1c5db1ab2179250b3f4317dc066a9ebfabd150c56f18bd",
+      "contexts.jsonl": "c876ba41761e2a263b6add5f07bed5f69bfa879804ab25256e14d854e3b72c8d"
+    },
+    "embedding_requests": 16,
+    "embedded_texts": 242,
+    "embedding_retries": 0,
+    "total_tokens": 39688,
+    "elapsed_seconds": 7.111,
+    "reused": false,
+    "indexed_documents": 19,
+    "unsupported_documents": 0
+  },
+  "final_index": {
+    "available": true,
+    "embedding_configured": true,
+    "chat_configured": true,
+    "generation_id": "5cb5e34f6f3f42b0b406d884aa9940c7",
+    "document_count": 22,
+    "unit_count": 251,
+    "context_count": 95,
+    "domains": {
+      "inventory_policies": {
+        "released_documents": 0,
+        "preview_documents": 15,
+        "domain_error": null
+      },
+      "general_diagnostics": {
+        "released_documents": 0,
+        "preview_documents": 7,
+        "domain_error": null
+      }
+    }
+  },
+  "passed": true,
+  "finished_at": "2026-10-25T07:02:53.532299+00:00"
+}

@@ -1,0 +1,183 @@
+{
+  "scope": "exposed_ACC_INV_19_targeted_regression",
+  "question": "假设同一轮依次处理X和Y缺口，各6件；唯一来源S可用20件、目标库存10件，其他条件均已核验。能分别给X、Y都调6件吗？",
+  "answer": {
+    "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+    "knowledge_base": "inventory_policies",
+    "knowledge_scope": "draft_preview",
+    "retrieval_mode": "hybrid",
+    "timings": {
+      "qualification_seconds": 0.16,
+      "embedding_seconds": 0.208,
+      "retrieval_seconds": 0.473,
+      "chat_seconds": 2.195,
+      "validation_seconds": 0.154
+    },
+    "answer_status": "answered",
+    "claims": [
+      {
+        "text": "按你提供的假设计算，结果如下；未读取实时库存。",
+        "citation_ids": [
+          "4a36866486f61d866fe3c4e08a3f127c50bcbfdd12dec01c9f3a05173f3dd62d",
+          "57b6551ed51a0352041884a12fb9b89d74fdd133c9c556759846b9bcfaafa000"
+        ]
+      }
+    ],
+    "follow_up_questions": [],
+    "limitations": [
+      "本轮资料为待核准稿（draft/pending_approval），仅作项目编制参考，不代表正式生效制度。",
+      "调拨提案不锁定或预留库存，实际办理前需重新查库存、状态、权限和批准参数。",
+      "本服务只读取文档，未查询实时库存或办理业务单据。",
+      "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+    ],
+    "fault_types": [],
+    "checks": [],
+    "part_decisions": [],
+    "calculation": {
+      "kind": "allocation",
+      "inputs": {
+        "sources": [
+          {
+            "code": "S",
+            "available": 20,
+            "target": 10
+          }
+        ],
+        "demands": [
+          {
+            "code": "X",
+            "gap": 6
+          },
+          {
+            "code": "Y",
+            "gap": 6
+          }
+        ]
+      },
+      "input_evidence": {
+        "sources": [
+          {
+            "code": "S",
+            "available": {
+              "value": 20,
+              "quote": "唯一来源S可用20件"
+            },
+            "target": {
+              "value": 10,
+              "quote": "目标库存10件"
+            }
+          }
+        ],
+        "demands": [
+          {
+            "code": "X",
+            "gap": {
+              "value": 6,
+              "quote": "依次处理X和Y缺口，各6件"
+            }
+          },
+          {
+            "code": "Y",
+            "gap": {
+              "value": 6,
+              "quote": "依次处理X和Y缺口，各6件"
+            }
+          }
+        ],
+        "order_quote": ""
+      },
+      "steps": [
+        "可调量=max(0,可用量−目标量)",
+        "按可调余量降序、同余量编码升序、所列需求顺序分配，每次扣减来源剩余可调量；剩余缺口作为采购缺口"
+      ],
+      "result": {
+        "allocations": [
+          {
+            "source": "S",
+            "target": "X",
+            "quantity": 6
+          },
+          {
+            "source": "S",
+            "target": "Y",
+            "quantity": 4
+          }
+        ],
+        "purchase_gaps": {
+          "X": 0,
+          "Y": 2
+        }
+      },
+      "citation_ids": [
+        "4a36866486f61d866fe3c4e08a3f127c50bcbfdd12dec01c9f3a05173f3dd62d",
+        "57b6551ed51a0352041884a12fb9b89d74fdd133c9c556759846b9bcfaafa000"
+      ],
+      "notice": "按你提供的假设计算；未核实业务事实，未查询实时库存或办理单据。"
+    },
+    "citations": [
+      {
+        "knowledge_base": "inventory_policies",
+        "document_id": "INV-ANA-009",
+        "document_version": "1.0-draft.3",
+        "title": "库存统计与补货调拨建议口径",
+        "native_format": "md",
+        "source_state": "draft",
+        "source_status": "pending_approval",
+        "citation_id": "4a36866486f61d866fe3c4e08a3f127c50bcbfdd12dec01c9f3a05173f3dd62d",
+        "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+        "chunk_id": "6ac92b6089771cdd984f93567889fbd1f4b3420b221fb4f4a9ee4732cab4f063",
+        "unit_id": "INV-ANA-009-C014",
+        "unit_ids": [
+          "INV-ANA-009-C014"
+        ],
+        "section_path": [
+          "库存统计与补货调拨建议口径",
+          "4 先调拨后采购的建议"
+        ],
+        "excerpt": "INV-ANA-009-C014 其他仓可调余量按“来源仓可用量减来源仓目标库存与零的较大值”核查。来源仓目标库存也须满足相同的数据完整性条件，不能简单把全部现有库存视为可调。",
+        "line_start": 49,
+        "line_end": 50,
+        "tables": []
+      },
+      {
+        "knowledge_base": "inventory_policies",
+        "document_id": "INV-TRF-006",
+        "document_version": "1.0-draft.1",
+        "title": "跨仓调拨与在途交接规程",
+        "native_format": "docx",
+        "source_state": "draft",
+        "source_status": "pending_approval",
+        "citation_id": "57b6551ed51a0352041884a12fb9b89d74fdd133c9c556759846b9bcfaafa000",
+        "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+        "chunk_id": "3a1f5c62cecc740b5ae4ccae8a549679bec29748675f0ef95d9c2c8033076b2a",
+        "unit_id": "INV-TRF-006-C001",
+        "unit_ids": [
+          "INV-TRF-006-C001"
+        ],
+        "section_path": [
+          "跨仓调拨与在途交接规程",
+          "1 调拨计划"
+        ],
+        "excerpt": "INV-TRF-006-C001 调拨需求应说明目标仓用途、备件、数量、需要日期和来源仓。来源与目标仓不得相同；不同单位、不同SKU不能通过调拨互相折抵。",
+        "block_start": 6,
+        "block_end": 6,
+        "tables": []
+      }
+    ],
+    "usage": {
+      "embedding": {
+        "prompt_tokens": 50,
+        "completion_tokens": 0,
+        "total_tokens": 50
+      },
+      "chat": {
+        "prompt_tokens": 4178,
+        "completion_tokens": 315,
+        "total_tokens": 4493
+      }
+    },
+    "embedding_requests": 1,
+    "chat_requests": 1
+  },
+  "exact_result_pass": true
+}

@@ -1,0 +1,266 @@
+{
+  "scope": "exposed_stability_regression_not_independent",
+  "suite_sha256": "52a0cbbf958098f01ee85b7392d3f79fb0bbe182da70b81d7c6e0f98ba46e51d",
+  "model": "deepseek-flash",
+  "embedding": "BAAI/bge-m3",
+  "code_hashes": {
+    "backend/app/knowledge_answers.py": "519125d65750bb229fb622e078eec72f7940f3f23782acb72908e1cb1ce57a71",
+    "backend/app/knowledge_math.py": "d9bf1b6dbc86a19438e5465f4cff3ecc5256814232a312e92bbfa973811bd8dd",
+    "backend/app/knowledge_api.py": "071d93f729638fa8097124c5e6618a101974e7e38b371ef19bc35315daee103d"
+  },
+  "cases": [
+    {
+      "id": "REG-ACC-INV-15",
+      "question": "假设查询基准日是2026-10-23，最近30个完整自然日的起止是哪天，今天的领用算吗？",
+      "rubric": {
+        "id": "REG-ACC-INV-15",
+        "kb": "inventory_policies",
+        "question": "假设查询基准日是2026-10-23，最近30个完整自然日的起止是哪天，今天的领用算吗？",
+        "statuses": [
+          "calculate_example"
+        ],
+        "calculation": {
+          "kind": "complete_day_window",
+          "result": {
+            "start": "2026-09-23",
+            "end": "2026-10-22",
+            "count": 30
+          }
+        }
+      },
+      "answer": {
+        "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "hybrid",
+        "timings": {
+          "qualification_seconds": 0.263,
+          "embedding_seconds": 0.237,
+          "retrieval_seconds": 0.354,
+          "chat_seconds": 2.788,
+          "validation_seconds": 0.159
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "最近30个完整自然日指查询基准日之前的连续30天，不含尚未结束的基准日。",
+            "citation_ids": [
+              "d93c3027d5f73384d49ac0439b05f5f5df8dd416f11dce510d76fa93c66bdab0",
+              "85a46b16c72555ac790da7475e3cbbfb7db4818572cd5216984ebabe21ca3d8f"
+            ]
+          },
+          {
+            "text": "完整自然日指已经结束的一天，因此基准日2026-10-23当天尚未结束，不计入最近30个完整自然日。",
+            "citation_ids": [
+              "85a46b16c72555ac790da7475e3cbbfb7db4818572cd5216984ebabe21ca3d8f",
+              "d93c3027d5f73384d49ac0439b05f5f5df8dd416f11dce510d76fa93c66bdab0"
+            ]
+          },
+          {
+            "text": "消耗分析只统计已过账维修领用，业务日期与实际登记时间分别保留；当天领用是否计入取决于其业务日期是否落在该30天区间内。",
+            "citation_ids": [
+              "7e2db1a0001c67c2bf38b907bd8bd029bea9d069621af417c6dda4b3cebddee4"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "依据为待核准的项目编制稿（INV-GLO-011 1.0-draft.2、INV-ANA-009 1.0-draft.4），不表示企业已正式批准生效。",
+          "具体起止日期需按“基准日前连续30天”逐日推算，本轮未提供可逐字引用的日期区间原文，故不给出推算日期。",
+          "当天领用是否计入还取决于该领用是否已过账及其业务日期，本轮未提供该记录。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "citations": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-ANA-009",
+            "document_version": "1.0-draft.4",
+            "title": "库存统计与补货调拨建议口径",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "d93c3027d5f73384d49ac0439b05f5f5df8dd416f11dce510d76fa93c66bdab0",
+            "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+            "chunk_id": "2cb007a2e17e10530f9248b79e8ebc32691b9514d93f5e6201c4405562638496",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-ANA-009-C005",
+              "INV-ANA-009-C006",
+              "INV-ANA-009-C007",
+              "INV-ANA-009-C008",
+              "INV-ANA-009-C009"
+            ],
+            "section_path": [
+              "库存统计与补货调拨建议口径",
+              "2 时间与历史完整性"
+            ],
+            "excerpt": "库存统计与补货调拨建议口径\n\n本文件统一数量、历史消耗、补货与调拨建议的解释，避免将现有量、预计供给和模型建议混为一谈。规则用于形成可复核建议，不能取代采购批准或实物核验。当前为待核准稿；补货与调拨建议服务尚未因本文件编写而自动上线。\n\n2 时间与历史完整性\n\nINV-ANA-009-C005 当前余额、采购待收和在途属于查询时点快照；日期筛选只约束收发趋势和领用排序，不表示查询了该历史日期的余额。查询历史余额需要按业务日期重建并核查补录等影响。\n\nINV-ANA-009-C006 消耗分析只统计已过账维修领用的数量，调拨、采购、期初不计为领用消耗。业务日期与实际登记时间分别保留。页面业务趋势按业务日期汇总实际采购入库量与已过账领用量，统一以件展示，同单多备件按各自明细数量累加，期初与调拨不计入；领用频次排行按涉及该SKU的领用单据数排序，并同时标注实际领用件数。数量消耗及补货计算仍按已过账领用件数，不以频次代替数量。\n\nINV-ANA-009-C007 最近30个完整自然日指查询基准日之前的连续30天，不含尚未结束的基准日。平均日消耗为该期间已过账领用总量除以30；不能把不足30天的记录未经说明直接除以30并宣称完整历史。\n\nINV-ANA-009-C008 历史完整性应由资料来源、覆盖区间、导入规则和遗漏检查共同确认。某天没有记录可以表示已知零消耗，也可能表示缺失，不能只依据最早与最晚日期判断中间完整。\n\nINV-ANA-009-C009 项目构造历史只能在明确声明的模拟覆盖范围内用于验证计算；不能由连续日期、样例数量或图表推导真实门店需求、预测准确率或经营收益。新增SKU没有历史时单独标记，不能借用相似件的消耗当作事实。",
+            "line_start": 27,
+            "line_end": 36,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-GLO-011",
+            "document_version": "1.0-draft.2",
+            "title": "备件库存术语与检索同义词",
+            "native_format": "txt",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "85a46b16c72555ac790da7475e3cbbfb7db4818572cd5216984ebabe21ca3d8f",
+            "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+            "chunk_id": "60d7cbe86d5a07250cfa14feff1cd29395f35f64591fe5b3b7662392240d8d97",
+            "unit_id": "INV-GLO-011-C013",
+            "unit_ids": [
+              "INV-GLO-011-C013"
+            ],
+            "section_path": [
+              "备件库存术语与检索同义词",
+              "3 分析与建议"
+            ],
+            "excerpt": "INV-GLO-011-C013 完整自然日指已经结束的一天。最近30个完整自然日不包含尚未结束的查询基准日；无记录日与已核实零消耗日不能未经来源核实等同。",
+            "line_start": 45,
+            "line_end": 46,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-ANA-009",
+            "document_version": "1.0-draft.4",
+            "title": "库存统计与补货调拨建议口径",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "7e2db1a0001c67c2bf38b907bd8bd029bea9d069621af417c6dda4b3cebddee4",
+            "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+            "chunk_id": "dcb3c8b4d4991e578ab67e999658545f62bbbe513a744257ea080498280a3221",
+            "unit_id": "INV-ANA-009-C006",
+            "unit_ids": [
+              "INV-ANA-009-C006"
+            ],
+            "section_path": [
+              "库存统计与补货调拨建议口径",
+              "2 时间与历史完整性"
+            ],
+            "excerpt": "INV-ANA-009-C006 消耗分析只统计已过账维修领用的数量，调拨、采购、期初不计为领用消耗。业务日期与实际登记时间分别保留。页面业务趋势按业务日期汇总实际采购入库量与已过账领用量，统一以件展示，同单多备件按各自明细数量累加，期初与调拨不计入；领用频次排行按涉及该SKU的领用单据数排序，并同时标注实际领用件数。数量消耗及补货计算仍按已过账领用件数，不以频次代替数量。",
+            "line_start": 29,
+            "line_end": 30,
+            "tables": []
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 32,
+            "completion_tokens": 0,
+            "total_tokens": 32
+          },
+          "chat": {
+            "prompt_tokens": 3690,
+            "completion_tokens": 454,
+            "total_tokens": 4144
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      },
+      "automated_checks": {
+        "status": false,
+        "no_write_tools": true,
+        "points": true,
+        "parts": true,
+        "catalog_units": true,
+        "calculation": false
+      },
+      "automated_pass": false
+    },
+    {
+      "id": "M3-D08",
+      "question": "纯电车辆不能进入READY，想按照燃油车流程拆火花塞试火、换发电机，是否适用？",
+      "rubric": {
+        "id": "M3-D08",
+        "kb": "general_diagnostics",
+        "question": "纯电车辆不能进入READY，想按照燃油车流程拆火花塞试火、换发电机，是否适用？",
+        "statuses": [
+          "outside_scope",
+          "refused",
+          "answered"
+        ],
+        "points": [
+          [
+            "不适用",
+            "不能",
+            "不套用"
+          ],
+          [
+            "高压",
+            "专业",
+            "合格维修"
+          ]
+        ],
+        "forbid_recommended": true
+      },
+      "answer": {
+        "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+        "knowledge_base": "general_diagnostics",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "dense",
+        "timings": {
+          "qualification_seconds": 0.022,
+          "embedding_seconds": 0.225,
+          "retrieval_seconds": 0.069,
+          "chat_seconds": 2.183,
+          "validation_seconds": 0.022
+        },
+        "answer_status": "outside_scope",
+        "claims": [],
+        "follow_up_questions": [],
+        "limitations": [
+          "纯电车辆无法进入可行驶状态（READY）不适用燃油发动机无法点火流程；火花塞、点火线圈分支只适用于具有火花点火系统的发动机，不用于纯电驱动系统。",
+          "高压动力电池、逆变器等高压部件不在本手册范围内，不能套用燃油车拆火花塞试火、换发电机的流程，也不应自行拆检高压部件。",
+          "本批资料为待技术复核的项目编制稿（draft，pending_technical_review），不是厂家维修手册，也未经过维修技术负责人核准，仅作草稿预览参考。",
+          "建议由合格维修人员按该纯电车型的实际系统与厂家资料进行诊断；本助手不提供高压拆检步骤，也不认定任何部件必换。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "citations": [],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 31,
+            "completion_tokens": 0,
+            "total_tokens": 31
+          },
+          "chat": {
+            "prompt_tokens": 9390,
+            "completion_tokens": 199,
+            "total_tokens": 9589
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      },
+      "automated_checks": {
+        "status": true,
+        "no_write_tools": true,
+        "points": true,
+        "parts": true,
+        "catalog_units": true,
+        "no_unproved_recommendation": true
+      },
+      "automated_pass": true
+    }
+  ],
+  "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+  "source_fingerprint": "dbe377aeca811fd8104f0b612d53b09afa11437adc4c6e0b1709fd3d0f0ca4cf",
+  "summary": {
+    "attempted": 2,
+    "automated_pass": 1,
+    "semantic_review": "requires_project_ai_source_review_not_model_self_score"
+  }
+}

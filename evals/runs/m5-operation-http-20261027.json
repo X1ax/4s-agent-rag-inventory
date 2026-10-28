@@ -1,0 +1,917 @@
+{
+  "created_at": "2026-10-27T06:50:58.865894+00:00",
+  "scope": "real HTTP on isolated test DB; browser-created purchase8094 and transfer8097",
+  "checks": [
+    {
+      "name": "anonymous read denied",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storekeeper GET /documents/8094",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "browser purchase400x4 completed in two receipts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storekeeper GET /documents/8097",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "browser transfer source target quantity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "manager POST /documents",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storekeeper GET /users",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "manager GET /users",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storekeeper PUT /pricing/suppliers/1055/parts/2793",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storekeeper POST /knowledge/submissions/not-a-real-key/review",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "manager POST /knowledge/submissions/not-a-real-key/review",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storekeeper POST /documents",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "admin POST /documents",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "admin POST /reviews/documents/8098/submit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "admin POST /reviews/documents/8098/decision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storekeeper POST /documents/8097/send",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storekeeper POST /reviews/documents/8097/submit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storekeeper POST /reviews/documents/8097/decision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "manager POST /reviews/documents/8097/decision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storekeeper POST /documents/8097/send",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storekeeper POST /documents/8097/send",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "repeat send no quantity or ledger changes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storekeeper GET /inventory/balances",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "transfer sent onhand15+2 transit3 conserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storekeeper POST /documents/8097/receive",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storekeeper POST /documents/8097/receive",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "repeat receive no quantity or ledger changes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storekeeper POST /documents",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storekeeper POST /documents",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storekeeper POST /documents/8099/post",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storekeeper POST /documents/8099/post",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "repeat post no quantity or ledger changes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storekeeper POST /documents",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storekeeper POST /documents/8100/post",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "storekeeper POST /documents/8100/post",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "repeat post no quantity or ledger changes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "manager GET /profits",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "actual moving cost and paid warranty profit",
+      "passed": true,
+      "detail": {
+        "revenue": "1100.00",
+        "paid_cost": "726.67",
+        "gross_profit": "373.33",
+        "warranty_cost": "363.33",
+        "contribution": "10.00",
+        "uncovered_revenue": "0.00",
+        "uncovered_cost": "0.00",
+        "gross_margin_rate": "0.339391",
+        "quantity": 3,
+        "paid_quantity": 2,
+        "warranty_quantity": 1,
+        "missing_lines": 0,
+        "missing_quantity": 0
+      }
+    },
+    {
+      "name": "storekeeper GET /inventory/balances",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "final onhand17 and no transit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ledger and value reconciled6310",
+      "passed": true,
+      "detail": {
+        "value": "6310.00",
+        "ledger": "6310.00"
+      }
+    }
+  ],
+  "events": [
+    {
+      "actor": "storekeeper",
+      "method": "GET",
+      "path": "/documents/8094",
+      "status": 200,
+      "response": {
+        "id": 8094,
+        "kind": "purchase",
+        "status": "completed",
+        "warehouse_id": 1932,
+        "target_warehouse_id": null,
+        "supplier_id": 1055,
+        "purchase_id": null,
+        "operator_id": 1571,
+        "business_date": "2026-10-27",
+        "note": "M5实际操作验收：采购4件，分两次收货",
+        "issue_type": null,
+        "warranty_reason": "",
+        "work_order": "",
+        "pricing_source": "live_transaction",
+        "created_at": "2026-10-27T06:30:22",
+        "review": {
+          "status": "approved",
+          "submitted_by": 1571,
+          "submitted_at": "2026-10-27T06:31:41",
+          "reviewer_id": 1573,
+          "reviewed_at": "2026-10-27T06:36:18",
+          "note": "M5操作验收：核对供货价400元及数量4件，通过采购审核"
+        },
+        "lines": [
+          {
+            "id": 29619,
+            "part_id": 2793,
+            "sku": "EV7C25C1E893-BAT",
+            "name": "验收蓄电池",
+            "unit": "件",
+            "image_key": "part-battery",
+            "quantity": 4,
+            "received_quantity": 4,
+            "unit_price": "400.00",
+            "purchase_line_id": null,
+            "supplier_id": 1055,
+            "sale_unit_price": null,
+            "cost_amount": null,
+            "quote_version": 1,
+            "sale_price_version": null,
+            "pricing_source": "supplier_quote",
+            "supplier": "验收电气供应商",
+            "subtotal": "1600.00"
+          }
+        ],
+        "total": "1600.00",
+        "receipts": [
+          {
+            "id": 8095,
+            "business_date": "2026-10-27"
+          },
+          {
+            "id": 8096,
+            "business_date": "2026-10-27"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "storekeeper",
+      "method": "GET",
+      "path": "/documents/8097",
+      "status": 200,
+      "response": {
+        "id": 8097,
+        "kind": "transfer",
+        "status": "draft",
+        "warehouse_id": 1932,
+        "target_warehouse_id": 1933,
+        "supplier_id": null,
+        "purchase_id": null,
+        "operator_id": 1571,
+        "business_date": "2026-10-27",
+        "note": "M5操作验收：主仓调拨3件至快修仓",
+        "issue_type": null,
+        "warranty_reason": "",
+        "work_order": "",
+        "pricing_source": "live_transaction",
+        "created_at": "2026-10-27T06:48:08",
+        "review": {
+          "status": "not_submitted",
+          "submitted_by": null,
+          "reviewer_id": null,
+          "note": ""
+        },
+        "lines": [
+          {
+            "id": 29622,
+            "part_id": 2793,
+            "sku": "EV7C25C1E893-BAT",
+            "name": "验收蓄电池",
+            "unit": "件",
+            "image_key": "part-battery",
+            "quantity": 3,
+            "received_quantity": 0,
+            "unit_price": "0.00",
+            "purchase_line_id": null,
+            "supplier_id": null,
+            "sale_unit_price": null,
+            "cost_amount": null,
+            "quote_version": null,
+            "sale_price_version": null,
+            "pricing_source": "",
+            "supplier": null,
+            "subtotal": "0.00"
+          }
+        ],
+        "total": "0.00",
+        "receipts": []
+      }
+    },
+    {
+      "actor": "manager",
+      "method": "POST",
+      "path": "/documents",
+      "status": 403,
+      "response": {
+        "detail": "当前账号没有库存登记权限"
+      }
+    },
+    {
+      "actor": "storekeeper",
+      "method": "GET",
+      "path": "/users",
+      "status": 403,
+      "response": {
+        "detail": "仅管理员可执行此操作"
+      }
+    },
+    {
+      "actor": "manager",
+      "method": "GET",
+      "path": "/users",
+      "status": 403,
+      "response": {
+        "detail": "仅管理员可执行此操作"
+      }
+    },
+    {
+      "actor": "storekeeper",
+      "method": "PUT",
+      "path": "/pricing/suppliers/1055/parts/2793",
+      "status": 403,
+      "response": {
+        "detail": "仅管理员可执行此操作"
+      }
+    },
+    {
+      "actor": "storekeeper",
+      "method": "POST",
+      "path": "/knowledge/submissions/not-a-real-key/review",
+      "status": 403,
+      "response": {
+        "detail": "仅管理员可执行此操作"
+      }
+    },
+    {
+      "actor": "manager",
+      "method": "POST",
+      "path": "/knowledge/submissions/not-a-real-key/review",
+      "status": 403,
+      "response": {
+        "detail": "仅管理员可执行此操作"
+      }
+    },
+    {
+      "actor": "storekeeper",
+      "method": "POST",
+      "path": "/documents",
+      "status": 422,
+      "response": {
+        "detail": [
+          {
+            "loc": [
+              "body",
+              "operator_id"
+            ],
+            "msg": "Extra inputs are not permitted",
+            "type": "extra_forbidden"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "admin",
+      "method": "POST",
+      "path": "/documents",
+      "status": 201,
+      "response": {
+        "id": 8098,
+        "status": "draft",
+        "replayed": false
+      }
+    },
+    {
+      "actor": "admin",
+      "method": "POST",
+      "path": "/reviews/documents/8098/submit",
+      "status": 200,
+      "response": {
+        "id": 8098,
+        "review_status": "pending",
+        "replayed": false
+      }
+    },
+    {
+      "actor": "admin",
+      "method": "POST",
+      "path": "/reviews/documents/8098/decision",
+      "status": 403,
+      "response": {
+        "detail": "不能审核本人创建或提交的业务单据，请交其他管理员或经理审核"
+      }
+    },
+    {
+      "actor": "storekeeper",
+      "method": "POST",
+      "path": "/documents/8097/send",
+      "status": 409,
+      "response": {
+        "detail": "采购或调拨单须先提交审核，并由其他管理员或经理审核通过；请前往审核中心"
+      }
+    },
+    {
+      "actor": "storekeeper",
+      "method": "POST",
+      "path": "/reviews/documents/8097/submit",
+      "status": 200,
+      "response": {
+        "id": 8097,
+        "review_status": "pending",
+        "replayed": false
+      }
+    },
+    {
+      "actor": "storekeeper",
+      "method": "POST",
+      "path": "/reviews/documents/8097/decision",
+      "status": 403,
+      "response": {
+        "detail": "仅管理员或经理可审核采购单和调拨单"
+      }
+    },
+    {
+      "actor": "manager",
+      "method": "POST",
+      "path": "/reviews/documents/8097/decision",
+      "status": 200,
+      "response": {
+        "id": 8097,
+        "review_status": "approved",
+        "replayed": false
+      }
+    },
+    {
+      "actor": "storekeeper",
+      "method": "POST",
+      "path": "/documents/8097/send",
+      "status": 200,
+      "response": {
+        "id": 8097,
+        "status": "sent",
+        "replayed": false
+      }
+    },
+    {
+      "actor": "storekeeper",
+      "method": "POST",
+      "path": "/documents/8097/send",
+      "status": 200,
+      "response": {
+        "id": 8097,
+        "status": "sent",
+        "replayed": true
+      }
+    },
+    {
+      "actor": "storekeeper",
+      "method": "GET",
+      "path": "/inventory/balances",
+      "status": 200,
+      "response": {
+        "items": [
+          {
+            "warehouse_id": 1932,
+            "warehouse": "验收主仓",
+            "part_id": 2793,
+            "sku": "EV7C25C1E893-BAT",
+            "name": "验收蓄电池",
+            "unit": "件",
+            "image_key": "part-battery",
+            "safety_stock": 3,
+            "part_active": true,
+            "warehouse_active": true,
+            "stock_value": 5583.33,
+            "quantity": 15,
+            "available": 15,
+            "purchase_pending": 6,
+            "in_transit": 0,
+            "initialized": true
+          },
+          {
+            "warehouse_id": 1933,
+            "warehouse": "验收快修仓",
+            "part_id": 2793,
+            "sku": "EV7C25C1E893-BAT",
+            "name": "验收蓄电池",
+            "unit": "件",
+            "image_key": "part-battery",
+            "safety_stock": 3,
+            "part_active": true,
+            "warehouse_active": true,
+            "stock_value": 700.0,
+            "quantity": 2,
+            "available": 2,
+            "purchase_pending": 0,
+            "in_transit": 3,
+            "initialized": true
+          }
+        ],
+        "total": 2,
+        "page": 1,
+        "page_size": 20
+      }
+    },
+    {
+      "actor": "storekeeper",
+      "method": "POST",
+      "path": "/documents/8097/receive",
+      "status": 200,
+      "response": {
+        "id": 8097,
+        "status": "received",
+        "replayed": false
+      }
+    },
+    {
+      "actor": "storekeeper",
+      "method": "POST",
+      "path": "/documents/8097/receive",
+      "status": 200,
+      "response": {
+        "id": 8097,
+        "status": "received",
+        "replayed": true
+      }
+    },
+    {
+      "actor": "storekeeper",
+      "method": "POST",
+      "path": "/documents",
+      "status": 422,
+      "response": {
+        "detail": [
+          {
+            "loc": [
+              "body"
+            ],
+            "msg": "Value error, 请选择收费维修或质保维修",
+            "type": "value_error"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "storekeeper",
+      "method": "POST",
+      "path": "/documents",
+      "status": 201,
+      "response": {
+        "id": 8099,
+        "status": "draft",
+        "replayed": false
+      }
+    },
+    {
+      "actor": "storekeeper",
+      "method": "POST",
+      "path": "/documents/8099/post",
+      "status": 200,
+      "response": {
+        "id": 8099,
+        "status": "posted",
+        "replayed": false
+      }
+    },
+    {
+      "actor": "storekeeper",
+      "method": "POST",
+      "path": "/documents/8099/post",
+      "status": 200,
+      "response": {
+        "id": 8099,
+        "status": "posted",
+        "replayed": true
+      }
+    },
+    {
+      "actor": "storekeeper",
+      "method": "POST",
+      "path": "/documents",
+      "status": 201,
+      "response": {
+        "id": 8100,
+        "status": "draft",
+        "replayed": false
+      }
+    },
+    {
+      "actor": "storekeeper",
+      "method": "POST",
+      "path": "/documents/8100/post",
+      "status": 200,
+      "response": {
+        "id": 8100,
+        "status": "posted",
+        "replayed": false
+      }
+    },
+    {
+      "actor": "storekeeper",
+      "method": "POST",
+      "path": "/documents/8100/post",
+      "status": 200,
+      "response": {
+        "id": 8100,
+        "status": "posted",
+        "replayed": true
+      }
+    },
+    {
+      "actor": "manager",
+      "method": "GET",
+      "path": "/profits",
+      "status": 200,
+      "response": {
+        "date_from": "2026-10-27",
+        "date_to": "2026-10-27",
+        "warehouse_id": null,
+        "part_id": 2793,
+        "category": null,
+        "totals": {
+          "revenue": "1100.00",
+          "paid_cost": "726.67",
+          "gross_profit": "373.33",
+          "warranty_cost": "363.33",
+          "contribution": "10.00",
+          "uncovered_revenue": "0.00",
+          "uncovered_cost": "0.00",
+          "gross_margin_rate": "0.339391",
+          "quantity": 3,
+          "paid_quantity": 2,
+          "warranty_quantity": 1,
+          "missing_lines": 0,
+          "missing_quantity": 0
+        },
+        "ranking": [
+          {
+            "part_id": 2793,
+            "sku": "EV7C25C1E893-BAT",
+            "name": "验收蓄电池",
+            "unit": "件",
+            "revenue": "1100.00",
+            "paid_cost": "726.67",
+            "gross_profit": "373.33",
+            "warranty_cost": "363.33",
+            "contribution": "10.00",
+            "uncovered_revenue": "0.00",
+            "uncovered_cost": "0.00",
+            "gross_margin_rate": "0.339391",
+            "quantity": 3,
+            "paid_quantity": 2,
+            "warranty_quantity": 1,
+            "missing_lines": 0,
+            "missing_quantity": 0
+          }
+        ],
+        "ranking_total": 1,
+        "trend": [
+          {
+            "business_date": "2026-10-27",
+            "revenue": "1100.00",
+            "paid_cost": "726.67",
+            "gross_profit": "373.33",
+            "warranty_cost": "363.33",
+            "contribution": "10.00",
+            "uncovered_revenue": "0.00",
+            "uncovered_cost": "0.00",
+            "gross_margin_rate": "0.339391",
+            "quantity": 3,
+            "paid_quantity": 2,
+            "warranty_quantity": 1,
+            "missing_lines": 0,
+            "missing_quantity": 0
+          }
+        ],
+        "details": [
+          {
+            "document_id": 8100,
+            "business_date": "2026-10-27",
+            "warehouse": "验收快修仓",
+            "warehouse_id": 1933,
+            "part_id": 2793,
+            "name": "验收蓄电池",
+            "sku": "EV7C25C1E893-BAT",
+            "issue_type": "warranty",
+            "quantity": 1,
+            "sale_unit_price": "0.00",
+            "revenue": "0.00",
+            "cost_amount": "363.33",
+            "gross_profit": null,
+            "pricing_source": "warranty",
+            "complete": true
+          },
+          {
+            "document_id": 8099,
+            "business_date": "2026-10-27",
+            "warehouse": "验收快修仓",
+            "warehouse_id": 1933,
+            "part_id": 2793,
+            "name": "验收蓄电池",
+            "sku": "EV7C25C1E893-BAT",
+            "issue_type": "paid_repair",
+            "quantity": 2,
+            "sale_unit_price": "550.00",
+            "revenue": "1100.00",
+            "cost_amount": "726.67",
+            "gross_profit": "373.33",
+            "pricing_source": "store_price",
+            "complete": true
+          }
+        ],
+        "details_total": 2,
+        "page": 1,
+        "details_page": 1,
+        "page_size": 7,
+        "notice": "仅按已过账领用流水业务日期统计备件金额，成本按实际执行顺序分摊；不计人工、房租、税额拆分或厂家赔付，非净利润。缺失行保留已知金额，毛利仅汇总结算与成本完整的收费明细；缺失时毛利率暂无，贡献为已覆盖收费毛利减已知质保成本。明细保留模拟补录来源。"
+      }
+    },
+    {
+      "actor": "storekeeper",
+      "method": "GET",
+      "path": "/inventory/balances",
+      "status": 200,
+      "response": {
+        "items": [
+          {
+            "warehouse_id": 1932,
+            "warehouse": "验收主仓",
+            "part_id": 2793,
+            "sku": "EV7C25C1E893-BAT",
+            "name": "验收蓄电池",
+            "unit": "件",
+            "image_key": "part-battery",
+            "safety_stock": 3,
+            "part_active": true,
+            "warehouse_active": true,
+            "stock_value": 5583.33,
+            "quantity": 15,
+            "available": 15,
+            "purchase_pending": 6,
+            "in_transit": 0,
+            "initialized": true
+          },
+          {
+            "warehouse_id": 1933,
+            "warehouse": "验收快修仓",
+            "part_id": 2793,
+            "sku": "EV7C25C1E893-BAT",
+            "name": "验收蓄电池",
+            "unit": "件",
+            "image_key": "part-battery",
+            "safety_stock": 3,
+            "part_active": true,
+            "warehouse_active": true,
+            "stock_value": 726.67,
+            "quantity": 2,
+            "available": 2,
+            "purchase_pending": 0,
+            "in_transit": 0,
+            "initialized": true
+          }
+        ],
+        "total": 2,
+        "page": 1,
+        "page_size": 20
+      }
+    }
+  ],
+  "after_send_balances": {
+    "items": [
+      {
+        "warehouse_id": 1932,
+        "warehouse": "验收主仓",
+        "part_id": 2793,
+        "sku": "EV7C25C1E893-BAT",
+        "name": "验收蓄电池",
+        "unit": "件",
+        "image_key": "part-battery",
+        "safety_stock": 3,
+        "part_active": true,
+        "warehouse_active": true,
+        "stock_value": 5583.33,
+        "quantity": 15,
+        "available": 15,
+        "purchase_pending": 6,
+        "in_transit": 0,
+        "initialized": true
+      },
+      {
+        "warehouse_id": 1933,
+        "warehouse": "验收快修仓",
+        "part_id": 2793,
+        "sku": "EV7C25C1E893-BAT",
+        "name": "验收蓄电池",
+        "unit": "件",
+        "image_key": "part-battery",
+        "safety_stock": 3,
+        "part_active": true,
+        "warehouse_active": true,
+        "stock_value": 700.0,
+        "quantity": 2,
+        "available": 2,
+        "purchase_pending": 0,
+        "in_transit": 3,
+        "initialized": true
+      }
+    ],
+    "total": 2,
+    "page": 1,
+    "page_size": 20
+  },
+  "final_balances": {
+    "items": [
+      {
+        "warehouse_id": 1932,
+        "warehouse": "验收主仓",
+        "part_id": 2793,
+        "sku": "EV7C25C1E893-BAT",
+        "name": "验收蓄电池",
+        "unit": "件",
+        "image_key": "part-battery",
+        "safety_stock": 3,
+        "part_active": true,
+        "warehouse_active": true,
+        "stock_value": 5583.33,
+        "quantity": 15,
+        "available": 15,
+        "purchase_pending": 6,
+        "in_transit": 0,
+        "initialized": true
+      },
+      {
+        "warehouse_id": 1933,
+        "warehouse": "验收快修仓",
+        "part_id": 2793,
+        "sku": "EV7C25C1E893-BAT",
+        "name": "验收蓄电池",
+        "unit": "件",
+        "image_key": "part-battery",
+        "safety_stock": 3,
+        "part_active": true,
+        "warehouse_active": true,
+        "stock_value": 726.67,
+        "quantity": 2,
+        "available": 2,
+        "purchase_pending": 0,
+        "in_transit": 0,
+        "initialized": true
+      }
+    ],
+    "total": 2,
+    "page": 1,
+    "page_size": 20
+  },
+  "documents": {
+    "browser_purchase": 8094,
+    "browser_transfer": 8097,
+    "self_review_rejected": 8098,
+    "paid": 8099,
+    "warranty": 8100
+  }
+}

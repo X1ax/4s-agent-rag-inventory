@@ -1,0 +1,41 @@
+{
+  "created_at": "2026-10-27T13:01:39.127584+00:00",
+  "scope": "M5 actual operations as user requested; clean reproduction excluded",
+  "checks": {
+    "development_unchanged": true,
+    "test_cleanup": true,
+    "ready": true,
+    "frontend": true,
+    "live_scope_fix": true,
+    "same_verified_agent_code": true,
+    "full_regression": true,
+    "operational_http_41": true,
+    "three_roles_same_data": true,
+    "knowledge_upload_chain": true,
+    "confirmed_real_document": true,
+    "invalid_requests_rolled_back": true,
+    "deliverables_exist": true,
+    "no_pending_plan": true,
+    "no_tokens_in_reports": true
+  },
+  "details": {
+    "development_digest": "f980d0338205e0e396abfeec969af3056faa6afb3563b79f4e0dfb8c8ea258a9",
+    "test_counts": {
+      "users": 0,
+      "documents": 0,
+      "stock_balances": 0,
+      "stock_ledger": 0,
+      "agent_proposals": 0
+    }
+  },
+  "deliverable_sha256": {
+    "docs/m5-operation-verification.md": "282dffcb8a163a2f357d76095dbbcaa4e2a4b06ec2073e6854479d08b7b88f99",
+    "docs/operation-guide.md": "df5229171d12fbb3bc0d40abe2d981b74ba2b966e60dc5b9f94a3f55f12f3923",
+    "docs/demo-script.md": "ea282d018719b2f05adf4702abb7ed0be140f50fa6b1c7efd23b7b5c77ce72f8",
+    "docs/api/openapi-20261027.json": "5d810d0cdc59a261f982fc2181456fefbc7b4a3345393db646a59626ed1fe1d1",
+    "docs/screenshots/m5-profit-operations-20261027.png": "3aedd7f8a97e86cbfcfc19952b692760bfc84eb51318bbc5d23a318813d7f744",
+    "docs/screenshots/m5-agent-confirmed-20261027.png": "e8607c14eec0f06dfb328a95940251a15cb17e9530fc756067696a2bc16402ef"
+  },
+  "git_commit_created": false,
+  "clean_environment_tested": false
+}

@@ -1,0 +1,230 @@
+{
+  "scope": "single_real_model_development_smoke_not_independent_evaluation",
+  "question": "按INV-SEC-010与INV-PUR-003说明，管理员、库管、经理分别能审核哪些事项？采购审核通过后是否立即增加库存？",
+  "answer": {
+    "generation_id": "4a078b4e25ec48e9a24c3db4714de832",
+    "knowledge_base": "inventory_policies",
+    "knowledge_scope": "draft_preview",
+    "retrieval_mode": "hybrid",
+    "timings": {
+      "qualification_seconds": 0.241,
+      "embedding_seconds": 0.233,
+      "retrieval_seconds": 0.354,
+      "chat_seconds": 3.665,
+      "validation_seconds": 0.153
+    },
+    "answer_status": "answered",
+    "claims": [
+      {
+        "text": "管理员可维护主数据、账号、库存业务及审计查询，审核知识资料，也可审核他人的采购与调拨单。",
+        "citation_ids": [
+          "f6a6ba57d7d56d631cd90ac45d2cb31b6934d9c0b2ea0234696cf8cfc2984f57"
+        ]
+      },
+      {
+        "text": "库管可查询、制单、提交本人采购与调拨单审核，办理期初、收货、领用及调拨收发，但不能审核。",
+        "citation_ids": [
+          "f6a6ba57d7d56d631cd90ac45d2cb31b6934d9c0b2ea0234696cf8cfc2984f57"
+        ]
+      },
+      {
+        "text": "经理可查看业务资料并审核采购与调拨单，不能办理库存登记、维护主数据或审核知识资料。",
+        "citation_ids": [
+          "f6a6ba57d7d56d631cd90ac45d2cb31b6934d9c0b2ea0234696cf8cfc2984f57"
+        ]
+      },
+      {
+        "text": "采购草稿由管理员或库管创建，创建人在审核中心提交，由其他管理员或经理审核；禁止审核本人创建或提交的业务单据。",
+        "citation_ids": [
+          "7e1d8ca63c024df6d03bce280f1752b06d58c02e2e9d045b5cd080654ae0f5ef"
+        ]
+      },
+      {
+        "text": "采购草稿审核通过后，由管理员或库管另行执行业务确认，进入已确认状态；审核本身不确认采购，也不增加库存。",
+        "citation_ids": [
+          "a2aac3a9bdc6914b1f9200b61ebaab8323830de88977fbde7b7ae05a2da84ebd"
+        ]
+      },
+      {
+        "text": "创建或确认均不增加现有库存；确认后的有效未收数量可计入采购待收，但不等于合同已签署、外部订单已发送或付款已完成。",
+        "citation_ids": [
+          "a2aac3a9bdc6914b1f9200b61ebaab8323830de88977fbde7b7ae05a2da84ebd"
+        ]
+      },
+      {
+        "text": "采购只有实际合格收货后增加现有量，草稿不产生实物库存变化。",
+        "citation_ids": [
+          "402b6de08a83653dd588d8d53554f9194e28bd321f79c5470c093eb394cd135f"
+        ]
+      }
+    ],
+    "follow_up_questions": [],
+    "limitations": [
+      "本轮证据均为draft（pending_approval）项目编制稿，不是已生效的企业制度；INV-POL-001-C020要求保留“待核准”状态，批准人和生效日期均未登记。",
+      "INV-POL-001-C016指出管理员、库管、经理是技术访问角色，经理只读角色的存在不代表系统具备经理在线审批功能；系统未承载的批准应保存于受控记录。",
+      "采购批准额度与审批层级须来自企业有效授权表，未登记时应提交负责人核定，不能以软件角色推定无限授权。",
+      "本服务只读取文档，未查询实时库存或办理业务单据。",
+      "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+    ],
+    "fault_types": [],
+    "checks": [],
+    "part_decisions": [],
+    "citations": [
+      {
+        "knowledge_base": "inventory_policies",
+        "document_id": "INV-SEC-010",
+        "document_version": "1.0-draft.2",
+        "title": "库存权限审计与业务连续性管理办法",
+        "native_format": "md",
+        "source_state": "draft",
+        "source_status": "pending_approval",
+        "citation_id": "f6a6ba57d7d56d631cd90ac45d2cb31b6934d9c0b2ea0234696cf8cfc2984f57",
+        "generation_id": "4a078b4e25ec48e9a24c3db4714de832",
+        "chunk_id": "b72efa2f2f1cd6ca984e4e806cb061fd5f30c7e1908a2d5313c72abea6c9b43f",
+        "unit_id": null,
+        "unit_ids": [
+          "INV-SEC-010-C001",
+          "INV-SEC-010-C002",
+          "INV-SEC-010-C003",
+          "INV-SEC-010-C004"
+        ],
+        "section_path": [
+          "库存权限审计与业务连续性管理办法",
+          "1 账号与角色"
+        ],
+        "excerpt": "库存权限审计与业务连续性管理办法\n\n本办法规定账号授权、业务记录、异常重试、系统中断与知识辅助的控制要求。当前为企业制度待核准稿；制度要求不能代替实际安全配置、备份恢复验证和生产上线审核。\n\n1 账号与角色\n\nINV-SEC-010-C001 一人一账号，按岗位需要授予权限，禁止共用管理员或库管账号。入职、调岗、离岗及代班应由业务负责人确认并登记授权或撤销，系统维护人员不能自行批准业务权限范围。\n\nINV-SEC-010-C002 管理员可维护主数据、账号、库存业务及审计查询，审核知识资料，也可审核他人的采购与调拨单。库管可查询、制单、提交本人采购与调拨单审核，办理期初、收货、领用及调拨收发，但不能审核。经理可查看业务资料并审核采购与调拨单，不能办理库存登记、维护主数据或审核知识资料。三类角色均可上传资料，经理与库管只能查看本人上传记录；管理员审核并完成索引后方可检索。权限由服务端实施，隐藏按钮不构成授权控制。\n\nINV-SEC-010-C003 不能停用或降级当前管理员自身；需要移交管理职责时先确保有经批准的接替账号和交接安排。角色变更应复核实际岗位授权和后续访问，不把技术角色名称当作业务审批权限。\n\nINV-SEC-010-C004 密码、密钥和数据库连接信息不进入业务备注、文档知识库、截图或聊天。凭据由受控配置保管，密码不得明文存储；账号开通和凭据重置按企业安全流程处理，不从他人会话猜测或恢复密码。",
+        "line_start": 17,
+        "line_end": 24,
+        "tables": []
+      },
+      {
+        "knowledge_base": "inventory_policies",
+        "document_id": "INV-PUR-003",
+        "document_version": "1.0-draft.2",
+        "title": "采购需求与采购单控制规程",
+        "native_format": "docx",
+        "source_state": "draft",
+        "source_status": "pending_approval",
+        "citation_id": "7e1d8ca63c024df6d03bce280f1752b06d58c02e2e9d045b5cd080654ae0f5ef",
+        "generation_id": "4a078b4e25ec48e9a24c3db4714de832",
+        "chunk_id": "24160ccb946eee9eb2ae048e46fd5b4548ed72adcca5f18ffa759c9c80acdda3",
+        "unit_id": null,
+        "unit_ids": [
+          "INV-PUR-003-C007",
+          "INV-PUR-003-C008"
+        ],
+        "section_path": [
+          "采购需求与采购单控制规程",
+          "3 批准与权限"
+        ],
+        "excerpt": "采购需求与采购单控制规程\n\n本规程将需求核验、业务批准、采购单确认和实际交付分开控制，适用于常规补货、维修专用件和紧急采购。当前为待核准稿，不授予实际签约或付款权限。\n\n3 批准与权限\n\nINV-PUR-003-C007 采购批准应关联需求与报价的最终版本，确认金额口径、用途、数量及授权范围。批准额度和审批层级必须来自企业有效授权表，未登记时提交负责人核定，不以软件角色推定无限授权。\nINV-PUR-003-C008 经办、复核和批准按企业岗位安排分工。采购草稿由管理员或库管创建，创建人在审核中心提交，由其他管理员或经理审核；禁止审核本人创建或提交的业务单据。审核记录保存提交人、审核人、时间和意见，不以聊天中的赞同代替业务审核。软件审核不自动证明合同、额度或外部企业授权已经满足。\n| 控制环节 | 责任岗位 | 需要确认的记录 |\n| --- | --- | --- |\n| 需求核实 | 需求提出人与仓管 | 用途 数量 实时供给 工单或补货依据 |\n| 采购复核 | 采购经办与复核岗位 | 规格 供应商 报价 交期 批准对象 |\n| 授权批准 | 企业授权批准人 | 授权范围 批准版本 例外原因 |\n| 到货验收 | 仓管与必要技术岗位 | 实收数量 质量标识 差异及交接 |",
+        "block_start": 14,
+        "block_end": 15,
+        "tables": [
+          {
+            "ordinal": 2,
+            "headers": [
+              "控制环节",
+              "责任岗位",
+              "需要确认的记录"
+            ],
+            "rows": [
+              [
+                "需求核实",
+                "需求提出人与仓管",
+                "用途 数量 实时供给 工单或补货依据"
+              ],
+              [
+                "采购复核",
+                "采购经办与复核岗位",
+                "规格 供应商 报价 交期 批准对象"
+              ],
+              [
+                "授权批准",
+                "企业授权批准人",
+                "授权范围 批准版本 例外原因"
+              ],
+              [
+                "到货验收",
+                "仓管与必要技术岗位",
+                "实收数量 质量标识 差异及交接"
+              ]
+            ],
+            "text": "| 控制环节 | 责任岗位 | 需要确认的记录 |\n| --- | --- | --- |\n| 需求核实 | 需求提出人与仓管 | 用途 数量 实时供给 工单或补货依据 |\n| 采购复核 | 采购经办与复核岗位 | 规格 供应商 报价 交期 批准对象 |\n| 授权批准 | 企业授权批准人 | 授权范围 批准版本 例外原因 |\n| 到货验收 | 仓管与必要技术岗位 | 实收数量 质量标识 差异及交接 |",
+            "block_start": 16,
+            "block_end": 16
+          }
+        ]
+      },
+      {
+        "knowledge_base": "inventory_policies",
+        "document_id": "INV-PUR-003",
+        "document_version": "1.0-draft.2",
+        "title": "采购需求与采购单控制规程",
+        "native_format": "docx",
+        "source_state": "draft",
+        "source_status": "pending_approval",
+        "citation_id": "a2aac3a9bdc6914b1f9200b61ebaab8323830de88977fbde7b7ae05a2da84ebd",
+        "generation_id": "4a078b4e25ec48e9a24c3db4714de832",
+        "chunk_id": "f77e205f907fe653d43b464a652b8fbebe86c4637e19cb5becdb18e046238135",
+        "unit_id": null,
+        "unit_ids": [
+          "INV-PUR-003-C009",
+          "INV-PUR-003-C010",
+          "INV-PUR-003-C011",
+          "INV-PUR-003-C012"
+        ],
+        "section_path": [
+          "采购需求与采购单控制规程",
+          "4 采购单建立与确认"
+        ],
+        "excerpt": "采购需求与采购单控制规程\n\n本规程将需求核验、业务批准、采购单确认和实际交付分开控制，适用于常规补货、维修专用件和紧急采购。当前为待核准稿，不授予实际签约或付款权限。\n\n4 采购单建立与确认\n\nINV-PUR-003-C009 建立采购草稿时选择业务仓库，每条明细先选供应商再选其供货范围内的备件，录入正整数数量、准确单位及非负单价。同单不得重复同一SKU，业务日期不得晚于办理日。供应商、仓库和备件须处于允许办理状态。\nINV-PUR-003-C010 草稿审核通过后，由管理员或库管另行执行业务确认，进入已确认状态；审核本身不确认采购，也不增加库存。创建或确认均不增加现有库存；确认后的有效未收数量可计入采购待收，但不等于合同已签署、外部订单已发送或付款已完成。\nINV-PUR-003-C011 当前草稿没有直接编辑能力，填写错误或审核驳回后应取消并重新建立，保留原意见及原草稿关联，不覆盖原审核结论。重新制单需重新提交审核；不得修改主数据或历史明细来绕过审核。\nINV-PUR-003-C012 同一业务请求以唯一请求标识办理。结果不明时先检查单据状态与请求结果，重试原请求；变更参数需要重新复核，不复用与原参数不同的请求标识。",
+        "block_start": 19,
+        "block_end": 22,
+        "tables": []
+      },
+      {
+        "knowledge_base": "inventory_policies",
+        "document_id": "INV-POL-001",
+        "document_version": "1.0-draft.2",
+        "title": "备件库存管理总则与职责",
+        "native_format": "md",
+        "source_state": "draft",
+        "source_status": "pending_approval",
+        "citation_id": "402b6de08a83653dd588d8d53554f9194e28bd321f79c5470c093eb394cd135f",
+        "generation_id": "4a078b4e25ec48e9a24c3db4714de832",
+        "chunk_id": "27063b106c8bdf16f983a3f4b3a083f9af396727424243e8ee975f75af186a0c",
+        "unit_id": null,
+        "unit_ids": [
+          "INV-POL-001-C009",
+          "INV-POL-001-C010",
+          "INV-POL-001-C011",
+          "INV-POL-001-C012",
+          "INV-POL-001-C013"
+        ],
+        "section_path": [
+          "备件库存管理总则与职责",
+          "3 单据与数量控制"
+        ],
+        "excerpt": "备件库存管理总则与职责\n\n本制度建立门店备件从需求提出、采购、验收、保管、领用、调拨到差异处理的控制要求，适用于单门店下各仓库及参与业务、财务、质量和系统管理的岗位。文件按企业内部制度编制；实际经营主体、审批人、生效日期及授权参数须经企业核准。当前为待核准稿，不能作为已经生效的授权文件。\n\n3 单据与数量控制\n\nINV-POL-001-C009 单据至少应能追溯业务类型、业务日期、备件编码、仓库、数量、单位、实际操作人及关联事项。采购另需供应商和单价；调拨另需目标仓。维修领用应关联工单或其他有效领用依据。\n\nINV-POL-001-C010 草稿不产生实物库存变化。采购只有实际合格收货后增加现有量；领用只有过账后扣减；调拨发出后在途单列，目标仓收货后才计入其现有量。禁止把预计到货、口头承诺或未执行草稿当作现有库存。\n\nINV-POL-001-C011 库存按仓库与备件分别核对，计量单位必须一致，数量不得为负。不同SKU之间不得借账；同名、外观相似或包装相似不能作为合并编码、替代使用或认定车型适配的依据。\n\nINV-POL-001-C012 已生效的单据与流水不得直接删除、覆盖或改写数量。发现错误应按INV-ADJ-008建立来源关联、调查和批准记录，并通过获准的反向或调整业务处理。不得虚构采购、领用、调拨或再次期初登记来抵补差异。\n\nINV-POL-001-C013 网络超时或页面中断不代表业务失败。经办人应先核对原单据与流水，使用原请求重试或查询确认；不得在结果不明时连续创建参数相同的新业务。",
+        "line_start": 37,
+        "line_end": 46,
+        "tables": []
+      }
+    ],
+    "usage": {
+      "embedding": {
+        "prompt_tokens": 42,
+        "completion_tokens": 0,
+        "total_tokens": 42
+      },
+      "chat": {
+        "prompt_tokens": 8143,
+        "completion_tokens": 686,
+        "total_tokens": 8829
+      }
+    },
+    "embedding_requests": 1,
+    "chat_requests": 1
+  }
+}

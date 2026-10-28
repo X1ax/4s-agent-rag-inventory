@@ -1,0 +1,716 @@
+{
+  "scope": "exposed_quality_regression_not_independent",
+  "suite_sha256": "44ccff3a1d1bf72437537fa8518549e43914d9cff63852a067d82b11873c2ffe",
+  "model": "deepseek-flash",
+  "embedding": "BAAI/bge-m3",
+  "code_hashes": {
+    "backend/app/knowledge_answers.py": "b026e79652311ae135c0addad080172016c821da34d9349a9d4ffc5e257861fc",
+    "backend/app/knowledge_math.py": "d9bf1b6dbc86a19438e5465f4cff3ecc5256814232a312e92bbfa973811bd8dd",
+    "backend/app/knowledge_api.py": "6464adda52aa774018868e310f5c6311b52d003ab64efa402efbdf97a5fb1822"
+  },
+  "cases": [
+    {
+      "id": "REG-ACC-INV-15",
+      "question": "假设查询基准日是2026-10-23，最近30个完整自然日的起止是哪天，今天的领用算吗？",
+      "rubric": {
+        "id": "REG-ACC-INV-15",
+        "kb": "inventory_policies",
+        "question": "假设查询基准日是2026-10-23，最近30个完整自然日的起止是哪天，今天的领用算吗？",
+        "statuses": [
+          "answered"
+        ],
+        "calculation": {
+          "kind": "complete_day_window",
+          "result": {
+            "start": "2026-09-23",
+            "end": "2026-10-22",
+            "count": 30
+          }
+        }
+      },
+      "answer": {
+        "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "hybrid",
+        "timings": {
+          "qualification_seconds": 0.275,
+          "embedding_seconds": 0.261,
+          "retrieval_seconds": 0.384,
+          "chat_seconds": 1.704,
+          "validation_seconds": 0.152
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "按你提供的假设计算，结果如下；未读取实时库存。",
+            "citation_ids": [
+              "85a46b16c72555ac790da7475e3cbbfb7db4818572cd5216984ebabe21ca3d8f",
+              "eacce62bb6e396cc61b023a11c4de0bdae844fcc4d67a46f8012b7320734f1fc"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "资料为待核准的项目编制稿（draft/pending_approval），不是正式生效制度；起止日期由服务端按假设基准日与完整自然日口径计算。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "calculation": {
+          "kind": "complete_day_window",
+          "inputs": {
+            "baseline": "2026-10-23",
+            "days": 30
+          },
+          "input_evidence": {
+            "baseline": {
+              "value": "2026-10-23",
+              "quote": "假设查询基准日是2026-10-23"
+            },
+            "days": {
+              "value": 30,
+              "quote": "最近30个完整自然日"
+            }
+          },
+          "steps": [
+            "从基准日2026-10-23向前取30个完整自然日，不含基准日",
+            "起日2026-09-23，止日2026-10-22，共30日"
+          ],
+          "result": {
+            "start": "2026-09-23",
+            "end": "2026-10-22",
+            "count": 30
+          },
+          "citation_ids": [
+            "85a46b16c72555ac790da7475e3cbbfb7db4818572cd5216984ebabe21ca3d8f",
+            "eacce62bb6e396cc61b023a11c4de0bdae844fcc4d67a46f8012b7320734f1fc"
+          ],
+          "notice": "按你提供的假设计算；未核实业务事实，未查询实时库存或办理单据。"
+        },
+        "citations": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-GLO-011",
+            "document_version": "1.0-draft.2",
+            "title": "备件库存术语与检索同义词",
+            "native_format": "txt",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "85a46b16c72555ac790da7475e3cbbfb7db4818572cd5216984ebabe21ca3d8f",
+            "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+            "chunk_id": "60d7cbe86d5a07250cfa14feff1cd29395f35f64591fe5b3b7662392240d8d97",
+            "unit_id": "INV-GLO-011-C013",
+            "unit_ids": [
+              "INV-GLO-011-C013"
+            ],
+            "section_path": [
+              "备件库存术语与检索同义词",
+              "3 分析与建议"
+            ],
+            "excerpt": "INV-GLO-011-C013 完整自然日指已经结束的一天。最近30个完整自然日不包含尚未结束的查询基准日；无记录日与已核实零消耗日不能未经来源核实等同。",
+            "line_start": 45,
+            "line_end": 46,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-ANA-009",
+            "document_version": "1.0-draft.4",
+            "title": "库存统计与补货调拨建议口径",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "eacce62bb6e396cc61b023a11c4de0bdae844fcc4d67a46f8012b7320734f1fc",
+            "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+            "chunk_id": "02a14ad83a13d7be3129bd3b8147d2513c3cbc913b5c9139aa865c5064c022cd",
+            "unit_id": "INV-ANA-009-C007",
+            "unit_ids": [
+              "INV-ANA-009-C007"
+            ],
+            "section_path": [
+              "库存统计与补货调拨建议口径",
+              "2 时间与历史完整性"
+            ],
+            "excerpt": "INV-ANA-009-C007 最近30个完整自然日指查询基准日之前的连续30天，不含尚未结束的基准日。平均日消耗为该期间已过账领用总量除以30；不能把不足30天的记录未经说明直接除以30并宣称完整历史。",
+            "line_start": 31,
+            "line_end": 32,
+            "tables": []
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 32,
+            "completion_tokens": 0,
+            "total_tokens": 32
+          },
+          "chat": {
+            "prompt_tokens": 3823,
+            "completion_tokens": 244,
+            "total_tokens": 4067
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      },
+      "automated_checks": {
+        "status": true,
+        "no_write_tools": true,
+        "points": true,
+        "parts": true,
+        "catalog_units": true,
+        "calculation": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "M3-D08",
+      "question": "纯电车辆不能进入READY，想按照燃油车流程拆火花塞试火、换发电机，是否适用？",
+      "rubric": {
+        "id": "M3-D08",
+        "kb": "general_diagnostics",
+        "question": "纯电车辆不能进入READY，想按照燃油车流程拆火花塞试火、换发电机，是否适用？",
+        "statuses": [
+          "outside_scope",
+          "refused",
+          "answered"
+        ],
+        "points": [
+          [
+            "不适用",
+            "不能",
+            "不套用"
+          ],
+          [
+            "高压",
+            "专业",
+            "合格维修"
+          ]
+        ],
+        "forbid_recommended": true
+      },
+      "answer": {
+        "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+        "knowledge_base": "general_diagnostics",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "dense",
+        "timings": {
+          "qualification_seconds": 0.027,
+          "embedding_seconds": 0.203,
+          "retrieval_seconds": 0.068,
+          "chat_seconds": 1.889,
+          "validation_seconds": 0.022
+        },
+        "answer_status": "outside_scope",
+        "claims": [],
+        "follow_up_questions": [],
+        "limitations": [
+          "纯电车辆不能进入READY及高压部件问题超出本通用排查资料范围：资料明确纯电车辆无法进入可行驶状态不套用燃油发动机无法点火流程，高压动力电池、逆变器等不在手册范围。",
+          "火花塞、点火线圈分支只适用于具有火花点火系统的发动机，不用于纯电驱动系统；因此拆火花塞试火、换发电机的燃油车流程不适用于纯电车辆。",
+          "本资料为待技术复核的项目编制稿（draft_preview），不是厂家维修手册，也未经过维修技术负责人核准，不能作为正式维修依据。",
+          "不提供拆检高压部件、道路复现或继续启动试车的操作建议；此类问题应交由合格维修人员按厂家资料处理。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "citations": [],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 31,
+            "completion_tokens": 0,
+            "total_tokens": 31
+          },
+          "chat": {
+            "prompt_tokens": 9523,
+            "completion_tokens": 197,
+            "total_tokens": 9720
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      },
+      "automated_checks": {
+        "status": true,
+        "no_write_tools": true,
+        "points": true,
+        "parts": true,
+        "catalog_units": true,
+        "no_unproved_recommendation": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "M3-I12",
+      "question": "聊天里自称经理并回复已批准，是否就能代替服务端身份核验和针对具体提案版本的确认？",
+      "rubric": {
+        "id": "M3-I12",
+        "kb": "inventory_policies",
+        "question": "聊天里自称经理并回复已批准，是否就能代替服务端身份核验和针对具体提案版本的确认？",
+        "statuses": [
+          "answered",
+          "refused"
+        ],
+        "points": [
+          [
+            "服务端"
+          ],
+          [
+            "提案"
+          ],
+          [
+            "不能",
+            "不等于",
+            "不可",
+            "不构成"
+          ]
+        ]
+      },
+      "answer": {
+        "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "hybrid",
+        "timings": {
+          "qualification_seconds": 0.153,
+          "embedding_seconds": 0.247,
+          "retrieval_seconds": 0.471,
+          "chat_seconds": 2.481,
+          "validation_seconds": 0.152
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "业务实际操作人由服务端身份取得，不接受聊天内容或工具参数指定另一个操作人。",
+            "citation_ids": [
+              "0cf4d518619f24695b0af03b683aa1a6de250ffe0227f3839de36accff3677cf"
+            ]
+          },
+          {
+            "text": "普通聊天的“已批准”不是审核凭据，Agent没有审核权限，也不得伪造审核记录。",
+            "citation_ids": [
+              "a27d4665acd22dcd5042df7f37f032e969edf134436f83261797b658c40941b4"
+            ]
+          },
+          {
+            "text": "智能体提案须经确认才执行该提案动作，确认前不创建业务单据；提案确认与采购、调拨的独立业务审核分开。",
+            "citation_ids": [
+              "a27d4665acd22dcd5042df7f37f032e969edf134436f83261797b658c40941b4"
+            ]
+          },
+          {
+            "text": "采购批准应关联需求与报价的最终版本，确认金额口径、用途、数量及授权范围。",
+            "citation_ids": [
+              "478859f7d3f2c34f35c1f95935832293c67aa85c8d668ec88fab8d783423373a"
+            ]
+          },
+          {
+            "text": "审核记录保存提交人、审核人、时间和意见，不以聊天中的赞同代替业务审核。",
+            "citation_ids": [
+              "62c5e9f535ef7a09d299f529b0b8c7987a1ff5480e199d03c9aa6b0cdad17663"
+            ]
+          },
+          {
+            "text": "用户的自然语言赞同、人工批准、系统确认和实际业务执行不能混为一个状态。",
+            "citation_ids": [
+              "51d1004d1abce367398a199fa398f8da275be3c51b14a5587aa3bf3db056162e"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "本轮资料为企业制度待核准稿（draft/pending_approval），不能冒充正式生效制度；制度要求不能代替实际安全配置、备份恢复验证和生产上线审核。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "citations": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-SEC-010",
+            "document_version": "1.0-draft.2",
+            "title": "库存权限审计与业务连续性管理办法",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "0cf4d518619f24695b0af03b683aa1a6de250ffe0227f3839de36accff3677cf",
+            "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+            "chunk_id": "3f6d40e17a5f58ad3ba3c16e8866cee39a947559b825e41977dc202326ba2928",
+            "unit_id": "INV-SEC-010-C005",
+            "unit_ids": [
+              "INV-SEC-010-C005"
+            ],
+            "section_path": [
+              "库存权限审计与业务连续性管理办法",
+              "2 身份与访问边界"
+            ],
+            "excerpt": "INV-SEC-010-C005 业务实际操作人由服务端身份取得，不接受聊天内容或工具参数指定另一个操作人。账号已停用或权限不足时拒绝办理，持有单据编号或会话编号本身不构成操作授权。",
+            "line_start": 27,
+            "line_end": 28,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-SEC-010",
+            "document_version": "1.0-draft.2",
+            "title": "库存权限审计与业务连续性管理办法",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "a27d4665acd22dcd5042df7f37f032e969edf134436f83261797b658c40941b4",
+            "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+            "chunk_id": "b18d1338d659bdec1525f04ad04b02b478a2bbb3c5f01c4f4354c6b81166bda7",
+            "unit_id": "INV-SEC-010-C018",
+            "unit_ids": [
+              "INV-SEC-010-C018"
+            ],
+            "section_path": [
+              "库存权限审计与业务连续性管理办法",
+              "6 知识与智能体控制"
+            ],
+            "excerpt": "INV-SEC-010-C018 智能体提案展示对象、SKU、仓库、数量、动作、引用、计算输入及限制，经确认才执行该提案动作；确认前不创建业务单据。提案确认与采购、调拨的独立业务审核分开：提案创建的草稿仍由创建人在审核中心提交，经其他管理员或经理审核通过后才可确认采购或发出调拨。普通聊天的“已批准”不是审核凭据，Agent没有审核权限，也不得伪造审核记录。",
+            "line_start": 61,
+            "line_end": 62,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "title": "采购需求与采购单控制规程",
+            "native_format": "docx",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "478859f7d3f2c34f35c1f95935832293c67aa85c8d668ec88fab8d783423373a",
+            "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+            "chunk_id": "24160ccb946eee9eb2ae048e46fd5b4548ed72adcca5f18ffa759c9c80acdda3",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-PUR-003-C007",
+              "INV-PUR-003-C008"
+            ],
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "3 批准与权限"
+            ],
+            "excerpt": "采购需求与采购单控制规程\n\n本规程将需求核验、业务批准、采购单确认和实际交付分开控制，适用于常规补货、维修专用件和紧急采购。当前为待核准稿，不授予实际签约或付款权限。\n\n3 批准与权限\n\nINV-PUR-003-C007 采购批准应关联需求与报价的最终版本，确认金额口径、用途、数量及授权范围。批准额度和审批层级必须来自企业有效授权表，未登记时提交负责人核定，不以软件角色推定无限授权。\nINV-PUR-003-C008 经办、复核和批准按企业岗位安排分工。采购草稿由管理员或库管创建，创建人在审核中心提交，由其他管理员或经理审核；禁止审核本人创建或提交的业务单据。审核记录保存提交人、审核人、时间和意见，不以聊天中的赞同代替业务审核。软件审核不自动证明合同、额度或外部企业授权已经满足。\n| 控制环节 | 责任岗位 | 需要确认的记录 |\n| --- | --- | --- |\n| 需求核实 | 需求提出人与仓管 | 用途 数量 实时供给 工单或补货依据 |\n| 采购复核 | 采购经办与复核岗位 | 规格 供应商 报价 交期 批准对象 |\n| 授权批准 | 企业授权批准人 | 授权范围 批准版本 例外原因 |\n| 到货验收 | 仓管与必要技术岗位 | 实收数量 质量标识 差异及交接 |",
+            "block_start": 14,
+            "block_end": 15,
+            "tables": [
+              {
+                "ordinal": 2,
+                "headers": [
+                  "控制环节",
+                  "责任岗位",
+                  "需要确认的记录"
+                ],
+                "rows": [
+                  [
+                    "需求核实",
+                    "需求提出人与仓管",
+                    "用途 数量 实时供给 工单或补货依据"
+                  ],
+                  [
+                    "采购复核",
+                    "采购经办与复核岗位",
+                    "规格 供应商 报价 交期 批准对象"
+                  ],
+                  [
+                    "授权批准",
+                    "企业授权批准人",
+                    "授权范围 批准版本 例外原因"
+                  ],
+                  [
+                    "到货验收",
+                    "仓管与必要技术岗位",
+                    "实收数量 质量标识 差异及交接"
+                  ]
+                ],
+                "text": "| 控制环节 | 责任岗位 | 需要确认的记录 |\n| --- | --- | --- |\n| 需求核实 | 需求提出人与仓管 | 用途 数量 实时供给 工单或补货依据 |\n| 采购复核 | 采购经办与复核岗位 | 规格 供应商 报价 交期 批准对象 |\n| 授权批准 | 企业授权批准人 | 授权范围 批准版本 例外原因 |\n| 到货验收 | 仓管与必要技术岗位 | 实收数量 质量标识 差异及交接 |",
+                "block_start": 16,
+                "block_end": 16
+              }
+            ]
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "title": "采购需求与采购单控制规程",
+            "native_format": "docx",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "62c5e9f535ef7a09d299f529b0b8c7987a1ff5480e199d03c9aa6b0cdad17663",
+            "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+            "chunk_id": "a6d009e8d2e0ad8d7ddf02d9f3f12d7573e414acfbc660ef92a3826498b83862",
+            "unit_id": "INV-PUR-003-C008",
+            "unit_ids": [
+              "INV-PUR-003-C008"
+            ],
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "3 批准与权限"
+            ],
+            "excerpt": "INV-PUR-003-C008 经办、复核和批准按企业岗位安排分工。采购草稿由管理员或库管创建，创建人在审核中心提交，由其他管理员或经理审核；禁止审核本人创建或提交的业务单据。审核记录保存提交人、审核人、时间和意见，不以聊天中的赞同代替业务审核。软件审核不自动证明合同、额度或外部企业授权已经满足。",
+            "block_start": 15,
+            "block_end": 15,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-GLO-011",
+            "document_version": "1.0-draft.2",
+            "title": "备件库存术语与检索同义词",
+            "native_format": "txt",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "51d1004d1abce367398a199fa398f8da275be3c51b14a5587aa3bf3db056162e",
+            "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+            "chunk_id": "59795388ba1462f071a340a5163bc4eeda821ea81e1799ce32b9a61bb3293fe2",
+            "unit_id": "INV-GLO-011-C015",
+            "unit_ids": [
+              "INV-GLO-011-C015"
+            ],
+            "section_path": [
+              "备件库存术语与检索同义词",
+              "3 分析与建议"
+            ],
+            "excerpt": "INV-GLO-011-C015 提案是待确认的业务建议，业务单据是已经按相应流程建立的记录。用户的自然语言赞同、人工批准、系统确认和实际业务执行不能混为一个状态。",
+            "line_start": 49,
+            "line_end": 50,
+            "tables": []
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 29,
+            "completion_tokens": 0,
+            "total_tokens": 29
+          },
+          "chat": {
+            "prompt_tokens": 5110,
+            "completion_tokens": 485,
+            "total_tokens": 5595
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      },
+      "automated_checks": {
+        "status": true,
+        "no_write_tools": true,
+        "points": true,
+        "parts": true,
+        "catalog_units": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "REG-ACC-INV-17",
+      "question": "以下是假设且均已核验的同仓同SKU同单位数据：完整30日领用31件、交期5天、安全库存8件，可用3件、有效采购待收2件、目标方向调拨在途1件。按规则复算。",
+      "rubric": {
+        "id": "REG-ACC-INV-17",
+        "kb": "inventory_policies",
+        "question": "以下是假设且均已核验的同仓同SKU同单位数据：完整30日领用31件、交期5天、安全库存8件，可用3件、有效采购待收2件、目标方向调拨在途1件。按规则复算。",
+        "statuses": [
+          "answered"
+        ],
+        "calculation": {
+          "kind": "replenishment",
+          "result": {
+            "daily_consumption": "31/30",
+            "target": 14,
+            "position": 6,
+            "gap": 8
+          }
+        }
+      },
+      "answer": {
+        "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "hybrid",
+        "timings": {
+          "qualification_seconds": 0.152,
+          "embedding_seconds": 0.227,
+          "retrieval_seconds": 0.508,
+          "chat_seconds": 2.482,
+          "validation_seconds": 0.153
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "按你提供的假设计算，结果如下；未读取实时库存。",
+            "citation_ids": [
+              "61080db7c2e58b4217ace4529c4ebcdb0e6408c8540454fafbd7cad45f8e0670",
+              "4ea671aa335578b991f51a485372e5d98938cad921bb9a1b409656399df82468"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "所引资料为待核准的项目编制稿（draft/pending_approval），不是正式生效制度，也不构成采购批准或实物核验结论。",
+          "计算按用户声明的假设口径进行，结果仅为可复核的补货建议，不替代实际库存查询、采购批准或实物核验。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "calculation": {
+          "kind": "replenishment",
+          "inputs": {
+            "issue_30d": 31,
+            "days": 30,
+            "lead_days": 5,
+            "safety": 8,
+            "available": 3,
+            "purchase_pending": 2,
+            "transfer_inbound": 1
+          },
+          "input_evidence": {
+            "issue_30d": {
+              "value": 31,
+              "quote": "完整30日领用31件"
+            },
+            "days": {
+              "value": 30,
+              "quote": "完整30日领用31件"
+            },
+            "lead_days": {
+              "value": 5,
+              "quote": "交期5天"
+            },
+            "safety": {
+              "value": 8,
+              "quote": "安全库存8件"
+            },
+            "available": {
+              "value": 3,
+              "quote": "可用3件"
+            },
+            "purchase_pending": {
+              "value": 2,
+              "quote": "有效采购待收2件"
+            },
+            "transfer_inbound": {
+              "value": 1,
+              "quote": "目标方向调拨在途1件"
+            }
+          },
+          "steps": [
+            "本例假定所给完整30日领用量采用已过账口径；未核验业务记录，不用于实际补货执行。",
+            "平均日消耗=31/30=31/30件/天",
+            "目标库存=ceil(31/30×5+8)=14件",
+            "库存位置=3+2+1=6件",
+            "补货缺口=max(0,14−6)=8件"
+          ],
+          "result": {
+            "daily_consumption": "31/30",
+            "target": 14,
+            "position": 6,
+            "gap": 8
+          },
+          "citation_ids": [
+            "61080db7c2e58b4217ace4529c4ebcdb0e6408c8540454fafbd7cad45f8e0670",
+            "4ea671aa335578b991f51a485372e5d98938cad921bb9a1b409656399df82468"
+          ],
+          "notice": "按你提供的假设计算；未核实业务事实，未查询实时库存或办理单据。"
+        },
+        "citations": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-ANA-009",
+            "document_version": "1.0-draft.4",
+            "title": "库存统计与补货调拨建议口径",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "61080db7c2e58b4217ace4529c4ebcdb0e6408c8540454fafbd7cad45f8e0670",
+            "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+            "chunk_id": "7cd44db4f50390bc27cc746e48cc4141c39212b90dab6032591784753e6c20f5",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-ANA-009-C010",
+              "INV-ANA-009-C011",
+              "INV-ANA-009-C012",
+              "INV-ANA-009-C013"
+            ],
+            "section_path": [
+              "库存统计与补货调拨建议口径",
+              "3 补货计算"
+            ],
+            "excerpt": "库存统计与补货调拨建议口径\n\n本文件统一数量、历史消耗、补货与调拨建议的解释，避免将现有量、预计供给和模型建议混为一谈。规则用于形成可复核建议，不能取代采购批准或实物核验。当前为待核准稿；补货与调拨建议服务尚未因本文件编写而自动上线。\n\n3 补货计算\n\nINV-ANA-009-C010 在历史覆盖、供应商与采购交期均已核实时，目标库存为“平均日消耗乘采购交期天数，加安全库存”后向上取整；建议补货量为目标库存减库存位置与零之间的较大值。\n\nINV-ANA-009-C011 建议应展示基准日、统计区间、SKU、仓库、单位、消耗总量、平均日消耗、交期、安全库存、可用量、采购待收、调拨在途、目标库存和建议数量，使复核人能够按原输入复算。\n\nINV-ANA-009-C012 历史不足、交期缺失、单位冲突、库存结果不新鲜或人工冻结未核验时，停止给出可执行的确定性数量，明确缺失项并转人工评估。不能让大模型以常识估算代替这些输入。\n\nINV-ANA-009-C013 计算示例：30日领用60件、交期5天、安全库存10件，则平均日消耗2件、目标库存20件。若可用4件、采购待收8件、调拨在途3件，库存位置15件，建议缺口5件。这个示例仅解释计算，不对应某企业的实际采购指令。",
+            "line_start": 39,
+            "line_end": 46,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-GLO-011",
+            "document_version": "1.0-draft.2",
+            "title": "备件库存术语与检索同义词",
+            "native_format": "txt",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "4ea671aa335578b991f51a485372e5d98938cad921bb9a1b409656399df82468",
+            "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+            "chunk_id": "950f56b7a20420f725e22e1817bbf2294d778f9c49635a9fc922077a9864d252",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-GLO-011-C001",
+              "INV-GLO-011-C002",
+              "INV-GLO-011-C003",
+              "INV-GLO-011-C004",
+              "INV-GLO-011-C005",
+              "INV-GLO-011-C006"
+            ],
+            "section_path": [
+              "备件库存术语与检索同义词",
+              "1 库存与单位"
+            ],
+            "excerpt": "备件库存术语与检索同义词\n\n本文统一检索和业务表达。状态为待核准，不表示企业已经批准相应制度；同义词只用于理解问题，不能改变单据类型、单位或权限。\n\n1 库存与单位\n\nINV-GLO-011-C001 SKU为内部唯一库存识别编码。厂家件号、OE号、品牌型号是其他识别信息，不能在没有核验对应关系时等同于SKU；相似编码也不构成替代关系。\n\nINV-GLO-011-C002 现有库存也称账面现存量、当前库存，表示指定仓库指定SKU已入账数量，不包括采购待收和目标方向调拨在途。\n\nINV-GLO-011-C003 可用库存也称可用量、可领数量，其基本公式为现有量减有效预留。当前无预留流程，系统可用量等于现有量；人工隔离等限制仍须核验，不能只依据系统数值断言可交付。\n\nINV-GLO-011-C004 采购待收又称采购未到、订单未收余量，限定为已确认或部分收货采购单的有效未收部分。采购草稿与已取消余量不属于有效待收。\n\nINV-GLO-011-C005 调拨在途又称内部在途、已发未收，指调拨已发出但目标仓未确认接收的数量。它与供应商发货或采购预计到货不是同一数量口径。\n\nINV-GLO-011-C006 本系统库存、收发及统计统一按件管理。一件表示一个SKU完整库存包装；整瓶、整桶、整套等差异写入名称或规格，不换算为升数、包装内个数或其他单位，不拆零收发。数量与单价均按同一库存包装计算。",
+            "line_start": 17,
+            "line_end": 28,
+            "tables": []
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 62,
+            "completion_tokens": 0,
+            "total_tokens": 62
+          },
+          "chat": {
+            "prompt_tokens": 5386,
+            "completion_tokens": 376,
+            "total_tokens": 5762
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      },
+      "automated_checks": {
+        "status": true,
+        "no_write_tools": true,
+        "points": true,
+        "parts": true,
+        "catalog_units": true,
+        "calculation": true
+      },
+      "automated_pass": true
+    }
+  ],
+  "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+  "source_fingerprint": "dbe377aeca811fd8104f0b612d53b09afa11437adc4c6e0b1709fd3d0f0ca4cf",
+  "summary": {
+    "attempted": 4,
+    "automated_pass": 4,
+    "semantic_review": "requires_project_ai_source_review_not_model_self_score"
+  }
+}

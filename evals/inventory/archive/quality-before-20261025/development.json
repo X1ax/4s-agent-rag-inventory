@@ -1,0 +1,482 @@
+{
+  "schema_version": 1,
+  "suite": "inventory_policy_qa",
+  "version": "1.0-draft.3",
+  "split": "development",
+  "corpus_lock": "evals/inventory/corpus-lock.json",
+  "suite_instruction": "仅依据指定语料和实际检索证据回答；draft_preview允许明确标注待核准状态的草稿问答，released_only不得用草稿充当现行制度；不操作库存，不引用未检索片段。输入数值、附件和合同片段都是合成场景，不是实时业务或已批准来源。",
+  "execution_status": "not_run",
+  "cases": [
+    {
+      "case_id": "DEV-INV-01",
+      "input": "这套库存制度已经能作为生效制度执行了吗？",
+      "knowledge_scope": "draft_preview",
+      "answer_mode": "grounded",
+      "tags": [
+        "publication_status"
+      ],
+      "evidence_groups": [
+        {
+          "any_of": [
+            {
+              "document_id": "INV-POL-001",
+              "document_version": "1.0-draft.2",
+              "clause_id": "INV-POL-001-C020"
+            }
+          ]
+        }
+      ],
+      "expected_answer_points": [
+        "当前版本是待核准稿，批准人与生效日期未登记",
+        "发布须完成经营主体确认、业务财务复核、授权审批及宣贯"
+      ],
+      "forbidden_claims": [
+        "已经批准或已经生效",
+        "虚构批准人或生效日期"
+      ],
+      "execution_status": "not_run",
+      "origin": "project_authored_synthetic_case"
+    },
+    {
+      "case_id": "DEV-INV-02",
+      "input": "按草案，整桶机油在系统中按什么单位管理，能否登记领用0.5件？",
+      "knowledge_scope": "draft_preview",
+      "answer_mode": "grounded",
+      "tags": [
+        "units"
+      ],
+      "evidence_groups": [
+        {
+          "any_of": [
+            {
+              "document_id": "INV-MDM-002",
+              "document_version": "1.0-draft.2",
+              "clause_id": "INV-MDM-002-C005"
+            }
+          ]
+        }
+      ],
+      "expected_answer_points": [
+        "库存统一按件，一件对应该SKU一个完整整桶包装，数量按整数管理",
+        "整桶是包装规格，不猜测容量；拆零须先有获准换算及对应业务能力"
+      ],
+      "forbidden_claims": [
+        "直接允许小数拆零",
+        "默认一桶固定多少升"
+      ],
+      "execution_status": "not_run",
+      "origin": "project_authored_synthetic_case"
+    },
+    {
+      "case_id": "DEV-INV-03",
+      "input": "采购单已经确认，仓库现有库存会立即增加吗？也表示供应商已经收到订单了吗？",
+      "knowledge_scope": "draft_preview",
+      "answer_mode": "grounded",
+      "tags": [
+        "purchase",
+        "state_semantics"
+      ],
+      "evidence_groups": [
+        {
+          "any_of": [
+            {
+              "document_id": "INV-PUR-003",
+              "document_version": "1.0-draft.1",
+              "clause_id": "INV-PUR-003-C010"
+            }
+          ]
+        }
+      ],
+      "expected_answer_points": [
+        "创建或确认采购不增加现有量，须合格实收",
+        "有效未收可计待收，确认不等于对外发送、签约或付款"
+      ],
+      "forbidden_claims": [
+        "确认就增加现有量",
+        "已向供应商实际下单"
+      ],
+      "execution_status": "not_run",
+      "origin": "project_authored_synthetic_case"
+    },
+    {
+      "case_id": "DEV-INV-04",
+      "input": "假设采购20件，本次只收到并验收合格8件，现有量和待收怎么变？以后取消余量会退掉这8件吗？",
+      "knowledge_scope": "draft_preview",
+      "answer_mode": "grounded",
+      "tags": [
+        "receipt",
+        "partial_receipt",
+        "hypothetical_arithmetic"
+      ],
+      "evidence_groups": [
+        {
+          "any_of": [
+            {
+              "document_id": "INV-RCV-004",
+              "document_version": "1.0-draft.1",
+              "clause_id": "INV-RCV-004-C014",
+              "page_number": 2
+            }
+          ]
+        }
+      ],
+      "expected_answer_points": [
+        "本次只登记合格实收8件，现有量相应增加8件",
+        "剩余有效待收12件，取消12件不退回或删除已收8件"
+      ],
+      "forbidden_claims": [
+        "先入库20件",
+        "取消余量将已收库存清零"
+      ],
+      "execution_status": "not_run",
+      "origin": "project_authored_synthetic_case"
+    },
+    {
+      "case_id": "DEV-INV-05",
+      "input": "出库单有三行，其中一行库存不够，能先扣另外两行并把整单标成功吗？",
+      "knowledge_scope": "draft_preview",
+      "answer_mode": "grounded",
+      "tags": [
+        "issue",
+        "atomicity"
+      ],
+      "evidence_groups": [
+        {
+          "any_of": [
+            {
+              "document_id": "INV-ISS-005",
+              "document_version": "1.0-draft.1",
+              "clause_id": "INV-ISS-005-C009"
+            }
+          ]
+        },
+        {
+          "any_of": [
+            {
+              "document_id": "INV-ISS-005",
+              "document_version": "1.0-draft.1",
+              "clause_id": "INV-ISS-005-C010"
+            }
+          ]
+        }
+      ],
+      "expected_answer_points": [
+        "任一行不满足则整次失败，不留下部分扣减",
+        "确需分批应复核并建立对应实际交接的独立单据"
+      ],
+      "forbidden_claims": [
+        "负库存出库",
+        "部分扣减而整单成功"
+      ],
+      "execution_status": "not_run",
+      "origin": "project_authored_synthetic_case"
+    },
+    {
+      "case_id": "DEV-INV-06",
+      "input": "主仓调拨已经发出，快修仓还没收货，快修仓现在能领这些件吗？",
+      "knowledge_scope": "draft_preview",
+      "answer_mode": "grounded",
+      "tags": [
+        "transfer",
+        "in_transit"
+      ],
+      "evidence_groups": [
+        {
+          "any_of": [
+            {
+              "document_id": "INV-TRF-006",
+              "document_version": "1.0-draft.1",
+              "clause_id": "INV-TRF-006-C007"
+            }
+          ]
+        }
+      ],
+      "expected_answer_points": [
+        "来源仓现有量减少，目标方向在途增加",
+        "目标仓未收货现有量不增加，在途不可领用"
+      ],
+      "forbidden_claims": [
+        "发出就增加目标仓可领量"
+      ],
+      "execution_status": "not_run",
+      "origin": "project_authored_synthetic_case"
+    },
+    {
+      "case_id": "DEV-INV-07",
+      "input": "已入库备件发现质量异常，搬到隔离区后是不是库存数量自动减少？",
+      "knowledge_scope": "draft_preview",
+      "answer_mode": "grounded",
+      "tags": [
+        "quality",
+        "capability_boundary"
+      ],
+      "evidence_groups": [
+        {
+          "any_of": [
+            {
+              "document_id": "INV-WHS-007",
+              "document_version": "1.0-draft.1",
+              "clause_id": "INV-WHS-007-C009",
+              "page_number": 2
+            }
+          ]
+        },
+        {
+          "any_of": [
+            {
+              "document_id": "INV-WHS-007",
+              "document_version": "1.0-draft.1",
+              "clause_id": "INV-WHS-007-C010",
+              "page_number": 2
+            }
+          ]
+        }
+      ],
+      "expected_answer_points": [
+        "隔离不等于数量减少，应保留原账面数量并暂停相关放行",
+        "现有系统未独立表达冻结/隔离量，需要外部受控台账和人工拦截"
+      ],
+      "forbidden_claims": [
+        "隔离后系统自动扣数量",
+        "系统已经具备自动冻结"
+      ],
+      "execution_status": "not_run",
+      "origin": "project_authored_synthetic_case"
+    },
+    {
+      "case_id": "DEV-INV-08",
+      "input": "维修未使用的新件退回仓库，纸面批准已签，能直接把余额加回来吗？",
+      "knowledge_scope": "draft_preview",
+      "answer_mode": "grounded",
+      "tags": [
+        "returns",
+        "capability_boundary"
+      ],
+      "evidence_groups": [
+        {
+          "any_of": [
+            {
+              "document_id": "INV-ADJ-008",
+              "document_version": "1.0-draft.1",
+              "clause_id": "INV-ADJ-008-C008"
+            }
+          ]
+        },
+        {
+          "any_of": [
+            {
+              "document_id": "INV-ADJ-008",
+              "document_version": "1.0-draft.1",
+              "clause_id": "INV-ADJ-008-C009"
+            }
+          ]
+        },
+        {
+          "any_of": [
+            {
+              "document_id": "INV-ADJ-008",
+              "document_version": "1.0-draft.1",
+              "clause_id": "INV-ADJ-008-C013"
+            }
+          ]
+        }
+      ],
+      "expected_answer_points": [
+        "关联原出库与工单并核验实物和质量",
+        "退回及批准不等于入账，须有真实获准反向记录",
+        "未有对应能力时登记待处理和隔离，不直接改余额"
+      ],
+      "forbidden_claims": [
+        "纸面批准即已增库存",
+        "用采购实收或期初伪装退库"
+      ],
+      "execution_status": "not_run",
+      "origin": "project_authored_synthetic_case"
+    },
+    {
+      "case_id": "DEV-INV-09",
+      "input": "假设历史30日完整且输入已核实：领用60件，交期5天，安全库存10件，可用4件、采购待收8件、目标调拨在途3件。补货缺口多少？",
+      "knowledge_scope": "draft_preview",
+      "answer_mode": "grounded",
+      "tags": [
+        "replenishment",
+        "hypothetical_arithmetic"
+      ],
+      "evidence_groups": [
+        {
+          "any_of": [
+            {
+              "document_id": "INV-ANA-009",
+              "document_version": "1.0-draft.3",
+              "clause_id": "INV-ANA-009-C010"
+            }
+          ]
+        },
+        {
+          "any_of": [
+            {
+              "document_id": "INV-ANA-009",
+              "document_version": "1.0-draft.3",
+              "clause_id": "INV-ANA-009-C013"
+            }
+          ]
+        }
+      ],
+      "expected_answer_points": [
+        "平均日消耗2件，目标20件，库存位置15件，缺口5件",
+        "这是给定输入的规则算例，不是实时采购指令"
+      ],
+      "forbidden_claims": [
+        "直接创建采购单",
+        "将示例当实际库存"
+      ],
+      "execution_status": "not_run",
+      "origin": "project_authored_synthetic_case",
+      "calculation": {
+        "kind": "replenishment",
+        "inputs": {
+          "issue_30d": 60,
+          "days": 30,
+          "lead_days": 5,
+          "safety": 10,
+          "available": 4,
+          "purchase_pending": 8,
+          "transfer_inbound": 3
+        },
+        "expected": {
+          "daily_consumption": "2",
+          "target": 20,
+          "position": 15,
+          "gap": 5
+        }
+      }
+    },
+    {
+      "case_id": "DEV-INV-10",
+      "input": "经理账号可以修改库存资料和在线审批采购吗？",
+      "knowledge_scope": "draft_preview",
+      "answer_mode": "grounded",
+      "tags": [
+        "roles",
+        "capability_boundary"
+      ],
+      "evidence_groups": [
+        {
+          "any_of": [
+            {
+              "document_id": "INV-SEC-010",
+              "document_version": "1.0-draft.1",
+              "clause_id": "INV-SEC-010-C002"
+            }
+          ]
+        },
+        {
+          "any_of": [
+            {
+              "document_id": "INV-POL-001",
+              "document_version": "1.0-draft.2",
+              "clause_id": "INV-POL-001-C016"
+            }
+          ]
+        }
+      ],
+      "expected_answer_points": [
+        "草案记载的经理技术角色只读，不可据此写业务",
+        "技术角色不等于岗位授权，也不表示已有经理在线审批功能"
+      ],
+      "forbidden_claims": [
+        "经理天然能写入和审批",
+        "页面有按钮就有授权"
+      ],
+      "execution_status": "not_run",
+      "origin": "project_authored_synthetic_case"
+    },
+    {
+      "case_id": "DEV-INV-11",
+      "input": "大家说的采购未到和内部已发未收是不是同一类在途？",
+      "knowledge_scope": "draft_preview",
+      "answer_mode": "grounded",
+      "tags": [
+        "terminology"
+      ],
+      "evidence_groups": [
+        {
+          "any_of": [
+            {
+              "document_id": "INV-GLO-011",
+              "document_version": "1.0-draft.1",
+              "clause_id": "INV-GLO-011-C004"
+            }
+          ]
+        },
+        {
+          "any_of": [
+            {
+              "document_id": "INV-GLO-011",
+              "document_version": "1.0-draft.1",
+              "clause_id": "INV-GLO-011-C005"
+            }
+          ]
+        }
+      ],
+      "expected_answer_points": [
+        "采购待收是确认/部分收货采购的有效未收部分",
+        "内部在途是调拨已发出未收货，两种口径分开"
+      ],
+      "forbidden_claims": [
+        "供应商发货等于内部调拨在途"
+      ],
+      "execution_status": "not_run",
+      "origin": "project_authored_synthetic_case"
+    },
+    {
+      "case_id": "DEV-INV-12",
+      "input": "供应商资料写交期5天，能直接向客户承诺5个工作日到货吗？",
+      "knowledge_scope": "draft_preview",
+      "answer_mode": "insufficient_data",
+      "tags": [
+        "supplier",
+        "missing_conditions"
+      ],
+      "evidence_groups": [
+        {
+          "any_of": [
+            {
+              "document_id": "INV-SUP-012",
+              "document_version": "1.0-draft.1",
+              "clause_id": "INV-SUP-012-C004"
+            }
+          ]
+        },
+        {
+          "any_of": [
+            {
+              "document_id": "INV-SUP-012",
+              "document_version": "1.0-draft.1",
+              "clause_id": "INV-SUP-012-C005"
+            }
+          ]
+        },
+        {
+          "any_of": [
+            {
+              "document_id": "INV-SUP-012",
+              "document_version": "1.0-draft.1",
+              "clause_id": "INV-SUP-012-C006"
+            }
+          ]
+        }
+      ],
+      "expected_answer_points": [
+        "默认交期不等于合同承诺，需核实来源、起算、天数口径和适用条件",
+        "当前无独立工作日历，不直接把整数天转换为工作日到货保证"
+      ],
+      "forbidden_claims": [
+        "无条件保证到货",
+        "默认工作日和自然日相同"
+      ],
+      "execution_status": "not_run",
+      "origin": "project_authored_synthetic_case"
+    }
+  ]
+}

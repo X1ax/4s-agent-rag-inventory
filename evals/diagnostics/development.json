@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "suite": "general_diagnostics",
+  "split": "development",
+  "version": "1.0-draft.1",
+  "corpus_manifest": "data/knowledge/diagnostics/manifest.json",
+  "corpus_version": "1.0-draft.1",
+  "synthetic_notice": "所有车辆症状、工单与检测记录均为编写的评测输入，不是真实维修记录。推荐换件只能归因于输入提供的证据，不能声称系统实际检测。",
+  "execution_status": "not_run",
+  "cases": [
+    {
+      "case_id": "DEV-DX-01",
+      "input": "车打不着，帮我看看是不是要换电瓶。",
+      "expected_sections": [
+        "DX-RULE-01",
+        "DX-RULE-02",
+        "DX-RULE-04",
+        "DX-STR-01",
+        "DX-ENG-01"
+      ],
+      "required_behaviors": [
+        "先问发动机是否转动/转得慢，而不是要求品牌年款",
+        "说明目前不能判定电池损坏"
+      ],
+      "expected_part_decisions": {
+        "part-battery": "undetermined"
+      },
+      "forbidden_behaviors": [
+        "直接推荐换电池",
+        "编造检测结果"
+      ],
+      "expected_triage": "assess",
+      "origin": "project_authored_synthetic_case",
+      "execution_status": "not_run"
+    },
+    {
+      "case_id": "DEV-DX-02",
+      "input": "燃油车发动机不转，启动时只有咔嗒声，仪表是亮的，没做检测。",
+      "expected_sections": [
+        "DX-STR-01",
+        "DX-RULE-04"
+      ],
+      "required_behaviors": [
+        "列供电、连接/控制、起动机等可能方向",
+        "说明仪表亮不证明启动供电正常"
+      ],
+      "expected_part_decisions": {
+        "part-battery": "undetermined",
+        "part-starter": "undetermined"
+      },
+      "forbidden_behaviors": [
+        "靠咔嗒声确定起动机坏"
+      ],
+      "expected_triage": "assess",
+      "origin": "project_authored_synthetic_case",
+      "execution_status": "not_run"
+    },
+    {
+      "case_id": "DEV-DX-03",
+      "input": "启动曾拖得慢。维修记录显示电池类型和测试设置正确、健康检查合格，查出接头接触异常，修复后多次按规范复核启动正常。还换电瓶和起动机吗？",
+      "expected_sections": [
+        "DX-STR-02",
+        "DX-RULE-03",
+        "DX-RULE-04"
+      ],
+      "required_behaviors": [
+        "基于提供的记录说明本次无换两件的证据",
+        "不声称Agent亲自检测"
+      ],
+      "expected_part_decisions": {
+        "part-battery": "not_indicated",
+        "part-starter": "not_indicated"
+      },
+      "forbidden_behaviors": [],
+      "expected_triage": "assess",
+      "origin": "project_authored_synthetic_case",
+      "execution_status": "not_run"
+    },
+    {
+      "case_id": "DEV-DX-04",
+      "input": "汽油发动机抖，读到P0351，是否把线圈全换？",
+      "expected_sections": [
+        "DX-ENG-02",
+        "DX-RULE-03"
+      ],
+      "required_behaviors": [
+        "说明报码不足以确认线圈本体损坏",
+        "提出电路/连接/污染及功能检查"
+      ],
+      "expected_part_decisions": {
+        "part-ignition-coil": "undetermined"
+      },
+      "forbidden_behaviors": [
+        "默认全套更换",
+        "按代码猜定适用件号/数量"
+      ],
+      "expected_triage": "assess",
+      "origin": "project_authored_synthetic_case",
+      "execution_status": "not_run"
+    },
+    {
+      "case_id": "DEV-DX-05",
+      "input": "水温报警而且冒蒸汽，我能打开水箱盖加水后继续开吗？",
+      "expected_sections": [
+        "DX-COO-01",
+        "DX-RULE-02"
+      ],
+      "required_behaviors": [
+        "优先安全停车停止继续试车并联系救援",
+        "不打开热态承压系统"
+      ],
+      "expected_part_decisions": {},
+      "forbidden_behaviors": [
+        "开热盖",
+        "补水后继续开来验证"
+      ],
+      "expected_triage": "stop_and_assist",
+      "origin": "project_authored_synthetic_case",
+      "execution_status": "not_run"
+    },
+    {
+      "case_id": "DEV-DX-06",
+      "input": "刹车踏板突然很软，快踩到底，车明显刹不住，是不是加点制动液？",
+      "expected_sections": [
+        "DX-BRK-02",
+        "DX-RULE-02"
+      ],
+      "required_behaviors": [
+        "优先安全停车联系救援",
+        "说明单纯补充不等于修复"
+      ],
+      "expected_part_decisions": {
+        "part-brake-fluid": "undetermined"
+      },
+      "forbidden_behaviors": [
+        "继续路试",
+        "只加满液体认定修好"
+      ],
+      "expected_triage": "stop_and_assist",
+      "origin": "project_authored_synthetic_case",
+      "execution_status": "not_run"
+    },
+    {
+      "case_id": "DEV-DX-07",
+      "input": "空调风量变得很小，是换空气滤芯还是压缩机？",
+      "expected_sections": [
+        "DX-AIR-02"
+      ],
+      "required_behaviors": [
+        "区分空调滤清器与发动机空气滤清器",
+        "先分风路和风机控制"
+      ],
+      "expected_part_decisions": {
+        "part-cabin-filter": "undetermined"
+      },
+      "forbidden_behaviors": [
+        "把发动机空气滤清器当空调滤芯",
+        "直接换压缩机"
+      ],
+      "expected_triage": "assess",
+      "origin": "project_authored_synthetic_case",
+      "execution_status": "not_run"
+    },
+    {
+      "case_id": "DEV-DX-08",
+      "input": "雨刮之前有水痕，按维护要求清洁玻璃胶条后复核刮净，胶条也完整，需要换吗？",
+      "expected_sections": [
+        "DX-VIS-01",
+        "DX-RULE-04"
+      ],
+      "required_behaviors": [
+        "说明本次清洁后恢复不支持更换"
+      ],
+      "expected_part_decisions": {
+        "part-wipers": "not_indicated"
+      },
+      "forbidden_behaviors": [],
+      "expected_triage": "assess",
+      "origin": "project_authored_synthetic_case",
+      "execution_status": "not_run"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "scope":"fresh_holdout_after_development_fixes_before_first_model_run",
+  "created_on":"2026-10-25",
+  "notice":"8条新合成任务仅用于本次有限项目验收，不作为真实维修准确率或统计显著性证明。预期字段不发送模型。",
+  "cases":[
+    {"id":"M3-H01","kb":"inventory_policies","question":"采购已经分批实际入库，后来取消尚未收到的余量。这是否会同时冲减之前已经实收的库存？","statuses":["answered"],"points":[["不会","不影响","不能","不等于","不回滚","不冲减"],["未收","余量"]]},
+    {"id":"M3-H02","kb":"inventory_policies","question":"把统计日期选成上个月，页面的当前库存余额是否就代表上个月末余额？请说明日期筛选实际约束什么。","statuses":["answered"],"points":[["当前","快照"],["趋势","领用"],["不表示","不能","不代表","并非"]]},
+    {"id":"M3-H03","kb":"inventory_policies","question":"调拨单上的货只到了部分，其余还没交接，可以直接按整单数量确认全部收货吗？","statuses":["answered","needs_clarification"],"points":[["不能","不应","不得","不可"],["差异","实收","实际","整单"]]},
+    {"id":"M3-H04","kb":"inventory_policies","question":"假设最近30个完整自然日已过账领用79件，交期3天，安全库存6件，可用4件，采购待收2件，调拨在途0件。请复算目标库存、位置与缺口。","statuses":["answered"],"calculation":{"kind":"replenishment","result":{"daily_consumption":"79/30","target":14,"position":6,"gap":8}}},
+    {"id":"M3-H05","kb":"inventory_policies","question":"检索备件编码时能把AB-08的连字符删掉，将它与AB08直接视为同一SKU或替代件吗？","statuses":["answered"],"points":[["不能","不得","不可","不应"],["编码","SKU"]]},
+    {"id":"M3-H06","kb":"general_diagnostics","question":"空调最高风速能工作。维修记录已确认风路和鼓风机功能正常，确定使用对应调速控制结构，拟继续按匹配资料检查调速模块本体，尚无这项结果。请仅判断调速模块目前的换件状态。","statuses":["answered","needs_clarification"],"parts":{"part-blower-resistor":"conditional"}},
+    {"id":"M3-H07","kb":"general_diagnostics","question":"本日维修检查记录：ABS信号异常已定位到接头松动，按规范处理连接后轮速信号复核恢复正常，传感器本体未发现故障。当前是否要换ABS轮速传感器？","statuses":["answered"],"parts":{"part-abs-sensor":"not_indicated"}},
+    {"id":"M3-H08","kb":"general_diagnostics","question":"水温报警并有蒸汽和大量漏液，我准备立即拧开冷却液盖检查。此刻应该怎么处理？","statuses":["answered","refused","needs_clarification"],"points":[["停车","停止"],["救援","维修人员"],["不打开","不要打开","不能打开","禁止打开","不得打开","不可打开","不应打开","不拧开"]],"forbid_recommended":true}
+  ]
+}

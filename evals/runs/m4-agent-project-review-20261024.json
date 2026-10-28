@@ -1,0 +1,289 @@
+{
+  "run": "m4-agent-comparison-20261024T140005Z.json",
+  "sha256": "7efe0d75913d5260b4b1788b02f1ea2931116ebd024087015727d2991c4c81a7",
+  "reviewer": "Codex project AI; not a human or external expert",
+  "scope": "Every task main conclusion compared with saved tool results and relevant source excerpts; not a frozen semantic grading model.",
+  "parameter_rule": "Exact part/warehouse/document/supplier IDs and proposal quantity/price/date/action; catalog search wording is not scored as ID/amount correctness.",
+  "cases": [
+    {
+      "case_id": "AG-01",
+      "mode": "single",
+      "tool_parameter_checks": [
+        {
+          "tool": "stock",
+          "matched": true
+        },
+        {
+          "tool": "stock",
+          "matched": true
+        }
+      ],
+      "citation_binding_pass": true,
+      "main_facts": "core_numbers_and_evidence_checked",
+      "quality_notes": [
+        "数量与口径有实际快照支持；回答将UTC获取时刻14:00写成无时区中文时间，需改善显示与时区表达。"
+      ],
+      "full_semantic_support_pass": null
+    },
+    {
+      "case_id": "AG-01",
+      "mode": "multi",
+      "tool_parameter_checks": [
+        {
+          "tool": "stock",
+          "matched": true
+        }
+      ],
+      "citation_binding_pass": true,
+      "main_facts": "core_numbers_and_evidence_checked",
+      "quality_notes": [
+        "数量与口径有实际快照支持；回答将UTC获取时刻14:00写成无时区中文时间，需改善显示与时区表达。"
+      ],
+      "full_semantic_support_pass": null
+    },
+    {
+      "case_id": "AG-02",
+      "mode": "multi",
+      "tool_parameter_checks": [],
+      "citation_binding_pass": true,
+      "main_facts": "core_numbers_and_evidence_checked",
+      "quality_notes": [],
+      "full_semantic_support_pass": null
+    },
+    {
+      "case_id": "AG-02",
+      "mode": "single",
+      "tool_parameter_checks": [],
+      "citation_binding_pass": true,
+      "main_facts": "core_numbers_and_evidence_checked",
+      "quality_notes": [],
+      "full_semantic_support_pass": null
+    },
+    {
+      "case_id": "AG-03",
+      "mode": "single",
+      "tool_parameter_checks": [
+        {
+          "tool": "documents",
+          "matched": true
+        }
+      ],
+      "citation_binding_pass": true,
+      "main_facts": "core_numbers_and_evidence_checked",
+      "quality_notes": [
+        "单据数值与实际记录一致，但另用ID文本调用仅按名称/SKU/别名检索的catalog，属于低效搜索，不计为目录搜索正确率通过。"
+      ],
+      "full_semantic_support_pass": null
+    },
+    {
+      "case_id": "AG-03",
+      "mode": "multi",
+      "tool_parameter_checks": [
+        {
+          "tool": "documents",
+          "matched": true
+        }
+      ],
+      "citation_binding_pass": true,
+      "main_facts": "core_numbers_and_evidence_checked",
+      "quality_notes": [
+        "单据数值与实际记录一致，但另用ID文本调用仅按名称/SKU/别名检索的catalog，属于低效搜索，不计为目录搜索正确率通过。"
+      ],
+      "full_semantic_support_pass": null
+    },
+    {
+      "case_id": "AG-04",
+      "mode": "multi",
+      "tool_parameter_checks": [
+        {
+          "tool": "prepare_proposal",
+          "matched": true
+        }
+      ],
+      "citation_binding_pass": true,
+      "main_facts": "core_numbers_and_evidence_checked",
+      "quality_notes": [],
+      "full_semantic_support_pass": null
+    },
+    {
+      "case_id": "AG-04",
+      "mode": "single",
+      "tool_parameter_checks": [
+        {
+          "tool": "prepare_proposal",
+          "matched": true
+        }
+      ],
+      "citation_binding_pass": true,
+      "main_facts": "core_numbers_and_evidence_checked",
+      "quality_notes": [],
+      "full_semantic_support_pass": null
+    },
+    {
+      "case_id": "AG-05",
+      "mode": "single",
+      "tool_parameter_checks": [
+        {
+          "tool": "stock",
+          "matched": true
+        },
+        {
+          "tool": "prepare_proposal",
+          "matched": true
+        }
+      ],
+      "citation_binding_pass": true,
+      "main_facts": "core_numbers_and_evidence_checked",
+      "quality_notes": [],
+      "full_semantic_support_pass": null
+    },
+    {
+      "case_id": "AG-05",
+      "mode": "multi",
+      "tool_parameter_checks": [
+        {
+          "tool": "stock",
+          "matched": true
+        },
+        {
+          "tool": "prepare_proposal",
+          "matched": true
+        }
+      ],
+      "citation_binding_pass": true,
+      "main_facts": "core_numbers_and_evidence_checked",
+      "quality_notes": [],
+      "full_semantic_support_pass": null
+    },
+    {
+      "case_id": "AG-06",
+      "mode": "multi",
+      "tool_parameter_checks": [
+        {
+          "tool": "stock",
+          "matched": true
+        }
+      ],
+      "citation_binding_pass": true,
+      "main_facts": "core_numbers_and_evidence_checked",
+      "quality_notes": [],
+      "full_semantic_support_pass": null
+    },
+    {
+      "case_id": "AG-06",
+      "mode": "single",
+      "tool_parameter_checks": [
+        {
+          "tool": "stock",
+          "matched": true
+        }
+      ],
+      "citation_binding_pass": true,
+      "main_facts": "core_numbers_and_evidence_checked",
+      "quality_notes": [],
+      "full_semantic_support_pass": null
+    },
+    {
+      "case_id": "AG-07",
+      "mode": "single",
+      "tool_parameter_checks": [
+        {
+          "tool": "stock",
+          "matched": true
+        }
+      ],
+      "citation_binding_pass": true,
+      "main_facts": "core_numbers_and_evidence_checked",
+      "quality_notes": [
+        "故障与库存两条链均完成；未检测时conditional与undetermined区分仍有基线缺口，不能将任务完成率当诊断质量通过率。"
+      ],
+      "full_semantic_support_pass": null
+    },
+    {
+      "case_id": "AG-07",
+      "mode": "multi",
+      "tool_parameter_checks": [
+        {
+          "tool": "stock",
+          "matched": true
+        }
+      ],
+      "citation_binding_pass": true,
+      "main_facts": "core_numbers_and_evidence_checked",
+      "quality_notes": [
+        "故障与库存两条链均完成；未检测时conditional与undetermined区分仍有基线缺口，不能将任务完成率当诊断质量通过率。"
+      ],
+      "full_semantic_support_pass": null
+    },
+    {
+      "case_id": "AG-08",
+      "mode": "multi",
+      "tool_parameter_checks": [],
+      "citation_binding_pass": true,
+      "main_facts": "core_numbers_and_evidence_checked",
+      "quality_notes": [
+        "目标压缩机保持undetermined，但额外冷凝器为conditional，状态区分仍需改进。"
+      ],
+      "full_semantic_support_pass": null
+    },
+    {
+      "case_id": "AG-08",
+      "mode": "single",
+      "tool_parameter_checks": [],
+      "citation_binding_pass": true,
+      "main_facts": "core_numbers_and_evidence_checked",
+      "quality_notes": [],
+      "full_semantic_support_pass": null
+    },
+    {
+      "case_id": "AG-09",
+      "mode": "single",
+      "tool_parameter_checks": [
+        {
+          "tool": "stock",
+          "matched": true
+        }
+      ],
+      "citation_binding_pass": true,
+      "main_facts": "core_numbers_and_evidence_checked",
+      "quality_notes": [
+        "正确拒绝1000件提案；追问用可用减安全库存给最多11件，未调用目标库存计算，不能作为已验证可调量。"
+      ],
+      "full_semantic_support_pass": null
+    },
+    {
+      "case_id": "AG-09",
+      "mode": "multi",
+      "tool_parameter_checks": [
+        {
+          "tool": "stock",
+          "matched": true
+        }
+      ],
+      "citation_binding_pass": true,
+      "main_facts": "core_numbers_and_evidence_checked",
+      "quality_notes": [
+        "正确拒绝1000件提案；追问可用14件部分调拨只是可用上界，尚未验证目标库存/可调余量，不能当自动调拨建议。"
+      ],
+      "full_semantic_support_pass": null
+    }
+  ],
+  "summary": {
+    "single": {
+      "exact_target_parameter_calls": 9,
+      "exact_target_parameter_matches": 9,
+      "citation_binding_tasks": 9,
+      "citation_binding_passes": 9,
+      "full_semantic_support_rate": null,
+      "notes": "引用身份/存在性与核心事实核对分开；不以绑定通过声称全部语义、诊断状态和追问建议通过。"
+    },
+    "multi": {
+      "exact_target_parameter_calls": 8,
+      "exact_target_parameter_matches": 8,
+      "citation_binding_tasks": 9,
+      "citation_binding_passes": 9,
+      "full_semantic_support_rate": null,
+      "notes": "引用身份/存在性与核心事实核对分开；不以绑定通过声称全部语义、诊断状态和追问建议通过。"
+    }
+  }
+}

@@ -1,0 +1,639 @@
+{
+  "pending_submissions": {
+    "items": [
+      {
+        "id": "7f3cf242370942328a9aab70ebdddab2",
+        "user_id": 1571,
+        "title": "验收交接登记规范",
+        "kb": "inventory_policies",
+        "format": "md",
+        "status": "pending",
+        "reviewer_id": null,
+        "review_note": "",
+        "created_at": "2026-10-27T07:01:02.577576+00:00",
+        "reviewed_at": null,
+        "preview": [
+          {
+            "text": "# 验收交接登记规范",
+            "location": {
+              "line_start": 1,
+              "line_end": 1
+            }
+          },
+          {
+            "text": "本文件仅用于M5实际操作验收，不代表真实门店已批准的制度。",
+            "location": {
+              "line_start": 3,
+              "line_end": 3
+            }
+          },
+          {
+            "text": "容器外观破损时，交接登记使用标识 M5-HANDOVER-27。在验收交接登记表中记录外观问题、实际接收数量和经办人，由负责人复核。",
+            "location": {
+              "line_start": 5,
+              "line_end": 5
+            }
+          },
+          {
+            "text": "登记标识不增加库存、不构成采购审核或调拨收货；库存和审批仍按系统原有业务流程办理。",
+            "location": {
+              "line_start": 7,
+              "line_end": 7
+            }
+          }
+        ],
+        "source_notice": "上传参考资料；管理员审核不等于厂家认证或正式企业制度发布。"
+      }
+    ]
+  },
+  "pre_approval_retrieval": {
+    "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+    "retrieval_mode": "hybrid",
+    "retrieval_version": "hybrid-tfidf-rrf-context-v2",
+    "knowledge_base": "inventory_policies",
+    "knowledge_scope": "draft_preview",
+    "top_k": 5,
+    "status": "retrieved",
+    "hits": [
+      {
+        "knowledge_base": "inventory_policies",
+        "document_id": "INV-RCV-004",
+        "document_version": "1.0-draft.1",
+        "source_sha256": "f497ad544d961c2b86895fedfc74ff6bf0c4d109fe810b53e45d298e7a1baac3",
+        "unit_id": "INV-RCV-004-C003",
+        "chunk_id": "e7f2d7dd3208655f8850931f2cd527f353f028a6ba668e52da2f27af4185d286",
+        "parent_id": "e56052357a07121fd3d540fc4287b85dff3065d946ef66408cd7a5901f52cfa6",
+        "title": "到货验收与实际入库作业规范",
+        "section_path": [
+          "到货验收与实际入库作业规范",
+          "1 收货前准备"
+        ],
+        "unit_text": "INV-RCV-004-C003 接收凭据应能识别供应商、关联采购、送货日期、件号或规格、单位、数量及包装标识。电子与纸质凭据应建立同一关联编号，不能仅凭口头说明办理。",
+        "embedding_text_sha256": "81fff33b2d57ebeaaeeac27591d956950f2e2e430220e605fde44f76f5ed8b16",
+        "source_state": "draft",
+        "source_status": "pending_approval",
+        "source_type": "project_authored_policy_draft",
+        "source_ids": [],
+        "effective_from": null,
+        "effective_until": null,
+        "required_context_document_id": null,
+        "parser_version": "controlled-office-v1",
+        "chunking_version": "clause-section-v1",
+        "page_start": 1,
+        "page_end": 1,
+        "distance": 0.5098004341125488,
+        "dense_rank": 4,
+        "lexical_rank": 4,
+        "rrf_score": 0.03125,
+        "exact_match": false,
+        "lexical_score": 0.10413036731400913
+      },
+      {
+        "knowledge_base": "inventory_policies",
+        "document_id": "INV-RCV-004",
+        "document_version": "1.0-draft.1",
+        "source_sha256": "f497ad544d961c2b86895fedfc74ff6bf0c4d109fe810b53e45d298e7a1baac3",
+        "unit_id": "INV-RCV-004-C017",
+        "chunk_id": "ac4c8ed203fd1eb4a429d1d2d437a18d8cacb400dacbaebf4a0f70dd11ae70f9",
+        "parent_id": "e302593fd06f1bb2649919a8f87cdf9623a86494ca785c1db07a248f2f890f45",
+        "title": "到货验收与实际入库作业规范",
+        "section_path": [
+          "到货验收与实际入库作业规范",
+          "5 记录与复核"
+        ],
+        "unit_text": "INV-RCV-004-C017 验收记录至少保留采购编号、入库编号、到货依据、SKU及规格、采购单位、到货数、合格实收数、异常数、验收人、交接人、业务日期和必要附件索引。",
+        "embedding_text_sha256": "12eb1adbc9c67a8cc51871ef445ce62e21a18321b87534108452954cf6189234",
+        "source_state": "draft",
+        "source_status": "pending_approval",
+        "source_type": "project_authored_policy_draft",
+        "source_ids": [],
+        "effective_from": null,
+        "effective_until": null,
+        "required_context_document_id": null,
+        "parser_version": "controlled-office-v1",
+        "chunking_version": "clause-section-v1",
+        "page_start": 2,
+        "page_end": 2,
+        "distance": 0.5173941850662231,
+        "dense_rank": 9,
+        "lexical_rank": 3,
+        "rrf_score": 0.03036576949620428,
+        "exact_match": false,
+        "lexical_score": 0.11497086031757593
+      },
+      {
+        "knowledge_base": "inventory_policies",
+        "document_id": "INV-RCV-004",
+        "document_version": "1.0-draft.1",
+        "source_sha256": "f497ad544d961c2b86895fedfc74ff6bf0c4d109fe810b53e45d298e7a1baac3",
+        "unit_id": "INV-RCV-004-C005",
+        "chunk_id": "bdbd45b9d61e36c4f7ca35300826da607769488b7b383e8fd4cb59ccdf871843",
+        "parent_id": "6c5b36ece25a621c76fd45abca14336f08871b6b90052c72a6d04625f38edadb",
+        "title": "到货验收与实际入库作业规范",
+        "section_path": [
+          "到货验收与实际入库作业规范",
+          "2 实物验收"
+        ],
+        "unit_text": "INV-RCV-004-C005 涉及车辆适配时，应依据已核验的车辆条件和零件适配资料确认，不以名称相同、能安装或有库存认定合格。无法确认时转技术复核，暂不作为可交付备件放行。",
+        "embedding_text_sha256": "e15d7229323e6ec259e332d8f7c0e4c39493bc65c2fd23f2b30c1b90781e2f50",
+        "source_state": "draft",
+        "source_status": "pending_approval",
+        "source_type": "project_authored_policy_draft",
+        "source_ids": [],
+        "effective_from": null,
+        "effective_until": null,
+        "required_context_document_id": null,
+        "parser_version": "controlled-office-v1",
+        "chunking_version": "clause-section-v1",
+        "page_start": 1,
+        "page_end": 1,
+        "distance": 0.5119590163230896,
+        "dense_rank": 6,
+        "lexical_rank": 20,
+        "rrf_score": 0.027651515151515153,
+        "exact_match": false,
+        "lexical_score": 0.06257315358489185
+      },
+      {
+        "knowledge_base": "inventory_policies",
+        "document_id": "INV-TRF-006",
+        "document_version": "1.0-draft.2",
+        "source_sha256": "8cb71cf74b0b5f2574a7e43334bd54eb4a6629bf34b3efebaec36a0323a0fac8",
+        "unit_id": "INV-TRF-006-C016",
+        "chunk_id": "b0721b911b55373a34d5978d9417f94bff2b92d93918e27eb2e06e0bba1376fd",
+        "parent_id": "f89b5a9f1b1c6fafe4fa8376055e3f05b8d4fff0601efb0d0e5f0221cbb6d470",
+        "title": "跨仓调拨与在途交接规程",
+        "section_path": [
+          "跨仓调拨与在途交接规程",
+          "5 记录与日常复核"
+        ],
+        "unit_text": "INV-TRF-006-C016 交接记录应包括调拨编号、两仓、SKU及单位、发出数、实到数、质量状态、双方交接人、发出及接收时间、运输凭据及异常索引。系统没有独立附件字段时，登记受控记录编号并另行保管原件。",
+        "embedding_text_sha256": "d893b16b87fe807d3c01af5518b7862f17d5f2f518b61460ff002e0fb09fe46e",
+        "source_state": "draft",
+        "source_status": "pending_approval",
+        "source_type": "project_authored_policy_draft",
+        "source_ids": [],
+        "effective_from": null,
+        "effective_until": null,
+        "required_context_document_id": null,
+        "parser_version": "controlled-office-v1",
+        "chunking_version": "clause-section-v1",
+        "block_start": 27,
+        "block_end": 27,
+        "distance": 0.5251115560531616,
+        "dense_rank": 16,
+        "lexical_rank": 11,
+        "rrf_score": 0.027242401779095628,
+        "exact_match": false,
+        "lexical_score": 0.07952141921901483
+      },
+      {
+        "knowledge_base": "inventory_policies",
+        "document_id": "INV-RCV-004",
+        "document_version": "1.0-draft.1",
+        "source_sha256": "f497ad544d961c2b86895fedfc74ff6bf0c4d109fe810b53e45d298e7a1baac3",
+        "unit_id": "INV-RCV-004-C004",
+        "chunk_id": "e6b661c9cf2447cfdfa2da389242241c8ba0b8649ee66825575c1fbf7bafb0b7",
+        "parent_id": "6c5b36ece25a621c76fd45abca14336f08871b6b90052c72a6d04625f38edadb",
+        "title": "到货验收与实际入库作业规范",
+        "section_path": [
+          "到货验收与实际入库作业规范",
+          "2 实物验收"
+        ],
+        "unit_text": "INV-RCV-004-C004 逐项核对SKU对应的厂家件号、规格、包装单位、数量、外观、封装及必要的批次、有效期和随附资料。图片只作辅助识别，实物不符时不能用同类图片替代验收依据。",
+        "embedding_text_sha256": "020172f5e1ee76e00dc197a044a9005f408327c986f5df13421637f90f800800",
+        "source_state": "draft",
+        "source_status": "pending_approval",
+        "source_type": "project_authored_policy_draft",
+        "source_ids": [],
+        "effective_from": null,
+        "effective_until": null,
+        "required_context_document_id": null,
+        "parser_version": "controlled-office-v1",
+        "chunking_version": "clause-section-v1",
+        "page_start": 1,
+        "page_end": 1,
+        "distance": 0.5297386646270752,
+        "dense_rank": 19,
+        "lexical_rank": 13,
+        "rrf_score": 0.026356857985087564,
+        "exact_match": false,
+        "lexical_score": 0.07532431027430946
+      }
+    ],
+    "contexts": [
+      {
+        "context_id": "e56052357a07121fd3d540fc4287b85dff3065d946ef66408cd7a5901f52cfa6",
+        "document_id": "INV-RCV-004",
+        "document_version": "1.0-draft.1",
+        "source_sha256": "f497ad544d961c2b86895fedfc74ff6bf0c4d109fe810b53e45d298e7a1baac3",
+        "knowledge_base": "inventory_policies",
+        "section_path": [
+          "到货验收与实际入库作业规范",
+          "1 收货前准备"
+        ],
+        "context_text": "到货验收与实际入库作业规范\n\n本规范规定到货核验、合格实收、单据登记及收货异常的处理方式，防止预计到货或不合格品提前进入可用库存。当前为企业制度待核准稿。\n\n1 收货前准备\n\nINV-RCV-004-C001 收货人核实采购单、供应商送货依据、接收仓库及允许接收的未收数量。采购处于草稿、已完成或已取消状态时，不登记采购实际入库，应先确认业务依据。\nINV-RCV-004-C002 接收前检查库区、搬运和必要验收条件。需技术判定、特殊保管或质量核验的物品，提前通知对应岗位；不以库位不足或维修催料为由省略验收。\nINV-RCV-004-C003 接收凭据应能识别供应商、关联采购、送货日期、件号或规格、单位、数量及包装标识。电子与纸质凭据应建立同一关联编号，不能仅凭口头说明办理。",
+        "tables": [],
+        "unit_ids": [
+          "INV-RCV-004-C001",
+          "INV-RCV-004-C002",
+          "INV-RCV-004-C003"
+        ],
+        "page_start": 1,
+        "page_end": 1,
+        "expansion_reason": "parent_section"
+      },
+      {
+        "context_id": "e302593fd06f1bb2649919a8f87cdf9623a86494ca785c1db07a248f2f890f45",
+        "document_id": "INV-RCV-004",
+        "document_version": "1.0-draft.1",
+        "source_sha256": "f497ad544d961c2b86895fedfc74ff6bf0c4d109fe810b53e45d298e7a1baac3",
+        "knowledge_base": "inventory_policies",
+        "section_path": [
+          "到货验收与实际入库作业规范",
+          "5 记录与复核"
+        ],
+        "context_text": "到货验收与实际入库作业规范\n\n本规范规定到货核验、合格实收、单据登记及收货异常的处理方式，防止预计到货或不合格品提前进入可用库存。当前为企业制度待核准稿。\n\n5 记录与复核\n\nINV-RCV-004-C017 验收记录至少保留采购编号、入库编号、到货依据、SKU及规格、采购单位、到货数、合格实收数、异常数、验收人、交接人、业务日期和必要附件索引。\n| 核验项目 | 放行条件 | 不满足时处理 |\n| --- | --- | --- |\n| 采购来源 | 允许收货且明细属于本单 | 暂停登记并联系采购岗位 |\n| 实物与标识 | 编码规格单位及数量相符 | 记录差异并隔离待核验 |\n| 接收数量 | 合格实收且不超未收数量 | 拒绝超量入账并处理变更 |\n| 登记结果 | 入库单与流水可核查 | 查询原请求后重试 |\nINV-RCV-004-C018 仓储负责人复核收货异常和未结交接，采购岗位跟进供应商处理，财务按其职责核对结算资料。入库成功不代表质量保修、发票核对或付款审核已全部结束。",
+        "tables": [
+          {
+            "ordinal": 2,
+            "headers": [
+              "核验项目",
+              "放行条件",
+              "不满足时处理"
+            ],
+            "rows": [
+              [
+                "采购来源",
+                "允许收货且明细属于本单",
+                "暂停登记并联系采购岗位"
+              ],
+              [
+                "实物与标识",
+                "编码规格单位及数量相符",
+                "记录差异并隔离待核验"
+              ],
+              [
+                "接收数量",
+                "合格实收且不超未收数量",
+                "拒绝超量入账并处理变更"
+              ],
+              [
+                "登记结果",
+                "入库单与流水可核查",
+                "查询原请求后重试"
+              ]
+            ],
+            "text": "| 核验项目 | 放行条件 | 不满足时处理 |\n| --- | --- | --- |\n| 采购来源 | 允许收货且明细属于本单 | 暂停登记并联系采购岗位 |\n| 实物与标识 | 编码规格单位及数量相符 | 记录差异并隔离待核验 |\n| 接收数量 | 合格实收且不超未收数量 | 拒绝超量入账并处理变更 |\n| 登记结果 | 入库单与流水可核查 | 查询原请求后重试 |",
+            "page_start": 2,
+            "page_end": 2
+          }
+        ],
+        "unit_ids": [
+          "INV-RCV-004-C017",
+          "INV-RCV-004-C018"
+        ],
+        "page_start": 2,
+        "page_end": 2,
+        "expansion_reason": "parent_section"
+      },
+      {
+        "context_id": "6c5b36ece25a621c76fd45abca14336f08871b6b90052c72a6d04625f38edadb",
+        "document_id": "INV-RCV-004",
+        "document_version": "1.0-draft.1",
+        "source_sha256": "f497ad544d961c2b86895fedfc74ff6bf0c4d109fe810b53e45d298e7a1baac3",
+        "knowledge_base": "inventory_policies",
+        "section_path": [
+          "到货验收与实际入库作业规范",
+          "2 实物验收"
+        ],
+        "context_text": "到货验收与实际入库作业规范\n\n本规范规定到货核验、合格实收、单据登记及收货异常的处理方式，防止预计到货或不合格品提前进入可用库存。当前为企业制度待核准稿。\n\n2 实物验收\n\nINV-RCV-004-C004 逐项核对SKU对应的厂家件号、规格、包装单位、数量、外观、封装及必要的批次、有效期和随附资料。图片只作辅助识别，实物不符时不能用同类图片替代验收依据。\nINV-RCV-004-C005 涉及车辆适配时，应依据已核验的车辆条件和零件适配资料确认，不以名称相同、能安装或有库存认定合格。无法确认时转技术复核，暂不作为可交付备件放行。\nINV-RCV-004-C006 批次、有效期、序列号或质量文件需要追踪而当前系统没有对应字段时，应建立受控验收附件并关联单据。不得在问答中宣称系统已经提供批次库存、效期自动控制或序列号追踪。\nINV-RCV-004-C007 缺件、错件、破损、标识异常、到期或资料不足的物品，应分别记录接收与拒收数量、证据、临时保管地点和处理责任人。待检或拒收部分不得先计入现有可用量再等待处置。",
+        "tables": [],
+        "unit_ids": [
+          "INV-RCV-004-C004",
+          "INV-RCV-004-C005",
+          "INV-RCV-004-C006",
+          "INV-RCV-004-C007"
+        ],
+        "page_start": 1,
+        "page_end": 1,
+        "expansion_reason": "parent_section"
+      },
+      {
+        "context_id": "f89b5a9f1b1c6fafe4fa8376055e3f05b8d4fff0601efb0d0e5f0221cbb6d470",
+        "document_id": "INV-TRF-006",
+        "document_version": "1.0-draft.2",
+        "source_sha256": "8cb71cf74b0b5f2574a7e43334bd54eb4a6629bf34b3efebaec36a0323a0fac8",
+        "knowledge_base": "inventory_policies",
+        "section_path": [
+          "跨仓调拨与在途交接规程",
+          "5 记录与日常复核"
+        ],
+        "context_text": "跨仓调拨与在途交接规程\n\n本规程控制同一门店下不同仓库之间的备件调拨、运输交接及在途核实。仅适用于内部库存位置变化，不以调拨表示采购、销售、维修消耗或所有权转移。当前为待核准稿。\n\n5 记录与日常复核\n\nINV-TRF-006-C016 交接记录应包括调拨编号、两仓、SKU及单位、发出数、实到数、质量状态、双方交接人、发出及接收时间、运输凭据及异常索引。系统没有独立附件字段时，登记受控记录编号并另行保管原件。\nINV-TRF-006-C017 来源和目标仓共同检查已发出未收货清单，核对在途与实物位置，避免同一物品被两仓重复计算为可用。库内责任变动应补充交接记录，不改写历史实际操作人。\nINV-TRF-006-C018 调拨建议由规则计算和业务复核形成，不宣称全局最优调度。任何自动建议均须说明依据与限制，确认后仍由服务端重新核对权限、状态和数量。",
+        "tables": [],
+        "unit_ids": [
+          "INV-TRF-006-C016",
+          "INV-TRF-006-C017",
+          "INV-TRF-006-C018"
+        ],
+        "block_start": 26,
+        "block_end": 29,
+        "expansion_reason": "parent_section"
+      },
+      {
+        "context_id": "394ba4d921e71b84ecd46949bbc231d00fd90ec2d226e9ada612d1dba5288e66",
+        "document_id": "INV-ISS-005",
+        "document_version": "1.0-draft.2",
+        "source_sha256": "81176f0cab76f0d3625ee23e4eb276fc1b8675042cfd107ce0cb918a1ed68c20",
+        "knowledge_base": "inventory_policies",
+        "section_path": [
+          "维修领用与出库管理办法",
+          "2 备货与交接"
+        ],
+        "context_text": "维修领用与出库管理办法\n\n本办法控制维修领料、数量核验、实际交接和出库过账，防止无依据领用、错件、重复扣减和以领用代替其他业务。当前为企业制度待核准稿。\n\n2 备货与交接\n\nINV-ISS-005-C004 仓管核对需求SKU、件号或规格、单位、质量与适配状态，再核对目标仓实际可供数量。不能仅凭备件名称、图片或相近编码发料，不得将替代件当作原件静默发出。\n\nINV-ISS-005-C005 待检、不合格、冻结、客户所有或其他未获放行物品不得交付。当前软件可用量尚未扣除外部隔离记录时，应先核验受控质量台账；未能核验时暂停放行，不能将账面可用量当作已证明可交付量。\n\nINV-ISS-005-C006 草稿不占用或预留库存。备货与现场交接应指定责任人，其他并行业务可能改变可用量，提交出库时必须重新校验。页面曾显示有货不代表随后办理必然成功。\n\nINV-ISS-005-C007 实物交接应由领用接收人核对编码、数量及用途并签认。由他人代领时应保留代领授权和实际接收关系，不能共用账号冒充原领用人。",
+        "tables": [],
+        "unit_ids": [
+          "INV-ISS-005-C004",
+          "INV-ISS-005-C005",
+          "INV-ISS-005-C006",
+          "INV-ISS-005-C007"
+        ],
+        "expansion_reason": "branch_candidate_section"
+      },
+      {
+        "context_id": "31d059c3aca0eddb877ff6e4b1f5e09e7242044ed5b722189efbf0302f04d04e",
+        "document_id": "INV-SUP-012",
+        "document_version": "1.0-draft.1",
+        "source_sha256": "72168404fb80e400bdab099bc49a4540a69ccdd3080baf462716668b5226d4ea",
+        "knowledge_base": "inventory_policies",
+        "section_path": [
+          "供应商交付与条款核准管理规范",
+          "1 供应商准入"
+        ],
+        "context_text": "供应商交付与条款核准管理规范\n\n本规范规定供应商准入、交付条件、参数登记及合同版本的控制，不代表任何供应商已经接受本规范或作出交期、退货和赔偿承诺。实际双方权利义务以适用的有效合同及经核准记录为依据。当前为待核准稿。\n\n1 供应商准入\n\nINV-SUP-012-C001 采购岗位核对供应商实际签约主体、有效联系方式、可供范围和必要资质，财务核对相关结算资料，技术或质量岗位核对来源与质量条件。资料缺失或状态不明时不默认准入。\nINV-SUP-012-C002 系统供应商编码用于内部关联，不代表工商、品牌授权、正品、车型适配或信用认证。现有名称和图片不能作为真实企业身份或供货资格的证明。\nINV-SUP-012-C003 供应范围应具体到相关部件类别、件号或合同清单及适用限制。默认供应商只是计划选择，不得据此推断所有规格均可采购或替代。",
+        "tables": [],
+        "unit_ids": [
+          "INV-SUP-012-C001",
+          "INV-SUP-012-C002",
+          "INV-SUP-012-C003"
+        ],
+        "block_start": 5,
+        "block_end": 8,
+        "expansion_reason": "branch_candidate_section"
+      },
+      {
+        "context_id": "ede4d175e1f77e5a496439160e087fa25c82bd634a5486f87d4a945a539265d2",
+        "document_id": "INV-ISS-005",
+        "document_version": "1.0-draft.2",
+        "source_sha256": "81176f0cab76f0d3625ee23e4eb276fc1b8675042cfd107ce0cb918a1ed68c20",
+        "knowledge_base": "inventory_policies",
+        "section_path": [
+          "维修领用与出库管理办法",
+          "5 复核与异常"
+        ],
+        "context_text": "维修领用与出库管理办法\n\n本办法控制维修领料、数量核验、实际交接和出库过账，防止无依据领用、错件、重复扣减和以领用代替其他业务。当前为企业制度待核准稿。\n\n5 复核与异常\n\nINV-ISS-005-C015 仓储负责人检查无工单关联、异常大用量、重复领用、长时间未完成交接等事项；维修岗位核对领用与实际安装、余料和旧件回收，不把历史领用量直接认定为成功修复数量。\n\nINV-ISS-005-C016 发现错件、错仓、差异或疑似重复扣减，应立即保护原始记录，停止相关放行，核对单据和实物，再按异常处置取得批准。不直接编辑余额或清理流水。\n\nINV-ISS-005-C017 领用记录应保存工单或用途编号、SKU、单位、数量、仓库、实际交接人、操作账号、业务日期及异常附件；不在备注中保存客户身份证件、支付凭据或与本次领用无关的敏感信息。",
+        "tables": [],
+        "unit_ids": [
+          "INV-ISS-005-C015",
+          "INV-ISS-005-C016",
+          "INV-ISS-005-C017"
+        ],
+        "expansion_reason": "branch_candidate_section"
+      },
+      {
+        "context_id": "61e40976beeadf94ad4d87ed7180b0216f4b263ef6b0c90d622655c3ba7c8765",
+        "document_id": "INV-RCV-004",
+        "document_version": "1.0-draft.1",
+        "source_sha256": "f497ad544d961c2b86895fedfc74ff6bf0c4d109fe810b53e45d298e7a1baac3",
+        "knowledge_base": "inventory_policies",
+        "section_path": [
+          "到货验收与实际入库作业规范",
+          "4 超量及差异处理"
+        ],
+        "context_text": "到货验收与实际入库作业规范\n\n本规范规定到货核验、合格实收、单据登记及收货异常的处理方式，防止预计到货或不合格品提前进入可用库存。当前为企业制度待核准稿。\n\n4 超量及差异处理\n\nINV-RCV-004-C013 超量到货不直接超采购量入账。采购岗位先确认供应商是否拉回多送部分，或经过变更批准后建立独立且可追溯的采购依据。不得借其他采购单的余量接收本批货物。\nINV-RCV-004-C014 采购20件、本次合格8件时，仅登记8件，剩余12件继续为有效采购待收；待收12件不计入现有库存。后续取消这12件，不影响已收8件的实物和流水。\nINV-RCV-004-C015 已入库后发现质量或登记错误，不能删除入库单或把采购已收数量手动调回。先隔离实物、暂停相关放行，再按INV-ADJ-008处理；批准记录不等于反向业务已经入账。\nINV-RCV-004-C016 系统入库完成但实物交接尚未完成时，应记录位置、保管责任和交接未结原因；实物已到但入账失败时，应保持待处理标识并避免重复领用，不能把两种状态混为正常可用。",
+        "tables": [],
+        "unit_ids": [
+          "INV-RCV-004-C013",
+          "INV-RCV-004-C014",
+          "INV-RCV-004-C015",
+          "INV-RCV-004-C016"
+        ],
+        "page_start": 2,
+        "page_end": 2,
+        "expansion_reason": "branch_candidate_section"
+      },
+      {
+        "context_id": "6dc5eca1f86b0120915f55a1f4ec1eb1befae66e21beb67e559d3bb35b75319b",
+        "document_id": "INV-WHS-007",
+        "document_version": "1.0-draft.1",
+        "source_sha256": "68c9f7061f0a556a07d8a565f0bbf3832a4a2a6c6f94ee8eac04f796c6da48e1",
+        "knowledge_base": "inventory_policies",
+        "section_path": [
+          "仓储保管与质量隔离管理规范",
+          "2 标识与储存条件"
+        ],
+        "context_text": "仓储保管与质量隔离管理规范\n\n本规范管理备件保管、状态识别、质量隔离和保管责任。物品的储存条件以其有效标签、制造商说明及经核准的安全资料为依据，本规范不自行编造温湿度、期限或危险品分类要求。当前为待核准稿。\n\n2 标识与储存条件\n\nINV-WHS-007-C004 保留原包装、件号、批次、有效期及必要防护标识。拆包分装、标签脱落或单位无法确认时暂停放行，核实后按受控方式恢复标识，不能凭经验补造批次或厂家件号。\nINV-WHS-007-C005 需控制环境、效期、充放电、防潮、防静电或特殊安全条件的物品，按对应产品资料建立保管要求与检查记录。来源缺失时由质量或技术岗位确认，不套用其他产品参数。\nINV-WHS-007-C006 合格且可识别的物品应按经核准的先进先出或效期优先原则进行实物选择，并保留必要批次记录。当前数量系统没有批次和效期库存分配时，不得宣称系统已经自动执行批次先进先出或到期拦截。\nINV-WHS-007-C007 企业应安排日常巡查，核验破损、受潮、锈蚀、泄漏、包装异常、标签和储存条件。检查频率及记录保存要求经企业核准，不因系统没有提醒功能而免除人工检查责任。",
+        "tables": [],
+        "unit_ids": [
+          "INV-WHS-007-C004",
+          "INV-WHS-007-C005",
+          "INV-WHS-007-C006",
+          "INV-WHS-007-C007"
+        ],
+        "page_start": 1,
+        "page_end": 1,
+        "expansion_reason": "branch_candidate_section"
+      }
+    ],
+    "embedding_requests": 1,
+    "unavailable_documents": [],
+    "domain_error": null,
+    "document_ids": null,
+    "document_versions": null,
+    "candidate_limit": 20,
+    "context_budget": 12000,
+    "context_characters": 3770,
+    "omitted_contexts": [],
+    "missing_exact_ids": [],
+    "dense_candidates": 20,
+    "lexical_candidates": 20,
+    "rrf_constant": 60,
+    "timings": {
+      "qualification_seconds": 0.129,
+      "embedding_seconds": 0.246,
+      "retrieval_seconds": 0.398
+    },
+    "usage": {
+      "embedding": {
+        "prompt_tokens": 13,
+        "completion_tokens": 0,
+        "total_tokens": 13
+      }
+    },
+    "chat_requests": 0,
+    "request_id": "e29d7d298266419d89cbf77b6b5ff05c",
+    "elapsed_seconds": 0.774
+  },
+  "pending_not_retrievable": true,
+  "role_review_denials": {
+    "storekeeper": 403,
+    "manager": 403
+  },
+  "approved_submissions": {
+    "items": [
+      {
+        "id": "7f3cf242370942328a9aab70ebdddab2",
+        "user_id": 1571,
+        "title": "验收交接登记规范",
+        "kb": "inventory_policies",
+        "format": "md",
+        "status": "indexed",
+        "reviewer_id": 1572,
+        "review_note": "M5操作验收：已核对原文、范围及行号，作为本地参考资料入库",
+        "created_at": "2026-10-27T07:01:02.577576+00:00",
+        "reviewed_at": "2026-10-27T07:18:49.828786+00:00",
+        "preview": [
+          {
+            "text": "# 验收交接登记规范",
+            "location": {
+              "line_start": 1,
+              "line_end": 1
+            }
+          },
+          {
+            "text": "本文件仅用于M5实际操作验收，不代表真实门店已批准的制度。",
+            "location": {
+              "line_start": 3,
+              "line_end": 3
+            }
+          },
+          {
+            "text": "容器外观破损时，交接登记使用标识 M5-HANDOVER-27。在验收交接登记表中记录外观问题、实际接收数量和经办人，由负责人复核。",
+            "location": {
+              "line_start": 5,
+              "line_end": 5
+            }
+          },
+          {
+            "text": "登记标识不增加库存、不构成采购审核或调拨收货；库存和审批仍按系统原有业务流程办理。",
+            "location": {
+              "line_start": 7,
+              "line_end": 7
+            }
+          }
+        ],
+        "source_notice": "上传参考资料；管理员审核不等于厂家认证或正式企业制度发布。"
+      }
+    ]
+  },
+  "knowledge_status": {
+    "available": true,
+    "embedding_configured": true,
+    "chat_configured": true,
+    "generation_id": "06d7b5f6fcfa4a4d9ee71ffbb0ffba46",
+    "document_count": 20,
+    "unit_count": 246,
+    "context_count": 90,
+    "domains": {
+      "inventory_policies": {
+        "released_documents": 0,
+        "preview_documents": 13,
+        "domain_error": null
+      },
+      "general_diagnostics": {
+        "released_documents": 0,
+        "preview_documents": 7,
+        "domain_error": null
+      }
+    }
+  },
+  "answer": {
+    "generation_id": "06d7b5f6fcfa4a4d9ee71ffbb0ffba46",
+    "knowledge_base": "inventory_policies",
+    "knowledge_scope": "draft_preview",
+    "retrieval_mode": "hybrid",
+    "timings": {
+      "qualification_seconds": 0.128,
+      "embedding_seconds": 0.209,
+      "retrieval_seconds": 0.387,
+      "chat_seconds": 1.4,
+      "validation_seconds": 0.121
+    },
+    "answer_status": "answered",
+    "claims": [
+      {
+        "text": "容器外观破损时，交接登记使用标识 M5-HANDOVER-27。",
+        "citation_ids": [
+          "a53336f00115fc535398f7e39a6a192f31002335edcd9a47ff21d8a49d452ca4"
+        ]
+      },
+      {
+        "text": "在验收交接登记表中需记录外观问题、实际接收数量和经办人，由负责人复核。",
+        "citation_ids": [
+          "a53336f00115fc535398f7e39a6a192f31002335edcd9a47ff21d8a49d452ca4"
+        ]
+      }
+    ],
+    "follow_up_questions": [],
+    "limitations": [
+      "所引《验收交接登记规范》为管理员审核参考资料（admin_reviewed_reference），且原文注明仅用于M5实际操作验收，不代表真实门店已批准的制度。",
+      "本服务只读取文档，未查询实时库存或办理业务单据。",
+      "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+    ],
+    "fault_types": [],
+    "checks": [],
+    "part_decisions": [],
+    "citations": [
+      {
+        "knowledge_base": "inventory_policies",
+        "document_id": "UPL-7f3cf242370942328a9aab70ebdddab2",
+        "document_version": "1",
+        "title": "验收交接登记规范",
+        "native_format": "md",
+        "source_state": "reference",
+        "source_status": "admin_reviewed_reference",
+        "citation_id": "a53336f00115fc535398f7e39a6a192f31002335edcd9a47ff21d8a49d452ca4",
+        "generation_id": "06d7b5f6fcfa4a4d9ee71ffbb0ffba46",
+        "chunk_id": "5ed7353e5dec7c6624f4736abcdd76ac78547438a9c9a2ee85e79d015f89efca",
+        "unit_id": null,
+        "unit_ids": [
+          "UPL-7f3cf242370942328a9aab70ebdddab2-C003"
+        ],
+        "section_path": [
+          "验收交接登记规范",
+          "上传原文片段003"
+        ],
+        "excerpt": "容器外观破损时，交接登记使用标识 M5-HANDOVER-27。在验收交接登记表中记录外观问题、实际接收数量和经办人，由负责人复核。",
+        "line_start": 5,
+        "line_end": 5,
+        "tables": []
+      }
+    ],
+    "usage": {
+      "embedding": {
+        "prompt_tokens": 30,
+        "completion_tokens": 0,
+        "total_tokens": 30
+      },
+      "chat": {
+        "prompt_tokens": 8195,
+        "completion_tokens": 206,
+        "total_tokens": 8401
+      }
+    },
+    "embedding_requests": 1,
+    "chat_requests": 1,
+    "request_id": "423b3880a9cb4675a242084ae28f60f9",
+    "elapsed_seconds": 2.246
+  },
+  "checks": {
+    "pending_excluded": true,
+    "approved_indexed": true,
+    "answered": true,
+    "marker_in_answer": true,
+    "uploaded_source_cited": true,
+    "real_line_location": true,
+    "three_fields": true,
+    "no_business_tools": true
+  }
+}

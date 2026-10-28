@@ -1,0 +1,4844 @@
+{
+  "created_at": "2026-10-24T13:42:17.602168+00:00",
+  "purpose": "paired single vs coordinator+business+diagnostics; synthetic isolated test database",
+  "model": "deepseek-flash",
+  "embedding": "BAAI/bge-m3",
+  "temperature": 0,
+  "step_limit_per_worker": 6,
+  "tool_limit_per_task": 12,
+  "web_enabled": false,
+  "timeout_seconds": 120,
+  "retries": 0,
+  "cases": [
+    {
+      "case_id": "AG-01",
+      "mode": "single",
+      "task": "查询评测蓄电池在评测A仓和评测B仓的现有、可用、采购待收、调拨在途，分别列出，不办理业务。",
+      "expected": "stock",
+      "answer": {
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "评测蓄电池（SKU EV49C13FD4E6-BAT，part_id 657，单位：件）在评测A仓（warehouse_id 331）：现有14件、可用14件、采购待收6件、调拨在途0件；安全库存3件。",
+            "citation_ids": [
+              "a51ab7bd49dbf284a78fd1898577aa1f99d3c4d836b0441d92cb19e8d420a597",
+              "9d77f6a7d42bc9a8a0821d382d3569d6e20ff2e635307412e3561523e79c38f5"
+            ]
+          },
+          {
+            "text": "同一备件在评测B仓（warehouse_id 332）：现有2件、可用2件、采购待收0件、调拨在途0件；安全库存3件。",
+            "citation_ids": [
+              "a51ab7bd49dbf284a78fd1898577aa1f99d3c4d836b0441d92cb19e8d420a597",
+              "b18efa4f7806f0e42dfe29404272f9abdb2304f91bff709af208afb9bc61d3fd"
+            ]
+          },
+          {
+            "text": "以上为2026-10-24当前业务快照，预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。本次仅查询，未创建或提交任何单据。",
+            "citation_ids": [
+              "9d77f6a7d42bc9a8a0821d382d3569d6e20ff2e635307412e3561523e79c38f5",
+              "b18efa4f7806f0e42dfe29404272f9abdb2304f91bff709af208afb9bc61d3fd"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "a51ab7bd49dbf284a78fd1898577aa1f99d3c4d836b0441d92cb19e8d420a597",
+            "chunk_id": "a51ab7bd49dbf284a78fd1898577aa1f99d3c4d836b0441d92cb19e8d420a597",
+            "document_id": "TOOL-catalog",
+            "document_version": "request_snapshot",
+            "title": "备件与供货目录",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"parts\": [{\"id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"aliases\": \"\", \"category\": \"评测电气\", \"unit\": \"件\", \"specification\": \"\", \"reference_price\": \"400.00\", \"safety_stock\": 3, \"suppliers\": [{\"id\": 180, \"name\": \"评测电气供应商\", \"lead_time_days\": 5}]}], \"warehouses\": [{\"id\": 331, \"code\": \"EV49C13FD4E6-A\", \"name\": \"评测A仓\"}, {\"id\": 332, \"code\": \"EV49C13FD4E6-B\", \"name\": \"评测B仓\"}], \"notice\": \"名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。\", \"limit\": 100}",
+            "accessed_at": "2026-10-24T13:42:18.438443+00:00"
+          },
+          {
+            "citation_id": "9d77f6a7d42bc9a8a0821d382d3569d6e20ff2e635307412e3561523e79c38f5",
+            "chunk_id": "9d77f6a7d42bc9a8a0821d382d3569d6e20ff2e635307412e3561523e79c38f5",
+            "document_id": "TOOL-stock",
+            "document_version": "request_snapshot",
+            "title": "实时库存查询",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"items\": [{\"warehouse_id\": 331, \"warehouse\": \"评测A仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 14, \"available\": 14, \"purchase_pending\": \"6\", \"in_transit\": \"0\", \"initialized\": true}], \"limit\": 100, \"as_of\": \"2026-10-24T13:42:19.312551+00:00\", \"reserved\": 0, \"notice\": \"当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。\"}",
+            "accessed_at": "2026-10-24T13:42:19.313359+00:00"
+          },
+          {
+            "citation_id": "b18efa4f7806f0e42dfe29404272f9abdb2304f91bff709af208afb9bc61d3fd",
+            "chunk_id": "b18efa4f7806f0e42dfe29404272f9abdb2304f91bff709af208afb9bc61d3fd",
+            "document_id": "TOOL-stock",
+            "document_version": "request_snapshot",
+            "title": "实时库存查询",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"items\": [{\"warehouse_id\": 332, \"warehouse\": \"评测B仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 2, \"available\": 2, \"purchase_pending\": \"0\", \"in_transit\": \"0\", \"initialized\": true}], \"limit\": 100, \"as_of\": \"2026-10-24T13:42:19.316359+00:00\", \"reserved\": 0, \"notice\": \"当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。\"}",
+            "accessed_at": "2026-10-24T13:42:19.317027+00:00"
+          }
+        ],
+        "follow_up_questions": [],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "limitations": [
+          "业务查询来自本轮工具快照，执行前仍须重新校验。"
+        ],
+        "message": "",
+        "usage": {
+          "agent_model_calls": [
+            {
+              "prompt_tokens": 2194,
+              "completion_tokens": 53,
+              "total_tokens": 2247
+            },
+            {
+              "prompt_tokens": 2503,
+              "completion_tokens": 101,
+              "total_tokens": 2604
+            },
+            {
+              "prompt_tokens": 3088,
+              "completion_tokens": 508,
+              "total_tokens": 3596
+            }
+          ],
+          "knowledge": [],
+          "coordinator": {}
+        },
+        "agent_mode": "single",
+        "roles": [
+          "single"
+        ],
+        "tool_trace": [
+          {
+            "role": "single",
+            "tool": "catalog",
+            "step": 0,
+            "call_id": "call_00_PRNi05ItZ5y8yGTgJfw89836",
+            "arguments": {
+              "query": "评测蓄电池"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "a51ab7bd49dbf284a78fd1898577aa1f99d3c4d836b0441d92cb19e8d420a597",
+              "data": {
+                "parts": [
+                  {
+                    "id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "aliases": "",
+                    "category": "评测电气",
+                    "unit": "件",
+                    "specification": "",
+                    "reference_price": "400.00",
+                    "safety_stock": 3,
+                    "suppliers": [
+                      {
+                        "id": 180,
+                        "name": "评测电气供应商",
+                        "lead_time_days": 5
+                      }
+                    ]
+                  }
+                ],
+                "warehouses": [
+                  {
+                    "id": 331,
+                    "code": "EV49C13FD4E6-A",
+                    "name": "评测A仓"
+                  },
+                  {
+                    "id": 332,
+                    "code": "EV49C13FD4E6-B",
+                    "name": "评测B仓"
+                  }
+                ],
+                "notice": "名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。",
+                "limit": 100
+              }
+            },
+            "elapsed_seconds": 0.005
+          },
+          {
+            "role": "single",
+            "tool": "stock",
+            "step": 1,
+            "call_id": "call_00_q3YM5K6DDxQlrTdfOAxc3552",
+            "arguments": {
+              "part_id": 657,
+              "warehouse_id": 331
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "9d77f6a7d42bc9a8a0821d382d3569d6e20ff2e635307412e3561523e79c38f5",
+              "data": {
+                "items": [
+                  {
+                    "warehouse_id": 331,
+                    "warehouse": "评测A仓",
+                    "part_id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "unit": "件",
+                    "image_key": "",
+                    "safety_stock": 3,
+                    "part_active": true,
+                    "warehouse_active": true,
+                    "quantity": 14,
+                    "available": 14,
+                    "purchase_pending": "6",
+                    "in_transit": "0",
+                    "initialized": true
+                  }
+                ],
+                "limit": 100,
+                "as_of": "2026-10-24T13:42:19.312551+00:00",
+                "reserved": 0,
+                "notice": "当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。"
+              }
+            },
+            "elapsed_seconds": 0.007
+          },
+          {
+            "role": "single",
+            "tool": "stock",
+            "step": 1,
+            "call_id": "call_01_5pWvM4HL7hpN3ahdL35S9027",
+            "arguments": {
+              "part_id": 657,
+              "warehouse_id": 332
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "b18efa4f7806f0e42dfe29404272f9abdb2304f91bff709af208afb9bc61d3fd",
+              "data": {
+                "items": [
+                  {
+                    "warehouse_id": 332,
+                    "warehouse": "评测B仓",
+                    "part_id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "unit": "件",
+                    "image_key": "",
+                    "safety_stock": 3,
+                    "part_active": true,
+                    "warehouse_active": true,
+                    "quantity": 2,
+                    "available": 2,
+                    "purchase_pending": "0",
+                    "in_transit": "0",
+                    "initialized": true
+                  }
+                ],
+                "limit": 100,
+                "as_of": "2026-10-24T13:42:19.316359+00:00",
+                "reserved": 0,
+                "notice": "当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。"
+              }
+            },
+            "elapsed_seconds": 0.004
+          },
+          {
+            "role": "single",
+            "tool": "finish",
+            "step": 2,
+            "call_id": "call_00_mTxC1iNjTB3LiorEuQjK4757",
+            "arguments": {
+              "claims": [
+                {
+                  "text": "评测蓄电池（SKU EV49C13FD4E6-BAT，part_id 657，单位：件）在评测A仓（warehouse_id 331）：现有14件、可用14件、采购待收6件、调拨在途0件；安全库存3件。",
+                  "evidence_ids": [
+                    "a51ab7bd49dbf284a78fd1898577aa1f99d3c4d836b0441d92cb19e8d420a597",
+                    "9d77f6a7d42bc9a8a0821d382d3569d6e20ff2e635307412e3561523e79c38f5"
+                  ]
+                },
+                {
+                  "text": "同一备件在评测B仓（warehouse_id 332）：现有2件、可用2件、采购待收0件、调拨在途0件；安全库存3件。",
+                  "evidence_ids": [
+                    "a51ab7bd49dbf284a78fd1898577aa1f99d3c4d836b0441d92cb19e8d420a597",
+                    "b18efa4f7806f0e42dfe29404272f9abdb2304f91bff709af208afb9bc61d3fd"
+                  ]
+                },
+                {
+                  "text": "以上为2026-10-24当前业务快照，预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。本次仅查询，未创建或提交任何单据。",
+                  "evidence_ids": [
+                    "9d77f6a7d42bc9a8a0821d382d3569d6e20ff2e635307412e3561523e79c38f5",
+                    "b18efa4f7806f0e42dfe29404272f9abdb2304f91bff709af208afb9bc61d3fd"
+                  ]
+                }
+              ],
+              "message": "已按仓库分别列出评测蓄电池的现有、可用、采购待收和调拨在途，未办理任何业务。如需进一步查看消耗历史或补货建议，请告知。"
+            },
+            "status": "ok",
+            "result": {
+              "finished": true
+            },
+            "elapsed_seconds": 0.0
+          }
+        ],
+        "proposals": [],
+        "agent_elapsed_seconds": 4.365
+      },
+      "task_completed": true,
+      "reported_tokens": 8447,
+      "unconfirmed_business_writes": 0,
+      "elapsed_seconds": 4.368
+    },
+    {
+      "case_id": "AG-01",
+      "mode": "multi",
+      "task": "查询评测蓄电池在评测A仓和评测B仓的现有、可用、采购待收、调拨在途，分别列出，不办理业务。",
+      "expected": "stock",
+      "answer": {
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "评测蓄电池（SKU EV49C13FD4E6-BAT，part_id 657，单位：件）在评测A仓（warehouse_id 331）：现有库存 14 件，可用库存 14 件，采购待收 6 件，调拨在途 0 件。",
+            "citation_ids": [
+              "e946bce733348cf2fe9a2ed275f017a63940440b861a337a288c65e69bbdc187",
+              "83979d543f32462429f43a8f32459cfc22e2ef7e601850cbe3efefd99c88f747"
+            ]
+          },
+          {
+            "text": "评测蓄电池在评测B仓（warehouse_id 332）：现有库存 2 件，可用库存 2 件，采购待收 0 件，调拨在途 0 件。",
+            "citation_ids": [
+              "e946bce733348cf2fe9a2ed275f017a63940440b861a337a288c65e69bbdc187",
+              "ed0178b7aaa8d8a0e4599528e5f7d6418f08f20d7f0092f757e1017345bbb917"
+            ]
+          },
+          {
+            "text": "以上为 2026-10-24 当前业务快照；预留未实现，可用量等于现有量，尚未建账不代表已盘点实物。本次仅查询，未创建或提交任何单据/提案。",
+            "citation_ids": [
+              "83979d543f32462429f43a8f32459cfc22e2ef7e601850cbe3efefd99c88f747",
+              "ed0178b7aaa8d8a0e4599528e5f7d6418f08f20d7f0092f757e1017345bbb917"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "e946bce733348cf2fe9a2ed275f017a63940440b861a337a288c65e69bbdc187",
+            "chunk_id": "e946bce733348cf2fe9a2ed275f017a63940440b861a337a288c65e69bbdc187",
+            "document_id": "TOOL-catalog",
+            "document_version": "request_snapshot",
+            "title": "备件与供货目录",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"parts\": [{\"id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"aliases\": \"\", \"category\": \"评测电气\", \"unit\": \"件\", \"specification\": \"\", \"reference_price\": \"400.00\", \"safety_stock\": 3, \"suppliers\": [{\"id\": 180, \"name\": \"评测电气供应商\", \"lead_time_days\": 5}]}], \"warehouses\": [{\"id\": 331, \"code\": \"EV49C13FD4E6-A\", \"name\": \"评测A仓\"}, {\"id\": 332, \"code\": \"EV49C13FD4E6-B\", \"name\": \"评测B仓\"}], \"notice\": \"名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。\", \"limit\": 100}",
+            "accessed_at": "2026-10-24T13:42:23.832361+00:00"
+          },
+          {
+            "citation_id": "83979d543f32462429f43a8f32459cfc22e2ef7e601850cbe3efefd99c88f747",
+            "chunk_id": "83979d543f32462429f43a8f32459cfc22e2ef7e601850cbe3efefd99c88f747",
+            "document_id": "TOOL-stock",
+            "document_version": "request_snapshot",
+            "title": "实时库存查询",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"items\": [{\"warehouse_id\": 331, \"warehouse\": \"评测A仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 14, \"available\": 14, \"purchase_pending\": \"6\", \"in_transit\": \"0\", \"initialized\": true}], \"limit\": 100, \"as_of\": \"2026-10-24T13:42:24.779279+00:00\", \"reserved\": 0, \"notice\": \"当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。\"}",
+            "accessed_at": "2026-10-24T13:42:24.779869+00:00"
+          },
+          {
+            "citation_id": "ed0178b7aaa8d8a0e4599528e5f7d6418f08f20d7f0092f757e1017345bbb917",
+            "chunk_id": "ed0178b7aaa8d8a0e4599528e5f7d6418f08f20d7f0092f757e1017345bbb917",
+            "document_id": "TOOL-stock",
+            "document_version": "request_snapshot",
+            "title": "实时库存查询",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"items\": [{\"warehouse_id\": 332, \"warehouse\": \"评测B仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 2, \"available\": 2, \"purchase_pending\": \"0\", \"in_transit\": \"0\", \"initialized\": true}], \"limit\": 100, \"as_of\": \"2026-10-24T13:42:24.782373+00:00\", \"reserved\": 0, \"notice\": \"当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。\"}",
+            "accessed_at": "2026-10-24T13:42:24.782976+00:00"
+          }
+        ],
+        "follow_up_questions": [],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "limitations": [
+          "业务查询来自本轮工具快照，执行前仍须重新校验。"
+        ],
+        "message": "",
+        "usage": {
+          "agent_model_calls": [
+            {
+              "prompt_tokens": 2039,
+              "completion_tokens": 53,
+              "total_tokens": 2092
+            },
+            {
+              "prompt_tokens": 2343,
+              "completion_tokens": 101,
+              "total_tokens": 2444
+            },
+            {
+              "prompt_tokens": 2925,
+              "completion_tokens": 505,
+              "total_tokens": 3430
+            }
+          ],
+          "knowledge": [],
+          "coordinator": {
+            "prompt_tokens": 228,
+            "completion_tokens": 41,
+            "total_tokens": 269
+          }
+        },
+        "agent_mode": "multi",
+        "roles": [
+          "coordinator",
+          "business"
+        ],
+        "tool_trace": [
+          {
+            "role": "business",
+            "tool": "catalog",
+            "step": 0,
+            "call_id": "call_00_SdOQdiYTgqF6XXE9qmZ01082",
+            "arguments": {
+              "query": "评测蓄电池"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "e946bce733348cf2fe9a2ed275f017a63940440b861a337a288c65e69bbdc187",
+              "data": {
+                "parts": [
+                  {
+                    "id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "aliases": "",
+                    "category": "评测电气",
+                    "unit": "件",
+                    "specification": "",
+                    "reference_price": "400.00",
+                    "safety_stock": 3,
+                    "suppliers": [
+                      {
+                        "id": 180,
+                        "name": "评测电气供应商",
+                        "lead_time_days": 5
+                      }
+                    ]
+                  }
+                ],
+                "warehouses": [
+                  {
+                    "id": 331,
+                    "code": "EV49C13FD4E6-A",
+                    "name": "评测A仓"
+                  },
+                  {
+                    "id": 332,
+                    "code": "EV49C13FD4E6-B",
+                    "name": "评测B仓"
+                  }
+                ],
+                "notice": "名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。",
+                "limit": 100
+              }
+            },
+            "elapsed_seconds": 0.004
+          },
+          {
+            "role": "business",
+            "tool": "stock",
+            "step": 1,
+            "call_id": "call_00_oXj7CIPjG4EMTSApIpYl0562",
+            "arguments": {
+              "part_id": 657,
+              "warehouse_id": 331
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "83979d543f32462429f43a8f32459cfc22e2ef7e601850cbe3efefd99c88f747",
+              "data": {
+                "items": [
+                  {
+                    "warehouse_id": 331,
+                    "warehouse": "评测A仓",
+                    "part_id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "unit": "件",
+                    "image_key": "",
+                    "safety_stock": 3,
+                    "part_active": true,
+                    "warehouse_active": true,
+                    "quantity": 14,
+                    "available": 14,
+                    "purchase_pending": "6",
+                    "in_transit": "0",
+                    "initialized": true
+                  }
+                ],
+                "limit": 100,
+                "as_of": "2026-10-24T13:42:24.779279+00:00",
+                "reserved": 0,
+                "notice": "当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。"
+              }
+            },
+            "elapsed_seconds": 0.004
+          },
+          {
+            "role": "business",
+            "tool": "stock",
+            "step": 1,
+            "call_id": "call_01_ZjQiWcXGowA90Wy5nEBW6815",
+            "arguments": {
+              "part_id": 657,
+              "warehouse_id": 332
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "ed0178b7aaa8d8a0e4599528e5f7d6418f08f20d7f0092f757e1017345bbb917",
+              "data": {
+                "items": [
+                  {
+                    "warehouse_id": 332,
+                    "warehouse": "评测B仓",
+                    "part_id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "unit": "件",
+                    "image_key": "",
+                    "safety_stock": 3,
+                    "part_active": true,
+                    "warehouse_active": true,
+                    "quantity": 2,
+                    "available": 2,
+                    "purchase_pending": "0",
+                    "in_transit": "0",
+                    "initialized": true
+                  }
+                ],
+                "limit": 100,
+                "as_of": "2026-10-24T13:42:24.782373+00:00",
+                "reserved": 0,
+                "notice": "当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。"
+              }
+            },
+            "elapsed_seconds": 0.003
+          },
+          {
+            "role": "business",
+            "tool": "finish",
+            "step": 2,
+            "call_id": "call_00_QK4lBZmhpiPEq368aNKQ4841",
+            "arguments": {
+              "claims": [
+                {
+                  "text": "评测蓄电池（SKU EV49C13FD4E6-BAT，part_id 657，单位：件）在评测A仓（warehouse_id 331）：现有库存 14 件，可用库存 14 件，采购待收 6 件，调拨在途 0 件。",
+                  "evidence_ids": [
+                    "e946bce733348cf2fe9a2ed275f017a63940440b861a337a288c65e69bbdc187",
+                    "83979d543f32462429f43a8f32459cfc22e2ef7e601850cbe3efefd99c88f747"
+                  ]
+                },
+                {
+                  "text": "评测蓄电池在评测B仓（warehouse_id 332）：现有库存 2 件，可用库存 2 件，采购待收 0 件，调拨在途 0 件。",
+                  "evidence_ids": [
+                    "e946bce733348cf2fe9a2ed275f017a63940440b861a337a288c65e69bbdc187",
+                    "ed0178b7aaa8d8a0e4599528e5f7d6418f08f20d7f0092f757e1017345bbb917"
+                  ]
+                },
+                {
+                  "text": "以上为 2026-10-24 当前业务快照；预留未实现，可用量等于现有量，尚未建账不代表已盘点实物。本次仅查询，未创建或提交任何单据/提案。",
+                  "evidence_ids": [
+                    "83979d543f32462429f43a8f32459cfc22e2ef7e601850cbe3efefd99c88f747",
+                    "ed0178b7aaa8d8a0e4599528e5f7d6418f08f20d7f0092f757e1017345bbb917"
+                  ]
+                }
+              ],
+              "message": "已按仓库分别列出评测蓄电池的现有、可用、采购待收和调拨在途，未办理任何业务。如需进一步查看消耗趋势或补货建议，可以告诉我。"
+            },
+            "status": "ok",
+            "result": {
+              "finished": true
+            },
+            "elapsed_seconds": 0.0
+          }
+        ],
+        "proposals": [],
+        "agent_elapsed_seconds": 5.025
+      },
+      "task_completed": true,
+      "reported_tokens": 8235,
+      "unconfirmed_business_writes": 0,
+      "elapsed_seconds": 5.027
+    },
+    {
+      "case_id": "AG-02",
+      "mode": "multi",
+      "task": "评测蓄电池有哪些合格供应商？给出其交期，区分参考价格与实际报价。",
+      "expected": "catalog",
+      "answer": {
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "评测蓄电池（SKU EV49C13FD4E6-BAT，备件ID 657，单位：件）在目录中只有1家合格供应商：评测电气供应商（供应商ID 180），交期5天。",
+            "citation_ids": [
+              "da3660d6b6d5346d4813a7752219106a8ed5416db9951a1f5089c370bbd20d03"
+            ]
+          },
+          {
+            "text": "价格区分：目录中的400.00元/件是参考价格，不是供应商报价；本次查询未取得任何供应商的实际成交报价，实际报价需向供应商询价确认。",
+            "citation_ids": [
+              "da3660d6b6d5346d4813a7752219106a8ed5416db9951a1f5089c370bbd20d03"
+            ]
+          },
+          {
+            "text": "库存参考（2026-10-24快照）：评测A仓现有/可用14件、采购待收6件；评测B仓现有/可用2件、无待收；两仓安全库存均为3件，无调拨在途。",
+            "citation_ids": [
+              "f277432691818a2bc61e5b6d69b2055652791d37f758bf96e2ae9481f1b9e414"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "da3660d6b6d5346d4813a7752219106a8ed5416db9951a1f5089c370bbd20d03",
+            "chunk_id": "da3660d6b6d5346d4813a7752219106a8ed5416db9951a1f5089c370bbd20d03",
+            "document_id": "TOOL-catalog",
+            "document_version": "request_snapshot",
+            "title": "备件与供货目录",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"parts\": [{\"id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"aliases\": \"\", \"category\": \"评测电气\", \"unit\": \"件\", \"specification\": \"\", \"reference_price\": \"400.00\", \"safety_stock\": 3, \"suppliers\": [{\"id\": 180, \"name\": \"评测电气供应商\", \"lead_time_days\": 5}]}], \"warehouses\": [{\"id\": 331, \"code\": \"EV49C13FD4E6-A\", \"name\": \"评测A仓\"}, {\"id\": 332, \"code\": \"EV49C13FD4E6-B\", \"name\": \"评测B仓\"}], \"notice\": \"名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。\", \"limit\": 100}",
+            "accessed_at": "2026-10-24T13:42:28.482462+00:00"
+          },
+          {
+            "citation_id": "f277432691818a2bc61e5b6d69b2055652791d37f758bf96e2ae9481f1b9e414",
+            "chunk_id": "f277432691818a2bc61e5b6d69b2055652791d37f758bf96e2ae9481f1b9e414",
+            "document_id": "TOOL-stock",
+            "document_version": "request_snapshot",
+            "title": "实时库存查询",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"items\": [{\"warehouse_id\": 331, \"warehouse\": \"评测A仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 14, \"available\": 14, \"purchase_pending\": \"6\", \"in_transit\": \"0\", \"initialized\": true}, {\"warehouse_id\": 332, \"warehouse\": \"评测B仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 2, \"available\": 2, \"purchase_pending\": \"0\", \"in_transit\": \"0\", \"initialized\": true}], \"limit\": 100, \"as_of\": \"2026-10-24T13:42:29.706745+00:00\", \"reserved\": 0, \"notice\": \"当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。\"}",
+            "accessed_at": "2026-10-24T13:42:29.707352+00:00"
+          }
+        ],
+        "follow_up_questions": [
+          "是否需要我按参考价400元/件、供应商评测电气供应商，为某个仓库拟一份采购草稿（需您确认价格）？",
+          "如需实际报价，请提供供应商报价单或指定询价方式。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "limitations": [
+          "业务查询来自本轮工具快照，执行前仍须重新校验。"
+        ],
+        "message": "已查到该备件的合格供应商与交期，并区分了参考价与实际报价。目录仅显示1家合格供应商，若您掌握其他供应商信息可告知我进一步核对。",
+        "usage": {
+          "agent_model_calls": [
+            {
+              "prompt_tokens": 2010,
+              "completion_tokens": 49,
+              "total_tokens": 2059
+            },
+            {
+              "prompt_tokens": 2315,
+              "completion_tokens": 37,
+              "total_tokens": 2352
+            },
+            {
+              "prompt_tokens": 2708,
+              "completion_tokens": 447,
+              "total_tokens": 3155
+            }
+          ],
+          "knowledge": [],
+          "coordinator": {
+            "prompt_tokens": 213,
+            "completion_tokens": 27,
+            "total_tokens": 240
+          }
+        },
+        "agent_mode": "multi",
+        "roles": [
+          "coordinator",
+          "business"
+        ],
+        "tool_trace": [
+          {
+            "role": "business",
+            "tool": "catalog",
+            "step": 0,
+            "call_id": "call_00_JYzwLtJxxT2lPXvxQSkO9067",
+            "arguments": {
+              "query": "评测蓄电池"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "da3660d6b6d5346d4813a7752219106a8ed5416db9951a1f5089c370bbd20d03",
+              "data": {
+                "parts": [
+                  {
+                    "id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "aliases": "",
+                    "category": "评测电气",
+                    "unit": "件",
+                    "specification": "",
+                    "reference_price": "400.00",
+                    "safety_stock": 3,
+                    "suppliers": [
+                      {
+                        "id": 180,
+                        "name": "评测电气供应商",
+                        "lead_time_days": 5
+                      }
+                    ]
+                  }
+                ],
+                "warehouses": [
+                  {
+                    "id": 331,
+                    "code": "EV49C13FD4E6-A",
+                    "name": "评测A仓"
+                  },
+                  {
+                    "id": 332,
+                    "code": "EV49C13FD4E6-B",
+                    "name": "评测B仓"
+                  }
+                ],
+                "notice": "名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。",
+                "limit": 100
+              }
+            },
+            "elapsed_seconds": 0.004
+          },
+          {
+            "role": "business",
+            "tool": "stock",
+            "step": 1,
+            "call_id": "call_00_xqPRPfrvjgi5OOC2Yf6J9837",
+            "arguments": {
+              "part_id": 657
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "f277432691818a2bc61e5b6d69b2055652791d37f758bf96e2ae9481f1b9e414",
+              "data": {
+                "items": [
+                  {
+                    "warehouse_id": 331,
+                    "warehouse": "评测A仓",
+                    "part_id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "unit": "件",
+                    "image_key": "",
+                    "safety_stock": 3,
+                    "part_active": true,
+                    "warehouse_active": true,
+                    "quantity": 14,
+                    "available": 14,
+                    "purchase_pending": "6",
+                    "in_transit": "0",
+                    "initialized": true
+                  },
+                  {
+                    "warehouse_id": 332,
+                    "warehouse": "评测B仓",
+                    "part_id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "unit": "件",
+                    "image_key": "",
+                    "safety_stock": 3,
+                    "part_active": true,
+                    "warehouse_active": true,
+                    "quantity": 2,
+                    "available": 2,
+                    "purchase_pending": "0",
+                    "in_transit": "0",
+                    "initialized": true
+                  }
+                ],
+                "limit": 100,
+                "as_of": "2026-10-24T13:42:29.706745+00:00",
+                "reserved": 0,
+                "notice": "当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。"
+              }
+            },
+            "elapsed_seconds": 0.006
+          },
+          {
+            "role": "business",
+            "tool": "finish",
+            "step": 2,
+            "call_id": "call_00_N4aUISgE3iwXdBxgIxb06659",
+            "arguments": {
+              "claims": [
+                {
+                  "text": "评测蓄电池（SKU EV49C13FD4E6-BAT，备件ID 657，单位：件）在目录中只有1家合格供应商：评测电气供应商（供应商ID 180），交期5天。",
+                  "evidence_ids": [
+                    "da3660d6b6d5346d4813a7752219106a8ed5416db9951a1f5089c370bbd20d03"
+                  ]
+                },
+                {
+                  "text": "价格区分：目录中的400.00元/件是参考价格，不是供应商报价；本次查询未取得任何供应商的实际成交报价，实际报价需向供应商询价确认。",
+                  "evidence_ids": [
+                    "da3660d6b6d5346d4813a7752219106a8ed5416db9951a1f5089c370bbd20d03"
+                  ]
+                },
+                {
+                  "text": "库存参考（2026-10-24快照）：评测A仓现有/可用14件、采购待收6件；评测B仓现有/可用2件、无待收；两仓安全库存均为3件，无调拨在途。",
+                  "evidence_ids": [
+                    "f277432691818a2bc61e5b6d69b2055652791d37f758bf96e2ae9481f1b9e414"
+                  ]
+                }
+              ],
+              "follow_up_questions": [
+                "是否需要我按参考价400元/件、供应商评测电气供应商，为某个仓库拟一份采购草稿（需您确认价格）？",
+                "如需实际报价，请提供供应商报价单或指定询价方式。"
+              ],
+              "message": "已查到该备件的合格供应商与交期，并区分了参考价与实际报价。目录仅显示1家合格供应商，若您掌握其他供应商信息可告知我进一步核对。"
+            },
+            "status": "ok",
+            "result": {
+              "finished": true
+            },
+            "elapsed_seconds": 0.0
+          }
+        ],
+        "proposals": [],
+        "agent_elapsed_seconds": 5.482
+      },
+      "task_completed": true,
+      "reported_tokens": 7806,
+      "unconfirmed_business_writes": 0,
+      "elapsed_seconds": 5.485
+    },
+    {
+      "case_id": "AG-02",
+      "mode": "single",
+      "task": "评测蓄电池有哪些合格供应商？给出其交期，区分参考价格与实际报价。",
+      "expected": "catalog",
+      "answer": {
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "评测蓄电池（SKU EV49C13FD4E6-BAT，件）在目录中只有1家合格供应商：评测电气供应商（供应商ID 180），交期5天。",
+            "citation_ids": [
+              "52529389cf34956e506423d87489b8063adcc183c56b414567a9639b6eefb72e"
+            ]
+          },
+          {
+            "text": "价格区分：目录参考价为400.00元/件，这是参考价格，不是供应商报价；系统中没有该供应商的实际成交报价，如需采购需向供应商询价确认。",
+            "citation_ids": [
+              "52529389cf34956e506423d87489b8063adcc183c56b414567a9639b6eefb72e"
+            ]
+          },
+          {
+            "text": "库存现状（2026-10-24快照）：评测A仓现有/可用14件、采购待收6件；评测B仓现有/可用2件；两仓安全库存均为3件。",
+            "citation_ids": [
+              "96f709819e83fd1c32fb05682f401f207b8bb1b6e5381fe2ccde0f97756f6212"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "52529389cf34956e506423d87489b8063adcc183c56b414567a9639b6eefb72e",
+            "chunk_id": "52529389cf34956e506423d87489b8063adcc183c56b414567a9639b6eefb72e",
+            "document_id": "TOOL-catalog",
+            "document_version": "request_snapshot",
+            "title": "备件与供货目录",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"parts\": [{\"id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"aliases\": \"\", \"category\": \"评测电气\", \"unit\": \"件\", \"specification\": \"\", \"reference_price\": \"400.00\", \"safety_stock\": 3, \"suppliers\": [{\"id\": 180, \"name\": \"评测电气供应商\", \"lead_time_days\": 5}]}], \"warehouses\": [{\"id\": 331, \"code\": \"EV49C13FD4E6-A\", \"name\": \"评测A仓\"}, {\"id\": 332, \"code\": \"EV49C13FD4E6-B\", \"name\": \"评测B仓\"}], \"notice\": \"名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。\", \"limit\": 100}",
+            "accessed_at": "2026-10-24T13:42:33.421975+00:00"
+          },
+          {
+            "citation_id": "96f709819e83fd1c32fb05682f401f207b8bb1b6e5381fe2ccde0f97756f6212",
+            "chunk_id": "96f709819e83fd1c32fb05682f401f207b8bb1b6e5381fe2ccde0f97756f6212",
+            "document_id": "TOOL-stock",
+            "document_version": "request_snapshot",
+            "title": "实时库存查询",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"items\": [{\"warehouse_id\": 331, \"warehouse\": \"评测A仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 14, \"available\": 14, \"purchase_pending\": \"6\", \"in_transit\": \"0\", \"initialized\": true}, {\"warehouse_id\": 332, \"warehouse\": \"评测B仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 2, \"available\": 2, \"purchase_pending\": \"0\", \"in_transit\": \"0\", \"initialized\": true}], \"limit\": 100, \"as_of\": \"2026-10-24T13:42:34.423434+00:00\", \"reserved\": 0, \"notice\": \"当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。\"}",
+            "accessed_at": "2026-10-24T13:42:34.424310+00:00"
+          }
+        ],
+        "follow_up_questions": [
+          "是否需要向评测电气供应商询价以获取实际报价？",
+          "如需拟采购草稿，请指定仓库（评测A仓/评测B仓）和数量。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "limitations": [
+          "业务查询来自本轮工具快照，执行前仍须重新校验。"
+        ],
+        "message": "以上为目录与库存查询结果。若需要按参考价拟采购草稿，请告知采购仓库、数量，并确认是否按参考价400.00元/件暂拟（实际成交价仍需与供应商确认）。",
+        "usage": {
+          "agent_model_calls": [
+            {
+              "prompt_tokens": 2164,
+              "completion_tokens": 49,
+              "total_tokens": 2213
+            },
+            {
+              "prompt_tokens": 2464,
+              "completion_tokens": 37,
+              "total_tokens": 2501
+            },
+            {
+              "prompt_tokens": 2857,
+              "completion_tokens": 417,
+              "total_tokens": 3274
+            }
+          ],
+          "knowledge": [],
+          "coordinator": {}
+        },
+        "agent_mode": "single",
+        "roles": [
+          "single"
+        ],
+        "tool_trace": [
+          {
+            "role": "single",
+            "tool": "catalog",
+            "step": 0,
+            "call_id": "call_00_NNEwJH7nC4jGr9Z7TTNm0057",
+            "arguments": {
+              "query": "评测蓄电池"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "52529389cf34956e506423d87489b8063adcc183c56b414567a9639b6eefb72e",
+              "data": {
+                "parts": [
+                  {
+                    "id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "aliases": "",
+                    "category": "评测电气",
+                    "unit": "件",
+                    "specification": "",
+                    "reference_price": "400.00",
+                    "safety_stock": 3,
+                    "suppliers": [
+                      {
+                        "id": 180,
+                        "name": "评测电气供应商",
+                        "lead_time_days": 5
+                      }
+                    ]
+                  }
+                ],
+                "warehouses": [
+                  {
+                    "id": 331,
+                    "code": "EV49C13FD4E6-A",
+                    "name": "评测A仓"
+                  },
+                  {
+                    "id": 332,
+                    "code": "EV49C13FD4E6-B",
+                    "name": "评测B仓"
+                  }
+                ],
+                "notice": "名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。",
+                "limit": 100
+              }
+            },
+            "elapsed_seconds": 0.005
+          },
+          {
+            "role": "single",
+            "tool": "stock",
+            "step": 1,
+            "call_id": "call_00_sofuLSVEwYJFBWqoQYFa3414",
+            "arguments": {
+              "part_id": 657
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "96f709819e83fd1c32fb05682f401f207b8bb1b6e5381fe2ccde0f97756f6212",
+              "data": {
+                "items": [
+                  {
+                    "warehouse_id": 331,
+                    "warehouse": "评测A仓",
+                    "part_id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "unit": "件",
+                    "image_key": "",
+                    "safety_stock": 3,
+                    "part_active": true,
+                    "warehouse_active": true,
+                    "quantity": 14,
+                    "available": 14,
+                    "purchase_pending": "6",
+                    "in_transit": "0",
+                    "initialized": true
+                  },
+                  {
+                    "warehouse_id": 332,
+                    "warehouse": "评测B仓",
+                    "part_id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "unit": "件",
+                    "image_key": "",
+                    "safety_stock": 3,
+                    "part_active": true,
+                    "warehouse_active": true,
+                    "quantity": 2,
+                    "available": 2,
+                    "purchase_pending": "0",
+                    "in_transit": "0",
+                    "initialized": true
+                  }
+                ],
+                "limit": 100,
+                "as_of": "2026-10-24T13:42:34.423434+00:00",
+                "reserved": 0,
+                "notice": "当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。"
+              }
+            },
+            "elapsed_seconds": 0.007
+          },
+          {
+            "role": "single",
+            "tool": "finish",
+            "step": 2,
+            "call_id": "call_00_PYjPHNY450y4JC4DKBGc5451",
+            "arguments": {
+              "claims": [
+                {
+                  "text": "评测蓄电池（SKU EV49C13FD4E6-BAT，件）在目录中只有1家合格供应商：评测电气供应商（供应商ID 180），交期5天。",
+                  "evidence_ids": [
+                    "52529389cf34956e506423d87489b8063adcc183c56b414567a9639b6eefb72e"
+                  ]
+                },
+                {
+                  "text": "价格区分：目录参考价为400.00元/件，这是参考价格，不是供应商报价；系统中没有该供应商的实际成交报价，如需采购需向供应商询价确认。",
+                  "evidence_ids": [
+                    "52529389cf34956e506423d87489b8063adcc183c56b414567a9639b6eefb72e"
+                  ]
+                },
+                {
+                  "text": "库存现状（2026-10-24快照）：评测A仓现有/可用14件、采购待收6件；评测B仓现有/可用2件；两仓安全库存均为3件。",
+                  "evidence_ids": [
+                    "96f709819e83fd1c32fb05682f401f207b8bb1b6e5381fe2ccde0f97756f6212"
+                  ]
+                }
+              ],
+              "message": "以上为目录与库存查询结果。若需要按参考价拟采购草稿，请告知采购仓库、数量，并确认是否按参考价400.00元/件暂拟（实际成交价仍需与供应商确认）。",
+              "follow_up_questions": [
+                "是否需要向评测电气供应商询价以获取实际报价？",
+                "如需拟采购草稿，请指定仓库（评测A仓/评测B仓）和数量。"
+              ]
+            },
+            "status": "ok",
+            "result": {
+              "finished": true
+            },
+            "elapsed_seconds": 0.0
+          }
+        ],
+        "proposals": [],
+        "agent_elapsed_seconds": 4.235
+      },
+      "task_completed": true,
+      "reported_tokens": 7988,
+      "unconfirmed_business_writes": 0,
+      "elapsed_seconds": 4.237
+    },
+    {
+      "case_id": "AG-03",
+      "mode": "single",
+      "task": "查询采购单#2025的采购数量、累计已收和未收数量，不收货。",
+      "expected": "documents",
+      "answer": {
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "采购单#2025（采购单，状态：部分收货，收货仓：331 评测A仓，业务日期2026-10-24）仅1行明细：行ID 8359，备件ID 657，供应商ID 180，单价400.00。",
+            "citation_ids": [
+              "38a5fbad81ed4645e7347406fb0c9b121d49926a4a0adac196f01940ce0fb22e"
+            ]
+          },
+          {
+            "text": "该行采购数量10件，累计已收4件，未收数量为6件（10-4）。本次仅查询，未做任何收货操作。",
+            "citation_ids": [
+              "38a5fbad81ed4645e7347406fb0c9b121d49926a4a0adac196f01940ce0fb22e"
+            ]
+          },
+          {
+            "text": "目录中未能查到备件ID 657的名称信息（按ID和关键词检索均无匹配备件），因此无法给出该备件名称。",
+            "citation_ids": [
+              "28560ed4afbd9741926ffc7e38f7cf226dca8992bb2c6ce1d90a109ab47001bd",
+              "4b789b81d93f413449f90db264bed5c8ae18b14dc3111ae21ca7152d4316b0a8"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "38a5fbad81ed4645e7347406fb0c9b121d49926a4a0adac196f01940ce0fb22e",
+            "chunk_id": "38a5fbad81ed4645e7347406fb0c9b121d49926a4a0adac196f01940ce0fb22e",
+            "document_id": "TOOL-documents",
+            "document_version": "request_snapshot",
+            "title": "业务单据查询",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"items\": [{\"id\": 2025, \"kind\": \"purchase\", \"status\": \"partial\", \"warehouse_id\": 331, \"target_warehouse_id\": null, \"business_date\": \"2026-10-24\", \"lines\": [{\"id\": 8359, \"part_id\": 657, \"quantity\": 10, \"received_quantity\": 4, \"supplier_id\": 180, \"unit_price\": \"400.00\"}]}], \"limit\": 20}",
+            "accessed_at": "2026-10-24T13:42:37.728878+00:00"
+          },
+          {
+            "citation_id": "28560ed4afbd9741926ffc7e38f7cf226dca8992bb2c6ce1d90a109ab47001bd",
+            "chunk_id": "28560ed4afbd9741926ffc7e38f7cf226dca8992bb2c6ce1d90a109ab47001bd",
+            "document_id": "TOOL-catalog",
+            "document_version": "request_snapshot",
+            "title": "备件与供货目录",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"parts\": [], \"warehouses\": [{\"id\": 331, \"code\": \"EV49C13FD4E6-A\", \"name\": \"评测A仓\"}, {\"id\": 332, \"code\": \"EV49C13FD4E6-B\", \"name\": \"评测B仓\"}], \"notice\": \"名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。\", \"limit\": 100}",
+            "accessed_at": "2026-10-24T13:42:38.293905+00:00"
+          },
+          {
+            "citation_id": "4b789b81d93f413449f90db264bed5c8ae18b14dc3111ae21ca7152d4316b0a8",
+            "chunk_id": "4b789b81d93f413449f90db264bed5c8ae18b14dc3111ae21ca7152d4316b0a8",
+            "document_id": "TOOL-catalog",
+            "document_version": "request_snapshot",
+            "title": "备件与供货目录",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"parts\": [], \"warehouses\": [{\"id\": 331, \"code\": \"EV49C13FD4E6-A\", \"name\": \"评测A仓\"}, {\"id\": 332, \"code\": \"EV49C13FD4E6-B\", \"name\": \"评测B仓\"}], \"notice\": \"名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。\", \"limit\": 100}",
+            "accessed_at": "2026-10-24T13:42:39.417215+00:00"
+          }
+        ],
+        "follow_up_questions": [],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "limitations": [
+          "业务查询来自本轮工具快照，执行前仍须重新校验。"
+        ],
+        "message": "",
+        "usage": {
+          "agent_model_calls": [
+            {
+              "prompt_tokens": 2172,
+              "completion_tokens": 39,
+              "total_tokens": 2211
+            },
+            {
+              "prompt_tokens": 2379,
+              "completion_tokens": 37,
+              "total_tokens": 2416
+            },
+            {
+              "prompt_tokens": 2571,
+              "completion_tokens": 38,
+              "total_tokens": 2609
+            },
+            {
+              "prompt_tokens": 2765,
+              "completion_tokens": 393,
+              "total_tokens": 3158
+            }
+          ],
+          "knowledge": [],
+          "coordinator": {}
+        },
+        "agent_mode": "single",
+        "roles": [
+          "single"
+        ],
+        "tool_trace": [
+          {
+            "role": "single",
+            "tool": "documents",
+            "step": 0,
+            "call_id": "call_00_oNJw6fmYrNakYpOth2Xe5823",
+            "arguments": {
+              "document_id": 2025
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "38a5fbad81ed4645e7347406fb0c9b121d49926a4a0adac196f01940ce0fb22e",
+              "data": {
+                "items": [
+                  {
+                    "id": 2025,
+                    "kind": "purchase",
+                    "status": "partial",
+                    "warehouse_id": 331,
+                    "target_warehouse_id": null,
+                    "business_date": "2026-10-24",
+                    "lines": [
+                      {
+                        "id": 8359,
+                        "part_id": 657,
+                        "quantity": 10,
+                        "received_quantity": 4,
+                        "supplier_id": 180,
+                        "unit_price": "400.00"
+                      }
+                    ]
+                  }
+                ],
+                "limit": 20
+              }
+            },
+            "elapsed_seconds": 0.005
+          },
+          {
+            "role": "single",
+            "tool": "catalog",
+            "step": 1,
+            "call_id": "call_00_uL7tyd1Kst9QP6fhDdjd5472",
+            "arguments": {
+              "query": "657"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "28560ed4afbd9741926ffc7e38f7cf226dca8992bb2c6ce1d90a109ab47001bd",
+              "data": {
+                "parts": [],
+                "warehouses": [
+                  {
+                    "id": 331,
+                    "code": "EV49C13FD4E6-A",
+                    "name": "评测A仓"
+                  },
+                  {
+                    "id": 332,
+                    "code": "EV49C13FD4E6-B",
+                    "name": "评测B仓"
+                  }
+                ],
+                "notice": "名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。",
+                "limit": 100
+              }
+            },
+            "elapsed_seconds": 0.004
+          },
+          {
+            "role": "single",
+            "tool": "catalog",
+            "step": 2,
+            "call_id": "call_00_xBURN5fpeJp111JVdSX14814",
+            "arguments": {
+              "query": "备件"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "4b789b81d93f413449f90db264bed5c8ae18b14dc3111ae21ca7152d4316b0a8",
+              "data": {
+                "parts": [],
+                "warehouses": [
+                  {
+                    "id": 331,
+                    "code": "EV49C13FD4E6-A",
+                    "name": "评测A仓"
+                  },
+                  {
+                    "id": 332,
+                    "code": "EV49C13FD4E6-B",
+                    "name": "评测B仓"
+                  }
+                ],
+                "notice": "名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。",
+                "limit": 100
+              }
+            },
+            "elapsed_seconds": 0.004
+          },
+          {
+            "role": "single",
+            "tool": "finish",
+            "step": 3,
+            "call_id": "call_00_p8cG1LxdEhAhlcivRZZ65587",
+            "arguments": {
+              "claims": [
+                {
+                  "text": "采购单#2025（采购单，状态：部分收货，收货仓：331 评测A仓，业务日期2026-10-24）仅1行明细：行ID 8359，备件ID 657，供应商ID 180，单价400.00。",
+                  "evidence_ids": [
+                    "38a5fbad81ed4645e7347406fb0c9b121d49926a4a0adac196f01940ce0fb22e"
+                  ]
+                },
+                {
+                  "text": "该行采购数量10件，累计已收4件，未收数量为6件（10-4）。本次仅查询，未做任何收货操作。",
+                  "evidence_ids": [
+                    "38a5fbad81ed4645e7347406fb0c9b121d49926a4a0adac196f01940ce0fb22e"
+                  ]
+                },
+                {
+                  "text": "目录中未能查到备件ID 657的名称信息（按ID和关键词检索均无匹配备件），因此无法给出该备件名称。",
+                  "evidence_ids": [
+                    "28560ed4afbd9741926ffc7e38f7cf226dca8992bb2c6ce1d90a109ab47001bd",
+                    "4b789b81d93f413449f90db264bed5c8ae18b14dc3111ae21ca7152d4316b0a8"
+                  ]
+                }
+              ],
+              "message": "采购单#2025的采购数量、累计已收和未收数量已查询完毕，未执行收货。如需后续收货或调整，请告知。"
+            },
+            "status": "ok",
+            "result": {
+              "finished": true
+            },
+            "elapsed_seconds": 0.0
+          }
+        ],
+        "proposals": [],
+        "agent_elapsed_seconds": 4.817
+      },
+      "task_completed": true,
+      "reported_tokens": 10394,
+      "unconfirmed_business_writes": 0,
+      "elapsed_seconds": 4.82
+    },
+    {
+      "case_id": "AG-03",
+      "mode": "multi",
+      "task": "查询采购单#2025的采购数量、累计已收和未收数量，不收货。",
+      "expected": "documents",
+      "answer": {
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "采购单#2025（采购单，状态：部分收货，收货仓：评测A仓 id=331，业务日期2026-10-24）仅1行明细：行ID 8359，备件ID 657，供应商ID 180，单价400.00。",
+            "citation_ids": [
+              "8063a3e12517b3bc98b83bd34fda13664053212425a03384bd85585dc91030e6",
+              "8db7f0d37addf80ab3c9175aa0d762376fd64b207a9c6c06487cbb97504de8f7"
+            ]
+          },
+          {
+            "text": "该行采购数量10件，累计已收4件，未收数量为6件（10-4）。",
+            "citation_ids": [
+              "8063a3e12517b3bc98b83bd34fda13664053212425a03384bd85585dc91030e6"
+            ]
+          },
+          {
+            "text": "本次仅查询，未创建或执行任何收货操作。",
+            "citation_ids": [
+              "8063a3e12517b3bc98b83bd34fda13664053212425a03384bd85585dc91030e6"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "8063a3e12517b3bc98b83bd34fda13664053212425a03384bd85585dc91030e6",
+            "chunk_id": "8063a3e12517b3bc98b83bd34fda13664053212425a03384bd85585dc91030e6",
+            "document_id": "TOOL-documents",
+            "document_version": "request_snapshot",
+            "title": "业务单据查询",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"items\": [{\"id\": 2025, \"kind\": \"purchase\", \"status\": \"partial\", \"warehouse_id\": 331, \"target_warehouse_id\": null, \"business_date\": \"2026-10-24\", \"lines\": [{\"id\": 8359, \"part_id\": 657, \"quantity\": 10, \"received_quantity\": 4, \"supplier_id\": 180, \"unit_price\": \"400.00\"}]}], \"limit\": 20}",
+            "accessed_at": "2026-10-24T13:42:43.207774+00:00"
+          },
+          {
+            "citation_id": "8db7f0d37addf80ab3c9175aa0d762376fd64b207a9c6c06487cbb97504de8f7",
+            "chunk_id": "8db7f0d37addf80ab3c9175aa0d762376fd64b207a9c6c06487cbb97504de8f7",
+            "document_id": "TOOL-catalog",
+            "document_version": "request_snapshot",
+            "title": "备件与供货目录",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"parts\": [], \"warehouses\": [{\"id\": 331, \"code\": \"EV49C13FD4E6-A\", \"name\": \"评测A仓\"}, {\"id\": 332, \"code\": \"EV49C13FD4E6-B\", \"name\": \"评测B仓\"}], \"notice\": \"名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。\", \"limit\": 100}",
+            "accessed_at": "2026-10-24T13:42:43.712929+00:00"
+          }
+        ],
+        "follow_up_questions": [],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "limitations": [
+          "业务查询来自本轮工具快照，执行前仍须重新校验。"
+        ],
+        "message": "",
+        "usage": {
+          "agent_model_calls": [
+            {
+              "prompt_tokens": 2017,
+              "completion_tokens": 39,
+              "total_tokens": 2056
+            },
+            {
+              "prompt_tokens": 2220,
+              "completion_tokens": 37,
+              "total_tokens": 2257
+            },
+            {
+              "prompt_tokens": 2415,
+              "completion_tokens": 363,
+              "total_tokens": 2778
+            }
+          ],
+          "knowledge": [],
+          "coordinator": {
+            "prompt_tokens": 217,
+            "completion_tokens": 30,
+            "total_tokens": 247
+          }
+        },
+        "agent_mode": "multi",
+        "roles": [
+          "coordinator",
+          "business"
+        ],
+        "tool_trace": [
+          {
+            "role": "business",
+            "tool": "documents",
+            "step": 0,
+            "call_id": "call_00_d4jEWwNyqYmNlrZmRs7i6602",
+            "arguments": {
+              "document_id": 2025
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "8063a3e12517b3bc98b83bd34fda13664053212425a03384bd85585dc91030e6",
+              "data": {
+                "items": [
+                  {
+                    "id": 2025,
+                    "kind": "purchase",
+                    "status": "partial",
+                    "warehouse_id": 331,
+                    "target_warehouse_id": null,
+                    "business_date": "2026-10-24",
+                    "lines": [
+                      {
+                        "id": 8359,
+                        "part_id": 657,
+                        "quantity": 10,
+                        "received_quantity": 4,
+                        "supplier_id": 180,
+                        "unit_price": "400.00"
+                      }
+                    ]
+                  }
+                ],
+                "limit": 20
+              }
+            },
+            "elapsed_seconds": 0.003
+          },
+          {
+            "role": "business",
+            "tool": "catalog",
+            "step": 1,
+            "call_id": "call_00_taoeQ5sOv8j83vGdWIxH3384",
+            "arguments": {
+              "query": "657"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "8db7f0d37addf80ab3c9175aa0d762376fd64b207a9c6c06487cbb97504de8f7",
+              "data": {
+                "parts": [],
+                "warehouses": [
+                  {
+                    "id": 331,
+                    "code": "EV49C13FD4E6-A",
+                    "name": "评测A仓"
+                  },
+                  {
+                    "id": 332,
+                    "code": "EV49C13FD4E6-B",
+                    "name": "评测B仓"
+                  }
+                ],
+                "notice": "名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。",
+                "limit": 100
+              }
+            },
+            "elapsed_seconds": 0.007
+          },
+          {
+            "role": "business",
+            "tool": "finish",
+            "step": 2,
+            "call_id": "call_00_8mI6deUawQGmllizS7439435",
+            "arguments": {
+              "claims": [
+                {
+                  "text": "采购单#2025（采购单，状态：部分收货，收货仓：评测A仓 id=331，业务日期2026-10-24）仅1行明细：行ID 8359，备件ID 657，供应商ID 180，单价400.00。",
+                  "evidence_ids": [
+                    "8063a3e12517b3bc98b83bd34fda13664053212425a03384bd85585dc91030e6",
+                    "8db7f0d37addf80ab3c9175aa0d762376fd64b207a9c6c06487cbb97504de8f7"
+                  ]
+                },
+                {
+                  "text": "该行采购数量10件，累计已收4件，未收数量为6件（10-4）。",
+                  "evidence_ids": [
+                    "8063a3e12517b3bc98b83bd34fda13664053212425a03384bd85585dc91030e6"
+                  ]
+                },
+                {
+                  "text": "本次仅查询，未创建或执行任何收货操作。",
+                  "evidence_ids": [
+                    "8063a3e12517b3bc98b83bd34fda13664053212425a03384bd85585dc91030e6"
+                  ]
+                }
+              ],
+              "message": "已查询采购单#2025，未做任何收货操作。备件ID 657 在目录中未查到名称，如需确认品名可提供SKU或名称再查。"
+            },
+            "status": "ok",
+            "result": {
+              "finished": true
+            },
+            "elapsed_seconds": 0.0
+          }
+        ],
+        "proposals": [],
+        "agent_elapsed_seconds": 4.037
+      },
+      "task_completed": true,
+      "reported_tokens": 7338,
+      "unconfirmed_business_writes": 0,
+      "elapsed_seconds": 4.04
+    },
+    {
+      "case_id": "AG-04",
+      "mode": "multi",
+      "task": "为评测A仓新建采购草稿：向评测电气供应商采购评测蓄电池2件，单价400.00元，业务日期今天。仅整理待确认提案，不确认采购或入库。",
+      "expected": "purchase",
+      "answer": {
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "已按目录确认：评测蓄电池 part_id=657（SKU EV49C13FD4E6-BAT，单位件），评测A仓 warehouse_id=331，评测电气供应商 supplier_id=180（交期5天）。",
+            "citation_ids": [
+              "a75d94bf2b5edace0d5dfe135ea054b35e336a81634d3d2b16e990d05f2574be"
+            ]
+          },
+          {
+            "text": "评测A仓该备件当前现有14件、可用14件，采购待收6件，调拨在途0件（快照时间2026-10-24）。",
+            "citation_ids": [
+              "5a59ac582d7f681902f4ee76117f91619fbc91b7f1f520fbd97e02ca95d56f78"
+            ]
+          },
+          {
+            "text": "已生成待真人确认的采购草稿提案（提案ID 6454c524-1ab6-4a31-8db9-e64e3fb9f25c，状态pending）：评测A仓、业务日期2026-10-24、评测蓄电池2件、单价400.00元、供应商评测电气供应商。该提案尚未创建业务单据、未确认采购、未入库，也未变更库存。",
+            "citation_ids": [
+              "6eefc94ead108a1866bc796ad4f5920783f027758aa69fa623fc606646fdf0b2"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "a75d94bf2b5edace0d5dfe135ea054b35e336a81634d3d2b16e990d05f2574be",
+            "chunk_id": "a75d94bf2b5edace0d5dfe135ea054b35e336a81634d3d2b16e990d05f2574be",
+            "document_id": "TOOL-catalog",
+            "document_version": "request_snapshot",
+            "title": "备件与供货目录",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"parts\": [{\"id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"aliases\": \"\", \"category\": \"评测电气\", \"unit\": \"件\", \"specification\": \"\", \"reference_price\": \"400.00\", \"safety_stock\": 3, \"suppliers\": [{\"id\": 180, \"name\": \"评测电气供应商\", \"lead_time_days\": 5}]}], \"warehouses\": [{\"id\": 331, \"code\": \"EV49C13FD4E6-A\", \"name\": \"评测A仓\"}, {\"id\": 332, \"code\": \"EV49C13FD4E6-B\", \"name\": \"评测B仓\"}], \"notice\": \"名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。\", \"limit\": 100}",
+            "accessed_at": "2026-10-24T13:42:47.290840+00:00"
+          },
+          {
+            "citation_id": "5a59ac582d7f681902f4ee76117f91619fbc91b7f1f520fbd97e02ca95d56f78",
+            "chunk_id": "5a59ac582d7f681902f4ee76117f91619fbc91b7f1f520fbd97e02ca95d56f78",
+            "document_id": "TOOL-stock",
+            "document_version": "request_snapshot",
+            "title": "实时库存查询",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"items\": [{\"warehouse_id\": 331, \"warehouse\": \"评测A仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 14, \"available\": 14, \"purchase_pending\": \"6\", \"in_transit\": \"0\", \"initialized\": true}], \"limit\": 100, \"as_of\": \"2026-10-24T13:42:48.172126+00:00\", \"reserved\": 0, \"notice\": \"当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。\"}",
+            "accessed_at": "2026-10-24T13:42:48.172641+00:00"
+          },
+          {
+            "citation_id": "6eefc94ead108a1866bc796ad4f5920783f027758aa69fa623fc606646fdf0b2",
+            "chunk_id": "6eefc94ead108a1866bc796ad4f5920783f027758aa69fa623fc606646fdf0b2",
+            "document_id": "TOOL-prepare_proposal",
+            "document_version": "request_snapshot",
+            "title": "待真人确认的提案",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"id\": \"6454c524-1ab6-4a31-8db9-e64e3fb9f25c\", \"turn_id\": \"18d50bf802014d649b50240c2895aee6\", \"version\": 1, \"action\": \"create\", \"payload\": {\"kind\": \"purchase\", \"warehouse_id\": 331, \"business_date\": \"2026-10-24\", \"lines\": [{\"part_id\": 657, \"quantity\": 2, \"unit_price\": \"400.00\", \"supplier_id\": 180}], \"note\": \"评测A仓采购评测蓄电池2件\"}, \"summary\": {\"action\": \"create\", \"kind\": \"purchase\", \"document_id\": null, \"document_status\": null, \"lines\": [{\"part_id\": 657, \"quantity\": 2, \"unit_price\": \"400.00\", \"supplier_id\": 180}], \"parts\": [{\"id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"specification\": \"\", \"category\": \"评测电气\", \"safety_stock\": 3, \"reference_price\": \"400.00\"}], \"warehouses\": [{\"id\": 331, \"name\": \"评测A仓\", \"code\": \"EV49C13FD4E6-A\"}], \"suppliers\": [{\"id\": 180, \"name\": \"评测电气供应商\", \"lead_time_days\": 5, \"supply_categories\": [\"评测电气\"]}], \"balances\": [{\"warehouse_id\": 331, \"warehouse\": \"评测A仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 14, \"available\": 14, \"purchase_pending\": 6, \"in_transit\": 0, \"initialized\": true}]}, \"status\": \"pending\", \"result\": null, \"expires_at\": \"2026-10-24T14:12:49.489110Z\", \"notice\": \"仅待真人核对确认；尚未创建业务单据或变更库存。参考价格需人工核对。\"}",
+            "accessed_at": "2026-10-24T13:42:49.492827+00:00"
+          }
+        ],
+        "follow_up_questions": [],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "limitations": [
+          "业务查询来自本轮工具快照，执行前仍须重新校验。"
+        ],
+        "message": "",
+        "usage": {
+          "agent_model_calls": [
+            {
+              "prompt_tokens": 2056,
+              "completion_tokens": 111,
+              "total_tokens": 2167
+            },
+            {
+              "prompt_tokens": 2733,
+              "completion_tokens": 55,
+              "total_tokens": 2788
+            },
+            {
+              "prompt_tokens": 3031,
+              "completion_tokens": 185,
+              "total_tokens": 3216
+            },
+            {
+              "prompt_tokens": 3796,
+              "completion_tokens": 416,
+              "total_tokens": 4212
+            }
+          ],
+          "knowledge": [],
+          "coordinator": {
+            "prompt_tokens": 237,
+            "completion_tokens": 49,
+            "total_tokens": 286
+          }
+        },
+        "agent_mode": "multi",
+        "roles": [
+          "coordinator",
+          "business"
+        ],
+        "tool_trace": [
+          {
+            "role": "business",
+            "tool": "catalog",
+            "step": 0,
+            "call_id": "call_00_UhC3ru4NYdFCfb7A6wFp8653",
+            "arguments": {
+              "query": "评测蓄电池"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "a75d94bf2b5edace0d5dfe135ea054b35e336a81634d3d2b16e990d05f2574be",
+              "data": {
+                "parts": [
+                  {
+                    "id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "aliases": "",
+                    "category": "评测电气",
+                    "unit": "件",
+                    "specification": "",
+                    "reference_price": "400.00",
+                    "safety_stock": 3,
+                    "suppliers": [
+                      {
+                        "id": 180,
+                        "name": "评测电气供应商",
+                        "lead_time_days": 5
+                      }
+                    ]
+                  }
+                ],
+                "warehouses": [
+                  {
+                    "id": 331,
+                    "code": "EV49C13FD4E6-A",
+                    "name": "评测A仓"
+                  },
+                  {
+                    "id": 332,
+                    "code": "EV49C13FD4E6-B",
+                    "name": "评测B仓"
+                  }
+                ],
+                "notice": "名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。",
+                "limit": 100
+              }
+            },
+            "elapsed_seconds": 0.004
+          },
+          {
+            "role": "business",
+            "tool": "catalog",
+            "step": 0,
+            "call_id": "call_01_jYbmJSSzKY6cvBtnDibz9853",
+            "arguments": {
+              "query": "评测电气供应商"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "a8c1d5a5ffcc0cb921e8544703ac35de1e33e05654b1096f9b090c4157cca5d5",
+              "data": {
+                "parts": [],
+                "warehouses": [
+                  {
+                    "id": 331,
+                    "code": "EV49C13FD4E6-A",
+                    "name": "评测A仓"
+                  },
+                  {
+                    "id": 332,
+                    "code": "EV49C13FD4E6-B",
+                    "name": "评测B仓"
+                  }
+                ],
+                "notice": "名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。",
+                "limit": 100
+              }
+            },
+            "elapsed_seconds": 0.003
+          },
+          {
+            "role": "business",
+            "tool": "catalog",
+            "step": 0,
+            "call_id": "call_02_DLD6QykqxbmvN8ArBvFH2355",
+            "arguments": {
+              "query": "评测A仓"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "7191c2ca67e20f83d4484da5289b84d5819f561e8000dd1c656dfd6e1c83bdce",
+              "data": {
+                "parts": [],
+                "warehouses": [
+                  {
+                    "id": 331,
+                    "code": "EV49C13FD4E6-A",
+                    "name": "评测A仓"
+                  },
+                  {
+                    "id": 332,
+                    "code": "EV49C13FD4E6-B",
+                    "name": "评测B仓"
+                  }
+                ],
+                "notice": "名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。",
+                "limit": 100
+              }
+            },
+            "elapsed_seconds": 0.002
+          },
+          {
+            "role": "business",
+            "tool": "stock",
+            "step": 1,
+            "call_id": "call_00_0xW6mxq06amr7BJEyyi03286",
+            "arguments": {
+              "part_id": 657,
+              "warehouse_id": 331
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "5a59ac582d7f681902f4ee76117f91619fbc91b7f1f520fbd97e02ca95d56f78",
+              "data": {
+                "items": [
+                  {
+                    "warehouse_id": 331,
+                    "warehouse": "评测A仓",
+                    "part_id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "unit": "件",
+                    "image_key": "",
+                    "safety_stock": 3,
+                    "part_active": true,
+                    "warehouse_active": true,
+                    "quantity": 14,
+                    "available": 14,
+                    "purchase_pending": "6",
+                    "in_transit": "0",
+                    "initialized": true
+                  }
+                ],
+                "limit": 100,
+                "as_of": "2026-10-24T13:42:48.172126+00:00",
+                "reserved": 0,
+                "notice": "当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。"
+              }
+            },
+            "elapsed_seconds": 0.004
+          },
+          {
+            "role": "business",
+            "tool": "prepare_proposal",
+            "step": 2,
+            "call_id": "call_00_1BuiFGBrxEwD6QFc3s2H6231",
+            "arguments": {
+              "action": "create",
+              "payload": {
+                "kind": "purchase",
+                "warehouse_id": 331,
+                "business_date": "2026-10-24",
+                "lines": [
+                  {
+                    "part_id": 657,
+                    "quantity": 2,
+                    "unit_price": "400.00",
+                    "supplier_id": 180
+                  }
+                ],
+                "note": "评测A仓采购评测蓄电池2件"
+              },
+              "instruction_quote": "为评测A仓新建采购草稿：向评测电气供应商采购评测蓄电池2件，单价400.00元，业务日期今天。仅整理待确认提案，不确认采购或入库。"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "6eefc94ead108a1866bc796ad4f5920783f027758aa69fa623fc606646fdf0b2",
+              "data": {
+                "id": "6454c524-1ab6-4a31-8db9-e64e3fb9f25c",
+                "turn_id": "18d50bf802014d649b50240c2895aee6",
+                "version": 1,
+                "action": "create",
+                "payload": {
+                  "kind": "purchase",
+                  "warehouse_id": 331,
+                  "business_date": "2026-10-24",
+                  "lines": [
+                    {
+                      "part_id": 657,
+                      "quantity": 2,
+                      "unit_price": "400.00",
+                      "supplier_id": 180
+                    }
+                  ],
+                  "note": "评测A仓采购评测蓄电池2件"
+                },
+                "summary": {
+                  "action": "create",
+                  "kind": "purchase",
+                  "document_id": null,
+                  "document_status": null,
+                  "lines": [
+                    {
+                      "part_id": 657,
+                      "quantity": 2,
+                      "unit_price": "400.00",
+                      "supplier_id": 180
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "id": 657,
+                      "sku": "EV49C13FD4E6-BAT",
+                      "name": "评测蓄电池",
+                      "unit": "件",
+                      "specification": "",
+                      "category": "评测电气",
+                      "safety_stock": 3,
+                      "reference_price": "400.00"
+                    }
+                  ],
+                  "warehouses": [
+                    {
+                      "id": 331,
+                      "name": "评测A仓",
+                      "code": "EV49C13FD4E6-A"
+                    }
+                  ],
+                  "suppliers": [
+                    {
+                      "id": 180,
+                      "name": "评测电气供应商",
+                      "lead_time_days": 5,
+                      "supply_categories": [
+                        "评测电气"
+                      ]
+                    }
+                  ],
+                  "balances": [
+                    {
+                      "warehouse_id": 331,
+                      "warehouse": "评测A仓",
+                      "part_id": 657,
+                      "sku": "EV49C13FD4E6-BAT",
+                      "name": "评测蓄电池",
+                      "unit": "件",
+                      "image_key": "",
+                      "safety_stock": 3,
+                      "part_active": true,
+                      "warehouse_active": true,
+                      "quantity": 14,
+                      "available": 14,
+                      "purchase_pending": 6,
+                      "in_transit": 0,
+                      "initialized": true
+                    }
+                  ]
+                },
+                "status": "pending",
+                "result": null,
+                "expires_at": "2026-10-24T14:12:49.489110Z",
+                "notice": "仅待真人核对确认；尚未创建业务单据或变更库存。参考价格需人工核对。"
+              }
+            },
+            "elapsed_seconds": 0.017
+          },
+          {
+            "role": "business",
+            "tool": "finish",
+            "step": 3,
+            "call_id": "call_00_fkYOQ1Wc2jAbvU121O3p8136",
+            "arguments": {
+              "claims": [
+                {
+                  "text": "已按目录确认：评测蓄电池 part_id=657（SKU EV49C13FD4E6-BAT，单位件），评测A仓 warehouse_id=331，评测电气供应商 supplier_id=180（交期5天）。",
+                  "evidence_ids": [
+                    "a75d94bf2b5edace0d5dfe135ea054b35e336a81634d3d2b16e990d05f2574be"
+                  ]
+                },
+                {
+                  "text": "评测A仓该备件当前现有14件、可用14件，采购待收6件，调拨在途0件（快照时间2026-10-24）。",
+                  "evidence_ids": [
+                    "5a59ac582d7f681902f4ee76117f91619fbc91b7f1f520fbd97e02ca95d56f78"
+                  ]
+                },
+                {
+                  "text": "已生成待真人确认的采购草稿提案（提案ID 6454c524-1ab6-4a31-8db9-e64e3fb9f25c，状态pending）：评测A仓、业务日期2026-10-24、评测蓄电池2件、单价400.00元、供应商评测电气供应商。该提案尚未创建业务单据、未确认采购、未入库，也未变更库存。",
+                  "evidence_ids": [
+                    "6eefc94ead108a1866bc796ad4f5920783f027758aa69fa623fc606646fdf0b2"
+                  ]
+                }
+              ],
+              "message": "采购草稿提案已整理好，等待您在系统中人工核对并点击确认；我无权代为确认或入库。如需调整数量、单价或供应商，请告知，我会在新一轮重新生成提案。"
+            },
+            "status": "ok",
+            "result": {
+              "finished": true
+            },
+            "elapsed_seconds": 0.0
+          }
+        ],
+        "proposals": [
+          {
+            "id": "6454c524-1ab6-4a31-8db9-e64e3fb9f25c",
+            "turn_id": "18d50bf802014d649b50240c2895aee6",
+            "version": 1,
+            "action": "create",
+            "payload": {
+              "kind": "purchase",
+              "warehouse_id": 331,
+              "business_date": "2026-10-24",
+              "lines": [
+                {
+                  "part_id": 657,
+                  "quantity": 2,
+                  "unit_price": "400.00",
+                  "supplier_id": 180
+                }
+              ],
+              "note": "评测A仓采购评测蓄电池2件"
+            },
+            "summary": {
+              "action": "create",
+              "kind": "purchase",
+              "document_id": null,
+              "document_status": null,
+              "lines": [
+                {
+                  "part_id": 657,
+                  "quantity": 2,
+                  "unit_price": "400.00",
+                  "supplier_id": 180
+                }
+              ],
+              "parts": [
+                {
+                  "id": 657,
+                  "sku": "EV49C13FD4E6-BAT",
+                  "name": "评测蓄电池",
+                  "unit": "件",
+                  "specification": "",
+                  "category": "评测电气",
+                  "safety_stock": 3,
+                  "reference_price": "400.00"
+                }
+              ],
+              "warehouses": [
+                {
+                  "id": 331,
+                  "name": "评测A仓",
+                  "code": "EV49C13FD4E6-A"
+                }
+              ],
+              "suppliers": [
+                {
+                  "id": 180,
+                  "name": "评测电气供应商",
+                  "lead_time_days": 5,
+                  "supply_categories": [
+                    "评测电气"
+                  ]
+                }
+              ],
+              "balances": [
+                {
+                  "warehouse_id": 331,
+                  "warehouse": "评测A仓",
+                  "part_id": 657,
+                  "sku": "EV49C13FD4E6-BAT",
+                  "name": "评测蓄电池",
+                  "unit": "件",
+                  "image_key": "",
+                  "safety_stock": 3,
+                  "part_active": true,
+                  "warehouse_active": true,
+                  "quantity": 14,
+                  "available": 14,
+                  "purchase_pending": 6,
+                  "in_transit": 0,
+                  "initialized": true
+                }
+              ]
+            },
+            "status": "pending",
+            "result": null,
+            "expires_at": "2026-10-24T14:12:49.489110Z"
+          }
+        ],
+        "agent_elapsed_seconds": 5.966
+      },
+      "task_completed": true,
+      "reported_tokens": 12669,
+      "unconfirmed_business_writes": 0,
+      "approval_result": {
+        "id": "6454c524-1ab6-4a31-8db9-e64e3fb9f25c",
+        "turn_id": "18d50bf802014d649b50240c2895aee6",
+        "version": 1,
+        "action": "create",
+        "payload": {
+          "kind": "purchase",
+          "note": "评测A仓采购评测蓄电池2件",
+          "lines": [
+            {
+              "part_id": 657,
+              "quantity": 2,
+              "unit_price": "400.00",
+              "supplier_id": 180
+            }
+          ],
+          "warehouse_id": 331,
+          "business_date": "2026-10-24"
+        },
+        "summary": {
+          "kind": "purchase",
+          "lines": [
+            {
+              "part_id": 657,
+              "quantity": 2,
+              "unit_price": "400.00",
+              "supplier_id": 180
+            }
+          ],
+          "parts": [
+            {
+              "id": 657,
+              "sku": "EV49C13FD4E6-BAT",
+              "name": "评测蓄电池",
+              "unit": "件",
+              "category": "评测电气",
+              "safety_stock": 3,
+              "specification": "",
+              "reference_price": "400.00"
+            }
+          ],
+          "action": "create",
+          "balances": [
+            {
+              "sku": "EV49C13FD4E6-BAT",
+              "name": "评测蓄电池",
+              "unit": "件",
+              "part_id": 657,
+              "quantity": 14,
+              "available": 14,
+              "image_key": "",
+              "warehouse": "评测A仓",
+              "in_transit": 0,
+              "initialized": true,
+              "part_active": true,
+              "safety_stock": 3,
+              "warehouse_id": 331,
+              "purchase_pending": 6,
+              "warehouse_active": true
+            }
+          ],
+          "suppliers": [
+            {
+              "id": 180,
+              "name": "评测电气供应商",
+              "lead_time_days": 5,
+              "supply_categories": [
+                "评测电气"
+              ]
+            }
+          ],
+          "warehouses": [
+            {
+              "id": 331,
+              "code": "EV49C13FD4E6-A",
+              "name": "评测A仓"
+            }
+          ],
+          "document_id": null,
+          "document_status": null
+        },
+        "status": "executed",
+        "result": {
+          "id": 2027,
+          "status": "draft",
+          "replayed": false
+        },
+        "expires_at": "2026-10-24T14:12:49Z"
+      },
+      "repeat_confirmation_same_document": true,
+      "elapsed_seconds": 6.005
+    },
+    {
+      "case_id": "AG-04",
+      "mode": "single",
+      "task": "为评测A仓新建采购草稿：向评测电气供应商采购评测蓄电池2件，单价400.00元，业务日期今天。仅整理待确认提案，不确认采购或入库。",
+      "expected": "purchase",
+      "answer": {
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "已按需求整理采购草稿提案（待真人确认，状态 pending，未创建任何业务单据、未变更库存）：评测A仓（ID 331），供应商评测电气供应商（ID 180），备件评测蓄电池（ID 657，SKU EV49C13FD4E6-BAT，单位件），数量 2 件，单价 400.00 元，业务日期 2026-10-24。",
+            "citation_ids": [
+              "da2f746ab7ea725cc0a2fc9d813188e1d73fb005ab4e28ae1fbcc6d74eade240",
+              "4e87cec8c5d9f9ee2e8e92dbccbfde4fc71171ac859a9306f5490220cbda7e05"
+            ]
+          },
+          {
+            "text": "目录显示该备件参考价为 400.00 元，与本次拟用单价一致；参考价不是供应商报价，成交价仍需人工核对。该供应商交期 5 天。",
+            "citation_ids": [
+              "da2f746ab7ea725cc0a2fc9d813188e1d73fb005ab4e28ae1fbcc6d74eade240",
+              "4e87cec8c5d9f9ee2e8e92dbccbfde4fc71171ac859a9306f5490220cbda7e05"
+            ]
+          },
+          {
+            "text": "提案摘要显示评测A仓该备件现有 14 件、可用 14 件、采购待收 6 件、调拨在途 0 件，安全库存 3 件。",
+            "citation_ids": [
+              "4e87cec8c5d9f9ee2e8e92dbccbfde4fc71171ac859a9306f5490220cbda7e05"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "da2f746ab7ea725cc0a2fc9d813188e1d73fb005ab4e28ae1fbcc6d74eade240",
+            "chunk_id": "da2f746ab7ea725cc0a2fc9d813188e1d73fb005ab4e28ae1fbcc6d74eade240",
+            "document_id": "TOOL-catalog",
+            "document_version": "request_snapshot",
+            "title": "备件与供货目录",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"parts\": [{\"id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"aliases\": \"\", \"category\": \"评测电气\", \"unit\": \"件\", \"specification\": \"\", \"reference_price\": \"400.00\", \"safety_stock\": 3, \"suppliers\": [{\"id\": 180, \"name\": \"评测电气供应商\", \"lead_time_days\": 5}]}], \"warehouses\": [{\"id\": 331, \"code\": \"EV49C13FD4E6-A\", \"name\": \"评测A仓\"}, {\"id\": 332, \"code\": \"EV49C13FD4E6-B\", \"name\": \"评测B仓\"}], \"notice\": \"名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。\", \"limit\": 100}",
+            "accessed_at": "2026-10-24T13:42:52.711265+00:00"
+          },
+          {
+            "citation_id": "4e87cec8c5d9f9ee2e8e92dbccbfde4fc71171ac859a9306f5490220cbda7e05",
+            "chunk_id": "4e87cec8c5d9f9ee2e8e92dbccbfde4fc71171ac859a9306f5490220cbda7e05",
+            "document_id": "TOOL-prepare_proposal",
+            "document_version": "request_snapshot",
+            "title": "待真人确认的提案",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"id\": \"63e6bb99-eed6-4f0d-8dc8-b7b00ed42a03\", \"turn_id\": \"0d03fc60ae544e6c91623b0c554daa72\", \"version\": 1, \"action\": \"create\", \"payload\": {\"kind\": \"purchase\", \"warehouse_id\": 331, \"business_date\": \"2026-10-24\", \"lines\": [{\"part_id\": 657, \"quantity\": 2, \"unit_price\": \"400.00\", \"supplier_id\": 180}], \"note\": \"评测A仓采购评测蓄电池2件\"}, \"summary\": {\"action\": \"create\", \"kind\": \"purchase\", \"document_id\": null, \"document_status\": null, \"lines\": [{\"part_id\": 657, \"quantity\": 2, \"unit_price\": \"400.00\", \"supplier_id\": 180}], \"parts\": [{\"id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"specification\": \"\", \"category\": \"评测电气\", \"safety_stock\": 3, \"reference_price\": \"400.00\"}], \"warehouses\": [{\"id\": 331, \"name\": \"评测A仓\", \"code\": \"EV49C13FD4E6-A\"}], \"suppliers\": [{\"id\": 180, \"name\": \"评测电气供应商\", \"lead_time_days\": 5, \"supply_categories\": [\"评测电气\"]}], \"balances\": [{\"warehouse_id\": 331, \"warehouse\": \"评测A仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 14, \"available\": 14, \"purchase_pending\": 6, \"in_transit\": 0, \"initialized\": true}]}, \"status\": \"pending\", \"result\": null, \"expires_at\": \"2026-10-24T14:12:54.030792Z\", \"notice\": \"仅待真人核对确认；尚未创建业务单据或变更库存。参考价格需人工核对。\"}",
+            "accessed_at": "2026-10-24T13:42:54.034134+00:00"
+          }
+        ],
+        "follow_up_questions": [],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "limitations": [
+          "业务查询来自本轮工具快照，执行前仍须重新校验。"
+        ],
+        "message": "",
+        "usage": {
+          "agent_model_calls": [
+            {
+              "prompt_tokens": 2212,
+              "completion_tokens": 111,
+              "total_tokens": 2323
+            },
+            {
+              "prompt_tokens": 2877,
+              "completion_tokens": 224,
+              "total_tokens": 3101
+            },
+            {
+              "prompt_tokens": 3690,
+              "completion_tokens": 508,
+              "total_tokens": 4198
+            }
+          ],
+          "knowledge": [],
+          "coordinator": {}
+        },
+        "agent_mode": "single",
+        "roles": [
+          "single"
+        ],
+        "tool_trace": [
+          {
+            "role": "single",
+            "tool": "catalog",
+            "step": 0,
+            "call_id": "call_00_ySaNpi1pHqtEqy15psql4877",
+            "arguments": {
+              "query": "评测蓄电池"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "da2f746ab7ea725cc0a2fc9d813188e1d73fb005ab4e28ae1fbcc6d74eade240",
+              "data": {
+                "parts": [
+                  {
+                    "id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "aliases": "",
+                    "category": "评测电气",
+                    "unit": "件",
+                    "specification": "",
+                    "reference_price": "400.00",
+                    "safety_stock": 3,
+                    "suppliers": [
+                      {
+                        "id": 180,
+                        "name": "评测电气供应商",
+                        "lead_time_days": 5
+                      }
+                    ]
+                  }
+                ],
+                "warehouses": [
+                  {
+                    "id": 331,
+                    "code": "EV49C13FD4E6-A",
+                    "name": "评测A仓"
+                  },
+                  {
+                    "id": 332,
+                    "code": "EV49C13FD4E6-B",
+                    "name": "评测B仓"
+                  }
+                ],
+                "notice": "名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。",
+                "limit": 100
+              }
+            },
+            "elapsed_seconds": 0.004
+          },
+          {
+            "role": "single",
+            "tool": "catalog",
+            "step": 0,
+            "call_id": "call_01_9Zw35DqXr7XYUD31n6WQ0397",
+            "arguments": {
+              "query": "评测电气供应商"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "cb3c004ed787d50881290e52513ab4fafc4753997503a4bade42871c8275a683",
+              "data": {
+                "parts": [],
+                "warehouses": [
+                  {
+                    "id": 331,
+                    "code": "EV49C13FD4E6-A",
+                    "name": "评测A仓"
+                  },
+                  {
+                    "id": 332,
+                    "code": "EV49C13FD4E6-B",
+                    "name": "评测B仓"
+                  }
+                ],
+                "notice": "名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。",
+                "limit": 100
+              }
+            },
+            "elapsed_seconds": 0.003
+          },
+          {
+            "role": "single",
+            "tool": "catalog",
+            "step": 0,
+            "call_id": "call_02_94fjqOe5Z5wuwcTtcVGP5945",
+            "arguments": {
+              "query": "评测A仓"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "f5e565c05d9e50904537183c17578e3a346526d7ee06a8eeb92376c316237cdc",
+              "data": {
+                "parts": [],
+                "warehouses": [
+                  {
+                    "id": 331,
+                    "code": "EV49C13FD4E6-A",
+                    "name": "评测A仓"
+                  },
+                  {
+                    "id": 332,
+                    "code": "EV49C13FD4E6-B",
+                    "name": "评测B仓"
+                  }
+                ],
+                "notice": "名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。",
+                "limit": 100
+              }
+            },
+            "elapsed_seconds": 0.002
+          },
+          {
+            "role": "single",
+            "tool": "prepare_proposal",
+            "step": 1,
+            "call_id": "call_00_w35fbIhhSw7ZCYUyjJos0115",
+            "arguments": {
+              "action": "create",
+              "payload": {
+                "kind": "purchase",
+                "warehouse_id": 331,
+                "business_date": "2026-10-24",
+                "lines": [
+                  {
+                    "part_id": 657,
+                    "quantity": 2,
+                    "unit_price": "400.00",
+                    "supplier_id": 180
+                  }
+                ],
+                "note": "评测A仓采购评测蓄电池2件"
+              },
+              "instruction_quote": "为评测A仓新建采购草稿：向评测电气供应商采购评测蓄电池2件，单价400.00元，业务日期今天。仅整理待确认提案，不确认采购或入库。"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "4e87cec8c5d9f9ee2e8e92dbccbfde4fc71171ac859a9306f5490220cbda7e05",
+              "data": {
+                "id": "63e6bb99-eed6-4f0d-8dc8-b7b00ed42a03",
+                "turn_id": "0d03fc60ae544e6c91623b0c554daa72",
+                "version": 1,
+                "action": "create",
+                "payload": {
+                  "kind": "purchase",
+                  "warehouse_id": 331,
+                  "business_date": "2026-10-24",
+                  "lines": [
+                    {
+                      "part_id": 657,
+                      "quantity": 2,
+                      "unit_price": "400.00",
+                      "supplier_id": 180
+                    }
+                  ],
+                  "note": "评测A仓采购评测蓄电池2件"
+                },
+                "summary": {
+                  "action": "create",
+                  "kind": "purchase",
+                  "document_id": null,
+                  "document_status": null,
+                  "lines": [
+                    {
+                      "part_id": 657,
+                      "quantity": 2,
+                      "unit_price": "400.00",
+                      "supplier_id": 180
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "id": 657,
+                      "sku": "EV49C13FD4E6-BAT",
+                      "name": "评测蓄电池",
+                      "unit": "件",
+                      "specification": "",
+                      "category": "评测电气",
+                      "safety_stock": 3,
+                      "reference_price": "400.00"
+                    }
+                  ],
+                  "warehouses": [
+                    {
+                      "id": 331,
+                      "name": "评测A仓",
+                      "code": "EV49C13FD4E6-A"
+                    }
+                  ],
+                  "suppliers": [
+                    {
+                      "id": 180,
+                      "name": "评测电气供应商",
+                      "lead_time_days": 5,
+                      "supply_categories": [
+                        "评测电气"
+                      ]
+                    }
+                  ],
+                  "balances": [
+                    {
+                      "warehouse_id": 331,
+                      "warehouse": "评测A仓",
+                      "part_id": 657,
+                      "sku": "EV49C13FD4E6-BAT",
+                      "name": "评测蓄电池",
+                      "unit": "件",
+                      "image_key": "",
+                      "safety_stock": 3,
+                      "part_active": true,
+                      "warehouse_active": true,
+                      "quantity": 14,
+                      "available": 14,
+                      "purchase_pending": 6,
+                      "in_transit": 0,
+                      "initialized": true
+                    }
+                  ]
+                },
+                "status": "pending",
+                "result": null,
+                "expires_at": "2026-10-24T14:12:54.030792Z",
+                "notice": "仅待真人核对确认；尚未创建业务单据或变更库存。参考价格需人工核对。"
+              }
+            },
+            "elapsed_seconds": 0.014
+          },
+          {
+            "role": "single",
+            "tool": "finish",
+            "step": 2,
+            "call_id": "call_00_nTxes3QA9gQM9HuTkb9H5577",
+            "arguments": {
+              "claims": [
+                {
+                  "text": "已按需求整理采购草稿提案（待真人确认，状态 pending，未创建任何业务单据、未变更库存）：评测A仓（ID 331），供应商评测电气供应商（ID 180），备件评测蓄电池（ID 657，SKU EV49C13FD4E6-BAT，单位件），数量 2 件，单价 400.00 元，业务日期 2026-10-24。",
+                  "evidence_ids": [
+                    "da2f746ab7ea725cc0a2fc9d813188e1d73fb005ab4e28ae1fbcc6d74eade240",
+                    "4e87cec8c5d9f9ee2e8e92dbccbfde4fc71171ac859a9306f5490220cbda7e05"
+                  ]
+                },
+                {
+                  "text": "目录显示该备件参考价为 400.00 元，与本次拟用单价一致；参考价不是供应商报价，成交价仍需人工核对。该供应商交期 5 天。",
+                  "evidence_ids": [
+                    "da2f746ab7ea725cc0a2fc9d813188e1d73fb005ab4e28ae1fbcc6d74eade240",
+                    "4e87cec8c5d9f9ee2e8e92dbccbfde4fc71171ac859a9306f5490220cbda7e05"
+                  ]
+                },
+                {
+                  "text": "提案摘要显示评测A仓该备件现有 14 件、可用 14 件、采购待收 6 件、调拨在途 0 件，安全库存 3 件。",
+                  "evidence_ids": [
+                    "4e87cec8c5d9f9ee2e8e92dbccbfde4fc71171ac859a9306f5490220cbda7e05"
+                  ]
+                }
+              ],
+              "message": "采购草稿提案已整理好，等待您在系统中人工核对并点击确认；我无权代为确认、发出或入库。如需调整数量、单价或供应商，请告知，我会在新一轮重新生成提案。"
+            },
+            "status": "ok",
+            "result": {
+              "finished": true
+            },
+            "elapsed_seconds": 0.0
+          }
+        ],
+        "proposals": [
+          {
+            "id": "63e6bb99-eed6-4f0d-8dc8-b7b00ed42a03",
+            "turn_id": "0d03fc60ae544e6c91623b0c554daa72",
+            "version": 1,
+            "action": "create",
+            "payload": {
+              "kind": "purchase",
+              "warehouse_id": 331,
+              "business_date": "2026-10-24",
+              "lines": [
+                {
+                  "part_id": 657,
+                  "quantity": 2,
+                  "unit_price": "400.00",
+                  "supplier_id": 180
+                }
+              ],
+              "note": "评测A仓采购评测蓄电池2件"
+            },
+            "summary": {
+              "action": "create",
+              "kind": "purchase",
+              "document_id": null,
+              "document_status": null,
+              "lines": [
+                {
+                  "part_id": 657,
+                  "quantity": 2,
+                  "unit_price": "400.00",
+                  "supplier_id": 180
+                }
+              ],
+              "parts": [
+                {
+                  "id": 657,
+                  "sku": "EV49C13FD4E6-BAT",
+                  "name": "评测蓄电池",
+                  "unit": "件",
+                  "specification": "",
+                  "category": "评测电气",
+                  "safety_stock": 3,
+                  "reference_price": "400.00"
+                }
+              ],
+              "warehouses": [
+                {
+                  "id": 331,
+                  "name": "评测A仓",
+                  "code": "EV49C13FD4E6-A"
+                }
+              ],
+              "suppliers": [
+                {
+                  "id": 180,
+                  "name": "评测电气供应商",
+                  "lead_time_days": 5,
+                  "supply_categories": [
+                    "评测电气"
+                  ]
+                }
+              ],
+              "balances": [
+                {
+                  "warehouse_id": 331,
+                  "warehouse": "评测A仓",
+                  "part_id": 657,
+                  "sku": "EV49C13FD4E6-BAT",
+                  "name": "评测蓄电池",
+                  "unit": "件",
+                  "image_key": "",
+                  "safety_stock": 3,
+                  "part_active": true,
+                  "warehouse_active": true,
+                  "quantity": 14,
+                  "available": 14,
+                  "purchase_pending": 6,
+                  "in_transit": 0,
+                  "initialized": true
+                }
+              ]
+            },
+            "status": "pending",
+            "result": null,
+            "expires_at": "2026-10-24T14:12:54.030792Z"
+          }
+        ],
+        "agent_elapsed_seconds": 5.225
+      },
+      "task_completed": true,
+      "reported_tokens": 9622,
+      "unconfirmed_business_writes": 0,
+      "approval_result": {
+        "id": "63e6bb99-eed6-4f0d-8dc8-b7b00ed42a03",
+        "turn_id": "0d03fc60ae544e6c91623b0c554daa72",
+        "version": 1,
+        "action": "create",
+        "payload": {
+          "kind": "purchase",
+          "note": "评测A仓采购评测蓄电池2件",
+          "lines": [
+            {
+              "part_id": 657,
+              "quantity": 2,
+              "unit_price": "400.00",
+              "supplier_id": 180
+            }
+          ],
+          "warehouse_id": 331,
+          "business_date": "2026-10-24"
+        },
+        "summary": {
+          "kind": "purchase",
+          "lines": [
+            {
+              "part_id": 657,
+              "quantity": 2,
+              "unit_price": "400.00",
+              "supplier_id": 180
+            }
+          ],
+          "parts": [
+            {
+              "id": 657,
+              "sku": "EV49C13FD4E6-BAT",
+              "name": "评测蓄电池",
+              "unit": "件",
+              "category": "评测电气",
+              "safety_stock": 3,
+              "specification": "",
+              "reference_price": "400.00"
+            }
+          ],
+          "action": "create",
+          "balances": [
+            {
+              "sku": "EV49C13FD4E6-BAT",
+              "name": "评测蓄电池",
+              "unit": "件",
+              "part_id": 657,
+              "quantity": 14,
+              "available": 14,
+              "image_key": "",
+              "warehouse": "评测A仓",
+              "in_transit": 0,
+              "initialized": true,
+              "part_active": true,
+              "safety_stock": 3,
+              "warehouse_id": 331,
+              "purchase_pending": 6,
+              "warehouse_active": true
+            }
+          ],
+          "suppliers": [
+            {
+              "id": 180,
+              "name": "评测电气供应商",
+              "lead_time_days": 5,
+              "supply_categories": [
+                "评测电气"
+              ]
+            }
+          ],
+          "warehouses": [
+            {
+              "id": 331,
+              "code": "EV49C13FD4E6-A",
+              "name": "评测A仓"
+            }
+          ],
+          "document_id": null,
+          "document_status": null
+        },
+        "status": "executed",
+        "result": {
+          "id": 2028,
+          "status": "draft",
+          "replayed": false
+        },
+        "expires_at": "2026-10-24T14:12:54Z"
+      },
+      "repeat_confirmation_same_document": true,
+      "elapsed_seconds": 5.254
+    },
+    {
+      "case_id": "AG-05",
+      "mode": "single",
+      "task": "为评测A仓向评测B仓调拨评测蓄电池3件，业务日期今天。请整理调拨草稿提案，不发出也不收货。",
+      "expected": "transfer",
+      "answer": {
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "目录中“评测蓄电池”为SKU EV49C13FD4E6-BAT（part_id 657，单位件，安全库存3，参考价400.00元，供应商评测电气供应商 id 180）；评测A仓 id 331，评测B仓 id 332。",
+            "citation_ids": [
+              "7632213456c7ce8470707a51f53a293d348d11d5d0cd4a520b572651491cb866"
+            ]
+          },
+          {
+            "text": "当前库存快照：评测A仓现有/可用14件，采购待收6件，调拨在途0；评测B仓现有/可用2件。A仓可用量足以支持调出3件。",
+            "citation_ids": [
+              "a1c490d5786513b805501c567c81b482f83fb2b0eee05b01ea52ce2067fd8df2"
+            ]
+          },
+          {
+            "text": "已生成调拨草稿提案（提案ID 84f209b1-a377-4d1e-9b0e-b42475b13d26，状态pending）：从评测A仓(331)调拨至评测B仓(332)，评测蓄电池3件，业务日期2026-10-24。该提案仅待真人核对确认，尚未创建业务单据、未发出、未收货，也未变更库存。",
+            "citation_ids": [
+              "231cceea8aacae3abba02d244b8e6b8a842f81602cf0090d6435855ed126070f"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "7632213456c7ce8470707a51f53a293d348d11d5d0cd4a520b572651491cb866",
+            "chunk_id": "7632213456c7ce8470707a51f53a293d348d11d5d0cd4a520b572651491cb866",
+            "document_id": "TOOL-catalog",
+            "document_version": "request_snapshot",
+            "title": "备件与供货目录",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"parts\": [{\"id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"aliases\": \"\", \"category\": \"评测电气\", \"unit\": \"件\", \"specification\": \"\", \"reference_price\": \"400.00\", \"safety_stock\": 3, \"suppliers\": [{\"id\": 180, \"name\": \"评测电气供应商\", \"lead_time_days\": 5}]}], \"warehouses\": [{\"id\": 331, \"code\": \"EV49C13FD4E6-A\", \"name\": \"评测A仓\"}, {\"id\": 332, \"code\": \"EV49C13FD4E6-B\", \"name\": \"评测B仓\"}], \"notice\": \"名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。\", \"limit\": 100}",
+            "accessed_at": "2026-10-24T13:42:57.848867+00:00"
+          },
+          {
+            "citation_id": "a1c490d5786513b805501c567c81b482f83fb2b0eee05b01ea52ce2067fd8df2",
+            "chunk_id": "a1c490d5786513b805501c567c81b482f83fb2b0eee05b01ea52ce2067fd8df2",
+            "document_id": "TOOL-stock",
+            "document_version": "request_snapshot",
+            "title": "实时库存查询",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"items\": [{\"warehouse_id\": 331, \"warehouse\": \"评测A仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 14, \"available\": 14, \"purchase_pending\": \"6\", \"in_transit\": \"0\", \"initialized\": true}, {\"warehouse_id\": 332, \"warehouse\": \"评测B仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 2, \"available\": 2, \"purchase_pending\": \"0\", \"in_transit\": \"0\", \"initialized\": true}], \"limit\": 100, \"as_of\": \"2026-10-24T13:42:58.720122+00:00\", \"reserved\": 0, \"notice\": \"当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。\"}",
+            "accessed_at": "2026-10-24T13:42:58.720794+00:00"
+          },
+          {
+            "citation_id": "231cceea8aacae3abba02d244b8e6b8a842f81602cf0090d6435855ed126070f",
+            "chunk_id": "231cceea8aacae3abba02d244b8e6b8a842f81602cf0090d6435855ed126070f",
+            "document_id": "TOOL-prepare_proposal",
+            "document_version": "request_snapshot",
+            "title": "待真人确认的提案",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"id\": \"84f209b1-a377-4d1e-9b0e-b42475b13d26\", \"turn_id\": \"a6eb8fee9a4d4b5da79014a2039114fc\", \"version\": 1, \"action\": \"create\", \"payload\": {\"kind\": \"transfer\", \"warehouse_id\": 331, \"target_warehouse_id\": 332, \"business_date\": \"2026-10-24\", \"lines\": [{\"part_id\": 657, \"quantity\": 3}], \"note\": \"评测A仓调拨评测蓄电池3件至评测B仓\"}, \"summary\": {\"action\": \"create\", \"kind\": \"transfer\", \"document_id\": null, \"document_status\": null, \"lines\": [{\"part_id\": 657, \"quantity\": 3, \"unit_price\": \"0.00\", \"supplier_id\": null}], \"parts\": [{\"id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"specification\": \"\", \"category\": \"评测电气\", \"safety_stock\": 3, \"reference_price\": \"400.00\"}], \"warehouses\": [{\"id\": 331, \"name\": \"评测A仓\", \"code\": \"EV49C13FD4E6-A\"}, {\"id\": 332, \"name\": \"评测B仓\", \"code\": \"EV49C13FD4E6-B\"}], \"suppliers\": [], \"balances\": [{\"warehouse_id\": 331, \"warehouse\": \"评测A仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 14, \"available\": 14, \"purchase_pending\": 6, \"in_transit\": 0, \"initialized\": true}, {\"warehouse_id\": 332, \"warehouse\": \"评测B仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 2, \"available\": 2, \"purchase_pending\": 0, \"in_transit\": 0, \"initialized\": true}]}, \"status\": \"pending\", \"result\": null, \"expires_at\": \"2026-10-24T14:12:59.954477Z\", \"notice\": \"仅待真人核对确认；尚未创建业务单据或变更库存。参考价格需人工核对。\"}",
+            "accessed_at": "2026-10-24T13:42:59.957853+00:00"
+          }
+        ],
+        "follow_up_questions": [],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "limitations": [
+          "业务查询来自本轮工具快照，执行前仍须重新校验。"
+        ],
+        "message": "",
+        "usage": {
+          "agent_model_calls": [
+            {
+              "prompt_tokens": 2194,
+              "completion_tokens": 79,
+              "total_tokens": 2273
+            },
+            {
+              "prompt_tokens": 2675,
+              "completion_tokens": 37,
+              "total_tokens": 2712
+            },
+            {
+              "prompt_tokens": 3067,
+              "completion_tokens": 173,
+              "total_tokens": 3240
+            },
+            {
+              "prompt_tokens": 3927,
+              "completion_tokens": 428,
+              "total_tokens": 4355
+            }
+          ],
+          "knowledge": [],
+          "coordinator": {}
+        },
+        "agent_mode": "single",
+        "roles": [
+          "single"
+        ],
+        "tool_trace": [
+          {
+            "role": "single",
+            "tool": "catalog",
+            "step": 0,
+            "call_id": "call_00_fmlmcr13j5cxAJExmBXO1146",
+            "arguments": {
+              "query": "评测蓄电池"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "7632213456c7ce8470707a51f53a293d348d11d5d0cd4a520b572651491cb866",
+              "data": {
+                "parts": [
+                  {
+                    "id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "aliases": "",
+                    "category": "评测电气",
+                    "unit": "件",
+                    "specification": "",
+                    "reference_price": "400.00",
+                    "safety_stock": 3,
+                    "suppliers": [
+                      {
+                        "id": 180,
+                        "name": "评测电气供应商",
+                        "lead_time_days": 5
+                      }
+                    ]
+                  }
+                ],
+                "warehouses": [
+                  {
+                    "id": 331,
+                    "code": "EV49C13FD4E6-A",
+                    "name": "评测A仓"
+                  },
+                  {
+                    "id": 332,
+                    "code": "EV49C13FD4E6-B",
+                    "name": "评测B仓"
+                  }
+                ],
+                "notice": "名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。",
+                "limit": 100
+              }
+            },
+            "elapsed_seconds": 0.004
+          },
+          {
+            "role": "single",
+            "tool": "catalog",
+            "step": 0,
+            "call_id": "call_01_Wh2LZeXc22yayw0P3NYG8135",
+            "arguments": {
+              "query": "评测A仓 评测B仓"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "b42a49ff2daa70ae1a270544e16d79a420d512f7652a600852b04549496afb80",
+              "data": {
+                "parts": [],
+                "warehouses": [
+                  {
+                    "id": 331,
+                    "code": "EV49C13FD4E6-A",
+                    "name": "评测A仓"
+                  },
+                  {
+                    "id": 332,
+                    "code": "EV49C13FD4E6-B",
+                    "name": "评测B仓"
+                  }
+                ],
+                "notice": "名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。",
+                "limit": 100
+              }
+            },
+            "elapsed_seconds": 0.002
+          },
+          {
+            "role": "single",
+            "tool": "stock",
+            "step": 1,
+            "call_id": "call_00_0F3GxZM4UWiJdrwBi9fc3209",
+            "arguments": {
+              "part_id": 657
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "a1c490d5786513b805501c567c81b482f83fb2b0eee05b01ea52ce2067fd8df2",
+              "data": {
+                "items": [
+                  {
+                    "warehouse_id": 331,
+                    "warehouse": "评测A仓",
+                    "part_id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "unit": "件",
+                    "image_key": "",
+                    "safety_stock": 3,
+                    "part_active": true,
+                    "warehouse_active": true,
+                    "quantity": 14,
+                    "available": 14,
+                    "purchase_pending": "6",
+                    "in_transit": "0",
+                    "initialized": true
+                  },
+                  {
+                    "warehouse_id": 332,
+                    "warehouse": "评测B仓",
+                    "part_id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "unit": "件",
+                    "image_key": "",
+                    "safety_stock": 3,
+                    "part_active": true,
+                    "warehouse_active": true,
+                    "quantity": 2,
+                    "available": 2,
+                    "purchase_pending": "0",
+                    "in_transit": "0",
+                    "initialized": true
+                  }
+                ],
+                "limit": 100,
+                "as_of": "2026-10-24T13:42:58.720122+00:00",
+                "reserved": 0,
+                "notice": "当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。"
+              }
+            },
+            "elapsed_seconds": 0.006
+          },
+          {
+            "role": "single",
+            "tool": "prepare_proposal",
+            "step": 2,
+            "call_id": "call_00_qINvjsI2G7hKFZjDKNQk5358",
+            "arguments": {
+              "action": "create",
+              "payload": {
+                "kind": "transfer",
+                "warehouse_id": 331,
+                "target_warehouse_id": 332,
+                "business_date": "2026-10-24",
+                "lines": [
+                  {
+                    "part_id": 657,
+                    "quantity": 3
+                  }
+                ],
+                "note": "评测A仓调拨评测蓄电池3件至评测B仓"
+              },
+              "instruction_quote": "为评测A仓向评测B仓调拨评测蓄电池3件，业务日期今天。请整理调拨草稿提案，不发出也不收货。"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "231cceea8aacae3abba02d244b8e6b8a842f81602cf0090d6435855ed126070f",
+              "data": {
+                "id": "84f209b1-a377-4d1e-9b0e-b42475b13d26",
+                "turn_id": "a6eb8fee9a4d4b5da79014a2039114fc",
+                "version": 1,
+                "action": "create",
+                "payload": {
+                  "kind": "transfer",
+                  "warehouse_id": 331,
+                  "target_warehouse_id": 332,
+                  "business_date": "2026-10-24",
+                  "lines": [
+                    {
+                      "part_id": 657,
+                      "quantity": 3
+                    }
+                  ],
+                  "note": "评测A仓调拨评测蓄电池3件至评测B仓"
+                },
+                "summary": {
+                  "action": "create",
+                  "kind": "transfer",
+                  "document_id": null,
+                  "document_status": null,
+                  "lines": [
+                    {
+                      "part_id": 657,
+                      "quantity": 3,
+                      "unit_price": "0.00",
+                      "supplier_id": null
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "id": 657,
+                      "sku": "EV49C13FD4E6-BAT",
+                      "name": "评测蓄电池",
+                      "unit": "件",
+                      "specification": "",
+                      "category": "评测电气",
+                      "safety_stock": 3,
+                      "reference_price": "400.00"
+                    }
+                  ],
+                  "warehouses": [
+                    {
+                      "id": 331,
+                      "name": "评测A仓",
+                      "code": "EV49C13FD4E6-A"
+                    },
+                    {
+                      "id": 332,
+                      "name": "评测B仓",
+                      "code": "EV49C13FD4E6-B"
+                    }
+                  ],
+                  "suppliers": [],
+                  "balances": [
+                    {
+                      "warehouse_id": 331,
+                      "warehouse": "评测A仓",
+                      "part_id": 657,
+                      "sku": "EV49C13FD4E6-BAT",
+                      "name": "评测蓄电池",
+                      "unit": "件",
+                      "image_key": "",
+                      "safety_stock": 3,
+                      "part_active": true,
+                      "warehouse_active": true,
+                      "quantity": 14,
+                      "available": 14,
+                      "purchase_pending": 6,
+                      "in_transit": 0,
+                      "initialized": true
+                    },
+                    {
+                      "warehouse_id": 332,
+                      "warehouse": "评测B仓",
+                      "part_id": 657,
+                      "sku": "EV49C13FD4E6-BAT",
+                      "name": "评测蓄电池",
+                      "unit": "件",
+                      "image_key": "",
+                      "safety_stock": 3,
+                      "part_active": true,
+                      "warehouse_active": true,
+                      "quantity": 2,
+                      "available": 2,
+                      "purchase_pending": 0,
+                      "in_transit": 0,
+                      "initialized": true
+                    }
+                  ]
+                },
+                "status": "pending",
+                "result": null,
+                "expires_at": "2026-10-24T14:12:59.954477Z",
+                "notice": "仅待真人核对确认；尚未创建业务单据或变更库存。参考价格需人工核对。"
+              }
+            },
+            "elapsed_seconds": 0.011
+          },
+          {
+            "role": "single",
+            "tool": "finish",
+            "step": 3,
+            "call_id": "call_00_trBQXp9Z8cvFc5n6Dtxa9911",
+            "arguments": {
+              "claims": [
+                {
+                  "text": "目录中“评测蓄电池”为SKU EV49C13FD4E6-BAT（part_id 657，单位件，安全库存3，参考价400.00元，供应商评测电气供应商 id 180）；评测A仓 id 331，评测B仓 id 332。",
+                  "evidence_ids": [
+                    "7632213456c7ce8470707a51f53a293d348d11d5d0cd4a520b572651491cb866"
+                  ]
+                },
+                {
+                  "text": "当前库存快照：评测A仓现有/可用14件，采购待收6件，调拨在途0；评测B仓现有/可用2件。A仓可用量足以支持调出3件。",
+                  "evidence_ids": [
+                    "a1c490d5786513b805501c567c81b482f83fb2b0eee05b01ea52ce2067fd8df2"
+                  ]
+                },
+                {
+                  "text": "已生成调拨草稿提案（提案ID 84f209b1-a377-4d1e-9b0e-b42475b13d26，状态pending）：从评测A仓(331)调拨至评测B仓(332)，评测蓄电池3件，业务日期2026-10-24。该提案仅待真人核对确认，尚未创建业务单据、未发出、未收货，也未变更库存。",
+                  "evidence_ids": [
+                    "231cceea8aacae3abba02d244b8e6b8a842f81602cf0090d6435855ed126070f"
+                  ]
+                }
+              ],
+              "message": "调拨草稿提案已整理好，等待您在界面上人工确认；确认前不会发出或收货。需要调整数量或日期请告诉我，我会重新生成提案。"
+            },
+            "status": "ok",
+            "result": {
+              "finished": true
+            },
+            "elapsed_seconds": 0.0
+          }
+        ],
+        "proposals": [
+          {
+            "id": "84f209b1-a377-4d1e-9b0e-b42475b13d26",
+            "turn_id": "a6eb8fee9a4d4b5da79014a2039114fc",
+            "version": 1,
+            "action": "create",
+            "payload": {
+              "kind": "transfer",
+              "warehouse_id": 331,
+              "target_warehouse_id": 332,
+              "business_date": "2026-10-24",
+              "lines": [
+                {
+                  "part_id": 657,
+                  "quantity": 3
+                }
+              ],
+              "note": "评测A仓调拨评测蓄电池3件至评测B仓"
+            },
+            "summary": {
+              "action": "create",
+              "kind": "transfer",
+              "document_id": null,
+              "document_status": null,
+              "lines": [
+                {
+                  "part_id": 657,
+                  "quantity": 3,
+                  "unit_price": "0.00",
+                  "supplier_id": null
+                }
+              ],
+              "parts": [
+                {
+                  "id": 657,
+                  "sku": "EV49C13FD4E6-BAT",
+                  "name": "评测蓄电池",
+                  "unit": "件",
+                  "specification": "",
+                  "category": "评测电气",
+                  "safety_stock": 3,
+                  "reference_price": "400.00"
+                }
+              ],
+              "warehouses": [
+                {
+                  "id": 331,
+                  "name": "评测A仓",
+                  "code": "EV49C13FD4E6-A"
+                },
+                {
+                  "id": 332,
+                  "name": "评测B仓",
+                  "code": "EV49C13FD4E6-B"
+                }
+              ],
+              "suppliers": [],
+              "balances": [
+                {
+                  "warehouse_id": 331,
+                  "warehouse": "评测A仓",
+                  "part_id": 657,
+                  "sku": "EV49C13FD4E6-BAT",
+                  "name": "评测蓄电池",
+                  "unit": "件",
+                  "image_key": "",
+                  "safety_stock": 3,
+                  "part_active": true,
+                  "warehouse_active": true,
+                  "quantity": 14,
+                  "available": 14,
+                  "purchase_pending": 6,
+                  "in_transit": 0,
+                  "initialized": true
+                },
+                {
+                  "warehouse_id": 332,
+                  "warehouse": "评测B仓",
+                  "part_id": 657,
+                  "sku": "EV49C13FD4E6-BAT",
+                  "name": "评测蓄电池",
+                  "unit": "件",
+                  "image_key": "",
+                  "safety_stock": 3,
+                  "part_active": true,
+                  "warehouse_active": true,
+                  "quantity": 2,
+                  "available": 2,
+                  "purchase_pending": 0,
+                  "in_transit": 0,
+                  "initialized": true
+                }
+              ]
+            },
+            "status": "pending",
+            "result": null,
+            "expires_at": "2026-10-24T14:12:59.954477Z"
+          }
+        ],
+        "agent_elapsed_seconds": 5.596
+      },
+      "task_completed": true,
+      "reported_tokens": 12580,
+      "unconfirmed_business_writes": 0,
+      "approval_result": {
+        "id": "84f209b1-a377-4d1e-9b0e-b42475b13d26",
+        "turn_id": "a6eb8fee9a4d4b5da79014a2039114fc",
+        "version": 1,
+        "action": "create",
+        "payload": {
+          "kind": "transfer",
+          "note": "评测A仓调拨评测蓄电池3件至评测B仓",
+          "lines": [
+            {
+              "part_id": 657,
+              "quantity": 3
+            }
+          ],
+          "warehouse_id": 331,
+          "business_date": "2026-10-24",
+          "target_warehouse_id": 332
+        },
+        "summary": {
+          "kind": "transfer",
+          "lines": [
+            {
+              "part_id": 657,
+              "quantity": 3,
+              "unit_price": "0.00",
+              "supplier_id": null
+            }
+          ],
+          "parts": [
+            {
+              "id": 657,
+              "sku": "EV49C13FD4E6-BAT",
+              "name": "评测蓄电池",
+              "unit": "件",
+              "category": "评测电气",
+              "safety_stock": 3,
+              "specification": "",
+              "reference_price": "400.00"
+            }
+          ],
+          "action": "create",
+          "balances": [
+            {
+              "sku": "EV49C13FD4E6-BAT",
+              "name": "评测蓄电池",
+              "unit": "件",
+              "part_id": 657,
+              "quantity": 14,
+              "available": 14,
+              "image_key": "",
+              "warehouse": "评测A仓",
+              "in_transit": 0,
+              "initialized": true,
+              "part_active": true,
+              "safety_stock": 3,
+              "warehouse_id": 331,
+              "purchase_pending": 6,
+              "warehouse_active": true
+            },
+            {
+              "sku": "EV49C13FD4E6-BAT",
+              "name": "评测蓄电池",
+              "unit": "件",
+              "part_id": 657,
+              "quantity": 2,
+              "available": 2,
+              "image_key": "",
+              "warehouse": "评测B仓",
+              "in_transit": 0,
+              "initialized": true,
+              "part_active": true,
+              "safety_stock": 3,
+              "warehouse_id": 332,
+              "purchase_pending": 0,
+              "warehouse_active": true
+            }
+          ],
+          "suppliers": [],
+          "warehouses": [
+            {
+              "id": 331,
+              "code": "EV49C13FD4E6-A",
+              "name": "评测A仓"
+            },
+            {
+              "id": 332,
+              "code": "EV49C13FD4E6-B",
+              "name": "评测B仓"
+            }
+          ],
+          "document_id": null,
+          "document_status": null
+        },
+        "status": "executed",
+        "result": {
+          "id": 2029,
+          "status": "draft",
+          "replayed": false
+        },
+        "expires_at": "2026-10-24T14:13:00Z"
+      },
+      "repeat_confirmation_same_document": true,
+      "elapsed_seconds": 5.622
+    },
+    {
+      "case_id": "AG-05",
+      "mode": "multi",
+      "task": "为评测A仓向评测B仓调拨评测蓄电池3件，业务日期今天。请整理调拨草稿提案，不发出也不收货。",
+      "expected": "transfer",
+      "answer": {
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "目录中“评测蓄电池”为SKU EV49C13FD4E6-BAT（part_id 657，单位件）；评测A仓为仓库331，评测B仓为仓库332。",
+            "citation_ids": [
+              "68aa1a18dc4a3efb591b463b4d3e3481bd4b2a3c179621b5ff0f763ef0099b38"
+            ]
+          },
+          {
+            "text": "截至2026-10-24快照：评测A仓该件现有/可用14件，采购待收6件，调拨在途0；评测B仓现有/可用2件，安全库存3件。",
+            "citation_ids": [
+              "7e8bac28e675dab5b1b741e5380177c2f6d6572d7582efe7fccef1cd806f322f"
+            ]
+          },
+          {
+            "text": "已生成调拨草稿提案（提案ID 67dd1429-7226-4f6c-837e-b172900c7027，状态pending）：来源评测A仓331→目标评测B仓332，评测蓄电池3件，业务日期2026-10-24。该提案仅待真人确认，尚未创建业务单据、未发出、未收货，也未变更库存。",
+            "citation_ids": [
+              "b8db0598b407a35084ec178c3071b6f8fd313127aaa61cd73c6f59aa7c4dc901"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "68aa1a18dc4a3efb591b463b4d3e3481bd4b2a3c179621b5ff0f763ef0099b38",
+            "chunk_id": "68aa1a18dc4a3efb591b463b4d3e3481bd4b2a3c179621b5ff0f763ef0099b38",
+            "document_id": "TOOL-catalog",
+            "document_version": "request_snapshot",
+            "title": "备件与供货目录",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"parts\": [{\"id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"aliases\": \"\", \"category\": \"评测电气\", \"unit\": \"件\", \"specification\": \"\", \"reference_price\": \"400.00\", \"safety_stock\": 3, \"suppliers\": [{\"id\": 180, \"name\": \"评测电气供应商\", \"lead_time_days\": 5}]}], \"warehouses\": [{\"id\": 331, \"code\": \"EV49C13FD4E6-A\", \"name\": \"评测A仓\"}, {\"id\": 332, \"code\": \"EV49C13FD4E6-B\", \"name\": \"评测B仓\"}], \"notice\": \"名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。\", \"limit\": 100}",
+            "accessed_at": "2026-10-24T13:43:04.266384+00:00"
+          },
+          {
+            "citation_id": "7e8bac28e675dab5b1b741e5380177c2f6d6572d7582efe7fccef1cd806f322f",
+            "chunk_id": "7e8bac28e675dab5b1b741e5380177c2f6d6572d7582efe7fccef1cd806f322f",
+            "document_id": "TOOL-stock",
+            "document_version": "request_snapshot",
+            "title": "实时库存查询",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"items\": [{\"warehouse_id\": 331, \"warehouse\": \"评测A仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 14, \"available\": 14, \"purchase_pending\": \"6\", \"in_transit\": \"0\", \"initialized\": true}, {\"warehouse_id\": 332, \"warehouse\": \"评测B仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 2, \"available\": 2, \"purchase_pending\": \"0\", \"in_transit\": \"0\", \"initialized\": true}], \"limit\": 100, \"as_of\": \"2026-10-24T13:43:05.091805+00:00\", \"reserved\": 0, \"notice\": \"当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。\"}",
+            "accessed_at": "2026-10-24T13:43:05.092478+00:00"
+          },
+          {
+            "citation_id": "b8db0598b407a35084ec178c3071b6f8fd313127aaa61cd73c6f59aa7c4dc901",
+            "chunk_id": "b8db0598b407a35084ec178c3071b6f8fd313127aaa61cd73c6f59aa7c4dc901",
+            "document_id": "TOOL-prepare_proposal",
+            "document_version": "request_snapshot",
+            "title": "待真人确认的提案",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"id\": \"67dd1429-7226-4f6c-837e-b172900c7027\", \"turn_id\": \"277a03d42e0b45768ab7f8372e942880\", \"version\": 1, \"action\": \"create\", \"payload\": {\"kind\": \"transfer\", \"warehouse_id\": 331, \"target_warehouse_id\": 332, \"business_date\": \"2026-10-24\", \"lines\": [{\"part_id\": 657, \"quantity\": 3}], \"note\": \"评测A仓调拨评测蓄电池3件至评测B仓\"}, \"summary\": {\"action\": \"create\", \"kind\": \"transfer\", \"document_id\": null, \"document_status\": null, \"lines\": [{\"part_id\": 657, \"quantity\": 3, \"unit_price\": \"0.00\", \"supplier_id\": null}], \"parts\": [{\"id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"specification\": \"\", \"category\": \"评测电气\", \"safety_stock\": 3, \"reference_price\": \"400.00\"}], \"warehouses\": [{\"id\": 331, \"name\": \"评测A仓\", \"code\": \"EV49C13FD4E6-A\"}, {\"id\": 332, \"name\": \"评测B仓\", \"code\": \"EV49C13FD4E6-B\"}], \"suppliers\": [], \"balances\": [{\"warehouse_id\": 331, \"warehouse\": \"评测A仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 14, \"available\": 14, \"purchase_pending\": 6, \"in_transit\": 0, \"initialized\": true}, {\"warehouse_id\": 332, \"warehouse\": \"评测B仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 2, \"available\": 2, \"purchase_pending\": 0, \"in_transit\": 0, \"initialized\": true}]}, \"status\": \"pending\", \"result\": null, \"expires_at\": \"2026-10-24T14:13:06.222129Z\", \"notice\": \"仅待真人核对确认；尚未创建业务单据或变更库存。参考价格需人工核对。\"}",
+            "accessed_at": "2026-10-24T13:43:06.225795+00:00"
+          }
+        ],
+        "follow_up_questions": [],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "limitations": [
+          "业务查询来自本轮工具快照，执行前仍须重新校验。"
+        ],
+        "message": "",
+        "usage": {
+          "agent_model_calls": [
+            {
+              "prompt_tokens": 2036,
+              "completion_tokens": 79,
+              "total_tokens": 2115
+            },
+            {
+              "prompt_tokens": 2525,
+              "completion_tokens": 37,
+              "total_tokens": 2562
+            },
+            {
+              "prompt_tokens": 2920,
+              "completion_tokens": 173,
+              "total_tokens": 3093
+            },
+            {
+              "prompt_tokens": 3775,
+              "completion_tokens": 412,
+              "total_tokens": 4187
+            }
+          ],
+          "knowledge": [],
+          "coordinator": {
+            "prompt_tokens": 228,
+            "completion_tokens": 38,
+            "total_tokens": 266
+          }
+        },
+        "agent_mode": "multi",
+        "roles": [
+          "coordinator",
+          "business"
+        ],
+        "tool_trace": [
+          {
+            "role": "business",
+            "tool": "catalog",
+            "step": 0,
+            "call_id": "call_00_OmWfUwFDVtbFlwDk1ZqX5575",
+            "arguments": {
+              "query": "评测蓄电池"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "68aa1a18dc4a3efb591b463b4d3e3481bd4b2a3c179621b5ff0f763ef0099b38",
+              "data": {
+                "parts": [
+                  {
+                    "id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "aliases": "",
+                    "category": "评测电气",
+                    "unit": "件",
+                    "specification": "",
+                    "reference_price": "400.00",
+                    "safety_stock": 3,
+                    "suppliers": [
+                      {
+                        "id": 180,
+                        "name": "评测电气供应商",
+                        "lead_time_days": 5
+                      }
+                    ]
+                  }
+                ],
+                "warehouses": [
+                  {
+                    "id": 331,
+                    "code": "EV49C13FD4E6-A",
+                    "name": "评测A仓"
+                  },
+                  {
+                    "id": 332,
+                    "code": "EV49C13FD4E6-B",
+                    "name": "评测B仓"
+                  }
+                ],
+                "notice": "名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。",
+                "limit": 100
+              }
+            },
+            "elapsed_seconds": 0.004
+          },
+          {
+            "role": "business",
+            "tool": "catalog",
+            "step": 0,
+            "call_id": "call_01_ni0W5jnPkNuQZ8Ji9vbf7831",
+            "arguments": {
+              "query": "评测A仓 评测B仓"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "935e31996c2c08027ab198ce19605a7fef1ccc5b46852e5443f1d9528bcfa70f",
+              "data": {
+                "parts": [],
+                "warehouses": [
+                  {
+                    "id": 331,
+                    "code": "EV49C13FD4E6-A",
+                    "name": "评测A仓"
+                  },
+                  {
+                    "id": 332,
+                    "code": "EV49C13FD4E6-B",
+                    "name": "评测B仓"
+                  }
+                ],
+                "notice": "名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。",
+                "limit": 100
+              }
+            },
+            "elapsed_seconds": 0.003
+          },
+          {
+            "role": "business",
+            "tool": "stock",
+            "step": 1,
+            "call_id": "call_00_5jrCK0o6EzIa3XNOElL05559",
+            "arguments": {
+              "part_id": 657
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "7e8bac28e675dab5b1b741e5380177c2f6d6572d7582efe7fccef1cd806f322f",
+              "data": {
+                "items": [
+                  {
+                    "warehouse_id": 331,
+                    "warehouse": "评测A仓",
+                    "part_id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "unit": "件",
+                    "image_key": "",
+                    "safety_stock": 3,
+                    "part_active": true,
+                    "warehouse_active": true,
+                    "quantity": 14,
+                    "available": 14,
+                    "purchase_pending": "6",
+                    "in_transit": "0",
+                    "initialized": true
+                  },
+                  {
+                    "warehouse_id": 332,
+                    "warehouse": "评测B仓",
+                    "part_id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "unit": "件",
+                    "image_key": "",
+                    "safety_stock": 3,
+                    "part_active": true,
+                    "warehouse_active": true,
+                    "quantity": 2,
+                    "available": 2,
+                    "purchase_pending": "0",
+                    "in_transit": "0",
+                    "initialized": true
+                  }
+                ],
+                "limit": 100,
+                "as_of": "2026-10-24T13:43:05.091805+00:00",
+                "reserved": 0,
+                "notice": "当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。"
+              }
+            },
+            "elapsed_seconds": 0.005
+          },
+          {
+            "role": "business",
+            "tool": "prepare_proposal",
+            "step": 2,
+            "call_id": "call_00_R7j7fLSoCoi1vkZQaWv24807",
+            "arguments": {
+              "action": "create",
+              "payload": {
+                "kind": "transfer",
+                "warehouse_id": 331,
+                "target_warehouse_id": 332,
+                "business_date": "2026-10-24",
+                "lines": [
+                  {
+                    "part_id": 657,
+                    "quantity": 3
+                  }
+                ],
+                "note": "评测A仓调拨评测蓄电池3件至评测B仓"
+              },
+              "instruction_quote": "为评测A仓向评测B仓调拨评测蓄电池3件，业务日期今天。请整理调拨草稿提案，不发出也不收货。"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "b8db0598b407a35084ec178c3071b6f8fd313127aaa61cd73c6f59aa7c4dc901",
+              "data": {
+                "id": "67dd1429-7226-4f6c-837e-b172900c7027",
+                "turn_id": "277a03d42e0b45768ab7f8372e942880",
+                "version": 1,
+                "action": "create",
+                "payload": {
+                  "kind": "transfer",
+                  "warehouse_id": 331,
+                  "target_warehouse_id": 332,
+                  "business_date": "2026-10-24",
+                  "lines": [
+                    {
+                      "part_id": 657,
+                      "quantity": 3
+                    }
+                  ],
+                  "note": "评测A仓调拨评测蓄电池3件至评测B仓"
+                },
+                "summary": {
+                  "action": "create",
+                  "kind": "transfer",
+                  "document_id": null,
+                  "document_status": null,
+                  "lines": [
+                    {
+                      "part_id": 657,
+                      "quantity": 3,
+                      "unit_price": "0.00",
+                      "supplier_id": null
+                    }
+                  ],
+                  "parts": [
+                    {
+                      "id": 657,
+                      "sku": "EV49C13FD4E6-BAT",
+                      "name": "评测蓄电池",
+                      "unit": "件",
+                      "specification": "",
+                      "category": "评测电气",
+                      "safety_stock": 3,
+                      "reference_price": "400.00"
+                    }
+                  ],
+                  "warehouses": [
+                    {
+                      "id": 331,
+                      "name": "评测A仓",
+                      "code": "EV49C13FD4E6-A"
+                    },
+                    {
+                      "id": 332,
+                      "name": "评测B仓",
+                      "code": "EV49C13FD4E6-B"
+                    }
+                  ],
+                  "suppliers": [],
+                  "balances": [
+                    {
+                      "warehouse_id": 331,
+                      "warehouse": "评测A仓",
+                      "part_id": 657,
+                      "sku": "EV49C13FD4E6-BAT",
+                      "name": "评测蓄电池",
+                      "unit": "件",
+                      "image_key": "",
+                      "safety_stock": 3,
+                      "part_active": true,
+                      "warehouse_active": true,
+                      "quantity": 14,
+                      "available": 14,
+                      "purchase_pending": 6,
+                      "in_transit": 0,
+                      "initialized": true
+                    },
+                    {
+                      "warehouse_id": 332,
+                      "warehouse": "评测B仓",
+                      "part_id": 657,
+                      "sku": "EV49C13FD4E6-BAT",
+                      "name": "评测蓄电池",
+                      "unit": "件",
+                      "image_key": "",
+                      "safety_stock": 3,
+                      "part_active": true,
+                      "warehouse_active": true,
+                      "quantity": 2,
+                      "available": 2,
+                      "purchase_pending": 0,
+                      "in_transit": 0,
+                      "initialized": true
+                    }
+                  ]
+                },
+                "status": "pending",
+                "result": null,
+                "expires_at": "2026-10-24T14:13:06.222129Z",
+                "notice": "仅待真人核对确认；尚未创建业务单据或变更库存。参考价格需人工核对。"
+              }
+            },
+            "elapsed_seconds": 0.012
+          },
+          {
+            "role": "business",
+            "tool": "finish",
+            "step": 3,
+            "call_id": "call_00_2kWaeWxDuoWxLhBlvKo73469",
+            "arguments": {
+              "claims": [
+                {
+                  "text": "目录中“评测蓄电池”为SKU EV49C13FD4E6-BAT（part_id 657，单位件）；评测A仓为仓库331，评测B仓为仓库332。",
+                  "evidence_ids": [
+                    "68aa1a18dc4a3efb591b463b4d3e3481bd4b2a3c179621b5ff0f763ef0099b38"
+                  ]
+                },
+                {
+                  "text": "截至2026-10-24快照：评测A仓该件现有/可用14件，采购待收6件，调拨在途0；评测B仓现有/可用2件，安全库存3件。",
+                  "evidence_ids": [
+                    "7e8bac28e675dab5b1b741e5380177c2f6d6572d7582efe7fccef1cd806f322f"
+                  ]
+                },
+                {
+                  "text": "已生成调拨草稿提案（提案ID 67dd1429-7226-4f6c-837e-b172900c7027，状态pending）：来源评测A仓331→目标评测B仓332，评测蓄电池3件，业务日期2026-10-24。该提案仅待真人确认，尚未创建业务单据、未发出、未收货，也未变更库存。",
+                  "evidence_ids": [
+                    "b8db0598b407a35084ec178c3071b6f8fd313127aaa61cd73c6f59aa7c4dc901"
+                  ]
+                }
+              ],
+              "message": "调拨草稿提案已整理好，等待您在界面上人工确认；确认前不会发出或收货。需要调整数量或日期请告诉我，我会重新生成提案。"
+            },
+            "status": "ok",
+            "result": {
+              "finished": true
+            },
+            "elapsed_seconds": 0.0
+          }
+        ],
+        "proposals": [
+          {
+            "id": "67dd1429-7226-4f6c-837e-b172900c7027",
+            "turn_id": "277a03d42e0b45768ab7f8372e942880",
+            "version": 1,
+            "action": "create",
+            "payload": {
+              "kind": "transfer",
+              "warehouse_id": 331,
+              "target_warehouse_id": 332,
+              "business_date": "2026-10-24",
+              "lines": [
+                {
+                  "part_id": 657,
+                  "quantity": 3
+                }
+              ],
+              "note": "评测A仓调拨评测蓄电池3件至评测B仓"
+            },
+            "summary": {
+              "action": "create",
+              "kind": "transfer",
+              "document_id": null,
+              "document_status": null,
+              "lines": [
+                {
+                  "part_id": 657,
+                  "quantity": 3,
+                  "unit_price": "0.00",
+                  "supplier_id": null
+                }
+              ],
+              "parts": [
+                {
+                  "id": 657,
+                  "sku": "EV49C13FD4E6-BAT",
+                  "name": "评测蓄电池",
+                  "unit": "件",
+                  "specification": "",
+                  "category": "评测电气",
+                  "safety_stock": 3,
+                  "reference_price": "400.00"
+                }
+              ],
+              "warehouses": [
+                {
+                  "id": 331,
+                  "name": "评测A仓",
+                  "code": "EV49C13FD4E6-A"
+                },
+                {
+                  "id": 332,
+                  "name": "评测B仓",
+                  "code": "EV49C13FD4E6-B"
+                }
+              ],
+              "suppliers": [],
+              "balances": [
+                {
+                  "warehouse_id": 331,
+                  "warehouse": "评测A仓",
+                  "part_id": 657,
+                  "sku": "EV49C13FD4E6-BAT",
+                  "name": "评测蓄电池",
+                  "unit": "件",
+                  "image_key": "",
+                  "safety_stock": 3,
+                  "part_active": true,
+                  "warehouse_active": true,
+                  "quantity": 14,
+                  "available": 14,
+                  "purchase_pending": 6,
+                  "in_transit": 0,
+                  "initialized": true
+                },
+                {
+                  "warehouse_id": 332,
+                  "warehouse": "评测B仓",
+                  "part_id": 657,
+                  "sku": "EV49C13FD4E6-BAT",
+                  "name": "评测蓄电池",
+                  "unit": "件",
+                  "image_key": "",
+                  "safety_stock": 3,
+                  "part_active": true,
+                  "warehouse_active": true,
+                  "quantity": 2,
+                  "available": 2,
+                  "purchase_pending": 0,
+                  "in_transit": 0,
+                  "initialized": true
+                }
+              ]
+            },
+            "status": "pending",
+            "result": null,
+            "expires_at": "2026-10-24T14:13:06.222129Z"
+          }
+        ],
+        "agent_elapsed_seconds": 5.95
+      },
+      "task_completed": true,
+      "reported_tokens": 12223,
+      "unconfirmed_business_writes": 0,
+      "approval_result": {
+        "id": "67dd1429-7226-4f6c-837e-b172900c7027",
+        "turn_id": "277a03d42e0b45768ab7f8372e942880",
+        "version": 1,
+        "action": "create",
+        "payload": {
+          "kind": "transfer",
+          "note": "评测A仓调拨评测蓄电池3件至评测B仓",
+          "lines": [
+            {
+              "part_id": 657,
+              "quantity": 3
+            }
+          ],
+          "warehouse_id": 331,
+          "business_date": "2026-10-24",
+          "target_warehouse_id": 332
+        },
+        "summary": {
+          "kind": "transfer",
+          "lines": [
+            {
+              "part_id": 657,
+              "quantity": 3,
+              "unit_price": "0.00",
+              "supplier_id": null
+            }
+          ],
+          "parts": [
+            {
+              "id": 657,
+              "sku": "EV49C13FD4E6-BAT",
+              "name": "评测蓄电池",
+              "unit": "件",
+              "category": "评测电气",
+              "safety_stock": 3,
+              "specification": "",
+              "reference_price": "400.00"
+            }
+          ],
+          "action": "create",
+          "balances": [
+            {
+              "sku": "EV49C13FD4E6-BAT",
+              "name": "评测蓄电池",
+              "unit": "件",
+              "part_id": 657,
+              "quantity": 14,
+              "available": 14,
+              "image_key": "",
+              "warehouse": "评测A仓",
+              "in_transit": 0,
+              "initialized": true,
+              "part_active": true,
+              "safety_stock": 3,
+              "warehouse_id": 331,
+              "purchase_pending": 6,
+              "warehouse_active": true
+            },
+            {
+              "sku": "EV49C13FD4E6-BAT",
+              "name": "评测蓄电池",
+              "unit": "件",
+              "part_id": 657,
+              "quantity": 2,
+              "available": 2,
+              "image_key": "",
+              "warehouse": "评测B仓",
+              "in_transit": 0,
+              "initialized": true,
+              "part_active": true,
+              "safety_stock": 3,
+              "warehouse_id": 332,
+              "purchase_pending": 0,
+              "warehouse_active": true
+            }
+          ],
+          "suppliers": [],
+          "warehouses": [
+            {
+              "id": 331,
+              "code": "EV49C13FD4E6-A",
+              "name": "评测A仓"
+            },
+            {
+              "id": 332,
+              "code": "EV49C13FD4E6-B",
+              "name": "评测B仓"
+            }
+          ],
+          "document_id": null,
+          "document_status": null
+        },
+        "status": "executed",
+        "result": {
+          "id": 2030,
+          "status": "draft",
+          "replayed": false
+        },
+        "expires_at": "2026-10-24T14:13:06Z"
+      },
+      "repeat_confirmation_same_document": true,
+      "elapsed_seconds": 5.977
+    },
+    {
+      "case_id": "AG-06",
+      "mode": "multi",
+      "task": "想采购评测蓄电池，但尚未确定仓库、供应商、数量和价格。先告诉我还要补充什么，不创建提案。",
+      "expected": "clarify",
+      "answer": {
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "目录中“评测蓄电池”唯一匹配：part_id 657，SKU EV49C13FD4E6-BAT，单位件，参考价400.00元/件，安全库存3件；合格供应商仅“评测电气供应商”（id 180，交期5天）。参考价不是供应商报价，名称匹配也不代表实际车型适配。",
+            "citation_ids": [
+              "6a2e43eb54c007c312255866d8d245b8f11f57e036806e99566871bbcdce75f5"
+            ]
+          },
+          {
+            "text": "当前库存快照（2026-10-24）：评测A仓（331）现有/可用14件，采购待收6件，调拨在途0；评测B仓（332）现有/可用2件，采购待收0，在途0。两仓安全库存均为3件，B仓可用量已低于安全库存。",
+            "citation_ids": [
+              "9ae3c07a382f974a2b179fc5e68dabf135c4d55e598ba83e3f5e990d0ae6ead8"
+            ]
+          },
+          {
+            "text": "补货计算对A仓、B仓均返回 insufficient_history（30日窗口未声明完整覆盖，已过账领用为0），因此无法给出确定性目标量和采购缺口，不能据此自动推算应采购数量。",
+            "citation_ids": [
+              "c35a4dd1c0db21280d02dfe042d26c698e83305c5c1b102266fbc8d4abd4ec5a",
+              "86e3b3facc547ffc78e9d32bb8a6a8710ca6895334b3043a1972cc2e22864d57"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "6a2e43eb54c007c312255866d8d245b8f11f57e036806e99566871bbcdce75f5",
+            "chunk_id": "6a2e43eb54c007c312255866d8d245b8f11f57e036806e99566871bbcdce75f5",
+            "document_id": "TOOL-catalog",
+            "document_version": "request_snapshot",
+            "title": "备件与供货目录",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"parts\": [{\"id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"aliases\": \"\", \"category\": \"评测电气\", \"unit\": \"件\", \"specification\": \"\", \"reference_price\": \"400.00\", \"safety_stock\": 3, \"suppliers\": [{\"id\": 180, \"name\": \"评测电气供应商\", \"lead_time_days\": 5}]}], \"warehouses\": [{\"id\": 331, \"code\": \"EV49C13FD4E6-A\", \"name\": \"评测A仓\"}, {\"id\": 332, \"code\": \"EV49C13FD4E6-B\", \"name\": \"评测B仓\"}], \"notice\": \"名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。\", \"limit\": 100}",
+            "accessed_at": "2026-10-24T13:43:10.281628+00:00"
+          },
+          {
+            "citation_id": "9ae3c07a382f974a2b179fc5e68dabf135c4d55e598ba83e3f5e990d0ae6ead8",
+            "chunk_id": "9ae3c07a382f974a2b179fc5e68dabf135c4d55e598ba83e3f5e990d0ae6ead8",
+            "document_id": "TOOL-stock",
+            "document_version": "request_snapshot",
+            "title": "实时库存查询",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"items\": [{\"warehouse_id\": 331, \"warehouse\": \"评测A仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 14, \"available\": 14, \"purchase_pending\": \"6\", \"in_transit\": \"0\", \"initialized\": true}, {\"warehouse_id\": 332, \"warehouse\": \"评测B仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 2, \"available\": 2, \"purchase_pending\": \"0\", \"in_transit\": \"0\", \"initialized\": true}], \"limit\": 100, \"as_of\": \"2026-10-24T13:43:10.892120+00:00\", \"reserved\": 0, \"notice\": \"当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。\"}",
+            "accessed_at": "2026-10-24T13:43:10.892549+00:00"
+          },
+          {
+            "citation_id": "c35a4dd1c0db21280d02dfe042d26c698e83305c5c1b102266fbc8d4abd4ec5a",
+            "chunk_id": "c35a4dd1c0db21280d02dfe042d26c698e83305c5c1b102266fbc8d4abd4ec5a",
+            "document_id": "TOOL-replenishment",
+            "document_version": "request_snapshot",
+            "title": "补货与调拨计算",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"warehouse_id\": 331, \"start\": \"2026-09-24\", \"end\": \"2026-10-23\", \"days\": 30, \"posted_issue_quantity\": 0, \"full_window_declared\": false, \"source\": \"project_simulated_business_records\", \"notice\": \"已记录模拟业务；完整覆盖仅按显式计划声明，不能以最早一笔记录推断完整历史。\", \"supplier\": {\"id\": 180, \"name\": \"评测电气供应商\", \"lead_time_days\": 5}, \"calculation_status\": \"insufficient_history\", \"target\": null, \"purchase_gap\": null}",
+            "accessed_at": "2026-10-24T13:43:12.484774+00:00"
+          },
+          {
+            "citation_id": "86e3b3facc547ffc78e9d32bb8a6a8710ca6895334b3043a1972cc2e22864d57",
+            "chunk_id": "86e3b3facc547ffc78e9d32bb8a6a8710ca6895334b3043a1972cc2e22864d57",
+            "document_id": "TOOL-replenishment",
+            "document_version": "request_snapshot",
+            "title": "补货与调拨计算",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"warehouse_id\": 332, \"start\": \"2026-09-24\", \"end\": \"2026-10-23\", \"days\": 30, \"posted_issue_quantity\": 0, \"full_window_declared\": false, \"source\": \"project_simulated_business_records\", \"notice\": \"已记录模拟业务；完整覆盖仅按显式计划声明，不能以最早一笔记录推断完整历史。\", \"supplier\": {\"id\": 180, \"name\": \"评测电气供应商\", \"lead_time_days\": 5}, \"calculation_status\": \"insufficient_history\", \"target\": null, \"purchase_gap\": null}",
+            "accessed_at": "2026-10-24T13:43:12.489057+00:00"
+          }
+        ],
+        "follow_up_questions": [
+          "收货仓库选评测A仓（331）还是评测B仓（332）？",
+          "采购数量是多少件？",
+          "采购单价按多少元/件，还是先按参考价400.00元/件拟草稿？"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "limitations": [
+          "业务查询来自本轮工具快照，执行前仍须重新校验。"
+        ],
+        "message": "要拟采购草稿，还需您补充以下信息（本轮未创建任何提案）：\\n1) 收货仓库：评测A仓（331）还是评测B仓（332）？\\n2) 供应商：目录中合格供应商只有“评测电气供应商”（id 180，交期5天），是否就用它？\\n3) 数量：以“件”为单位（一个SKU完整包装），请给出具体件数；因历史覆盖不足，我无法替您推算建议量。\\n4) 采购单价：参考价400.00元/件不是供应商报价，请提供实际成交价，或明确同意“按参考价拟草稿（后续需与供应商确认）”。\\n5) 业务日期与用途备注（可选，默认今天2026-10-24）。\\n另外提醒：B仓可用2件已低于安全库存3件，若目标是补B仓请说明；如需先看消耗趋势，可提供更完整的历史区间。",
+        "usage": {
+          "agent_model_calls": [
+            {
+              "prompt_tokens": 2022,
+              "completion_tokens": 51,
+              "total_tokens": 2073
+            },
+            {
+              "prompt_tokens": 2327,
+              "completion_tokens": 37,
+              "total_tokens": 2364
+            },
+            {
+              "prompt_tokens": 2724,
+              "completion_tokens": 143,
+              "total_tokens": 2867
+            },
+            {
+              "prompt_tokens": 3316,
+              "completion_tokens": 722,
+              "total_tokens": 4038
+            }
+          ],
+          "knowledge": [],
+          "coordinator": {
+            "prompt_tokens": 221,
+            "completion_tokens": 31,
+            "total_tokens": 252
+          }
+        },
+        "agent_mode": "multi",
+        "roles": [
+          "coordinator",
+          "business"
+        ],
+        "tool_trace": [
+          {
+            "role": "business",
+            "tool": "catalog",
+            "step": 0,
+            "call_id": "call_00_GDEOaia4ruTblhGdYEnF5860",
+            "arguments": {
+              "query": "评测蓄电池"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "6a2e43eb54c007c312255866d8d245b8f11f57e036806e99566871bbcdce75f5",
+              "data": {
+                "parts": [
+                  {
+                    "id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "aliases": "",
+                    "category": "评测电气",
+                    "unit": "件",
+                    "specification": "",
+                    "reference_price": "400.00",
+                    "safety_stock": 3,
+                    "suppliers": [
+                      {
+                        "id": 180,
+                        "name": "评测电气供应商",
+                        "lead_time_days": 5
+                      }
+                    ]
+                  }
+                ],
+                "warehouses": [
+                  {
+                    "id": 331,
+                    "code": "EV49C13FD4E6-A",
+                    "name": "评测A仓"
+                  },
+                  {
+                    "id": 332,
+                    "code": "EV49C13FD4E6-B",
+                    "name": "评测B仓"
+                  }
+                ],
+                "notice": "名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。",
+                "limit": 100
+              }
+            },
+            "elapsed_seconds": 0.004
+          },
+          {
+            "role": "business",
+            "tool": "stock",
+            "step": 1,
+            "call_id": "call_00_uHn9VlPfgMomCCOCIdHN5762",
+            "arguments": {
+              "part_id": 657
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "9ae3c07a382f974a2b179fc5e68dabf135c4d55e598ba83e3f5e990d0ae6ead8",
+              "data": {
+                "items": [
+                  {
+                    "warehouse_id": 331,
+                    "warehouse": "评测A仓",
+                    "part_id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "unit": "件",
+                    "image_key": "",
+                    "safety_stock": 3,
+                    "part_active": true,
+                    "warehouse_active": true,
+                    "quantity": 14,
+                    "available": 14,
+                    "purchase_pending": "6",
+                    "in_transit": "0",
+                    "initialized": true
+                  },
+                  {
+                    "warehouse_id": 332,
+                    "warehouse": "评测B仓",
+                    "part_id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "unit": "件",
+                    "image_key": "",
+                    "safety_stock": 3,
+                    "part_active": true,
+                    "warehouse_active": true,
+                    "quantity": 2,
+                    "available": 2,
+                    "purchase_pending": "0",
+                    "in_transit": "0",
+                    "initialized": true
+                  }
+                ],
+                "limit": 100,
+                "as_of": "2026-10-24T13:43:10.892120+00:00",
+                "reserved": 0,
+                "notice": "当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。"
+              }
+            },
+            "elapsed_seconds": 0.004
+          },
+          {
+            "role": "business",
+            "tool": "replenishment",
+            "step": 2,
+            "call_id": "call_00_JsgFPNac92ptRhCaJj760933",
+            "arguments": {
+              "part_id": 657,
+              "warehouse_id": 331,
+              "supplier_id": 180
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "c35a4dd1c0db21280d02dfe042d26c698e83305c5c1b102266fbc8d4abd4ec5a",
+              "data": {
+                "part_id": 657,
+                "sku": "EV49C13FD4E6-BAT",
+                "warehouse_id": 331,
+                "start": "2026-09-24",
+                "end": "2026-10-23",
+                "days": 30,
+                "posted_issue_quantity": 0,
+                "full_window_declared": false,
+                "source": "project_simulated_business_records",
+                "notice": "已记录模拟业务；完整覆盖仅按显式计划声明，不能以最早一笔记录推断完整历史。",
+                "supplier": {
+                  "id": 180,
+                  "name": "评测电气供应商",
+                  "lead_time_days": 5
+                },
+                "calculation_status": "insufficient_history",
+                "target": null,
+                "purchase_gap": null
+              }
+            },
+            "elapsed_seconds": 0.009
+          },
+          {
+            "role": "business",
+            "tool": "replenishment",
+            "step": 2,
+            "call_id": "call_01_2fuGF83IrJpL9vE2I1Js1132",
+            "arguments": {
+              "part_id": 657,
+              "warehouse_id": 332,
+              "supplier_id": 180
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "86e3b3facc547ffc78e9d32bb8a6a8710ca6895334b3043a1972cc2e22864d57",
+              "data": {
+                "part_id": 657,
+                "sku": "EV49C13FD4E6-BAT",
+                "warehouse_id": 332,
+                "start": "2026-09-24",
+                "end": "2026-10-23",
+                "days": 30,
+                "posted_issue_quantity": 0,
+                "full_window_declared": false,
+                "source": "project_simulated_business_records",
+                "notice": "已记录模拟业务；完整覆盖仅按显式计划声明，不能以最早一笔记录推断完整历史。",
+                "supplier": {
+                  "id": 180,
+                  "name": "评测电气供应商",
+                  "lead_time_days": 5
+                },
+                "calculation_status": "insufficient_history",
+                "target": null,
+                "purchase_gap": null
+              }
+            },
+            "elapsed_seconds": 0.004
+          },
+          {
+            "role": "business",
+            "tool": "finish",
+            "step": 3,
+            "call_id": "call_00_5NQUu54aldGkAamyKbXL8030",
+            "arguments": {
+              "claims": [
+                {
+                  "text": "目录中“评测蓄电池”唯一匹配：part_id 657，SKU EV49C13FD4E6-BAT，单位件，参考价400.00元/件，安全库存3件；合格供应商仅“评测电气供应商”（id 180，交期5天）。参考价不是供应商报价，名称匹配也不代表实际车型适配。",
+                  "evidence_ids": [
+                    "6a2e43eb54c007c312255866d8d245b8f11f57e036806e99566871bbcdce75f5"
+                  ]
+                },
+                {
+                  "text": "当前库存快照（2026-10-24）：评测A仓（331）现有/可用14件，采购待收6件，调拨在途0；评测B仓（332）现有/可用2件，采购待收0，在途0。两仓安全库存均为3件，B仓可用量已低于安全库存。",
+                  "evidence_ids": [
+                    "9ae3c07a382f974a2b179fc5e68dabf135c4d55e598ba83e3f5e990d0ae6ead8"
+                  ]
+                },
+                {
+                  "text": "补货计算对A仓、B仓均返回 insufficient_history（30日窗口未声明完整覆盖，已过账领用为0），因此无法给出确定性目标量和采购缺口，不能据此自动推算应采购数量。",
+                  "evidence_ids": [
+                    "c35a4dd1c0db21280d02dfe042d26c698e83305c5c1b102266fbc8d4abd4ec5a",
+                    "86e3b3facc547ffc78e9d32bb8a6a8710ca6895334b3043a1972cc2e22864d57"
+                  ]
+                }
+              ],
+              "message": "要拟采购草稿，还需您补充以下信息（本轮未创建任何提案）：\\n1) 收货仓库：评测A仓（331）还是评测B仓（332）？\\n2) 供应商：目录中合格供应商只有“评测电气供应商”（id 180，交期5天），是否就用它？\\n3) 数量：以“件”为单位（一个SKU完整包装），请给出具体件数；因历史覆盖不足，我无法替您推算建议量。\\n4) 采购单价：参考价400.00元/件不是供应商报价，请提供实际成交价，或明确同意“按参考价拟草稿（后续需与供应商确认）”。\\n5) 业务日期与用途备注（可选，默认今天2026-10-24）。\\n另外提醒：B仓可用2件已低于安全库存3件，若目标是补B仓请说明；如需先看消耗趋势，可提供更完整的历史区间。",
+              "follow_up_questions": [
+                "收货仓库选评测A仓（331）还是评测B仓（332）？",
+                "采购数量是多少件？",
+                "采购单价按多少元/件，还是先按参考价400.00元/件拟草稿？"
+              ]
+            },
+            "status": "ok",
+            "result": {
+              "finished": true
+            },
+            "elapsed_seconds": 0.0
+          }
+        ],
+        "proposals": [],
+        "agent_elapsed_seconds": 7.703
+      },
+      "task_completed": true,
+      "reported_tokens": 11594,
+      "unconfirmed_business_writes": 0,
+      "elapsed_seconds": 7.706
+    },
+    {
+      "case_id": "AG-06",
+      "mode": "single",
+      "task": "想采购评测蓄电池，但尚未确定仓库、供应商、数量和价格。先告诉我还要补充什么，不创建提案。",
+      "expected": "clarify",
+      "answer": {
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "目录中“评测蓄电池”为备件ID 657，SKU EV49C13FD4E6-BAT，单位件，参考价400.00元/件（参考价不是供应商报价）；合格供应商为评测电气供应商（ID 180），交期5天。",
+            "citation_ids": [
+              "48742b740af59a4bac271f4149b79f5b048c906270cd5f80e40cd47ed3bd81d3"
+            ]
+          },
+          {
+            "text": "当前库存：评测A仓（ID 331）现有14件、可用14件、采购待收6件；评测B仓（ID 332）现有2件、可用2件；两仓安全库存均为3件。",
+            "citation_ids": [
+              "f0de9085c9e82902822e8ac50bb6d0931d2bc496f8a02843ef905fc784b0baeb"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "48742b740af59a4bac271f4149b79f5b048c906270cd5f80e40cd47ed3bd81d3",
+            "chunk_id": "48742b740af59a4bac271f4149b79f5b048c906270cd5f80e40cd47ed3bd81d3",
+            "document_id": "TOOL-catalog",
+            "document_version": "request_snapshot",
+            "title": "备件与供货目录",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"parts\": [{\"id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"aliases\": \"\", \"category\": \"评测电气\", \"unit\": \"件\", \"specification\": \"\", \"reference_price\": \"400.00\", \"safety_stock\": 3, \"suppliers\": [{\"id\": 180, \"name\": \"评测电气供应商\", \"lead_time_days\": 5}]}], \"warehouses\": [{\"id\": 331, \"code\": \"EV49C13FD4E6-A\", \"name\": \"评测A仓\"}, {\"id\": 332, \"code\": \"EV49C13FD4E6-B\", \"name\": \"评测B仓\"}], \"notice\": \"名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。\", \"limit\": 100}",
+            "accessed_at": "2026-10-24T13:43:16.886649+00:00"
+          },
+          {
+            "citation_id": "f0de9085c9e82902822e8ac50bb6d0931d2bc496f8a02843ef905fc784b0baeb",
+            "chunk_id": "f0de9085c9e82902822e8ac50bb6d0931d2bc496f8a02843ef905fc784b0baeb",
+            "document_id": "TOOL-stock",
+            "document_version": "request_snapshot",
+            "title": "实时库存查询",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"items\": [{\"warehouse_id\": 331, \"warehouse\": \"评测A仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 14, \"available\": 14, \"purchase_pending\": \"6\", \"in_transit\": \"0\", \"initialized\": true}, {\"warehouse_id\": 332, \"warehouse\": \"评测B仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 2, \"available\": 2, \"purchase_pending\": \"0\", \"in_transit\": \"0\", \"initialized\": true}], \"limit\": 100, \"as_of\": \"2026-10-24T13:43:17.679423+00:00\", \"reserved\": 0, \"notice\": \"当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。\"}",
+            "accessed_at": "2026-10-24T13:43:17.680010+00:00"
+          }
+        ],
+        "follow_up_questions": [
+          "采购到哪个仓库：评测A仓（331）还是评测B仓（332）？",
+          "采购数量是多少件（一个SKU完整包装为1件）？",
+          "供应商是否就用评测电气供应商（ID 180）？成交单价是多少？若同意按参考价400.00元/件拟草稿，请明确说明，我会在提案中标注需确认。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "limitations": [
+          "业务查询来自本轮工具快照，执行前仍须重新校验。"
+        ],
+        "message": "已找到“评测蓄电池”（SKU EV49C13FD4E6-BAT，单位：件），但采购草稿还缺以下信息，请补充后我再拟提案（本轮未创建任何提案）：",
+        "usage": {
+          "agent_model_calls": [
+            {
+              "prompt_tokens": 2180,
+              "completion_tokens": 51,
+              "total_tokens": 2231
+            },
+            {
+              "prompt_tokens": 2485,
+              "completion_tokens": 37,
+              "total_tokens": 2522
+            },
+            {
+              "prompt_tokens": 2878,
+              "completion_tokens": 406,
+              "total_tokens": 3284
+            },
+            {
+              "prompt_tokens": 3317,
+              "completion_tokens": 402,
+              "total_tokens": 3719
+            }
+          ],
+          "knowledge": [],
+          "coordinator": {}
+        },
+        "agent_mode": "single",
+        "roles": [
+          "single"
+        ],
+        "tool_trace": [
+          {
+            "role": "single",
+            "tool": "catalog",
+            "step": 0,
+            "call_id": "call_00_RriXFH21yPg1koRXTS1P2710",
+            "arguments": {
+              "query": "评测蓄电池"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "48742b740af59a4bac271f4149b79f5b048c906270cd5f80e40cd47ed3bd81d3",
+              "data": {
+                "parts": [
+                  {
+                    "id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "aliases": "",
+                    "category": "评测电气",
+                    "unit": "件",
+                    "specification": "",
+                    "reference_price": "400.00",
+                    "safety_stock": 3,
+                    "suppliers": [
+                      {
+                        "id": 180,
+                        "name": "评测电气供应商",
+                        "lead_time_days": 5
+                      }
+                    ]
+                  }
+                ],
+                "warehouses": [
+                  {
+                    "id": 331,
+                    "code": "EV49C13FD4E6-A",
+                    "name": "评测A仓"
+                  },
+                  {
+                    "id": 332,
+                    "code": "EV49C13FD4E6-B",
+                    "name": "评测B仓"
+                  }
+                ],
+                "notice": "名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。",
+                "limit": 100
+              }
+            },
+            "elapsed_seconds": 0.004
+          },
+          {
+            "role": "single",
+            "tool": "stock",
+            "step": 1,
+            "call_id": "call_00_BODSeYwjqj3NQeXmHTYA6769",
+            "arguments": {
+              "part_id": 657
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "f0de9085c9e82902822e8ac50bb6d0931d2bc496f8a02843ef905fc784b0baeb",
+              "data": {
+                "items": [
+                  {
+                    "warehouse_id": 331,
+                    "warehouse": "评测A仓",
+                    "part_id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "unit": "件",
+                    "image_key": "",
+                    "safety_stock": 3,
+                    "part_active": true,
+                    "warehouse_active": true,
+                    "quantity": 14,
+                    "available": 14,
+                    "purchase_pending": "6",
+                    "in_transit": "0",
+                    "initialized": true
+                  },
+                  {
+                    "warehouse_id": 332,
+                    "warehouse": "评测B仓",
+                    "part_id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "unit": "件",
+                    "image_key": "",
+                    "safety_stock": 3,
+                    "part_active": true,
+                    "warehouse_active": true,
+                    "quantity": 2,
+                    "available": 2,
+                    "purchase_pending": "0",
+                    "in_transit": "0",
+                    "initialized": true
+                  }
+                ],
+                "limit": 100,
+                "as_of": "2026-10-24T13:43:17.679423+00:00",
+                "reserved": 0,
+                "notice": "当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。"
+              }
+            },
+            "elapsed_seconds": 0.004
+          },
+          {
+            "role": "single",
+            "tool": "finish",
+            "step": 2,
+            "call_id": "call_00_bsld4gYJiMyu9LUuG1Tj8546",
+            "arguments": {
+              "message": "已找到“评测蓄电池”（SKU EV49C13FD4E6-BAT，单位：件），但采购草稿还缺以下信息，请补充后我再拟提案（本轮未创建任何提案）：",
+              "claims": [
+                {
+                  "text": "目录中“评测蓄电池”为备件ID 657，SKU EV49C13FD4E6-BAT，单位件，参考价400.00元/件（参考价不是供应商报价）；合格供应商为评测电气供应商（ID 180），交期5天。",
+                  "evidence_ids": [
+                    "48742b740af59a4bac271f4149b79f5b048c906270cd5f80e40cd47ed3bd81d3"
+                  ]
+                },
+                {
+                  "text": "当前库存：评测A仓（ID 331）现有14件、可用14件、采购待收6件；评测B仓（ID 332）现有2件、可用2件；两仓安全库存均为3件。",
+                  "evidence_ids": [
+                    "f0de9085c9e82902822e8ac50bb6d0931d2bc496f8a02843ef905fc784b0baeb"
+                  ]
+                }
+              ],
+              "follow_up_questions": [
+                "采购到哪个仓库：评测A仓（331）还是评测B仓（332）？",
+                "采购数量是多少件（一个SKU完整包装为1件）？",
+                "供应商是否就用评测电气供应商（ID 180）？",
+                "成交单价是多少？若同意按参考价400.00元/件拟草稿，请明确说明，我会在提案中标注需确认。"
+              ]
+            },
+            "status": "error",
+            "error": "工具参数格式无效，请核对必填字段、整数、日期与金额",
+            "elapsed_seconds": 0.001
+          },
+          {
+            "role": "single",
+            "tool": "finish",
+            "step": 3,
+            "call_id": "call_00_jSl5y9aUDwFwSTqJfrEn0063",
+            "arguments": {
+              "claims": [
+                {
+                  "evidence_ids": [
+                    "48742b740af59a4bac271f4149b79f5b048c906270cd5f80e40cd47ed3bd81d3"
+                  ],
+                  "text": "目录中“评测蓄电池”为备件ID 657，SKU EV49C13FD4E6-BAT，单位件，参考价400.00元/件（参考价不是供应商报价）；合格供应商为评测电气供应商（ID 180），交期5天。"
+                },
+                {
+                  "evidence_ids": [
+                    "f0de9085c9e82902822e8ac50bb6d0931d2bc496f8a02843ef905fc784b0baeb"
+                  ],
+                  "text": "当前库存：评测A仓（ID 331）现有14件、可用14件、采购待收6件；评测B仓（ID 332）现有2件、可用2件；两仓安全库存均为3件。"
+                }
+              ],
+              "follow_up_questions": [
+                "采购到哪个仓库：评测A仓（331）还是评测B仓（332）？",
+                "采购数量是多少件（一个SKU完整包装为1件）？",
+                "供应商是否就用评测电气供应商（ID 180）？成交单价是多少？若同意按参考价400.00元/件拟草稿，请明确说明，我会在提案中标注需确认。"
+              ],
+              "message": "已找到“评测蓄电池”（SKU EV49C13FD4E6-BAT，单位：件），但采购草稿还缺以下信息，请补充后我再拟提案（本轮未创建任何提案）："
+            },
+            "status": "ok",
+            "result": {
+              "finished": true
+            },
+            "elapsed_seconds": 0.0
+          }
+        ],
+        "proposals": [],
+        "agent_elapsed_seconds": 6.052
+      },
+      "task_completed": true,
+      "reported_tokens": 11756,
+      "unconfirmed_business_writes": 0,
+      "elapsed_seconds": 6.056
+    },
+    {
+      "case_id": "AG-07",
+      "mode": "single",
+      "task": "汽油车启动时发动机完全不转、只有咔嗒声，未检测，无泄漏烟雾。先分析可能原因和蓄电池换件条件，再查询评测蓄电池在评测A仓的库存；不要认定目录适配或办理领用。",
+      "expected": "combined",
+      "answer": {
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "故障资料（待技术复核的项目编制稿，非厂家维修手册）未给出确定故障类型或换件结论；因无任何检测记录，不能认定蓄电池或起动机需要更换，也不提供跨接启动、短接继电器或自行拆卸步骤。资料建议补充确认：启动时仪表是否点亮、是否有钥匙/挡位/启动条件异常提示，症状是突然出现还是逐渐加重，以及此前是否有蓄电池检测记录。",
+            "citation_ids": [
+              "8c415735e6e353b199d7c19511d5fb725ffd0f94ac6311470014ef729d172971"
+            ]
+          },
+          {
+            "text": "目录中“评测蓄电池”ID 657，SKU EV49C13FD4E6-BAT，单位件，参考价400.00元（参考价不是供应商报价），安全库存3件，供应商为评测电气供应商（ID 180，交期5天）。目录名称/图片不证明实际车型适配，需另行核实适配性。",
+            "citation_ids": [
+              "c12b650d98f9aeb19a4b3f17ecaddc4337a43cf84c58f8b57d29cc0d2ef3bb1e"
+            ]
+          },
+          {
+            "text": "评测A仓（ID 331）该件当前现有14件、可用14件，采购待收6件，调拨在途0件，预留0；快照时间2026-10-24，尚未建账不代表已盘点实物。",
+            "citation_ids": [
+              "e5a58d04c21de6fd0f08a891931b676dad284ebdaf94d38d73a049206afedb14"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "8c415735e6e353b199d7c19511d5fb725ffd0f94ac6311470014ef729d172971",
+            "chunk_id": "8c415735e6e353b199d7c19511d5fb725ffd0f94ac6311470014ef729d172971",
+            "document_id": "TOOL-knowledge",
+            "document_version": "request_snapshot",
+            "title": "本轮知识检索结果",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"generation_id\": \"171b49756d114787934da603c0831743\", \"knowledge_base\": \"general_diagnostics\", \"knowledge_scope\": \"draft_preview\", \"retrieval_mode\": \"dense\", \"timings\": {\"qualification_seconds\": 0.021, \"embedding_seconds\": 0.208, \"retrieval_seconds\": 0.068, \"chat_seconds\": 5.169, \"validation_seconds\": 0.021}, \"answer_status\": \"requires_live_data\", \"claims\": [], \"follow_up_questions\": [\"启动时仪表是否点亮，是否有钥匙/挡位/启动条件异常提示？\", \"症状是突然出现还是逐渐加重？此前是否做过蓄电池检测并有记录？\"], \"limitations\": [\"本批资料为待技术复核的项目编制稿，非厂家维修手册，也未经过维修技术负责人核准。\", \"未提供任何检测记录，不能认定蓄电池或起动机需要更换。\", \"不提供跨接启动、短接继电器或自行拆卸步骤。\", \"本服务只读取文档，未查询实时库存或办理业务单据。\", \"当前为显式草稿预览；资料待企业或维修技术负责人核准，不代表现行有效制度或厂家诊断。\"], \"fault_types\": [], \"checks\": [], \"part_decisions\": [], \"citations\": [], \"usage\": {\"embedding\": {\"prompt_tokens\": 35, \"completion_tokens\": 0, \"total_tokens\": 35}, \"chat\": {\"prompt_tokens\": 9699, \"completion_tokens\": 1036, \"total_tokens\": 10735}}, \"embedding_requests\": 1, \"chat_requests\": 1}",
+            "accessed_at": "2026-10-24T13:43:28.677351+00:00"
+          },
+          {
+            "citation_id": "c12b650d98f9aeb19a4b3f17ecaddc4337a43cf84c58f8b57d29cc0d2ef3bb1e",
+            "chunk_id": "c12b650d98f9aeb19a4b3f17ecaddc4337a43cf84c58f8b57d29cc0d2ef3bb1e",
+            "document_id": "TOOL-catalog",
+            "document_version": "request_snapshot",
+            "title": "备件与供货目录",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"parts\": [{\"id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"aliases\": \"\", \"category\": \"评测电气\", \"unit\": \"件\", \"specification\": \"\", \"reference_price\": \"400.00\", \"safety_stock\": 3, \"suppliers\": [{\"id\": 180, \"name\": \"评测电气供应商\", \"lead_time_days\": 5}]}], \"warehouses\": [{\"id\": 331, \"code\": \"EV49C13FD4E6-A\", \"name\": \"评测A仓\"}, {\"id\": 332, \"code\": \"EV49C13FD4E6-B\", \"name\": \"评测B仓\"}], \"notice\": \"名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。\", \"limit\": 100}",
+            "accessed_at": "2026-10-24T13:43:28.680477+00:00"
+          },
+          {
+            "citation_id": "e5a58d04c21de6fd0f08a891931b676dad284ebdaf94d38d73a049206afedb14",
+            "chunk_id": "e5a58d04c21de6fd0f08a891931b676dad284ebdaf94d38d73a049206afedb14",
+            "document_id": "TOOL-stock",
+            "document_version": "request_snapshot",
+            "title": "实时库存查询",
+            "native_format": "json",
+            "source_type": "tool_result",
+            "section_path": [],
+            "excerpt": "{\"items\": [{\"warehouse_id\": 331, \"warehouse\": \"评测A仓\", \"part_id\": 657, \"sku\": \"EV49C13FD4E6-BAT\", \"name\": \"评测蓄电池\", \"unit\": \"件\", \"image_key\": \"\", \"safety_stock\": 3, \"part_active\": true, \"warehouse_active\": true, \"quantity\": 14, \"available\": 14, \"purchase_pending\": \"6\", \"in_transit\": \"0\", \"initialized\": true}], \"limit\": 100, \"as_of\": \"2026-10-24T13:43:29.210942+00:00\", \"reserved\": 0, \"notice\": \"当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。\"}",
+            "accessed_at": "2026-10-24T13:43:29.211475+00:00"
+          }
+        ],
+        "follow_up_questions": [
+          "启动时仪表是否点亮？是否有钥匙/挡位/启动条件异常提示？",
+          "症状是突然出现还是逐渐加重？此前是否做过蓄电池检测并有记录？",
+          "是否需要我按具体检测结果（如静态电压、启动压降）进一步判断换件条件？",
+          "启动时仪表是否点亮，是否有钥匙/挡位/启动条件异常提示？",
+          "症状是突然出现还是逐渐加重？此前是否做过蓄电池检测并有记录？"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "limitations": [
+          "业务查询来自本轮工具快照，执行前仍须重新校验。",
+          "本批资料为待技术复核的项目编制稿，非厂家维修手册，也未经过维修技术负责人核准。",
+          "未提供任何检测记录，不能认定蓄电池或起动机需要更换。",
+          "不提供跨接启动、短接继电器或自行拆卸步骤。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前为显式草稿预览；资料待企业或维修技术负责人核准，不代表现行有效制度或厂家诊断。"
+        ],
+        "message": "已按您的要求只做故障分析与库存查询，未认定目录适配、未办理任何领用或采购。仅“咔嗒声、发动机不转”在无检测数据时无法区分蓄电池亏电、接线/搭铁不良、起动机电磁开关或启动条件限制等原因，建议先做静态电压与启动压降等实测再判断是否满足换件条件。",
+        "generation_id": "171b49756d114787934da603c0831743",
+        "knowledge_base": "general_diagnostics",
+        "knowledge_scope": "draft_preview",
+        "usage": {
+          "agent_model_calls": [
+            {
+              "prompt_tokens": 2230,
+              "completion_tokens": 120,
+              "total_tokens": 2350
+            },
+            {
+              "prompt_tokens": 3036,
+              "completion_tokens": 55,
+              "total_tokens": 3091
+            },
+            {
+              "prompt_tokens": 3332,
+              "completion_tokens": 577,
+              "total_tokens": 3909
+            }
+          ],
+          "knowledge": [
+            {
+              "embedding": {
+                "prompt_tokens": 35,
+                "completion_tokens": 0,
+                "total_tokens": 35
+              },
+              "chat": {
+                "prompt_tokens": 9699,
+                "completion_tokens": 1036,
+                "total_tokens": 10735
+              }
+            }
+          ],
+          "coordinator": {}
+        },
+        "agent_mode": "single",
+        "roles": [
+          "single"
+        ],
+        "tool_trace": [
+          {
+            "role": "single",
+            "tool": "knowledge",
+            "step": 0,
+            "call_id": "call_00_RPdwVzDWy7iEVFhY5QBZ0909",
+            "arguments": {
+              "question": "汽油车启动时发动机完全不转、只有咔嗒声，未检测，无泄漏烟雾，可能原因和蓄电池换件条件",
+              "knowledge_base": "general_diagnostics"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "8c415735e6e353b199d7c19511d5fb725ffd0f94ac6311470014ef729d172971",
+              "data": {
+                "generation_id": "171b49756d114787934da603c0831743",
+                "knowledge_base": "general_diagnostics",
+                "knowledge_scope": "draft_preview",
+                "retrieval_mode": "dense",
+                "timings": {
+                  "qualification_seconds": 0.021,
+                  "embedding_seconds": 0.208,
+                  "retrieval_seconds": 0.068,
+                  "chat_seconds": 5.169,
+                  "validation_seconds": 0.021
+                },
+                "answer_status": "requires_live_data",
+                "claims": [],
+                "follow_up_questions": [
+                  "启动时仪表是否点亮，是否有钥匙/挡位/启动条件异常提示？",
+                  "症状是突然出现还是逐渐加重？此前是否做过蓄电池检测并有记录？"
+                ],
+                "limitations": [
+                  "本批资料为待技术复核的项目编制稿，非厂家维修手册，也未经过维修技术负责人核准。",
+                  "未提供任何检测记录，不能认定蓄电池或起动机需要更换。",
+                  "不提供跨接启动、短接继电器或自行拆卸步骤。",
+                  "本服务只读取文档，未查询实时库存或办理业务单据。",
+                  "当前为显式草稿预览；资料待企业或维修技术负责人核准，不代表现行有效制度或厂家诊断。"
+                ],
+                "fault_types": [],
+                "checks": [],
+                "part_decisions": [],
+                "citations": [],
+                "usage": {
+                  "embedding": {
+                    "prompt_tokens": 35,
+                    "completion_tokens": 0,
+                    "total_tokens": 35
+                  },
+                  "chat": {
+                    "prompt_tokens": 9699,
+                    "completion_tokens": 1036,
+                    "total_tokens": 10735
+                  }
+                },
+                "embedding_requests": 1,
+                "chat_requests": 1
+              }
+            },
+            "elapsed_seconds": 5.489
+          },
+          {
+            "role": "single",
+            "tool": "catalog",
+            "step": 0,
+            "call_id": "call_01_FKMwdHsrJKGJrH69qHol5175",
+            "arguments": {
+              "query": "蓄电池"
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "c12b650d98f9aeb19a4b3f17ecaddc4337a43cf84c58f8b57d29cc0d2ef3bb1e",
+              "data": {
+                "parts": [
+                  {
+                    "id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "aliases": "",
+                    "category": "评测电气",
+                    "unit": "件",
+                    "specification": "",
+                    "reference_price": "400.00",
+                    "safety_stock": 3,
+                    "suppliers": [
+                      {
+                        "id": 180,
+                        "name": "评测电气供应商",
+                        "lead_time_days": 5
+                      }
+                    ]
+                  }
+                ],
+                "warehouses": [
+                  {
+                    "id": 331,
+                    "code": "EV49C13FD4E6-A",
+                    "name": "评测A仓"
+                  },
+                  {
+                    "id": 332,
+                    "code": "EV49C13FD4E6-B",
+                    "name": "评测B仓"
+                  }
+                ],
+                "notice": "名称/图片与目录不证明实际车型适配；参考价格不是供应商报价；数量单位均为件。",
+                "limit": 100
+              }
+            },
+            "elapsed_seconds": 0.003
+          },
+          {
+            "role": "single",
+            "tool": "stock",
+            "step": 1,
+            "call_id": "call_00_MkDx5CaPhuDaA5QSKJL08325",
+            "arguments": {
+              "part_id": 657,
+              "warehouse_id": 331
+            },
+            "status": "ok",
+            "result": {
+              "evidence_id": "e5a58d04c21de6fd0f08a891931b676dad284ebdaf94d38d73a049206afedb14",
+              "data": {
+                "items": [
+                  {
+                    "warehouse_id": 331,
+                    "warehouse": "评测A仓",
+                    "part_id": 657,
+                    "sku": "EV49C13FD4E6-BAT",
+                    "name": "评测蓄电池",
+                    "unit": "件",
+                    "image_key": "",
+                    "safety_stock": 3,
+                    "part_active": true,
+                    "warehouse_active": true,
+                    "quantity": 14,
+                    "available": 14,
+                    "purchase_pending": "6",
+                    "in_transit": "0",
+                    "initialized": true
+                  }
+                ],
+                "limit": 100,
+                "as_of": "2026-10-24T13:43:29.210942+00:00",
+                "reserved": 0,
+                "notice": "当前业务快照；预留未实现，可用量等于现有量；尚未建账不代表已盘点实物。"
+              }
+            },
+            "elapsed_seconds": 0.009
+          },
+          {
+            "role": "single",
+            "tool": "finish",
+            "step": 2,
+            "call_id": "call_00_FiVVcUfT40CS1drZrsS12317",
+            "arguments": {
+              "claims": [
+                {
+                  "text": "故障资料（待技术复核的项目编制稿，非厂家维修手册）未给出确定故障类型或换件结论；因无任何检测记录，不能认定蓄电池或起动机需要更换，也不提供跨接启动、短接继电器或自行拆卸步骤。资料建议补充确认：启动时仪表是否点亮、是否有钥匙/挡位/启动条件异常提示，症状是突然出现还是逐渐加重，以及此前是否有蓄电池检测记录。",
+                  "evidence_ids": [
+                    "8c415735e6e353b199d7c19511d5fb725ffd0f94ac6311470014ef729d172971"
+                  ]
+                },
+                {
+                  "text": "目录中“评测蓄电池”ID 657，SKU EV49C13FD4E6-BAT，单位件，参考价400.00元（参考价不是供应商报价），安全库存3件，供应商为评测电气供应商（ID 180，交期5天）。目录名称/图片不证明实际车型适配，需另行核实适配性。",
+                  "evidence_ids": [
+                    "c12b650d98f9aeb19a4b3f17ecaddc4337a43cf84c58f8b57d29cc0d2ef3bb1e"
+                  ]
+                },
+                {
+                  "text": "评测A仓（ID 331）该件当前现有14件、可用14件，采购待收6件，调拨在途0件，预留0；快照时间2026-10-24，尚未建账不代表已盘点实物。",
+                  "evidence_ids": [
+                    "e5a58d04c21de6fd0f08a891931b676dad284ebdaf94d38d73a049206afedb14"
+                  ]
+                }
+              ],
+              "follow_up_questions": [
+                "启动时仪表是否点亮？是否有钥匙/挡位/启动条件异常提示？",
+                "症状是突然出现还是逐渐加重？此前是否做过蓄电池检测并有记录？",
+                "是否需要我按具体检测结果（如静态电压、启动压降）进一步判断换件条件？"
+              ],
+              "message": "已按您的要求只做故障分析与库存查询，未认定目录适配、未办理任何领用或采购。仅“咔嗒声、发动机不转”在无检测数据时无法区分蓄电池亏电、接线/搭铁不良、起动机电磁开关或启动条件限制等原因，建议先做静态电压与启动压降等实测再判断是否满足换件条件。"
+            },
+            "status": "ok",
+            "result": {
+              "finished": true
+            },
+            "elapsed_seconds": 0.0
+          }
+        ],
+        "proposals": [],
+        "agent_elapsed_seconds": 10.224
+      },
+      "task_completed": false,
+      "reported_tokens": 20120,
+      "unconfirmed_business_writes": 0,
+      "elapsed_seconds": 10.228
+    },
+    {
+      "case_id": "AG-07",
+      "mode": "multi",
+      "task": "汽油车启动时发动机完全不转、只有咔嗒声，未检测，无泄漏烟雾。先分析可能原因和蓄电池换件条件，再查询评测蓄电池在评测A仓的库存；不要认定目录适配或办理领用。",
+      "expected": "combined"
+    }
+  ],
+  "citation_semantic_review": "pending_project_ai_review",
+  "generation_id": "171b49756d114787934da603c0831743",
+  "source_hash": "444ebe78a3b94ebf2e1291717ff7ec442f4b0efed8505e050d1a23198f1bf884",
+  "task_hash": "c742583696e5449300f0271e204a444144c163adb5ae88a6b0d8669e5ddecb8a",
+  "logical_fixture": {
+    "A_on_hand": 14,
+    "B_on_hand": 2,
+    "A_purchase_pending": 6,
+    "transfer_in_transit": 0,
+    "reference_price": "400.00",
+    "supplier_lead_days": 5,
+    "partial_purchase": {
+      "ordered": 10,
+      "received": 4
+    }
+  }
+}

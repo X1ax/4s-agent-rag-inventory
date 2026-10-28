@@ -1,0 +1,1927 @@
+{
+  "scope": "exposed_quality_regression_not_independent",
+  "suite_sha256": "f73a5b0b316c91299b8d77b7be25ef30f993dcea257f8b445a0aa2eb602e7de4",
+  "model": "deepseek-flash",
+  "embedding": "BAAI/bge-m3",
+  "code_hashes": {
+    "backend/app/knowledge_answers.py": "7db12c41f3e6d55c9c2a2f8db276d640ca08b1ba0c745f1c746fa50a9bd601a1",
+    "backend/app/knowledge_math.py": "d9bf1b6dbc86a19438e5465f4cff3ecc5256814232a312e92bbfa973811bd8dd",
+    "backend/app/knowledge_api.py": "071d93f729638fa8097124c5e6618a101974e7e38b371ef19bc35315daee103d"
+  },
+  "cases": [
+    {
+      "id": "M3-H01",
+      "question": "采购已经分批实际入库，后来取消尚未收到的余量。这是否会同时冲减之前已经实收的库存？",
+      "rubric": {
+        "id": "M3-H01",
+        "kb": "inventory_policies",
+        "question": "采购已经分批实际入库，后来取消尚未收到的余量。这是否会同时冲减之前已经实收的库存？",
+        "statuses": [
+          "answered"
+        ],
+        "points": [
+          [
+            "不会",
+            "不影响",
+            "不能",
+            "不等于",
+            "不回滚",
+            "不冲减"
+          ],
+          [
+            "未收",
+            "余量"
+          ]
+        ]
+      },
+      "answer": {
+        "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "hybrid",
+        "timings": {
+          "qualification_seconds": 0.15,
+          "embedding_seconds": 0.204,
+          "retrieval_seconds": 0.478,
+          "chat_seconds": 5.165,
+          "validation_seconds": 0.156
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "取消采购单的未收余量不会冲减此前已经实收的库存：取消不退回已经收到的实物，也不删除实际入库或流水。",
+            "citation_ids": [
+              "490da2a9185f69657d34109bfb0e8c1542942883c23eb0a638861dfa669ae804",
+              "8e57178c6356bbe1085fe7c227fb99d732d4c06a1e7f3e48a0781e75e75c0d96"
+            ]
+          },
+          {
+            "text": "部分收货后，已收数量与剩余待收数量分别保留；待收部分不计入现有库存，取消待收部分不影响已收部分的实物和流水。",
+            "citation_ids": [
+              "490da2a9185f69657d34109bfb0e8c1542942883c23eb0a638861dfa669ae804",
+              "acfcfb9e57e5336cf4097ee4f608181530ce8b457d69567244b7d6c9d7a4e65d"
+            ]
+          },
+          {
+            "text": "采购取消只终止有效未收余量，不表示已生效的收货已被反向冲销；系统采购取消也不代表已退回已收实物、减少库存或完成退款。",
+            "citation_ids": [
+              "48ae9888464c675fff859b1b3b43f565c8372ebf5136894bb90cd0c8f26b7414",
+              "21b8501edf5cf0f09491d55905e39573ca9f46549df92c0fc7f1e05ee914b768"
+            ]
+          },
+          {
+            "text": "若已入库部分存在质量或登记错误，不能通过删除入库单或把采购已收数量手动调回处理，应先隔离实物、暂停放行，再按反向业务办法处理。",
+            "citation_ids": [
+              "acfcfb9e57e5336cf4097ee4f608181530ce8b457d69567244b7d6c9d7a4e65d",
+              "6fc85c342e009eee248a413a2729792823bb648d71e6681b9a491252f3bb72a9"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "以上依据均为待核准稿（draft，pending_approval），属于本地参考资料范围，不代表已正式生效的企业制度。",
+          "取消外部供货承诺或变更交期仍需另与供应商确认并保存回执，系统取消不自动通知供应商，也不代表合同违约、结算或退款已处理。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "citations": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.1",
+            "title": "采购需求与采购单控制规程",
+            "native_format": "docx",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "490da2a9185f69657d34109bfb0e8c1542942883c23eb0a638861dfa669ae804",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "6cbbc9e8030d383cfff89292060311fa38bd2c48b8775f0dfc12dbe4d58b8781",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-PUR-003-C013",
+              "INV-PUR-003-C014",
+              "INV-PUR-003-C015",
+              "INV-PUR-003-C016"
+            ],
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "5 收货与取消"
+            ],
+            "excerpt": "采购需求与采购单控制规程\n\n本规程将需求核验、业务批准、采购单确认和实际交付分开控制，适用于常规补货、维修专用件和紧急采购。当前为待核准稿，不授予实际签约或付款权限。\n\n5 收货与取消\n\nINV-PUR-003-C013 仅已确认或部分收货的采购单可登记实际收货。每次实收形成独立入库单，累计实收不得超过原采购行数量，也不得借用其他采购单的明细。验收及暂不接收情形按INV-RCV-004执行。\nINV-PUR-003-C014 部分收货后保留已收数量和剩余待收数量；全部完成后转为已完成。一次收货失败应整体回滚，不得出现某行入账而同次其他行失败后仍保留部分结果。\nINV-PUR-003-C015 可以取消草稿及已确认、部分收货采购单的未收余量。取消不退回已经收到的实物，也不删除实际入库或流水；已完成采购不通过取消实现退供。\nINV-PUR-003-C016 取消外部供货承诺或变更交期应另与供应商确认，保存回执。系统取消未收余量不自动通知供应商，也不代表合同违约责任、结算或退款已经处理。",
+            "block_start": 24,
+            "block_end": 27,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.1",
+            "title": "采购需求与采购单控制规程",
+            "native_format": "docx",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "8e57178c6356bbe1085fe7c227fb99d732d4c06a1e7f3e48a0781e75e75c0d96",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "269a7094dec05950c713ba40b6e7c108b1bba9ae50d8b1c31d8cd5ba780c63af",
+            "unit_id": "INV-PUR-003-C015",
+            "unit_ids": [
+              "INV-PUR-003-C015"
+            ],
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "5 收货与取消"
+            ],
+            "excerpt": "INV-PUR-003-C015 可以取消草稿及已确认、部分收货采购单的未收余量。取消不退回已经收到的实物，也不删除实际入库或流水；已完成采购不通过取消实现退供。",
+            "block_start": 26,
+            "block_end": 26,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-RCV-004",
+            "document_version": "1.0-draft.1",
+            "title": "到货验收与实际入库作业规范",
+            "native_format": "pdf",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "acfcfb9e57e5336cf4097ee4f608181530ce8b457d69567244b7d6c9d7a4e65d",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "61e40976beeadf94ad4d87ed7180b0216f4b263ef6b0c90d622655c3ba7c8765",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-RCV-004-C013",
+              "INV-RCV-004-C014",
+              "INV-RCV-004-C015",
+              "INV-RCV-004-C016"
+            ],
+            "section_path": [
+              "到货验收与实际入库作业规范",
+              "4 超量及差异处理"
+            ],
+            "excerpt": "到货验收与实际入库作业规范\n\n本规范规定到货核验、合格实收、单据登记及收货异常的处理方式，防止预计到货或不合格品提前进入可用库存。当前为企业制度待核准稿。\n\n4 超量及差异处理\n\nINV-RCV-004-C013 超量到货不直接超采购量入账。采购岗位先确认供应商是否拉回多送部分，或经过变更批准后建立独立且可追溯的采购依据。不得借其他采购单的余量接收本批货物。\nINV-RCV-004-C014 采购20件、本次合格8件时，仅登记8件，剩余12件继续为有效采购待收；待收12件不计入现有库存。后续取消这12件，不影响已收8件的实物和流水。\nINV-RCV-004-C015 已入库后发现质量或登记错误，不能删除入库单或把采购已收数量手动调回。先隔离实物、暂停相关放行，再按INV-ADJ-008处理；批准记录不等于反向业务已经入账。\nINV-RCV-004-C016 系统入库完成但实物交接尚未完成时，应记录位置、保管责任和交接未结原因；实物已到但入账失败时，应保持待处理标识并避免重复领用，不能把两种状态混为正常可用。",
+            "page_start": 2,
+            "page_end": 2,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-GLO-011",
+            "document_version": "1.0-draft.2",
+            "title": "备件库存术语与检索同义词",
+            "native_format": "txt",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "48ae9888464c675fff859b1b3b43f565c8372ebf5136894bb90cd0c8f26b7414",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "b0ff09adcd518f0fc7ef8fa10c1837e6e5e6e2282c2912a2f7cc83057317e1c2",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-GLO-011-C007",
+              "INV-GLO-011-C008",
+              "INV-GLO-011-C009",
+              "INV-GLO-011-C010",
+              "INV-GLO-011-C011"
+            ],
+            "section_path": [
+              "备件库存术语与检索同义词",
+              "2 业务动作"
+            ],
+            "excerpt": "备件库存术语与检索同义词\n\n本文统一检索和业务表达。状态为待核准，不表示企业已经批准相应制度；同义词只用于理解问题，不能改变单据类型、单位或权限。\n\n2 业务动作\n\nINV-GLO-011-C007 采购确认是采购草稿经核对后进入已确认状态，不表示实际入库、对外订单发送、财务付款或审批流已完成。\n\nINV-GLO-011-C008 实际入库也称采购实收、验收入库，指本次合格实际接收量通过对应采购行生成入库单及正向流水，不等于送货承诺或仅登记到货信息。\n\nINV-GLO-011-C009 领用出库也称维修领料、发料过账，指获准维修用途的实物领用经确认后扣减库存。草稿未预留数量，调拨发出不是领用消耗。\n\nINV-GLO-011-C010 取消须结合类型理解：采购取消可终止有效未收余量，领用与调拨只允许草稿取消。取消不表示已生效的收货、出库或调拨在途已经被反向冲销。\n\nINV-GLO-011-C011 期初是首次建账依据；已有库存记录后的零余额不是可以再次登记期初的“空账”。库存余额、数量流水与操作审计分别表示当前数量、变化事实和操作事实。",
+            "line_start": 31,
+            "line_end": 40,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-ADJ-008",
+            "document_version": "1.0-draft.1",
+            "title": "盘点差异与反向业务处理办法",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "21b8501edf5cf0f09491d55905e39573ca9f46549df92c0fc7f1e05ee914b768",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "89dfb830ec9f90c3bb57d8f82470fcd9c8ddd72ddd484d24abf3eb38fa122775",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-ADJ-008-C010",
+              "INV-ADJ-008-C011",
+              "INV-ADJ-008-C012"
+            ],
+            "section_path": [
+              "盘点差异与反向业务处理办法",
+              "4 供应商退货与报损"
+            ],
+            "excerpt": "盘点差异与反向业务处理办法\n\n本办法覆盖盘点、错账调查、维修退库、供应商退货和报损的责任及控制要求。当前软件尚无完整反向单据和盘点调整功能，本文规定业务应满足的控制，不表示相应系统功能已经上线。当前为待核准稿。\n\n4 供应商退货与报损\n\nINV-ADJ-008-C010 退供应关联原实际入库、质量或合同依据、供应商确认及交接记录。系统采购取消只取消未收余量，不代表已经退回已收实物、减少库存或完成退款。\n\nINV-ADJ-008-C011 报损应说明物品、数量、原因、质量判定、责任及处置方式，经有权岗位批准后执行，并分别记录实物处置和账务影响。不同单位不混加，不能以参考单价自动认定实际损失。\n\nINV-ADJ-008-C012 运输遗失、调拨少货或发出后退回，必须保留原调拨及在途关联。不能用取消已发出单据、假收货或虚构领用替代调查及反向处理。",
+            "line_start": 41,
+            "line_end": 46,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-RCV-004",
+            "document_version": "1.0-draft.1",
+            "title": "到货验收与实际入库作业规范",
+            "native_format": "pdf",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "6fc85c342e009eee248a413a2729792823bb648d71e6681b9a491252f3bb72a9",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "8865200d33fd5d236b435cadd92c0645a85574dfd986a6f8245488d63dbba5b4",
+            "unit_id": "INV-RCV-004-C015",
+            "unit_ids": [
+              "INV-RCV-004-C015"
+            ],
+            "section_path": [
+              "到货验收与实际入库作业规范",
+              "4 超量及差异处理"
+            ],
+            "excerpt": "INV-RCV-004-C015 已入库后发现质量或登记错误，不能删除入库单或把采购已收数量手动调回。先隔离实物、暂停相关放行，再按INV-ADJ-008处理；批准记录不等于反向业务已经入账。",
+            "page_start": 2,
+            "page_end": 2,
+            "tables": []
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 32,
+            "completion_tokens": 0,
+            "total_tokens": 32
+          },
+          "chat": {
+            "prompt_tokens": 7292,
+            "completion_tokens": 588,
+            "total_tokens": 7880
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      },
+      "automated_checks": {
+        "status": true,
+        "no_write_tools": true,
+        "points": true,
+        "parts": true,
+        "catalog_units": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "M3-H02",
+      "question": "把统计日期选成上个月，页面的当前库存余额是否就代表上个月末余额？请说明日期筛选实际约束什么。",
+      "rubric": {
+        "id": "M3-H02",
+        "kb": "inventory_policies",
+        "question": "把统计日期选成上个月，页面的当前库存余额是否就代表上个月末余额？请说明日期筛选实际约束什么。",
+        "statuses": [
+          "answered"
+        ],
+        "points": [
+          [
+            "当前",
+            "快照"
+          ],
+          [
+            "趋势",
+            "领用"
+          ],
+          [
+            "不表示",
+            "不能",
+            "不代表",
+            "并非"
+          ]
+        ]
+      },
+      "answer": {
+        "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "hybrid",
+        "timings": {
+          "qualification_seconds": 0.154,
+          "embedding_seconds": 0.235,
+          "retrieval_seconds": 0.525,
+          "chat_seconds": 2.661,
+          "validation_seconds": 0.154
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "把统计日期选成上个月，页面显示的当前库存余额并不代表上个月末余额；当前余额是查询时点的快照。",
+            "citation_ids": [
+              "0e26ff72bbdb7c9c1815f48f88695e01d231cd1b1fcb68362c063ca00cecd36f"
+            ]
+          },
+          {
+            "text": "日期筛选只约束收发趋势和领用排序，不表示查询了该历史日期的余额。",
+            "citation_ids": [
+              "0e26ff72bbdb7c9c1815f48f88695e01d231cd1b1fcb68362c063ca00cecd36f"
+            ]
+          },
+          {
+            "text": "要查询历史余额，需要按业务日期重建，并核查补录等影响。",
+            "citation_ids": [
+              "0e26ff72bbdb7c9c1815f48f88695e01d231cd1b1fcb68362c063ca00cecd36f"
+            ]
+          },
+          {
+            "text": "页面业务趋势按业务日期汇总实际采购入库量与已过账领用量，统一以件展示；期初与调拨不计入。",
+            "citation_ids": [
+              "0e26ff72bbdb7c9c1815f48f88695e01d231cd1b1fcb68362c063ca00cecd36f"
+            ]
+          },
+          {
+            "text": "现有库存（当前库存）表示指定仓库指定SKU已入账的当前数量，不包括采购待收和目标方向调拨在途。",
+            "citation_ids": [
+              "579e656ed3fd57552006905b01c0754e403d4a32f72d6d144ca6e3f599c8f0f5",
+              "78ecd0341073cd8570f2bfa96b13b837a579a18627254f246c1b4eede7e30fa3"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "依据为项目编制稿（INV-ANA-009 1.0-draft.3、INV-GLO-011 1.0-draft.2），状态为待核准（pending_approval），不是正式生效制度或厂家结论。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "citations": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-ANA-009",
+            "document_version": "1.0-draft.3",
+            "title": "库存统计与补货调拨建议口径",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "0e26ff72bbdb7c9c1815f48f88695e01d231cd1b1fcb68362c063ca00cecd36f",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "c58d6900a09137f41c9847f7c5b1f1e53cf3fbfd3b452a52c48d3f2443390a4b",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-ANA-009-C005",
+              "INV-ANA-009-C006",
+              "INV-ANA-009-C007",
+              "INV-ANA-009-C008",
+              "INV-ANA-009-C009"
+            ],
+            "section_path": [
+              "库存统计与补货调拨建议口径",
+              "2 时间与历史完整性"
+            ],
+            "excerpt": "库存统计与补货调拨建议口径\n\n本文件统一数量、历史消耗、补货与调拨建议的解释，避免将现有量、预计供给和模型建议混为一谈。规则用于形成可复核建议，不能取代采购批准或实物核验。当前为待核准稿；补货与调拨建议服务尚未因本文件编写而自动上线。\n\n2 时间与历史完整性\n\nINV-ANA-009-C005 当前余额、采购待收和在途属于查询时点快照；日期筛选只约束收发趋势和领用排序，不表示查询了该历史日期的余额。查询历史余额需要按业务日期重建并核查补录等影响。\n\nINV-ANA-009-C006 消耗分析只统计已过账维修领用的数量，调拨、采购、期初不计为领用消耗。业务日期与实际登记时间分别保留。页面业务趋势按业务日期汇总实际采购入库量与已过账领用量，统一以件展示，同单多备件按各自明细数量累加，期初与调拨不计入；领用频次排行按涉及该SKU的领用单据数排序，并同时标注实际领用件数。数量消耗及补货计算仍按已过账领用件数，不以频次代替数量。\n\nINV-ANA-009-C007 最近30个完整自然日指查询基准日之前的连续30天，不含尚未结束的基准日。平均日消耗为该期间已过账领用总量除以30；不能把不足30天的记录未经说明直接除以30并宣称完整历史。\n\nINV-ANA-009-C008 历史完整性应由资料来源、覆盖区间、导入规则和遗漏检查共同确认。某天没有记录可以表示已知零消耗，也可能表示缺失，不能只依据最早与最晚日期判断中间完整。\n\nINV-ANA-009-C009 项目构造历史只能在明确声明的模拟覆盖范围内用于验证计算；不能由连续日期、样例数量或图表推导真实门店需求、预测准确率或经营收益。新增SKU没有历史时单独标记，不能借用相似件的消耗当作事实。",
+            "line_start": 27,
+            "line_end": 36,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-ANA-009",
+            "document_version": "1.0-draft.3",
+            "title": "库存统计与补货调拨建议口径",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "579e656ed3fd57552006905b01c0754e403d4a32f72d6d144ca6e3f599c8f0f5",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "5d74fa213e94e8bf9a089514a671aa1e47b6edafd88d51a98d4c728307f12bdf",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-ANA-009-C001",
+              "INV-ANA-009-C002",
+              "INV-ANA-009-C003",
+              "INV-ANA-009-C004"
+            ],
+            "section_path": [
+              "库存统计与补货调拨建议口径",
+              "1 库存数量定义"
+            ],
+            "excerpt": "库存统计与补货调拨建议口径\n\n本文件统一数量、历史消耗、补货与调拨建议的解释，避免将现有量、预计供给和模型建议混为一谈。规则用于形成可复核建议，不能取代采购批准或实物核验。当前为待核准稿；补货与调拨建议服务尚未因本文件编写而自动上线。\n\n1 库存数量定义\n\nINV-ANA-009-C001 现有库存是指定仓库指定SKU已入账的当前数量。可用库存等于现有量减有效预留；当前没有预留流程，预留量为零，因此系统可用量等于现有量。不得展示虚构的预留能力。\n\nINV-ANA-009-C002 采购待收仅统计已确认或部分收货采购单仍有效的未收数量，排除草稿及取消余量。调拨在途仅统计本仓作为目标的已发出未收货数量。二者不计为现有库存。\n\nINV-ANA-009-C003 库存位置等于可用库存加采购待收加目标方向调拨在途，按相同SKU、仓库和单位计算。它表示计划供给位置，不等于现在可以领用的实物数量。\n\nINV-ANA-009-C004 低库存以当前现有量低于安全库存判断，零库存单列。低库存提示是核查入口，不直接构成采购需求；若需要不同低库存口径，应批准并同步界面、规则和评测，不静默改用库存位置。",
+            "line_start": 17,
+            "line_end": 24,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-GLO-011",
+            "document_version": "1.0-draft.2",
+            "title": "备件库存术语与检索同义词",
+            "native_format": "txt",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "78ecd0341073cd8570f2bfa96b13b837a579a18627254f246c1b4eede7e30fa3",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "950f56b7a20420f725e22e1817bbf2294d778f9c49635a9fc922077a9864d252",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-GLO-011-C001",
+              "INV-GLO-011-C002",
+              "INV-GLO-011-C003",
+              "INV-GLO-011-C004",
+              "INV-GLO-011-C005",
+              "INV-GLO-011-C006"
+            ],
+            "section_path": [
+              "备件库存术语与检索同义词",
+              "1 库存与单位"
+            ],
+            "excerpt": "备件库存术语与检索同义词\n\n本文统一检索和业务表达。状态为待核准，不表示企业已经批准相应制度；同义词只用于理解问题，不能改变单据类型、单位或权限。\n\n1 库存与单位\n\nINV-GLO-011-C001 SKU为内部唯一库存识别编码。厂家件号、OE号、品牌型号是其他识别信息，不能在没有核验对应关系时等同于SKU；相似编码也不构成替代关系。\n\nINV-GLO-011-C002 现有库存也称账面现存量、当前库存，表示指定仓库指定SKU已入账数量，不包括采购待收和目标方向调拨在途。\n\nINV-GLO-011-C003 可用库存也称可用量、可领数量，其基本公式为现有量减有效预留。当前无预留流程，系统可用量等于现有量；人工隔离等限制仍须核验，不能只依据系统数值断言可交付。\n\nINV-GLO-011-C004 采购待收又称采购未到、订单未收余量，限定为已确认或部分收货采购单的有效未收部分。采购草稿与已取消余量不属于有效待收。\n\nINV-GLO-011-C005 调拨在途又称内部在途、已发未收，指调拨已发出但目标仓未确认接收的数量。它与供应商发货或采购预计到货不是同一数量口径。\n\nINV-GLO-011-C006 本系统库存、收发及统计统一按件管理。一件表示一个SKU完整库存包装；整瓶、整桶、整套等差异写入名称或规格，不换算为升数、包装内个数或其他单位，不拆零收发。数量与单价均按同一库存包装计算。",
+            "line_start": 17,
+            "line_end": 28,
+            "tables": []
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 35,
+            "completion_tokens": 0,
+            "total_tokens": 35
+          },
+          "chat": {
+            "prompt_tokens": 4437,
+            "completion_tokens": 497,
+            "total_tokens": 4934
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      },
+      "automated_checks": {
+        "status": true,
+        "no_write_tools": true,
+        "points": true,
+        "parts": true,
+        "catalog_units": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "M3-H03",
+      "question": "调拨单上的货只到了部分，其余还没交接，可以直接按整单数量确认全部收货吗？",
+      "rubric": {
+        "id": "M3-H03",
+        "kb": "inventory_policies",
+        "question": "调拨单上的货只到了部分，其余还没交接，可以直接按整单数量确认全部收货吗？",
+        "statuses": [
+          "answered",
+          "needs_clarification"
+        ],
+        "points": [
+          [
+            "不能",
+            "不应",
+            "不得",
+            "不可"
+          ],
+          [
+            "差异",
+            "实收",
+            "实际",
+            "整单"
+          ]
+        ]
+      },
+      "answer": {
+        "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "hybrid",
+        "timings": {
+          "qualification_seconds": 0.151,
+          "embedding_seconds": 0.196,
+          "retrieval_seconds": 0.474,
+          "chat_seconds": 3.366,
+          "validation_seconds": 0.155
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "当前调拨按整单发出和整单收货，不支持部分发出、部分收货或发出后撤回；若实物只能分批，应在发出前拆分为能独立交接的多张单据。",
+            "citation_ids": [
+              "90c441094784754364ba8dd21b826785d3c322c4425ae7f1e4b9733a32509e1e",
+              "03aebdf98a05ee8c29318f8b017db806c0f6e99d60baa9da3571990cd76b89f3"
+            ]
+          },
+          {
+            "text": "目标仓只有整单实物一致且满足接收要求时才确认收货，因此不能按整单数量确认全部收货。",
+            "citation_ids": [
+              "8b5373ecb083369620817f0f6a81c703d5628fe5d86d5722df9edc3a9dfaea7f",
+              "88688eee022d665651d860dd63b4ca2bb6489189fd33f9dd66c4bc53df485a27"
+            ]
+          },
+          {
+            "text": "少货时目标仓应登记实物事实与证据并通知来源仓及负责人，暂不将整单标为已收货；部分已到达不代表系统具备部分收货能力，不得先按原数量全收后再线下修正。",
+            "citation_ids": [
+              "fa46fc876b11fd257857226843250274636d88091f5783335c96278449cb4a5a",
+              "7e8643fda82c7a9afb846fbdd23701da435cf25b1b7d27aa3dcc959d316e28b9"
+            ]
+          },
+          {
+            "text": "运输遗失、调拨少货或发出后退回，必须保留原调拨及在途关联，不能用取消已发出单据、假收货或虚构领用替代调查及反向处理。",
+            "citation_ids": [
+              "21b8501edf5cf0f09491d55905e39573ca9f46549df92c0fc7f1e05ee914b768"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "以上依据来自待核准稿（draft，pending_approval）的跨仓调拨与盘点差异资料，不代表已正式生效的制度。",
+          "本回答仅解释制度控制要求，不查询实际单据、在途数量或库存状态。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "citations": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-TRF-006",
+            "document_version": "1.0-draft.1",
+            "title": "跨仓调拨与在途交接规程",
+            "native_format": "docx",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "90c441094784754364ba8dd21b826785d3c322c4425ae7f1e4b9733a32509e1e",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "41acaf83a075d67a8c3ddee88fd05e27b035c3e32151dfbf55a6bc49a565f73c",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-TRF-006-C004",
+              "INV-TRF-006-C005",
+              "INV-TRF-006-C006",
+              "INV-TRF-006-C007",
+              "INV-TRF-006-C008"
+            ],
+            "section_path": [
+              "跨仓调拨与在途交接规程",
+              "2 草稿与发出"
+            ],
+            "excerpt": "跨仓调拨与在途交接规程\n\n本规程控制同一门店下不同仓库之间的备件调拨、运输交接及在途核实。仅适用于内部库存位置变化，不以调拨表示采购、销售、维修消耗或所有权转移。当前为待核准稿。\n\n2 草稿与发出\n\nINV-TRF-006-C004 草稿记录来源仓、目标仓、SKU、整数数量、业务日期和用途。草稿不改变库存，可取消；填写错误时取消后重建，不直接改写已经发出的明细。\nINV-TRF-006-C005 当前调拨按整单发出和整单收货，不支持部分发出、部分收货或发出后撤回。若实物计划只能分批，应在发出前拆分为能独立交接的多张单据并复核。\nINV-TRF-006-C006 发出前复核整单明细及实物交接条件，提交时重新核对来源仓数量。任一行不足应整次失败，不能只发出可满足的行而保持原整单状态。\nINV-TRF-006-C007 发出成功后来源仓现有量减少，相同数量计入目标方向的调拨在途；目标仓现有量此时不增加。在途尚未可供目标仓领用，也不应在来源仓继续承诺为现货。\nINV-TRF-006-C008 发出业务日期不得早于调拨单日期或晚于办理日。系统登记与实物离库应同步核验，保留发出人、承运或交接人、交接时间和凭据；登记成功不自动证明实物运输已经完成。",
+            "block_start": 10,
+            "block_end": 14,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-TRF-006",
+            "document_version": "1.0-draft.1",
+            "title": "跨仓调拨与在途交接规程",
+            "native_format": "docx",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "03aebdf98a05ee8c29318f8b017db806c0f6e99d60baa9da3571990cd76b89f3",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "4ab58f2f435b07abbb9408d35053615e9aa710800ab9ac16abecb67f410bcfb6",
+            "unit_id": "INV-TRF-006-C005",
+            "unit_ids": [
+              "INV-TRF-006-C005"
+            ],
+            "section_path": [
+              "跨仓调拨与在途交接规程",
+              "2 草稿与发出"
+            ],
+            "excerpt": "INV-TRF-006-C005 当前调拨按整单发出和整单收货，不支持部分发出、部分收货或发出后撤回。若实物计划只能分批，应在发出前拆分为能独立交接的多张单据并复核。",
+            "block_start": 11,
+            "block_end": 11,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-TRF-006",
+            "document_version": "1.0-draft.1",
+            "title": "跨仓调拨与在途交接规程",
+            "native_format": "docx",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "8b5373ecb083369620817f0f6a81c703d5628fe5d86d5722df9edc3a9dfaea7f",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "da7d62afcdfe6b27a54da48e319293317b54a87dcddcf34797e1d52e0867bb2e",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-TRF-006-C009",
+              "INV-TRF-006-C010",
+              "INV-TRF-006-C011"
+            ],
+            "section_path": [
+              "跨仓调拨与在途交接规程",
+              "3 目标仓接收"
+            ],
+            "excerpt": "跨仓调拨与在途交接规程\n\n本规程控制同一门店下不同仓库之间的备件调拨、运输交接及在途核实。仅适用于内部库存位置变化，不以调拨表示采购、销售、维修消耗或所有权转移。当前为待核准稿。\n\n3 目标仓接收\n\nINV-TRF-006-C009 目标仓按原调拨单核对包装、SKU、单位、数量和状态。只有整单实物一致且满足接收要求时才确认收货，收货日期不能早于实际发出日期或晚于办理日。\nINV-TRF-006-C010 收货成功后目标仓现有量增加，对应在途结束，形成收货流水。重复收货不得再次增加数量；请求结果不明时查询原单据并以原请求重试。\nINV-TRF-006-C011 单纯调拨期间，全仓现有量加调拨在途应保持守恒，按同一计量单位核验。采购待收属于外部未到货，不混入调拨守恒；调拨发出不计为维修领用消耗。\n| 业务时点 | 来源仓现有量 | 目标仓现有量 | 调拨在途 |\n| --- | --- | --- | --- |\n| 草稿 | 不变 | 不变 | 不增加 |\n| 整单发出 | 减少调拨数量 | 不变 | 增加调拨数量 |\n| 整单收货 | 不再扣减 | 增加调拨数量 | 结束对应在途 |",
+            "block_start": 16,
+            "block_end": 18,
+            "tables": [
+              {
+                "ordinal": 2,
+                "headers": [
+                  "业务时点",
+                  "来源仓现有量",
+                  "目标仓现有量",
+                  "调拨在途"
+                ],
+                "rows": [
+                  [
+                    "草稿",
+                    "不变",
+                    "不变",
+                    "不增加"
+                  ],
+                  [
+                    "整单发出",
+                    "减少调拨数量",
+                    "不变",
+                    "增加调拨数量"
+                  ],
+                  [
+                    "整单收货",
+                    "不再扣减",
+                    "增加调拨数量",
+                    "结束对应在途"
+                  ]
+                ],
+                "text": "| 业务时点 | 来源仓现有量 | 目标仓现有量 | 调拨在途 |\n| --- | --- | --- | --- |\n| 草稿 | 不变 | 不变 | 不增加 |\n| 整单发出 | 减少调拨数量 | 不变 | 增加调拨数量 |\n| 整单收货 | 不再扣减 | 增加调拨数量 | 结束对应在途 |",
+                "block_start": 19,
+                "block_end": 19
+              }
+            ]
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-TRF-006",
+            "document_version": "1.0-draft.1",
+            "title": "跨仓调拨与在途交接规程",
+            "native_format": "docx",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "88688eee022d665651d860dd63b4ca2bb6489189fd33f9dd66c4bc53df485a27",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "5c4bcda21ab8af0c35e102858654d6f20ecee0fe988364acb47bcc4610d537ab",
+            "unit_id": "INV-TRF-006-C009",
+            "unit_ids": [
+              "INV-TRF-006-C009"
+            ],
+            "section_path": [
+              "跨仓调拨与在途交接规程",
+              "3 目标仓接收"
+            ],
+            "excerpt": "INV-TRF-006-C009 目标仓按原调拨单核对包装、SKU、单位、数量和状态。只有整单实物一致且满足接收要求时才确认收货，收货日期不能早于实际发出日期或晚于办理日。",
+            "block_start": 16,
+            "block_end": 16,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-TRF-006",
+            "document_version": "1.0-draft.1",
+            "title": "跨仓调拨与在途交接规程",
+            "native_format": "docx",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "fa46fc876b11fd257857226843250274636d88091f5783335c96278449cb4a5a",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "f995111188e0efce28788c59b071d679170518058699b57f617b0fa9a18ee62a",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-TRF-006-C012",
+              "INV-TRF-006-C013",
+              "INV-TRF-006-C014",
+              "INV-TRF-006-C015"
+            ],
+            "section_path": [
+              "跨仓调拨与在途交接规程",
+              "4 在途差异与异常"
+            ],
+            "excerpt": "跨仓调拨与在途交接规程\n\n本规程控制同一门店下不同仓库之间的备件调拨、运输交接及在途核实。仅适用于内部库存位置变化，不以调拨表示采购、销售、维修消耗或所有权转移。当前为待核准稿。\n\n4 在途差异与异常\n\nINV-TRF-006-C012 少货、多货、错件或破损时，目标仓登记实物事实与证据并通知来源仓及负责人，暂不将整单标为已收货。部分已到达不代表系统已经具备部分收货能力，不得先按原数量全收后再线下修正。\nINV-TRF-006-C013 发出后运输取消、路线改变或要求退回，必须保留原调拨并建立异常处置。当前系统不支持发出后撤回或反向关联单时，不得仅凭批准就把在途清零，应等待获准的对应业务能力或受控处理方案。\nINV-TRF-006-C014 在途超期应按已约定的交接日期核查，不在缺少约定时臆造统一超期阈值。负责人指定核查人，确认实物位置、保管责任、损坏或遗失情况及后续处理，异常未解决前不能标为正常完成。\nINV-TRF-006-C015 物品遗失或损坏涉及责任及账务调整时，按INV-ADJ-008另行调查和批准。不能用虚构领用、采购收货或删除调拨单掩盖差异。",
+            "block_start": 22,
+            "block_end": 25,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-TRF-006",
+            "document_version": "1.0-draft.1",
+            "title": "跨仓调拨与在途交接规程",
+            "native_format": "docx",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "7e8643fda82c7a9afb846fbdd23701da435cf25b1b7d27aa3dcc959d316e28b9",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "c946737f674021b80c8b3bf4549865209036ad48d56d16d9ba1bea7e18643e92",
+            "unit_id": "INV-TRF-006-C012",
+            "unit_ids": [
+              "INV-TRF-006-C012"
+            ],
+            "section_path": [
+              "跨仓调拨与在途交接规程",
+              "4 在途差异与异常"
+            ],
+            "excerpt": "INV-TRF-006-C012 少货、多货、错件或破损时，目标仓登记实物事实与证据并通知来源仓及负责人，暂不将整单标为已收货。部分已到达不代表系统已经具备部分收货能力，不得先按原数量全收后再线下修正。",
+            "block_start": 22,
+            "block_end": 22,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-ADJ-008",
+            "document_version": "1.0-draft.1",
+            "title": "盘点差异与反向业务处理办法",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "21b8501edf5cf0f09491d55905e39573ca9f46549df92c0fc7f1e05ee914b768",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "89dfb830ec9f90c3bb57d8f82470fcd9c8ddd72ddd484d24abf3eb38fa122775",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-ADJ-008-C010",
+              "INV-ADJ-008-C011",
+              "INV-ADJ-008-C012"
+            ],
+            "section_path": [
+              "盘点差异与反向业务处理办法",
+              "4 供应商退货与报损"
+            ],
+            "excerpt": "盘点差异与反向业务处理办法\n\n本办法覆盖盘点、错账调查、维修退库、供应商退货和报损的责任及控制要求。当前软件尚无完整反向单据和盘点调整功能，本文规定业务应满足的控制，不表示相应系统功能已经上线。当前为待核准稿。\n\n4 供应商退货与报损\n\nINV-ADJ-008-C010 退供应关联原实际入库、质量或合同依据、供应商确认及交接记录。系统采购取消只取消未收余量，不代表已经退回已收实物、减少库存或完成退款。\n\nINV-ADJ-008-C011 报损应说明物品、数量、原因、质量判定、责任及处置方式，经有权岗位批准后执行，并分别记录实物处置和账务影响。不同单位不混加，不能以参考单价自动认定实际损失。\n\nINV-ADJ-008-C012 运输遗失、调拨少货或发出后退回，必须保留原调拨及在途关联。不能用取消已发出单据、假收货或虚构领用替代调查及反向处理。",
+            "line_start": 41,
+            "line_end": 46,
+            "tables": []
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 29,
+            "completion_tokens": 0,
+            "total_tokens": 29
+          },
+          "chat": {
+            "prompt_tokens": 10558,
+            "completion_tokens": 540,
+            "total_tokens": 11098
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      },
+      "automated_checks": {
+        "status": true,
+        "no_write_tools": true,
+        "points": true,
+        "parts": true,
+        "catalog_units": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "M3-H04",
+      "question": "假设最近30个完整自然日已过账领用79件，交期3天，安全库存6件，可用4件，采购待收2件，调拨在途0件。请复算目标库存、位置与缺口。",
+      "rubric": {
+        "id": "M3-H04",
+        "kb": "inventory_policies",
+        "question": "假设最近30个完整自然日已过账领用79件，交期3天，安全库存6件，可用4件，采购待收2件，调拨在途0件。请复算目标库存、位置与缺口。",
+        "statuses": [
+          "answered"
+        ],
+        "calculation": {
+          "kind": "replenishment",
+          "result": {
+            "daily_consumption": "79/30",
+            "target": 14,
+            "position": 6,
+            "gap": 8
+          }
+        }
+      },
+      "answer": {
+        "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "hybrid",
+        "timings": {
+          "qualification_seconds": 0.152,
+          "embedding_seconds": 0.199,
+          "retrieval_seconds": 0.473,
+          "chat_seconds": 2.364,
+          "validation_seconds": 0.159
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "按你提供的假设计算，结果如下；未读取实时库存。",
+            "citation_ids": [
+              "2a97875dbf5039dd46ce117934bed4511980ddc55092dc8a38eec3181e64e26f",
+              "0e26ff72bbdb7c9c1815f48f88695e01d231cd1b1fcb68362c063ca00cecd36f"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "所引资料为待核准稿（draft，pending_approval），仅作本地参考口径，不代表正式生效制度。",
+          "计算为纯假设复算，不对应任何实际库存或采购指令。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "calculation": {
+          "kind": "replenishment",
+          "inputs": {
+            "issue_30d": 79,
+            "days": 30,
+            "lead_days": 3,
+            "safety": 6,
+            "available": 4,
+            "purchase_pending": 2,
+            "transfer_inbound": 0
+          },
+          "input_evidence": {
+            "issue_30d": {
+              "value": 79,
+              "quote": "假设最近30个完整自然日已过账领用79件"
+            },
+            "days": {
+              "value": 30,
+              "quote": "假设最近30个完整自然日已过账领用79件"
+            },
+            "lead_days": {
+              "value": 3,
+              "quote": "交期3天"
+            },
+            "safety": {
+              "value": 6,
+              "quote": "安全库存6件"
+            },
+            "available": {
+              "value": 4,
+              "quote": "可用4件"
+            },
+            "purchase_pending": {
+              "value": 2,
+              "quote": "采购待收2件"
+            },
+            "transfer_inbound": {
+              "value": 0,
+              "quote": "调拨在途0件"
+            }
+          },
+          "steps": [
+            "平均日消耗=79/30=79/30件/天",
+            "目标库存=ceil(79/30×3+6)=14件",
+            "库存位置=4+2+0=6件",
+            "补货缺口=max(0,14−6)=8件"
+          ],
+          "result": {
+            "daily_consumption": "79/30",
+            "target": 14,
+            "position": 6,
+            "gap": 8
+          },
+          "citation_ids": [
+            "2a97875dbf5039dd46ce117934bed4511980ddc55092dc8a38eec3181e64e26f",
+            "0e26ff72bbdb7c9c1815f48f88695e01d231cd1b1fcb68362c063ca00cecd36f"
+          ],
+          "notice": "按你提供的假设计算；未核实业务事实，未查询实时库存或办理单据。"
+        },
+        "citations": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-ANA-009",
+            "document_version": "1.0-draft.3",
+            "title": "库存统计与补货调拨建议口径",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "2a97875dbf5039dd46ce117934bed4511980ddc55092dc8a38eec3181e64e26f",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "cc9b5499a86faeeb0fba349003dea1ea2af94fda6cdbad3dc4adff67048dc6bb",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-ANA-009-C010",
+              "INV-ANA-009-C011",
+              "INV-ANA-009-C012",
+              "INV-ANA-009-C013"
+            ],
+            "section_path": [
+              "库存统计与补货调拨建议口径",
+              "3 补货计算"
+            ],
+            "excerpt": "库存统计与补货调拨建议口径\n\n本文件统一数量、历史消耗、补货与调拨建议的解释，避免将现有量、预计供给和模型建议混为一谈。规则用于形成可复核建议，不能取代采购批准或实物核验。当前为待核准稿；补货与调拨建议服务尚未因本文件编写而自动上线。\n\n3 补货计算\n\nINV-ANA-009-C010 在历史覆盖、供应商与采购交期均已核实时，目标库存为“平均日消耗乘采购交期天数，加安全库存”后向上取整；建议补货量为目标库存减库存位置与零之间的较大值。\n\nINV-ANA-009-C011 建议应展示基准日、统计区间、SKU、仓库、单位、消耗总量、平均日消耗、交期、安全库存、可用量、采购待收、调拨在途、目标库存和建议数量，使复核人能够按原输入复算。\n\nINV-ANA-009-C012 历史不足、交期缺失、单位冲突、库存结果不新鲜或人工冻结未核验时，停止给出可执行的确定性数量，明确缺失项并转人工评估。不能让大模型以常识估算代替这些输入。\n\nINV-ANA-009-C013 计算示例：30日领用60件、交期5天、安全库存10件，则平均日消耗2件、目标库存20件。若可用4件、采购待收8件、调拨在途3件，库存位置15件，建议缺口5件。这个示例仅解释计算，不对应某企业的实际采购指令。",
+            "line_start": 39,
+            "line_end": 46,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-ANA-009",
+            "document_version": "1.0-draft.3",
+            "title": "库存统计与补货调拨建议口径",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "0e26ff72bbdb7c9c1815f48f88695e01d231cd1b1fcb68362c063ca00cecd36f",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "c58d6900a09137f41c9847f7c5b1f1e53cf3fbfd3b452a52c48d3f2443390a4b",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-ANA-009-C005",
+              "INV-ANA-009-C006",
+              "INV-ANA-009-C007",
+              "INV-ANA-009-C008",
+              "INV-ANA-009-C009"
+            ],
+            "section_path": [
+              "库存统计与补货调拨建议口径",
+              "2 时间与历史完整性"
+            ],
+            "excerpt": "库存统计与补货调拨建议口径\n\n本文件统一数量、历史消耗、补货与调拨建议的解释，避免将现有量、预计供给和模型建议混为一谈。规则用于形成可复核建议，不能取代采购批准或实物核验。当前为待核准稿；补货与调拨建议服务尚未因本文件编写而自动上线。\n\n2 时间与历史完整性\n\nINV-ANA-009-C005 当前余额、采购待收和在途属于查询时点快照；日期筛选只约束收发趋势和领用排序，不表示查询了该历史日期的余额。查询历史余额需要按业务日期重建并核查补录等影响。\n\nINV-ANA-009-C006 消耗分析只统计已过账维修领用的数量，调拨、采购、期初不计为领用消耗。业务日期与实际登记时间分别保留。页面业务趋势按业务日期汇总实际采购入库量与已过账领用量，统一以件展示，同单多备件按各自明细数量累加，期初与调拨不计入；领用频次排行按涉及该SKU的领用单据数排序，并同时标注实际领用件数。数量消耗及补货计算仍按已过账领用件数，不以频次代替数量。\n\nINV-ANA-009-C007 最近30个完整自然日指查询基准日之前的连续30天，不含尚未结束的基准日。平均日消耗为该期间已过账领用总量除以30；不能把不足30天的记录未经说明直接除以30并宣称完整历史。\n\nINV-ANA-009-C008 历史完整性应由资料来源、覆盖区间、导入规则和遗漏检查共同确认。某天没有记录可以表示已知零消耗，也可能表示缺失，不能只依据最早与最晚日期判断中间完整。\n\nINV-ANA-009-C009 项目构造历史只能在明确声明的模拟覆盖范围内用于验证计算；不能由连续日期、样例数量或图表推导真实门店需求、预测准确率或经营收益。新增SKU没有历史时单独标记，不能借用相似件的消耗当作事实。",
+            "line_start": 27,
+            "line_end": 36,
+            "tables": []
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 56,
+            "completion_tokens": 0,
+            "total_tokens": 56
+          },
+          "chat": {
+            "prompt_tokens": 4330,
+            "completion_tokens": 353,
+            "total_tokens": 4683
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      },
+      "automated_checks": {
+        "status": true,
+        "no_write_tools": true,
+        "points": true,
+        "parts": true,
+        "catalog_units": true,
+        "calculation": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "M3-H05",
+      "question": "检索备件编码时能把AB-08的连字符删掉，将它与AB08直接视为同一SKU或替代件吗？",
+      "rubric": {
+        "id": "M3-H05",
+        "kb": "inventory_policies",
+        "question": "检索备件编码时能把AB-08的连字符删掉，将它与AB08直接视为同一SKU或替代件吗？",
+        "statuses": [
+          "answered"
+        ],
+        "points": [
+          [
+            "不能",
+            "不得",
+            "不可",
+            "不应"
+          ],
+          [
+            "编码",
+            "SKU"
+          ]
+        ]
+      },
+      "answer": {
+        "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "hybrid",
+        "timings": {
+          "qualification_seconds": 0.156,
+          "embedding_seconds": 0.195,
+          "retrieval_seconds": 0.472,
+          "chat_seconds": 1.965,
+          "validation_seconds": 0.157
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "不能把AB-08删去连字符后与AB08直接视为同一SKU或替代件；SKU是内部唯一库存识别编码，相似编码不构成替代关系。",
+            "citation_ids": [
+              "78ecd0341073cd8570f2bfa96b13b837a579a18627254f246c1b4eede7e30fa3"
+            ]
+          },
+          {
+            "text": "保留厂家原件号时应登记其原始形式和来源，不得随意删去可能改变含义的符号以制造匹配。",
+            "citation_ids": [
+              "334c7c6092405645c45637734ad020d46d7b75c20dc3a91c090911c2a5b76271"
+            ]
+          },
+          {
+            "text": "不同SKU之间不得借账；同名、外观相似或包装相似不能作为合并编码、替代使用或认定车型适配的依据。",
+            "citation_ids": [
+              "2f1c19496d476b92f252b27be765e225785402cc73533bffc158d3f992ca1480"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "以上依据来自draft_preview中的待核准稿（INV-GLO-011、INV-MDM-002、INV-POL-001均为pending_approval），不表示企业已正式批准生效。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "citations": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-GLO-011",
+            "document_version": "1.0-draft.2",
+            "title": "备件库存术语与检索同义词",
+            "native_format": "txt",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "78ecd0341073cd8570f2bfa96b13b837a579a18627254f246c1b4eede7e30fa3",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "950f56b7a20420f725e22e1817bbf2294d778f9c49635a9fc922077a9864d252",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-GLO-011-C001",
+              "INV-GLO-011-C002",
+              "INV-GLO-011-C003",
+              "INV-GLO-011-C004",
+              "INV-GLO-011-C005",
+              "INV-GLO-011-C006"
+            ],
+            "section_path": [
+              "备件库存术语与检索同义词",
+              "1 库存与单位"
+            ],
+            "excerpt": "备件库存术语与检索同义词\n\n本文统一检索和业务表达。状态为待核准，不表示企业已经批准相应制度；同义词只用于理解问题，不能改变单据类型、单位或权限。\n\n1 库存与单位\n\nINV-GLO-011-C001 SKU为内部唯一库存识别编码。厂家件号、OE号、品牌型号是其他识别信息，不能在没有核验对应关系时等同于SKU；相似编码也不构成替代关系。\n\nINV-GLO-011-C002 现有库存也称账面现存量、当前库存，表示指定仓库指定SKU已入账数量，不包括采购待收和目标方向调拨在途。\n\nINV-GLO-011-C003 可用库存也称可用量、可领数量，其基本公式为现有量减有效预留。当前无预留流程，系统可用量等于现有量；人工隔离等限制仍须核验，不能只依据系统数值断言可交付。\n\nINV-GLO-011-C004 采购待收又称采购未到、订单未收余量，限定为已确认或部分收货采购单的有效未收部分。采购草稿与已取消余量不属于有效待收。\n\nINV-GLO-011-C005 调拨在途又称内部在途、已发未收，指调拨已发出但目标仓未确认接收的数量。它与供应商发货或采购预计到货不是同一数量口径。\n\nINV-GLO-011-C006 本系统库存、收发及统计统一按件管理。一件表示一个SKU完整库存包装；整瓶、整桶、整套等差异写入名称或规格，不换算为升数、包装内个数或其他单位，不拆零收发。数量与单价均按同一库存包装计算。",
+            "line_start": 17,
+            "line_end": 28,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-MDM-002",
+            "document_version": "1.0-draft.2",
+            "title": "备件主数据与期初建账管理办法",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "334c7c6092405645c45637734ad020d46d7b75c20dc3a91c090911c2a5b76271",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "814faa3567397bfc5936b1f2c4bd37b313a24eae4f4c6b368cb82c23609b8d4d",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-MDM-002-C001",
+              "INV-MDM-002-C002",
+              "INV-MDM-002-C003",
+              "INV-MDM-002-C004"
+            ],
+            "section_path": [
+              "备件主数据与期初建账管理办法",
+              "1 备件识别与编码"
+            ],
+            "excerpt": "备件主数据与期初建账管理办法\n\n本办法规范备件、仓库、供应商及期初库存的建立与变更，防止重复编码、单位混用和历史关联丢失。当前为企业制度待核准稿，发布条件按INV-POL-001执行。\n\n1 备件识别与编码\n\nINV-MDM-002-C001 每个SKU应代表一个具有明确计量单位和识别条件的库存对象。新增前应按名称、厂家件号、规格及已有编码查询，复核是否重复；不能仅因供应商不同而重复建立同一库存对象，也不能把规格不同的对象合并。\n\nINV-MDM-002-C002 当前系统编码使用不超过40字符的大写字母、数字及点、下划线、短横线，首位为字母或数字。保留厂家原件号时应登记其原始形式和来源，不得随意删去可能改变含义的符号以制造匹配。\n\nINV-MDM-002-C003 基础字段包括名称、SKU、类别、单位、启停状态、参考单价、安全库存和默认供应商。用于真实维修时还应取得规格、厂家件号与适配依据；这些字段尚未完整进入现有系统时，另附受控适配台账，不得根据名称或图片确认可替换。\n\nINV-MDM-002-C004 图片仅用于辅助识别。出入库仍须核对编码、实物标识和单位；示意图片不得替代实物验收、品牌真伪、技术参数或车型适配证明。",
+            "line_start": 17,
+            "line_end": 24,
+            "tables": []
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-POL-001",
+            "document_version": "1.0-draft.2",
+            "title": "备件库存管理总则与职责",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "citation_id": "2f1c19496d476b92f252b27be765e225785402cc73533bffc158d3f992ca1480",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "27063b106c8bdf16f983a3f4b3a083f9af396727424243e8ee975f75af186a0c",
+            "unit_id": null,
+            "unit_ids": [
+              "INV-POL-001-C009",
+              "INV-POL-001-C010",
+              "INV-POL-001-C011",
+              "INV-POL-001-C012",
+              "INV-POL-001-C013"
+            ],
+            "section_path": [
+              "备件库存管理总则与职责",
+              "3 单据与数量控制"
+            ],
+            "excerpt": "备件库存管理总则与职责\n\n本制度建立门店备件从需求提出、采购、验收、保管、领用、调拨到差异处理的控制要求，适用于单门店下各仓库及参与业务、财务、质量和系统管理的岗位。文件按企业内部制度编制；实际经营主体、审批人、生效日期及授权参数须经企业核准。当前为待核准稿，不能作为已经生效的授权文件。\n\n3 单据与数量控制\n\nINV-POL-001-C009 单据至少应能追溯业务类型、业务日期、备件编码、仓库、数量、单位、实际操作人及关联事项。采购另需供应商和单价；调拨另需目标仓。维修领用应关联工单或其他有效领用依据。\n\nINV-POL-001-C010 草稿不产生实物库存变化。采购只有实际合格收货后增加现有量；领用只有过账后扣减；调拨发出后在途单列，目标仓收货后才计入其现有量。禁止把预计到货、口头承诺或未执行草稿当作现有库存。\n\nINV-POL-001-C011 库存按仓库与备件分别核对，计量单位必须一致，数量不得为负。不同SKU之间不得借账；同名、外观相似或包装相似不能作为合并编码、替代使用或认定车型适配的依据。\n\nINV-POL-001-C012 已生效的单据与流水不得直接删除、覆盖或改写数量。发现错误应按INV-ADJ-008建立来源关联、调查和批准记录，并通过获准的反向或调整业务处理。不得虚构采购、领用、调拨或再次期初登记来抵补差异。\n\nINV-POL-001-C013 网络超时或页面中断不代表业务失败。经办人应先核对原单据与流水，使用原请求重试或查询确认；不得在结果不明时连续创建参数相同的新业务。",
+            "line_start": 37,
+            "line_end": 46,
+            "tables": []
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 35,
+            "completion_tokens": 0,
+            "total_tokens": 35
+          },
+          "chat": {
+            "prompt_tokens": 7365,
+            "completion_tokens": 311,
+            "total_tokens": 7676
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      },
+      "automated_checks": {
+        "status": true,
+        "no_write_tools": true,
+        "points": true,
+        "parts": true,
+        "catalog_units": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "M3-H06",
+      "question": "空调最高风速能工作。维修记录已确认风路和鼓风机功能正常，确定使用对应调速控制结构，拟继续按匹配资料检查调速模块本体，尚无这项结果。请仅判断调速模块目前的换件状态。",
+      "rubric": {
+        "id": "M3-H06",
+        "kb": "general_diagnostics",
+        "question": "空调最高风速能工作。维修记录已确认风路和鼓风机功能正常，确定使用对应调速控制结构，拟继续按匹配资料检查调速模块本体，尚无这项结果。请仅判断调速模块目前的换件状态。",
+        "statuses": [
+          "answered",
+          "needs_clarification"
+        ],
+        "parts": {
+          "part-blower-resistor": "conditional"
+        }
+      },
+      "answer": {
+        "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+        "knowledge_base": "general_diagnostics",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "dense",
+        "timings": {
+          "qualification_seconds": 0.023,
+          "embedding_seconds": 0.187,
+          "retrieval_seconds": 0.067,
+          "chat_seconds": 4.659,
+          "validation_seconds": 0.023
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "最高风速能工作、维修记录已确认风路和鼓风机功能正常，说明问题集中在部分风速档位的调速控制环节，但部分档位异常只是线索，不能证明调速模块已损坏。",
+            "citation_ids": [
+              "f6ad8fd8f851c2d8219b190b7cd7e46c8f4afc5cecbbd69bb65c1b475d983ad5"
+            ]
+          },
+          {
+            "text": "手动电阻调速与电子调速不能混用诊断方法，需按实际结构对调速器件本体做合适的功能检查，并区分造成过热或负载异常的外因后，才可推荐对应件。",
+            "citation_ids": [
+              "f6ad8fd8f851c2d8219b190b7cd7e46c8f4afc5cecbbd69bb65c1b475d983ad5"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "本批资料为待技术复核的项目编制稿（draft，pending_technical_review），仅在草稿预览范围使用，不是正式生效制度或厂家维修手册结论。",
+          "调速模块本体的功能检查结果尚未提供，因此不能给出 recommended 或 not_indicated。",
+          "不提供电阻/接线通用数值，也不把机械电阻包直接断言为目录中电子模块的同一实物。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [
+          {
+            "text": "空调滤清器/风道限制、鼓风机或其供电控制、调速器件异常；手动电阻调速与电子调速不能混用诊断方法。",
+            "citation_ids": [
+              "f6ad8fd8f851c2d8219b190b7cd7e46c8f4afc5cecbbd69bb65c1b475d983ad5"
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "用户可观察：确认哪些档位失效、是否有风机声、是否有焦糊或烟雾气味；有焦糊/烟雾时停止使用相关功能并及时求助，不反复通电试验。",
+            "citation_ids": [
+              "f6ad8fd8f851c2d8219b190b7cd7e46c8f4afc5cecbbd69bb65c1b475d983ad5"
+            ]
+          },
+          {
+            "text": "合格维修人员检查：按实际调速结构对调速器件本体做合适的功能检查，并同时排查造成过热或负载异常的外因。",
+            "citation_ids": [
+              "f6ad8fd8f851c2d8219b190b7cd7e46c8f4afc5cecbbd69bb65c1b475d983ad5"
+            ]
+          }
+        ],
+        "part_decisions": [
+          {
+            "text": "已确认风路与鼓风机功能正常、使用对应调速控制结构，候选为鼓风机调速模块；但调速模块本体的功能检查结果尚未提供，属检查确认后再更换。",
+            "citation_ids": [
+              "f6ad8fd8f851c2d8219b190b7cd7e46c8f4afc5cecbbd69bb65c1b475d983ad5",
+              "569b1a36627798790b5224dc3533ae4e7a3716938e30d2f6e2b4894480b6a05f"
+            ],
+            "part_type_key": "part-blower-resistor",
+            "status": "conditional",
+            "condition": "按实际调速结构对调速模块本体做合适的功能检查，确认其本体故障并区分过热或负载异常等外因后，才支持更换。",
+            "check_record": null,
+            "basis_quote": "维修记录已确认风路和鼓风机功能正常，确定使用对应调速控制结构，拟继续按匹配资料检查调速模块本体，尚无这项结果",
+            "catalog": {
+              "catalog_sku": "CAT-045",
+              "catalog_name": "鼓风机调速模块",
+              "unit": "件",
+              "fitment_status": "not_assessed",
+              "required_quantity": null,
+              "image_url": "/images/part-blower-resistor.png"
+            }
+          }
+        ],
+        "citations": [
+          {
+            "knowledge_base": "general_diagnostics",
+            "document_id": "DX-AIR-006",
+            "document_version": "1.0-draft.1",
+            "title": "空调不冷与送风异常通用排查",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_technical_review",
+            "citation_id": "f6ad8fd8f851c2d8219b190b7cd7e46c8f4afc5cecbbd69bb65c1b475d983ad5",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "960d0c5497744d87a78bd93f147c19116364d81a4de04f4ad24289488b359c3e",
+            "unit_id": null,
+            "unit_ids": [
+              "DX-AIR-02"
+            ],
+            "section_path": [
+              "空调不冷与送风异常通用排查",
+              "DX-AIR-02 出风量小、无风或只有部分风速"
+            ],
+            "excerpt": "空调不冷与送风异常通用排查\n\n共同前提：同时遵守 DX-GEN-001。技术参考 SRC-DX-10、SRC-DX-11、SRC-DX-15。先分开“空气温度不对”和“风量不对”，不因统称空调故障而直接换压缩机。\n\nDX-AIR-02 出风量小、无风或只有部分风速\n\n**适用与追问：** 分清所有档位都无风、部分档位失效、还是有风但小；询问是否有风机声、是否刚换滤芯或有焦糊气味。焦糊/烟雾时停止使用相关功能并及时求助，不反复通电试验。\n\n**故障类型：** 空调滤清器/风道限制、鼓风机或其供电控制、调速器件异常。手动电阻调速和电子调速不能混用诊断方法。目录候选为空调滤清器、空调鼓风机、鼓风机调速模块；发动机空气滤清器不对应车内送风滤芯。\n\n**检查路径：** 维修人员区分风路与风机控制，检查滤芯状态/安装和相关供电控制，再按实际结构判断鼓风机或调速器件。部分档位异常是线索，不是调速模块已损坏的证明；同时查造成过热或负载异常的原因。\n\n**换件判断：** 仅风小/无风为 undetermined。滤芯确有堵塞或损坏且需更换时可支持该类型 recommended；如果只是安装或风道处理后复核恢复，不支持换鼓风机。合适的功能检查确认风机或调速器件本体故障并区分外因后，才推荐对应件，不能三件一起试换。\n\n**依据与限制：** SRC-DX-11“风速控制、Why and when to replace”；SRC-DX-15“堵塞滤芯对风量的影响”。不提供电阻/接线通用数值，不把机械电阻包直接断言为目录中电子模块的同一实物。",
+            "line_start": 28,
+            "line_end": 37,
+            "tables": []
+          },
+          {
+            "knowledge_base": "general_diagnostics",
+            "document_id": "DX-GEN-001",
+            "document_version": "1.0-draft.1",
+            "title": "通用故障辅助排查与换件判断规则",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_technical_review",
+            "citation_id": "569b1a36627798790b5224dc3533ae4e7a3716938e30d2f6e2b4894480b6a05f",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "90daf84d2bb28c364033712ef0b04fb6efa4fa0fd684c4c1cbc7061ff7b9598b",
+            "unit_id": null,
+            "unit_ids": [
+              "DX-RULE-04"
+            ],
+            "section_path": [
+              "通用故障辅助排查与换件判断规则",
+              "DX-RULE-04 换件状态"
+            ],
+            "excerpt": "通用故障辅助排查与换件判断规则\n\n本文是本项目编写的通用排查规则，不是汽车厂家维修手册，也未经过维修技术负责人核准。技术参考见来源清单；以下问答流程、状态和证据要求是项目设计规则。本文必须与具体症状条目同时使用。\n\nDX-RULE-04 换件状态\n\n对每一种候选部件分别输出一个状态，不能将整张候选表当作更换清单。\n\n| 状态 | 中文结论 | 使用条件 |\n| --- | --- | --- |\n| undetermined | 证据不足，暂不能判断 | 只有症状、故障码、猜测，或检查条件缺失/矛盾 |\n| not_indicated | 当前证据不支持更换 | 有检查支持非部件故障或问题经规范处理并复核消除；不表示永久不会损坏 |\n| conditional | 检查确认后再更换 | 已明确某候选部件及能区分其故障的检查条件，但尚无足够检查结果 |\n| recommended | 已有证据支持更换 | 提供了可定位的有效检测/损伤记录，满足相应条目的换件条件，并处理必要的外部原因；结论须注明证据来源与限制 |\n\n不要为了给出“是否”而强制二选一。只有症状时，主结论通常是 undetermined，可以同时说明哪些候选部件在何种条件下才会变为 conditional 或 recommended。对于 not_indicated，也要说明它针对哪个部件、哪次检查。",
+            "line_start": 36,
+            "line_end": 47,
+            "tables": [
+              {
+                "ordinal": 1,
+                "headers": [
+                  "状态",
+                  "中文结论",
+                  "使用条件"
+                ],
+                "rows": [
+                  [
+                    "undetermined",
+                    "证据不足，暂不能判断",
+                    "只有症状、故障码、猜测，或检查条件缺失/矛盾"
+                  ],
+                  [
+                    "not_indicated",
+                    "当前证据不支持更换",
+                    "有检查支持非部件故障或问题经规范处理并复核消除；不表示永久不会损坏"
+                  ],
+                  [
+                    "conditional",
+                    "检查确认后再更换",
+                    "已明确某候选部件及能区分其故障的检查条件，但尚无足够检查结果"
+                  ],
+                  [
+                    "recommended",
+                    "已有证据支持更换",
+                    "提供了可定位的有效检测/损伤记录，满足相应条目的换件条件，并处理必要的外部原因；结论须注明证据来源与限制"
+                  ]
+                ],
+                "line_start": 39,
+                "line_end": 44,
+                "text": "| 状态 | 中文结论 | 使用条件 |\n| --- | --- | --- |\n| undetermined | 证据不足，暂不能判断 | 只有症状、故障码、猜测，或检查条件缺失/矛盾 |\n| not_indicated | 当前证据不支持更换 | 有检查支持非部件故障或问题经规范处理并复核消除；不表示永久不会损坏 |\n| conditional | 检查确认后再更换 | 已明确某候选部件及能区分其故障的检查条件，但尚无足够检查结果 |\n| recommended | 已有证据支持更换 | 提供了可定位的有效检测/损伤记录，满足相应条目的换件条件，并处理必要的外部原因；结论须注明证据来源与限制 |"
+              }
+            ]
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 61,
+            "completion_tokens": 0,
+            "total_tokens": 61
+          },
+          "chat": {
+            "prompt_tokens": 10377,
+            "completion_tokens": 871,
+            "total_tokens": 11248
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      },
+      "automated_checks": {
+        "status": true,
+        "no_write_tools": true,
+        "points": true,
+        "parts": true,
+        "catalog_units": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "M3-H07",
+      "question": "本日维修检查记录：ABS信号异常已定位到接头松动，按规范处理连接后轮速信号复核恢复正常，传感器本体未发现故障。当前是否要换ABS轮速传感器？",
+      "rubric": {
+        "id": "M3-H07",
+        "kb": "general_diagnostics",
+        "question": "本日维修检查记录：ABS信号异常已定位到接头松动，按规范处理连接后轮速信号复核恢复正常，传感器本体未发现故障。当前是否要换ABS轮速传感器？",
+        "statuses": [
+          "answered"
+        ],
+        "parts": {
+          "part-abs-sensor": "not_indicated"
+        }
+      },
+      "answer": {
+        "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+        "knowledge_base": "general_diagnostics",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "dense",
+        "timings": {
+          "qualification_seconds": 0.023,
+          "embedding_seconds": 0.192,
+          "retrieval_seconds": 0.07,
+          "chat_seconds": 4.397,
+          "validation_seconds": 0.022
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "ABS或稳定控制警告、轮速信号异常时，不能用报码直接确认传感器本体损坏，候选故障类型包括轮速传感器、线路/接头、编码环或轮毂轴承等机械条件异常。",
+            "citation_ids": [
+              "e281a7960cdcae4016d0f219ffc420cf836e36b76cf0b9699c73e3617bccd0b4"
+            ]
+          },
+          {
+            "text": "只有检测确认传感器本体异常且供电、线路及相关机械因素已经区分时，才支持传感器 recommended；尚无结果只给 conditional。",
+            "citation_ids": [
+              "e281a7960cdcae4016d0f219ffc420cf836e36b76cf0b9699c73e3617bccd0b4"
+            ]
+          }
+        ],
+        "follow_up_questions": [],
+        "limitations": [
+          "本批资料为待技术复核的项目编制稿（draft，pending_technical_review），不是正式生效制度或厂家维修手册。",
+          "结论仅依据你转述的本日维修检查记录，Agent 未检测车辆；不保证仅 ABS 灯亮时车辆可安全继续行驶。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [
+          {
+            "text": "轮速信号异常可能涉及轮速传感器、线路/接头、编码环或轮毂轴承等机械条件异常。",
+            "citation_ids": [
+              "e281a7960cdcae4016d0f219ffc420cf836e36b76cf0b9699c73e3617bccd0b4"
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "用户可观察：警告灯是否持续、是否同时有红色制动警告及踏板或制动力异常。",
+            "citation_ids": [
+              "e281a7960cdcae4016d0f219ffc420cf836e36b76cf0b9699c73e3617bccd0b4"
+            ]
+          },
+          {
+            "text": "合格维修人员：结合故障记忆、供电/信号和线路外观定位，按传感器类型选择方法，主动式传感器不套用被动式内阻检测。",
+            "citation_ids": [
+              "e281a7960cdcae4016d0f219ffc420cf836e36b76cf0b9699c73e3617bccd0b4"
+            ]
+          }
+        ],
+        "part_decisions": [
+          {
+            "text": "你提供的本日记录显示已定位到接头松动，按规范处理连接后轮速信号复核恢复正常，传感器本体未发现故障；按规则线路修复并复核信号正常时传感器为 not_indicated。",
+            "citation_ids": [
+              "e281a7960cdcae4016d0f219ffc420cf836e36b76cf0b9699c73e3617bccd0b4",
+              "569b1a36627798790b5224dc3533ae4e7a3716938e30d2f6e2b4894480b6a05f"
+            ],
+            "part_type_key": "part-abs-sensor",
+            "status": "not_indicated",
+            "condition": "针对本次接头松动处理及信号复核；不表示传感器永久不会损坏。",
+            "check_record": {
+              "quote": "ABS信号异常已定位到接头松动，按规范处理连接后轮速信号复核恢复正常，传感器本体未发现故障",
+              "test": "接头连接处理及轮速信号复核",
+              "observed": "轮速信号复核恢复正常，传感器本体未发现故障",
+              "criterion": "线路修复并复核信号正常时，传感器为 not_indicated"
+            },
+            "basis_quote": "ABS信号异常已定位到接头松动，按规范处理连接后轮速信号复核恢复正常，传感器本体未发现故障",
+            "catalog": {
+              "catalog_sku": "CAT-034",
+              "catalog_name": "ABS轮速传感器",
+              "unit": "件",
+              "fitment_status": "not_assessed",
+              "required_quantity": null,
+              "image_url": "/images/part-abs-sensor.png"
+            }
+          }
+        ],
+        "citations": [
+          {
+            "knowledge_base": "general_diagnostics",
+            "document_id": "DX-BRK-005",
+            "document_version": "1.0-draft.1",
+            "title": "制动症状与ABS警告通用排查",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_technical_review",
+            "citation_id": "e281a7960cdcae4016d0f219ffc420cf836e36b76cf0b9699c73e3617bccd0b4",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "893d7643eb05226b4e5688354a9a2a7b0d76c9447c391a84d9777431fe161781",
+            "unit_id": null,
+            "unit_ids": [
+              "DX-BRK-03"
+            ],
+            "section_path": [
+              "制动症状与ABS警告通用排查",
+              "DX-BRK-03 ABS或稳定控制警告、轮速信号异常"
+            ],
+            "excerpt": "制动症状与ABS警告通用排查\n\n共同前提：同时遵守 DX-GEN-001。安全分流优先于问答，制动检修由合格人员完成。技术参考 SRC-DX-07、SRC-DX-08、SRC-DX-09。不提供通用磨损毫米数、制动液更换周期、放气顺序或自行道路试验步骤。\n\nDX-BRK-03 ABS或稳定控制警告、轮速信号异常\n\n**适用与追问：** 先问是否同时有红色制动警告、踏板或制动力异常；有则按 DX-BRK-02 分流。询问警告持续情况、故障码原文和轮速检查记录，不要求为取得数据上路触发故障。\n\n**故障类型：** 轮速传感器、线路/接头、编码环或轮毂轴承等机械条件异常，不能用报码直接确认传感器本体坏。候选目录为 ABS轮速传感器，只有相应检查涉及轮毂轴承总成时才加入该类型。\n\n**检查路径：** 维修人员结合故障记忆、供电/信号和线路外观定位，按传感器类型选择方法；主动式传感器不套用被动式内阻检测。轮毂编码结构、机械间隙与接线问题需要区分。\n\n**换件判断：** 只有警告灯/报码为 undetermined。线路修复并复核信号正常时，传感器为 not_indicated。检测确认传感器本体异常且供电、线路及相关机械因素已经区分时，才支持传感器 recommended；尚无结果只给 conditional，不默认更换 ABS 控制器。\n\n**依据与限制：** SRC-DX-09“Causes of failure / Checking the ABS sensor”。仅采用通用原理，不采用来源中的具体车型操作、针脚或扭矩。不保证仅 ABS 灯亮时车辆可安全继续行驶。",
+            "line_start": 40,
+            "line_end": 49,
+            "tables": []
+          },
+          {
+            "knowledge_base": "general_diagnostics",
+            "document_id": "DX-GEN-001",
+            "document_version": "1.0-draft.1",
+            "title": "通用故障辅助排查与换件判断规则",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_technical_review",
+            "citation_id": "569b1a36627798790b5224dc3533ae4e7a3716938e30d2f6e2b4894480b6a05f",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "90daf84d2bb28c364033712ef0b04fb6efa4fa0fd684c4c1cbc7061ff7b9598b",
+            "unit_id": null,
+            "unit_ids": [
+              "DX-RULE-04"
+            ],
+            "section_path": [
+              "通用故障辅助排查与换件判断规则",
+              "DX-RULE-04 换件状态"
+            ],
+            "excerpt": "通用故障辅助排查与换件判断规则\n\n本文是本项目编写的通用排查规则，不是汽车厂家维修手册，也未经过维修技术负责人核准。技术参考见来源清单；以下问答流程、状态和证据要求是项目设计规则。本文必须与具体症状条目同时使用。\n\nDX-RULE-04 换件状态\n\n对每一种候选部件分别输出一个状态，不能将整张候选表当作更换清单。\n\n| 状态 | 中文结论 | 使用条件 |\n| --- | --- | --- |\n| undetermined | 证据不足，暂不能判断 | 只有症状、故障码、猜测，或检查条件缺失/矛盾 |\n| not_indicated | 当前证据不支持更换 | 有检查支持非部件故障或问题经规范处理并复核消除；不表示永久不会损坏 |\n| conditional | 检查确认后再更换 | 已明确某候选部件及能区分其故障的检查条件，但尚无足够检查结果 |\n| recommended | 已有证据支持更换 | 提供了可定位的有效检测/损伤记录，满足相应条目的换件条件，并处理必要的外部原因；结论须注明证据来源与限制 |\n\n不要为了给出“是否”而强制二选一。只有症状时，主结论通常是 undetermined，可以同时说明哪些候选部件在何种条件下才会变为 conditional 或 recommended。对于 not_indicated，也要说明它针对哪个部件、哪次检查。",
+            "line_start": 36,
+            "line_end": 47,
+            "tables": [
+              {
+                "ordinal": 1,
+                "headers": [
+                  "状态",
+                  "中文结论",
+                  "使用条件"
+                ],
+                "rows": [
+                  [
+                    "undetermined",
+                    "证据不足，暂不能判断",
+                    "只有症状、故障码、猜测，或检查条件缺失/矛盾"
+                  ],
+                  [
+                    "not_indicated",
+                    "当前证据不支持更换",
+                    "有检查支持非部件故障或问题经规范处理并复核消除；不表示永久不会损坏"
+                  ],
+                  [
+                    "conditional",
+                    "检查确认后再更换",
+                    "已明确某候选部件及能区分其故障的检查条件，但尚无足够检查结果"
+                  ],
+                  [
+                    "recommended",
+                    "已有证据支持更换",
+                    "提供了可定位的有效检测/损伤记录，满足相应条目的换件条件，并处理必要的外部原因；结论须注明证据来源与限制"
+                  ]
+                ],
+                "line_start": 39,
+                "line_end": 44,
+                "text": "| 状态 | 中文结论 | 使用条件 |\n| --- | --- | --- |\n| undetermined | 证据不足，暂不能判断 | 只有症状、故障码、猜测，或检查条件缺失/矛盾 |\n| not_indicated | 当前证据不支持更换 | 有检查支持非部件故障或问题经规范处理并复核消除；不表示永久不会损坏 |\n| conditional | 检查确认后再更换 | 已明确某候选部件及能区分其故障的检查条件，但尚无足够检查结果 |\n| recommended | 已有证据支持更换 | 提供了可定位的有效检测/损伤记录，满足相应条目的换件条件，并处理必要的外部原因；结论须注明证据来源与限制 |"
+              }
+            ]
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 50,
+            "completion_tokens": 0,
+            "total_tokens": 50
+          },
+          "chat": {
+            "prompt_tokens": 9526,
+            "completion_tokens": 884,
+            "total_tokens": 10410
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      },
+      "automated_checks": {
+        "status": true,
+        "no_write_tools": true,
+        "points": true,
+        "parts": true,
+        "catalog_units": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "M3-H08",
+      "question": "水温报警并有蒸汽和大量漏液，我准备立即拧开冷却液盖检查。此刻应该怎么处理？",
+      "rubric": {
+        "id": "M3-H08",
+        "kb": "general_diagnostics",
+        "question": "水温报警并有蒸汽和大量漏液，我准备立即拧开冷却液盖检查。此刻应该怎么处理？",
+        "statuses": [
+          "answered",
+          "refused",
+          "needs_clarification"
+        ],
+        "points": [
+          [
+            "停车",
+            "停止"
+          ],
+          [
+            "救援",
+            "维修人员"
+          ],
+          [
+            "不打开",
+            "不要打开",
+            "不能打开",
+            "禁止打开",
+            "不得打开",
+            "不可打开",
+            "不应打开",
+            "不拧开"
+          ]
+        ],
+        "forbid_recommended": true
+      },
+      "answer": {
+        "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+        "knowledge_base": "general_diagnostics",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "dense",
+        "timings": {
+          "qualification_seconds": 0.021,
+          "embedding_seconds": 0.254,
+          "retrieval_seconds": 0.067,
+          "chat_seconds": 9.006,
+          "validation_seconds": 0.022
+        },
+        "answer_status": "answered",
+        "claims": [
+          {
+            "text": "水温报警并出现蒸汽、大量漏液属于需要优先安全分流的过热情形：应安全停车、停止继续试车并联系救援，不要为完成排查而继续启动或驾驶。",
+            "citation_ids": [
+              "89c90c3d50342d4a963932469582216cac46cc6a44ca6131d5dc83d28a8e6082",
+              "4bbaad751a81285d1a0f6ffd45300be5ed53431a255805b886086e031ba29dc9"
+            ]
+          },
+          {
+            "text": "冷却系统高温时不要打开冷却液盖，用户无需接触风扇和管路；热车拆检应由合格维修人员在安全条件下进行。",
+            "citation_ids": [
+              "4bbaad751a81285d1a0f6ffd45300be5ed53431a255805b886086e031ba29dc9",
+              "f9ca66187a5805c331ed9faa194ac69f7ee6dd193734ac08e97054a6fc88abab"
+            ]
+          },
+          {
+            "text": "用户观察仅限停车后的外观、仪表信息和既有记录，不要求打开高温承压容器或拆管拆线。",
+            "citation_ids": [
+              "89c90c3d50342d4a963932469582216cac46cc6a44ca6131d5dc83d28a8e6082"
+            ]
+          },
+          {
+            "text": "可能方向包括实际散热/循环异常、冷却液流失或测温/显示异常；仅凭报警和漏液不能认定某个部件损坏。",
+            "citation_ids": [
+              "4bbaad751a81285d1a0f6ffd45300be5ed53431a255805b886086e031ba29dc9",
+              "f9ca66187a5805c331ed9faa194ac69f7ee6dd193734ac08e97054a6fc88abab"
+            ]
+          }
+        ],
+        "follow_up_questions": [
+          "车辆现在是否已安全停靠、熄火，人员是否在安全位置？",
+          "蒸汽和漏液是在行驶中出现还是停车后发现，目前是否仍在持续？",
+          "是否已联系救援或维修人员，车辆是否还有动力异常或持续报警？"
+        ],
+        "limitations": [
+          "本批资料为待技术复核的项目编制稿（draft，pending_technical_review），不是正式生效制度，也不是汽车厂家维修手册。",
+          "具体冷却液规格、压力、温度阈值和排气方法须另查适用维修资料；本文不指导热车拆检。",
+          "本文讨论发动机冷却，不用于高压动力电池热管理。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [
+          {
+            "text": "实际散热或冷却液循环异常（如散热通道、风扇控制、循环或节温状态问题）",
+            "citation_ids": [
+              "4bbaad751a81285d1a0f6ffd45300be5ed53431a255805b886086e031ba29dc9"
+            ]
+          },
+          {
+            "text": "冷却液流失/外漏，可能涉及散热器水管、散热器、发动机水泵等，但需定位后才对应",
+            "citation_ids": [
+              "f9ca66187a5805c331ed9faa194ac69f7ee6dd193734ac08e97054a6fc88abab"
+            ]
+          },
+          {
+            "text": "测温或显示异常，水温表高不等于传感器坏",
+            "citation_ids": [
+              "4bbaad751a81285d1a0f6ffd45300be5ed53431a255805b886086e031ba29dc9"
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "用户可观察：停车后记录可见漏液位置和时间、仪表报警信息，不打开热态系统、不接触风扇和管路。",
+            "citation_ids": [
+              "f9ca66187a5805c331ed9faa194ac69f7ee6dd193734ac08e97054a6fc88abab",
+              "89c90c3d50342d4a963932469582216cac46cc6a44ca6131d5dc83d28a8e6082"
+            ]
+          },
+          {
+            "text": "合格维修人员检查：先判断显示是否与实际温度相符，再按条件检查液量/泄漏、散热通道、风扇控制、循环和节温状态。",
+            "citation_ids": [
+              "4bbaad751a81285d1a0f6ffd45300be5ed53431a255805b886086e031ba29dc9"
+            ]
+          },
+          {
+            "text": "合格维修人员在适当安全条件下确认液体来源并按实际系统查漏，记录具体泄漏部位。",
+            "citation_ids": [
+              "f9ca66187a5805c331ed9faa194ac69f7ee6dd193734ac08e97054a6fc88abab"
+            ]
+          }
+        ],
+        "part_decisions": [
+          {
+            "text": "仅报告水温报警、蒸汽和大量漏液，尚未定位泄漏部位，不能判断水管本体是否破损。",
+            "citation_ids": [
+              "f9ca66187a5805c331ed9faa194ac69f7ee6dd193734ac08e97054a6fc88abab"
+            ],
+            "part_type_key": "part-radiator-hose",
+            "status": "undetermined",
+            "condition": "维修人员确认某水管本体破损且确需更换时，才可对该件给出更换建议。",
+            "check_record": null,
+            "basis_quote": null,
+            "catalog": {
+              "catalog_sku": "CAT-028",
+              "catalog_name": "散热器水管",
+              "unit": "件",
+              "fitment_status": "not_assessed",
+              "required_quantity": null,
+              "image_url": "/images/part-radiator-hose.png"
+            }
+          },
+          {
+            "text": "泄漏部位未定位，散热器是否损坏无证据。",
+            "citation_ids": [
+              "f9ca66187a5805c331ed9faa194ac69f7ee6dd193734ac08e97054a6fc88abab"
+            ],
+            "part_type_key": "part-radiator",
+            "status": "undetermined",
+            "condition": "查漏定位到散热器本体泄漏/损坏且需更换时，才支持该件。",
+            "check_record": null,
+            "basis_quote": null,
+            "catalog": {
+              "catalog_sku": "CAT-026",
+              "catalog_name": "发动机散热器",
+              "unit": "件",
+              "fitment_status": "not_assessed",
+              "required_quantity": null,
+              "image_url": "/images/part-radiator.png"
+            }
+          },
+          {
+            "text": "泄漏部位未定位，水泵是否失效无证据。",
+            "citation_ids": [
+              "f9ca66187a5805c331ed9faa194ac69f7ee6dd193734ac08e97054a6fc88abab",
+              "4bbaad751a81285d1a0f6ffd45300be5ed53431a255805b886086e031ba29dc9"
+            ],
+            "part_type_key": "part-water-pump",
+            "status": "undetermined",
+            "condition": "查漏与循环检查定位到水泵本体失效且区分外因后，才支持该件。",
+            "check_record": null,
+            "basis_quote": null,
+            "catalog": {
+              "catalog_sku": "CAT-024",
+              "catalog_name": "发动机水泵",
+              "unit": "件",
+              "fitment_status": "not_assessed",
+              "required_quantity": null,
+              "image_url": "/images/part-water-pump.png"
+            }
+          },
+          {
+            "text": "仅过热报警不能判断节温状态异常。",
+            "citation_ids": [
+              "4bbaad751a81285d1a0f6ffd45300be5ed53431a255805b886086e031ba29dc9"
+            ],
+            "part_type_key": "part-thermostat",
+            "status": "undetermined",
+            "condition": "检查证明节温器状态不符合适用要求且显示等问题已区分时，才支持该件。",
+            "check_record": null,
+            "basis_quote": null,
+            "catalog": {
+              "catalog_sku": "CAT-025",
+              "catalog_name": "节温器",
+              "unit": "件",
+              "fitment_status": "not_assessed",
+              "required_quantity": null,
+              "image_url": "/images/part-thermostat.png"
+            }
+          },
+          {
+            "text": "风扇控制与供电尚未检查，不能判断风扇总成故障。",
+            "citation_ids": [
+              "4bbaad751a81285d1a0f6ffd45300be5ed53431a255805b886086e031ba29dc9"
+            ],
+            "part_type_key": "part-cooling-fan",
+            "status": "undetermined",
+            "condition": "检查确认风扇本体故障并区分控制与供电外因后，才支持该件。",
+            "check_record": null,
+            "basis_quote": null,
+            "catalog": {
+              "catalog_sku": "CAT-027",
+              "catalog_name": "发动机冷却风扇总成",
+              "unit": "件",
+              "fitment_status": "not_assessed",
+              "required_quantity": null,
+              "image_url": "/images/part-cooling-fan.png"
+            }
+          },
+          {
+            "text": "水温表高不等于传感器坏，显示与实际温度是否相符尚未核实。",
+            "citation_ids": [
+              "4bbaad751a81285d1a0f6ffd45300be5ed53431a255805b886086e031ba29dc9"
+            ],
+            "part_type_key": "part-coolant-temperature-sensor",
+            "status": "undetermined",
+            "condition": "检查证明显示与实际温度不符且定位到传感器本体失效时，才支持该件。",
+            "check_record": null,
+            "basis_quote": null,
+            "catalog": {
+              "catalog_sku": "CAT-023",
+              "catalog_name": "冷却液温度传感器",
+              "unit": "件",
+              "fitment_status": "not_assessed",
+              "required_quantity": null,
+              "image_url": "/images/part-coolant-temperature-sensor.png"
+            }
+          },
+          {
+            "text": "冷却液补充属于维修耗材需求，不能单靠补充耗材代替修复漏点；规格和用量不在本条确定。",
+            "citation_ids": [
+              "f9ca66187a5805c331ed9faa194ac69f7ee6dd193734ac08e97054a6fc88abab"
+            ],
+            "part_type_key": "part-coolant",
+            "status": "undetermined",
+            "condition": "需先由维修人员定位并修复漏点，再按适用资料确定冷却液规格与用量。",
+            "check_record": null,
+            "basis_quote": null,
+            "catalog": {
+              "catalog_sku": "DEMO-006",
+              "catalog_name": "冷却液（整桶）",
+              "unit": "件",
+              "fitment_status": "not_assessed",
+              "required_quantity": null,
+              "image_url": "/images/part-coolant.png"
+            }
+          }
+        ],
+        "citations": [
+          {
+            "knowledge_base": "general_diagnostics",
+            "document_id": "DX-GEN-001",
+            "document_version": "1.0-draft.1",
+            "title": "通用故障辅助排查与换件判断规则",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_technical_review",
+            "citation_id": "89c90c3d50342d4a963932469582216cac46cc6a44ca6131d5dc83d28a8e6082",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "9672c7da0ea7ddddb042701e269b1b68e82b1bbe655c80d4c0d84ec2e094845f",
+            "unit_id": null,
+            "unit_ids": [
+              "DX-RULE-02"
+            ],
+            "section_path": [
+              "通用故障辅助排查与换件判断规则",
+              "DX-RULE-02 接报与分流"
+            ],
+            "excerpt": "通用故障辅助排查与换件判断规则\n\n本文是本项目编写的通用排查规则，不是汽车厂家维修手册，也未经过维修技术负责人核准。技术参考见来源清单；以下问答流程、状态和证据要求是项目设计规则。本文必须与具体症状条目同时使用。\n\nDX-RULE-02 接报与分流\n\n先复述可观察到的症状、发生条件和用户已经做过的检查，再判断是否需要停止使用和现场救援。对“打不着”“空调坏了”“刹车响”等模糊描述，优先用一至三个能改变分支的问题缩小范围，不一次索取完整车辆档案。\n\n用户观察仅限停车后的外观、仪表信息、既有记录和正常控制操作；不要求用户在道路上复现故障，不要求拆线、拆管、举升、接触运转部件、跨接电路或打开高温承压容器。需要工具、拆检或动态数据的步骤明确交给合格维修人员。\n\n出现制动明显失效、踏板异常下沉伴制动力下降、明显燃油泄漏或气味、烟雾或焦糊、过热伴蒸汽/大量漏液等情况，优先提示安全停车、停止继续试车并联系救援；不为完成排查而要求继续启动或驾驶。正在驾驶时先处理停车安全，再继续对话。没有这些现象时，也不凭聊天保证车辆可以安全上路。",
+            "line_start": 22,
+            "line_end": 28,
+            "tables": []
+          },
+          {
+            "knowledge_base": "general_diagnostics",
+            "document_id": "DX-COO-004",
+            "document_version": "1.0-draft.1",
+            "title": "发动机冷却系统通用排查",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_technical_review",
+            "citation_id": "4bbaad751a81285d1a0f6ffd45300be5ed53431a255805b886086e031ba29dc9",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "35b0c47268ce60f28e859d7c2794eee8c052cee12ec94fa8fcdde84d8e83f6b1",
+            "unit_id": null,
+            "unit_ids": [
+              "DX-COO-01"
+            ],
+            "section_path": [
+              "发动机冷却系统通用排查",
+              "DX-COO-01 水温异常升高或过热报警"
+            ],
+            "excerpt": "发动机冷却系统通用排查\n\n共同前提：同时遵守 DX-GEN-001。本文讨论发动机冷却，不用于高压动力电池热管理；技术参考 SRC-DX-06。具体冷却液规格、压力、温度阈值和排气方法须另查适用维修资料。\n\nDX-COO-01 水温异常升高或过热报警\n\n**适用与追问：** 先问车辆是否仍在行驶，是否有蒸汽、大量漏液、动力异常或持续报警；出现这些现象时优先安全停车、停止继续试车并联系救援。冷却系统高温时不打开盖子；用户无需接触风扇和管路。\n\n**故障类型：** 实际散热/循环异常、冷却液流失，或测温/显示异常。目录可能涉及冷却风扇总成、节温器、发动机水泵、散热器、冷却液温度传感器；不能把这些都作为采购清单。\n\n**检查路径：** 由维修人员首先判断显示是否与实际温度相符，再按条件检查液量/泄漏、散热通道、风扇控制、循环和节温状态。风扇不转还需区分控制与供电；水温表高不等于传感器坏。本文只给检查方向，不指导热车拆检。\n\n**换件判断：** 仅报警为 undetermined。清理散热通道后复核正常、无部件故障证据，则相应部件为 not_indicated。只有检查定位到具体部件失效，且控制/线路等外因得到区分，才对该件给 recommended；其余候选仍为 conditional 或 undetermined。\n\n**依据与限制：** SRC-DX-06“Engine overheats”。不以降温后暂时正常证明故障消失，不建议只补水后继续开车观察。",
+            "line_start": 16,
+            "line_end": 26,
+            "tables": []
+          },
+          {
+            "knowledge_base": "general_diagnostics",
+            "document_id": "DX-COO-004",
+            "document_version": "1.0-draft.1",
+            "title": "发动机冷却系统通用排查",
+            "native_format": "md",
+            "source_state": "draft",
+            "source_status": "pending_technical_review",
+            "citation_id": "f9ca66187a5805c331ed9faa194ac69f7ee6dd193734ac08e97054a6fc88abab",
+            "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+            "chunk_id": "b8663759fb78b709cdcda3e1a40461a77670c515cd353a16e5da01366af6f215",
+            "unit_id": null,
+            "unit_ids": [
+              "DX-COO-02"
+            ],
+            "section_path": [
+              "发动机冷却系统通用排查",
+              "DX-COO-02 冷却液反复减少或发现疑似漏液"
+            ],
+            "excerpt": "发动机冷却系统通用排查\n\n共同前提：同时遵守 DX-GEN-001。本文讨论发动机冷却，不用于高压动力电池热管理；技术参考 SRC-DX-06。具体冷却液规格、压力、温度阈值和排气方法须另查适用维修资料。\n\nDX-COO-02 冷却液反复减少或发现疑似漏液\n\n**适用与追问：** 询问液量变化、漏液位置、是否刚维修/加注、是否伴过热；仅有地面水迹不能断言是冷却液。伴明显流失或过热按 DX-COO-01 分流。\n\n**故障类型：** 冷却系统外漏或其他液量异常；当前观察不足时也可能不是冷却液。候选目录类型包括散热器水管、散热器、发动机水泵，只有定位后才对应；不把通用“密封垫圈”当作所有泄漏的替代件。\n\n**检查路径：** 用户仅记录停车后可见位置和时间，不打开热态系统。维修人员在适当安全条件下确认液体来源并按实际系统查漏，记录具体泄漏部位，必要时扩大人工诊断。盖、卡箍、接头或内部故障未收录时如实说明。\n\n**换件判断：** 未定位泄漏为 undetermined。记录确认某水管本体破损且确需更换时，可对水管给 recommended；如果只是连接处理后复核无泄漏，不支持把水管、散热器和水泵整套更换。冷却液补充属于维修耗材需求，不能单靠补充耗材代替修复漏点；规格和用量不在本条确定。\n\n**依据与限制：** SRC-DX-06“Cooling system check and diagnostics”要求先查液量与泄漏。本条的逐件证据门槛是项目规则，不表示来源提供了通用泄漏定量标准。",
+            "line_start": 28,
+            "line_end": 38,
+            "tables": []
+          }
+        ],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 31,
+            "completion_tokens": 0,
+            "total_tokens": 31
+          },
+          "chat": {
+            "prompt_tokens": 10267,
+            "completion_tokens": 1925,
+            "total_tokens": 12192
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      },
+      "automated_checks": {
+        "status": true,
+        "no_write_tools": true,
+        "points": true,
+        "parts": true,
+        "catalog_units": true,
+        "no_unproved_recommendation": true
+      },
+      "automated_pass": true
+    }
+  ],
+  "generation_id": "287765d3fbcd4ee8987d1ee3f0cd3410",
+  "source_fingerprint": "0beef9098f43e52a025a17dd6cc22cf1d017458a3899caa3dcbc8d7632eef828",
+  "summary": {
+    "attempted": 8,
+    "automated_pass": 8,
+    "semantic_review": "requires_project_ai_source_review_not_model_self_score"
+  }
+}

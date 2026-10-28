@@ -1,0 +1,32 @@
+{
+  "generation_id": "e1361063d66e44b4aafc2dc87ba307c2",
+  "question": "按草案，整桶机油在系统中按什么单位管理，能否登记领用0.5件？",
+  "status": "retrieved",
+  "hits": [
+    {
+      "unit_id": "INV-MDM-002-C005",
+      "document_id": "INV-MDM-002",
+      "document_version": "1.0-draft.2"
+    },
+    {
+      "unit_id": "INV-ISS-005-C003",
+      "document_id": "INV-ISS-005",
+      "document_version": "1.0-draft.1"
+    },
+    {
+      "unit_id": "INV-MDM-002-C006",
+      "document_id": "INV-MDM-002",
+      "document_version": "1.0-draft.2"
+    },
+    {
+      "unit_id": "INV-ISS-005-C001",
+      "document_id": "INV-ISS-005",
+      "document_version": "1.0-draft.1"
+    },
+    {
+      "unit_id": "INV-MDM-002-C002",
+      "document_id": "INV-MDM-002",
+      "document_version": "1.0-draft.2"
+    }
+  ]
+}

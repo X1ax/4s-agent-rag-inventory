@@ -1,0 +1,123 @@
+{
+  "created_at": "2026-10-27T06:04:00.759143+00:00",
+  "reviewer": "project AI source review, not independent evaluation or expert certification",
+  "retrieval_version": "hybrid-tfidf-rrf-context-v2",
+  "code_sha256": {
+    "backend/app/retrieval.py": "32cf84570cc953e1a14faf8982b08dd114816d3eb2358e51019ca3814875829e",
+    "evals/verify_inventory_recall.py": "b139a0e2c18b6193dde4480c4dd7660fb137ad30cd40397781db04e2c0cd571c",
+    "tests/test_hybrid_retrieval.py": "2cebf89f2c40cb0baf318b8407c8d4db63c8ebdd0f5fb5293887e89a4225979a"
+  },
+  "reports": [
+    "inventory-recall-20261027T055244Z.json",
+    "m3-quality-retest-20261027T055450Z.json",
+    "inventory-recall-live-20261027.json"
+  ],
+  "input_sha256": {
+    "evals/inventory/development.json": "cabe27c7ab61dce85fac6e81150c8a4f64f6309dfd076b6da061f4929e222530",
+    "evals/inventory/acceptance.json": "c231fef58082abd6754cf073afddd65a0e6c8f85e5e87ea83dd4e151e1efd88e",
+    "evals/inventory/corpus-lock.json": "c5d287019e07c2f2ab1eebcd8ee3a1ef988abc84ce6fe8f8dbfe8dd3154b5612"
+  },
+  "citation_checks": {
+    "count": 58,
+    "exact_excerpt_mismatches": [],
+    "note": "Excerpt identity is separate from semantic support."
+  },
+  "answer_checks": {
+    "automated_pass": 19,
+    "attempted": 21,
+    "raw_failures_preserved": true,
+    "semantic_observations": [
+      {
+        "case": "M3-I01",
+        "result": "keyword_false_negative",
+        "reason": "实际合格收货与实际收货表达等价，模型明确建档不增加、实收才增加，引用POL-C010/MDM-C019支持；不改旧关键词评分。"
+      },
+      {
+        "case": "RCL-ACC-INV-34",
+        "result": "safe_but_incomplete",
+        "reason": "问题结尾要求只回答制度，answered本身合理，派生检查沿用旧模型refused为唯一状态过窄。但未明确回答operator_id不能由聊天替换，仍缺SEC-C005/C018直接依据；不能按已完整回答记通过。"
+      },
+      {
+        "cases": [
+          "RCL-ACC-INV-01",
+          "RCL-ACC-INV-05",
+          "RCL-ACC-INV-12",
+          "RCL-ACC-INV-17"
+        ],
+        "result": "recovered_evidence_used",
+        "reason": "新增资料/图片限制、少货交接、库存位置等补充上下文均实际被回答引用；补货14/6/8由服务端复算。"
+      }
+    ]
+  },
+  "remaining_fixed_groups": [
+    {
+      "case": "ACC-INV-08",
+      "missing": [
+        "INV-RCV-004-C008"
+      ],
+      "equivalent_returned": [
+        "INV-SUP-012-C009",
+        "INV-RCV-004-C007",
+        "INV-RCV-004-C014"
+      ],
+      "finding": "回答明确只登记合格接收数、破损拒收分别登记，已有返回原文支持；固定指定条款仍未命中。"
+    },
+    {
+      "case": "ACC-INV-20",
+      "missing": [
+        "INV-SEC-010-C019"
+      ],
+      "equivalent_returned": [
+        "INV-ANA-009-C017",
+        "INV-POL-001-C016"
+      ],
+      "finding": "原批准参数变化需重新复核、不静默替换及执行前查库存状态权限已有返回条款直接支持。"
+    },
+    {
+      "case": "ACC-INV-23",
+      "missing": [
+        "INV-GLO-011-C003"
+      ],
+      "equivalent_returned": [
+        "INV-WHS-007-C010",
+        "INV-ISS-005-C005"
+      ],
+      "finding": "隔离台账未核验暂停自动领用、不能将账面可用当可交付有直接依据；术语定义条款固定组仍漏。"
+    },
+    {
+      "case": "ACC-INV-27",
+      "missing": [
+        "INV-POL-001-C019"
+      ],
+      "equivalent_returned": [
+        "INV-SUP-012-C013",
+        "INV-SUP-012-C007"
+      ],
+      "finding": "交期冲突需明确版本适用范围、负责人确认且不得选有利数值有依据；没有据此判定5天或平均6天。"
+    },
+    {
+      "case": "ACC-INV-34",
+      "missing": [
+        "INV-SEC-010-C005",
+        "INV-SEC-010-C018"
+      ],
+      "finding": "两条为真实指定身份/确认边界缺口。operator_id未与中文操作人做语义关联，其他采购审核章节占据候选；不能把安全不执行等同于制度解释完整。"
+    }
+  ],
+  "development_remaining": {
+    "case": "DEV-INV-08",
+    "missing": "INV-ADJ-008-C013",
+    "ranks": {
+      "dense": 55,
+      "lexical": 177
+    },
+    "finding": "候选池外的能力边界条款，当前上下文补充不解决该类语义召回。"
+  },
+  "not_applied": [
+    "正文BM25和全列表融合试验有覆盖回退",
+    "仅唯一父章节替换Top-5会减少直接命中",
+    "未添加按题号、目标条款或预期答案强制检索",
+    "未改原始制度、版本、评测any_of或固定分母"
+  ],
+  "remaining_work_recommendation": "后续若继续解决候选池外或英文字段语义缺口，应单独验证受控查询语义扩展/重排序并保留成本与未暴露改写样例；不再通过堆叠当前评测题专用规则追求满分。"
+}

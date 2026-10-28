@@ -1,0 +1,67 @@
+{
+  "created_at": "2026-10-27T05:31:31.005150+00:00",
+  "checks": {
+    "development_business_unchanged": true,
+    "development_revision": true,
+    "test_fixture_cleanup": true,
+    "test_revision": true,
+    "pytest": true,
+    "frontend_tests": true,
+    "frontend_build": true,
+    "same_final_agent_code": true,
+    "agent_tasks": true,
+    "ready": true,
+    "current_production_index": true,
+    "frontend_http": true,
+    "http_smoke": true
+  },
+  "details": {
+    "development_database": {
+      "counts": {
+        "documents": 824,
+        "stock_balances": 96,
+        "stock_ledger": 1359,
+        "agent_proposals": 1
+      },
+      "revision": "0008_pricing"
+    },
+    "test_database": {
+      "counts": {
+        "documents": 0,
+        "stock_balances": 0,
+        "stock_ledger": 0,
+        "agent_proposals": 0
+      },
+      "revision": "0008_pricing"
+    },
+    "knowledge_status": {
+      "available": true,
+      "embedding_configured": true,
+      "chat_configured": true,
+      "generation_id": "01efb5f874eb427f9ed812cb842df97a",
+      "document_count": 19,
+      "unit_count": 242,
+      "context_count": 86,
+      "domains": {
+        "inventory_policies": {
+          "released_documents": 0,
+          "preview_documents": 12,
+          "domain_error": null
+        },
+        "general_diagnostics": {
+          "released_documents": 0,
+          "preview_documents": 7,
+          "domain_error": null
+        }
+      }
+    }
+  },
+  "log_files": {
+    "pytest": "data/local-backups/stability-pytest-current-final.txt",
+    "frontend_tests": "data/local-backups/stability-frontend-current-node-tests.txt",
+    "frontend_build": "data/local-backups/stability-frontend-current-build.txt"
+  },
+  "current_report": "docs/m3-m4-stability-verification.md",
+  "M5_completed": false,
+  "git_commit_created": false
+}

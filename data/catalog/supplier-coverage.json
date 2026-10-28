@@ -1,0 +1,9 @@
+{
+  "version": "2026-10-23.1",
+  "source_type": "project_authored_simulated_supply_scope",
+  "suppliers": [
+    {"code": "DEMO-S01", "image_key": "supplier-maintenance", "supply_categories": ["滤清器", "制动件", "易损件", "点火件", "紧固密封", "附件传动"]},
+    {"code": "DEMO-S02", "image_key": "supplier-fluids", "supply_categories": ["油液"]},
+    {"code": "DEMO-S03", "image_key": "supplier-general", "supply_categories": ["滤清器", "制动件", "易损件", "点火件", "紧固密封", "电气件", "点火与供油", "起动与充电", "进气与排放", "发动机传感器", "冷却系统", "附件传动", "制动系统", "悬架与转向", "传动系统", "发动机悬置", "空调系统", "车身电气"]}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "purpose": "Synthetic final cited web follow-up development smoke",
+  "thread_id": "36e75fff35854f05b6f93fff9046811f",
+  "question": "请根据刚才的网页资料，简要概括适用范围和需要维修人员核查的事项，不提供自行操作步骤。",
+  "http_status": 502,
+  "elapsed_seconds": 10.786,
+  "response": {
+    "detail": "模型混用了不同知识域的输出",
+    "error_code": "answer_structure",
+    "request_id": "041fa5dfd4c546199fbeeaa8260ca571"
+  }
+}

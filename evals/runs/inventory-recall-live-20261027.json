@@ -1,0 +1,913 @@
+{
+  "created_at": "2026-10-27T06:02:56.536402+00:00",
+  "scope": "post-restart read-only live retrieval verification",
+  "cases": [
+    {
+      "question": "新增了一个备件资料并配好了图片，是否已经有库存，可以马上用于维修？",
+      "expected": "INV-MDM-002-C004",
+      "response": {
+        "generation_id": "01efb5f874eb427f9ed812cb842df97a",
+        "retrieval_mode": "hybrid",
+        "retrieval_version": "hybrid-tfidf-rrf-context-v2",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "top_k": 5,
+        "status": "retrieved",
+        "hits": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-MDM-002",
+            "document_version": "1.0-draft.3",
+            "source_sha256": "fd030a5b21f330d27737a4e51ee45a31bcd559876341a6764c211453436a2aac",
+            "unit_id": "INV-MDM-002-C019",
+            "chunk_id": "8dcc989798baeb554bb36a4d9d702d5b8610044ecddd853daec5b5de0099c024",
+            "parent_id": "d18d3efae92349def37ccd03760de7930a5c5373a25d559c95dedb49f984abf1",
+            "title": "备件主数据与期初建账管理办法",
+            "section_path": [
+              "备件主数据与期初建账管理办法",
+              "5 迁移与历史资料"
+            ],
+            "unit_text": "INV-MDM-002-C019 新增备件只有建立资料并不增加库存。首次实际采购收货可以形成库存记录；是否可在维修中使用仍须通过质量和适配核验。",
+            "embedding_text_sha256": "522926357a39466c0a15566ffde8cf4271f0bfa01273a0aa3795ef9cafe93a15",
+            "line_start": 61,
+            "line_end": 61,
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-text-v1",
+            "chunking_version": "clause-section-v1",
+            "distance": 0.3163681626319885,
+            "dense_rank": 2,
+            "lexical_rank": 1,
+            "rrf_score": 0.03252247488101534,
+            "exact_match": false,
+            "lexical_score": 0.1732765339232003
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-GLO-011",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "43b21a4ea63ae31fef758a60cd087cef06cbd323f9c36b9d06d142e4271e193f",
+            "unit_id": "INV-GLO-011-C002",
+            "chunk_id": "52d0e7eb9619f6de3de0f9943be0a14fa5b7d77a18f9a3c43c8511e329d2334f",
+            "parent_id": "950f56b7a20420f725e22e1817bbf2294d778f9c49635a9fc922077a9864d252",
+            "title": "备件库存术语与检索同义词",
+            "section_path": [
+              "备件库存术语与检索同义词",
+              "1 库存与单位"
+            ],
+            "unit_text": "INV-GLO-011-C002 现有库存也称账面现存量、当前库存，表示指定仓库指定SKU已入账数量，不包括采购待收和目标方向调拨在途。",
+            "embedding_text_sha256": "27955bdf5bb822d962f9d7f2ea62d8f93bdd710f426b5c563979677edf7b0ddb",
+            "line_start": 19,
+            "line_end": 20,
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-text-v1",
+            "chunking_version": "clause-section-v1",
+            "distance": 0.33514589071273804,
+            "dense_rank": 18,
+            "lexical_rank": 14,
+            "rrf_score": 0.026334026334026334,
+            "exact_match": false,
+            "lexical_score": 0.04827866443364998
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-ISS-005",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "81176f0cab76f0d3625ee23e4eb276fc1b8675042cfd107ce0cb918a1ed68c20",
+            "unit_id": "INV-ISS-005-C004",
+            "chunk_id": "3a23c7b2fe9dfc87008cd90aba358bb821e541ebcb9a796d5070257a918df0a7",
+            "parent_id": "394ba4d921e71b84ecd46949bbc231d00fd90ec2d226e9ada612d1dba5288e66",
+            "title": "维修领用与出库管理办法",
+            "section_path": [
+              "维修领用与出库管理办法",
+              "2 备货与交接"
+            ],
+            "unit_text": "INV-ISS-005-C004 仓管核对需求SKU、件号或规格、单位、质量与适配状态，再核对目标仓实际可供数量。不能仅凭备件名称、图片或相近编码发料，不得将替代件当作原件静默发出。",
+            "embedding_text_sha256": "172d424f494308a5e1df8ea785520127caab9313b73e152bbd0eb2badc8d29e2",
+            "line_start": 25,
+            "line_end": 26,
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-text-v1",
+            "chunking_version": "clause-section-v1",
+            "distance": 0.33349913358688354,
+            "dense_rank": 16,
+            "lexical_rank": 17,
+            "rrf_score": 0.026144907723855092,
+            "exact_match": false,
+            "lexical_score": 0.04353519163762549
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-POL-001",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "2d2cb9db61026201c0ab84b57475f5286f18bf093f95844d78f9c02dfdfa6516",
+            "unit_id": "INV-POL-001-C002",
+            "chunk_id": "e77735254a2083336e86359daaee330cb0ee39a65af84659d9f544b042cb4603",
+            "parent_id": "a6eb1823b359ef3aae5c67f036c3fa918c4c2015e978123d8dc06e66925b71ca",
+            "title": "备件库存管理总则与职责",
+            "section_path": [
+              "备件库存管理总则与职责",
+              "1 管理目标与适用边界"
+            ],
+            "unit_text": "INV-POL-001-C002 管理范围包括备件与耗材，库存单位统一为件。每件代表一个明确SKU的完整库存包装；整套、整瓶、整桶属于包装规格，须在名称或规格说明中登记，不作为独立库存单位。拆零、外部寄售、客户财产、旧件回收和在修车辆上的部件应单独界定所有权和状态，未经批准不得计入门店可用备件库存。",
+            "embedding_text_sha256": "903c2232795c11f10440eb767eefb0df6ab821fd3b0a77c18217c410af332d29",
+            "line_start": 19,
+            "line_end": 20,
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-text-v1",
+            "chunking_version": "clause-section-v1",
+            "distance": 0.33220750093460083,
+            "dense_rank": 14,
+            "lexical_rank": 20,
+            "rrf_score": 0.026013513513513515,
+            "exact_match": false,
+            "lexical_score": 0.04199712668118208
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-ISS-005",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "81176f0cab76f0d3625ee23e4eb276fc1b8675042cfd107ce0cb918a1ed68c20",
+            "unit_id": "INV-ISS-005-C009",
+            "chunk_id": "279604c2556c216be071262e96a0a6df40a1d69c79ba5ea5b8e7ba6753c35659",
+            "parent_id": "b704759c8fb81f1b729cd26e9b27ccb9db2e09a27975b41f4c142b8488c8bd52",
+            "title": "维修领用与出库管理办法",
+            "section_path": [
+              "维修领用与出库管理办法",
+              "3 出库过账"
+            ],
+            "unit_text": "INV-ISS-005-C009 库存不足时整次出库不生效，经办人应检查其他仓调拨或采购途径。不得允许负库存、绕过数量校验、把预计到货当成现货，或用另一个SKU先扣账再线下补记。",
+            "embedding_text_sha256": "0d22e8f33cad6a5dac66530879b765c99704ec5461f8e2b24bec7fce0a104e81",
+            "line_start": 37,
+            "line_end": 38,
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-text-v1",
+            "chunking_version": "clause-section-v1",
+            "distance": 0.3366261124610901,
+            "dense_rank": 20,
+            "lexical_rank": 19,
+            "rrf_score": 0.025158227848101268,
+            "exact_match": false,
+            "lexical_score": 0.04237538942375177
+          }
+        ],
+        "contexts": [
+          {
+            "context_id": "d18d3efae92349def37ccd03760de7930a5c5373a25d559c95dedb49f984abf1",
+            "document_id": "INV-MDM-002",
+            "document_version": "1.0-draft.3",
+            "source_sha256": "fd030a5b21f330d27737a4e51ee45a31bcd559876341a6764c211453436a2aac",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "备件主数据与期初建账管理办法",
+              "5 迁移与历史资料"
+            ],
+            "context_text": "备件主数据与期初建账管理办法\n\n本办法规范备件、仓库、供应商及期初库存的建立与变更，防止重复编码、单位混用和历史关联丢失。当前为企业制度待核准稿，发布条件按INV-POL-001执行。\n\n5 迁移与历史资料\n\nINV-MDM-002-C017 历史导入应明确来源系统、覆盖区间、计量单位、生成或提取方法、导入批次及责任人，并核对单据、流水与余额。重跑导入不得重复增加数量，不得在普通应用启动时自动重置数据。\n\nINV-MDM-002-C018 业务日期反映业务归属，记录创建时间反映实际登记时间，成本按实际过账顺序处理，不因回填业务日期重算后续历史。项目缺失的期初成本、收费或质保用途和结算价可以显式模拟补录，保留固定规则、来源、前后值和批次；已有采购入库成交价、数量、日期、人员及审核事实不改写。模拟补录不得认定为真实经营凭证。\n\nINV-MDM-002-C019 新增备件只有建立资料并不增加库存。首次实际采购收货可以形成库存记录；是否可在维修中使用仍须通过质量和适配核验。",
+            "tables": [],
+            "unit_ids": [
+              "INV-MDM-002-C017",
+              "INV-MDM-002-C018",
+              "INV-MDM-002-C019"
+            ],
+            "expansion_reason": "parent_section"
+          },
+          {
+            "context_id": "950f56b7a20420f725e22e1817bbf2294d778f9c49635a9fc922077a9864d252",
+            "document_id": "INV-GLO-011",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "43b21a4ea63ae31fef758a60cd087cef06cbd323f9c36b9d06d142e4271e193f",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "备件库存术语与检索同义词",
+              "1 库存与单位"
+            ],
+            "context_text": "备件库存术语与检索同义词\n\n本文统一检索和业务表达。状态为待核准，不表示企业已经批准相应制度；同义词只用于理解问题，不能改变单据类型、单位或权限。\n\n1 库存与单位\n\nINV-GLO-011-C001 SKU为内部唯一库存识别编码。厂家件号、OE号、品牌型号是其他识别信息，不能在没有核验对应关系时等同于SKU；相似编码也不构成替代关系。\n\nINV-GLO-011-C002 现有库存也称账面现存量、当前库存，表示指定仓库指定SKU已入账数量，不包括采购待收和目标方向调拨在途。\n\nINV-GLO-011-C003 可用库存也称可用量、可领数量，其基本公式为现有量减有效预留。当前无预留流程，系统可用量等于现有量；人工隔离等限制仍须核验，不能只依据系统数值断言可交付。\n\nINV-GLO-011-C004 采购待收又称采购未到、订单未收余量，限定为已确认或部分收货采购单的有效未收部分。采购草稿与已取消余量不属于有效待收。\n\nINV-GLO-011-C005 调拨在途又称内部在途、已发未收，指调拨已发出但目标仓未确认接收的数量。它与供应商发货或采购预计到货不是同一数量口径。\n\nINV-GLO-011-C006 本系统库存、收发及统计统一按件管理。一件表示一个SKU完整库存包装；整瓶、整桶、整套等差异写入名称或规格，不换算为升数、包装内个数或其他单位，不拆零收发。数量与单价均按同一库存包装计算。",
+            "tables": [],
+            "unit_ids": [
+              "INV-GLO-011-C001",
+              "INV-GLO-011-C002",
+              "INV-GLO-011-C003",
+              "INV-GLO-011-C004",
+              "INV-GLO-011-C005",
+              "INV-GLO-011-C006"
+            ],
+            "expansion_reason": "parent_section"
+          },
+          {
+            "context_id": "394ba4d921e71b84ecd46949bbc231d00fd90ec2d226e9ada612d1dba5288e66",
+            "document_id": "INV-ISS-005",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "81176f0cab76f0d3625ee23e4eb276fc1b8675042cfd107ce0cb918a1ed68c20",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "维修领用与出库管理办法",
+              "2 备货与交接"
+            ],
+            "context_text": "维修领用与出库管理办法\n\n本办法控制维修领料、数量核验、实际交接和出库过账，防止无依据领用、错件、重复扣减和以领用代替其他业务。当前为企业制度待核准稿。\n\n2 备货与交接\n\nINV-ISS-005-C004 仓管核对需求SKU、件号或规格、单位、质量与适配状态，再核对目标仓实际可供数量。不能仅凭备件名称、图片或相近编码发料，不得将替代件当作原件静默发出。\n\nINV-ISS-005-C005 待检、不合格、冻结、客户所有或其他未获放行物品不得交付。当前软件可用量尚未扣除外部隔离记录时，应先核验受控质量台账；未能核验时暂停放行，不能将账面可用量当作已证明可交付量。\n\nINV-ISS-005-C006 草稿不占用或预留库存。备货与现场交接应指定责任人，其他并行业务可能改变可用量，提交出库时必须重新校验。页面曾显示有货不代表随后办理必然成功。\n\nINV-ISS-005-C007 实物交接应由领用接收人核对编码、数量及用途并签认。由他人代领时应保留代领授权和实际接收关系，不能共用账号冒充原领用人。",
+            "tables": [],
+            "unit_ids": [
+              "INV-ISS-005-C004",
+              "INV-ISS-005-C005",
+              "INV-ISS-005-C006",
+              "INV-ISS-005-C007"
+            ],
+            "expansion_reason": "parent_section"
+          },
+          {
+            "context_id": "a6eb1823b359ef3aae5c67f036c3fa918c4c2015e978123d8dc06e66925b71ca",
+            "document_id": "INV-POL-001",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "2d2cb9db61026201c0ab84b57475f5286f18bf093f95844d78f9c02dfdfa6516",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "备件库存管理总则与职责",
+              "1 管理目标与适用边界"
+            ],
+            "context_text": "备件库存管理总则与职责\n\n本制度建立门店备件从需求提出、采购、验收、保管、领用、调拨到差异处理的控制要求，适用于单门店下各仓库及参与业务、财务、质量和系统管理的岗位。文件按企业内部制度编制；实际经营主体、审批人、生效日期及授权参数须经企业核准。当前为待核准稿，不能作为已经生效的授权文件。\n\n1 管理目标与适用边界\n\nINV-POL-001-C001 每项库存变化必须同时具备真实业务事项、可追溯单据和数量流水。实物、库存台账和财务记录各有管理职责，任何一方不得用另一方未经核实的记录代替本岗位的核验。\n\nINV-POL-001-C002 管理范围包括备件与耗材，库存单位统一为件。每件代表一个明确SKU的完整库存包装；整套、整瓶、整桶属于包装规格，须在名称或规格说明中登记，不作为独立库存单位。拆零、外部寄售、客户财产、旧件回收和在修车辆上的部件应单独界定所有权和状态，未经批准不得计入门店可用备件库存。\n\nINV-POL-001-C003 业务制度要求与软件已经具备的功能分别核验。人工审批、合同、交接和质量记录可以作为受控附件，但不能被描述为软件已自动完成的审批、冻结或会计核算。关键控制无法落实时，应暂停相关业务放行。",
+            "tables": [],
+            "unit_ids": [
+              "INV-POL-001-C001",
+              "INV-POL-001-C002",
+              "INV-POL-001-C003"
+            ],
+            "expansion_reason": "parent_section"
+          },
+          {
+            "context_id": "b704759c8fb81f1b729cd26e9b27ccb9db2e09a27975b41f4c142b8488c8bd52",
+            "document_id": "INV-ISS-005",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "81176f0cab76f0d3625ee23e4eb276fc1b8675042cfd107ce0cb918a1ed68c20",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "维修领用与出库管理办法",
+              "3 出库过账"
+            ],
+            "context_text": "维修领用与出库管理办法\n\n本办法控制维修领料、数量核验、实际交接和出库过账，防止无依据领用、错件、重复扣减和以领用代替其他业务。当前为企业制度待核准稿。\n\n3 出库过账\n\nINV-ISS-005-C008 系统流程为草稿到已过账；草稿可取消。出库业务日期不得早于单据日期或晚于办理日，确认前核对仓库、备件、数量、收费或质保用途及交接依据。收费维修由服务端带出门店定价并冻结结算价，缺定价不可按0收费；质保客户结算为0，仍计算实际消耗成本，不能假定已取得厂家赔付。\n\nINV-ISS-005-C009 库存不足时整次出库不生效，经办人应检查其他仓调拨或采购途径。不得允许负库存、绕过数量校验、把预计到货当成现货，或用另一个SKU先扣账再线下补记。\n\nINV-ISS-005-C010 多行出库在同一事务中处理，任一行库存不足或成本缺失时整体失败，数量、成本、流水和状态一起回滚。确需分批领用时分别建立对应实际交接的单据；不得部分扣减而整单标成功。\n\nINV-ISS-005-C011 出库过账按当时仓库与备件的移动加权平均库存价值分摊成本，保存结算价、实际成本与来源快照；全数出库取完剩余价值，避免分摊尾差。后续报价、门店定价或入库变化不改写已过账快照。成功后核对单据、负向数量及价值流水，网络超时查询原请求或原请求重试，不重复出库。",
+            "tables": [],
+            "unit_ids": [
+              "INV-ISS-005-C008",
+              "INV-ISS-005-C009",
+              "INV-ISS-005-C010",
+              "INV-ISS-005-C011"
+            ],
+            "expansion_reason": "parent_section"
+          },
+          {
+            "context_id": "8d709f7706d24e63beee5f316082bffdc2cc72a82af2a83e3822d1db8c4dfca5",
+            "document_id": "INV-POL-001",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "2d2cb9db61026201c0ab84b57475f5286f18bf093f95844d78f9c02dfdfa6516",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "备件库存管理总则与职责",
+              "5 记录与管理复核"
+            ],
+            "context_text": "备件库存管理总则与职责\n\n本制度建立门店备件从需求提出、采购、验收、保管、领用、调拨到差异处理的控制要求，适用于单门店下各仓库及参与业务、财务、质量和系统管理的岗位。文件按企业内部制度编制；实际经营主体、审批人、生效日期及授权参数须经企业核准。当前为待核准稿，不能作为已经生效的授权文件。\n\n5 记录与管理复核\n\nINV-POL-001-C017 库存数量以交易系统和对应实物核验为依据，制度知识库不保存可直接用于办理业务的实时库存。供应商交期、价格和授权等可变化参数应查询其有效台账及原始依据，不从旧对话推定。\n\nINV-POL-001-C018 业务负责人应组织定期账实核对、异常未结事项复核及权限检查。复核频率和记录保存要求由企业批准；在确定前，应形成专项安排并指定责任人，不能把未确定要求理解为无需保管或复核。\n\nINV-POL-001-C019 制度、合同和技术资料出现适用范围或版本冲突时，先停止依赖该冲突作出的自动建议，交由业务负责人会同相关岗位确认。不得由模型自行选择更有利的条款或把多个版本拼接为新规则。",
+            "tables": [],
+            "unit_ids": [
+              "INV-POL-001-C017",
+              "INV-POL-001-C018",
+              "INV-POL-001-C019"
+            ],
+            "expansion_reason": "branch_candidate_section"
+          },
+          {
+            "context_id": "27063b106c8bdf16f983a3f4b3a083f9af396727424243e8ee975f75af186a0c",
+            "document_id": "INV-POL-001",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "2d2cb9db61026201c0ab84b57475f5286f18bf093f95844d78f9c02dfdfa6516",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "备件库存管理总则与职责",
+              "3 单据与数量控制"
+            ],
+            "context_text": "备件库存管理总则与职责\n\n本制度建立门店备件从需求提出、采购、验收、保管、领用、调拨到差异处理的控制要求，适用于单门店下各仓库及参与业务、财务、质量和系统管理的岗位。文件按企业内部制度编制；实际经营主体、审批人、生效日期及授权参数须经企业核准。当前为待核准稿，不能作为已经生效的授权文件。\n\n3 单据与数量控制\n\nINV-POL-001-C009 单据至少应能追溯业务类型、业务日期、备件编码、仓库、数量、单位、实际操作人及关联事项。采购另需供应商和单价；调拨另需目标仓。维修领用应关联工单或其他有效领用依据。\n\nINV-POL-001-C010 草稿不产生实物库存变化。采购只有实际合格收货后增加现有量；领用只有过账后扣减；调拨发出后在途单列，目标仓收货后才计入其现有量。禁止把预计到货、口头承诺或未执行草稿当作现有库存。\n\nINV-POL-001-C011 库存按仓库与备件分别核对，计量单位必须一致，数量不得为负。不同SKU之间不得借账；同名、外观相似或包装相似不能作为合并编码、替代使用或认定车型适配的依据。\n\nINV-POL-001-C012 已生效的单据与流水不得直接删除、覆盖或改写数量。发现错误应按INV-ADJ-008建立来源关联、调查和批准记录，并通过获准的反向或调整业务处理。不得虚构采购、领用、调拨或再次期初登记来抵补差异。\n\nINV-POL-001-C013 网络超时或页面中断不代表业务失败。经办人应先核对原单据与流水，使用原请求重试或查询确认；不得在结果不明时连续创建参数相同的新业务。",
+            "tables": [],
+            "unit_ids": [
+              "INV-POL-001-C009",
+              "INV-POL-001-C010",
+              "INV-POL-001-C011",
+              "INV-POL-001-C012",
+              "INV-POL-001-C013"
+            ],
+            "expansion_reason": "branch_candidate_section"
+          },
+          {
+            "context_id": "956e33e3a493078acbcf719893fa270577cf94f3cece2e1ec0e9fc2c90cf46ef",
+            "document_id": "INV-POL-001",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "2d2cb9db61026201c0ab84b57475f5286f18bf093f95844d78f9c02dfdfa6516",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "备件库存管理总则与职责",
+              "6 文件发布与修订"
+            ],
+            "context_text": "备件库存管理总则与职责\n\n本制度建立门店备件从需求提出、采购、验收、保管、领用、调拨到差异处理的控制要求，适用于单门店下各仓库及参与业务、财务、质量和系统管理的岗位。文件按企业内部制度编制；实际经营主体、审批人、生效日期及授权参数须经企业核准。当前为待核准稿，不能作为已经生效的授权文件。\n\n6 文件发布与修订\n\nINV-POL-001-C020 本套制度须完成经营主体确认、业务与财务复核、授权审批、生效日期登记及相关岗位宣贯后方可发布。当前版本的批准人和生效日期均未登记；检索时必须保留“待核准”状态，不得回答为已经生效的企业规定。\n\nINV-POL-001-C021 修订应记录变更原因、受影响条款、版本、审核人和替代关系。旧版保留以供历史追溯，但不得继续作为当前办理依据。制度变更不自动修改已生效的历史业务事实。\n\nINV-POL-001-C022 本制度与INV-MDM-002、INV-PUR-003、INV-RCV-004、INV-ISS-005、INV-TRF-006、INV-WHS-007、INV-ADJ-008、INV-ANA-009、INV-SEC-010和INV-SUP-012共同使用，术语以INV-GLO-011为准。",
+            "tables": [],
+            "unit_ids": [
+              "INV-POL-001-C020",
+              "INV-POL-001-C021",
+              "INV-POL-001-C022"
+            ],
+            "expansion_reason": "branch_candidate_section"
+          },
+          {
+            "context_id": "40e1e509360753bd7415c1df2868347fef47bbbc59a7e24f619655bdac0a4d1f",
+            "document_id": "INV-MDM-002",
+            "document_version": "1.0-draft.3",
+            "source_sha256": "fd030a5b21f330d27737a4e51ee45a31bcd559876341a6764c211453436a2aac",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "备件主数据与期初建账管理办法",
+              "1 备件识别与编码"
+            ],
+            "context_text": "备件主数据与期初建账管理办法\n\n本办法规范备件、仓库、供应商及期初库存的建立与变更，防止重复编码、单位混用和历史关联丢失。当前为企业制度待核准稿，发布条件按INV-POL-001执行。\n\n1 备件识别与编码\n\nINV-MDM-002-C001 每个SKU应代表一个具有明确计量单位和识别条件的库存对象。新增前应按名称、厂家件号、规格及已有编码查询，复核是否重复；不能仅因供应商不同而重复建立同一库存对象，也不能把规格不同的对象合并。\n\nINV-MDM-002-C002 当前系统编码使用不超过40字符的大写字母、数字及点、下划线、短横线，首位为字母或数字。保留厂家原件号时应登记其原始形式和来源，不得随意删去可能改变含义的符号以制造匹配。\n\nINV-MDM-002-C003 基础字段包括名称、SKU、类别、单位、启停状态、安全库存、默认供应商、门店定价，以及按供应商和备件分别登记的供货价。当前通用目录不要求真实制造商、厂家件号及规格版本；目录名称和图片不证明真实维修适配，实际使用前仍须核验实物。\n\nINV-MDM-002-C004 图片仅用于辅助识别。出入库仍须核对编码、实物标识和单位；示意图片不得替代实物验收、品牌真伪、技术参数或车型适配证明。",
+            "tables": [],
+            "unit_ids": [
+              "INV-MDM-002-C001",
+              "INV-MDM-002-C002",
+              "INV-MDM-002-C003",
+              "INV-MDM-002-C004"
+            ],
+            "expansion_reason": "branch_candidate_section"
+          },
+          {
+            "context_id": "ba5fd7db4ec7e5212dd032007a6f8d9033475b7937106884c5cdf2e46ebc533b",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "6 异常闭环与记录"
+            ],
+            "context_text": "采购需求与采购单控制规程\n\n本规程将需求核验、业务批准、采购单确认和实际交付分开控制，适用于常规补货、维修专用件和紧急采购。当前为待核准稿，不授予实际签约或付款权限。\n\n6 异常闭环与记录\n\nINV-PUR-003-C017 延迟、缺货、错件、价格差异、超量到货及失去资格的供应商，应登记异常事项、责任人、临时措施、处理时限和结果。具体承诺与索赔条件以有效合同为依据，不由知识问答生成新的供应商义务。\nINV-PUR-003-C018 紧急采购仍应确认身份、用途、规格及授权，保留例外批准和后续复核。紧急不构成负库存出库、假收货、跳过质量检查或由智能体自行对外下单的理由。\nINV-PUR-003-C019 采购归档应包括需求依据、批准记录、合同或报价、外部订单及回执、系统采购编号、收货记录、异常处理和必要对账资料。保存年限由企业档案和财务要求核定，不在未核准时虚构固定年限。\nINV-PUR-003-C020 采购未结清单应逐项核实是否仍有效、是否逾期及是否重复。未结状态的治理不得通过直接改余额或删除历史单据完成。",
+            "tables": [],
+            "unit_ids": [
+              "INV-PUR-003-C017",
+              "INV-PUR-003-C018",
+              "INV-PUR-003-C019",
+              "INV-PUR-003-C020"
+            ],
+            "block_start": 28,
+            "block_end": 32,
+            "expansion_reason": "branch_candidate_section"
+          },
+          {
+            "context_id": "0898c6791dea1baef67e48add6a8587cf9fec94cf266f474364ea9cb6e2a616a",
+            "document_id": "INV-GLO-011",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "43b21a4ea63ae31fef758a60cd087cef06cbd323f9c36b9d06d142e4271e193f",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "备件库存术语与检索同义词",
+              "4 质量与适配"
+            ],
+            "context_text": "备件库存术语与检索同义词\n\n本文统一检索和业务表达。状态为待核准，不表示企业已经批准相应制度；同义词只用于理解问题，不能改变单据类型、单位或权限。\n\n4 质量与适配\n\nINV-GLO-011-C016 待检、隔离、冻结、不合格和报损待办表示不同质量或处理状态，不自动等于库存数量减少。恢复放行不等于新的采购入库。\n\nINV-GLO-011-C017 适配是特定车辆条件下部件可使用的核验关系，需要来源、版本和限制；部件同义词、相同名称、相似图片或有库存均不能证明适配。\n\nINV-GLO-011-C018 故障候选部件表示需要进一步排查的对象，已具备更换依据的部件还须经过检测、适配与业务确认。库存制度不直接提供车辆诊断结论。",
+            "tables": [],
+            "unit_ids": [
+              "INV-GLO-011-C016",
+              "INV-GLO-011-C017",
+              "INV-GLO-011-C018"
+            ],
+            "expansion_reason": "branch_candidate_section"
+          },
+          {
+            "context_id": "6de9616793fdf25278b01b560717b03b99efd4abbe0412eb36d62e911504d172",
+            "document_id": "INV-WHS-007",
+            "document_version": "1.0-draft.1",
+            "source_sha256": "68c9f7061f0a556a07d8a565f0bbf3832a4a2a6c6f94ee8eac04f796c6da48e1",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "仓储保管与质量隔离管理规范",
+              "3 质量隔离与放行"
+            ],
+            "context_text": "仓储保管与质量隔离管理规范\n\n本规范管理备件保管、状态识别、质量隔离和保管责任。物品的储存条件以其有效标签、制造商说明及经核准的安全资料为依据，本规范不自行编造温湿度、期限或危险品分类要求。当前为待核准稿。\n\n3 质量隔离与放行\n\nINV-WHS-007-C008 待检、不合格、疑似假冒、运输受损及状态不明物品应即时标识并隔离，记录数量、位置、发现人、原因和关联单据。未经授权判定和放行，不得用于维修或跨仓调拨。\nINV-WHS-007-C009 入库前未验收合格的物品不登记为正常可用库存。入库后发现异常时，实物隔离并暂停相应放行，保留原账面数量；隔离不是数量减少，不得直接扣账或将其记为维修消耗。\nINV-WHS-007-C010 当前系统未独立表达质检冻结及隔离数量。发生上述情形时，应建立外部受控台账，由业务负责人落实人工拦截；在冻结信息未被核验前，系统可用量不能直接解释为可交付量，自动领用和自动调拨应暂停。\nINV-WHS-007-C011 质量判定应记载依据、判定人、处置结论及适用数量。返工、退供、报损或恢复放行应分别办理，恢复放行不代表已经发生新的采购入库；涉及数量变化时按INV-ADJ-008执行。",
+            "tables": [],
+            "unit_ids": [
+              "INV-WHS-007-C008",
+              "INV-WHS-007-C009",
+              "INV-WHS-007-C010",
+              "INV-WHS-007-C011"
+            ],
+            "page_start": 1,
+            "page_end": 2,
+            "expansion_reason": "branch_candidate_section"
+          }
+        ],
+        "embedding_requests": 1,
+        "unavailable_documents": [],
+        "domain_error": null,
+        "document_ids": null,
+        "document_versions": null,
+        "candidate_limit": 20,
+        "context_budget": 12000,
+        "context_characters": 6022,
+        "omitted_contexts": [],
+        "missing_exact_ids": [],
+        "dense_candidates": 20,
+        "lexical_candidates": 20,
+        "rrf_constant": 60,
+        "timings": {
+          "qualification_seconds": 0.276,
+          "embedding_seconds": 0.241,
+          "retrieval_seconds": 0.484
+        },
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 22,
+            "completion_tokens": 0,
+            "total_tokens": 22
+          }
+        },
+        "chat_requests": 0,
+        "request_id": "9058775b9441489a9ca7a17d2cc289a2",
+        "elapsed_seconds": 1.001
+      },
+      "checks": {
+        "correct_version": true,
+        "context_recovered": true,
+        "top_k_preserved": true,
+        "budget": true,
+        "no_chat": true
+      }
+    },
+    {
+      "question": "调拨10件已发出，目标仓只收到6件，能先在原调拨单确认部分收货吗？",
+      "expected": "INV-TRF-006-C012",
+      "response": {
+        "generation_id": "01efb5f874eb427f9ed812cb842df97a",
+        "retrieval_mode": "hybrid",
+        "retrieval_version": "hybrid-tfidf-rrf-context-v2",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "top_k": 5,
+        "status": "retrieved",
+        "hits": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-TRF-006",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "8cb71cf74b0b5f2574a7e43334bd54eb4a6629bf34b3efebaec36a0323a0fac8",
+            "unit_id": "INV-TRF-006-C009",
+            "chunk_id": "0dd75f19f0d49c7f91993ac03d1af16e9adc07639d67ee95d62d8fc072cb0161",
+            "parent_id": "c9a98d40bf93f3ccdd0210afdbff5593c6ca4b57b92983077350eaf8415b209e",
+            "title": "跨仓调拨与在途交接规程",
+            "section_path": [
+              "跨仓调拨与在途交接规程",
+              "3 目标仓接收"
+            ],
+            "unit_text": "INV-TRF-006-C009 目标仓按原调拨单核对包装、SKU、单位、数量和状态。只有整单实物一致且满足接收要求时才确认收货，收货日期不能早于实际发出日期或晚于办理日。",
+            "embedding_text_sha256": "aac15a522310febb48c154f6dc9e841a02ff72b59736a13db4a07248d21dce0a",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-office-v1",
+            "chunking_version": "clause-section-v1",
+            "block_start": 16,
+            "block_end": 16,
+            "distance": 0.28529447317123413,
+            "dense_rank": 1,
+            "lexical_rank": 1,
+            "rrf_score": 0.03278688524590164,
+            "exact_match": false,
+            "lexical_score": 0.17350074179228242
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-TRF-006",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "8cb71cf74b0b5f2574a7e43334bd54eb4a6629bf34b3efebaec36a0323a0fac8",
+            "unit_id": "INV-TRF-006-C005",
+            "chunk_id": "9efdeca6431d0e011c0263991fd3fd10e1015e3d4ff2913f590fa4af464bf3ab",
+            "parent_id": "6cbb15b36338e9800ab4db7e0f09a4ce88df7544dd2c62b00de1bef0bd271390",
+            "title": "跨仓调拨与在途交接规程",
+            "section_path": [
+              "跨仓调拨与在途交接规程",
+              "2 草稿与发出"
+            ],
+            "unit_text": "INV-TRF-006-C005 当前调拨按整单发出和整单收货，不支持部分发出、部分收货或发出后撤回。若实物计划只能分批，应在发出前拆分为能独立交接的多张单据并复核。",
+            "embedding_text_sha256": "01c9946e3371e4fa6f0b37be85984f78f8d619a733d8b953f036d80e04689d42",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-office-v1",
+            "chunking_version": "clause-section-v1",
+            "block_start": 11,
+            "block_end": 11,
+            "distance": 0.31235241889953613,
+            "dense_rank": 4,
+            "lexical_rank": 3,
+            "rrf_score": 0.03149801587301587,
+            "exact_match": false,
+            "lexical_score": 0.13075083431391832
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-GLO-011",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "43b21a4ea63ae31fef758a60cd087cef06cbd323f9c36b9d06d142e4271e193f",
+            "unit_id": "INV-GLO-011-C005",
+            "chunk_id": "75ea27fa57f184ddcb046956259964d6110df1b561fa8e845a4bd4c263498f6e",
+            "parent_id": "950f56b7a20420f725e22e1817bbf2294d778f9c49635a9fc922077a9864d252",
+            "title": "备件库存术语与检索同义词",
+            "section_path": [
+              "备件库存术语与检索同义词",
+              "1 库存与单位"
+            ],
+            "unit_text": "INV-GLO-011-C005 调拨在途又称内部在途、已发未收，指调拨已发出但目标仓未确认接收的数量。它与供应商发货或采购预计到货不是同一数量口径。",
+            "embedding_text_sha256": "0feeb0e73127ae8fd19601c3a99cf08c76775165243063d73bd332e97ac45aaf",
+            "line_start": 25,
+            "line_end": 26,
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-text-v1",
+            "chunking_version": "clause-section-v1",
+            "distance": 0.3207167387008667,
+            "dense_rank": 6,
+            "lexical_rank": 6,
+            "rrf_score": 0.030303030303030304,
+            "exact_match": false,
+            "lexical_score": 0.12070521626809878
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-TRF-006",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "8cb71cf74b0b5f2574a7e43334bd54eb4a6629bf34b3efebaec36a0323a0fac8",
+            "unit_id": "INV-TRF-006-C010",
+            "chunk_id": "48b05d69ef46ba25dddfa5ac077f04c58fd814bf1ef145dc935fee56ace32739",
+            "parent_id": "c9a98d40bf93f3ccdd0210afdbff5593c6ca4b57b92983077350eaf8415b209e",
+            "title": "跨仓调拨与在途交接规程",
+            "section_path": [
+              "跨仓调拨与在途交接规程",
+              "3 目标仓接收"
+            ],
+            "unit_text": "INV-TRF-006-C010 收货成功后目标仓现有量增加，对应在途结束，形成收货流水。重复收货不得再次增加数量；请求结果不明时查询原单据并以原请求重试。",
+            "embedding_text_sha256": "cf950d1eb778e73db625bd45f014a8e98afdf35eed3a88db115ab3e10007580e",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-office-v1",
+            "chunking_version": "clause-section-v1",
+            "block_start": 17,
+            "block_end": 17,
+            "distance": 0.3083224296569824,
+            "dense_rank": 2,
+            "lexical_rank": 12,
+            "rrf_score": 0.030017921146953404,
+            "exact_match": false,
+            "lexical_score": 0.09127525338996507
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-TRF-006",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "8cb71cf74b0b5f2574a7e43334bd54eb4a6629bf34b3efebaec36a0323a0fac8",
+            "unit_id": "INV-TRF-006-C007",
+            "chunk_id": "77d22d9e1d35f6d284ee7fc357b2bd680533d5dcf9a8a3d8e411ef8f03bfed99",
+            "parent_id": "6cbb15b36338e9800ab4db7e0f09a4ce88df7544dd2c62b00de1bef0bd271390",
+            "title": "跨仓调拨与在途交接规程",
+            "section_path": [
+              "跨仓调拨与在途交接规程",
+              "2 草稿与发出"
+            ],
+            "unit_text": "INV-TRF-006-C007 发出成功后来源仓现有量减少，相同数量计入目标方向的调拨在途；目标仓现有量此时不增加。在途尚未可供目标仓领用，也不应在来源仓继续承诺为现货。",
+            "embedding_text_sha256": "4e43152d84b3fb50cd385270670cca97243296b3aa132e3b143bdd1cbd00fd46",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-office-v1",
+            "chunking_version": "clause-section-v1",
+            "block_start": 13,
+            "block_end": 13,
+            "distance": 0.31702572107315063,
+            "dense_rank": 5,
+            "lexical_rank": 9,
+            "rrf_score": 0.029877369007803793,
+            "exact_match": false,
+            "lexical_score": 0.09806385231482448
+          }
+        ],
+        "contexts": [
+          {
+            "context_id": "c9a98d40bf93f3ccdd0210afdbff5593c6ca4b57b92983077350eaf8415b209e",
+            "document_id": "INV-TRF-006",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "8cb71cf74b0b5f2574a7e43334bd54eb4a6629bf34b3efebaec36a0323a0fac8",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "跨仓调拨与在途交接规程",
+              "3 目标仓接收"
+            ],
+            "context_text": "跨仓调拨与在途交接规程\n\n本规程控制同一门店下不同仓库之间的备件调拨、运输交接及在途核实。仅适用于内部库存位置变化，不以调拨表示采购、销售、维修消耗或所有权转移。当前为待核准稿。\n\n3 目标仓接收\n\nINV-TRF-006-C009 目标仓按原调拨单核对包装、SKU、单位、数量和状态。只有整单实物一致且满足接收要求时才确认收货，收货日期不能早于实际发出日期或晚于办理日。\nINV-TRF-006-C010 收货成功后目标仓现有量增加，对应在途结束，形成收货流水。重复收货不得再次增加数量；请求结果不明时查询原单据并以原请求重试。\nINV-TRF-006-C011 单纯调拨期间，全仓现有量加调拨在途应保持守恒，按同一计量单位核验。采购待收属于外部未到货，不混入调拨守恒；调拨发出不计为维修领用消耗。\n| 业务时点 | 来源仓现有量 | 目标仓现有量 | 调拨在途 |\n| --- | --- | --- | --- |\n| 草稿 | 不变 | 不变 | 不增加 |\n| 整单发出 | 减少调拨数量 | 不变 | 增加调拨数量 |\n| 整单收货 | 不再扣减 | 增加调拨数量 | 结束对应在途 |",
+            "tables": [
+              {
+                "ordinal": 2,
+                "headers": [
+                  "业务时点",
+                  "来源仓现有量",
+                  "目标仓现有量",
+                  "调拨在途"
+                ],
+                "rows": [
+                  [
+                    "草稿",
+                    "不变",
+                    "不变",
+                    "不增加"
+                  ],
+                  [
+                    "整单发出",
+                    "减少调拨数量",
+                    "不变",
+                    "增加调拨数量"
+                  ],
+                  [
+                    "整单收货",
+                    "不再扣减",
+                    "增加调拨数量",
+                    "结束对应在途"
+                  ]
+                ],
+                "text": "| 业务时点 | 来源仓现有量 | 目标仓现有量 | 调拨在途 |\n| --- | --- | --- | --- |\n| 草稿 | 不变 | 不变 | 不增加 |\n| 整单发出 | 减少调拨数量 | 不变 | 增加调拨数量 |\n| 整单收货 | 不再扣减 | 增加调拨数量 | 结束对应在途 |",
+                "block_start": 19,
+                "block_end": 19
+              }
+            ],
+            "unit_ids": [
+              "INV-TRF-006-C009",
+              "INV-TRF-006-C010",
+              "INV-TRF-006-C011"
+            ],
+            "block_start": 15,
+            "block_end": 19,
+            "expansion_reason": "parent_section"
+          },
+          {
+            "context_id": "6cbb15b36338e9800ab4db7e0f09a4ce88df7544dd2c62b00de1bef0bd271390",
+            "document_id": "INV-TRF-006",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "8cb71cf74b0b5f2574a7e43334bd54eb4a6629bf34b3efebaec36a0323a0fac8",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "跨仓调拨与在途交接规程",
+              "2 草稿与发出"
+            ],
+            "context_text": "跨仓调拨与在途交接规程\n\n本规程控制同一门店下不同仓库之间的备件调拨、运输交接及在途核实。仅适用于内部库存位置变化，不以调拨表示采购、销售、维修消耗或所有权转移。当前为待核准稿。\n\n2 草稿与发出\n\nINV-TRF-006-C004 草稿记录来源仓、目标仓、SKU、整数数量、业务日期和用途，由管理员或库管创建并由创建人在审核中心提交；其他管理员或经理审核，不能审核本人创建或提交的单据。审核不改变库存，审核通过后才可另行发出。填写错误或驳回时取消后重建并重新审核，不改写原结论及已发出的明细。\nINV-TRF-006-C005 当前调拨按整单发出和整单收货，不支持部分发出、部分收货或发出后撤回。若实物计划只能分批，应在发出前拆分为能独立交接的多张单据并复核。\nINV-TRF-006-C006 发出前复核审核通过记录、整单明细及实物交接条件，提交时重新核对来源仓数量。审核通过不预留库存，任一行不足应整次失败，不能只发出可满足的行而保持原整单状态。\nINV-TRF-006-C007 发出成功后来源仓现有量减少，相同数量计入目标方向的调拨在途；目标仓现有量此时不增加。在途尚未可供目标仓领用，也不应在来源仓继续承诺为现货。\nINV-TRF-006-C008 发出业务日期不得早于调拨单日期或晚于办理日。系统登记与实物离库应同步核验，保留发出人、承运或交接人、交接时间和凭据；登记成功不自动证明实物运输已经完成。",
+            "tables": [],
+            "unit_ids": [
+              "INV-TRF-006-C004",
+              "INV-TRF-006-C005",
+              "INV-TRF-006-C006",
+              "INV-TRF-006-C007",
+              "INV-TRF-006-C008"
+            ],
+            "block_start": 9,
+            "block_end": 14,
+            "expansion_reason": "parent_section"
+          },
+          {
+            "context_id": "950f56b7a20420f725e22e1817bbf2294d778f9c49635a9fc922077a9864d252",
+            "document_id": "INV-GLO-011",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "43b21a4ea63ae31fef758a60cd087cef06cbd323f9c36b9d06d142e4271e193f",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "备件库存术语与检索同义词",
+              "1 库存与单位"
+            ],
+            "context_text": "备件库存术语与检索同义词\n\n本文统一检索和业务表达。状态为待核准，不表示企业已经批准相应制度；同义词只用于理解问题，不能改变单据类型、单位或权限。\n\n1 库存与单位\n\nINV-GLO-011-C001 SKU为内部唯一库存识别编码。厂家件号、OE号、品牌型号是其他识别信息，不能在没有核验对应关系时等同于SKU；相似编码也不构成替代关系。\n\nINV-GLO-011-C002 现有库存也称账面现存量、当前库存，表示指定仓库指定SKU已入账数量，不包括采购待收和目标方向调拨在途。\n\nINV-GLO-011-C003 可用库存也称可用量、可领数量，其基本公式为现有量减有效预留。当前无预留流程，系统可用量等于现有量；人工隔离等限制仍须核验，不能只依据系统数值断言可交付。\n\nINV-GLO-011-C004 采购待收又称采购未到、订单未收余量，限定为已确认或部分收货采购单的有效未收部分。采购草稿与已取消余量不属于有效待收。\n\nINV-GLO-011-C005 调拨在途又称内部在途、已发未收，指调拨已发出但目标仓未确认接收的数量。它与供应商发货或采购预计到货不是同一数量口径。\n\nINV-GLO-011-C006 本系统库存、收发及统计统一按件管理。一件表示一个SKU完整库存包装；整瓶、整桶、整套等差异写入名称或规格，不换算为升数、包装内个数或其他单位，不拆零收发。数量与单价均按同一库存包装计算。",
+            "tables": [],
+            "unit_ids": [
+              "INV-GLO-011-C001",
+              "INV-GLO-011-C002",
+              "INV-GLO-011-C003",
+              "INV-GLO-011-C004",
+              "INV-GLO-011-C005",
+              "INV-GLO-011-C006"
+            ],
+            "expansion_reason": "parent_section"
+          },
+          {
+            "context_id": "1beaa1896ff8a122afbbbbe42ba71ca0e53dd294da46811276fdc5e0f8a5830a",
+            "document_id": "INV-TRF-006",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "8cb71cf74b0b5f2574a7e43334bd54eb4a6629bf34b3efebaec36a0323a0fac8",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "跨仓调拨与在途交接规程",
+              "4 在途差异与异常"
+            ],
+            "context_text": "跨仓调拨与在途交接规程\n\n本规程控制同一门店下不同仓库之间的备件调拨、运输交接及在途核实。仅适用于内部库存位置变化，不以调拨表示采购、销售、维修消耗或所有权转移。当前为待核准稿。\n\n4 在途差异与异常\n\nINV-TRF-006-C012 少货、多货、错件或破损时，目标仓登记实物事实与证据并通知来源仓及负责人，暂不将整单标为已收货。部分已到达不代表系统已经具备部分收货能力，不得先按原数量全收后再线下修正。\nINV-TRF-006-C013 发出后运输取消、路线改变或要求退回，必须保留原调拨并建立异常处置。当前系统不支持发出后撤回或反向关联单时，不得仅凭批准就把在途清零，应等待获准的对应业务能力或受控处理方案。\nINV-TRF-006-C014 在途超期应按已约定的交接日期核查，不在缺少约定时臆造统一超期阈值。负责人指定核查人，确认实物位置、保管责任、损坏或遗失情况及后续处理，异常未解决前不能标为正常完成。\nINV-TRF-006-C015 物品遗失或损坏涉及责任及账务调整时，按INV-ADJ-008另行调查和批准。不能用虚构领用、采购收货或删除调拨单掩盖差异。",
+            "tables": [],
+            "unit_ids": [
+              "INV-TRF-006-C012",
+              "INV-TRF-006-C013",
+              "INV-TRF-006-C014",
+              "INV-TRF-006-C015"
+            ],
+            "block_start": 21,
+            "block_end": 25,
+            "expansion_reason": "branch_candidate_section"
+          },
+          {
+            "context_id": "9ae9bdff4a016b5526d9fcd699cbd7cc2d06fe0bbb2c41db97388aeaa5323d37",
+            "document_id": "INV-TRF-006",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "8cb71cf74b0b5f2574a7e43334bd54eb4a6629bf34b3efebaec36a0323a0fac8",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "跨仓调拨与在途交接规程",
+              "1 调拨计划"
+            ],
+            "context_text": "跨仓调拨与在途交接规程\n\n本规程控制同一门店下不同仓库之间的备件调拨、运输交接及在途核实。仅适用于内部库存位置变化，不以调拨表示采购、销售、维修消耗或所有权转移。当前为待核准稿。\n\n1 调拨计划\n\nINV-TRF-006-C001 调拨需求应说明目标仓用途、备件、数量、需要日期和来源仓。来源与目标仓不得相同；不同单位、不同SKU不能通过调拨互相折抵。\nINV-TRF-006-C002 提出方案前检查来源仓可用量及其目标库存、目标仓缺口、采购待收和其他在途，避免重复分配。同一批可调数量不能同时承诺给多个目标；执行前重新检查，方案本身不预留库存。\nINV-TRF-006-C003 来源仓与目标仓确认交接责任、运输方式和实际接收条件。搬运、质量及适配限制按物品实际要求核验，不能为满足调拨计划而发出待检或不合格品。",
+            "tables": [],
+            "unit_ids": [
+              "INV-TRF-006-C001",
+              "INV-TRF-006-C002",
+              "INV-TRF-006-C003"
+            ],
+            "block_start": 5,
+            "block_end": 8,
+            "expansion_reason": "branch_candidate_section"
+          },
+          {
+            "context_id": "7cd44db4f50390bc27cc746e48cc4141c39212b90dab6032591784753e6c20f5",
+            "document_id": "INV-ANA-009",
+            "document_version": "1.0-draft.4",
+            "source_sha256": "88834eadb30c54efc2b64c22ee2fa829148377a5aee51a7112a7aabdc15c8428",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "库存统计与补货调拨建议口径",
+              "3 补货计算"
+            ],
+            "context_text": "库存统计与补货调拨建议口径\n\n本文件统一数量、历史消耗、补货与调拨建议的解释，避免将现有量、预计供给和模型建议混为一谈。规则用于形成可复核建议，不能取代采购批准或实物核验。当前为待核准稿；补货与调拨建议服务尚未因本文件编写而自动上线。\n\n3 补货计算\n\nINV-ANA-009-C010 在历史覆盖、供应商与采购交期均已核实时，目标库存为“平均日消耗乘采购交期天数，加安全库存”后向上取整；建议补货量为目标库存减库存位置与零之间的较大值。\n\nINV-ANA-009-C011 建议应展示基准日、统计区间、SKU、仓库、单位、消耗总量、平均日消耗、交期、安全库存、可用量、采购待收、调拨在途、目标库存和建议数量，使复核人能够按原输入复算。\n\nINV-ANA-009-C012 历史不足、交期缺失、单位冲突、库存结果不新鲜或人工冻结未核验时，停止给出可执行的确定性数量，明确缺失项并转人工评估。不能让大模型以常识估算代替这些输入。\n\nINV-ANA-009-C013 计算示例：30日领用60件、交期5天、安全库存10件，则平均日消耗2件、目标库存20件。若可用4件、采购待收8件、调拨在途3件，库存位置15件，建议缺口5件。这个示例仅解释计算，不对应某企业的实际采购指令。",
+            "tables": [],
+            "unit_ids": [
+              "INV-ANA-009-C010",
+              "INV-ANA-009-C011",
+              "INV-ANA-009-C012",
+              "INV-ANA-009-C013"
+            ],
+            "expansion_reason": "branch_candidate_section"
+          },
+          {
+            "context_id": "fc32f15fb2920691e10c1eabde46210cc1c0f340583cdb27d1142a893177f017",
+            "document_id": "INV-ANA-009",
+            "document_version": "1.0-draft.4",
+            "source_sha256": "88834eadb30c54efc2b64c22ee2fa829148377a5aee51a7112a7aabdc15c8428",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "库存统计与补货调拨建议口径",
+              "1 库存数量定义"
+            ],
+            "context_text": "库存统计与补货调拨建议口径\n\n本文件统一数量、历史消耗、补货与调拨建议的解释，避免将现有量、预计供给和模型建议混为一谈。规则用于形成可复核建议，不能取代采购批准或实物核验。当前为待核准稿；补货与调拨建议服务尚未因本文件编写而自动上线。\n\n1 库存数量定义\n\nINV-ANA-009-C001 现有库存是指定仓库指定SKU已入账的当前数量。可用库存等于现有量减有效预留；当前没有预留流程，预留量为零，因此系统可用量等于现有量。不得展示虚构的预留能力。\n\nINV-ANA-009-C002 采购待收仅统计已确认或部分收货采购单仍有效的未收数量，排除草稿及取消余量。调拨在途仅统计本仓作为目标的已发出未收货数量。二者不计为现有库存。\n\nINV-ANA-009-C003 库存位置等于可用库存加采购待收加目标方向调拨在途，按相同SKU、仓库和单位计算。它表示计划供给位置，不等于现在可以领用的实物数量。\n\nINV-ANA-009-C004 低库存以当前现有量低于安全库存判断，零库存单列。低库存提示是核查入口，不直接构成采购需求；若需要不同低库存口径，应批准并同步界面、规则和评测，不静默改用库存位置。",
+            "tables": [],
+            "unit_ids": [
+              "INV-ANA-009-C001",
+              "INV-ANA-009-C002",
+              "INV-ANA-009-C003",
+              "INV-ANA-009-C004"
+            ],
+            "expansion_reason": "branch_candidate_section"
+          },
+          {
+            "context_id": "64e1ae97ebb2f80161c0a703beedde9f6390fbca8ccd92d33e525bea310d3a42",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "5 收货与取消"
+            ],
+            "context_text": "采购需求与采购单控制规程\n\n本规程将需求核验、业务批准、采购单确认和实际交付分开控制，适用于常规补货、维修专用件和紧急采购。当前为待核准稿，不授予实际签约或付款权限。\n\n5 收货与取消\n\nINV-PUR-003-C013 仅已确认或部分收货的采购单可登记实际收货。每次实收形成独立入库单，累计实收不得超过原采购行数量，也不得借用其他采购单的明细。验收及暂不接收情形按INV-RCV-004执行。\nINV-PUR-003-C014 部分收货后保留已收数量和剩余待收数量；全部完成后转为已完成。一次收货失败应整体回滚，不得出现某行入账而同次其他行失败后仍保留部分结果。\nINV-PUR-003-C015 可以取消草稿及已确认、部分收货采购单的未收余量。取消不退回已经收到的实物，也不删除实际入库或流水；已完成采购不通过取消实现退供。\nINV-PUR-003-C016 取消外部供货承诺或变更交期应另与供应商确认，保存回执。系统取消未收余量不自动通知供应商，也不代表合同违约责任、结算或退款已经处理。",
+            "tables": [],
+            "unit_ids": [
+              "INV-PUR-003-C013",
+              "INV-PUR-003-C014",
+              "INV-PUR-003-C015",
+              "INV-PUR-003-C016"
+            ],
+            "block_start": 23,
+            "block_end": 27,
+            "expansion_reason": "branch_candidate_section"
+          }
+        ],
+        "embedding_requests": 1,
+        "unavailable_documents": [],
+        "domain_error": null,
+        "document_ids": null,
+        "document_versions": null,
+        "candidate_limit": 20,
+        "context_budget": 12000,
+        "context_characters": 4029,
+        "omitted_contexts": [],
+        "missing_exact_ids": [],
+        "dense_candidates": 20,
+        "lexical_candidates": 20,
+        "rrf_constant": 60,
+        "timings": {
+          "qualification_seconds": 0.15,
+          "embedding_seconds": 0.212,
+          "retrieval_seconds": 0.473
+        },
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 30,
+            "completion_tokens": 0,
+            "total_tokens": 30
+          }
+        },
+        "chat_requests": 0,
+        "request_id": "98afb9816978404c8e29dad6817498ef",
+        "elapsed_seconds": 0.834
+      },
+      "checks": {
+        "correct_version": true,
+        "context_recovered": true,
+        "top_k_preserved": true,
+        "budget": true,
+        "no_chat": true
+      }
+    }
+  ],
+  "ready": {
+    "status": "ok",
+    "database": "connected"
+  },
+  "knowledge_status": {
+    "available": true,
+    "embedding_configured": true,
+    "chat_configured": true,
+    "generation_id": "01efb5f874eb427f9ed812cb842df97a",
+    "document_count": 19,
+    "unit_count": 242,
+    "context_count": 86,
+    "domains": {
+      "inventory_policies": {
+        "released_documents": 0,
+        "preview_documents": 12,
+        "domain_error": null
+      },
+      "general_diagnostics": {
+        "released_documents": 0,
+        "preview_documents": 7,
+        "domain_error": null
+      }
+    }
+  },
+  "business_digest": "f980d0338205e0e396abfeec969af3056faa6afb3563b79f4e0dfb8c8ea258a9",
+  "business_unchanged": true
+}
