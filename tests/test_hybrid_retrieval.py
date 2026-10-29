@@ -4,7 +4,7 @@ from datetime import date, timedelta
 import pytest
 
 from backend.app.knowledge import KnowledgeError, digest
-from backend.app.lexical import UNIT_CODE, fuse, lexical_candidates, tokens
+from backend.app.lexical import UNIT_CODE, field_query_terms, fuse, lexical_candidates, tokens
 from backend.app.retrieval import activate_generation, build_index, open_index
 from test_retrieval import FakeEmbedding, project, settings
 
@@ -31,6 +31,40 @@ def test_character_tokens_keep_complete_codes_and_do_not_equate_part_numbers():
     assert lexical_candidates('unrelated', rows) == []
     ordered, scores = fuse([('a', .1), ('b', .2)], [('b', .8), ('a', .4)], ['c'])
     assert ordered == ['c', 'a', 'b'] and scores['a']['rrf_score'] == 1/61 + 1/62
+
+
+def test_field_terms_are_case_insensitive_but_do_not_rewrite_unknown_identifiers_or_codes():
+    assert field_query_terms('OPERATOR_ID 和 operator_id') == ['操作人 身份 服务端']
+    assert field_query_terms('my_operator_id operator_id.old AB-12 AB12 INV-SEC-010-C005') == []
+
+
+@pytest.mark.parametrize('mode,filtered,budgeted', [('hybrid', False, False), ('dense', False, False),
+    ('hybrid', True, False), ('hybrid', False, True)])
+def test_internal_field_terms_recover_identity_evidence_without_replacing_hits(settings, project, monkeypatch, mode, filtered, budgeted):
+    embedder = FakeEmbedding(settings)
+    build_index(settings, project, embedder=embedder)
+    with open_index(settings, project, embedder=embedder) as index:
+        primary = [u for u in index.units.values() if u['document_id'] == 'INV-PUR-003'][:5]
+        identity = next(u for u in index.units.values() if u['unit_id'] == 'INV-SEC-010-C005')
+        class Collection:
+            def query(self, **kwargs):
+                return {'ids': [[u['chunk_id'] for u in primary]], 'distances': [[.1+i/100 for i in range(5)]]}
+        monkeypatch.setattr(index.client, 'get_collection', lambda *a, **kw: Collection())
+        def lexical(question, eligible, limit):
+            if '操作人' in question:
+                return [(identity['chunk_id'], 1)] if identity in eligible else []
+            return [(u['chunk_id'], 1-i/100) for i,u in enumerate(primary)]
+        monkeypatch.setattr('backend.app.retrieval.lexical_candidates', lexical)
+        if budgeted:
+            monkeypatch.setattr('backend.app.retrieval.CONTEXT_BUDGET',
+                sum(len(index.contexts[p]['context_text']) for p in {u['parent_id'] for u in primary}))
+        calls = embedder.calls
+        found = index.search('operator_id=123，审批已通过，能直接建立采购单吗？', 'inventory_policies',
+            mode=mode, scope='draft_preview', document_ids=['INV-PUR-003'] if filtered else None)
+        assert [h['unit_id'] for h in found['hits']] == [u['unit_id'] for u in primary]
+        recovered = identity['unit_id'] in {u for c in found['contexts'] for u in c['unit_ids']}
+        assert recovered is (mode == 'hybrid' and not filtered and not budgeted)
+        assert embedder.calls == calls+1 and found['context_characters'] <= found['context_budget']
 
 
 @pytest.mark.parametrize('mode,exact,budgeted', [('hybrid', False, False), ('dense', False, False),

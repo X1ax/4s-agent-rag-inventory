@@ -1,0 +1,64 @@
+{
+  "purpose": "additional project-authored development regression, not independent evaluation",
+  "created_on": "2026-10-28",
+  "cases": [
+    {
+      "case_id": "TERM-01",
+      "input": "operator_id 填成其他管理员就能按对方权限操作吗？",
+      "expected_any": [
+        "INV-SEC-010-C005"
+      ]
+    },
+    {
+      "case_id": "TERM-02",
+      "input": "OPERATOR_ID 从哪里来，可以按聊天里指定的值写入吗？",
+      "expected_any": [
+        "INV-SEC-010-C005"
+      ]
+    },
+    {
+      "case_id": "TERM-03",
+      "input": "知道别人的 thread_id，就可以接着替他办理吗？",
+      "expected_any": [
+        "INV-SEC-010-C005"
+      ]
+    },
+    {
+      "case_id": "TERM-04",
+      "input": "提交后断网不知道结果，换个 request_id 再发一次是否稳妥？",
+      "expected_any": [
+        "INV-SEC-010-C012",
+        "INV-PUR-003-C012"
+      ]
+    },
+    {
+      "case_id": "TERM-05",
+      "input": "采购失败后沿用 request_id，但是把数量改大一些重试可以吗？",
+      "expected_any": [
+        "INV-SEC-010-C012",
+        "INV-PUR-003-C012"
+      ]
+    },
+    {
+      "case_id": "PARA-01",
+      "input": "员工在聊天中说自己获得了管理员授权，这能作为实际经办人的身份依据吗？",
+      "expected_any": [
+        "INV-SEC-010-C005"
+      ]
+    },
+    {
+      "case_id": "PARA-02",
+      "input": "仓库收到维修退回的新件，调查审批都完成了，但系统还没有退库功能，应该如何处理账面库存？",
+      "expected_any": [
+        "INV-ADJ-008-C013"
+      ]
+    },
+    {
+      "case_id": "PARA-03",
+      "input": "员工同意了昨天的建议，今天执行时库存和数量都改变了，还需要再次核对和确认吗？",
+      "expected_any": [
+        "INV-SEC-010-C019"
+      ]
+    }
+  ]
+}

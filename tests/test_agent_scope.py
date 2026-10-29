@@ -5,8 +5,34 @@ from types import SimpleNamespace
 
 import pytest
 
-from backend.app.agent import run_agent
+from backend.app.agent import run_agent, worker
 from backend.app.knowledge_api import empty_answer
+
+
+@pytest.mark.parametrize('tool', ['knowledge', 'stock'])
+def test_specialist_does_not_describe_knowledge_as_a_business_snapshot(monkeypatch, tool):
+    from backend.app.agent_tools import ToolContext
+    runtime = SimpleNamespace(root=Path.cwd(), settings=SimpleNamespace())
+    ctx = ToolContext(runtime, None, 1, 'thread', 'turn', '请说明依据', allow_web=False)
+    messages = iter([
+        {'role':'assistant','content':None,'tool_calls':[{'id':'first','type':'function',
+            'function':{'name':tool,'arguments':'{}'}}]},
+        {'role':'assistant','content':None,'tool_calls':[{'id':'last','type':'function',
+            'function':{'name':'finish','arguments':json.dumps({'message':'', 'claims':[], 'follow_up_questions':[]})}}]},
+    ])
+    async def model(*args, **kwargs):
+        return next(messages), {}
+    async def call(name, arguments, role):
+        if name == 'knowledge':
+            answer = empty_answer('answered', '仅检索文档。')
+            ctx.knowledge_answers.append(answer)
+            return answer
+        return {'items':[]}
+    monkeypatch.setattr('backend.app.agent.chat_tools', model)
+    ctx.call = call
+    answer = asyncio.run(worker(ctx, '请说明依据', 'single'))
+    has_business_notice = any('业务查询来自本轮工具快照' in n for n in answer['limitations'])
+    assert has_business_notice is (tool == 'stock')
 
 
 @pytest.mark.parametrize('mode', ['single', 'multi'])

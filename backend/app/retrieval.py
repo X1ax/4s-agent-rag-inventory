@@ -19,10 +19,10 @@ from backend.app.knowledge import (ROOT, CORPORA, KnowledgeError, controlled_pat
     parse_corpora, read_bytes, read_json, verify_sources)
 
 from backend.app.knowledge_lifecycle import qualify_sources, verify_qualification
-from backend.app.lexical import DOCUMENT_CODE, UNIT_CODE, fuse, lexical_candidates
+from backend.app.lexical import DOCUMENT_CODE, UNIT_CODE, field_query_terms, fuse, lexical_candidates
 
 INDEX_VERSION = "dense-bge-m3-v1"
-RETRIEVAL_VERSION = "hybrid-tfidf-rrf-context-v2"
+RETRIEVAL_VERSION = "hybrid-tfidf-rrf-context-v3"
 CANDIDATE_LIMIT = 20
 CONTEXT_BUDGET = 12000
 # Persist every add, including its short tail: 1.5.9 cache reloads can lose unflushed ID mappings.
@@ -325,7 +325,8 @@ class DenseIndex:
         candidates = [{k: v for k, v in self.units[key].items() if k not in {"embedding_text", "index_status", "retrievable"}}
             | {"distance": distances.get(key), **scores.get(key, {}), **({"lexical_score": lexical_scores.get(key)} if mode == "hybrid" else {})}
             for key in ordered[:top_k]]
-        supplemental = []
+        supplemental, terminology = [], []
+        query_terms = []
         if mode == 'hybrid' and knowledge_base == 'inventory_policies' and not exact_ids:
             # Repeated clauses in one section must not hide the other branch's leading sections.
             for branch in (dense, lexical):
@@ -337,17 +338,28 @@ class DenseIndex:
                         supplemental.append(unit)
                     if len(parents) == top_k:
                         break
+            query_terms = field_query_terms(question)
+            if query_terms:
+                parents = set()
+                for key, _ in lexical_candidates(question+' '+' '.join(query_terms), eligible, CANDIDATE_LIMIT):
+                    unit = self.units[key]
+                    if unit['parent_id'] not in parents:
+                        parents.add(unit['parent_id'])
+                        terminology.append(unit)
+                    if len(parents) == top_k:
+                        break
         context_allowed = allowed | ({"DX-GEN-001"} if knowledge_base == "general_diagnostics" else set())
-        hits, contexts, omitted = self.expand_contexts(candidates, knowledge_base, context_allowed, supplemental)
+        hits, contexts, omitted = self.expand_contexts(candidates, knowledge_base, context_allowed, supplemental, terminology)
         if exact_ids and not set(exact_ids) <= {u["unit_id"] for u in hits}:
             result.update(status="insufficient_context", omitted_contexts=omitted)
             return finished()
         result.update(status="retrieved" if hits else "no_hits", hits=hits, contexts=contexts,
             context_characters=sum(len(c["context_text"]) for c in contexts), omitted_contexts=omitted,
+            query_terms=query_terms,
             dense_candidates=len(dense), lexical_candidates=len(lexical), rrf_constant=60 if mode == "hybrid" else None)
         return finished()
 
-    def expand_contexts(self, candidates, knowledge_base, allowed, supplemental=()):
+    def expand_contexts(self, candidates, knowledge_base, allowed, supplemental=(), terminology=()):
         selected, omitted, hits = {}, [], []
         size = 0
 
@@ -386,11 +398,12 @@ class DenseIndex:
                 if context["knowledge_base"] == knowledge_base and context["document_id"] == doc_id:
                     add(context, "explicit_reference")
         # Preserve all original evidence first; add whole eligible sections only within the same budget.
-        for unit in supplemental:
-            context = self.contexts[unit['parent_id']]
-            if context['knowledge_base'] != knowledge_base or context['document_id'] not in allowed:
-                raise KnowledgeError('index_corrupt', '补充上下文不属于本次允许来源')
-            add(context, 'branch_candidate_section')
+        for reason, units in [('branch_candidate_section', supplemental), ('field_terminology_section', terminology)]:
+            for unit in units:
+                context = self.contexts[unit['parent_id']]
+                if context['knowledge_base'] != knowledge_base or context['document_id'] not in allowed:
+                    raise KnowledgeError('index_corrupt', '补充上下文不属于本次允许来源')
+                add(context, reason)
         return hits, list(selected.values()), omitted
 
 

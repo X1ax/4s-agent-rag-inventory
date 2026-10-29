@@ -1,0 +1,1708 @@
+{
+  "scope": "real localhost HTTP, read-only knowledge queries; no business writes",
+  "cases": [
+    {
+      "id": "identity",
+      "http": 200,
+      "result": {
+        "generation_id": "01efb5f874eb427f9ed812cb842df97a",
+        "retrieval_mode": "hybrid",
+        "retrieval_version": "hybrid-tfidf-rrf-context-v3",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "top_k": 5,
+        "status": "retrieved",
+        "hits": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "unit_id": "INV-PUR-003-C008",
+            "chunk_id": "a6d009e8d2e0ad8d7ddf02d9f3f12d7573e414acfbc660ef92a3826498b83862",
+            "parent_id": "24160ccb946eee9eb2ae048e46fd5b4548ed72adcca5f18ffa759c9c80acdda3",
+            "title": "采购需求与采购单控制规程",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "3 批准与权限"
+            ],
+            "unit_text": "INV-PUR-003-C008 经办、复核和批准按企业岗位安排分工。采购草稿由管理员或库管创建，创建人在审核中心提交，由其他管理员或经理审核；禁止审核本人创建或提交的业务单据。审核记录保存提交人、审核人、时间和意见，不以聊天中的赞同代替业务审核。软件审核不自动证明合同、额度或外部企业授权已经满足。",
+            "embedding_text_sha256": "7ea308c171518dff19da9bf11d7b2ce98c52d03759808dc19aaf5efb0c69cbb2",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-office-v1",
+            "chunking_version": "clause-section-v1",
+            "block_start": 15,
+            "block_end": 15,
+            "distance": 0.27754127979278564,
+            "dense_rank": 1,
+            "lexical_rank": 4,
+            "rrf_score": 0.032018442622950824,
+            "exact_match": false,
+            "lexical_score": 0.10015446875659692
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "unit_id": "INV-PUR-003-C009",
+            "chunk_id": "4ab3de42209a59dd4addac409558c6bd1e363d6b7d29558927616f6807303868",
+            "parent_id": "f77e205f907fe653d43b464a652b8fbebe86c4637e19cb5becdb18e046238135",
+            "title": "采购需求与采购单控制规程",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "4 采购单建立与确认"
+            ],
+            "unit_text": "INV-PUR-003-C009 建立采购草稿时选择业务仓库，每条明细先选供应商再选其供货范围内的备件，录入正整数数量、准确单位及非负单价。同单不得重复同一SKU，业务日期不得晚于办理日。供应商、仓库和备件须处于允许办理状态。",
+            "embedding_text_sha256": "e5dc1a34101b56f55c44a8ac5c9fd88641d0dc6adccc12315231c8192e51b1ce",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-office-v1",
+            "chunking_version": "clause-section-v1",
+            "block_start": 19,
+            "block_end": 19,
+            "distance": 0.29685795307159424,
+            "dense_rank": 5,
+            "lexical_rank": 5,
+            "rrf_score": 0.03076923076923077,
+            "exact_match": false,
+            "lexical_score": 0.09950717617283811
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "unit_id": "INV-PUR-003-C010",
+            "chunk_id": "0a7f5d9397f66b01eed9bbb02cfcf92c0bf2028d4d49eb17f38a7f0649984e55",
+            "parent_id": "f77e205f907fe653d43b464a652b8fbebe86c4637e19cb5becdb18e046238135",
+            "title": "采购需求与采购单控制规程",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "4 采购单建立与确认"
+            ],
+            "unit_text": "INV-PUR-003-C010 草稿审核通过后，由管理员或库管另行执行业务确认，进入已确认状态；审核本身不确认采购，也不增加库存。创建或确认均不增加现有库存；确认后的有效未收数量可计入采购待收，但不等于合同已签署、外部订单已发送或付款已完成。",
+            "embedding_text_sha256": "1191017e41beb25db030598c39957e36fa7fa814eba4994bece3fba7a7f15773",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-office-v1",
+            "chunking_version": "clause-section-v1",
+            "block_start": 20,
+            "block_end": 20,
+            "distance": 0.2859872579574585,
+            "dense_rank": 3,
+            "lexical_rank": 9,
+            "rrf_score": 0.03036576949620428,
+            "exact_match": false,
+            "lexical_score": 0.09288873926168027
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "unit_id": "INV-PUR-003-C012",
+            "chunk_id": "ccd7ad576b7eb42816ebb27d5fe3720dedc52278984aa5376e9ac3711dea173e",
+            "parent_id": "f77e205f907fe653d43b464a652b8fbebe86c4637e19cb5becdb18e046238135",
+            "title": "采购需求与采购单控制规程",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "4 采购单建立与确认"
+            ],
+            "unit_text": "INV-PUR-003-C012 同一业务请求以唯一请求标识办理。结果不明时先检查单据状态与请求结果，重试原请求；变更参数需要重新复核，不复用与原参数不同的请求标识。",
+            "embedding_text_sha256": "26e69878e5fbea0686aa6ea1255826093bcaf5faea4b1b678d867060be3189e1",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-office-v1",
+            "chunking_version": "clause-section-v1",
+            "block_start": 22,
+            "block_end": 22,
+            "distance": 0.2960125207901001,
+            "dense_rank": 4,
+            "lexical_rank": 16,
+            "rrf_score": 0.028782894736842105,
+            "exact_match": false,
+            "lexical_score": 0.07301950969045012
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "unit_id": "INV-PUR-003-C015",
+            "chunk_id": "4a74f00a541c6d4299803e43f978838a21e5a39accb61f1ed5a05252b3166749",
+            "parent_id": "64e1ae97ebb2f80161c0a703beedde9f6390fbca8ccd92d33e525bea310d3a42",
+            "title": "采购需求与采购单控制规程",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "5 收货与取消"
+            ],
+            "unit_text": "INV-PUR-003-C015 可以取消草稿及已确认、部分收货采购单的未收余量。取消不退回已经收到的实物，也不删除实际入库或流水；已完成采购不通过取消实现退供。",
+            "embedding_text_sha256": "341aa5c34b9af0972e2af61d6c0f66cf75c7dfdd6cf7486f89b7de306106de2d",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-office-v1",
+            "chunking_version": "clause-section-v1",
+            "block_start": 26,
+            "block_end": 26,
+            "distance": 0.3179653286933899,
+            "dense_rank": 7,
+            "lexical_rank": 17,
+            "rrf_score": 0.027912386121341344,
+            "exact_match": false,
+            "lexical_score": 0.07288426756077493
+          }
+        ],
+        "contexts": [
+          {
+            "context_id": "24160ccb946eee9eb2ae048e46fd5b4548ed72adcca5f18ffa759c9c80acdda3",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "3 批准与权限"
+            ],
+            "context_text": "采购需求与采购单控制规程\n\n本规程将需求核验、业务批准、采购单确认和实际交付分开控制，适用于常规补货、维修专用件和紧急采购。当前为待核准稿，不授予实际签约或付款权限。\n\n3 批准与权限\n\nINV-PUR-003-C007 采购批准应关联需求与报价的最终版本，确认金额口径、用途、数量及授权范围。批准额度和审批层级必须来自企业有效授权表，未登记时提交负责人核定，不以软件角色推定无限授权。\nINV-PUR-003-C008 经办、复核和批准按企业岗位安排分工。采购草稿由管理员或库管创建，创建人在审核中心提交，由其他管理员或经理审核；禁止审核本人创建或提交的业务单据。审核记录保存提交人、审核人、时间和意见，不以聊天中的赞同代替业务审核。软件审核不自动证明合同、额度或外部企业授权已经满足。\n| 控制环节 | 责任岗位 | 需要确认的记录 |\n| --- | --- | --- |\n| 需求核实 | 需求提出人与仓管 | 用途 数量 实时供给 工单或补货依据 |\n| 采购复核 | 采购经办与复核岗位 | 规格 供应商 报价 交期 批准对象 |\n| 授权批准 | 企业授权批准人 | 授权范围 批准版本 例外原因 |\n| 到货验收 | 仓管与必要技术岗位 | 实收数量 质量标识 差异及交接 |",
+            "tables": [
+              {
+                "ordinal": 2,
+                "headers": [
+                  "控制环节",
+                  "责任岗位",
+                  "需要确认的记录"
+                ],
+                "rows": [
+                  [
+                    "需求核实",
+                    "需求提出人与仓管",
+                    "用途 数量 实时供给 工单或补货依据"
+                  ],
+                  [
+                    "采购复核",
+                    "采购经办与复核岗位",
+                    "规格 供应商 报价 交期 批准对象"
+                  ],
+                  [
+                    "授权批准",
+                    "企业授权批准人",
+                    "授权范围 批准版本 例外原因"
+                  ],
+                  [
+                    "到货验收",
+                    "仓管与必要技术岗位",
+                    "实收数量 质量标识 差异及交接"
+                  ]
+                ],
+                "text": "| 控制环节 | 责任岗位 | 需要确认的记录 |\n| --- | --- | --- |\n| 需求核实 | 需求提出人与仓管 | 用途 数量 实时供给 工单或补货依据 |\n| 采购复核 | 采购经办与复核岗位 | 规格 供应商 报价 交期 批准对象 |\n| 授权批准 | 企业授权批准人 | 授权范围 批准版本 例外原因 |\n| 到货验收 | 仓管与必要技术岗位 | 实收数量 质量标识 差异及交接 |",
+                "block_start": 16,
+                "block_end": 16
+              }
+            ],
+            "unit_ids": [
+              "INV-PUR-003-C007",
+              "INV-PUR-003-C008"
+            ],
+            "block_start": 13,
+            "block_end": 16,
+            "expansion_reason": "parent_section"
+          },
+          {
+            "context_id": "f77e205f907fe653d43b464a652b8fbebe86c4637e19cb5becdb18e046238135",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "4 采购单建立与确认"
+            ],
+            "context_text": "采购需求与采购单控制规程\n\n本规程将需求核验、业务批准、采购单确认和实际交付分开控制，适用于常规补货、维修专用件和紧急采购。当前为待核准稿，不授予实际签约或付款权限。\n\n4 采购单建立与确认\n\nINV-PUR-003-C009 建立采购草稿时选择业务仓库，每条明细先选供应商再选其供货范围内的备件，录入正整数数量、准确单位及非负单价。同单不得重复同一SKU，业务日期不得晚于办理日。供应商、仓库和备件须处于允许办理状态。\nINV-PUR-003-C010 草稿审核通过后，由管理员或库管另行执行业务确认，进入已确认状态；审核本身不确认采购，也不增加库存。创建或确认均不增加现有库存；确认后的有效未收数量可计入采购待收，但不等于合同已签署、外部订单已发送或付款已完成。\nINV-PUR-003-C011 当前草稿没有直接编辑能力，填写错误或审核驳回后应取消并重新建立，保留原意见及原草稿关联，不覆盖原审核结论。重新制单需重新提交审核；不得修改主数据或历史明细来绕过审核。\nINV-PUR-003-C012 同一业务请求以唯一请求标识办理。结果不明时先检查单据状态与请求结果，重试原请求；变更参数需要重新复核，不复用与原参数不同的请求标识。",
+            "tables": [],
+            "unit_ids": [
+              "INV-PUR-003-C009",
+              "INV-PUR-003-C010",
+              "INV-PUR-003-C011",
+              "INV-PUR-003-C012"
+            ],
+            "block_start": 18,
+            "block_end": 22,
+            "expansion_reason": "parent_section"
+          },
+          {
+            "context_id": "64e1ae97ebb2f80161c0a703beedde9f6390fbca8ccd92d33e525bea310d3a42",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "5 收货与取消"
+            ],
+            "context_text": "采购需求与采购单控制规程\n\n本规程将需求核验、业务批准、采购单确认和实际交付分开控制，适用于常规补货、维修专用件和紧急采购。当前为待核准稿，不授予实际签约或付款权限。\n\n5 收货与取消\n\nINV-PUR-003-C013 仅已确认或部分收货的采购单可登记实际收货。每次实收形成独立入库单，累计实收不得超过原采购行数量，也不得借用其他采购单的明细。验收及暂不接收情形按INV-RCV-004执行。\nINV-PUR-003-C014 部分收货后保留已收数量和剩余待收数量；全部完成后转为已完成。一次收货失败应整体回滚，不得出现某行入账而同次其他行失败后仍保留部分结果。\nINV-PUR-003-C015 可以取消草稿及已确认、部分收货采购单的未收余量。取消不退回已经收到的实物，也不删除实际入库或流水；已完成采购不通过取消实现退供。\nINV-PUR-003-C016 取消外部供货承诺或变更交期应另与供应商确认，保存回执。系统取消未收余量不自动通知供应商，也不代表合同违约责任、结算或退款已经处理。",
+            "tables": [],
+            "unit_ids": [
+              "INV-PUR-003-C013",
+              "INV-PUR-003-C014",
+              "INV-PUR-003-C015",
+              "INV-PUR-003-C016"
+            ],
+            "block_start": 23,
+            "block_end": 27,
+            "expansion_reason": "parent_section"
+          },
+          {
+            "context_id": "e56052357a07121fd3d540fc4287b85dff3065d946ef66408cd7a5901f52cfa6",
+            "document_id": "INV-RCV-004",
+            "document_version": "1.0-draft.1",
+            "source_sha256": "f497ad544d961c2b86895fedfc74ff6bf0c4d109fe810b53e45d298e7a1baac3",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "到货验收与实际入库作业规范",
+              "1 收货前准备"
+            ],
+            "context_text": "到货验收与实际入库作业规范\n\n本规范规定到货核验、合格实收、单据登记及收货异常的处理方式，防止预计到货或不合格品提前进入可用库存。当前为企业制度待核准稿。\n\n1 收货前准备\n\nINV-RCV-004-C001 收货人核实采购单、供应商送货依据、接收仓库及允许接收的未收数量。采购处于草稿、已完成或已取消状态时，不登记采购实际入库，应先确认业务依据。\nINV-RCV-004-C002 接收前检查库区、搬运和必要验收条件。需技术判定、特殊保管或质量核验的物品，提前通知对应岗位；不以库位不足或维修催料为由省略验收。\nINV-RCV-004-C003 接收凭据应能识别供应商、关联采购、送货日期、件号或规格、单位、数量及包装标识。电子与纸质凭据应建立同一关联编号，不能仅凭口头说明办理。",
+            "tables": [],
+            "unit_ids": [
+              "INV-RCV-004-C001",
+              "INV-RCV-004-C002",
+              "INV-RCV-004-C003"
+            ],
+            "page_start": 1,
+            "page_end": 1,
+            "expansion_reason": "explicit_reference"
+          },
+          {
+            "context_id": "6c5b36ece25a621c76fd45abca14336f08871b6b90052c72a6d04625f38edadb",
+            "document_id": "INV-RCV-004",
+            "document_version": "1.0-draft.1",
+            "source_sha256": "f497ad544d961c2b86895fedfc74ff6bf0c4d109fe810b53e45d298e7a1baac3",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "到货验收与实际入库作业规范",
+              "2 实物验收"
+            ],
+            "context_text": "到货验收与实际入库作业规范\n\n本规范规定到货核验、合格实收、单据登记及收货异常的处理方式，防止预计到货或不合格品提前进入可用库存。当前为企业制度待核准稿。\n\n2 实物验收\n\nINV-RCV-004-C004 逐项核对SKU对应的厂家件号、规格、包装单位、数量、外观、封装及必要的批次、有效期和随附资料。图片只作辅助识别，实物不符时不能用同类图片替代验收依据。\nINV-RCV-004-C005 涉及车辆适配时，应依据已核验的车辆条件和零件适配资料确认，不以名称相同、能安装或有库存认定合格。无法确认时转技术复核，暂不作为可交付备件放行。\nINV-RCV-004-C006 批次、有效期、序列号或质量文件需要追踪而当前系统没有对应字段时，应建立受控验收附件并关联单据。不得在问答中宣称系统已经提供批次库存、效期自动控制或序列号追踪。\nINV-RCV-004-C007 缺件、错件、破损、标识异常、到期或资料不足的物品，应分别记录接收与拒收数量、证据、临时保管地点和处理责任人。待检或拒收部分不得先计入现有可用量再等待处置。",
+            "tables": [],
+            "unit_ids": [
+              "INV-RCV-004-C004",
+              "INV-RCV-004-C005",
+              "INV-RCV-004-C006",
+              "INV-RCV-004-C007"
+            ],
+            "page_start": 1,
+            "page_end": 1,
+            "expansion_reason": "explicit_reference"
+          },
+          {
+            "context_id": "d308765b13ff978fdbce5d9a61204bef5016d1d606cf80d7c0bea64a7ce6ae95",
+            "document_id": "INV-RCV-004",
+            "document_version": "1.0-draft.1",
+            "source_sha256": "f497ad544d961c2b86895fedfc74ff6bf0c4d109fe810b53e45d298e7a1baac3",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "到货验收与实际入库作业规范",
+              "3 实际入库登记"
+            ],
+            "context_text": "到货验收与实际入库作业规范\n\n本规范规定到货核验、合格实收、单据登记及收货异常的处理方式，防止预计到货或不合格品提前进入可用库存。当前为企业制度待核准稿。\n\n3 实际入库登记\n\nINV-RCV-004-C008 只将本次已验收合格并实际接收的数量，登记到原采购单对应明细。数量为正整数，可分次接收；同一次收货明细不得重复，累计实收不得超出采购数量。\nINV-RCV-004-C009 实收日期不得早于采购单业务日期或晚于办理日。系统允许的日期校验不替代企业对补录的批准；补录须说明实际收货依据和延迟原因，不修改记录创建时间来掩盖补录。\nINV-RCV-004-C010 当前整套、整瓶、整桶作为整数单位入库，不以小数形式登记拆包。包装变化应先核对SKU及获准单位方案，不临时把一桶解释为一瓶。\nINV-RCV-004-C011 确认入库前核对仓库、每行数量、采购来源和批准或验收附件编号。成功后生成独立入库单、增加库存余额并记录流水，同时更新采购累计实收及状态；未成功前不得视为入账完成。\nINV-RCV-004-C012 收货请求超时后，先核实原采购的已收数量、关联入库单和流水，再以原请求重试。不能为了快速完成而新建相同实收，重复把同一批到货入账。",
+            "tables": [],
+            "unit_ids": [
+              "INV-RCV-004-C008",
+              "INV-RCV-004-C009",
+              "INV-RCV-004-C010",
+              "INV-RCV-004-C011",
+              "INV-RCV-004-C012"
+            ],
+            "page_start": 1,
+            "page_end": 2,
+            "expansion_reason": "explicit_reference"
+          },
+          {
+            "context_id": "61e40976beeadf94ad4d87ed7180b0216f4b263ef6b0c90d622655c3ba7c8765",
+            "document_id": "INV-RCV-004",
+            "document_version": "1.0-draft.1",
+            "source_sha256": "f497ad544d961c2b86895fedfc74ff6bf0c4d109fe810b53e45d298e7a1baac3",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "到货验收与实际入库作业规范",
+              "4 超量及差异处理"
+            ],
+            "context_text": "到货验收与实际入库作业规范\n\n本规范规定到货核验、合格实收、单据登记及收货异常的处理方式，防止预计到货或不合格品提前进入可用库存。当前为企业制度待核准稿。\n\n4 超量及差异处理\n\nINV-RCV-004-C013 超量到货不直接超采购量入账。采购岗位先确认供应商是否拉回多送部分，或经过变更批准后建立独立且可追溯的采购依据。不得借其他采购单的余量接收本批货物。\nINV-RCV-004-C014 采购20件、本次合格8件时，仅登记8件，剩余12件继续为有效采购待收；待收12件不计入现有库存。后续取消这12件，不影响已收8件的实物和流水。\nINV-RCV-004-C015 已入库后发现质量或登记错误，不能删除入库单或把采购已收数量手动调回。先隔离实物、暂停相关放行，再按INV-ADJ-008处理；批准记录不等于反向业务已经入账。\nINV-RCV-004-C016 系统入库完成但实物交接尚未完成时，应记录位置、保管责任和交接未结原因；实物已到但入账失败时，应保持待处理标识并避免重复领用，不能把两种状态混为正常可用。",
+            "tables": [],
+            "unit_ids": [
+              "INV-RCV-004-C013",
+              "INV-RCV-004-C014",
+              "INV-RCV-004-C015",
+              "INV-RCV-004-C016"
+            ],
+            "page_start": 2,
+            "page_end": 2,
+            "expansion_reason": "explicit_reference"
+          },
+          {
+            "context_id": "e302593fd06f1bb2649919a8f87cdf9623a86494ca785c1db07a248f2f890f45",
+            "document_id": "INV-RCV-004",
+            "document_version": "1.0-draft.1",
+            "source_sha256": "f497ad544d961c2b86895fedfc74ff6bf0c4d109fe810b53e45d298e7a1baac3",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "到货验收与实际入库作业规范",
+              "5 记录与复核"
+            ],
+            "context_text": "到货验收与实际入库作业规范\n\n本规范规定到货核验、合格实收、单据登记及收货异常的处理方式，防止预计到货或不合格品提前进入可用库存。当前为企业制度待核准稿。\n\n5 记录与复核\n\nINV-RCV-004-C017 验收记录至少保留采购编号、入库编号、到货依据、SKU及规格、采购单位、到货数、合格实收数、异常数、验收人、交接人、业务日期和必要附件索引。\n| 核验项目 | 放行条件 | 不满足时处理 |\n| --- | --- | --- |\n| 采购来源 | 允许收货且明细属于本单 | 暂停登记并联系采购岗位 |\n| 实物与标识 | 编码规格单位及数量相符 | 记录差异并隔离待核验 |\n| 接收数量 | 合格实收且不超未收数量 | 拒绝超量入账并处理变更 |\n| 登记结果 | 入库单与流水可核查 | 查询原请求后重试 |\nINV-RCV-004-C018 仓储负责人复核收货异常和未结交接，采购岗位跟进供应商处理，财务按其职责核对结算资料。入库成功不代表质量保修、发票核对或付款审核已全部结束。",
+            "tables": [
+              {
+                "ordinal": 2,
+                "headers": [
+                  "核验项目",
+                  "放行条件",
+                  "不满足时处理"
+                ],
+                "rows": [
+                  [
+                    "采购来源",
+                    "允许收货且明细属于本单",
+                    "暂停登记并联系采购岗位"
+                  ],
+                  [
+                    "实物与标识",
+                    "编码规格单位及数量相符",
+                    "记录差异并隔离待核验"
+                  ],
+                  [
+                    "接收数量",
+                    "合格实收且不超未收数量",
+                    "拒绝超量入账并处理变更"
+                  ],
+                  [
+                    "登记结果",
+                    "入库单与流水可核查",
+                    "查询原请求后重试"
+                  ]
+                ],
+                "text": "| 核验项目 | 放行条件 | 不满足时处理 |\n| --- | --- | --- |\n| 采购来源 | 允许收货且明细属于本单 | 暂停登记并联系采购岗位 |\n| 实物与标识 | 编码规格单位及数量相符 | 记录差异并隔离待核验 |\n| 接收数量 | 合格实收且不超未收数量 | 拒绝超量入账并处理变更 |\n| 登记结果 | 入库单与流水可核查 | 查询原请求后重试 |",
+                "page_start": 2,
+                "page_end": 2
+              }
+            ],
+            "unit_ids": [
+              "INV-RCV-004-C017",
+              "INV-RCV-004-C018"
+            ],
+            "page_start": 2,
+            "page_end": 2,
+            "expansion_reason": "explicit_reference"
+          },
+          {
+            "context_id": "ba5fd7db4ec7e5212dd032007a6f8d9033475b7937106884c5cdf2e46ebc533b",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "6 异常闭环与记录"
+            ],
+            "context_text": "采购需求与采购单控制规程\n\n本规程将需求核验、业务批准、采购单确认和实际交付分开控制，适用于常规补货、维修专用件和紧急采购。当前为待核准稿，不授予实际签约或付款权限。\n\n6 异常闭环与记录\n\nINV-PUR-003-C017 延迟、缺货、错件、价格差异、超量到货及失去资格的供应商，应登记异常事项、责任人、临时措施、处理时限和结果。具体承诺与索赔条件以有效合同为依据，不由知识问答生成新的供应商义务。\nINV-PUR-003-C018 紧急采购仍应确认身份、用途、规格及授权，保留例外批准和后续复核。紧急不构成负库存出库、假收货、跳过质量检查或由智能体自行对外下单的理由。\nINV-PUR-003-C019 采购归档应包括需求依据、批准记录、合同或报价、外部订单及回执、系统采购编号、收货记录、异常处理和必要对账资料。保存年限由企业档案和财务要求核定，不在未核准时虚构固定年限。\nINV-PUR-003-C020 采购未结清单应逐项核实是否仍有效、是否逾期及是否重复。未结状态的治理不得通过直接改余额或删除历史单据完成。",
+            "tables": [],
+            "unit_ids": [
+              "INV-PUR-003-C017",
+              "INV-PUR-003-C018",
+              "INV-PUR-003-C019",
+              "INV-PUR-003-C020"
+            ],
+            "block_start": 28,
+            "block_end": 32,
+            "expansion_reason": "branch_candidate_section"
+          },
+          {
+            "context_id": "46490e291529b11a0f0196f975b0b2b4973c3bf060a9911a4e6bd3ca5fa9ee8d",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "1 需求提出与查重"
+            ],
+            "context_text": "采购需求与采购单控制规程\n\n本规程将需求核验、业务批准、采购单确认和实际交付分开控制，适用于常规补货、维修专用件和紧急采购。当前为待核准稿，不授予实际签约或付款权限。\n\n1 需求提出与查重\n\nINV-PUR-003-C001 需求申请应列明用途、SKU或待核实部件、需求仓库、数量、单位、需要日期及相关维修或补货依据。车型适配未核实的专用件不得仅凭症状或相似名称直接转为采购指令。\nINV-PUR-003-C002 提出采购前核对可用量、已确认采购未收数量、目标方向调拨在途和其他仓可调余量，避免重复占用同一供给。统计时间、单位和覆盖限制按INV-ANA-009说明，不能把草稿采购计入已落实供给。\nINV-PUR-003-C003 历史不足、交期缺失或供应商未核实时，可提出需人工评估的需求，不得以模型猜测补齐计算输入。安全库存缺口不必然等于采购量，还需检查在途、待收和其他仓调拨条件。",
+            "tables": [],
+            "unit_ids": [
+              "INV-PUR-003-C001",
+              "INV-PUR-003-C002",
+              "INV-PUR-003-C003"
+            ],
+            "block_start": 5,
+            "block_end": 8,
+            "expansion_reason": "branch_candidate_section"
+          },
+          {
+            "context_id": "7ace2e03e18d91babfacaadea5c4836ccf6f15f377f56d98abc823dd1e8c04a6",
+            "document_id": "INV-POL-001",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "2d2cb9db61026201c0ab84b57475f5286f18bf093f95844d78f9c02dfdfa6516",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "备件库存管理总则与职责",
+              "4 授权与业务放行"
+            ],
+            "context_text": "备件库存管理总则与职责\n\n本制度建立门店备件从需求提出、采购、验收、保管、领用、调拨到差异处理的控制要求，适用于单门店下各仓库及参与业务、财务、质量和系统管理的岗位。文件按企业内部制度编制；实际经营主体、审批人、生效日期及授权参数须经企业核准。当前为待核准稿，不能作为已经生效的授权文件。\n\n4 授权与业务放行\n\nINV-POL-001-C014 业务批准应能确认批准人身份、授权范围、批准对象、版本、数量及必要金额。批准后变更备件、仓库、数量、价格或动作，应按变更影响重新复核，不得沿用不再匹配的批准。\n\nINV-POL-001-C015 金额审批限额、紧急采购授权、报损权限和代班权限由企业授权表核定。未核定时，不得假定存在默认限额或无限授权，应提交授权负责人处理。\n\nINV-POL-001-C016 当前系统中的管理员、库管和经理是技术访问角色。岗位授权与账号角色应分别登记；经理只读角色的存在不代表系统具备经理在线审批功能。系统未承载的批准应保存于受控记录，并在单据中登记可追溯的记录编号。",
+            "tables": [],
+            "unit_ids": [
+              "INV-POL-001-C014",
+              "INV-POL-001-C015",
+              "INV-POL-001-C016"
+            ],
+            "expansion_reason": "branch_candidate_section"
+          },
+          {
+            "context_id": "956e33e3a493078acbcf719893fa270577cf94f3cece2e1ec0e9fc2c90cf46ef",
+            "document_id": "INV-POL-001",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "2d2cb9db61026201c0ab84b57475f5286f18bf093f95844d78f9c02dfdfa6516",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "备件库存管理总则与职责",
+              "6 文件发布与修订"
+            ],
+            "context_text": "备件库存管理总则与职责\n\n本制度建立门店备件从需求提出、采购、验收、保管、领用、调拨到差异处理的控制要求，适用于单门店下各仓库及参与业务、财务、质量和系统管理的岗位。文件按企业内部制度编制；实际经营主体、审批人、生效日期及授权参数须经企业核准。当前为待核准稿，不能作为已经生效的授权文件。\n\n6 文件发布与修订\n\nINV-POL-001-C020 本套制度须完成经营主体确认、业务与财务复核、授权审批、生效日期登记及相关岗位宣贯后方可发布。当前版本的批准人和生效日期均未登记；检索时必须保留“待核准”状态，不得回答为已经生效的企业规定。\n\nINV-POL-001-C021 修订应记录变更原因、受影响条款、版本、审核人和替代关系。旧版保留以供历史追溯，但不得继续作为当前办理依据。制度变更不自动修改已生效的历史业务事实。\n\nINV-POL-001-C022 本制度与INV-MDM-002、INV-PUR-003、INV-RCV-004、INV-ISS-005、INV-TRF-006、INV-WHS-007、INV-ADJ-008、INV-ANA-009、INV-SEC-010和INV-SUP-012共同使用，术语以INV-GLO-011为准。",
+            "tables": [],
+            "unit_ids": [
+              "INV-POL-001-C020",
+              "INV-POL-001-C021",
+              "INV-POL-001-C022"
+            ],
+            "expansion_reason": "branch_candidate_section"
+          },
+          {
+            "context_id": "b72efa2f2f1cd6ca984e4e806cb061fd5f30c7e1908a2d5313c72abea6c9b43f",
+            "document_id": "INV-SEC-010",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "209c9369b39b565df321f5537f511e5b87026800e29ff718fbcbd4a41d34aa9c",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "库存权限审计与业务连续性管理办法",
+              "1 账号与角色"
+            ],
+            "context_text": "库存权限审计与业务连续性管理办法\n\n本办法规定账号授权、业务记录、异常重试、系统中断与知识辅助的控制要求。当前为企业制度待核准稿；制度要求不能代替实际安全配置、备份恢复验证和生产上线审核。\n\n1 账号与角色\n\nINV-SEC-010-C001 一人一账号，按岗位需要授予权限，禁止共用管理员或库管账号。入职、调岗、离岗及代班应由业务负责人确认并登记授权或撤销，系统维护人员不能自行批准业务权限范围。\n\nINV-SEC-010-C002 管理员可维护主数据、账号、库存业务及审计查询，审核知识资料，也可审核他人的采购与调拨单。库管可查询、制单、提交本人采购与调拨单审核，办理期初、收货、领用及调拨收发，但不能审核。经理可查看业务资料并审核采购与调拨单，不能办理库存登记、维护主数据或审核知识资料。三类角色均可上传资料，经理与库管只能查看本人上传记录；管理员审核并完成索引后方可检索。权限由服务端实施，隐藏按钮不构成授权控制。\n\nINV-SEC-010-C003 不能停用或降级当前管理员自身；需要移交管理职责时先确保有经批准的接替账号和交接安排。角色变更应复核实际岗位授权和后续访问，不把技术角色名称当作业务审批权限。\n\nINV-SEC-010-C004 密码、密钥和数据库连接信息不进入业务备注、文档知识库、截图或聊天。凭据由受控配置保管，密码不得明文存储；账号开通和凭据重置按企业安全流程处理，不从他人会话猜测或恢复密码。",
+            "tables": [],
+            "unit_ids": [
+              "INV-SEC-010-C001",
+              "INV-SEC-010-C002",
+              "INV-SEC-010-C003",
+              "INV-SEC-010-C004"
+            ],
+            "expansion_reason": "branch_candidate_section"
+          },
+          {
+            "context_id": "e7e210e2cbd7478df11750d0581bef471a12c3f588f33cd7c08c65cb2382600e",
+            "document_id": "INV-SEC-010",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "209c9369b39b565df321f5537f511e5b87026800e29ff718fbcbd4a41d34aa9c",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "库存权限审计与业务连续性管理办法",
+              "2 身份与访问边界"
+            ],
+            "context_text": "库存权限审计与业务连续性管理办法\n\n本办法规定账号授权、业务记录、异常重试、系统中断与知识辅助的控制要求。当前为企业制度待核准稿；制度要求不能代替实际安全配置、备份恢复验证和生产上线审核。\n\n2 身份与访问边界\n\nINV-SEC-010-C005 业务实际操作人由服务端身份取得，不接受聊天内容或工具参数指定另一个操作人。账号已停用或权限不足时拒绝办理，持有单据编号或会话编号本身不构成操作授权。\n\nINV-SEC-010-C006 当前登录令牌有效期为一小时，仅保存在页面内存，刷新需重新登录；退出清除本页会话，不具备已复制令牌的提前吊销能力。发生凭据或令牌泄露时应暂停相关账号并由安全岗位评估，不把点击退出当作全部风险已解除。\n\nINV-SEC-010-C007 对外访问、密码重置、登录失败监控、限速及其他生产安全要求应在上线前专项确认。现有本地运行与通过功能测试不等于已经满足互联网生产部署要求。",
+            "tables": [],
+            "unit_ids": [
+              "INV-SEC-010-C005",
+              "INV-SEC-010-C006",
+              "INV-SEC-010-C007"
+            ],
+            "expansion_reason": "field_terminology_section"
+          },
+          {
+            "context_id": "25462d19103bf59c7336569f7894cdbef3d14cf539509f6e9f8a8dcdf3d484f6",
+            "document_id": "INV-SEC-010",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "209c9369b39b565df321f5537f511e5b87026800e29ff718fbcbd4a41d34aa9c",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "库存权限审计与业务连续性管理办法",
+              "3 审计与记录"
+            ],
+            "context_text": "库存权限审计与业务连续性管理办法\n\n本办法规定账号授权、业务记录、异常重试、系统中断与知识辅助的控制要求。当前为企业制度待核准稿；制度要求不能代替实际安全配置、备份恢复验证和生产上线审核。\n\n3 审计与记录\n\nINV-SEC-010-C008 成功业务应保留操作人、动作、业务对象、时间、结果及关联记录。库存数量流水说明数量事实，业务审计说明操作事实，人工批准说明授权事实，三者不能互相替代。\n\nINV-SEC-010-C009 当前审计主要记录已成功提交的登录及业务变更，失败业务整体回滚；尚无独立完整安全事件日志。失败登录、异常访问或安全调查如需留存，应纳入经批准的日志建设及保管方案，不宣称现有成功审计已经覆盖所有失败事件。\n\nINV-SEC-010-C010 日志和附件应控制访问，保留原始时间与证据，不为方便查询而泄露密码或完整敏感参数。记录保存期限及销毁批准由企业档案、安全与财务要求共同核定。",
+            "tables": [],
+            "unit_ids": [
+              "INV-SEC-010-C008",
+              "INV-SEC-010-C009",
+              "INV-SEC-010-C010"
+            ],
+            "expansion_reason": "field_terminology_section"
+          },
+          {
+            "context_id": "27063b106c8bdf16f983a3f4b3a083f9af396727424243e8ee975f75af186a0c",
+            "document_id": "INV-POL-001",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "2d2cb9db61026201c0ab84b57475f5286f18bf093f95844d78f9c02dfdfa6516",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "备件库存管理总则与职责",
+              "3 单据与数量控制"
+            ],
+            "context_text": "备件库存管理总则与职责\n\n本制度建立门店备件从需求提出、采购、验收、保管、领用、调拨到差异处理的控制要求，适用于单门店下各仓库及参与业务、财务、质量和系统管理的岗位。文件按企业内部制度编制；实际经营主体、审批人、生效日期及授权参数须经企业核准。当前为待核准稿，不能作为已经生效的授权文件。\n\n3 单据与数量控制\n\nINV-POL-001-C009 单据至少应能追溯业务类型、业务日期、备件编码、仓库、数量、单位、实际操作人及关联事项。采购另需供应商和单价；调拨另需目标仓。维修领用应关联工单或其他有效领用依据。\n\nINV-POL-001-C010 草稿不产生实物库存变化。采购只有实际合格收货后增加现有量；领用只有过账后扣减；调拨发出后在途单列，目标仓收货后才计入其现有量。禁止把预计到货、口头承诺或未执行草稿当作现有库存。\n\nINV-POL-001-C011 库存按仓库与备件分别核对，计量单位必须一致，数量不得为负。不同SKU之间不得借账；同名、外观相似或包装相似不能作为合并编码、替代使用或认定车型适配的依据。\n\nINV-POL-001-C012 已生效的单据与流水不得直接删除、覆盖或改写数量。发现错误应按INV-ADJ-008建立来源关联、调查和批准记录，并通过获准的反向或调整业务处理。不得虚构采购、领用、调拨或再次期初登记来抵补差异。\n\nINV-POL-001-C013 网络超时或页面中断不代表业务失败。经办人应先核对原单据与流水，使用原请求重试或查询确认；不得在结果不明时连续创建参数相同的新业务。",
+            "tables": [],
+            "unit_ids": [
+              "INV-POL-001-C009",
+              "INV-POL-001-C010",
+              "INV-POL-001-C011",
+              "INV-POL-001-C012",
+              "INV-POL-001-C013"
+            ],
+            "expansion_reason": "field_terminology_section"
+          }
+        ],
+        "embedding_requests": 1,
+        "unavailable_documents": [],
+        "domain_error": null,
+        "document_ids": null,
+        "document_versions": null,
+        "candidate_limit": 20,
+        "context_budget": 12000,
+        "context_characters": 7651,
+        "omitted_contexts": [],
+        "missing_exact_ids": [],
+        "query_terms": [
+          "操作人 身份 服务端"
+        ],
+        "dense_candidates": 20,
+        "lexical_candidates": 20,
+        "rrf_constant": 60,
+        "timings": {
+          "qualification_seconds": 0.115,
+          "embedding_seconds": 0.226,
+          "retrieval_seconds": 0.369
+        },
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 33,
+            "completion_tokens": 0,
+            "total_tokens": 33
+          }
+        },
+        "chat_requests": 0,
+        "request_id": "627668ce4d3e45b0946491a3431cd66b",
+        "elapsed_seconds": 0.711
+      }
+    },
+    {
+      "id": "filtered",
+      "http": 200,
+      "result": {
+        "generation_id": "01efb5f874eb427f9ed812cb842df97a",
+        "retrieval_mode": "hybrid",
+        "retrieval_version": "hybrid-tfidf-rrf-context-v3",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "top_k": 5,
+        "status": "retrieved",
+        "hits": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "unit_id": "INV-PUR-003-C008",
+            "chunk_id": "a6d009e8d2e0ad8d7ddf02d9f3f12d7573e414acfbc660ef92a3826498b83862",
+            "parent_id": "24160ccb946eee9eb2ae048e46fd5b4548ed72adcca5f18ffa759c9c80acdda3",
+            "title": "采购需求与采购单控制规程",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "3 批准与权限"
+            ],
+            "unit_text": "INV-PUR-003-C008 经办、复核和批准按企业岗位安排分工。采购草稿由管理员或库管创建，创建人在审核中心提交，由其他管理员或经理审核；禁止审核本人创建或提交的业务单据。审核记录保存提交人、审核人、时间和意见，不以聊天中的赞同代替业务审核。软件审核不自动证明合同、额度或外部企业授权已经满足。",
+            "embedding_text_sha256": "7ea308c171518dff19da9bf11d7b2ce98c52d03759808dc19aaf5efb0c69cbb2",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-office-v1",
+            "chunking_version": "clause-section-v1",
+            "block_start": 15,
+            "block_end": 15,
+            "distance": 0.27754127979278564,
+            "dense_rank": 1,
+            "lexical_rank": 1,
+            "rrf_score": 0.03278688524590164,
+            "exact_match": false,
+            "lexical_score": 0.14582097125994797
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "unit_id": "INV-PUR-003-C010",
+            "chunk_id": "0a7f5d9397f66b01eed9bbb02cfcf92c0bf2028d4d49eb17f38a7f0649984e55",
+            "parent_id": "f77e205f907fe653d43b464a652b8fbebe86c4637e19cb5becdb18e046238135",
+            "title": "采购需求与采购单控制规程",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "4 采购单建立与确认"
+            ],
+            "unit_text": "INV-PUR-003-C010 草稿审核通过后，由管理员或库管另行执行业务确认，进入已确认状态；审核本身不确认采购，也不增加库存。创建或确认均不增加现有库存；确认后的有效未收数量可计入采购待收，但不等于合同已签署、外部订单已发送或付款已完成。",
+            "embedding_text_sha256": "1191017e41beb25db030598c39957e36fa7fa814eba4994bece3fba7a7f15773",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-office-v1",
+            "chunking_version": "clause-section-v1",
+            "block_start": 20,
+            "block_end": 20,
+            "distance": 0.2859872579574585,
+            "dense_rank": 3,
+            "lexical_rank": 2,
+            "rrf_score": 0.03200204813108039,
+            "exact_match": false,
+            "lexical_score": 0.11443548994875412
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "unit_id": "INV-PUR-003-C011",
+            "chunk_id": "7f4e23c03d52e54782b78c65a53f31d1c2cf36628055529239167125769ec049",
+            "parent_id": "f77e205f907fe653d43b464a652b8fbebe86c4637e19cb5becdb18e046238135",
+            "title": "采购需求与采购单控制规程",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "4 采购单建立与确认"
+            ],
+            "unit_text": "INV-PUR-003-C011 当前草稿没有直接编辑能力，填写错误或审核驳回后应取消并重新建立，保留原意见及原草稿关联，不覆盖原审核结论。重新制单需重新提交审核；不得修改主数据或历史明细来绕过审核。",
+            "embedding_text_sha256": "ca215b50a69f9dfa67af77ffaa1fefdf99a365c39389514e5f40980b11badfe3",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-office-v1",
+            "chunking_version": "clause-section-v1",
+            "block_start": 21,
+            "block_end": 21,
+            "distance": 0.2776792049407959,
+            "dense_rank": 2,
+            "lexical_rank": 6,
+            "rrf_score": 0.03128054740957967,
+            "exact_match": false,
+            "lexical_score": 0.06833760256674858
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "unit_id": "INV-PUR-003-C009",
+            "chunk_id": "4ab3de42209a59dd4addac409558c6bd1e363d6b7d29558927616f6807303868",
+            "parent_id": "f77e205f907fe653d43b464a652b8fbebe86c4637e19cb5becdb18e046238135",
+            "title": "采购需求与采购单控制规程",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "4 采购单建立与确认"
+            ],
+            "unit_text": "INV-PUR-003-C009 建立采购草稿时选择业务仓库，每条明细先选供应商再选其供货范围内的备件，录入正整数数量、准确单位及非负单价。同单不得重复同一SKU，业务日期不得晚于办理日。供应商、仓库和备件须处于允许办理状态。",
+            "embedding_text_sha256": "e5dc1a34101b56f55c44a8ac5c9fd88641d0dc6adccc12315231c8192e51b1ce",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-office-v1",
+            "chunking_version": "clause-section-v1",
+            "block_start": 19,
+            "block_end": 19,
+            "distance": 0.29685795307159424,
+            "dense_rank": 5,
+            "lexical_rank": 3,
+            "rrf_score": 0.03125763125763126,
+            "exact_match": false,
+            "lexical_score": 0.08462816617666592
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "unit_id": "INV-PUR-003-C015",
+            "chunk_id": "4a74f00a541c6d4299803e43f978838a21e5a39accb61f1ed5a05252b3166749",
+            "parent_id": "64e1ae97ebb2f80161c0a703beedde9f6390fbca8ccd92d33e525bea310d3a42",
+            "title": "采购需求与采购单控制规程",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "5 收货与取消"
+            ],
+            "unit_text": "INV-PUR-003-C015 可以取消草稿及已确认、部分收货采购单的未收余量。取消不退回已经收到的实物，也不删除实际入库或流水；已完成采购不通过取消实现退供。",
+            "embedding_text_sha256": "341aa5c34b9af0972e2af61d6c0f66cf75c7dfdd6cf7486f89b7de306106de2d",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-office-v1",
+            "chunking_version": "clause-section-v1",
+            "block_start": 26,
+            "block_end": 26,
+            "distance": 0.3179653286933899,
+            "dense_rank": 7,
+            "lexical_rank": 4,
+            "rrf_score": 0.03055037313432836,
+            "exact_match": false,
+            "lexical_score": 0.0754757031312803
+          }
+        ],
+        "contexts": [
+          {
+            "context_id": "24160ccb946eee9eb2ae048e46fd5b4548ed72adcca5f18ffa759c9c80acdda3",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "3 批准与权限"
+            ],
+            "context_text": "采购需求与采购单控制规程\n\n本规程将需求核验、业务批准、采购单确认和实际交付分开控制，适用于常规补货、维修专用件和紧急采购。当前为待核准稿，不授予实际签约或付款权限。\n\n3 批准与权限\n\nINV-PUR-003-C007 采购批准应关联需求与报价的最终版本，确认金额口径、用途、数量及授权范围。批准额度和审批层级必须来自企业有效授权表，未登记时提交负责人核定，不以软件角色推定无限授权。\nINV-PUR-003-C008 经办、复核和批准按企业岗位安排分工。采购草稿由管理员或库管创建，创建人在审核中心提交，由其他管理员或经理审核；禁止审核本人创建或提交的业务单据。审核记录保存提交人、审核人、时间和意见，不以聊天中的赞同代替业务审核。软件审核不自动证明合同、额度或外部企业授权已经满足。\n| 控制环节 | 责任岗位 | 需要确认的记录 |\n| --- | --- | --- |\n| 需求核实 | 需求提出人与仓管 | 用途 数量 实时供给 工单或补货依据 |\n| 采购复核 | 采购经办与复核岗位 | 规格 供应商 报价 交期 批准对象 |\n| 授权批准 | 企业授权批准人 | 授权范围 批准版本 例外原因 |\n| 到货验收 | 仓管与必要技术岗位 | 实收数量 质量标识 差异及交接 |",
+            "tables": [
+              {
+                "ordinal": 2,
+                "headers": [
+                  "控制环节",
+                  "责任岗位",
+                  "需要确认的记录"
+                ],
+                "rows": [
+                  [
+                    "需求核实",
+                    "需求提出人与仓管",
+                    "用途 数量 实时供给 工单或补货依据"
+                  ],
+                  [
+                    "采购复核",
+                    "采购经办与复核岗位",
+                    "规格 供应商 报价 交期 批准对象"
+                  ],
+                  [
+                    "授权批准",
+                    "企业授权批准人",
+                    "授权范围 批准版本 例外原因"
+                  ],
+                  [
+                    "到货验收",
+                    "仓管与必要技术岗位",
+                    "实收数量 质量标识 差异及交接"
+                  ]
+                ],
+                "text": "| 控制环节 | 责任岗位 | 需要确认的记录 |\n| --- | --- | --- |\n| 需求核实 | 需求提出人与仓管 | 用途 数量 实时供给 工单或补货依据 |\n| 采购复核 | 采购经办与复核岗位 | 规格 供应商 报价 交期 批准对象 |\n| 授权批准 | 企业授权批准人 | 授权范围 批准版本 例外原因 |\n| 到货验收 | 仓管与必要技术岗位 | 实收数量 质量标识 差异及交接 |",
+                "block_start": 16,
+                "block_end": 16
+              }
+            ],
+            "unit_ids": [
+              "INV-PUR-003-C007",
+              "INV-PUR-003-C008"
+            ],
+            "block_start": 13,
+            "block_end": 16,
+            "expansion_reason": "parent_section"
+          },
+          {
+            "context_id": "f77e205f907fe653d43b464a652b8fbebe86c4637e19cb5becdb18e046238135",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "4 采购单建立与确认"
+            ],
+            "context_text": "采购需求与采购单控制规程\n\n本规程将需求核验、业务批准、采购单确认和实际交付分开控制，适用于常规补货、维修专用件和紧急采购。当前为待核准稿，不授予实际签约或付款权限。\n\n4 采购单建立与确认\n\nINV-PUR-003-C009 建立采购草稿时选择业务仓库，每条明细先选供应商再选其供货范围内的备件，录入正整数数量、准确单位及非负单价。同单不得重复同一SKU，业务日期不得晚于办理日。供应商、仓库和备件须处于允许办理状态。\nINV-PUR-003-C010 草稿审核通过后，由管理员或库管另行执行业务确认，进入已确认状态；审核本身不确认采购，也不增加库存。创建或确认均不增加现有库存；确认后的有效未收数量可计入采购待收，但不等于合同已签署、外部订单已发送或付款已完成。\nINV-PUR-003-C011 当前草稿没有直接编辑能力，填写错误或审核驳回后应取消并重新建立，保留原意见及原草稿关联，不覆盖原审核结论。重新制单需重新提交审核；不得修改主数据或历史明细来绕过审核。\nINV-PUR-003-C012 同一业务请求以唯一请求标识办理。结果不明时先检查单据状态与请求结果，重试原请求；变更参数需要重新复核，不复用与原参数不同的请求标识。",
+            "tables": [],
+            "unit_ids": [
+              "INV-PUR-003-C009",
+              "INV-PUR-003-C010",
+              "INV-PUR-003-C011",
+              "INV-PUR-003-C012"
+            ],
+            "block_start": 18,
+            "block_end": 22,
+            "expansion_reason": "parent_section"
+          },
+          {
+            "context_id": "64e1ae97ebb2f80161c0a703beedde9f6390fbca8ccd92d33e525bea310d3a42",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "5 收货与取消"
+            ],
+            "context_text": "采购需求与采购单控制规程\n\n本规程将需求核验、业务批准、采购单确认和实际交付分开控制，适用于常规补货、维修专用件和紧急采购。当前为待核准稿，不授予实际签约或付款权限。\n\n5 收货与取消\n\nINV-PUR-003-C013 仅已确认或部分收货的采购单可登记实际收货。每次实收形成独立入库单，累计实收不得超过原采购行数量，也不得借用其他采购单的明细。验收及暂不接收情形按INV-RCV-004执行。\nINV-PUR-003-C014 部分收货后保留已收数量和剩余待收数量；全部完成后转为已完成。一次收货失败应整体回滚，不得出现某行入账而同次其他行失败后仍保留部分结果。\nINV-PUR-003-C015 可以取消草稿及已确认、部分收货采购单的未收余量。取消不退回已经收到的实物，也不删除实际入库或流水；已完成采购不通过取消实现退供。\nINV-PUR-003-C016 取消外部供货承诺或变更交期应另与供应商确认，保存回执。系统取消未收余量不自动通知供应商，也不代表合同违约责任、结算或退款已经处理。",
+            "tables": [],
+            "unit_ids": [
+              "INV-PUR-003-C013",
+              "INV-PUR-003-C014",
+              "INV-PUR-003-C015",
+              "INV-PUR-003-C016"
+            ],
+            "block_start": 23,
+            "block_end": 27,
+            "expansion_reason": "parent_section"
+          },
+          {
+            "context_id": "ba5fd7db4ec7e5212dd032007a6f8d9033475b7937106884c5cdf2e46ebc533b",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "6 异常闭环与记录"
+            ],
+            "context_text": "采购需求与采购单控制规程\n\n本规程将需求核验、业务批准、采购单确认和实际交付分开控制，适用于常规补货、维修专用件和紧急采购。当前为待核准稿，不授予实际签约或付款权限。\n\n6 异常闭环与记录\n\nINV-PUR-003-C017 延迟、缺货、错件、价格差异、超量到货及失去资格的供应商，应登记异常事项、责任人、临时措施、处理时限和结果。具体承诺与索赔条件以有效合同为依据，不由知识问答生成新的供应商义务。\nINV-PUR-003-C018 紧急采购仍应确认身份、用途、规格及授权，保留例外批准和后续复核。紧急不构成负库存出库、假收货、跳过质量检查或由智能体自行对外下单的理由。\nINV-PUR-003-C019 采购归档应包括需求依据、批准记录、合同或报价、外部订单及回执、系统采购编号、收货记录、异常处理和必要对账资料。保存年限由企业档案和财务要求核定，不在未核准时虚构固定年限。\nINV-PUR-003-C020 采购未结清单应逐项核实是否仍有效、是否逾期及是否重复。未结状态的治理不得通过直接改余额或删除历史单据完成。",
+            "tables": [],
+            "unit_ids": [
+              "INV-PUR-003-C017",
+              "INV-PUR-003-C018",
+              "INV-PUR-003-C019",
+              "INV-PUR-003-C020"
+            ],
+            "block_start": 28,
+            "block_end": 32,
+            "expansion_reason": "branch_candidate_section"
+          },
+          {
+            "context_id": "46490e291529b11a0f0196f975b0b2b4973c3bf060a9911a4e6bd3ca5fa9ee8d",
+            "document_id": "INV-PUR-003",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "cdc5b85a7523e016f1e7a874ccb264f898ad434b669855cebd3edbe282403b86",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "采购需求与采购单控制规程",
+              "1 需求提出与查重"
+            ],
+            "context_text": "采购需求与采购单控制规程\n\n本规程将需求核验、业务批准、采购单确认和实际交付分开控制，适用于常规补货、维修专用件和紧急采购。当前为待核准稿，不授予实际签约或付款权限。\n\n1 需求提出与查重\n\nINV-PUR-003-C001 需求申请应列明用途、SKU或待核实部件、需求仓库、数量、单位、需要日期及相关维修或补货依据。车型适配未核实的专用件不得仅凭症状或相似名称直接转为采购指令。\nINV-PUR-003-C002 提出采购前核对可用量、已确认采购未收数量、目标方向调拨在途和其他仓可调余量，避免重复占用同一供给。统计时间、单位和覆盖限制按INV-ANA-009说明，不能把草稿采购计入已落实供给。\nINV-PUR-003-C003 历史不足、交期缺失或供应商未核实时，可提出需人工评估的需求，不得以模型猜测补齐计算输入。安全库存缺口不必然等于采购量，还需检查在途、待收和其他仓调拨条件。",
+            "tables": [],
+            "unit_ids": [
+              "INV-PUR-003-C001",
+              "INV-PUR-003-C002",
+              "INV-PUR-003-C003"
+            ],
+            "block_start": 5,
+            "block_end": 8,
+            "expansion_reason": "branch_candidate_section"
+          }
+        ],
+        "embedding_requests": 1,
+        "unavailable_documents": [],
+        "domain_error": null,
+        "document_ids": [
+          "INV-PUR-003"
+        ],
+        "document_versions": null,
+        "candidate_limit": 20,
+        "context_budget": 12000,
+        "context_characters": 2366,
+        "omitted_contexts": [
+          {
+            "document_id": "INV-RCV-004",
+            "reason": "reference_unavailable_or_filtered"
+          }
+        ],
+        "missing_exact_ids": [],
+        "query_terms": [
+          "操作人 身份 服务端"
+        ],
+        "dense_candidates": 20,
+        "lexical_candidates": 20,
+        "rrf_constant": 60,
+        "timings": {
+          "qualification_seconds": 0.114,
+          "embedding_seconds": 0.203,
+          "retrieval_seconds": 0.343
+        },
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 33,
+            "completion_tokens": 0,
+            "total_tokens": 33
+          }
+        },
+        "chat_requests": 0,
+        "request_id": "cde138cb8f384ebd8bc155f59d836dc1",
+        "elapsed_seconds": 0.66
+      }
+    },
+    {
+      "id": "released",
+      "http": 200,
+      "result": {
+        "generation_id": "01efb5f874eb427f9ed812cb842df97a",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "released_only",
+        "retrieval_mode": "hybrid",
+        "timings": {
+          "qualification_seconds": 0.112
+        },
+        "status": "no_eligible_documents",
+        "hits": [],
+        "contexts": [],
+        "unavailable_documents": [
+          {
+            "document_id": "INV-ADJ-008",
+            "reason": "not_released"
+          },
+          {
+            "document_id": "INV-ANA-009",
+            "reason": "not_released"
+          },
+          {
+            "document_id": "INV-GLO-011",
+            "reason": "not_released"
+          },
+          {
+            "document_id": "INV-ISS-005",
+            "reason": "not_released"
+          },
+          {
+            "document_id": "INV-MDM-002",
+            "reason": "not_released"
+          },
+          {
+            "document_id": "INV-POL-001",
+            "reason": "not_released"
+          },
+          {
+            "document_id": "INV-PUR-003",
+            "reason": "not_released"
+          },
+          {
+            "document_id": "INV-RCV-004",
+            "reason": "not_released"
+          },
+          {
+            "document_id": "INV-SEC-010",
+            "reason": "not_released"
+          },
+          {
+            "document_id": "INV-SUP-012",
+            "reason": "not_released"
+          },
+          {
+            "document_id": "INV-TRF-006",
+            "reason": "not_released"
+          },
+          {
+            "document_id": "INV-WHS-007",
+            "reason": "not_released"
+          }
+        ],
+        "limitations": [
+          "本服务只读取文档，未查询实时库存或办理业务单据。"
+        ],
+        "usage": {},
+        "embedding_requests": 0,
+        "chat_requests": 0,
+        "request_id": "94101749b25b45eba7a208c8d2d92b8f",
+        "elapsed_seconds": 0.231
+      }
+    },
+    {
+      "id": "unknown_filter",
+      "http": 422,
+      "result": {
+        "detail": "文档过滤只能使用当前知识域已登记的编号及版本",
+        "error_code": "invalid_document_filter",
+        "request_id": "2ec63b61b817400c901b703740187f1e"
+      }
+    },
+    {
+      "id": "exact",
+      "http": 200,
+      "result": {
+        "generation_id": "01efb5f874eb427f9ed812cb842df97a",
+        "retrieval_mode": "hybrid",
+        "retrieval_version": "hybrid-tfidf-rrf-context-v3",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "top_k": 5,
+        "status": "retrieved",
+        "hits": [
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-SEC-010",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "209c9369b39b565df321f5537f511e5b87026800e29ff718fbcbd4a41d34aa9c",
+            "unit_id": "INV-SEC-010-C005",
+            "chunk_id": "3f6d40e17a5f58ad3ba3c16e8866cee39a947559b825e41977dc202326ba2928",
+            "parent_id": "e7e210e2cbd7478df11750d0581bef471a12c3f588f33cd7c08c65cb2382600e",
+            "title": "库存权限审计与业务连续性管理办法",
+            "section_path": [
+              "库存权限审计与业务连续性管理办法",
+              "2 身份与访问边界"
+            ],
+            "unit_text": "INV-SEC-010-C005 业务实际操作人由服务端身份取得，不接受聊天内容或工具参数指定另一个操作人。账号已停用或权限不足时拒绝办理，持有单据编号或会话编号本身不构成操作授权。",
+            "embedding_text_sha256": "6cd102569a9647f805c1a2117d800f6f566c162327cd5dba53fc82273ec6d009",
+            "line_start": 27,
+            "line_end": 28,
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-text-v1",
+            "chunking_version": "clause-section-v1",
+            "distance": 0.5655393600463867,
+            "dense_rank": 13,
+            "lexical_rank": 1,
+            "rrf_score": 0.03009207275993712,
+            "exact_match": true,
+            "lexical_score": 0.11688161006776686
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-SEC-010",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "209c9369b39b565df321f5537f511e5b87026800e29ff718fbcbd4a41d34aa9c",
+            "unit_id": "INV-SEC-010-C010",
+            "chunk_id": "fa600e8dc00a043e1a204c053c53bb0401be91ebea88180d30628715c273dc4b",
+            "parent_id": "25462d19103bf59c7336569f7894cdbef3d14cf539509f6e9f8a8dcdf3d484f6",
+            "title": "库存权限审计与业务连续性管理办法",
+            "section_path": [
+              "库存权限审计与业务连续性管理办法",
+              "3 审计与记录"
+            ],
+            "unit_text": "INV-SEC-010-C010 日志和附件应控制访问，保留原始时间与证据，不为方便查询而泄露密码或完整敏感参数。记录保存期限及销毁批准由企业档案、安全与财务要求共同核定。",
+            "embedding_text_sha256": "74e48291b46ac44977e7c74406c495971b957228b694e452f7eb354f899bc7f8",
+            "line_start": 39,
+            "line_end": 40,
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-text-v1",
+            "chunking_version": "clause-section-v1",
+            "distance": 0.5416479110717773,
+            "dense_rank": 1,
+            "rrf_score": 0.01639344262295082,
+            "exact_match": false,
+            "lexical_score": null
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-RCV-004",
+            "document_version": "1.0-draft.1",
+            "source_sha256": "f497ad544d961c2b86895fedfc74ff6bf0c4d109fe810b53e45d298e7a1baac3",
+            "unit_id": "INV-RCV-004-C003",
+            "chunk_id": "e7f2d7dd3208655f8850931f2cd527f353f028a6ba668e52da2f27af4185d286",
+            "parent_id": "e56052357a07121fd3d540fc4287b85dff3065d946ef66408cd7a5901f52cfa6",
+            "title": "到货验收与实际入库作业规范",
+            "section_path": [
+              "到货验收与实际入库作业规范",
+              "1 收货前准备"
+            ],
+            "unit_text": "INV-RCV-004-C003 接收凭据应能识别供应商、关联采购、送货日期、件号或规格、单位、数量及包装标识。电子与纸质凭据应建立同一关联编号，不能仅凭口头说明办理。",
+            "embedding_text_sha256": "81fff33b2d57ebeaaeeac27591d956950f2e2e430220e605fde44f76f5ed8b16",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-office-v1",
+            "chunking_version": "clause-section-v1",
+            "page_start": 1,
+            "page_end": 1,
+            "distance": 0.5501105785369873,
+            "dense_rank": 2,
+            "rrf_score": 0.016129032258064516,
+            "exact_match": false,
+            "lexical_score": null
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-SEC-010",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "209c9369b39b565df321f5537f511e5b87026800e29ff718fbcbd4a41d34aa9c",
+            "unit_id": "INV-SEC-010-C004",
+            "chunk_id": "ce61918dbc67a348a63979ba798556a2bd8d58d0400e85c061ad441e8e93d478",
+            "parent_id": "b72efa2f2f1cd6ca984e4e806cb061fd5f30c7e1908a2d5313c72abea6c9b43f",
+            "title": "库存权限审计与业务连续性管理办法",
+            "section_path": [
+              "库存权限审计与业务连续性管理办法",
+              "1 账号与角色"
+            ],
+            "unit_text": "INV-SEC-010-C004 密码、密钥和数据库连接信息不进入业务备注、文档知识库、截图或聊天。凭据由受控配置保管，密码不得明文存储；账号开通和凭据重置按企业安全流程处理，不从他人会话猜测或恢复密码。",
+            "embedding_text_sha256": "a889166a271069c67f814afb47ff01a66bc7dc85b19e8fddb653459ce1b02f61",
+            "line_start": 23,
+            "line_end": 24,
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-text-v1",
+            "chunking_version": "clause-section-v1",
+            "distance": 0.5516437888145447,
+            "dense_rank": 3,
+            "rrf_score": 0.015873015873015872,
+            "exact_match": false,
+            "lexical_score": null
+          },
+          {
+            "knowledge_base": "inventory_policies",
+            "document_id": "INV-RCV-004",
+            "document_version": "1.0-draft.1",
+            "source_sha256": "f497ad544d961c2b86895fedfc74ff6bf0c4d109fe810b53e45d298e7a1baac3",
+            "unit_id": "INV-RCV-004-C010",
+            "chunk_id": "82a201ba00a1b38d0d633967568ac09a0ccffd56bd06fbaa8c867d0a8db885cc",
+            "parent_id": "d308765b13ff978fdbce5d9a61204bef5016d1d606cf80d7c0bea64a7ce6ae95",
+            "title": "到货验收与实际入库作业规范",
+            "section_path": [
+              "到货验收与实际入库作业规范",
+              "3 实际入库登记"
+            ],
+            "unit_text": "INV-RCV-004-C010 当前整套、整瓶、整桶作为整数单位入库，不以小数形式登记拆包。包装变化应先核对SKU及获准单位方案，不临时把一桶解释为一瓶。",
+            "embedding_text_sha256": "fa64e70fb7d0b08e98fe21a5558c072d2c9ebad16159182555c3f637effd7368",
+            "source_state": "draft",
+            "source_status": "pending_approval",
+            "source_type": "project_authored_policy_draft",
+            "source_ids": [],
+            "effective_from": null,
+            "effective_until": null,
+            "required_context_document_id": null,
+            "parser_version": "controlled-office-v1",
+            "chunking_version": "clause-section-v1",
+            "page_start": 2,
+            "page_end": 2,
+            "distance": 0.55354905128479,
+            "dense_rank": 4,
+            "rrf_score": 0.015625,
+            "exact_match": false,
+            "lexical_score": null
+          }
+        ],
+        "contexts": [
+          {
+            "context_id": "e7e210e2cbd7478df11750d0581bef471a12c3f588f33cd7c08c65cb2382600e",
+            "document_id": "INV-SEC-010",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "209c9369b39b565df321f5537f511e5b87026800e29ff718fbcbd4a41d34aa9c",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "库存权限审计与业务连续性管理办法",
+              "2 身份与访问边界"
+            ],
+            "context_text": "库存权限审计与业务连续性管理办法\n\n本办法规定账号授权、业务记录、异常重试、系统中断与知识辅助的控制要求。当前为企业制度待核准稿；制度要求不能代替实际安全配置、备份恢复验证和生产上线审核。\n\n2 身份与访问边界\n\nINV-SEC-010-C005 业务实际操作人由服务端身份取得，不接受聊天内容或工具参数指定另一个操作人。账号已停用或权限不足时拒绝办理，持有单据编号或会话编号本身不构成操作授权。\n\nINV-SEC-010-C006 当前登录令牌有效期为一小时，仅保存在页面内存，刷新需重新登录；退出清除本页会话，不具备已复制令牌的提前吊销能力。发生凭据或令牌泄露时应暂停相关账号并由安全岗位评估，不把点击退出当作全部风险已解除。\n\nINV-SEC-010-C007 对外访问、密码重置、登录失败监控、限速及其他生产安全要求应在上线前专项确认。现有本地运行与通过功能测试不等于已经满足互联网生产部署要求。",
+            "tables": [],
+            "unit_ids": [
+              "INV-SEC-010-C005",
+              "INV-SEC-010-C006",
+              "INV-SEC-010-C007"
+            ],
+            "expansion_reason": "parent_section"
+          },
+          {
+            "context_id": "25462d19103bf59c7336569f7894cdbef3d14cf539509f6e9f8a8dcdf3d484f6",
+            "document_id": "INV-SEC-010",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "209c9369b39b565df321f5537f511e5b87026800e29ff718fbcbd4a41d34aa9c",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "库存权限审计与业务连续性管理办法",
+              "3 审计与记录"
+            ],
+            "context_text": "库存权限审计与业务连续性管理办法\n\n本办法规定账号授权、业务记录、异常重试、系统中断与知识辅助的控制要求。当前为企业制度待核准稿；制度要求不能代替实际安全配置、备份恢复验证和生产上线审核。\n\n3 审计与记录\n\nINV-SEC-010-C008 成功业务应保留操作人、动作、业务对象、时间、结果及关联记录。库存数量流水说明数量事实，业务审计说明操作事实，人工批准说明授权事实，三者不能互相替代。\n\nINV-SEC-010-C009 当前审计主要记录已成功提交的登录及业务变更，失败业务整体回滚；尚无独立完整安全事件日志。失败登录、异常访问或安全调查如需留存，应纳入经批准的日志建设及保管方案，不宣称现有成功审计已经覆盖所有失败事件。\n\nINV-SEC-010-C010 日志和附件应控制访问，保留原始时间与证据，不为方便查询而泄露密码或完整敏感参数。记录保存期限及销毁批准由企业档案、安全与财务要求共同核定。",
+            "tables": [],
+            "unit_ids": [
+              "INV-SEC-010-C008",
+              "INV-SEC-010-C009",
+              "INV-SEC-010-C010"
+            ],
+            "expansion_reason": "parent_section"
+          },
+          {
+            "context_id": "e56052357a07121fd3d540fc4287b85dff3065d946ef66408cd7a5901f52cfa6",
+            "document_id": "INV-RCV-004",
+            "document_version": "1.0-draft.1",
+            "source_sha256": "f497ad544d961c2b86895fedfc74ff6bf0c4d109fe810b53e45d298e7a1baac3",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "到货验收与实际入库作业规范",
+              "1 收货前准备"
+            ],
+            "context_text": "到货验收与实际入库作业规范\n\n本规范规定到货核验、合格实收、单据登记及收货异常的处理方式，防止预计到货或不合格品提前进入可用库存。当前为企业制度待核准稿。\n\n1 收货前准备\n\nINV-RCV-004-C001 收货人核实采购单、供应商送货依据、接收仓库及允许接收的未收数量。采购处于草稿、已完成或已取消状态时，不登记采购实际入库，应先确认业务依据。\nINV-RCV-004-C002 接收前检查库区、搬运和必要验收条件。需技术判定、特殊保管或质量核验的物品，提前通知对应岗位；不以库位不足或维修催料为由省略验收。\nINV-RCV-004-C003 接收凭据应能识别供应商、关联采购、送货日期、件号或规格、单位、数量及包装标识。电子与纸质凭据应建立同一关联编号，不能仅凭口头说明办理。",
+            "tables": [],
+            "unit_ids": [
+              "INV-RCV-004-C001",
+              "INV-RCV-004-C002",
+              "INV-RCV-004-C003"
+            ],
+            "page_start": 1,
+            "page_end": 1,
+            "expansion_reason": "parent_section"
+          },
+          {
+            "context_id": "b72efa2f2f1cd6ca984e4e806cb061fd5f30c7e1908a2d5313c72abea6c9b43f",
+            "document_id": "INV-SEC-010",
+            "document_version": "1.0-draft.2",
+            "source_sha256": "209c9369b39b565df321f5537f511e5b87026800e29ff718fbcbd4a41d34aa9c",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "库存权限审计与业务连续性管理办法",
+              "1 账号与角色"
+            ],
+            "context_text": "库存权限审计与业务连续性管理办法\n\n本办法规定账号授权、业务记录、异常重试、系统中断与知识辅助的控制要求。当前为企业制度待核准稿；制度要求不能代替实际安全配置、备份恢复验证和生产上线审核。\n\n1 账号与角色\n\nINV-SEC-010-C001 一人一账号，按岗位需要授予权限，禁止共用管理员或库管账号。入职、调岗、离岗及代班应由业务负责人确认并登记授权或撤销，系统维护人员不能自行批准业务权限范围。\n\nINV-SEC-010-C002 管理员可维护主数据、账号、库存业务及审计查询，审核知识资料，也可审核他人的采购与调拨单。库管可查询、制单、提交本人采购与调拨单审核，办理期初、收货、领用及调拨收发，但不能审核。经理可查看业务资料并审核采购与调拨单，不能办理库存登记、维护主数据或审核知识资料。三类角色均可上传资料，经理与库管只能查看本人上传记录；管理员审核并完成索引后方可检索。权限由服务端实施，隐藏按钮不构成授权控制。\n\nINV-SEC-010-C003 不能停用或降级当前管理员自身；需要移交管理职责时先确保有经批准的接替账号和交接安排。角色变更应复核实际岗位授权和后续访问，不把技术角色名称当作业务审批权限。\n\nINV-SEC-010-C004 密码、密钥和数据库连接信息不进入业务备注、文档知识库、截图或聊天。凭据由受控配置保管，密码不得明文存储；账号开通和凭据重置按企业安全流程处理，不从他人会话猜测或恢复密码。",
+            "tables": [],
+            "unit_ids": [
+              "INV-SEC-010-C001",
+              "INV-SEC-010-C002",
+              "INV-SEC-010-C003",
+              "INV-SEC-010-C004"
+            ],
+            "expansion_reason": "parent_section"
+          },
+          {
+            "context_id": "d308765b13ff978fdbce5d9a61204bef5016d1d606cf80d7c0bea64a7ce6ae95",
+            "document_id": "INV-RCV-004",
+            "document_version": "1.0-draft.1",
+            "source_sha256": "f497ad544d961c2b86895fedfc74ff6bf0c4d109fe810b53e45d298e7a1baac3",
+            "knowledge_base": "inventory_policies",
+            "section_path": [
+              "到货验收与实际入库作业规范",
+              "3 实际入库登记"
+            ],
+            "context_text": "到货验收与实际入库作业规范\n\n本规范规定到货核验、合格实收、单据登记及收货异常的处理方式，防止预计到货或不合格品提前进入可用库存。当前为企业制度待核准稿。\n\n3 实际入库登记\n\nINV-RCV-004-C008 只将本次已验收合格并实际接收的数量，登记到原采购单对应明细。数量为正整数，可分次接收；同一次收货明细不得重复，累计实收不得超出采购数量。\nINV-RCV-004-C009 实收日期不得早于采购单业务日期或晚于办理日。系统允许的日期校验不替代企业对补录的批准；补录须说明实际收货依据和延迟原因，不修改记录创建时间来掩盖补录。\nINV-RCV-004-C010 当前整套、整瓶、整桶作为整数单位入库，不以小数形式登记拆包。包装变化应先核对SKU及获准单位方案，不临时把一桶解释为一瓶。\nINV-RCV-004-C011 确认入库前核对仓库、每行数量、采购来源和批准或验收附件编号。成功后生成独立入库单、增加库存余额并记录流水，同时更新采购累计实收及状态；未成功前不得视为入账完成。\nINV-RCV-004-C012 收货请求超时后，先核实原采购的已收数量、关联入库单和流水，再以原请求重试。不能为了快速完成而新建相同实收，重复把同一批到货入账。",
+            "tables": [],
+            "unit_ids": [
+              "INV-RCV-004-C008",
+              "INV-RCV-004-C009",
+              "INV-RCV-004-C010",
+              "INV-RCV-004-C011",
+              "INV-RCV-004-C012"
+            ],
+            "page_start": 1,
+            "page_end": 2,
+            "expansion_reason": "parent_section"
+          }
+        ],
+        "embedding_requests": 1,
+        "unavailable_documents": [],
+        "domain_error": null,
+        "document_ids": null,
+        "document_versions": null,
+        "candidate_limit": 20,
+        "context_budget": 12000,
+        "context_characters": 2284,
+        "omitted_contexts": [],
+        "missing_exact_ids": [],
+        "query_terms": [],
+        "dense_candidates": 20,
+        "lexical_candidates": 1,
+        "rrf_constant": 60,
+        "timings": {
+          "qualification_seconds": 0.113,
+          "embedding_seconds": 0.59,
+          "retrieval_seconds": 0.353
+        },
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 12,
+            "completion_tokens": 0,
+            "total_tokens": 12
+          }
+        },
+        "chat_requests": 0,
+        "request_id": "f57119064e3c4b928dd62eb1a9253bd1",
+        "elapsed_seconds": 1.057
+      }
+    },
+    {
+      "id": "missing_exact",
+      "http": 200,
+      "result": {
+        "generation_id": "01efb5f874eb427f9ed812cb842df97a",
+        "retrieval_mode": "hybrid",
+        "retrieval_version": "hybrid-tfidf-rrf-context-v3",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "top_k": 5,
+        "status": "exact_not_found",
+        "hits": [],
+        "contexts": [],
+        "embedding_requests": 0,
+        "unavailable_documents": [],
+        "domain_error": null,
+        "document_ids": null,
+        "document_versions": null,
+        "candidate_limit": 20,
+        "context_budget": 12000,
+        "context_characters": 0,
+        "omitted_contexts": [],
+        "missing_exact_ids": [
+          "INV-SEC-010-C999"
+        ],
+        "timings": {
+          "qualification_seconds": 0.112,
+          "embedding_seconds": 0.197,
+          "retrieval_seconds": 0.396
+        },
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 12,
+            "completion_tokens": 0,
+            "total_tokens": 12
+          }
+        },
+        "chat_requests": 0,
+        "request_id": "0512d4c69d674df7898d7cc2cd43361d",
+        "elapsed_seconds": 0.705
+      }
+    }
+  ],
+  "ready_http": 200,
+  "knowledge_status": {
+    "available": true,
+    "embedding_configured": true,
+    "chat_configured": true,
+    "generation_id": "01efb5f874eb427f9ed812cb842df97a",
+    "document_count": 19,
+    "unit_count": 242,
+    "context_count": 86,
+    "domains": {
+      "inventory_policies": {
+        "released_documents": 0,
+        "preview_documents": 12,
+        "domain_error": null
+      },
+      "general_diagnostics": {
+        "released_documents": 0,
+        "preview_documents": 7,
+        "domain_error": null
+      }
+    }
+  },
+  "actual_ask": {
+    "generation_id": "01efb5f874eb427f9ed812cb842df97a",
+    "knowledge_base": "inventory_policies",
+    "knowledge_scope": "draft_preview",
+    "retrieval_mode": "hybrid",
+    "timings": {
+      "qualification_seconds": 0.114,
+      "embedding_seconds": 0.195,
+      "retrieval_seconds": 0.368,
+      "chat_seconds": 2.845,
+      "validation_seconds": 0.114
+    },
+    "answer_status": "answered",
+    "claims": [
+      {
+        "text": "业务实际操作人由服务端身份取得，不接受聊天内容或工具参数指定另一个操作人。",
+        "citation_ids": [
+          "4d6eed73061ca5e3a0e4b517976c66323c2bbea43825e94c5d7b3d3efa921415"
+        ]
+      },
+      {
+        "text": "一人一账号，按岗位需要授予权限，禁止共用管理员或库管账号。",
+        "citation_ids": [
+          "31d91792e9e7afd1da522ba6ab00f6f41106f6f630c14f0d273e53267c1dbbbd"
+        ]
+      },
+      {
+        "text": "采购草稿由管理员或库管创建，创建人在审核中心提交，由其他管理员或经理审核；禁止审核本人创建或提交的业务单据。",
+        "citation_ids": [
+          "fb93648978ecc8b2d65f589ac300d1502baef99faaabc3d82b2b4da706fb604e"
+        ]
+      },
+      {
+        "text": "草稿审核通过后，由管理员或库管另行执行业务确认，进入已确认状态；审核本身不确认采购，也不增加库存。",
+        "citation_ids": [
+          "ae6e402c27b26daf6e1a877c0e6b6fe47b0a01d2fe3be06da3857c50cca3001e"
+        ]
+      },
+      {
+        "text": "当前系统中的管理员、库管和经理是技术访问角色，岗位授权与账号角色应分别登记，不把技术角色名称当作业务审批权限。",
+        "citation_ids": [
+          "6e8c2a91099d68746de3a16a990235acf886b0dff3510f528206a2647fda2eea"
+        ]
+      }
+    ],
+    "follow_up_questions": [],
+    "limitations": [
+      "本轮资料均为待核准稿（draft/pending_approval），不能作为已经生效的企业规定或授权文件；实际审批人、授权参数及生效日期须经企业核准。",
+      "本助手为只读知识助手，不执行账号变更或建单操作；上述仅为制度要求说明。",
+      "本服务只读取文档，未查询实时库存或办理业务单据。",
+      "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+    ],
+    "fault_types": [],
+    "checks": [],
+    "part_decisions": [],
+    "citations": [
+      {
+        "knowledge_base": "inventory_policies",
+        "document_id": "INV-SEC-010",
+        "document_version": "1.0-draft.2",
+        "title": "库存权限审计与业务连续性管理办法",
+        "native_format": "md",
+        "source_state": "draft",
+        "source_status": "pending_approval",
+        "citation_id": "4d6eed73061ca5e3a0e4b517976c66323c2bbea43825e94c5d7b3d3efa921415",
+        "generation_id": "01efb5f874eb427f9ed812cb842df97a",
+        "chunk_id": "e7e210e2cbd7478df11750d0581bef471a12c3f588f33cd7c08c65cb2382600e",
+        "unit_id": null,
+        "unit_ids": [
+          "INV-SEC-010-C005",
+          "INV-SEC-010-C006",
+          "INV-SEC-010-C007"
+        ],
+        "section_path": [
+          "库存权限审计与业务连续性管理办法",
+          "2 身份与访问边界"
+        ],
+        "excerpt": "库存权限审计与业务连续性管理办法\n\n本办法规定账号授权、业务记录、异常重试、系统中断与知识辅助的控制要求。当前为企业制度待核准稿；制度要求不能代替实际安全配置、备份恢复验证和生产上线审核。\n\n2 身份与访问边界\n\nINV-SEC-010-C005 业务实际操作人由服务端身份取得，不接受聊天内容或工具参数指定另一个操作人。账号已停用或权限不足时拒绝办理，持有单据编号或会话编号本身不构成操作授权。\n\nINV-SEC-010-C006 当前登录令牌有效期为一小时，仅保存在页面内存，刷新需重新登录；退出清除本页会话，不具备已复制令牌的提前吊销能力。发生凭据或令牌泄露时应暂停相关账号并由安全岗位评估，不把点击退出当作全部风险已解除。\n\nINV-SEC-010-C007 对外访问、密码重置、登录失败监控、限速及其他生产安全要求应在上线前专项确认。现有本地运行与通过功能测试不等于已经满足互联网生产部署要求。",
+        "line_start": 27,
+        "line_end": 32,
+        "tables": []
+      },
+      {
+        "knowledge_base": "inventory_policies",
+        "document_id": "INV-SEC-010",
+        "document_version": "1.0-draft.2",
+        "title": "库存权限审计与业务连续性管理办法",
+        "native_format": "md",
+        "source_state": "draft",
+        "source_status": "pending_approval",
+        "citation_id": "31d91792e9e7afd1da522ba6ab00f6f41106f6f630c14f0d273e53267c1dbbbd",
+        "generation_id": "01efb5f874eb427f9ed812cb842df97a",
+        "chunk_id": "b72efa2f2f1cd6ca984e4e806cb061fd5f30c7e1908a2d5313c72abea6c9b43f",
+        "unit_id": null,
+        "unit_ids": [
+          "INV-SEC-010-C001",
+          "INV-SEC-010-C002",
+          "INV-SEC-010-C003",
+          "INV-SEC-010-C004"
+        ],
+        "section_path": [
+          "库存权限审计与业务连续性管理办法",
+          "1 账号与角色"
+        ],
+        "excerpt": "库存权限审计与业务连续性管理办法\n\n本办法规定账号授权、业务记录、异常重试、系统中断与知识辅助的控制要求。当前为企业制度待核准稿；制度要求不能代替实际安全配置、备份恢复验证和生产上线审核。\n\n1 账号与角色\n\nINV-SEC-010-C001 一人一账号，按岗位需要授予权限，禁止共用管理员或库管账号。入职、调岗、离岗及代班应由业务负责人确认并登记授权或撤销，系统维护人员不能自行批准业务权限范围。\n\nINV-SEC-010-C002 管理员可维护主数据、账号、库存业务及审计查询，审核知识资料，也可审核他人的采购与调拨单。库管可查询、制单、提交本人采购与调拨单审核，办理期初、收货、领用及调拨收发，但不能审核。经理可查看业务资料并审核采购与调拨单，不能办理库存登记、维护主数据或审核知识资料。三类角色均可上传资料，经理与库管只能查看本人上传记录；管理员审核并完成索引后方可检索。权限由服务端实施，隐藏按钮不构成授权控制。\n\nINV-SEC-010-C003 不能停用或降级当前管理员自身；需要移交管理职责时先确保有经批准的接替账号和交接安排。角色变更应复核实际岗位授权和后续访问，不把技术角色名称当作业务审批权限。\n\nINV-SEC-010-C004 密码、密钥和数据库连接信息不进入业务备注、文档知识库、截图或聊天。凭据由受控配置保管，密码不得明文存储；账号开通和凭据重置按企业安全流程处理，不从他人会话猜测或恢复密码。",
+        "line_start": 17,
+        "line_end": 24,
+        "tables": []
+      },
+      {
+        "knowledge_base": "inventory_policies",
+        "document_id": "INV-PUR-003",
+        "document_version": "1.0-draft.2",
+        "title": "采购需求与采购单控制规程",
+        "native_format": "docx",
+        "source_state": "draft",
+        "source_status": "pending_approval",
+        "citation_id": "fb93648978ecc8b2d65f589ac300d1502baef99faaabc3d82b2b4da706fb604e",
+        "generation_id": "01efb5f874eb427f9ed812cb842df97a",
+        "chunk_id": "24160ccb946eee9eb2ae048e46fd5b4548ed72adcca5f18ffa759c9c80acdda3",
+        "unit_id": null,
+        "unit_ids": [
+          "INV-PUR-003-C007",
+          "INV-PUR-003-C008"
+        ],
+        "section_path": [
+          "采购需求与采购单控制规程",
+          "3 批准与权限"
+        ],
+        "excerpt": "采购需求与采购单控制规程\n\n本规程将需求核验、业务批准、采购单确认和实际交付分开控制，适用于常规补货、维修专用件和紧急采购。当前为待核准稿，不授予实际签约或付款权限。\n\n3 批准与权限\n\nINV-PUR-003-C007 采购批准应关联需求与报价的最终版本，确认金额口径、用途、数量及授权范围。批准额度和审批层级必须来自企业有效授权表，未登记时提交负责人核定，不以软件角色推定无限授权。\nINV-PUR-003-C008 经办、复核和批准按企业岗位安排分工。采购草稿由管理员或库管创建，创建人在审核中心提交，由其他管理员或经理审核；禁止审核本人创建或提交的业务单据。审核记录保存提交人、审核人、时间和意见，不以聊天中的赞同代替业务审核。软件审核不自动证明合同、额度或外部企业授权已经满足。\n| 控制环节 | 责任岗位 | 需要确认的记录 |\n| --- | --- | --- |\n| 需求核实 | 需求提出人与仓管 | 用途 数量 实时供给 工单或补货依据 |\n| 采购复核 | 采购经办与复核岗位 | 规格 供应商 报价 交期 批准对象 |\n| 授权批准 | 企业授权批准人 | 授权范围 批准版本 例外原因 |\n| 到货验收 | 仓管与必要技术岗位 | 实收数量 质量标识 差异及交接 |",
+        "block_start": 14,
+        "block_end": 15,
+        "tables": [
+          {
+            "ordinal": 2,
+            "headers": [
+              "控制环节",
+              "责任岗位",
+              "需要确认的记录"
+            ],
+            "rows": [
+              [
+                "需求核实",
+                "需求提出人与仓管",
+                "用途 数量 实时供给 工单或补货依据"
+              ],
+              [
+                "采购复核",
+                "采购经办与复核岗位",
+                "规格 供应商 报价 交期 批准对象"
+              ],
+              [
+                "授权批准",
+                "企业授权批准人",
+                "授权范围 批准版本 例外原因"
+              ],
+              [
+                "到货验收",
+                "仓管与必要技术岗位",
+                "实收数量 质量标识 差异及交接"
+              ]
+            ],
+            "text": "| 控制环节 | 责任岗位 | 需要确认的记录 |\n| --- | --- | --- |\n| 需求核实 | 需求提出人与仓管 | 用途 数量 实时供给 工单或补货依据 |\n| 采购复核 | 采购经办与复核岗位 | 规格 供应商 报价 交期 批准对象 |\n| 授权批准 | 企业授权批准人 | 授权范围 批准版本 例外原因 |\n| 到货验收 | 仓管与必要技术岗位 | 实收数量 质量标识 差异及交接 |",
+            "block_start": 16,
+            "block_end": 16
+          }
+        ]
+      },
+      {
+        "knowledge_base": "inventory_policies",
+        "document_id": "INV-PUR-003",
+        "document_version": "1.0-draft.2",
+        "title": "采购需求与采购单控制规程",
+        "native_format": "docx",
+        "source_state": "draft",
+        "source_status": "pending_approval",
+        "citation_id": "ae6e402c27b26daf6e1a877c0e6b6fe47b0a01d2fe3be06da3857c50cca3001e",
+        "generation_id": "01efb5f874eb427f9ed812cb842df97a",
+        "chunk_id": "f77e205f907fe653d43b464a652b8fbebe86c4637e19cb5becdb18e046238135",
+        "unit_id": null,
+        "unit_ids": [
+          "INV-PUR-003-C009",
+          "INV-PUR-003-C010",
+          "INV-PUR-003-C011",
+          "INV-PUR-003-C012"
+        ],
+        "section_path": [
+          "采购需求与采购单控制规程",
+          "4 采购单建立与确认"
+        ],
+        "excerpt": "采购需求与采购单控制规程\n\n本规程将需求核验、业务批准、采购单确认和实际交付分开控制，适用于常规补货、维修专用件和紧急采购。当前为待核准稿，不授予实际签约或付款权限。\n\n4 采购单建立与确认\n\nINV-PUR-003-C009 建立采购草稿时选择业务仓库，每条明细先选供应商再选其供货范围内的备件，录入正整数数量、准确单位及非负单价。同单不得重复同一SKU，业务日期不得晚于办理日。供应商、仓库和备件须处于允许办理状态。\nINV-PUR-003-C010 草稿审核通过后，由管理员或库管另行执行业务确认，进入已确认状态；审核本身不确认采购，也不增加库存。创建或确认均不增加现有库存；确认后的有效未收数量可计入采购待收，但不等于合同已签署、外部订单已发送或付款已完成。\nINV-PUR-003-C011 当前草稿没有直接编辑能力，填写错误或审核驳回后应取消并重新建立，保留原意见及原草稿关联，不覆盖原审核结论。重新制单需重新提交审核；不得修改主数据或历史明细来绕过审核。\nINV-PUR-003-C012 同一业务请求以唯一请求标识办理。结果不明时先检查单据状态与请求结果，重试原请求；变更参数需要重新复核，不复用与原参数不同的请求标识。",
+        "block_start": 19,
+        "block_end": 22,
+        "tables": []
+      },
+      {
+        "knowledge_base": "inventory_policies",
+        "document_id": "INV-POL-001",
+        "document_version": "1.0-draft.2",
+        "title": "备件库存管理总则与职责",
+        "native_format": "md",
+        "source_state": "draft",
+        "source_status": "pending_approval",
+        "citation_id": "6e8c2a91099d68746de3a16a990235acf886b0dff3510f528206a2647fda2eea",
+        "generation_id": "01efb5f874eb427f9ed812cb842df97a",
+        "chunk_id": "7ace2e03e18d91babfacaadea5c4836ccf6f15f377f56d98abc823dd1e8c04a6",
+        "unit_id": null,
+        "unit_ids": [
+          "INV-POL-001-C014",
+          "INV-POL-001-C015",
+          "INV-POL-001-C016"
+        ],
+        "section_path": [
+          "备件库存管理总则与职责",
+          "4 授权与业务放行"
+        ],
+        "excerpt": "备件库存管理总则与职责\n\n本制度建立门店备件从需求提出、采购、验收、保管、领用、调拨到差异处理的控制要求，适用于单门店下各仓库及参与业务、财务、质量和系统管理的岗位。文件按企业内部制度编制；实际经营主体、审批人、生效日期及授权参数须经企业核准。当前为待核准稿，不能作为已经生效的授权文件。\n\n4 授权与业务放行\n\nINV-POL-001-C014 业务批准应能确认批准人身份、授权范围、批准对象、版本、数量及必要金额。批准后变更备件、仓库、数量、价格或动作，应按变更影响重新复核，不得沿用不再匹配的批准。\n\nINV-POL-001-C015 金额审批限额、紧急采购授权、报损权限和代班权限由企业授权表核定。未核定时，不得假定存在默认限额或无限授权，应提交授权负责人处理。\n\nINV-POL-001-C016 当前系统中的管理员、库管和经理是技术访问角色。岗位授权与账号角色应分别登记；经理只读角色的存在不代表系统具备经理在线审批功能。系统未承载的批准应保存于受控记录，并在单据中登记可追溯的记录编号。",
+        "line_start": 49,
+        "line_end": 54,
+        "tables": []
+      }
+    ],
+    "usage": {
+      "embedding": {
+        "prompt_tokens": 33,
+        "completion_tokens": 0,
+        "total_tokens": 33
+      },
+      "chat": {
+        "prompt_tokens": 11734,
+        "completion_tokens": 460,
+        "total_tokens": 12194
+      }
+    },
+    "embedding_requests": 1,
+    "chat_requests": 1,
+    "request_id": "e3713524fccd4ca68361419cfbeb20cd",
+    "elapsed_seconds": 3.636
+  },
+  "business_after": {
+    "fingerprint": "487e49bf678e25a91644a60d09c559e145f98b3ddd7a13aa9a1756dc2d9c9ad7",
+    "counts": {
+      "agent_proposals": 4,
+      "alembic_version": 1,
+      "audit_logs": 2022,
+      "document_lines": 1728,
+      "document_reviews": 3,
+      "documents": 826,
+      "opening_documents": 3,
+      "opening_lines": 19,
+      "operation_requests": 1427,
+      "part_fitments": 0,
+      "parts": 48,
+      "price_changes": 105,
+      "pricing_backfills": 2,
+      "stock_balances": 96,
+      "stock_ledger": 1359,
+      "supplier_prices": 57,
+      "suppliers": 3,
+      "users": 3,
+      "vehicle_models": 0,
+      "warehouses": 2
+    }
+  },
+  "checks_passed": true,
+  "all_tables_unchanged": false,
+  "initial_all_table_check_failed_reason": "Exactly one expected authentication login audit row was added by the HTTP verification; no audit row was deleted.",
+  "business_unchanged_excluding_auth_login_audit": true,
+  "excluded_auth_audit": {
+    "id": "2022",
+    "action": "login",
+    "entity_id": "1"
+  }
+}

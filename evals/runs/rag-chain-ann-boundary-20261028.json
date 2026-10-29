@@ -1,0 +1,49 @@
+{
+  "case_id": "ACC-INV-35",
+  "comparison": "n_results=20 vs full-corpus Chroma ranking on the same vector",
+  "result": {
+    "missing_from_short": [
+      {
+        "unit": "INV-SEC-010-C006",
+        "rank": 15,
+        "distance": 0.42360538244247437
+      }
+    ],
+    "extra_in_short": [
+      {
+        "unit": "INV-SEC-010-C002",
+        "rank": 21,
+        "distance": 0.4371647834777832
+      }
+    ],
+    "expected_groups": [
+      {
+        "any_of": [
+          {
+            "document_id": "INV-SEC-010",
+            "document_version": "1.0-draft.2",
+            "clause_id": "INV-SEC-010-C013"
+          }
+        ]
+      },
+      {
+        "any_of": [
+          {
+            "document_id": "INV-SEC-010",
+            "document_version": "1.0-draft.2",
+            "clause_id": "INV-SEC-010-C014"
+          }
+        ]
+      },
+      {
+        "any_of": [
+          {
+            "document_id": "INV-SEC-010",
+            "document_version": "1.0-draft.2",
+            "clause_id": "INV-SEC-010-C016"
+          }
+        ]
+      }
+    ]
+  }
+}

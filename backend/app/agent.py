@@ -84,6 +84,7 @@ async def worker(ctx, question, role, *, prior=None):
     # not new authority supplied by a model or the user.
     pool = {c['citation_id']: c for c in (prior or {}).get('citations', [])}
     usages, knowledge_start, knowledge_keys = [], len(ctx.knowledge_answers), set()
+    trace_start = len(ctx.trace)
     finish = None
     for step in range(6):
         message, usage = await chat_tools(ctx.runtime.settings, messages, definitions(names))
@@ -162,7 +163,10 @@ async def worker(ctx, question, role, *, prior=None):
         failure = KnowledgeError('tool_limit', '未在限定步数内形成完整结果，请缩小任务或补齐条件')
         failure.tool_trace, failure.usage = ctx.trace, {'agent_model_calls': usages}
         raise failure
-    result = empty_answer('answered', '业务查询来自本轮工具快照，执行前仍须重新校验。')
+    business_snapshot = any(t['status'] == 'ok' and t['tool'] not in {'knowledge', 'web_search', 'finish'}
+        for t in ctx.trace[trace_start:])
+    result = empty_answer('answered', '业务查询来自本轮工具快照，执行前仍须重新校验。'
+        if business_snapshot else '本轮未查询实时业务数据。')
     result['message'] = finish['message']
     result['follow_up_questions'] = finish['follow_up_questions']
     knowledge = ctx.knowledge_answers[knowledge_start:]

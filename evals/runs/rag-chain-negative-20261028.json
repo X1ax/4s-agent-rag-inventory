@@ -1,0 +1,95 @@
+{
+  "scope": "targeted real-model unanswerable and outside-scope probes, not accuracy",
+  "cases": [
+    {
+      "id": "NO-CONTRACT",
+      "question": "请提供本店下个月供应商已经签订的真实合同编号和准确到货日。",
+      "answer": {
+        "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+        "knowledge_base": "inventory_policies",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "hybrid",
+        "timings": {
+          "qualification_seconds": 0.265,
+          "embedding_seconds": 0.226,
+          "retrieval_seconds": 0.361,
+          "chat_seconds": 1.636,
+          "validation_seconds": 0.124
+        },
+        "answer_status": "requires_live_data",
+        "claims": [],
+        "follow_up_questions": [],
+        "limitations": [
+          "本店下个月供应商真实合同编号与准确到货日属于实时业务数据，本轮证据仅为待核准的企业制度草稿（source_state=draft，source_status=pending_approval），不含任何真实合同编号或到货日期，无法提供。",
+          "资料明确：没有实际供应商资料时保持待核准，不为填满字段编造真实合同编号或签字；供应商资料中的交期是计划输入，实际承诺以适用合同、订单回执或双方确认记录为准。",
+          "如需真实合同编号与到货日，请通过采购/合同台账或经核准记录查询，本助手不办理查询或签约。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "citations": [],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 22,
+            "completion_tokens": 0,
+            "total_tokens": 22
+          },
+          "chat": {
+            "prompt_tokens": 6917,
+            "completion_tokens": 159,
+            "total_tokens": 7076
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      }
+    },
+    {
+      "id": "OUTSIDE-DIAG",
+      "question": "纯电汽车无法进入READY，能根据这套通用手册确定更换哪个高压部件吗？",
+      "answer": {
+        "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+        "knowledge_base": "general_diagnostics",
+        "knowledge_scope": "draft_preview",
+        "retrieval_mode": "dense",
+        "timings": {
+          "qualification_seconds": 0.017,
+          "embedding_seconds": 0.217,
+          "retrieval_seconds": 0.042,
+          "chat_seconds": 2.399,
+          "validation_seconds": 0.015
+        },
+        "answer_status": "outside_scope",
+        "claims": [],
+        "follow_up_questions": [],
+        "limitations": [
+          "纯电车辆无法进入可行驶状态（READY）不适用燃油发动机无法点火流程；高压动力电池、逆变器等高压部件不在本通用手册范围内，因此不能据此确定更换哪个高压部件。",
+          "本批资料为待技术复核的项目编制稿，不是汽车厂家维修手册，也未经过维修技术负责人核准；不能作为正式维修或换件依据。",
+          "高压系统检查与维修应由具备资质的合格维修人员按厂家资料进行；本助手不提供高压拆检、道路复现或继续试车步骤。",
+          "本服务只读取文档，未查询实时库存或办理业务单据。",
+          "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+        ],
+        "fault_types": [],
+        "checks": [],
+        "part_decisions": [],
+        "citations": [],
+        "usage": {
+          "embedding": {
+            "prompt_tokens": 27,
+            "completion_tokens": 0,
+            "total_tokens": 27
+          },
+          "chat": {
+            "prompt_tokens": 7835,
+            "completion_tokens": 156,
+            "total_tokens": 7991
+          }
+        },
+        "embedding_requests": 1,
+        "chat_requests": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,428 @@
+{
+  "scope": "real model document-only specialist retest; no business engine attached",
+  "answer": {
+    "answer_status": "answered",
+    "claims": [
+      {
+        "text": "发动机完全不转、启动时只有咔嗒声，属于“启动时发动机不转或仅有咔嗒声”条目；仅凭声音无法确定供电正常。",
+        "citation_ids": [
+          "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+        ]
+      },
+      {
+        "text": "该症状的故障分支包括：低压电源供电不足；接线、搭铁或启动控制异常；起动机及啮合机构故障；发动机机械阻滞。",
+        "citation_ids": [
+          "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+        ]
+      },
+      {
+        "text": "用户提供仪表和声音描述即可，不反复长时间启动；电池状态、接线与控制条件、启动回路和起动机应由维修人员按实际系统检查。",
+        "citation_ids": [
+          "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+        ]
+      }
+    ],
+    "citations": [
+      {
+        "knowledge_base": "general_diagnostics",
+        "document_id": "DX-STR-002",
+        "document_version": "1.0-draft.1",
+        "title": "启动与充电系统通用排查",
+        "native_format": "md",
+        "source_state": "draft",
+        "source_status": "pending_technical_review",
+        "citation_id": "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a",
+        "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+        "chunk_id": "64e5060e2bb7f35dc256ebcbebefd3a2ea29be521dbb7102a85ea22a32c59523",
+        "unit_id": null,
+        "unit_ids": [
+          "DX-STR-01"
+        ],
+        "section_path": [
+          "启动与充电系统通用排查",
+          "DX-STR-01 启动时发动机不转或仅有咔嗒声"
+        ],
+        "excerpt": "启动与充电系统通用排查\n\n共同前提：同时遵守 DX-GEN-001。本文只处理具有相应低压启动/充电结构的车辆，不推断电压平台。技术参考：SRC-DX-01、SRC-DX-02、SRC-DX-03、SRC-DX-16。这里列的是故障分支，不是按概率排名的诊断结果。\n\nDX-STR-01 启动时发动机不转或仅有咔嗒声\n\n**适用与追问：** 先区分发动机完全不转、转得慢，还是已经转动但未着车；只有前者进入本条。询问仪表是否亮、是否提示钥匙/挡位/启动条件异常，症状是否突然出现，是否已有电池检测记录。仅凭声音无法确定供电正常。\n\n**故障类型：** 低压电源供电不足；接线/搭铁或启动控制异常；起动机及啮合机构故障；发动机机械阻滞。候选目录类型是蓄电池、起动机；控制开关、线束或齿圈等可能未收录，不强行归入起动机。\n\n**检查路径：** 用户提供仪表和声音描述即可，不反复长时间启动。维修人员按实际系统检查电池状态、接线与控制条件，再检查启动回路和起动机；电机空转但发动机不转时，要区分传动啮合问题。发现机械卡滞迹象时停止尝试并另行诊断。\n\n**换件判断：** 只有本症状时两类部件均为 undetermined。只有正确检测证实电池本体失效，才支持蓄电池 recommended；单纯亏电应先查原因与复测，不能直接判寿命终结。供电、控制和机械负载排查支持起动机本体故障时，才支持起动机 recommended；若接头处理后复核正常，则本次不支持更换起动机。无检测结果只列 conditional 条件。\n\n**依据与限制：** SRC-DX-01“启动控制回路、咔嗒声及空转排查”；SRC-DX-02“电池类型与测试结果”；SRC-DX-16“故障与预防”。不提供跨接启动、短接继电器或自行拆卸步骤，不将本条用于纯电车辆不能 READY。",
+        "line_start": 16,
+        "line_end": 26,
+        "tables": []
+      }
+    ],
+    "follow_up_questions": [
+      "启动时仪表是否点亮，是否提示钥匙、挡位或启动条件异常？",
+      "该症状是突然出现还是逐渐出现？",
+      "车辆是否为纯电车型（纯电不能READY不适用本条）？"
+    ],
+    "fault_types": [
+      {
+        "text": "低压电源供电不足",
+        "citation_ids": [
+          "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+        ]
+      },
+      {
+        "text": "接线、搭铁或启动控制异常",
+        "citation_ids": [
+          "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+        ]
+      },
+      {
+        "text": "起动机及啮合机构故障",
+        "citation_ids": [
+          "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+        ]
+      },
+      {
+        "text": "发动机机械阻滞",
+        "citation_ids": [
+          "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+        ]
+      }
+    ],
+    "checks": [
+      {
+        "text": "用户可观察：仪表是否点亮、是否提示钥匙/挡位/启动条件异常，以及启动时的声音表现；不要反复长时间启动。",
+        "citation_ids": [
+          "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+        ]
+      },
+      {
+        "text": "合格维修人员检查：按实际系统检查电池状态、接线与控制条件，再检查启动回路和起动机；发现机械卡滞迹象时停止尝试并另行诊断。",
+        "citation_ids": [
+          "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+        ]
+      }
+    ],
+    "part_decisions": [
+      {
+        "text": "只有完全不转和咔嗒声、无检测记录，暂不能判断蓄电池是否需要更换。",
+        "citation_ids": [
+          "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+        ],
+        "part_type_key": "part-battery",
+        "status": "undetermined",
+        "condition": "正确检测证实电池本体失效时，才支持更换蓄电池；单纯亏电应先查原因与复测。",
+        "check_record": null,
+        "basis_quote": null,
+        "catalog": {
+          "catalog_sku": "DEMO-011",
+          "catalog_name": "蓄电池",
+          "unit": "件",
+          "fitment_status": "not_assessed",
+          "required_quantity": null,
+          "image_url": "/images/part-battery.png"
+        }
+      },
+      {
+        "text": "只有完全不转和咔嗒声、无检测记录，暂不能判断起动机是否需要更换。",
+        "citation_ids": [
+          "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+        ],
+        "part_type_key": "part-starter",
+        "status": "undetermined",
+        "condition": "供电、控制和机械负载排查支持起动机本体故障时，才支持更换起动机；若接头处理后复核正常，则本次不支持更换起动机。",
+        "check_record": null,
+        "basis_quote": null,
+        "catalog": {
+          "catalog_sku": "CAT-016",
+          "catalog_name": "起动机",
+          "unit": "件",
+          "fitment_status": "not_assessed",
+          "required_quantity": null,
+          "image_url": "/images/part-starter.png"
+        }
+      }
+    ],
+    "limitations": [
+      "本轮未查询实时业务数据。",
+      "本回答依据项目编制的通用排查草稿（DX-GEN-001、DX-STR-002，均为待技术复核的项目编制稿），不是汽车厂家维修手册，也未经过维修技术负责人核准。",
+      "不提供跨接启动、短接继电器或自行拆卸步骤；需要工具、拆检或动态数据的步骤应交合格维修人员。",
+      "本条不用于纯电车辆不能READY的情形。",
+      "本服务只读取文档，未查询实时库存或办理业务单据。",
+      "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+    ],
+    "message": "",
+    "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+    "knowledge_base": "general_diagnostics",
+    "knowledge_scope": "draft_preview",
+    "usage": {
+      "agent_model_calls": [
+        {
+          "prompt_tokens": 1855,
+          "completion_tokens": 74,
+          "total_tokens": 1929
+        },
+        {
+          "prompt_tokens": 4194,
+          "completion_tokens": 653,
+          "total_tokens": 4847
+        }
+      ],
+      "knowledge": [
+        {
+          "embedding": {
+            "prompt_tokens": 25,
+            "completion_tokens": 0,
+            "total_tokens": 25
+          },
+          "chat": {
+            "prompt_tokens": 9722,
+            "completion_tokens": 1172,
+            "total_tokens": 10894
+          }
+        }
+      ],
+      "coordinator": {
+        "prompt_tokens": 250,
+        "completion_tokens": 39,
+        "total_tokens": 289
+      }
+    },
+    "agent_mode": "multi",
+    "roles": [
+      "coordinator",
+      "diagnostics"
+    ],
+    "tool_trace": [
+      {
+        "role": "diagnostics",
+        "tool": "knowledge",
+        "step": 0,
+        "call_id": "call_00_O0d3oPTkVRSjqgLv8eea1602",
+        "arguments": {
+          "question": "发动机完全不转，启动时只有咔嗒声，无检测记录，通用排查依据是什么？",
+          "knowledge_base": "general_diagnostics"
+        },
+        "status": "ok",
+        "result": {
+          "evidence_id": "74445fe99aa94e3814bf3ea6fcd4dd4d315e17ad7d8888e8f9def7914e5c07c9",
+          "data": {
+            "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+            "knowledge_base": "general_diagnostics",
+            "knowledge_scope": "draft_preview",
+            "retrieval_mode": "dense",
+            "timings": {
+              "qualification_seconds": 0.015,
+              "embedding_seconds": 0.288,
+              "retrieval_seconds": 0.047,
+              "chat_seconds": 5.347,
+              "validation_seconds": 0.015
+            },
+            "answer_status": "answered",
+            "claims": [
+              {
+                "text": "发动机完全不转、启动时只有咔嗒声，属于“启动时发动机不转或仅有咔嗒声”条目；仅凭声音无法确定供电正常。",
+                "citation_ids": [
+                  "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+                ]
+              },
+              {
+                "text": "该症状的故障分支包括：低压电源供电不足；接线、搭铁或启动控制异常；起动机及啮合机构故障；发动机机械阻滞。",
+                "citation_ids": [
+                  "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+                ]
+              },
+              {
+                "text": "用户提供仪表和声音描述即可，不反复长时间启动；电池状态、接线与控制条件、启动回路和起动机应由维修人员按实际系统检查。",
+                "citation_ids": [
+                  "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+                ]
+              }
+            ],
+            "follow_up_questions": [
+              "启动时仪表是否点亮，是否提示钥匙、挡位或启动条件异常？",
+              "该症状是突然出现还是逐渐出现？",
+              "车辆是否为纯电车型（纯电不能READY不适用本条）？"
+            ],
+            "limitations": [
+              "本回答依据项目编制的通用排查草稿（DX-GEN-001、DX-STR-002，均为待技术复核的项目编制稿），不是汽车厂家维修手册，也未经过维修技术负责人核准。",
+              "不提供跨接启动、短接继电器或自行拆卸步骤；需要工具、拆检或动态数据的步骤应交合格维修人员。",
+              "本条不用于纯电车辆不能READY的情形。",
+              "本服务只读取文档，未查询实时库存或办理业务单据。",
+              "当前使用项目编制或管理员审核的参考资料，不代表正式生效制度或厂家诊断结论。"
+            ],
+            "fault_types": [
+              {
+                "text": "低压电源供电不足",
+                "citation_ids": [
+                  "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+                ]
+              },
+              {
+                "text": "接线、搭铁或启动控制异常",
+                "citation_ids": [
+                  "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+                ]
+              },
+              {
+                "text": "起动机及啮合机构故障",
+                "citation_ids": [
+                  "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+                ]
+              },
+              {
+                "text": "发动机机械阻滞",
+                "citation_ids": [
+                  "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+                ]
+              }
+            ],
+            "checks": [
+              {
+                "text": "用户可观察：仪表是否点亮、是否提示钥匙/挡位/启动条件异常，以及启动时的声音表现；不要反复长时间启动。",
+                "citation_ids": [
+                  "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+                ]
+              },
+              {
+                "text": "合格维修人员检查：按实际系统检查电池状态、接线与控制条件，再检查启动回路和起动机；发现机械卡滞迹象时停止尝试并另行诊断。",
+                "citation_ids": [
+                  "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+                ]
+              }
+            ],
+            "part_decisions": [
+              {
+                "text": "只有完全不转和咔嗒声、无检测记录，暂不能判断蓄电池是否需要更换。",
+                "citation_ids": [
+                  "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+                ],
+                "part_type_key": "part-battery",
+                "status": "undetermined",
+                "condition": "正确检测证实电池本体失效时，才支持更换蓄电池；单纯亏电应先查原因与复测。",
+                "check_record": null,
+                "basis_quote": null,
+                "catalog": {
+                  "catalog_sku": "DEMO-011",
+                  "catalog_name": "蓄电池",
+                  "unit": "件",
+                  "fitment_status": "not_assessed",
+                  "required_quantity": null,
+                  "image_url": "/images/part-battery.png"
+                }
+              },
+              {
+                "text": "只有完全不转和咔嗒声、无检测记录，暂不能判断起动机是否需要更换。",
+                "citation_ids": [
+                  "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a"
+                ],
+                "part_type_key": "part-starter",
+                "status": "undetermined",
+                "condition": "供电、控制和机械负载排查支持起动机本体故障时，才支持更换起动机；若接头处理后复核正常，则本次不支持更换起动机。",
+                "check_record": null,
+                "basis_quote": null,
+                "catalog": {
+                  "catalog_sku": "CAT-016",
+                  "catalog_name": "起动机",
+                  "unit": "件",
+                  "fitment_status": "not_assessed",
+                  "required_quantity": null,
+                  "image_url": "/images/part-starter.png"
+                }
+              }
+            ],
+            "citations": [
+              {
+                "knowledge_base": "general_diagnostics",
+                "document_id": "DX-STR-002",
+                "document_version": "1.0-draft.1",
+                "title": "启动与充电系统通用排查",
+                "native_format": "md",
+                "source_state": "draft",
+                "source_status": "pending_technical_review",
+                "citation_id": "6b8042b26c7dcc701ecb8dacb429b2bdb11710c5a7866c60f90e4dcd8100077a",
+                "generation_id": "5a29ec52f8ac4a5a991543ad1f4ee5f3",
+                "chunk_id": "64e5060e2bb7f35dc256ebcbebefd3a2ea29be521dbb7102a85ea22a32c59523",
+                "unit_id": null,
+                "unit_ids": [
+                  "DX-STR-01"
+                ],
+                "section_path": [
+                  "启动与充电系统通用排查",
+                  "DX-STR-01 启动时发动机不转或仅有咔嗒声"
+                ],
+                "excerpt": "启动与充电系统通用排查\n\n共同前提：同时遵守 DX-GEN-001。本文只处理具有相应低压启动/充电结构的车辆，不推断电压平台。技术参考：SRC-DX-01、SRC-DX-02、SRC-DX-03、SRC-DX-16。这里列的是故障分支，不是按概率排名的诊断结果。\n\nDX-STR-01 启动时发动机不转或仅有咔嗒声\n\n**适用与追问：** 先区分发动机完全不转、转得慢，还是已经转动但未着车；只有前者进入本条。询问仪表是否亮、是否提示钥匙/挡位/启动条件异常，症状是否突然出现，是否已有电池检测记录。仅凭声音无法确定供电正常。\n\n**故障类型：** 低压电源供电不足；接线/搭铁或启动控制异常；起动机及啮合机构故障；发动机机械阻滞。候选目录类型是蓄电池、起动机；控制开关、线束或齿圈等可能未收录，不强行归入起动机。\n\n**检查路径：** 用户提供仪表和声音描述即可，不反复长时间启动。维修人员按实际系统检查电池状态、接线与控制条件，再检查启动回路和起动机；电机空转但发动机不转时，要区分传动啮合问题。发现机械卡滞迹象时停止尝试并另行诊断。\n\n**换件判断：** 只有本症状时两类部件均为 undetermined。只有正确检测证实电池本体失效，才支持蓄电池 recommended；单纯亏电应先查原因与复测，不能直接判寿命终结。供电、控制和机械负载排查支持起动机本体故障时，才支持起动机 recommended；若接头处理后复核正常，则本次不支持更换起动机。无检测结果只列 conditional 条件。\n\n**依据与限制：** SRC-DX-01“启动控制回路、咔嗒声及空转排查”；SRC-DX-02“电池类型与测试结果”；SRC-DX-16“故障与预防”。不提供跨接启动、短接继电器或自行拆卸步骤，不将本条用于纯电车辆不能 READY。",
+                "line_start": 16,
+                "line_end": 26,
+                "tables": []
+              }
+            ],
+            "usage": {
+              "embedding": {
+                "prompt_tokens": 25,
+                "completion_tokens": 0,
+                "total_tokens": 25
+              },
+              "chat": {
+                "prompt_tokens": 9722,
+                "completion_tokens": 1172,
+                "total_tokens": 10894
+              }
+            },
+            "embedding_requests": 1,
+            "chat_requests": 1
+          }
+        },
+        "elapsed_seconds": 5.712
+      },
+      {
+        "role": "diagnostics",
+        "tool": "finish",
+        "step": 1,
+        "call_id": "call_00_R4aIvZollf1ozIENINx46748",
+        "arguments": {
+          "claims": [
+            {
+              "text": "“发动机完全不转、启动只有咔嗒声”对应通用排查条目“启动时发动机不转或仅有咔嗒声”；仅凭声音无法确定供电正常。",
+              "evidence_ids": [
+                "74445fe99aa94e3814bf3ea6fcd4dd4d315e17ad7d8888e8f9def7914e5c07c9"
+              ]
+            },
+            {
+              "text": "该症状的故障分支包括：低压电源供电不足；接线、搭铁或启动控制异常；起动机及啮合机构故障；发动机机械阻滞（分支非按概率排序）。",
+              "evidence_ids": [
+                "74445fe99aa94e3814bf3ea6fcd4dd4d315e17ad7d8888e8f9def7914e5c07c9"
+              ]
+            },
+            {
+              "text": "用户侧只需观察仪表是否点亮、是否提示钥匙/挡位/启动条件异常及启动声音表现，不要反复长时间启动；电池状态、接线与控制条件、启动回路和起动机应由合格维修人员按实际系统检查，发现机械卡滞迹象应停止尝试并另行诊断。",
+              "evidence_ids": [
+                "74445fe99aa94e3814bf3ea6fcd4dd4d315e17ad7d8888e8f9def7914e5c07c9"
+              ]
+            },
+            {
+              "text": "无检测记录时，蓄电池与起动机均不能判定需更换：只有正确检测证实电池本体失效才支持更换蓄电池（单纯亏电应先查原因并复测）；供电、控制与机械负载排查支持起动机本体故障时才支持更换起动机，接头处理后复核正常则本次不支持更换。",
+              "evidence_ids": [
+                "74445fe99aa94e3814bf3ea6fcd4dd4d315e17ad7d8888e8f9def7914e5c07c9"
+              ]
+            },
+            {
+              "text": "依据为项目编制的通用排查草稿（DX-STR-002，待技术复核），不是厂家维修手册，也未提供跨接启动、短接继电器或自行拆卸步骤；本条不适用于纯电车辆不能READY的情形。",
+              "evidence_ids": [
+                "74445fe99aa94e3814bf3ea6fcd4dd4d315e17ad7d8888e8f9def7914e5c07c9"
+              ]
+            }
+          ],
+          "follow_up_questions": [
+            "启动时仪表是否点亮，是否提示钥匙、挡位或启动条件异常？",
+            "该症状是突然出现还是逐渐出现？",
+            "车辆是否为纯电车型（纯电不能READY不适用本条）？"
+          ],
+          "message": "以上为通用排查依据，未做任何检测判定，也未提交任何业务提案。如需进一步缩小范围，请补充以下信息。"
+        },
+        "status": "ok",
+        "result": {
+          "finished": true
+        },
+        "elapsed_seconds": 0.0
+      }
+    ],
+    "proposals": [],
+    "agent_elapsed_seconds": 11.047
+  },
+  "checks": {
+    "no_business_snapshot_claim": true,
+    "has_document_citations": true,
+    "no_proposals": true
+  }
+}

@@ -6,6 +6,14 @@ from collections import Counter
 UNIT_CODE = re.compile(r"(?<![A-Za-z0-9_.-])(?:INV-[A-Z]{3}-\d{3}-C\d{3}|DX-[A-Z]{3,4}-\d{2})(?![A-Za-z0-9_.-])", re.I)
 DOCUMENT_CODE = re.compile(r"(?<![A-Za-z0-9_.-])(?:INV|DX)-[A-Z]{3}-\d{3}(?![A-Za-z0-9_.-])", re.I)
 TOKEN = re.compile(r"[\u4e00-\u9fff]+|[A-Za-z0-9]+(?:[_.-][A-Za-z0-9]+)*")
+# API field labels bridge code identifiers to the Chinese policy vocabulary, not to permissions.
+FIELD_TERMS = {'operator_id': '操作人 身份 服务端', 'request_id': '请求标识 幂等',
+    'thread_id': '会话编号 身份', 'warehouse_id': '仓库', 'part_id': '备件', 'supplier_id': '供应商'}
+
+
+def field_query_terms(question):
+    return list(dict.fromkeys(FIELD_TERMS[word.lower()] for word in TOKEN.findall(question)
+        if word.lower() in FIELD_TERMS))
 
 
 def tokens(text):
